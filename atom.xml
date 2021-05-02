@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-02T03:35:58.609Z</updated>
+  <updated>2021-05-02T05:11:02.493Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://codermae.github.io/2021/05/01/My-first-blog/"/>
     <id>https://codermae.github.io/2021/05/01/My-first-blog/</id>
     <published>2021-05-01T05:27:44.000Z</published>
-    <updated>2021-05-02T03:35:58.609Z</updated>
+    <updated>2021-05-02T05:11:02.493Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;哈哈&quot;&gt;&lt;a href=&quot;#哈哈&quot; class=&quot;headerlink&quot; title=&quot;哈哈&quot;&gt;&lt;/a&gt;哈哈&lt;/h2&gt;&lt;p&gt;蛤蛤蛤蛤 终于搞定了 赶紧先来占个位 纪念一下五一还在学习的自己.&lt;/p&gt;
@@ -30,6 +30,14 @@
     
     
     
+    <category term="技术" scheme="https://codermae.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Githubpage+hexo博客搭建" scheme="https://codermae.github.io/categories/%E6%8A%80%E6%9C%AF/Githubpage-hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="博客搭建" scheme="https://codermae.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="First Blog" scheme="https://codermae.github.io/tags/First-Blog/"/>
     
   </entry>
   

@@ -30,5 +30,13 @@
 <p>再打开powershell 输入以下内容清理DNS缓存，网站应该就可以正常访问啦。</p>
 <p><code>clear -dnsclientcache</code></p>
 ]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Githubpage+hexo博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>First Blog</tag>
+      </tags>
   </entry>
 </search>
