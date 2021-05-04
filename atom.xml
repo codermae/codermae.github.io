@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-02T05:11:02.493Z</updated>
+  <updated>2021-05-04T08:16:00.164Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0001</title>
+    <link href="https://codermae.github.io/2021/05/04/HTML/"/>
+    <id>https://codermae.github.io/2021/05/04/HTML/</id>
+    <published>2021-05-04T05:04:22.000Z</published>
+    <updated>2021-05-04T08:16:00.164Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;青春不息，奋斗不止&lt;/p&gt;
+&lt;h2 id=&quot;JS数据类型&quot;&gt;&lt;a href=&quot;#JS数据类型&quot; class=&quot;headerlink&quot; title=&quot;JS数据类型&quot;&gt;&lt;/a&gt;JS数据类型&lt;/h2&gt;&lt;h3 id=&quot;1-null-amp-amp-undefined-amp-amp-boolean&quot;&gt;&lt;a href=&quot;#1-null-amp-amp-undefined-amp-amp-boolean&quot; class=&quot;headerlink&quot; title=&quot;1.null &amp;amp;&amp;amp; undefined &amp;amp;&amp;amp; boolean&quot;&gt;&lt;/a&gt;1.null &amp;amp;&amp;amp; undefined &amp;amp;&amp;amp; boolean&lt;/h3&gt;&lt;p&gt;&lt;code&gt;null&lt;/code&gt;与&lt;code&gt;undefined&lt;/code&gt;都可以表示“没有”，在if语句中都会自动转为&lt;code&gt;false&lt;/code&gt;&lt;br&gt;区别是&lt;code&gt;null&lt;/code&gt;表示一个“空”的对象，转为数值是为&lt;code&gt;0&lt;/code&gt;&lt;br&gt;      &lt;code&gt;undefined&lt;/code&gt;表示“此处无定义”的原始值，转为数值时为&lt;code&gt;NaN&lt;/code&gt;&lt;br&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS数据类型" scheme="https://codermae.github.io/tags/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>My first blog</title>
