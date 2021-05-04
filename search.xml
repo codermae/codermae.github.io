@@ -1,47 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>My first blog</title>
-    <url>/2021/05/01/My-first-blog/</url>
-    <content><![CDATA[<h2 id="哈哈"><a href="#哈哈" class="headerlink" title="哈哈"></a>哈哈</h2><p>蛤蛤蛤蛤 终于搞定了 赶紧先来占个位 纪念一下五一还在学习的自己.</p>
-<p>这是第二次搭建博客，但并不是我的第二个博客，因为第一次半途而废，因为当时感觉看的文章比较乱，<br>当然更重要的是 自 己 太 菜 ！    为了表达对参考文献作者的感激之情，就做个推广吧<a href="https://mp.weixin.qq.com/s/rIOoX2MMl0qEsJ4pnwJoqQ">原文</a>。</p>
-<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>个人感觉上面的文章已经写的很细了 就记录一下自己在搭建过程中遇到的两个问题吧顺便练习写博客哈哈~~~</p>
-<span id="more"></span>
-
-<h5 id="1-仓库创建"><a href="#1-仓库创建" class="headerlink" title="1.仓库创建"></a>1.仓库创建</h5><p><img src="https://i.loli.net/2021/05/01/DMTzOxP1csfaSNZ.png" alt="err"></p>
-<p>Repository name: 固定格式self_uesername.github.io</p>
-<p>还有就是要选Public！否则github page页面是看不见相关设置的</p>
-<h5 id="2-部署网站"><a href="#2-部署网站" class="headerlink" title="2.部署网站"></a>2.部署网站</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>此时进度条已到底，激动的心，颤抖的手，直接输入地址却——</p>
-<p><img src="https://i.loli.net/2021/05/01/Dnv9RmXGHjxpzqh.png" alt="err"></p>
-<p>啪！快乐没了（表情包请自行脑补）</p>
-<p>二话不说直接百度，有人说在电脑上不可以在手机上却可以，于是我也try了一下</p>
-<p>果然可以进！！！但是与我想象的好像不大一样，网站内容仅显示了两行文本，</p>
-<p>看了一眼应该是main里READEME.md的内容</p>
-<p>思考(发呆)一会儿之后…找到了GitHub Pages设置发现</p>
-<p><img src="https://i.loli.net/2021/05/01/MGwgK5XRPYC4foL.png" alt="err"></p>
-<p><code>Your GitHub Pages site is currently being built from the 【main】 branch</code></p>
-<p>于是将Branch改为master 刷新手机页面，啪！快乐回来了</p>
-<p>但是电脑还是不能访问，可能是要修改host，一会儿继续改..</p>
-<p>已经搞定，首先查询网站的ip地址可以在<a href="https://www.ipip.net/">这里查询</a> ，</p>
-<p>然后在C:\Windows\System32\drivers\etc下找到并修改hosts，写入以下内容</p>
-<p><code>ip self_username.github.io</code></p>
-<p>再打开powershell 输入以下内容清理DNS缓存，网站应该就可以正常访问啦。</p>
-<p><code>clear -dnsclientcache</code></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>Githubpage+hexo博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-        <tag>First Blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>打卡0001</title>
-    <url>/2021/05/04/HTML/</url>
+    <url>/2021/05/04/JS/</url>
     <content><![CDATA[<p>青春不息，奋斗不止</p>
 <h2 id="JS数据类型"><a href="#JS数据类型" class="headerlink" title="JS数据类型"></a>JS数据类型</h2><h3 id="1-null-amp-amp-undefined-amp-amp-boolean"><a href="#1-null-amp-amp-undefined-amp-amp-boolean" class="headerlink" title="1.null &amp;&amp; undefined &amp;&amp; boolean"></a>1.null &amp;&amp; undefined &amp;&amp; boolean</h3><p><code>null</code>与<code>undefined</code>都可以表示“没有”，在if语句中都会自动转为<code>false</code><br>区别是<code>null</code>表示一个“空”的对象，转为数值是为<code>0</code><br>      <code>undefined</code>表示“此处无定义”的原始值，转为数值时为<code>NaN</code><br>      <span id="more"></span></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if (!undefined) &#123;</span><br><span class="line">  console.log(&#39;undefined is false&#39;);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; undefined is false</span><br><span class="line"></span><br><span class="line">if (!null) &#123;</span><br><span class="line">  console.log(&#39;null is false&#39;);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; null is false</span><br><span class="line"></span><br><span class="line">undefined &#x3D;&#x3D; null</span><br><span class="line">&#x2F;&#x2F; true</span><br><span class="line"></span><br><span class="line">Number(null) &#x2F;&#x2F; 0</span><br><span class="line"></span><br><span class="line">Number(undefined) &#x2F;&#x2F; NaN</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -149,6 +110,45 @@
       </categories>
       <tags>
         <tag>JS数据类型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My first blog</title>
+    <url>/2021/05/01/My-first-blog/</url>
+    <content><![CDATA[<h2 id="哈哈"><a href="#哈哈" class="headerlink" title="哈哈"></a>哈哈</h2><p>蛤蛤蛤蛤 终于搞定了 赶紧先来占个位 纪念一下五一还在学习的自己.</p>
+<p>这是第二次搭建博客，但并不是我的第二个博客，因为第一次半途而废，因为当时感觉看的文章比较乱，<br>当然更重要的是 自 己 太 菜 ！    为了表达对参考文献作者的感激之情，就做个推广吧<a href="https://mp.weixin.qq.com/s/rIOoX2MMl0qEsJ4pnwJoqQ">原文</a>。</p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>个人感觉上面的文章已经写的很细了 就记录一下自己在搭建过程中遇到的两个问题吧顺便练习写博客哈哈~~~</p>
+<span id="more"></span>
+
+<h5 id="1-仓库创建"><a href="#1-仓库创建" class="headerlink" title="1.仓库创建"></a>1.仓库创建</h5><p><img src="https://i.loli.net/2021/05/01/DMTzOxP1csfaSNZ.png" alt="err"></p>
+<p>Repository name: 固定格式self_uesername.github.io</p>
+<p>还有就是要选Public！否则github page页面是看不见相关设置的</p>
+<h5 id="2-部署网站"><a href="#2-部署网站" class="headerlink" title="2.部署网站"></a>2.部署网站</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>此时进度条已到底，激动的心，颤抖的手，直接输入地址却——</p>
+<p><img src="https://i.loli.net/2021/05/01/Dnv9RmXGHjxpzqh.png" alt="err"></p>
+<p>啪！快乐没了（表情包请自行脑补）</p>
+<p>二话不说直接百度，有人说在电脑上不可以在手机上却可以，于是我也try了一下</p>
+<p>果然可以进！！！但是与我想象的好像不大一样，网站内容仅显示了两行文本，</p>
+<p>看了一眼应该是main里READEME.md的内容</p>
+<p>思考(发呆)一会儿之后…找到了GitHub Pages设置发现</p>
+<p><img src="https://i.loli.net/2021/05/01/MGwgK5XRPYC4foL.png" alt="err"></p>
+<p><code>Your GitHub Pages site is currently being built from the 【main】 branch</code></p>
+<p>于是将Branch改为master 刷新手机页面，啪！快乐回来了</p>
+<p>但是电脑还是不能访问，可能是要修改host，一会儿继续改..</p>
+<p>已经搞定，首先查询网站的ip地址可以在<a href="https://www.ipip.net/">这里查询</a> ，</p>
+<p>然后在C:\Windows\System32\drivers\etc下找到并修改hosts，写入以下内容</p>
+<p><code>ip self_username.github.io</code></p>
+<p>再打开powershell 输入以下内容清理DNS缓存，网站应该就可以正常访问啦。</p>
+<p><code>clear -dnsclientcache</code></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Githubpage+hexo博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>First Blog</tag>
       </tags>
   </entry>
 </search>
