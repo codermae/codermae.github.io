@@ -189,6 +189,7 @@
 <p>这非常不利于代码的除错和模块化，编译器也无法对这段代码进行优化，只能留到运行时判断，这就拖慢了运行速度。因此，建议不要使用with语句，可以考虑用一个临时变量代替with</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">with</span>(<span class="params">obj1.obj2.obj3</span>)</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(p1 + p2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 可以写成</span></span><br><span class="line"><span class="keyword">var</span> temp = obj1.obj2.obj3;</span><br><span class="line"><span class="built_in">console</span>.log(temp.p1 + temp.p2);</span><br></pre></td></tr></table></figure>
 
+
 <p><code>well,that&#39;s all for today.</code></p>
  
       <!-- reward -->
@@ -272,6 +273,15 @@
 
    
   <nav class="article-nav">
+    
+      <a href="/2021/05/06/%E6%89%93%E5%8D%A10004/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            打卡0004
+          
+        </div>
+      </a>
     
     
       <a href="/2021/05/05/%E6%89%93%E5%8D%A10002/" class="article-nav-link">

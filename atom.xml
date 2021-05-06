@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-05T05:29:35.353Z</updated>
+  <updated>2021-05-06T07:28:43.249Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打卡0004</title>
+    <link href="https://codermae.github.io/2021/05/06/%E6%89%93%E5%8D%A10004/"/>
+    <id>https://codermae.github.io/2021/05/06/%E6%89%93%E5%8D%A10004/</id>
+    <published>2021-05-06T01:32:08.000Z</published>
+    <updated>2021-05-06T07:28:43.249Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#45b97c&gt;愿每个人都能收获相处舒服的关系，既能保持分寸，又不会疏离；既能守住底线，又不至于单薄；可以各自忙碌，又彼此牵挂、惦记，简单又纯粹。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS数据类型&quot;&gt;&lt;a href=&quot;#JS数据类型&quot; class=&quot;headerlink&quot; title=&quot;JS数据类型&quot;&gt;&lt;/a&gt;JS数据类型&lt;/h2&gt;&lt;h3 id=&quot;5-函数&quot;&gt;&lt;a href=&quot;#5-函数&quot; class=&quot;headerlink&quot; title=&quot;5.函数&quot;&gt;&lt;/a&gt;5.函数&lt;/h3&gt;&lt;h4 id=&quot;5-1-概述&quot;&gt;&lt;a href=&quot;#5-1-概述&quot; class=&quot;headerlink&quot; title=&quot;5.1 概述&quot;&gt;&lt;/a&gt;5.1 概述&lt;/h4&gt;&lt;h5 id=&quot;5-1-1-函数的声明&quot;&gt;&lt;a href=&quot;#5-1-1-函数的声明&quot; class=&quot;headerlink&quot; title=&quot;5.1.1 函数的声明&quot;&gt;&lt;/a&gt;5.1.1 函数的声明&lt;/h5&gt;&lt;p&gt;JavaScript 有三种声明函数的方法&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="数据类型-函数" scheme="https://codermae.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>打卡0003</title>
     <link href="https://codermae.github.io/2021/05/05/%E6%89%93%E5%8D%A10003/"/>
     <id>https://codermae.github.io/2021/05/05/%E6%89%93%E5%8D%A10003/</id>
     <published>2021-05-05T04:26:19.000Z</published>
-    <updated>2021-05-05T05:29:35.353Z</updated>
+    <updated>2021-05-06T07:27:10.242Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=skyblue&gt;&lt;strong&gt;愿我们都能接受生活最真实的日子，在经过了岁月的洗礼之后，仍能坚定地迈向自己向往的生活&lt;/strong&gt;&lt;/font&gt;&lt;/p&gt;
@@ -61,7 +81,7 @@
     <link href="https://codermae.github.io/2021/05/04/%E6%89%93%E5%8D%A10001/"/>
     <id>https://codermae.github.io/2021/05/04/%E6%89%93%E5%8D%A10001/</id>
     <published>2021-05-04T05:04:22.000Z</published>
-    <updated>2021-05-05T05:27:49.271Z</updated>
+    <updated>2021-05-06T07:29:58.118Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=red&gt;&lt;strong&gt;青春不息，奋斗不止&lt;/strong&gt;&lt;/font&gt;&lt;/p&gt;
