@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-06T07:28:43.249Z</updated>
+  <updated>2021-05-07T03:11:21.159Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0005</title>
+    <link href="https://codermae.github.io/2021/05/07/%E6%89%93%E5%8D%A10005/"/>
+    <id>https://codermae.github.io/2021/05/07/%E6%89%93%E5%8D%A10005/</id>
+    <published>2021-05-07T00:32:02.000Z</published>
+    <updated>2021-05-07T03:11:21.159Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#7bbfea&gt;瞥扭的心态，得靠自个儿去调适~~~&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS数据类型&quot;&gt;&lt;a href=&quot;#JS数据类型&quot; class=&quot;headerlink&quot; title=&quot;JS数据类型&quot;&gt;&lt;/a&gt;JS数据类型&lt;/h2&gt;&lt;h3 id=&quot;6-数组&quot;&gt;&lt;a href=&quot;#6-数组&quot; class=&quot;headerlink&quot; title=&quot;6. 数组&quot;&gt;&lt;/a&gt;6. 数组&lt;/h3&gt;&lt;h4 id=&quot;6-1-定义&quot;&gt;&lt;a href=&quot;#6-1-定义&quot; class=&quot;headerlink&quot; title=&quot;6.1 定义&quot;&gt;&lt;/a&gt;6.1 定义&lt;/h4&gt;&lt;p&gt;数组（array）是按次序排列的一组值，每个值都有编号（从0开始），整个数组用方括号表示&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="数据类型-数组" scheme="https://codermae.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0004</title>
