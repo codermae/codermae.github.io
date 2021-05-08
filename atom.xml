@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-07T03:11:21.159Z</updated>
+  <updated>2021-05-08T01:24:23.261Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打卡0006</title>
+    <link href="https://codermae.github.io/2021/05/08/%E6%89%93%E5%8D%A10006/"/>
+    <id>https://codermae.github.io/2021/05/08/%E6%89%93%E5%8D%A10006/</id>
+    <published>2021-05-08T00:20:01.000Z</published>
+    <updated>2021-05-08T01:24:23.261Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#cd8c95&gt;你要离开我吗？别走好吗？跑起来。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS运算符&quot;&gt;&lt;a href=&quot;#JS运算符&quot; class=&quot;headerlink&quot; title=&quot;JS运算符&quot;&gt;&lt;/a&gt;JS运算符&lt;/h2&gt;&lt;h3 id=&quot;1-算术运算符&quot;&gt;&lt;a href=&quot;#1-算术运算符&quot; class=&quot;headerlink&quot; title=&quot;1.算术运算符&quot;&gt;&lt;/a&gt;1.算术运算符&lt;/h3&gt;&lt;h4 id=&quot;1-1-概述&quot;&gt;&lt;a href=&quot;#1-1-概述&quot; class=&quot;headerlink&quot; title=&quot;1.1 概述&quot;&gt;&lt;/a&gt;1.1 概述&lt;/h4&gt;&lt;p&gt;JavaScript 共提供10个算术运算符，用来完成基本的算术运算&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加法运算符：&lt;code&gt;x + y&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;减法运算符： &lt;code&gt;x - y&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;乘法运算符： &lt;code&gt;x * y&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;除法运算符：&lt;code&gt;x / y&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;指数运算符：&lt;code&gt;x ** y&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;余数运算符：&lt;code&gt;x % y&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;自增运算符：&lt;code&gt;++x&lt;/code&gt; 或者 &lt;code&gt;x++&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;自减运算符：&lt;code&gt;--x&lt;/code&gt; 或者 &lt;code&gt;x--&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;数值运算符： &lt;code&gt;+x&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;负数值运算符：&lt;code&gt;-x&lt;/code&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS运算符-算术运算符" scheme="https://codermae.github.io/tags/JS%E8%BF%90%E7%AE%97%E7%AC%A6-%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>打卡0005</title>
     <link href="https://codermae.github.io/2021/05/07/%E6%89%93%E5%8D%A10005/"/>
     <id>https://codermae.github.io/2021/05/07/%E6%89%93%E5%8D%A10005/</id>
     <published>2021-05-07T00:32:02.000Z</published>
-    <updated>2021-05-07T03:11:21.159Z</updated>
+    <updated>2021-05-08T01:23:37.119Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#7bbfea&gt;瞥扭的心态，得靠自个儿去调适~~~&lt;/font&gt;&lt;/p&gt;
@@ -32,7 +63,7 @@
     <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
     
     
-    <category term="数据类型-数组" scheme="https://codermae.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E6%95%B0%E7%BB%84/"/>
+    <category term="JS数据类型-数组" scheme="https://codermae.github.io/tags/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -41,7 +72,7 @@
     <link href="https://codermae.github.io/2021/05/06/%E6%89%93%E5%8D%A10004/"/>
     <id>https://codermae.github.io/2021/05/06/%E6%89%93%E5%8D%A10004/</id>
     <published>2021-05-06T01:32:08.000Z</published>
-    <updated>2021-05-06T07:28:43.249Z</updated>
+    <updated>2021-05-08T00:18:55.302Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#45b97c&gt;愿每个人都能收获相处舒服的关系，既能保持分寸，又不会疏离；既能守住底线，又不至于单薄；可以各自忙碌，又彼此牵挂、惦记，简单又纯粹。&lt;/font&gt;&lt;/p&gt;
@@ -52,7 +83,7 @@
     <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
     
     
-    <category term="数据类型-函数" scheme="https://codermae.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%87%BD%E6%95%B0/"/>
+    <category term="JS数据类型-函数" scheme="https://codermae.github.io/tags/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%87%BD%E6%95%B0/"/>
     
   </entry>
   
@@ -61,7 +92,7 @@
     <link href="https://codermae.github.io/2021/05/05/%E6%89%93%E5%8D%A10003/"/>
     <id>https://codermae.github.io/2021/05/05/%E6%89%93%E5%8D%A10003/</id>
     <published>2021-05-05T04:26:19.000Z</published>
-    <updated>2021-05-06T07:27:10.242Z</updated>
+    <updated>2021-05-08T00:18:50.045Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=skyblue&gt;&lt;strong&gt;愿我们都能接受生活最真实的日子，在经过了岁月的洗礼之后，仍能坚定地迈向自己向往的生活&lt;/strong&gt;&lt;/font&gt;&lt;/p&gt;
@@ -72,7 +103,7 @@
     <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
     
     
-    <category term="数据类型-对象" scheme="https://codermae.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%AF%B9%E8%B1%A1/"/>
+    <category term="JS数据类型-对象" scheme="https://codermae.github.io/tags/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   

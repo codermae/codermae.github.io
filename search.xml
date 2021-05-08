@@ -321,7 +321,7 @@
         <category>JS</category>
       </categories>
       <tags>
-        <tag>数据类型-对象</tag>
+        <tag>JS数据类型-对象</tag>
       </tags>
   </entry>
   <entry>
@@ -432,12 +432,102 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.forEach.call(<span class="string">&#x27;abc&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">chr</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(chr);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// a</span></span><br><span class="line"><span class="comment">// b.</span></span><br><span class="line"><span class="comment">// c</span></span><br></pre></td></tr></table></figure>
 <p>注意，这种方法比直接使用数组原生的<code>forEach</code>要慢，所以最好还是先将“类似数组的对象”转为真正的数组，然后再直接调用数组的<code>forEach</code>方法</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="built_in">Array</span>.prototype.slice.call(<span class="string">&#x27;abc&#x27;</span>);</span><br><span class="line">arr.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">chr</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(chr);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// a</span></span><br><span class="line"><span class="comment">// b</span></span><br><span class="line"><span class="comment">// c</span></span><br></pre></td></tr></table></figure>
+
+
+<p><code>well,that&#39;s all for today.</code></p>
 ]]></content>
       <categories>
         <category>JS</category>
       </categories>
       <tags>
-        <tag>数据类型-数组</tag>
+        <tag>JS数据类型-数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>打卡0006</title>
+    <url>/2021/05/08/%E6%89%93%E5%8D%A10006/</url>
+    <content><![CDATA[<p><font color=#cd8c95>你要离开我吗？别走好吗？跑起来。</font></p>
+<h2 id="JS运算符"><a href="#JS运算符" class="headerlink" title="JS运算符"></a>JS运算符</h2><h3 id="1-算术运算符"><a href="#1-算术运算符" class="headerlink" title="1.算术运算符"></a>1.算术运算符</h3><h4 id="1-1-概述"><a href="#1-1-概述" class="headerlink" title="1.1 概述"></a>1.1 概述</h4><p>JavaScript 共提供10个算术运算符，用来完成基本的算术运算</p>
+<ul>
+<li>加法运算符：<code>x + y</code></li>
+<li>减法运算符： <code>x - y</code></li>
+<li>乘法运算符： <code>x * y</code></li>
+<li>除法运算符：<code>x / y</code></li>
+<li>指数运算符：<code>x ** y</code></li>
+<li>余数运算符：<code>x % y</code></li>
+<li>自增运算符：<code>++x</code> 或者 <code>x++</code></li>
+<li>自减运算符：<code>--x</code> 或者 <code>x--</code></li>
+<li>数值运算符： <code>+x</code></li>
+<li>负数值运算符：<code>-x</code><span id="more"></span>
+<h4 id="1-2-加法运算符"><a href="#1-2-加法运算符" class="headerlink" title="1.2 加法运算符"></a>1.2 加法运算符</h4></li>
+</ul>
+<h5 id="1-2-1-基本规则"><a href="#1-2-1-基本规则" class="headerlink" title="1.2.1 基本规则"></a>1.2.1 基本规则</h5><p>加法运算符<code>+</code>是最常见的运算符，用来求两个数值的和<br>1 + 1 //2</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">JavaScript 允许非数值的相加</span><br><span class="line">&#96;&#96;&#96;js</span><br><span class="line">true + true &#x2F;&#x2F; 2</span><br><span class="line">1 + true &#x2F;&#x2F; 2</span><br></pre></td></tr></table></figure>
+<p>上面代码中，第一行是两个布尔值相加，第二行是数值与布尔值相加。这两种情况，布尔值都会自动转成数值，然后再相加</p>
+<p>比较特殊的是，如果是两个字符串相加，这时加法运算符会变成连接运算符，返回一个新的字符串，将两个原字符串连接在一起</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;a&#x27;</span> + <span class="string">&#x27;bc&#x27;</span> <span class="comment">// &quot;abc&quot;</span></span><br></pre></td></tr></table></figure>
+<p>如果一个运算子是字符串，另一个运算子是非字符串，这时非字符串会转成字符串，再连接在一起</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span> + <span class="string">&#x27;a&#x27;</span> <span class="comment">// &quot;1a&quot;</span></span><br><span class="line"><span class="literal">false</span> + <span class="string">&#x27;a&#x27;</span> <span class="comment">// &quot;falsea&quot;</span></span><br></pre></td></tr></table></figure>
+<p>加法运算符是在运行时决定，到底是执行相加，还是执行连接。也就是说，运算子的不同，导致了不同的语法行为，这种现象称为“重载”（overload）。由于加法运算符存在重载，可能执行两种运算，使用的时候必须很小心</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;3&#x27;</span> + <span class="number">4</span> + <span class="number">5</span> <span class="comment">// &quot;345&quot;</span></span><br><span class="line"><span class="number">3</span> + <span class="number">4</span> + <span class="string">&#x27;5&#x27;</span> <span class="comment">// &quot;75&quot;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，由于从左到右的运算次序，字符串的位置不同会导致不同的结果</p>
+<p>除了加法运算符，其他算术运算符（比如减法、除法和乘法）都不会发生重载。它们的规则是：所有运算子一律转为数值，再进行相应的数学运算</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span> - <span class="string">&#x27;2&#x27;</span> <span class="comment">// -1</span></span><br><span class="line"><span class="number">1</span> * <span class="string">&#x27;2&#x27;</span> <span class="comment">// 2</span></span><br><span class="line"><span class="number">1</span> / <span class="string">&#x27;2&#x27;</span> <span class="comment">// 0.5</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="1-2-2-对象的相加"><a href="#1-2-2-对象的相加" class="headerlink" title="1.2.2 对象的相加"></a>1.2.2 对象的相加</h5><p>如果运算子是对象，必须先转成原始类型的值，然后再相加</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">p</span>: <span class="number">1</span> &#125;;</span><br><span class="line">obj + <span class="number">2</span> <span class="comment">// &quot;[object Object]2&quot;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，对象<code>obj</code>转成原始类型的值是<code>[object Object]</code>，再加<code>2</code>就得到了上面的结果<br>对象转成原始类型的值，规则如下:<br>首先，自动调用对象的<code>valueOf</code>方法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">p</span>: <span class="number">1</span> &#125;;</span><br><span class="line">obj.valueOf() <span class="comment">// &#123; p: 1 &#125;</span></span><br></pre></td></tr></table></figure>
+<p>般来说，对象的<code>valueOf</code>方法总是返回对象自身，这时再自动调用对象的<code>toString</code>方法，将其转为字符串</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">p</span>: <span class="number">1</span> &#125;;</span><br><span class="line">obj.valueOf().toString() <span class="comment">// &quot;[object Object]&quot;</span></span><br></pre></td></tr></table></figure>
+<p>对象的<code>toString</code>方法默认返回<code>[object Object]</code>，所以就得到了最前面那个例子的结果</p>
+<p>知道了这个规则以后，就可以自己定义<code>valueOf</code>方法或<code>toString</code>方法，得到想要的结果</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  valueOf: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj + <span class="number">2</span> <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，我们定义<code>obj</code>对象的<code>valueOf</code>方法返回<code>1</code>，于是<code>obj + 2</code>就得到了<code>3</code>。这个例子中，由于<code>valueOf</code>方法直接返回一个原始类型的值，所以不再调用<code>toString</code>方法</p>
+<p>下面是自定义toString方法的例子:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  toString: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj + <span class="number">2</span> <span class="comment">// &quot;hello2&quot;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，对象<code>obj</code>的<code>toString</code>方法返回字符串<code>hello</code>。前面说过，只要有一个运算子是字符串，加法运算符就变成连接运算符，返回连接后的字符串</p>
+<p>这里有一个特例，如果运算子是一个<code>Date</code>对象的实例，那么会优先执行<code>toString</code>方法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">obj.valueOf = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="number">1</span> &#125;;</span><br><span class="line">obj.toString = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="string">&#x27;hello&#x27;</span> &#125;;</span><br><span class="line"></span><br><span class="line">obj + <span class="number">2</span> <span class="comment">// &quot;hello2&quot;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，对象<code>obj</code>是一个<code>Date</code>对象的实例，并且自定义了<code>valueOf</code>方法和<code>toString</code>方法，结果<code>toString</code>方法优先执行</p>
+<h4 id="1-3-余数运算符"><a href="#1-3-余数运算符" class="headerlink" title="1.3 余数运算符"></a>1.3 余数运算符</h4><p>余数运算符（<code>%</code>）返回前一个运算子被后一个运算子除，所得的余数</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">12</span> % <span class="number">5</span> <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的是，运算结果的正负号由第一个运算子的正负号决定</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">-<span class="number">1</span> % <span class="number">2</span> <span class="comment">// -1</span></span><br><span class="line"><span class="number">1</span> % -<span class="number">2</span> <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>所以，为了得到负数的正确余数值，可以先使用绝对值函数</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 错误的写法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isOdd</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> n % <span class="number">2</span> === <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">isOdd(-<span class="number">5</span>) <span class="comment">// false</span></span><br><span class="line">isOdd(-<span class="number">4</span>) <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 正确的写法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isOdd</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.abs(n % <span class="number">2</span>) === <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">isOdd(-<span class="number">5</span>) <span class="comment">// true</span></span><br><span class="line">isOdd(-<span class="number">4</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>余数运算符还可以用于浮点数的运算。但是，由于浮点数不是精确的值，无法得到完全准确的结果</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">6.5</span> % <span class="number">2.1</span></span><br><span class="line"><span class="comment">// 0.19999999999999973</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-4-自增和自减运算符"><a href="#1-4-自增和自减运算符" class="headerlink" title="1.4 自增和自减运算符"></a>1.4 自增和自减运算符</h4><p>自增和自减运算符，是一元运算符，只需要一个运算子。它们的作用是将运算子首先转为数值，然后加上1或者减去1。它们会修改原始变量</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line">++x <span class="comment">// 2</span></span><br><span class="line">x <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line">--x <span class="comment">// 1</span></span><br><span class="line">x <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>上面代码的变量<code>x</code>自增后，返回<code>2</code>，再进行自减，返回<code>1</code>。这两种情况都会使得，原始变量<code>x</code>的值发生改变<br>运算之后，变量的值发生变化，这种效应叫做运算的副作用（side effect）。自增和自减运算符是仅有的两个具有副作用的运算符，其他运算符都不会改变变量的值<br>自增和自减运算符有一个需要注意的地方，就是放在变量之后，会先返回变量操作前的值，再进行自增/自减操作；放在变量之前，会先进行自增/自减操作，再返回变量操作后的值</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">x++ <span class="comment">// 1</span></span><br><span class="line">++y <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>x</code>是先返回当前值，然后自增，所以得到<code>1</code>；<code>y</code>是先自增，然后返回新的值，所以得到<code>2</code></p>
+<h4 id="1-5-数值运算符，负数值运算符"><a href="#1-5-数值运算符，负数值运算符" class="headerlink" title="1.5 数值运算符，负数值运算符"></a>1.5 数值运算符，负数值运算符</h4><p>数值运算符（<code>+</code>）同样使用加号，但它是一元运算符（只需要一个操作数），而加法运算符是二元运算符（需要两个操作数）</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">+<span class="literal">true</span> <span class="comment">// 1</span></span><br><span class="line">+[] <span class="comment">// 0</span></span><br><span class="line">+&#123;&#125; <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>上面代码表示，非数值经过数值运算符以后，都变成了数值（最后一行NaN也是数值）<br>负数值运算符（<code>-</code>），也同样具有将一个值转为数值的功能，只不过得到的值正负相反。连用两个负数值运算符，等同于数值运算符</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line">-x <span class="comment">// -1</span></span><br><span class="line">-(-x) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>上面代码最后一行的圆括号不可少，否则会变成自减运算符。</p>
+<p>数值运算符号和负数值运算符，都会返回一个新的值，而不会改变原始变量的值</p>
+<h4 id="1-6-指数运算符"><a href="#1-6-指数运算符" class="headerlink" title="1.6 指数运算符"></a>1.6 指数运算符</h4><p>指数运算符（<code>**</code>）完成指数运算，前一个运算子是底数，后一个运算子是指数</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="number">2</span> ** <span class="number">4</span> <span class="comment">// 16</span></span><br></pre></td></tr></table></figure>
+<p>注意，指数运算符是右结合，而不是左结合。即多个指数运算符连用时，先进行最右边的计算</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 相当于 2 ** (3 ** 2)</span></span><br><span class="line"><span class="number">2</span> ** <span class="number">3</span> ** <span class="number">2</span></span><br><span class="line"><span class="comment">// 512</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，由于指数运算符是右结合，所以先计算第二个指数运算符，而不是第一个</p>
+<h4 id="1-7-赋值运算符"><a href="#1-7-赋值运算符" class="headerlink" title="1.7 赋值运算符"></a>1.7 赋值运算符</h4><p>赋值运算符（Assignment Operators）用于给变量赋值</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 将 1 赋值给变量 x</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将变量 y 的值赋值给变量 x</span></span><br><span class="line"><span class="keyword">var</span> x = y;</span><br></pre></td></tr></table></figure>
+<p>赋值运算符还可以与其他运算符结合，形成变体。下面是与算术运算符的结合</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 等同于 x = x + y</span></span><br><span class="line">x += y</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于 x = x - y</span></span><br><span class="line">x -= y</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于 x = x * y</span></span><br><span class="line">x *= y</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于 x = x / y</span></span><br><span class="line">x /= y</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于 x = x % y</span></span><br><span class="line">x %= y</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于 x = x ** y</span></span><br><span class="line">x **= y</span><br></pre></td></tr></table></figure>
+<p>下面是与位运算符的结合</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 等同于 x = x &gt;&gt; y</span></span><br><span class="line">x &gt;&gt;= y</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于 x = x &lt;&lt; y</span></span><br><span class="line">x &lt;&lt;= y</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于 x = x &gt;&gt;&gt; y</span></span><br><span class="line">x &gt;&gt;&gt;= y</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于 x = x &amp; y</span></span><br><span class="line">x &amp;= y</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于 x = x | y</span></span><br><span class="line">x |= y</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于 x = x ^ y</span></span><br><span class="line">x ^= y</span><br></pre></td></tr></table></figure>
+<p>这些复合的赋值运算符，都是先进行指定运算，然后将得到值返回给左边的变量</p>
+]]></content>
+      <categories>
+        <category>JS</category>
+      </categories>
+      <tags>
+        <tag>JS运算符-算术运算符</tag>
       </tags>
   </entry>
   <entry>
@@ -632,7 +722,7 @@
         <category>JS</category>
       </categories>
       <tags>
-        <tag>数据类型-函数</tag>
+        <tag>JS数据类型-函数</tag>
       </tags>
   </entry>
 </search>
