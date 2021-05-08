@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-08T01:24:23.261Z</updated>
+  <updated>2021-05-08T07:02:39.129Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0007</title>
+    <link href="https://codermae.github.io/2021/05/08/%E6%89%93%E5%8D%A10007/"/>
+    <id>https://codermae.github.io/2021/05/08/%E6%89%93%E5%8D%A10007/</id>
+    <published>2021-05-08T01:27:35.000Z</published>
+    <updated>2021-05-08T07:02:39.129Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=aed2e5&gt;无论眼下你正过着怎样的生活，欢喜也好，烦恼也罢，饿了就吃，困了就睡，明天又是崭新的一天。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS运算符&quot;&gt;&lt;a href=&quot;#JS运算符&quot; class=&quot;headerlink&quot; title=&quot;JS运算符&quot;&gt;&lt;/a&gt;JS运算符&lt;/h2&gt;&lt;h3 id=&quot;2-比较运算符&quot;&gt;&lt;a href=&quot;#2-比较运算符&quot; class=&quot;headerlink&quot; title=&quot;2. 比较运算符&quot;&gt;&lt;/a&gt;2. 比较运算符&lt;/h3&gt;&lt;h4 id=&quot;2-1概述&quot;&gt;&lt;a href=&quot;#2-1概述&quot; class=&quot;headerlink&quot; title=&quot;2.1概述&quot;&gt;&lt;/a&gt;2.1概述&lt;/h4&gt;&lt;p&gt;比较运算符用于比较两个值的大小，然后返回一个布尔值，表示是否满足指定的条件&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS运算符-比较运算符" scheme="https://codermae.github.io/tags/JS%E8%BF%90%E7%AE%97%E7%AC%A6-%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0006</title>
