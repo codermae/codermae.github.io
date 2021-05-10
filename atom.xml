@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-09T03:23:23.100Z</updated>
+  <updated>2021-05-10T06:53:10.394Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0011</title>
+    <link href="https://codermae.github.io/2021/05/10/%E6%89%93%E5%8D%A10011/"/>
+    <id>https://codermae.github.io/2021/05/10/%E6%89%93%E5%8D%A10011/</id>
+    <published>2021-05-10T00:33:22.000Z</published>
+    <updated>2021-05-10T06:53:10.394Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#BDB76B&gt;花褪残红青杏小。燕子飞时，绿水人家绕。枝上柳绵吹又少。天涯何处无芳草。&lt;/p&gt;
+&lt;p&gt;墙里秋千墙外道。墙外行人，墙里佳人笑。笑渐不闻声渐悄。多情却被无情恼。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS语法&quot;&gt;&lt;a href=&quot;#JS语法&quot; class=&quot;headerlink&quot; title=&quot;JS语法&quot;&gt;&lt;/a&gt;JS语法&lt;/h2&gt;&lt;h3 id=&quot;1-数据类型的转换&quot;&gt;&lt;a href=&quot;#1-数据类型的转换&quot; class=&quot;headerlink&quot; title=&quot;1. 数据类型的转换&quot;&gt;&lt;/a&gt;1. 数据类型的转换&lt;/h3&gt;&lt;h4 id=&quot;1-1-概述&quot;&gt;&lt;a href=&quot;#1-1-概述&quot; class=&quot;headerlink&quot; title=&quot;1.1 概述&quot;&gt;&lt;/a&gt;1.1 概述&lt;/h4&gt;&lt;p&gt;JavaScript 是一种动态类型语言，变量没有类型限制，可以随时赋予任意值&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; x = y ? &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; : &lt;span class=&quot;string&quot;&gt;&amp;#x27;a&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS语法-数据类型的转换" scheme="https://codermae.github.io/tags/JS%E8%AF%AD%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0010</title>
