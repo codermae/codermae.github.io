@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-11T01:56:20.577Z</updated>
+  <updated>2021-05-11T08:18:37.181Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0014</title>
+    <link href="https://codermae.github.io/2021/05/11/%E6%89%93%E5%8D%A10014/"/>
+    <id>https://codermae.github.io/2021/05/11/%E6%89%93%E5%8D%A10014/</id>
+    <published>2021-05-11T07:06:15.000Z</published>
+    <updated>2021-05-11T08:18:37.181Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#c0c0c0&gt;清夜无尘，月色如银。酒斟时、须满十分。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS语法&quot;&gt;&lt;a href=&quot;#JS语法&quot; class=&quot;headerlink&quot; title=&quot;JS语法&quot;&gt;&lt;/a&gt;JS语法&lt;/h2&gt;&lt;h3 id=&quot;4-console对象与控制台&quot;&gt;&lt;a href=&quot;#4-console对象与控制台&quot; class=&quot;headerlink&quot; title=&quot;4. console对象与控制台&quot;&gt;&lt;/a&gt;4. console对象与控制台&lt;/h3&gt;&lt;h4 id=&quot;4-1-console对象&quot;&gt;&lt;a href=&quot;#4-1-console对象&quot; class=&quot;headerlink&quot; title=&quot;4.1 console对象&quot;&gt;&lt;/a&gt;4.1 console对象&lt;/h4&gt;&lt;p&gt;&lt;code&gt;console&lt;/code&gt;对象是 JavaScript 的原生对象，它有点像 Unix 系统的标准输出&lt;code&gt;stdout&lt;/code&gt;和标准错误&lt;code&gt;stderr&lt;/code&gt;，可以输出各种信息到控制台，并且还提供了很多有用的辅助方法。&lt;br&gt;&lt;code&gt;console&lt;/code&gt;的常见用途有两个:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;调试程序，显示网页代码运行时的错误信息。&lt;/li&gt;
+&lt;li&gt;提供了一个命令行接口，用来与网页代码互动。</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS语法-console对象与控制台" scheme="https://codermae.github.io/tags/JS%E8%AF%AD%E6%B3%95-console%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8E%A7%E5%88%B6%E5%8F%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0013</title>
+    <link href="https://codermae.github.io/2021/05/11/%E6%89%93%E5%8D%A10013/"/>
+    <id>https://codermae.github.io/2021/05/11/%E6%89%93%E5%8D%A10013/</id>
+    <published>2021-05-11T06:10:28.000Z</published>
+    <updated>2021-05-11T07:05:00.627Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=pink&gt;我们总是在无止境的追求幸福，幻想彩色的气球，夏夜的喷泉，冬天的初雪，以为足够夸张，足够梦幻才算的上是浪漫，所以我们不满足平凡的生活，拼了命的去追求那些存在于童话世界的美好。但其实，我们的生活才是唯一有色彩的真实世界。在那些被忽略的日子里，也有很多浪漫的细节。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS语法&quot;&gt;&lt;a href=&quot;#JS语法&quot; class=&quot;headerlink&quot; title=&quot;JS语法&quot;&gt;&lt;/a&gt;JS语法&lt;/h2&gt;&lt;h3 id=&quot;3-编程风格&quot;&gt;&lt;a href=&quot;#3-编程风格&quot; class=&quot;headerlink&quot; title=&quot;3. 编程风格&quot;&gt;&lt;/a&gt;3. 编程风格&lt;/h3&gt;&lt;h4 id=&quot;3-1-概括&quot;&gt;&lt;a href=&quot;#3-1-概括&quot; class=&quot;headerlink&quot; title=&quot;3.1 概括&quot;&gt;&lt;/a&gt;3.1 概括&lt;/h4&gt;&lt;p&gt;“编程风格”（programming style）指的是编写代码的样式规则。不同的程序员，往往有不同的编程风格。&lt;/p&gt;
+&lt;p&gt;有人说，编译器的规范叫做“语法规则”（grammar），这是程序员必须遵守的；而编译器忽略的部分，就叫“编程风格”（programming style），这是程序员可以自由选择的。这种说法不完全正确，程序员固然可以自由选择编程风格，但是好的编程风格有助于写出质量更高、错误更少、更易于维护的程序。&lt;/p&gt;
+&lt;p&gt;所以，编程风格的选择不应该基于个人爱好、熟悉程度、打字量等因素，而要考虑如何尽量使代码清晰易读、减少出错。你选择的，不是你喜欢的风格，而是一种能够清晰表达你的意图的风格。这一点，对于 JavaScript 这种语法自由度很高的语言尤其重要。&lt;/p&gt;
+&lt;p&gt;必须牢记的一点是，如果你选定了一种“编程风格”，就应该坚持遵守，切忌多种风格混用。如果你加入他人的项目，就应该遵守现有的风格。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS语法-编程风格" scheme="https://codermae.github.io/tags/JS%E8%AF%AD%E6%B3%95-%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0012</title>
@@ -42,7 +88,7 @@
     <link href="https://codermae.github.io/2021/05/10/%E6%89%93%E5%8D%A10011/"/>
     <id>https://codermae.github.io/2021/05/10/%E6%89%93%E5%8D%A10011/</id>
     <published>2021-05-10T00:33:22.000Z</published>
-    <updated>2021-05-10T06:53:10.394Z</updated>
+    <updated>2021-05-11T08:07:40.207Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#BDB76B&gt;花褪残红青杏小。燕子飞时，绿水人家绕。枝上柳绵吹又少。天涯何处无芳草。&lt;/p&gt;
