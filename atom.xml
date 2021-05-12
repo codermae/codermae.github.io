@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-11T08:18:37.181Z</updated>
+  <updated>2021-05-12T07:36:59.947Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0015</title>
+    <link href="https://codermae.github.io/2021/05/12/%E6%89%93%E5%8D%A10015/"/>
+    <id>https://codermae.github.io/2021/05/12/%E6%89%93%E5%8D%A10015/</id>
+    <published>2021-05-12T01:07:21.000Z</published>
+    <updated>2021-05-12T07:36:59.947Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#7bbbea&gt;所谓无底深渊，下去，也是前程万里。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;1-Object对象&quot;&gt;&lt;a href=&quot;#1-Object对象&quot; class=&quot;headerlink&quot; title=&quot;1. Object对象&quot;&gt;&lt;/a&gt;1. Object对象&lt;/h3&gt;&lt;h4 id=&quot;1-1-概述&quot;&gt;&lt;a href=&quot;#1-1-概述&quot; class=&quot;headerlink&quot; title=&quot;1.1 概述&quot;&gt;&lt;/a&gt;1.1 概述&lt;/h4&gt;&lt;p&gt;JavaScript 原生提供&lt;code&gt;Object&lt;/code&gt;对象（注意起首的&lt;code&gt;O&lt;/code&gt;是大写），本章介绍该对象原生的各种方法&lt;br&gt;JavaScript 的所有其他对象都继承自&lt;code&gt;Object&lt;/code&gt;对象，即那些对象都是&lt;code&gt;Object&lt;/code&gt;的实例。&lt;br&gt;&lt;code&gt;Object&lt;/code&gt;对象的原生方法分成两类：&lt;code&gt;Object&lt;/code&gt;本身的方法与&lt;code&gt;Object&lt;/code&gt;的实例方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS标准库-Object对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Object%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0014</title>
