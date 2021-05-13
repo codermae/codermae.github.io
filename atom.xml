@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-13T02:43:30.261Z</updated>
+  <updated>2021-05-13T08:31:56.085Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0017</title>
+    <link href="https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10017/"/>
+    <id>https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10017/</id>
+    <published>2021-05-13T07:11:13.000Z</published>
+    <updated>2021-05-13T08:31:56.085Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#f15a22&gt;希望你有对感情的向往，也能始终把握感情的走向，让心有所归，感情踏实稳固，愿我们遇见的感情，都是最好的模样。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;3-Array对象&quot;&gt;&lt;a href=&quot;#3-Array对象&quot; class=&quot;headerlink&quot; title=&quot;3. Array对象&quot;&gt;&lt;/a&gt;3. Array对象&lt;/h3&gt;&lt;h4 id=&quot;3-1-构造函数&quot;&gt;&lt;a href=&quot;#3-1-构造函数&quot; class=&quot;headerlink&quot; title=&quot;3.1 构造函数&quot;&gt;&lt;/a&gt;3.1 构造函数&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Array&lt;/code&gt;是 JavaScript 的原生对象，同时也是一个构造函数，可以用它生成新的数组&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; arr = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;arr.length &lt;span class=&quot;comment&quot;&gt;// 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;arr &lt;span class=&quot;comment&quot;&gt;// [ empty x 2 ]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，&lt;code&gt;Array()&lt;/code&gt;构造函数的参数&lt;code&gt;2&lt;/code&gt;，表示生成一个两个成员的数组，每个位置都是空值。&lt;br&gt;如果没有使用&lt;code&gt;new&lt;/code&gt;关键字，运行结果也是一样的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/tags/JS/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0016</title>
