@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-12T07:36:59.947Z</updated>
+  <updated>2021-05-13T02:43:30.261Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打卡0016</title>
+    <link href="https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10016/"/>
+    <id>https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10016/</id>
+    <published>2021-05-13T00:35:33.000Z</published>
+    <updated>2021-05-13T02:43:30.261Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#ac6767&gt;如果你感觉到自己不幸福，是因为你追求的不是幸福，而是比别人幸福。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;2-属性描述对象&quot;&gt;&lt;a href=&quot;#2-属性描述对象&quot; class=&quot;headerlink&quot; title=&quot;2. 属性描述对象&quot;&gt;&lt;/a&gt;2. 属性描述对象&lt;/h3&gt;&lt;h4 id=&quot;2-1-概述&quot;&gt;&lt;a href=&quot;#2-1-概述&quot; class=&quot;headerlink&quot; title=&quot;2.1 概述&quot;&gt;&lt;/a&gt;2.1 概述&lt;/h4&gt;&lt;p&gt;JavaScript 提供了一个内部数据结构，用来描述对象的属性，控制它的行为，比如该属性是否可写、可遍历等等。这个内部数据结构称为“属性描述对象”（attributes object）。每个属性都有自己对应的属性描述对象，保存该属性的一些元信息。&lt;/p&gt;
+&lt;p&gt;下面是属性描述对象的一个例子：&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  value: &lt;span class=&quot;number&quot;&gt;123&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  writable: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  enumerable: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  configurable: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  get: &lt;span class=&quot;literal&quot;&gt;undefined&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  set: &lt;span class=&quot;literal&quot;&gt;undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS标准库-属性描述对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>打卡0015</title>
     <link href="https://codermae.github.io/2021/05/12/%E6%89%93%E5%8D%A10015/"/>
     <id>https://codermae.github.io/2021/05/12/%E6%89%93%E5%8D%A10015/</id>
     <published>2021-05-12T01:07:21.000Z</published>
-    <updated>2021-05-12T07:36:59.947Z</updated>
+    <updated>2021-05-12T07:47:57.657Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#7bbbea&gt;所谓无底深渊，下去，也是前程万里。&lt;/font&gt;&lt;/p&gt;

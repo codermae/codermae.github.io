@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
+       
+      <meta name="keywords" content="blog" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>打卡0016 |  maeBlog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-打卡0016"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  打卡0016
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/13/%E6%89%93%E5%8D%A10016/" class="article-date">
+  <time datetime="2021-05-13T00:35:33.000Z" itemprop="datePublished">2021-05-13</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">4.7k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">20 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#ac6767>如果你感觉到自己不幸福，是因为你追求的不是幸福，而是比别人幸福。</font></p>
+<h2 id="JS标准库"><a href="#JS标准库" class="headerlink" title="JS标准库"></a>JS标准库</h2><h3 id="2-属性描述对象"><a href="#2-属性描述对象" class="headerlink" title="2. 属性描述对象"></a>2. 属性描述对象</h3><h4 id="2-1-概述"><a href="#2-1-概述" class="headerlink" title="2.1 概述"></a>2.1 概述</h4><p>JavaScript 提供了一个内部数据结构，用来描述对象的属性，控制它的行为，比如该属性是否可写、可遍历等等。这个内部数据结构称为“属性描述对象”（attributes object）。每个属性都有自己对应的属性描述对象，保存该属性的一些元信息。</p>
+<p>下面是属性描述对象的一个例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  value: <span class="number">123</span>,</span><br><span class="line">  writable: <span class="literal">false</span>,</span><br><span class="line">  enumerable: <span class="literal">true</span>,</span><br><span class="line">  configurable: <span class="literal">false</span>,</span><br><span class="line">  get: <span class="literal">undefined</span>,</span><br><span class="line">  set: <span class="literal">undefined</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p>属性描述对象提供6个元属性:</p>
+<ol>
+<li>value<br><code>value</code>是该属性的属性值，默认为<code>undefined</code></li>
+<li>writable<br><code>writable</code>是一个布尔值，表示属性值（<code>value</code>）是否可改变（即是否可写），默认为<code>true</code></li>
+<li>enumerable<br><code>enumerable</code>是一个布尔值，表示该属性是否可遍历，默认为<code>true</code>。如果设为<code>false</code>，会使得某些操作（比如<code>for...in</code>循环、<code>Object.keys()</code>）跳过该属性</li>
+<li>configurable<br><code>configurable</code>是一个布尔值，表示可配置性，默认为<code>true</code>。如果设为<code>false</code>，将阻止某些操作改写该属性，比如无法删除该属性，也不得改变该属性的属性描述对象（<code>value</code>属性除外）。也就是说，<code>configurable</code>属性控制了属性描述对象的可写性</li>
+<li>get<br><code>get</code>是一个函数，表示该属性的取值函数（<code>getter</code>），默认为<code>undefined</code></li>
+<li>set<br><code>set</code>是一个函数，表示该属性的存值函数（<code>setter</code>），默认为<code>undefined</code></li>
+</ol>
+<h4 id="2-2-Object-getOwnPropertyDescriptor"><a href="#2-2-Object-getOwnPropertyDescriptor" class="headerlink" title="2.2 Object.getOwnPropertyDescriptor()"></a>2.2 Object.getOwnPropertyDescriptor()</h4><p><code>Object.getOwnPropertyDescriptor()</code>方法可以获取属性描述对象。它的第一个参数是目标对象，第二个参数是一个字符串，对应目标对象的某个属性名</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">p</span>: <span class="string">&#x27;a&#x27;</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyDescriptor(obj, <span class="string">&#x27;p&#x27;</span>)</span><br><span class="line"><span class="comment">// Object &#123; value: &quot;a&quot;,</span></span><br><span class="line"><span class="comment">//   writable: true,</span></span><br><span class="line"><span class="comment">//   enumerable: true,</span></span><br><span class="line"><span class="comment">//   configurable: true</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>Object.getOwnPropertyDescriptor()</code>方法获取<code>obj.p</code>的属性描述对象<br>注意，<code>Object.getOwnPropertyDescriptor()</code>方法只能用于对象自身的属性，不能用于继承的属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">p</span>: <span class="string">&#x27;a&#x27;</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyDescriptor(obj, <span class="string">&#x27;toString&#x27;</span>)</span><br><span class="line"><span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>toString</code>是<code>obj</code>对象继承的属性，<code>Object.getOwnPropertyDescriptor()</code>无法获取。</p>
+<h4 id="2-3-Object-getOwnPropertyNames"><a href="#2-3-Object-getOwnPropertyNames" class="headerlink" title="2.3 Object.getOwnPropertyNames()"></a>2.3 Object.getOwnPropertyNames()</h4><p><code>Object.getOwnPropertyNames</code>方法返回一个数组，成员是参数对象自身的全部属性的属性名，不管该属性是否可遍历。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.defineProperties(&#123;&#125;, &#123;</span><br><span class="line">  p1: &#123; <span class="attr">value</span>: <span class="number">1</span>, <span class="attr">enumerable</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  p2: &#123; <span class="attr">value</span>: <span class="number">2</span>, <span class="attr">enumerable</span>: <span class="literal">false</span> &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyNames(obj)</span><br><span class="line"><span class="comment">// [&quot;p1&quot;, &quot;p2&quot;]</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>obj.p1</code>是可遍历的，<code>obj.p2</code>是不可遍历的。<code>Object.getOwnPropertyNames</code>会将它们都返回<br>这跟<code>Object.keys</code>的行为不同，<code>Object.keys</code>只返回对象自身的可遍历属性的全部属性名</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.keys([]) <span class="comment">// []</span></span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyNames([]) <span class="comment">// [ &#x27;length&#x27; ]</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(<span class="built_in">Object</span>.prototype) <span class="comment">// []</span></span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyNames(<span class="built_in">Object</span>.prototype)</span><br><span class="line"><span class="comment">// [&#x27;hasOwnProperty&#x27;,</span></span><br><span class="line"><span class="comment">//  &#x27;valueOf&#x27;,</span></span><br><span class="line"><span class="comment">//  &#x27;constructor&#x27;,</span></span><br><span class="line"><span class="comment">//  &#x27;toLocaleString&#x27;,</span></span><br><span class="line"><span class="comment">//  &#x27;isPrototypeOf&#x27;,</span></span><br><span class="line"><span class="comment">//  &#x27;propertyIsEnumerable&#x27;,</span></span><br><span class="line"><span class="comment">//  &#x27;toString&#x27;]</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，数组自身的<code>length</code>属性是不可遍历的，<code>Object.keys</code>不会返回该属性。第二个例子的<code>Object.prototype</code>也是一个对象，所有实例对象都会继承它，它自身的属性都是不可遍历的</p>
+<h4 id="2-4-Object-defineProperty-，Object-defineProperties"><a href="#2-4-Object-defineProperty-，Object-defineProperties" class="headerlink" title="2.4 Object.defineProperty()，Object.defineProperties()"></a>2.4 Object.defineProperty()，Object.defineProperties()</h4><p><code>Object.defineProperty()</code>方法允许通过属性描述对象，定义或修改一个属性，然后返回修改后的对象，它的用法如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.defineProperty(object, propertyName, attributesObject)</span><br></pre></td></tr></table></figure>
+<p>Object.defineProperty方法接受三个参数，依次如下:</p>
+<ul>
+<li>object：属性所在的对象</li>
+<li>propertyName：字符串，表示属性名</li>
+<li>attributesObject：属性描述对象</li>
+</ul>
+<p>举例来说，定义<code>obj.p</code>可以写成下面这样</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.defineProperty(&#123;&#125;, <span class="string">&#x27;p&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="number">123</span>,</span><br><span class="line">  writable: <span class="literal">false</span>,</span><br><span class="line">  enumerable: <span class="literal">true</span>,</span><br><span class="line">  configurable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj.p <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line">obj.p = <span class="number">246</span>;</span><br><span class="line">obj.p <span class="comment">// 123</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>Object.defineProperty()</code>方法定义了<code>obj.p</code>属性。由于属性描述对象的<code>writable</code>属性为<code>false</code>，所以<code>obj.p</code>属性不可写。注意，这里的<code>Object.defineProperty</code>方法的第一个参数是<code>&#123;&#125;</code>（一个新建的空对象），<code>p</code>属性直接定义在这个空对象上面，然后返回这个对象，这是<code>Object.defineProperty()</code>的常见用法。<br>如果属性已经存在，<code>Object.defineProperty()</code>方法相当于更新该属性的属性描述对象。<br>如果一次性定义或修改多个属性，可以使用<code>Object.defineProperties()</code>方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.defineProperties(&#123;&#125;, &#123;</span><br><span class="line">  p1: &#123; <span class="attr">value</span>: <span class="number">123</span>, <span class="attr">enumerable</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  p2: &#123; <span class="attr">value</span>: <span class="string">&#x27;abc&#x27;</span>, <span class="attr">enumerable</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  p3: &#123; <span class="attr">get</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="built_in">this</span>.p1 + <span class="built_in">this</span>.p2 &#125;,</span><br><span class="line">    enumerable:<span class="literal">true</span>,</span><br><span class="line">    configurable:<span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj.p1 <span class="comment">// 123</span></span><br><span class="line">obj.p2 <span class="comment">// &quot;abc&quot;</span></span><br><span class="line">obj.p3 <span class="comment">// &quot;123abc&quot;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>Object.defineProperties()</code>同时定义了<code>obj</code>对象的三个属性。其中，<code>p3</code>属性定义了取值函数<code>get</code>，即每次读取该属性，都会调用这个取值函数<br>注意，一旦定义了取值函数<code>get</code>（或存值函数<code>set</code>），就不能将<code>writable</code>属性设为<code>true</code>，或者同时定义<code>value</code>属性，否则会报错</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;p&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="number">123</span>,</span><br><span class="line">  get: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="number">456</span>; &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// TypeError: Invalid property.</span></span><br><span class="line"><span class="comment">// A property cannot both have accessors and be writable or have a value</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;p&#x27;</span>, &#123;</span><br><span class="line">  writable: <span class="literal">true</span>,</span><br><span class="line">  get: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="number">456</span>; &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// TypeError: Invalid property descriptor.</span></span><br><span class="line"><span class="comment">// Cannot both specify accessors and a value or writable attribute</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，同时定义了<code>get</code>属性和<code>value</code>属性，以及将<code>writable</code>属性设为<code>true</code>，就会报错<br><code>Object.defineProperty()</code>和<code>Object.defineProperties()</code>参数里面的属性描述对象，<code>writable</code>、<code>configurable</code>、<code>enumerable</code>这三个属性的默认值都为<code>false</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;foo&#x27;</span>, &#123;&#125;);</span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyDescriptor(obj, <span class="string">&#x27;foo&#x27;</span>)</span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//   value: undefined,</span></span><br><span class="line"><span class="comment">//   writable: false,</span></span><br><span class="line"><span class="comment">//   enumerable: false,</span></span><br><span class="line"><span class="comment">//   configurable: false</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，定义<code>obj.foo</code>时用了一个空的属性描述对象，就可以看到各个元属性的默认值</p>
+<h4 id="2-5-Object-prototype-propertyIsEnumerable"><a href="#2-5-Object-prototype-propertyIsEnumerable" class="headerlink" title="2.5 Object.prototype.propertyIsEnumerable()"></a>2.5 Object.prototype.propertyIsEnumerable()</h4><p>实例对象的<code>propertyIsEnumerable()</code>方法返回一个布尔值，用来判断某个属性是否可遍历。注意，这个方法只能用于判断对象自身的属性，对于继承的属性一律返回<code>false</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">obj.p = <span class="number">123</span>;</span><br><span class="line"></span><br><span class="line">obj.propertyIsEnumerable(<span class="string">&#x27;p&#x27;</span>) <span class="comment">// true</span></span><br><span class="line">obj.propertyIsEnumerable(<span class="string">&#x27;toString&#x27;</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>obj.p</code>是可遍历的，而<code>obj.toString</code>是继承的属性。</p>
+<h4 id="2-6-元属性"><a href="#2-6-元属性" class="headerlink" title="2.6 元属性"></a>2.6 元属性</h4><p>属性描述对象的各个属性称为“元属性”，因为它们可以看作是控制属性的属性</p>
+<h5 id="2-6-1-value"><a href="#2-6-1-value" class="headerlink" title="2.6.1 value"></a>2.6.1 value</h5><p><code>value</code>属性是目标属性的值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">obj.p = <span class="number">123</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyDescriptor(obj, <span class="string">&#x27;p&#x27;</span>).value</span><br><span class="line"><span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;p&#x27;</span>, &#123; <span class="attr">value</span>: <span class="number">246</span> &#125;);</span><br><span class="line">obj.p <span class="comment">// 246</span></span><br></pre></td></tr></table></figure>
+<p>上面代码是通过<code>value</code>属性，读取或改写<code>obj.p</code>的例子</p>
+<h5 id="2-6-2-writable"><a href="#2-6-2-writable" class="headerlink" title="2.6.2 writable"></a>2.6.2 writable</h5><p><code>writable</code>属性是一个布尔值，决定了目标属性的值（value）是否可以被改变</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;a&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="number">37</span>,</span><br><span class="line">  writable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj.a <span class="comment">// 37</span></span><br><span class="line">obj.a = <span class="number">25</span>;</span><br><span class="line">obj.a <span class="comment">// 37</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>obj.a</code>的<code>writable</code>属性是<code>false</code>。然后，改变<code>obj.a</code>的值，不会有任何效果。<br>注意，正常模式下，对<code>writable</code>为<code>false</code>的属性赋值不会报错，只会默默失败。但是，严格模式下会报错，即使对<code>a</code>属性重新赋予一个同样的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;a&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="number">37</span>,</span><br><span class="line">  writable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj.a = <span class="number">37</span>;</span><br><span class="line"><span class="comment">// Uncaught TypeError: Cannot assign to read only property &#x27;a&#x27; of object</span></span><br></pre></td></tr></table></figure>
+<p>上面代码是严格模式，对<code>obj.a</code>任何赋值行为都会报错。<br>如果原型对象的某个属性的<code>writable</code>为<code>false</code>，那么子对象将无法自定义这个属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> proto = <span class="built_in">Object</span>.defineProperty(&#123;&#125;, <span class="string">&#x27;foo&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="string">&#x27;a&#x27;</span>,</span><br><span class="line">  writable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.create(proto);</span><br><span class="line"></span><br><span class="line">obj.foo = <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line">obj.foo <span class="comment">// &#x27;a&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>proto</code>是原型对象，它的<code>foo</code>属性不可写。<code>obj</code>对象继承<code>proto</code>，也不可以再自定义这个属性了。如果是严格模式，这样做还会抛出一个错误。<br>但是，有一个规避方法，就是通过覆盖属性描述对象，绕过这个限制。原因是这种情况下，原型链会被完全忽视。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> proto = <span class="built_in">Object</span>.defineProperty(&#123;&#125;, <span class="string">&#x27;foo&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="string">&#x27;a&#x27;</span>,</span><br><span class="line">  writable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.create(proto);</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;foo&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="string">&#x27;b&#x27;</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj.foo <span class="comment">// &quot;b&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-6-3-enumerable"><a href="#2-6-3-enumerable" class="headerlink" title="2.6.3 enumerable"></a>2.6.3 enumerable</h5><p><code>enumerable</code>（可遍历性）返回一个布尔值，表示目标属性是否可遍历。<br>JavaScript 的早期版本，<code>for...in</code>循环是基于<code>in</code>运算符的。我们知道，<code>in</code>运算符不管某个属性是对象自身的还是继承的，都会返回<code>true</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"><span class="string">&#x27;toString&#x27;</span> <span class="keyword">in</span> obj <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>toString</code>不是<code>obj</code>对象自身的属性，但是<code>in</code>运算符也返回<code>true</code>，这导致了<code>toString</code>属性也会被<code>for...in</code>循环遍历。<br>这显然不太合理，后来就引入了“可遍历性”这个概念。只有可遍历的属性，才会被<code>for...in</code>循环遍历，同时还规定<code>toString</code>这一类实例对象继承的原生属性，都是不可遍历的，这样就保证了<code>for...in</code>循环的可用性。<br>具体来说，如果一个属性的<code>enumerable</code>为<code>false</code>，下面三个操作不会取到该属性:</p>
+<ul>
+<li><code>for..in</code>循环</li>
+<li><code>Object.keys</code>方法</li>
+<li><code>JSON.stringify</code>方法</li>
+</ul>
+<p>因此，<code>enumerable</code>可以用来设置“秘密”属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;x&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="number">123</span>,</span><br><span class="line">  enumerable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj.x <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(key);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(obj)  <span class="comment">// []</span></span><br><span class="line"><span class="built_in">JSON</span>.stringify(obj) <span class="comment">// &quot;&#123;&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+<p>注意，<code>for...in</code>循环包括继承的属性，<code>Object.keys</code>方法不包括继承的属性。如果需要获取对象自身的所有属性，不管是否可遍历，可以使用<code>Object.getOwnPropertyNames</code>方法<br>另外，<code>JSON.stringify</code>方法会排除<code>enumerable</code>为<code>false</code>的属性，有时可以利用这一点。如果对象的 JSON 格式输出要排除某些属性，就可以把这些属性的<code>enumerable</code>设为<code>false</code></p>
+<h5 id="2-6-4-configurable"><a href="#2-6-4-configurable" class="headerlink" title="2.6.4 configurable"></a>2.6.4 configurable</h5><p><code>configurable</code>(可配置性）返回一个布尔值，决定了是否可以修改属性描述对象。也就是说，<code>configurable</code>为<code>false</code>时，<code>value</code>、<code>writable</code>、<code>enumerable</code>和<code>configurable</code>都不能被修改了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.defineProperty(&#123;&#125;, <span class="string">&#x27;p&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="number">1</span>,</span><br><span class="line">  writable: <span class="literal">false</span>,</span><br><span class="line">  enumerable: <span class="literal">false</span>,</span><br><span class="line">  configurable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;p&#x27;</span>, &#123;<span class="attr">value</span>: <span class="number">2</span>&#125;)</span><br><span class="line"><span class="comment">// TypeError: Cannot redefine property: p</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;p&#x27;</span>, &#123;<span class="attr">writable</span>: <span class="literal">true</span>&#125;)</span><br><span class="line"><span class="comment">// TypeError: Cannot redefine property: p</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;p&#x27;</span>, &#123;<span class="attr">enumerable</span>: <span class="literal">true</span>&#125;)</span><br><span class="line"><span class="comment">// TypeError: Cannot redefine property: p</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;p&#x27;</span>, &#123;<span class="attr">configurable</span>: <span class="literal">true</span>&#125;)</span><br><span class="line"><span class="comment">// TypeError: Cannot redefine property: p</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>obj.p</code>的<code>configurable</code>为<code>false</code>。然后，改动<code>value</code>、<code>writable</code>、<code>enumerable</code>、<code>configurable</code>，结果都报错<br>注意，<code>writable</code>只有在<code>false</code>改为<code>true</code>会报错，<code>true</code>改为<code>false</code>是允许的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.defineProperty(&#123;&#125;, <span class="string">&#x27;p&#x27;</span>, &#123;</span><br><span class="line">  writable: <span class="literal">true</span>,</span><br><span class="line">  configurable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;p&#x27;</span>, &#123;<span class="attr">writable</span>: <span class="literal">false</span>&#125;)</span><br><span class="line"><span class="comment">// 修改成功</span></span><br></pre></td></tr></table></figure>
+<p>至于<code>value</code>，只要<code>writable</code>和<code>configurable</code>有一个为<code>true</code>，就允许改动</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o1 = <span class="built_in">Object</span>.defineProperty(&#123;&#125;, <span class="string">&#x27;p&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="number">1</span>,</span><br><span class="line">  writable: <span class="literal">true</span>,</span><br><span class="line">  configurable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(o1, <span class="string">&#x27;p&#x27;</span>, &#123;<span class="attr">value</span>: <span class="number">2</span>&#125;)</span><br><span class="line"><span class="comment">// 修改成功</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o2 = <span class="built_in">Object</span>.defineProperty(&#123;&#125;, <span class="string">&#x27;p&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="number">1</span>,</span><br><span class="line">  writable: <span class="literal">false</span>,</span><br><span class="line">  configurable: <span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(o2, <span class="string">&#x27;p&#x27;</span>, &#123;<span class="attr">value</span>: <span class="number">2</span>&#125;)</span><br><span class="line"><span class="comment">// 修改成功</span></span><br></pre></td></tr></table></figure>
+<p>另外，<code>writable</code>为<code>false</code>时，直接目标属性赋值，不报错，但不会成功</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.defineProperty(&#123;&#125;, <span class="string">&#x27;p&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="number">1</span>,</span><br><span class="line">  writable: <span class="literal">false</span>,</span><br><span class="line">  configurable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj.p = <span class="number">2</span>;</span><br><span class="line">obj.p <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>obj.p</code>的<code>writable</code>为<code>false</code>，对<code>obj.p</code>直接赋值不会生效。如果是严格模式，还会报错。</p>
+<p>可配置性决定了目标属性是否可以被删除（delete）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.defineProperties(&#123;&#125;, &#123;</span><br><span class="line">  p1: &#123; <span class="attr">value</span>: <span class="number">1</span>, <span class="attr">configurable</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  p2: &#123; <span class="attr">value</span>: <span class="number">2</span>, <span class="attr">configurable</span>: <span class="literal">false</span> &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> obj.p1 <span class="comment">// true</span></span><br><span class="line"><span class="keyword">delete</span> obj.p2 <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">obj.p1 <span class="comment">// undefined</span></span><br><span class="line">obj.p2 <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>obj.p1</code>的<code>configurable</code>是<code>true</code>，所以可以被删除，<code>obj.p2</code>就无法删除</p>
+<h4 id="2-7-存取器"><a href="#2-7-存取器" class="headerlink" title="2.7 存取器"></a>2.7 存取器</h4><p>除了直接定义以外，属性还可以用存取器（accessor）定义。其中，存值函数称为<code>setter</code>，使用属性描述对象的<code>set</code>属性；取值函数称为<code>getter</code>，使用属性描述对象的<code>get</code>属性。<br>一旦对目标属性定义了存取器，那么存取的时候，都将执行对应的函数。利用这个功能，可以实现许多高级特性，比如定制属性的读取和赋值行为。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.defineProperty(&#123;&#125;, <span class="string">&#x27;p&#x27;</span>, &#123;</span><br><span class="line">  get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;getter&#x27;</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  set: <span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;setter: &#x27;</span> + value);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj.p <span class="comment">// &quot;getter&quot;</span></span><br><span class="line">obj.p = <span class="number">123</span> <span class="comment">// &quot;setter: 123&quot;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>obj.p</code>定义了<code>get</code>和<code>set</code>属性。<code>obj.p</code>取值时，就会调用<code>get</code>；赋值时，就会调用<code>set</code><br>JavaScript 还提供了存取器的另一种写法:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 写法二</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="keyword">get</span> <span class="title">p</span>() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;getter&#x27;</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">set</span> <span class="title">p</span>(<span class="params">value</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;setter: &#x27;</span> + value);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>面两种写法，虽然属性<code>p</code>的读取和赋值行为是一样的，但是有一些细微的区别。第一种写法，属性<code>p</code>的<code>configurable</code>和<code>enumerable</code>都为<code>false</code>，从而导致属性<code>p</code>是不可遍历的；第二种写法，属性<code>p</code>的<code>configurable</code>和<code>enumerable</code>都为<code>true</code>，因此属性<code>p</code>是可遍历的。实际开发中，写法二更常用。<br>注意，取值函数<code>get</code>不能接受参数，存值函数set只能接受一个参数（即属性的值）。<br>存取器往往用于，属性的值依赖对象内部数据的场合。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj =&#123;</span><br><span class="line">  $n : <span class="number">5</span>,</span><br><span class="line">  <span class="keyword">get</span> <span class="title">next</span>() &#123; <span class="keyword">return</span> <span class="built_in">this</span>.$n++ &#125;,</span><br><span class="line">  <span class="keyword">set</span> <span class="title">next</span>(<span class="params">n</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (n &gt;= <span class="built_in">this</span>.$n) <span class="built_in">this</span>.$n = n;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;新的值必须大于当前值&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj.next <span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line">obj.next = <span class="number">10</span>;</span><br><span class="line">obj.next <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line">obj.next = <span class="number">5</span>;</span><br><span class="line"><span class="comment">// Uncaught Error: 新的值必须大于当前值</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>next</code>属性的存值函数和取值函数，都依赖于内部属性<code>$n</code></p>
+<h4 id="2-8-对象的拷贝"><a href="#2-8-对象的拷贝" class="headerlink" title="2.8 对象的拷贝"></a>2.8 对象的拷贝</h4><p>有时，我们需要将一个对象的所有属性，拷贝到另一个对象，可以用下面的方法实现</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> extend = <span class="function"><span class="keyword">function</span> (<span class="params">to, <span class="keyword">from</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> property <span class="keyword">in</span> <span class="keyword">from</span>) &#123;</span><br><span class="line">    to[property] = <span class="keyword">from</span>[property];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> to;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">extend(&#123;&#125;, &#123;</span><br><span class="line">  a: <span class="number">1</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// &#123;a: 1&#125;</span></span><br></pre></td></tr></table></figure>
+<p>上面这个方法的问题在于，如果遇到存取器定义的属性，会只拷贝值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">extend(&#123;&#125;, &#123;</span><br><span class="line">  <span class="keyword">get</span> <span class="title">a</span>() &#123; <span class="keyword">return</span> <span class="number">1</span> &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// &#123;a: 1&#125;</span></span><br></pre></td></tr></table></figure>
+<p>为了解决这个问题，我们可以通过<code>Object.defineProperty</code>方法来拷贝属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> extend = <span class="function"><span class="keyword">function</span> (<span class="params">to, <span class="keyword">from</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> property <span class="keyword">in</span> <span class="keyword">from</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="keyword">from</span>.hasOwnProperty(property)) <span class="keyword">continue</span>;</span><br><span class="line">    <span class="built_in">Object</span>.defineProperty(</span><br><span class="line">      to,</span><br><span class="line">      property,</span><br><span class="line">      <span class="built_in">Object</span>.getOwnPropertyDescriptor(<span class="keyword">from</span>, property)</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> to;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">extend(&#123;&#125;, &#123; <span class="keyword">get</span> <span class="title">a</span>()&#123; <span class="keyword">return</span> <span class="number">1</span> &#125; &#125;)</span><br><span class="line"><span class="comment">// &#123; get a()&#123; return 1 &#125; &#125;)</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>hasOwnProperty</code>那一行用来过滤掉继承的属性，否则可能会报错，因为<code>Object.getOwnPropertyDescriptor</code>读不到继承属性的属性描述对象</p>
+<h4 id="2-9-控制对象状态"><a href="#2-9-控制对象状态" class="headerlink" title="2.9 控制对象状态"></a>2.9 控制对象状态</h4><p>有时需要冻结对象的读写状态，防止对象被改变。JavaScript 提供了三种冻结方法，最弱的一种是<code>Object.preventExtensions</code>，其次是<code>Object.seal</code>，最强的是<code>Object.freeze</code></p>
+<h5 id="2-9-1-Object-preventExtensions"><a href="#2-9-1-Object-preventExtensions" class="headerlink" title="2.9.1 Object.preventExtensions()"></a>2.9.1 Object.preventExtensions()</h5><p><code>Object.preventExtensions</code>方法可以使得一个对象无法再添加新的属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="built_in">Object</span>.preventExtensions(obj);</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;p&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// TypeError: Cannot define property:p, object is not extensible.</span></span><br><span class="line"></span><br><span class="line">obj.p = <span class="number">1</span>;</span><br><span class="line">obj.p <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>obj</code>对象经过<code>Object.preventExtensions</code>以后，就无法添加新属性了</p>
+<h5 id="2-9-2-Object-isExtensible"><a href="#2-9-2-Object-isExtensible" class="headerlink" title="2.9.2 Object.isExtensible()"></a>2.9.2 Object.isExtensible()</h5><p><code>Object.isExtensible</code>方法用于检查一个对象是否使用了<code>Object.preventExtensions</code>方法。也就是说，检查是否可以为一个对象添加属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.isExtensible(obj) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Object</span>.preventExtensions(obj);</span><br><span class="line"><span class="built_in">Object</span>.isExtensible(obj) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，对<code>obj</code>对象使用<code>Object.preventExtensions</code>方法以后，再使用<code>Object.isExtensible</code>方法，返回<code>false</code>，表示已经不能添加新属性了</p>
+<h5 id="2-9-3-Object-seal"><a href="#2-9-3-Object-seal" class="headerlink" title="2.9.3 Object.seal()"></a>2.9.3 Object.seal()</h5><p><code>Object.seal</code>方法使得一个对象既无法添加新属性，也无法删除旧属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">p</span>: <span class="string">&#x27;hello&#x27;</span> &#125;;</span><br><span class="line"><span class="built_in">Object</span>.seal(obj);</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> obj.p;</span><br><span class="line">obj.p <span class="comment">// &quot;hello&quot;</span></span><br><span class="line"></span><br><span class="line">obj.x = <span class="string">&#x27;world&#x27;</span>;</span><br><span class="line">obj.x <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>obj</code>对象执行<code>Object.seal</code>方法以后，就无法添加新属性和删除旧属性了。<br><code>Object.seal</code>实质是把属性描述对象的<code>configurable</code>属性设为<code>false</code>，因此属性描述对象不再能改变了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  p: <span class="string">&#x27;a&#x27;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// seal方法之前</span></span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyDescriptor(obj, <span class="string">&#x27;p&#x27;</span>)</span><br><span class="line"><span class="comment">// Object &#123;</span></span><br><span class="line"><span class="comment">//   value: &quot;a&quot;,</span></span><br><span class="line"><span class="comment">//   writable: true,</span></span><br><span class="line"><span class="comment">//   enumerable: true,</span></span><br><span class="line"><span class="comment">//   configurable: true</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.seal(obj);</span><br><span class="line"></span><br><span class="line"><span class="comment">// seal方法之后</span></span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyDescriptor(obj, <span class="string">&#x27;p&#x27;</span>)</span><br><span class="line"><span class="comment">// Object &#123;</span></span><br><span class="line"><span class="comment">//   value: &quot;a&quot;,</span></span><br><span class="line"><span class="comment">//   writable: true,</span></span><br><span class="line"><span class="comment">//   enumerable: true,</span></span><br><span class="line"><span class="comment">//   configurable: false</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">&#x27;p&#x27;</span>, &#123;</span><br><span class="line">  enumerable: <span class="literal">false</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// TypeError: Cannot redefine property: p</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，使用<code>Object.seal</code>方法之后，属性描述对象的<code>configurable</code>属性就变成了<code>false</code>，然后改变<code>enumerable</code>属性就会报错<br><code>Object.seal</code>只是禁止新增或删除属性，并不影响修改某个属性的值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">p</span>: <span class="string">&#x27;a&#x27;</span> &#125;;</span><br><span class="line"><span class="built_in">Object</span>.seal(obj);</span><br><span class="line">obj.p = <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line">obj.p <span class="comment">// &#x27;b&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>Object.seal</code>方法对<code>p</code>属性的<code>value</code>无效，是因为此时<code>p</code>属性的可写性由<code>writable</code>决定</p>
+<h5 id="2-9-4-Object-isSealed"><a href="#2-9-4-Object-isSealed" class="headerlink" title="2.9.4 Object.isSealed()"></a>2.9.4 Object.isSealed()</h5><p><code>Object.isSealed</code>方法用于检查一个对象是否使用了<code>Object.seal</code>方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">p</span>: <span class="string">&#x27;a&#x27;</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.seal(obj);</span><br><span class="line"><span class="built_in">Object</span>.isSealed(obj) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>这时，<code>Object.isExtensible</code>方法也返回<code>false</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">p</span>: <span class="string">&#x27;a&#x27;</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.seal(obj);</span><br><span class="line"><span class="built_in">Object</span>.isExtensible(obj) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<h5 id="2-9-5-Object-freeze"><a href="#2-9-5-Object-freeze" class="headerlink" title="2.9.5 Object.freeze()"></a>2.9.5 Object.freeze()</h5><p><code>Object.freeze</code>方法可以使得一个对象无法添加新属性、无法删除旧属性、也无法改变属性的值，使得这个对象实际上变成了常量</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  p: <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.freeze(obj);</span><br><span class="line"></span><br><span class="line">obj.p = <span class="string">&#x27;world&#x27;</span>;</span><br><span class="line">obj.p <span class="comment">// &quot;hello&quot;</span></span><br><span class="line"></span><br><span class="line">obj.t = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">obj.t <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> obj.p <span class="comment">// false</span></span><br><span class="line">obj.p <span class="comment">// &quot;hello&quot;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，对<code>obj</code>对象进行<code>Object.freeze()</code>以后，修改属性、新增属性、删除属性都无效了。这些操作并不报错，只是默默地失败。如果在严格模式下，则会报错</p>
+<h5 id="2-9-6-Object-isFrozen"><a href="#2-9-6-Object-isFrozen" class="headerlink" title="2.9.6 Object.isFrozen()"></a>2.9.6 Object.isFrozen()</h5><p><code>Object.isFrozen</code>方法用于检查一个对象是否使用了<code>Object.freeze</code>方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  p: <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.freeze(obj);</span><br><span class="line"><span class="built_in">Object</span>.isFrozen(obj) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>使用<code>Object.freeze</code>方法以后，<code>Object.isSealed</code>将会返回<code>true</code>，<code>Object.isExtensible</code>返回<code>false</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  p: <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.freeze(obj);</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.isSealed(obj) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Object</span>.isExtensible(obj) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p><code>Object.isFrozen</code>的一个用途是，确认某个对象没有被冻结后，再对它的属性赋值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  p: <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.freeze(obj);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!<span class="built_in">Object</span>.isFrozen(obj)) &#123;</span><br><span class="line">  obj.p = <span class="string">&#x27;world&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，确认<code>obj</code>没有被冻结后，再对它的属性赋值，就不会报错了</p>
+<h5 id="2-9-7-局限性"><a href="#2-9-7-局限性" class="headerlink" title="2.9.7 局限性"></a>2.9.7 局限性</h5><p>上面的三个方法锁定对象的可写性有一个漏洞：可以通过改变原型对象，来为对象增加属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="built_in">Object</span>.preventExtensions(obj);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> proto = <span class="built_in">Object</span>.getPrototypeOf(obj);</span><br><span class="line">proto.t = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">obj.t</span><br><span class="line"><span class="comment">// hello</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，对象<code>obj</code>本身不能新增属性，但是可以在它的原型对象上新增属性，就依然能够在<code>obj</code>上读到。<br>一种解决方案是，把<code>obj</code>的原型也冻结住</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="built_in">Object</span>.preventExtensions(obj);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> proto = <span class="built_in">Object</span>.getPrototypeOf(obj);</span><br><span class="line"><span class="built_in">Object</span>.preventExtensions(proto);</span><br><span class="line"></span><br><span class="line">proto.t = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">obj.t <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<p>另外一个局限是，如果属性值是对象，上面这些方法只能冻结属性指向的对象，而不能冻结对象本身的内容</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  foo: <span class="number">1</span>,</span><br><span class="line">  bar: [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>]</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">Object</span>.freeze(obj);</span><br><span class="line"></span><br><span class="line">obj.bar.push(<span class="string">&#x27;c&#x27;</span>);</span><br><span class="line">obj.bar <span class="comment">// [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>obj.bar</code>属性指向一个数组，<code>obj</code>对象被冻结以后，这个指向无法改变，即无法指向其他值，但是所指向的数组是可以改变的</p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10016/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E5%AF%B9%E8%B1%A1/" rel="tag">JS标准库-属性描述对象</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2021/05/12/%E6%89%93%E5%8D%A10015/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">打卡0015</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
+    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Ye Ma
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        <!-- 
+         -->
+        
+        
+        Powered by Hexo
+        <span class="division">|</span>
+        Theme - Ayer
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="maeBlog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/travel/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about/2021">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/gHZjdQRcOL1WxSP.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/pZNYuI4QFnfwb7l.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>
