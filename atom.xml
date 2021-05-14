@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-13T08:31:56.085Z</updated>
+  <updated>2021-05-14T08:30:28.843Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,11 +17,95 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打卡0021</title>
+    <link href="https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10021/"/>
+    <id>https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10021/</id>
+    <published>2021-05-14T07:19:14.000Z</published>
+    <updated>2021-05-14T08:30:28.843Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#fcaf17&gt;希望你活得尽兴，而不是过的庆幸&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;7-String对象&quot;&gt;&lt;a href=&quot;#7-String对象&quot; class=&quot;headerlink&quot; title=&quot;7. String对象&quot;&gt;&lt;/a&gt;7. String对象&lt;/h3&gt;&lt;h4 id=&quot;7-1-概述&quot;&gt;&lt;a href=&quot;#7-1-概述&quot; class=&quot;headerlink&quot; title=&quot;7.1 概述&quot;&gt;&lt;/a&gt;7.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;String&lt;/code&gt;对象是 JavaScript 原生提供的三个包装对象之一，用来生成字符串对象。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; s1 = &lt;span class=&quot;string&quot;&gt;&amp;#x27;abc&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; s2 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;String&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;abc&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; s1 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;string&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; s2 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s2.valueOf() &lt;span class=&quot;comment&quot;&gt;// &amp;quot;abc&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS标准库-String对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-String%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0020</title>
+    <link href="https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10020/"/>
+    <id>https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10020/</id>
+    <published>2021-05-14T06:36:46.000Z</published>
+    <updated>2021-05-14T07:21:16.184Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#1d953f&gt;即使不开心也不要愁眉不展，因为你不知道谁会爱上你的笑容。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;6-Number对象&quot;&gt;&lt;a href=&quot;#6-Number对象&quot; class=&quot;headerlink&quot; title=&quot;6. Number对象&quot;&gt;&lt;/a&gt;6. Number对象&lt;/h3&gt;&lt;h4 id=&quot;6-1-概述&quot;&gt;&lt;a href=&quot;#6-1-概述&quot; class=&quot;headerlink&quot; title=&quot;6.1 概述&quot;&gt;&lt;/a&gt;6.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Number&lt;/code&gt;对象是数值对应的包装对象，可以作为构造函数使用，也可以作为工具函数使用。&lt;br&gt;作为构造函数时，它用于生成值为数值的对象。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; n = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Number&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; n &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS标准库-Number对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Number%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0019</title>
+    <link href="https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10019/"/>
+    <id>https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10019/</id>
+    <published>2021-05-14T03:12:21.000Z</published>
+    <updated>2021-05-14T06:33:45.264Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#bed742&gt;如果你是异性，你会不会爱上现在的自己？&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;5-Boolean对象&quot;&gt;&lt;a href=&quot;#5-Boolean对象&quot; class=&quot;headerlink&quot; title=&quot;5. Boolean对象&quot;&gt;&lt;/a&gt;5. Boolean对象&lt;/h3&gt;&lt;h4 id=&quot;5-1-概述&quot;&gt;&lt;a href=&quot;#5-1-概述&quot; class=&quot;headerlink&quot; title=&quot;5.1 概述&quot;&gt;&lt;/a&gt;5.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Boolean&lt;/code&gt;对象是 JavaScript 的三个包装对象之一。作为构造函数，它主要用于生成布尔值的包装对象实例。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; b = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Boolean&lt;/span&gt;(&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; b &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;b.valueOf() &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS标准库-Boolean对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Boolean%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0018</title>
+    <link href="https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10018/"/>
+    <id>https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10018/</id>
+    <published>2021-05-14T01:34:06.000Z</published>
+    <updated>2021-05-14T06:33:03.568Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#4e72b8&gt;努力经营当下，直至未来明朗。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;4-包装对象&quot;&gt;&lt;a href=&quot;#4-包装对象&quot; class=&quot;headerlink&quot; title=&quot;4. 包装对象&quot;&gt;&lt;/a&gt;4. 包装对象&lt;/h3&gt;&lt;h4 id=&quot;4-1-定义&quot;&gt;&lt;a href=&quot;#4-1-定义&quot; class=&quot;headerlink&quot; title=&quot;4.1 定义&quot;&gt;&lt;/a&gt;4.1 定义&lt;/h4&gt;&lt;p&gt;对象是 JavaScript 语言最主要的数据类型，三种原始类型的值——数值、字符串、布尔值——在一定条件下，也会自动转为对象，也就是原始类型的“包装对象”（wrapper）&lt;br&gt;所谓“包装对象”，指的是与数值、字符串、布尔值分别相对应的&lt;code&gt;Number&lt;/code&gt;、&lt;code&gt;String&lt;/code&gt;、&lt;code&gt;Boolean&lt;/code&gt;三个原生对象。这三个原生对象可以把原始类型的值变成（包装成）对象&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; v1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Number&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;123&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; v2 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;String&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;abc&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; v3 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Boolean&lt;/span&gt;(&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; v1 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; v2 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; v3 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;v1 === &lt;span class=&quot;number&quot;&gt;123&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;v2 === &lt;span class=&quot;string&quot;&gt;&amp;#x27;abc&amp;#x27;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;v3 === &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS标准库-包装对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-%E5%8C%85%E8%A3%85%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>打卡0017</title>
     <link href="https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10017/"/>
     <id>https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10017/</id>
     <published>2021-05-13T07:11:13.000Z</published>
-    <updated>2021-05-13T08:31:56.085Z</updated>
+    <updated>2021-05-14T01:36:16.926Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#f15a22&gt;希望你有对感情的向往，也能始终把握感情的走向，让心有所归，感情踏实稳固，愿我们遇见的感情，都是最好的模样。&lt;/font&gt;&lt;/p&gt;
@@ -34,7 +118,7 @@
     <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
     
     
-    <category term="JS" scheme="https://codermae.github.io/tags/JS/"/>
+    <category term="JS标准库-Array对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Array%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
@@ -372,51 +456,6 @@
     
     
     <category term="JS数据类型-字符串" scheme="https://codermae.github.io/tags/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0001</title>
-    <link href="https://codermae.github.io/2021/05/04/%E6%89%93%E5%8D%A10001/"/>
-    <id>https://codermae.github.io/2021/05/04/%E6%89%93%E5%8D%A10001/</id>
-    <published>2021-05-04T05:04:22.000Z</published>
-    <updated>2021-05-06T07:29:58.118Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=red&gt;&lt;strong&gt;青春不息，奋斗不止&lt;/strong&gt;&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS数据类型&quot;&gt;&lt;a href=&quot;#JS数据类型&quot; class=&quot;headerlink&quot; title=&quot;JS数据类型&quot;&gt;&lt;/a&gt;JS数据类型&lt;/h2&gt;&lt;h3 id=&quot;1-null-amp-amp-undefined-amp-amp-boolean&quot;&gt;&lt;a href=&quot;#1-null-amp-amp-undefined-amp-amp-boolean&quot; class=&quot;headerlink&quot; title=&quot;1.null &amp;amp;&amp;amp; undefined &amp;amp;&amp;amp; boolean&quot;&gt;&lt;/a&gt;1.null &amp;amp;&amp;amp; undefined &amp;amp;&amp;amp; boolean&lt;/h3&gt;&lt;p&gt;&lt;code&gt;null&lt;/code&gt;与&lt;code&gt;undefined&lt;/code&gt;都可以表示“没有”，在if语句中都会自动转为&lt;code&gt;false&lt;/code&gt;&lt;br&gt;区别是&lt;code&gt;null&lt;/code&gt;表示一个“空”的对象，转为数值是为&lt;code&gt;0&lt;/code&gt;&lt;br&gt;      &lt;code&gt;undefined&lt;/code&gt;表示“此处无定义”的原始值，转为数值时为&lt;code&gt;NaN&lt;/code&gt;&lt;br&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS数据类型-数值" scheme="https://codermae.github.io/tags/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E6%95%B0%E5%80%BC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>My first blog</title>
-    <link href="https://codermae.github.io/2021/05/01/My-first-blog/"/>
-    <id>https://codermae.github.io/2021/05/01/My-first-blog/</id>
-    <published>2021-05-01T05:27:44.000Z</published>
-    <updated>2021-05-02T05:11:02.493Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;哈哈&quot;&gt;&lt;a href=&quot;#哈哈&quot; class=&quot;headerlink&quot; title=&quot;哈哈&quot;&gt;&lt;/a&gt;哈哈&lt;/h2&gt;&lt;p&gt;蛤蛤蛤蛤 终于搞定了 赶紧先来占个位 纪念一下五一还在学习的自己.&lt;/p&gt;
-&lt;p&gt;这是第二次搭建博客，但并不是我的第二个博客，因为第一次半途而废，因为当时感觉看的文章比较乱，&lt;br&gt;当然更重要的是 自 己 太 菜 ！    为了表达对参考文献作者的感激之情，就做个推广吧&lt;a href=&quot;https://mp.weixin.qq.com/s/rIOoX2MMl0qEsJ4pnwJoqQ&quot;&gt;原文&lt;/a&gt;。&lt;/p&gt;
-&lt;h3 id=&quot;补充&quot;&gt;&lt;a href=&quot;#补充&quot; class=&quot;headerlink&quot; title=&quot;补充&quot;&gt;&lt;/a&gt;补充&lt;/h3&gt;&lt;p&gt;个人感觉上面的文章已经写的很细了 就记录一下自己在搭建过程中遇到的两个问题吧顺便练习写博客哈哈~~~&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术" scheme="https://codermae.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="Githubpage+hexo博客搭建" scheme="https://codermae.github.io/categories/%E6%8A%80%E6%9C%AF/Githubpage-hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="博客搭建" scheme="https://codermae.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    <category term="First Blog" scheme="https://codermae.github.io/tags/First-Blog/"/>
     
   </entry>
   
