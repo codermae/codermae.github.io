@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-15T06:39:32.259Z</updated>
+  <updated>2021-05-16T07:52:46.781Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0025</title>
+    <link href="https://codermae.github.io/2021/05/16/%E6%89%93%E5%8D%A10025/"/>
+    <id>https://codermae.github.io/2021/05/16/%E6%89%93%E5%8D%A10025/</id>
+    <published>2021-05-16T07:21:35.000Z</published>
+    <updated>2021-05-16T07:52:46.781Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#ffc20e&gt;白日不到处，青春恰自来。苔花如米小，也学牡丹开。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;11-JSON对象&quot;&gt;&lt;a href=&quot;#11-JSON对象&quot; class=&quot;headerlink&quot; title=&quot;11. JSON对象&quot;&gt;&lt;/a&gt;11. JSON对象&lt;/h3&gt;&lt;h4 id=&quot;11-1-JSON格式&quot;&gt;&lt;a href=&quot;#11-1-JSON格式&quot; class=&quot;headerlink&quot; title=&quot;11.1 JSON格式&quot;&gt;&lt;/a&gt;11.1 JSON格式&lt;/h4&gt;&lt;p&gt;JSON 格式（JavaScript Object Notation 的缩写）是一种用于数据交换的文本格式，2001年由 Douglas Crockford 提出，目的是取代繁琐笨重的 XML 格式。&lt;/p&gt;
+&lt;p&gt;相比 XML 格式，JSON 格式有两个显著的优点：书写简单，一目了然；符合 JavaScript 原生语法，可以由解释引擎直接处理，不用另外添加解析代码。所以，JSON 迅速被接受，已经成为各大网站交换数据的标准格式，并被写入标准。&lt;/p&gt;
+&lt;p&gt;每个 JSON 对象就是一个值，可能是一个数组或对象，也可能是一个原始类型的值。总之，只能是一个值，不能是两个或更多的值。&lt;/p&gt;
+&lt;p&gt;JSON 对值的类型和格式有严格的规定。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;复合类型的值只能是数组或对象，不能是函数、正则表达式对象、日期对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;原始类型的值只有四种：字符串、数值（必须以十进制表示）、布尔值和&lt;code&gt;null&lt;/code&gt;（不能使用&lt;code&gt;NaN&lt;/code&gt;, &lt;code&gt;Infinity&lt;/code&gt;, &lt;code&gt;-Infinity&lt;/code&gt;和&lt;code&gt;undefined&lt;/code&gt;）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;字符串必须使用双引号表示，不能使用单引号。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;对象的键名必须放在双引号里面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;数组或对象最后一个成员的后面，不能加逗号。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS标准库-JSON对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-JSON%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0024</title>
+    <link href="https://codermae.github.io/2021/05/16/%E6%89%93%E5%8D%A10024/"/>
+    <id>https://codermae.github.io/2021/05/16/%E6%89%93%E5%8D%A10024/</id>
+    <published>2021-05-16T04:51:55.000Z</published>
+    <updated>2021-05-16T07:51:25.762Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#afdfe4&gt;真正重要的东西，总是没有的人比拥有的人清楚。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;10-RegExp对象&quot;&gt;&lt;a href=&quot;#10-RegExp对象&quot; class=&quot;headerlink&quot; title=&quot;10. RegExp对象&quot;&gt;&lt;/a&gt;10. RegExp对象&lt;/h3&gt;&lt;h4 id=&quot;10-1-概述&quot;&gt;&lt;a href=&quot;#10-1-概述&quot; class=&quot;headerlink&quot; title=&quot;10.1 概述&quot;&gt;&lt;/a&gt;10.1 概述&lt;/h4&gt;&lt;p&gt;正则表达式（regular expression）是一种表达文本模式（即字符串结构）的方法，有点像字符串的模板，常常用来按照“给定模式”匹配文本。比如，正则表达式给出一个 Email 地址的模式，然后用它来确定一个字符串是否为 Email 地址。JavaScript 的正则表达式体系是参照 Perl 5 建立的。&lt;br&gt;新建正则表达式有两种方法。一种是使用字面量，以斜杠表示开始和结束。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;regexp&quot;&gt;/xyz/&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;另一种是使用&lt;code&gt;RegExp&lt;/code&gt;构造函数。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;xyz&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS标准库-RegExp对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-RegExp%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0023</title>
@@ -430,46 +488,6 @@
     
     
     <category term="JS运算符-算术运算符" scheme="https://codermae.github.io/tags/JS%E8%BF%90%E7%AE%97%E7%AC%A6-%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0005</title>
-    <link href="https://codermae.github.io/2021/05/07/%E6%89%93%E5%8D%A10005/"/>
-    <id>https://codermae.github.io/2021/05/07/%E6%89%93%E5%8D%A10005/</id>
-    <published>2021-05-07T00:32:02.000Z</published>
-    <updated>2021-05-08T01:23:37.119Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#7bbfea&gt;瞥扭的心态，得靠自个儿去调适~~~&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS数据类型&quot;&gt;&lt;a href=&quot;#JS数据类型&quot; class=&quot;headerlink&quot; title=&quot;JS数据类型&quot;&gt;&lt;/a&gt;JS数据类型&lt;/h2&gt;&lt;h3 id=&quot;6-数组&quot;&gt;&lt;a href=&quot;#6-数组&quot; class=&quot;headerlink&quot; title=&quot;6. 数组&quot;&gt;&lt;/a&gt;6. 数组&lt;/h3&gt;&lt;h4 id=&quot;6-1-定义&quot;&gt;&lt;a href=&quot;#6-1-定义&quot; class=&quot;headerlink&quot; title=&quot;6.1 定义&quot;&gt;&lt;/a&gt;6.1 定义&lt;/h4&gt;&lt;p&gt;数组（array）是按次序排列的一组值，每个值都有编号（从0开始），整个数组用方括号表示&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS数据类型-数组" scheme="https://codermae.github.io/tags/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0004</title>
-    <link href="https://codermae.github.io/2021/05/06/%E6%89%93%E5%8D%A10004/"/>
-    <id>https://codermae.github.io/2021/05/06/%E6%89%93%E5%8D%A10004/</id>
-    <published>2021-05-06T01:32:08.000Z</published>
-    <updated>2021-05-08T00:18:55.302Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#45b97c&gt;愿每个人都能收获相处舒服的关系，既能保持分寸，又不会疏离；既能守住底线，又不至于单薄；可以各自忙碌，又彼此牵挂、惦记，简单又纯粹。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS数据类型&quot;&gt;&lt;a href=&quot;#JS数据类型&quot; class=&quot;headerlink&quot; title=&quot;JS数据类型&quot;&gt;&lt;/a&gt;JS数据类型&lt;/h2&gt;&lt;h3 id=&quot;5-函数&quot;&gt;&lt;a href=&quot;#5-函数&quot; class=&quot;headerlink&quot; title=&quot;5.函数&quot;&gt;&lt;/a&gt;5.函数&lt;/h3&gt;&lt;h4 id=&quot;5-1-概述&quot;&gt;&lt;a href=&quot;#5-1-概述&quot; class=&quot;headerlink&quot; title=&quot;5.1 概述&quot;&gt;&lt;/a&gt;5.1 概述&lt;/h4&gt;&lt;h5 id=&quot;5-1-1-函数的声明&quot;&gt;&lt;a href=&quot;#5-1-1-函数的声明&quot; class=&quot;headerlink&quot; title=&quot;5.1.1 函数的声明&quot;&gt;&lt;/a&gt;5.1.1 函数的声明&lt;/h5&gt;&lt;p&gt;JavaScript 有三种声明函数的方法&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS数据类型-函数" scheme="https://codermae.github.io/tags/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%87%BD%E6%95%B0/"/>
     
   </entry>
   
