@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-16T07:52:46.781Z</updated>
+  <updated>2021-05-17T08:30:18.375Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0027</title>
+    <link href="https://codermae.github.io/2021/05/17/%E6%89%93%E5%8D%A10027/"/>
+    <id>https://codermae.github.io/2021/05/17/%E6%89%93%E5%8D%A10027/</id>
+    <published>2021-05-17T02:07:18.000Z</published>
+    <updated>2021-05-17T08:30:18.375Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#73b9a2&gt;走在未知的道路上，不能停也不能回头。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;2-this关键字&quot;&gt;&lt;a href=&quot;#2-this关键字&quot; class=&quot;headerlink&quot; title=&quot;2. this关键字&quot;&gt;&lt;/a&gt;2. this关键字&lt;/h3&gt;&lt;h4 id=&quot;2-1-涵义&quot;&gt;&lt;a href=&quot;#2-1-涵义&quot; class=&quot;headerlink&quot; title=&quot;2.1 涵义&quot;&gt;&lt;/a&gt;2.1 涵义&lt;/h4&gt;&lt;p&gt;&lt;code&gt;this&lt;/code&gt;关键字是一个非常重要的语法点。毫不夸张地说，不理解它的含义，大部分开发任务都无法完成。&lt;br&gt;前一章已经提到，&lt;code&gt;this&lt;/code&gt;可以用在构造函数之中，表示实例对象。除此之外，&lt;code&gt;this&lt;/code&gt;还可以用在别的场合。但不管是什么场合，&lt;code&gt;this&lt;/code&gt;都有一个共同点：它总是返回一个对象。&lt;br&gt;简单说，&lt;code&gt;this&lt;/code&gt;就是属性或方法“当前”所在的对象。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.property&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，&lt;code&gt;this&lt;/code&gt;就代表&lt;code&gt;property&lt;/code&gt;属性当前所在的对象。&lt;br&gt;下面是一个实际的例子。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; person = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  name: &lt;span class=&quot;string&quot;&gt;&amp;#x27;张三&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  describe: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;#x27;姓名：&amp;#x27;&lt;/span&gt;+ &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;person.describe()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;姓名：张三&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS面向对象编程-this关键字" scheme="https://codermae.github.io/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-this%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0026</title>
+    <link href="https://codermae.github.io/2021/05/17/%E6%89%93%E5%8D%A10026/"/>
+    <id>https://codermae.github.io/2021/05/17/%E6%89%93%E5%8D%A10026/</id>
+    <published>2021-05-17T01:01:45.000Z</published>
+    <updated>2021-05-17T08:20:27.479Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#8e7437&gt;空荡荡的树上 树叶固执地挂着妄想何方 云身后的昏黄 揭穿了好几颗心的迷惘 杂乱的楼房太遮挡 不认输的脸庞 思念追寻的 那么的相像&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;1-实例对象与new命令&quot;&gt;&lt;a href=&quot;#1-实例对象与new命令&quot; class=&quot;headerlink&quot; title=&quot;1. 实例对象与new命令&quot;&gt;&lt;/a&gt;1. 实例对象与new命令&lt;/h3&gt;&lt;h4 id=&quot;1-1-对象是什么&quot;&gt;&lt;a href=&quot;#1-1-对象是什么&quot; class=&quot;headerlink&quot; title=&quot;1.1 对象是什么&quot;&gt;&lt;/a&gt;1.1 对象是什么&lt;/h4&gt;&lt;p&gt;面向对象编程（Object Oriented Programming，缩写为 OOP）是目前主流的编程范式。它将真实世界各种复杂的关系，抽象为一个个对象，然后由对象之间的分工与合作，完成对真实世界的模拟。&lt;/p&gt;
+&lt;p&gt;每一个对象都是功能中心，具有明确分工，可以完成接受信息、处理数据、发出信息等任务。对象可以复用，通过继承机制还可以定制。因此，面向对象编程具有灵活、代码可复用、高度模块化等特点，容易维护和开发，比起由一系列函数或指令组成的传统的过程式编程（procedural programming），更适合多人合作的大型软件项目。&lt;/p&gt;
+&lt;p&gt;那么，“对象”（object）到底是什么？我们从两个层次来理解。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS面向对象编程-实例对象与new命令" scheme="https://codermae.github.io/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E5%AE%9E%E4%BE%8B%E5%AF%B9%E8%B1%A1%E4%B8%8Enew%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0025</title>
@@ -437,57 +482,6 @@
     
     
     <category term="JS运算符-布尔运算符" scheme="https://codermae.github.io/tags/JS%E8%BF%90%E7%AE%97%E7%AC%A6-%E5%B8%83%E5%B0%94%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0007</title>
-    <link href="https://codermae.github.io/2021/05/08/%E6%89%93%E5%8D%A10007/"/>
-    <id>https://codermae.github.io/2021/05/08/%E6%89%93%E5%8D%A10007/</id>
-    <published>2021-05-08T01:27:35.000Z</published>
-    <updated>2021-05-08T07:02:39.129Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=aed2e5&gt;无论眼下你正过着怎样的生活，欢喜也好，烦恼也罢，饿了就吃，困了就睡，明天又是崭新的一天。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS运算符&quot;&gt;&lt;a href=&quot;#JS运算符&quot; class=&quot;headerlink&quot; title=&quot;JS运算符&quot;&gt;&lt;/a&gt;JS运算符&lt;/h2&gt;&lt;h3 id=&quot;2-比较运算符&quot;&gt;&lt;a href=&quot;#2-比较运算符&quot; class=&quot;headerlink&quot; title=&quot;2. 比较运算符&quot;&gt;&lt;/a&gt;2. 比较运算符&lt;/h3&gt;&lt;h4 id=&quot;2-1概述&quot;&gt;&lt;a href=&quot;#2-1概述&quot; class=&quot;headerlink&quot; title=&quot;2.1概述&quot;&gt;&lt;/a&gt;2.1概述&lt;/h4&gt;&lt;p&gt;比较运算符用于比较两个值的大小，然后返回一个布尔值，表示是否满足指定的条件&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS运算符-比较运算符" scheme="https://codermae.github.io/tags/JS%E8%BF%90%E7%AE%97%E7%AC%A6-%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0006</title>
-    <link href="https://codermae.github.io/2021/05/08/%E6%89%93%E5%8D%A10006/"/>
-    <id>https://codermae.github.io/2021/05/08/%E6%89%93%E5%8D%A10006/</id>
-    <published>2021-05-08T00:20:01.000Z</published>
-    <updated>2021-05-08T01:24:23.261Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#cd8c95&gt;你要离开我吗？别走好吗？跑起来。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS运算符&quot;&gt;&lt;a href=&quot;#JS运算符&quot; class=&quot;headerlink&quot; title=&quot;JS运算符&quot;&gt;&lt;/a&gt;JS运算符&lt;/h2&gt;&lt;h3 id=&quot;1-算术运算符&quot;&gt;&lt;a href=&quot;#1-算术运算符&quot; class=&quot;headerlink&quot; title=&quot;1.算术运算符&quot;&gt;&lt;/a&gt;1.算术运算符&lt;/h3&gt;&lt;h4 id=&quot;1-1-概述&quot;&gt;&lt;a href=&quot;#1-1-概述&quot; class=&quot;headerlink&quot; title=&quot;1.1 概述&quot;&gt;&lt;/a&gt;1.1 概述&lt;/h4&gt;&lt;p&gt;JavaScript 共提供10个算术运算符，用来完成基本的算术运算&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;加法运算符：&lt;code&gt;x + y&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;减法运算符： &lt;code&gt;x - y&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;乘法运算符： &lt;code&gt;x * y&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;除法运算符：&lt;code&gt;x / y&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;指数运算符：&lt;code&gt;x ** y&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;余数运算符：&lt;code&gt;x % y&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;自增运算符：&lt;code&gt;++x&lt;/code&gt; 或者 &lt;code&gt;x++&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;自减运算符：&lt;code&gt;--x&lt;/code&gt; 或者 &lt;code&gt;x--&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;数值运算符： &lt;code&gt;+x&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;负数值运算符：&lt;code&gt;-x&lt;/code&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS运算符-算术运算符" scheme="https://codermae.github.io/tags/JS%E8%BF%90%E7%AE%97%E7%AC%A6-%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
     
   </entry>
   
