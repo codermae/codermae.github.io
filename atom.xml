@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-19T02:40:17.204Z</updated>
+  <updated>2021-05-20T02:19:06.495Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0030</title>
+    <link href="https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10030/"/>
+    <id>https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10030/</id>
+    <published>2021-05-20T01:37:29.000Z</published>
+    <updated>2021-05-20T02:19:06.495Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=gray&gt;真正的好朋友，不一定是和你聊天最多的人，却一定会在你需要的时候挺身而出，在你难熬的时候给你鼓励和力量。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;5-严格模式&quot;&gt;&lt;a href=&quot;#5-严格模式&quot; class=&quot;headerlink&quot; title=&quot;5. 严格模式&quot;&gt;&lt;/a&gt;5. 严格模式&lt;/h3&gt;&lt;p&gt;除了正常的运行模式，JavaScript 还有第二种运行模式：严格模式（strict mode）。顾名思义，这种模式采用更加严格的 JavaScript 语法。&lt;/p&gt;
+&lt;p&gt;同样的代码，在正常模式和严格模式中，可能会有不一样的运行结果。一些在正常模式下可以运行的语句，在严格模式下将不能运行。&lt;/p&gt;
+&lt;h4 id=&quot;5-1-设计目的&quot;&gt;&lt;a href=&quot;#5-1-设计目的&quot; class=&quot;headerlink&quot; title=&quot;5.1 设计目的&quot;&gt;&lt;/a&gt;5.1 设计目的&lt;/h4&gt;&lt;p&gt;早期的 JavaScript 语言有很多设计不合理的地方，但是为了兼容以前的代码，又不能改变老的语法，只能不断添加新的语法，引导程序员使用新语法。&lt;/p&gt;
+&lt;p&gt;严格模式是从 ES5 进入标准的，主要目的有以下几个。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;明确禁止一些不合理、不严谨的语法，减少 JavaScript 语言的一些怪异行为。&lt;/li&gt;
+&lt;li&gt;增加更多报错的场合，消除代码运行的一些不安全之处，保证代码运行的安全。&lt;/li&gt;
+&lt;li&gt;提高编译器效率，增加运行速度。&lt;/li&gt;
+&lt;li&gt;为未来新版本的 JavaScript 语法做好铺垫。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;总之，严格模式体现了 JavaScript 更合理、更安全、更严谨的发展方向。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS面向对象编程-严格模式" scheme="https://codermae.github.io/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0029</title>
+    <link href="https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10029/"/>
+    <id>https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10029/</id>
+    <published>2021-05-20T00:50:47.000Z</published>
+    <updated>2021-05-20T01:41:54.406Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#0080FF&gt;我是只化身孤岛的蓝鲸 有着最巨大的身影 鱼虾在身侧穿行 也有飞鸟在背上停&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;4-Object对象的相关方法&quot;&gt;&lt;a href=&quot;#4-Object对象的相关方法&quot; class=&quot;headerlink&quot; title=&quot;4. Object对象的相关方法&quot;&gt;&lt;/a&gt;4. Object对象的相关方法&lt;/h3&gt;&lt;h4 id=&quot;4-1-Object-getPrototypeOf&quot;&gt;&lt;a href=&quot;#4-1-Object-getPrototypeOf&quot; class=&quot;headerlink&quot; title=&quot;4.1 Object.getPrototypeOf()&quot;&gt;&lt;/a&gt;4.1 Object.getPrototypeOf()&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Object.getPrototypeOf&lt;/code&gt;方法返回参数对象的原型。这是获取原型对象的标准方法。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; F = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; f = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; F();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.getPrototypeOf(f) === F.prototype &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，实例对象&lt;code&gt;f&lt;/code&gt;的原型是&lt;code&gt;F.prototype&lt;/code&gt;。&lt;br&gt;下面是几种特殊对象的原型。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 空对象的原型是 Object.prototype&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.getPrototypeOf(&amp;#123;&amp;#125;) === &lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.prototype &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Object.prototype 的原型是 null&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.getPrototypeOf(&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.prototype) === &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 函数的原型是 Function.prototype&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;f&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.getPrototypeOf(f) === &lt;span class=&quot;built_in&quot;&gt;Function&lt;/span&gt;.prototype &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS面向对象编程-Object对象的相关方法" scheme="https://codermae.github.io/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-Object%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0028</title>
@@ -431,56 +484,6 @@
     
     
     <category term="JS语法-数据类型的转换" scheme="https://codermae.github.io/tags/JS%E8%AF%AD%E6%B3%95-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0010</title>
-    <link href="https://codermae.github.io/2021/05/09/%E6%89%93%E5%8D%A10010/"/>
-    <id>https://codermae.github.io/2021/05/09/%E6%89%93%E5%8D%A10010/</id>
-    <published>2021-05-09T02:51:11.000Z</published>
-    <updated>2021-05-09T03:23:23.100Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#33a3dc&gt;风吹又日晒，自由又自在&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS运算符&quot;&gt;&lt;a href=&quot;#JS运算符&quot; class=&quot;headerlink&quot; title=&quot;JS运算符&quot;&gt;&lt;/a&gt;JS运算符&lt;/h2&gt;&lt;h3 id=&quot;5-其它运算符，运算顺序&quot;&gt;&lt;a href=&quot;#5-其它运算符，运算顺序&quot; class=&quot;headerlink&quot; title=&quot;5. 其它运算符，运算顺序&quot;&gt;&lt;/a&gt;5. 其它运算符，运算顺序&lt;/h3&gt;&lt;h4 id=&quot;5-1-void运算符&quot;&gt;&lt;a href=&quot;#5-1-void运算符&quot; class=&quot;headerlink&quot; title=&quot;5.1 void运算符&quot;&gt;&lt;/a&gt;5.1 void运算符&lt;/h4&gt;&lt;p&gt;&lt;code&gt;void&lt;/code&gt;运算符的作用是执行一个表达式，然后不返回任何值，或者说返回&lt;code&gt;undefined&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面是&lt;code&gt;void&lt;/code&gt;运算符的两种写法，都正确。建议采用后一种形式，即总是使用圆括号。因为&lt;code&gt;void&lt;/code&gt;运算符的优先性很高，如果不使用括号，容易造成错误的结果。比如，&lt;code&gt;void 4 + 7&lt;/code&gt;实际上等同于&lt;code&gt;(void 4) + 7&lt;/code&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS运算符-其它运算符，运算顺序" scheme="https://codermae.github.io/tags/JS%E8%BF%90%E7%AE%97%E7%AC%A6-%E5%85%B6%E5%AE%83%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%8C%E8%BF%90%E7%AE%97%E9%A1%BA%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0009</title>
-    <link href="https://codermae.github.io/2021/05/09/%E6%89%93%E5%8D%A10009/"/>
-    <id>https://codermae.github.io/2021/05/09/%E6%89%93%E5%8D%A10009/</id>
-    <published>2021-05-09T01:44:01.000Z</published>
-    <updated>2021-05-09T03:24:03.376Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#b2d235&gt;人生越是艰难处，越要往前多走几步&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS运算符&quot;&gt;&lt;a href=&quot;#JS运算符&quot; class=&quot;headerlink&quot; title=&quot;JS运算符&quot;&gt;&lt;/a&gt;JS运算符&lt;/h2&gt;&lt;h3 id=&quot;4-二进制位运算符&quot;&gt;&lt;a href=&quot;#4-二进制位运算符&quot; class=&quot;headerlink&quot; title=&quot;4. 二进制位运算符&quot;&gt;&lt;/a&gt;4. 二进制位运算符&lt;/h3&gt;&lt;h4 id=&quot;4-1-概述&quot;&gt;&lt;a href=&quot;#4-1-概述&quot; class=&quot;headerlink&quot; title=&quot;4.1 概述&quot;&gt;&lt;/a&gt;4.1 概述&lt;/h4&gt;&lt;p&gt;二进制位运算符用于直接对二进制位进行计算，一共有7个&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;二进制或运算符（or）：符号为&lt;code&gt;|&lt;/code&gt;，表示若两个二进制位都为&lt;code&gt;0&lt;/code&gt;，则结果为&lt;code&gt;0&lt;/code&gt;，否则为&lt;code&gt;1&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;二进制与运算符（and）：符号为&lt;code&gt;&amp;amp;&lt;/code&gt;，表示若两个二进制位都为&lt;code&gt;1&lt;/code&gt;，则结果为&lt;code&gt;1&lt;/code&gt;，否则为&lt;code&gt;0&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;二进制否运算符（not）：符号为&lt;code&gt;~&lt;/code&gt;，表示对一个二进制位取反。&lt;/li&gt;
-&lt;li&gt;异或运算符（xor）：符号为&lt;code&gt;^&lt;/code&gt;，表示若两个二进制位不相同，则结果为&lt;code&gt;1&lt;/code&gt;，否则为&lt;code&gt;0&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;左移运算符（left shift）：符号为&lt;code&gt;&amp;lt;&amp;lt;&lt;/code&gt;，详见下文解释。&lt;/li&gt;
-&lt;li&gt;右移运算符（right shift）：符号为&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;，详见下文解释。&lt;/li&gt;
-&lt;li&gt;头部补零的右移运算符（zero filled right shift）：符号为&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;，详见下文解释。</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS运算符-二进制位运算符" scheme="https://codermae.github.io/tags/JS%E8%BF%90%E7%AE%97%E7%AC%A6-%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
     
   </entry>
   
