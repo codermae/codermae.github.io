@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-20T07:30:57.929Z</updated>
+  <updated>2021-05-21T07:58:35.170Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0032</title>
+    <link href="https://codermae.github.io/2021/05/21/%E6%89%93%E5%8D%A10032/"/>
+    <id>https://codermae.github.io/2021/05/21/%E6%89%93%E5%8D%A10032/</id>
+    <published>2021-05-21T00:16:46.000Z</published>
+    <updated>2021-05-21T07:58:35.170Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#2eb806&gt;夜莺啼绿柳 皓月醒长空 最爱垄头麦 迎风笑落红&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;2-定时器&quot;&gt;&lt;a href=&quot;#2-定时器&quot; class=&quot;headerlink&quot; title=&quot;2. 定时器&quot;&gt;&lt;/a&gt;2. 定时器&lt;/h3&gt;&lt;p&gt;JavaScript 提供定时执行代码的功能，叫做定时器（timer），主要由&lt;code&gt;setTimeout()&lt;/code&gt;和&lt;code&gt;setInterval()&lt;/code&gt;这两个函数来完成。它们向任务队列添加定时任务。&lt;/p&gt;
+&lt;h4 id=&quot;2-1-setTimeout&quot;&gt;&lt;a href=&quot;#2-1-setTimeout&quot; class=&quot;headerlink&quot; title=&quot;2.1  setTimeout()&quot;&gt;&lt;/a&gt;2.1  setTimeout()&lt;/h4&gt;&lt;p&gt;&lt;code&gt;setTimeout&lt;/code&gt;函数用来指定某个函数或某段代码，在多少毫秒之后执行。它返回一个整数，表示定时器的编号，以后可以用来取消这个定时器。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; timerId = &lt;span class=&quot;built_in&quot;&gt;setTimeout&lt;/span&gt;(func|code, delay);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，&lt;code&gt;setTimeout&lt;/code&gt;函数接受两个参数，第一个参数&lt;code&gt;func|code&lt;/code&gt;是将要推迟执行的函数名或者一段代码，第二个参数&lt;code&gt;delay&lt;/code&gt;是推迟执行的毫秒数。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;setTimeout&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;console.log(2)&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1000&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS异步操作-定时器" scheme="https://codermae.github.io/tags/JS%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C-%E5%AE%9A%E6%97%B6%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0031</title>
@@ -467,27 +491,6 @@
     
     
     <category term="JS语法-编程风格" scheme="https://codermae.github.io/tags/JS%E8%AF%AD%E6%B3%95-%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0012</title>
-    <link href="https://codermae.github.io/2021/05/11/%E6%89%93%E5%8D%A10012/"/>
-    <id>https://codermae.github.io/2021/05/11/%E6%89%93%E5%8D%A10012/</id>
-    <published>2021-05-11T00:29:52.000Z</published>
-    <updated>2021-05-11T01:56:20.577Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=ffc20e&gt;人生从来没有太晚的开始，再微小的改变，乘以365天，都会成为别人羡慕不来的实力。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS语法&quot;&gt;&lt;a href=&quot;#JS语法&quot; class=&quot;headerlink&quot; title=&quot;JS语法&quot;&gt;&lt;/a&gt;JS语法&lt;/h2&gt;&lt;h3 id=&quot;2-错误处理机制&quot;&gt;&lt;a href=&quot;#2-错误处理机制&quot; class=&quot;headerlink&quot; title=&quot;2. 错误处理机制&quot;&gt;&lt;/a&gt;2. 错误处理机制&lt;/h3&gt;&lt;h4 id=&quot;2-1-Error实例对象&quot;&gt;&lt;a href=&quot;#2-1-Error实例对象&quot; class=&quot;headerlink&quot; title=&quot;2.1 Error实例对象&quot;&gt;&lt;/a&gt;2.1 Error实例对象&lt;/h4&gt;&lt;p&gt;JavaScript 解析或运行时，一旦发生错误，引擎就会抛出一个错误对象。JavaScript 原生提供&lt;code&gt;Error&lt;/code&gt;构造函数，所有抛出的错误都是这个构造函数的实例&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; err = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Error&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;出错了&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;err.message &lt;span class=&quot;comment&quot;&gt;// &amp;quot;出错了&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS语法-错误处理机制" scheme="https://codermae.github.io/tags/JS%E8%AF%AD%E6%B3%95-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/"/>
     
   </entry>
   
