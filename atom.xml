@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-21T07:58:35.170Z</updated>
+  <updated>2021-05-22T03:22:26.180Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,15 +17,107 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打卡0035</title>
+    <link href="https://codermae.github.io/2021/05/22/%E6%89%93%E5%8D%A10035/"/>
+    <id>https://codermae.github.io/2021/05/22/%E6%89%93%E5%8D%A10035/</id>
+    <published>2021-05-22T01:56:52.000Z</published>
+    <updated>2021-05-22T03:22:26.180Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#375830&gt;恰沐春风共同游，终只叹，木已舟。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;2-Node接口&quot;&gt;&lt;a href=&quot;#2-Node接口&quot; class=&quot;headerlink&quot; title=&quot;2. Node接口&quot;&gt;&lt;/a&gt;2. Node接口&lt;/h3&gt;&lt;p&gt;所有 DOM 节点对象都继承了 Node 接口，拥有一些共同的属性和方法。这是 DOM 操作的基础。&lt;/p&gt;
+&lt;h4 id=&quot;2-1-属性&quot;&gt;&lt;a href=&quot;#2-1-属性&quot; class=&quot;headerlink&quot; title=&quot;2.1 属性&quot;&gt;&lt;/a&gt;2.1 属性&lt;/h4&gt;&lt;h5 id=&quot;2-1-1-Node-prototype-nodeType&quot;&gt;&lt;a href=&quot;#2-1-1-Node-prototype-nodeType&quot; class=&quot;headerlink&quot; title=&quot;2.1.1 Node.prototype.nodeType&quot;&gt;&lt;/a&gt;2.1.1 Node.prototype.nodeType&lt;/h5&gt;&lt;p&gt;&lt;code&gt;nodeType&lt;/code&gt;属性返回一个整数值，表示节点的类型。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.nodeType &lt;span class=&quot;comment&quot;&gt;// 9&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，文档节点的类型值为9。&lt;/p&gt;
+&lt;p&gt;Node 对象定义了几个常量，对应这些类型值。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.nodeType === Node.DOCUMENT_NODE &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，文档节点的&lt;code&gt;nodeType&lt;/code&gt;属性等于常量&lt;code&gt;Node.DOCUMENT_NODE&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;不同节点的&lt;code&gt;nodeType&lt;/code&gt;属性值和对应的常量如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文档节点（document）：9，对应常量&lt;code&gt;Node.DOCUMENT_NODE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;元素节点（element）：1，对应常量&lt;code&gt;Node.ELEMENT_NODE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;属性节点（attr）：2，对应常量&lt;code&gt;Node.ATTRIBUTE_NODE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;文本节点（text）：3，对应常量&lt;code&gt;Node.TEXT_NODE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;文档片断节点（DocumentFragment）：11，对应常量&lt;code&gt;Node.DOCUMENT_FRAGMENT_NODE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;文档类型节点（DocumentType）：10，对应常量&lt;code&gt;Node.DOCUMENT_TYPE_NODE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;注释节点（Comment）：8，对应常量&lt;code&gt;Node.COMMENT_NODE&lt;/code&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS DOM-Node接口" scheme="https://codermae.github.io/tags/JS-DOM-Node%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0034</title>
+    <link href="https://codermae.github.io/2021/05/22/%E6%89%93%E5%8D%A10034/"/>
+    <id>https://codermae.github.io/2021/05/22/%E6%89%93%E5%8D%A10034/</id>
+    <published>2021-05-22T01:21:24.000Z</published>
+    <updated>2021-05-22T03:22:05.059Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#ae6642&gt;无情最是台城柳，依旧烟笼十里堤。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;1-概述&quot;&gt;&lt;a href=&quot;#1-概述&quot; class=&quot;headerlink&quot; title=&quot;1. 概述&quot;&gt;&lt;/a&gt;1. 概述&lt;/h3&gt;&lt;h4 id=&quot;1-1-DOM&quot;&gt;&lt;a href=&quot;#1-1-DOM&quot; class=&quot;headerlink&quot; title=&quot;1.1 DOM&quot;&gt;&lt;/a&gt;1.1 DOM&lt;/h4&gt;&lt;p&gt;DOM 是 JavaScript 操作网页的接口，全称为“文档对象模型”（Document Object Model）。它的作用是将网页转为一个 JavaScript 对象，从而可以用脚本进行各种操作（比如增删内容）。&lt;/p&gt;
+&lt;p&gt;浏览器会根据 DOM 模型，将结构化文档（比如 HTML 和 XML）解析成一系列的节点，再由这些节点组成一个树状结构（DOM Tree）。所有的节点和最终的树状结构，都有规范的对外接口。&lt;/p&gt;
+&lt;p&gt;DOM 只是一个接口规范，可以用各种语言实现。所以严格地说，DOM 不是 JavaScript 语法的一部分，但是 DOM 操作是 JavaScript 最常见的任务，离开了 DOM，JavaScript 就无法控制网页。另一方面，JavaScript 也是最常用于 DOM 操作的语言。后面介绍的就是 JavaScript 对 DOM 标准的实现和用法。&lt;/p&gt;
+&lt;h4 id=&quot;1-2节点&quot;&gt;&lt;a href=&quot;#1-2节点&quot; class=&quot;headerlink&quot; title=&quot;1.2节点&quot;&gt;&lt;/a&gt;1.2节点&lt;/h4&gt;&lt;p&gt;DOM 的最小组成单位叫做节点（node）。文档的树形结构（DOM 树），就是由各种不同类型的节点组成。每个节点可以看作是文档树的一片叶子。&lt;/p&gt;
+&lt;p&gt;节点的类型有七种。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Document&lt;/code&gt;：整个文档树的顶层节点&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DocumentType&lt;/code&gt;：&lt;code&gt;doctype&lt;/code&gt;标签（比如&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Element&lt;/code&gt;：网页的各种HTML标签（比如&lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;等）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Attr&lt;/code&gt;：网页元素的属性（比如&lt;code&gt;class=&amp;quot;right&amp;quot;&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Text&lt;/code&gt;：标签之间或标签包含的文本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Comment&lt;/code&gt;：注释&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DocumentFragment&lt;/code&gt;：文档的片段</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS DOM-概述" scheme="https://codermae.github.io/tags/JS-DOM-%E6%A6%82%E8%BF%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0033</title>
+    <link href="https://codermae.github.io/2021/05/22/%E6%89%93%E5%8D%A10033/"/>
+    <id>https://codermae.github.io/2021/05/22/%E6%89%93%E5%8D%A10033/</id>
+    <published>2021-05-22T00:36:17.000Z</published>
+    <updated>2021-05-22T03:21:03.617Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#ef5b9c&gt;你相信时间会抚平一切，可时过境迁，你已不复醒&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS异步操作&quot;&gt;&lt;a href=&quot;#JS异步操作&quot; class=&quot;headerlink&quot; title=&quot;JS异步操作&quot;&gt;&lt;/a&gt;JS异步操作&lt;/h2&gt;&lt;h3 id=&quot;3-Promise对象&quot;&gt;&lt;a href=&quot;#3-Promise对象&quot; class=&quot;headerlink&quot; title=&quot;3. Promise对象&quot;&gt;&lt;/a&gt;3. Promise对象&lt;/h3&gt;&lt;h4 id=&quot;3-1-概述&quot;&gt;&lt;a href=&quot;#3-1-概述&quot; class=&quot;headerlink&quot; title=&quot;3.1 概述&quot;&gt;&lt;/a&gt;3.1 概述&lt;/h4&gt;&lt;p&gt;Promise 对象是 JavaScript 的异步操作解决方案，为异步操作提供统一接口。它起到代理作用（proxy），充当异步操作与回调函数之间的中介，使得异步操作具备同步操作的接口。Promise 可以让异步操作写起来，就像在写同步操作的流程，而不必一层层地嵌套回调函数。&lt;/p&gt;
+&lt;p&gt;注意，本章只是 Promise 对象的简单介绍。为了避免与后续教程的重复，更完整的介绍请看《ES6 标准入门》的《Promise 对象》一章。&lt;/p&gt;
+&lt;p&gt;首先，Promise 是一个对象，也是一个构造函数。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;f1&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;resolve, reject&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// 异步代码...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; p1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Promise&lt;/span&gt;(f1);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，&lt;code&gt;Promise&lt;/code&gt;构造函数接受一个回调函数&lt;code&gt;f1&lt;/code&gt;作为参数，&lt;code&gt;f1&lt;/code&gt;里面是异步操作的代码。然后，返回的&lt;code&gt;p1&lt;/code&gt;就是一个 Promise 实例。&lt;/p&gt;
+&lt;p&gt;Promise 的设计思想是，所有异步任务都返回一个 Promise 实例。Promise 实例有一个&lt;code&gt;then&lt;/code&gt;方法，用来指定下一步的回调函数。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS异步操作-Promise对象" scheme="https://codermae.github.io/tags/JS%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C-Promise%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>打卡0032</title>
     <link href="https://codermae.github.io/2021/05/21/%E6%89%93%E5%8D%A10032/"/>
     <id>https://codermae.github.io/2021/05/21/%E6%89%93%E5%8D%A10032/</id>
     <published>2021-05-21T00:16:46.000Z</published>
-    <updated>2021-05-21T07:58:35.170Z</updated>
+    <updated>2021-05-22T02:03:51.525Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#2eb806&gt;夜莺啼绿柳 皓月醒长空 最爱垄头麦 迎风笑落红&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;2-定时器&quot;&gt;&lt;a href=&quot;#2-定时器&quot; class=&quot;headerlink&quot; title=&quot;2. 定时器&quot;&gt;&lt;/a&gt;2. 定时器&lt;/h3&gt;&lt;p&gt;JavaScript 提供定时执行代码的功能，叫做定时器（timer），主要由&lt;code&gt;setTimeout()&lt;/code&gt;和&lt;code&gt;setInterval()&lt;/code&gt;这两个函数来完成。它们向任务队列添加定时任务。&lt;/p&gt;
+&lt;h2 id=&quot;JS异步操作&quot;&gt;&lt;a href=&quot;#JS异步操作&quot; class=&quot;headerlink&quot; title=&quot;JS异步操作&quot;&gt;&lt;/a&gt;JS异步操作&lt;/h2&gt;&lt;h3 id=&quot;2-定时器&quot;&gt;&lt;a href=&quot;#2-定时器&quot; class=&quot;headerlink&quot; title=&quot;2. 定时器&quot;&gt;&lt;/a&gt;2. 定时器&lt;/h3&gt;&lt;p&gt;JavaScript 提供定时执行代码的功能，叫做定时器（timer），主要由&lt;code&gt;setTimeout()&lt;/code&gt;和&lt;code&gt;setInterval()&lt;/code&gt;这两个函数来完成。它们向任务队列添加定时任务。&lt;/p&gt;
 &lt;h4 id=&quot;2-1-setTimeout&quot;&gt;&lt;a href=&quot;#2-1-setTimeout&quot; class=&quot;headerlink&quot; title=&quot;2.1  setTimeout()&quot;&gt;&lt;/a&gt;2.1  setTimeout()&lt;/h4&gt;&lt;p&gt;&lt;code&gt;setTimeout&lt;/code&gt;函数用来指定某个函数或某段代码，在多少毫秒之后执行。它返回一个整数，表示定时器的编号，以后可以用来取消这个定时器。&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; timerId = &lt;span class=&quot;built_in&quot;&gt;setTimeout&lt;/span&gt;(func|code, delay);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;上面代码中，&lt;code&gt;setTimeout&lt;/code&gt;函数接受两个参数，第一个参数&lt;code&gt;func|code&lt;/code&gt;是将要推迟执行的函数名或者一段代码，第二个参数&lt;code&gt;delay&lt;/code&gt;是推迟执行的毫秒数。&lt;/p&gt;
@@ -45,11 +137,11 @@
     <link href="https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10031/"/>
     <id>https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10031/</id>
     <published>2021-05-20T06:51:46.000Z</published>
-    <updated>2021-05-20T07:30:57.929Z</updated>
+    <updated>2021-05-22T02:03:40.338Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#8c531b&gt;步伐虽小，密而不停&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;1-概述&quot;&gt;&lt;a href=&quot;#1-概述&quot; class=&quot;headerlink&quot; title=&quot;1. 概述&quot;&gt;&lt;/a&gt;1. 概述&lt;/h3&gt;&lt;h4 id=&quot;1-1单线程模型&quot;&gt;&lt;a href=&quot;#1-1单线程模型&quot; class=&quot;headerlink&quot; title=&quot;1.1单线程模型&quot;&gt;&lt;/a&gt;1.1单线程模型&lt;/h4&gt;&lt;p&gt;单线程模型指的是，JavaScript 只在一个线程上运行。也就是说，JavaScript 同时只能执行一个任务，其他任务都必须在后面排队等待。&lt;/p&gt;
+&lt;h2 id=&quot;JS异步操作&quot;&gt;&lt;a href=&quot;#JS异步操作&quot; class=&quot;headerlink&quot; title=&quot;JS异步操作&quot;&gt;&lt;/a&gt;JS异步操作&lt;/h2&gt;&lt;h3 id=&quot;1-概述&quot;&gt;&lt;a href=&quot;#1-概述&quot; class=&quot;headerlink&quot; title=&quot;1. 概述&quot;&gt;&lt;/a&gt;1. 概述&lt;/h3&gt;&lt;h4 id=&quot;1-1单线程模型&quot;&gt;&lt;a href=&quot;#1-1单线程模型&quot; class=&quot;headerlink&quot; title=&quot;1.1单线程模型&quot;&gt;&lt;/a&gt;1.1单线程模型&lt;/h4&gt;&lt;p&gt;单线程模型指的是，JavaScript 只在一个线程上运行。也就是说，JavaScript 同时只能执行一个任务，其他任务都必须在后面排队等待。&lt;/p&gt;
 &lt;p&gt;注意，JavaScript 只在一个线程上运行，不代表 JavaScript 引擎只有一个线程。事实上，JavaScript 引擎有多个线程，单个脚本只能在一个线程上运行（称为主线程），其他线程都是在后台配合。&lt;/p&gt;
 &lt;p&gt;JavaScript 之所以采用单线程，而不是多线程，跟历史有关系。JavaScript 从诞生起就是单线程，原因是不想让浏览器变得太复杂，因为多线程需要共享资源、且有可能修改彼此的运行结果，对于一种网页脚本语言来说，这就太复杂了。如果 JavaScript 同时有两个线程，一个线程在网页 DOM 节点上添加内容，另一个线程删除了这个节点，这时浏览器应该以哪个线程为准？是不是还要有锁机制？所以，为了避免复杂性，JavaScript 一开始就是单线程，这已经成了这门语言的核心特征，将来也不会改变。&lt;/p&gt;
 &lt;p&gt;这种模式的好处是实现起来比较简单，执行环境相对单纯；坏处是只要有一个任务耗时很长，后面的任务都必须排队等着，会拖延整个程序的执行。常见的浏览器无响应（假死），往往就是因为某一段 JavaScript 代码长时间运行（比如死循环），导致整个页面卡在这个地方，其他任务无法执行。JavaScript 语言本身并不慢，慢的是读写外部数据，比如等待 Ajax 请求返回结果。这个时候，如果对方服务器迟迟没有响应，或者网络不通畅，就会导致脚本的长时间停滞。&lt;/p&gt;
@@ -71,11 +163,11 @@
     <link href="https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10030/"/>
     <id>https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10030/</id>
     <published>2021-05-20T01:37:29.000Z</published>
-    <updated>2021-05-20T02:19:06.495Z</updated>
+    <updated>2021-05-22T02:03:23.866Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=gray&gt;真正的好朋友，不一定是和你聊天最多的人，却一定会在你需要的时候挺身而出，在你难熬的时候给你鼓励和力量。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;5-严格模式&quot;&gt;&lt;a href=&quot;#5-严格模式&quot; class=&quot;headerlink&quot; title=&quot;5. 严格模式&quot;&gt;&lt;/a&gt;5. 严格模式&lt;/h3&gt;&lt;p&gt;除了正常的运行模式，JavaScript 还有第二种运行模式：严格模式（strict mode）。顾名思义，这种模式采用更加严格的 JavaScript 语法。&lt;/p&gt;
+&lt;h2 id=&quot;JS面向对象编程&quot;&gt;&lt;a href=&quot;#JS面向对象编程&quot; class=&quot;headerlink&quot; title=&quot;JS面向对象编程&quot;&gt;&lt;/a&gt;JS面向对象编程&lt;/h2&gt;&lt;h3 id=&quot;5-严格模式&quot;&gt;&lt;a href=&quot;#5-严格模式&quot; class=&quot;headerlink&quot; title=&quot;5. 严格模式&quot;&gt;&lt;/a&gt;5. 严格模式&lt;/h3&gt;&lt;p&gt;除了正常的运行模式，JavaScript 还有第二种运行模式：严格模式（strict mode）。顾名思义，这种模式采用更加严格的 JavaScript 语法。&lt;/p&gt;
 &lt;p&gt;同样的代码，在正常模式和严格模式中，可能会有不一样的运行结果。一些在正常模式下可以运行的语句，在严格模式下将不能运行。&lt;/p&gt;
 &lt;h4 id=&quot;5-1-设计目的&quot;&gt;&lt;a href=&quot;#5-1-设计目的&quot; class=&quot;headerlink&quot; title=&quot;5.1 设计目的&quot;&gt;&lt;/a&gt;5.1 设计目的&lt;/h4&gt;&lt;p&gt;早期的 JavaScript 语言有很多设计不合理的地方，但是为了兼容以前的代码，又不能改变老的语法，只能不断添加新的语法，引导程序员使用新语法。&lt;/p&gt;
 &lt;p&gt;严格模式是从 ES5 进入标准的，主要目的有以下几个。&lt;/p&gt;
@@ -101,11 +193,11 @@
     <link href="https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10029/"/>
     <id>https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10029/</id>
     <published>2021-05-20T00:50:47.000Z</published>
-    <updated>2021-05-20T01:41:54.406Z</updated>
+    <updated>2021-05-22T02:03:16.594Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#0080FF&gt;我是只化身孤岛的蓝鲸 有着最巨大的身影 鱼虾在身侧穿行 也有飞鸟在背上停&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;4-Object对象的相关方法&quot;&gt;&lt;a href=&quot;#4-Object对象的相关方法&quot; class=&quot;headerlink&quot; title=&quot;4. Object对象的相关方法&quot;&gt;&lt;/a&gt;4. Object对象的相关方法&lt;/h3&gt;&lt;h4 id=&quot;4-1-Object-getPrototypeOf&quot;&gt;&lt;a href=&quot;#4-1-Object-getPrototypeOf&quot; class=&quot;headerlink&quot; title=&quot;4.1 Object.getPrototypeOf()&quot;&gt;&lt;/a&gt;4.1 Object.getPrototypeOf()&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Object.getPrototypeOf&lt;/code&gt;方法返回参数对象的原型。这是获取原型对象的标准方法。&lt;/p&gt;
+&lt;h2 id=&quot;JS面向对象编程&quot;&gt;&lt;a href=&quot;#JS面向对象编程&quot; class=&quot;headerlink&quot; title=&quot;JS面向对象编程&quot;&gt;&lt;/a&gt;JS面向对象编程&lt;/h2&gt;&lt;h3 id=&quot;4-Object对象的相关方法&quot;&gt;&lt;a href=&quot;#4-Object对象的相关方法&quot; class=&quot;headerlink&quot; title=&quot;4. Object对象的相关方法&quot;&gt;&lt;/a&gt;4. Object对象的相关方法&lt;/h3&gt;&lt;h4 id=&quot;4-1-Object-getPrototypeOf&quot;&gt;&lt;a href=&quot;#4-1-Object-getPrototypeOf&quot; class=&quot;headerlink&quot; title=&quot;4.1 Object.getPrototypeOf()&quot;&gt;&lt;/a&gt;4.1 Object.getPrototypeOf()&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Object.getPrototypeOf&lt;/code&gt;方法返回参数对象的原型。这是获取原型对象的标准方法。&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; F = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; f = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; F();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.getPrototypeOf(f) === F.prototype &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;上面代码中，实例对象&lt;code&gt;f&lt;/code&gt;的原型是&lt;code&gt;F.prototype&lt;/code&gt;。&lt;br&gt;下面是几种特殊对象的原型。&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 空对象的原型是 Object.prototype&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.getPrototypeOf(&amp;#123;&amp;#125;) === &lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.prototype &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Object.prototype 的原型是 null&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.getPrototypeOf(&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.prototype) === &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 函数的原型是 Function.prototype&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;f&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.getPrototypeOf(f) === &lt;span class=&quot;built_in&quot;&gt;Function&lt;/span&gt;.prototype &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
@@ -124,11 +216,11 @@
     <link href="https://codermae.github.io/2021/05/19/%E6%89%93%E5%8D%A10028/"/>
     <id>https://codermae.github.io/2021/05/19/%E6%89%93%E5%8D%A10028/</id>
     <published>2021-05-19T00:54:43.000Z</published>
-    <updated>2021-05-19T02:40:17.204Z</updated>
+    <updated>2021-05-22T02:03:09.590Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#2585a6&gt;难过的时候就抱抱自己，允许自己脆弱一会儿，收拾好心情再出发。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;3-对象的继承&quot;&gt;&lt;a href=&quot;#3-对象的继承&quot; class=&quot;headerlink&quot; title=&quot;3. 对象的继承&quot;&gt;&lt;/a&gt;3. 对象的继承&lt;/h3&gt;&lt;p&gt;面向对象编程很重要的一个方面，就是对象的继承。A 对象通过继承 B 对象，就能直接拥有 B 对象的所有属性和方法。这对于代码的复用是非常有用的。&lt;/p&gt;
+&lt;h2 id=&quot;JS面向对象编程&quot;&gt;&lt;a href=&quot;#JS面向对象编程&quot; class=&quot;headerlink&quot; title=&quot;JS面向对象编程&quot;&gt;&lt;/a&gt;JS面向对象编程&lt;/h2&gt;&lt;h3 id=&quot;3-对象的继承&quot;&gt;&lt;a href=&quot;#3-对象的继承&quot; class=&quot;headerlink&quot; title=&quot;3. 对象的继承&quot;&gt;&lt;/a&gt;3. 对象的继承&lt;/h3&gt;&lt;p&gt;面向对象编程很重要的一个方面，就是对象的继承。A 对象通过继承 B 对象，就能直接拥有 B 对象的所有属性和方法。这对于代码的复用是非常有用的。&lt;/p&gt;
 &lt;p&gt;大部分面向对象的编程语言，都是通过“类”（class）实现对象的继承。传统上，JavaScript 语言的继承不通过 class，而是通过“原型对象”（prototype）实现，本章介绍 JavaScript 的原型链继承。&lt;/p&gt;
 &lt;p&gt;ES6 引入了 class 语法，基于 class 的继承不在这个教程介绍，请参阅《ES6 标准入门》一书的相关章节。&lt;/p&gt;
 &lt;h4 id=&quot;3-1-原型对象的概述&quot;&gt;&lt;a href=&quot;#3-1-原型对象的概述&quot; class=&quot;headerlink&quot; title=&quot;3.1 原型对象的概述&quot;&gt;&lt;/a&gt;3.1 原型对象的概述&lt;/h4&gt;&lt;h5 id=&quot;3-1-1-构造函数的缺点&quot;&gt;&lt;a href=&quot;#3-1-1-构造函数的缺点&quot; class=&quot;headerlink&quot; title=&quot;3.1.1 构造函数的缺点&quot;&gt;&lt;/a&gt;3.1.1 构造函数的缺点&lt;/h5&gt;&lt;p&gt;JavaScript 通过构造函数生成新对象，因此构造函数可以视为对象的模板。实例对象的属性和方法，可以定义在构造函数内部。&lt;/p&gt;
@@ -148,11 +240,11 @@
     <link href="https://codermae.github.io/2021/05/17/%E6%89%93%E5%8D%A10027/"/>
     <id>https://codermae.github.io/2021/05/17/%E6%89%93%E5%8D%A10027/</id>
     <published>2021-05-17T02:07:18.000Z</published>
-    <updated>2021-05-17T08:30:18.375Z</updated>
+    <updated>2021-05-22T02:03:02.302Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#73b9a2&gt;走在未知的道路上，不能停也不能回头。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;2-this关键字&quot;&gt;&lt;a href=&quot;#2-this关键字&quot; class=&quot;headerlink&quot; title=&quot;2. this关键字&quot;&gt;&lt;/a&gt;2. this关键字&lt;/h3&gt;&lt;h4 id=&quot;2-1-涵义&quot;&gt;&lt;a href=&quot;#2-1-涵义&quot; class=&quot;headerlink&quot; title=&quot;2.1 涵义&quot;&gt;&lt;/a&gt;2.1 涵义&lt;/h4&gt;&lt;p&gt;&lt;code&gt;this&lt;/code&gt;关键字是一个非常重要的语法点。毫不夸张地说，不理解它的含义，大部分开发任务都无法完成。&lt;br&gt;前一章已经提到，&lt;code&gt;this&lt;/code&gt;可以用在构造函数之中，表示实例对象。除此之外，&lt;code&gt;this&lt;/code&gt;还可以用在别的场合。但不管是什么场合，&lt;code&gt;this&lt;/code&gt;都有一个共同点：它总是返回一个对象。&lt;br&gt;简单说，&lt;code&gt;this&lt;/code&gt;就是属性或方法“当前”所在的对象。&lt;/p&gt;
+&lt;h2 id=&quot;JS面向对象编程&quot;&gt;&lt;a href=&quot;#JS面向对象编程&quot; class=&quot;headerlink&quot; title=&quot;JS面向对象编程&quot;&gt;&lt;/a&gt;JS面向对象编程&lt;/h2&gt;&lt;h3 id=&quot;2-this关键字&quot;&gt;&lt;a href=&quot;#2-this关键字&quot; class=&quot;headerlink&quot; title=&quot;2. this关键字&quot;&gt;&lt;/a&gt;2. this关键字&lt;/h3&gt;&lt;h4 id=&quot;2-1-涵义&quot;&gt;&lt;a href=&quot;#2-1-涵义&quot; class=&quot;headerlink&quot; title=&quot;2.1 涵义&quot;&gt;&lt;/a&gt;2.1 涵义&lt;/h4&gt;&lt;p&gt;&lt;code&gt;this&lt;/code&gt;关键字是一个非常重要的语法点。毫不夸张地说，不理解它的含义，大部分开发任务都无法完成。&lt;br&gt;前一章已经提到，&lt;code&gt;this&lt;/code&gt;可以用在构造函数之中，表示实例对象。除此之外，&lt;code&gt;this&lt;/code&gt;还可以用在别的场合。但不管是什么场合，&lt;code&gt;this&lt;/code&gt;都有一个共同点：它总是返回一个对象。&lt;br&gt;简单说，&lt;code&gt;this&lt;/code&gt;就是属性或方法“当前”所在的对象。&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.property&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;上面代码中，&lt;code&gt;this&lt;/code&gt;就代表&lt;code&gt;property&lt;/code&gt;属性当前所在的对象。&lt;br&gt;下面是一个实际的例子。&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; person = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  name: &lt;span class=&quot;string&quot;&gt;&amp;#x27;张三&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  describe: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;#x27;姓名：&amp;#x27;&lt;/span&gt;+ &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;person.describe()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;姓名：张三&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
@@ -171,11 +263,11 @@
     <link href="https://codermae.github.io/2021/05/17/%E6%89%93%E5%8D%A10026/"/>
     <id>https://codermae.github.io/2021/05/17/%E6%89%93%E5%8D%A10026/</id>
     <published>2021-05-17T01:01:45.000Z</published>
-    <updated>2021-05-17T08:20:27.479Z</updated>
+    <updated>2021-05-22T02:02:54.830Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#8e7437&gt;空荡荡的树上 树叶固执地挂着妄想何方 云身后的昏黄 揭穿了好几颗心的迷惘 杂乱的楼房太遮挡 不认输的脸庞 思念追寻的 那么的相像&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;1-实例对象与new命令&quot;&gt;&lt;a href=&quot;#1-实例对象与new命令&quot; class=&quot;headerlink&quot; title=&quot;1. 实例对象与new命令&quot;&gt;&lt;/a&gt;1. 实例对象与new命令&lt;/h3&gt;&lt;h4 id=&quot;1-1-对象是什么&quot;&gt;&lt;a href=&quot;#1-1-对象是什么&quot; class=&quot;headerlink&quot; title=&quot;1.1 对象是什么&quot;&gt;&lt;/a&gt;1.1 对象是什么&lt;/h4&gt;&lt;p&gt;面向对象编程（Object Oriented Programming，缩写为 OOP）是目前主流的编程范式。它将真实世界各种复杂的关系，抽象为一个个对象，然后由对象之间的分工与合作，完成对真实世界的模拟。&lt;/p&gt;
+&lt;h2 id=&quot;JS面向对象编程&quot;&gt;&lt;a href=&quot;#JS面向对象编程&quot; class=&quot;headerlink&quot; title=&quot;JS面向对象编程&quot;&gt;&lt;/a&gt;JS面向对象编程&lt;/h2&gt;&lt;h3 id=&quot;1-实例对象与new命令&quot;&gt;&lt;a href=&quot;#1-实例对象与new命令&quot; class=&quot;headerlink&quot; title=&quot;1. 实例对象与new命令&quot;&gt;&lt;/a&gt;1. 实例对象与new命令&lt;/h3&gt;&lt;h4 id=&quot;1-1-对象是什么&quot;&gt;&lt;a href=&quot;#1-1-对象是什么&quot; class=&quot;headerlink&quot; title=&quot;1.1 对象是什么&quot;&gt;&lt;/a&gt;1.1 对象是什么&lt;/h4&gt;&lt;p&gt;面向对象编程（Object Oriented Programming，缩写为 OOP）是目前主流的编程范式。它将真实世界各种复杂的关系，抽象为一个个对象，然后由对象之间的分工与合作，完成对真实世界的模拟。&lt;/p&gt;
 &lt;p&gt;每一个对象都是功能中心，具有明确分工，可以完成接受信息、处理数据、发出信息等任务。对象可以复用，通过继承机制还可以定制。因此，面向对象编程具有灵活、代码可复用、高度模块化等特点，容易维护和开发，比起由一系列函数或指令组成的传统的过程式编程（procedural programming），更适合多人合作的大型软件项目。&lt;/p&gt;
 &lt;p&gt;那么，“对象”（object）到底是什么？我们从两个层次来理解。&lt;/p&gt;</summary>
     
@@ -193,11 +285,11 @@
     <link href="https://codermae.github.io/2021/05/16/%E6%89%93%E5%8D%A10025/"/>
     <id>https://codermae.github.io/2021/05/16/%E6%89%93%E5%8D%A10025/</id>
     <published>2021-05-16T07:21:35.000Z</published>
-    <updated>2021-05-16T07:52:46.781Z</updated>
+    <updated>2021-05-22T02:02:39.870Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#ffc20e&gt;白日不到处，青春恰自来。苔花如米小，也学牡丹开。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;11-JSON对象&quot;&gt;&lt;a href=&quot;#11-JSON对象&quot; class=&quot;headerlink&quot; title=&quot;11. JSON对象&quot;&gt;&lt;/a&gt;11. JSON对象&lt;/h3&gt;&lt;h4 id=&quot;11-1-JSON格式&quot;&gt;&lt;a href=&quot;#11-1-JSON格式&quot; class=&quot;headerlink&quot; title=&quot;11.1 JSON格式&quot;&gt;&lt;/a&gt;11.1 JSON格式&lt;/h4&gt;&lt;p&gt;JSON 格式（JavaScript Object Notation 的缩写）是一种用于数据交换的文本格式，2001年由 Douglas Crockford 提出，目的是取代繁琐笨重的 XML 格式。&lt;/p&gt;
+&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;11-JSON对象&quot;&gt;&lt;a href=&quot;#11-JSON对象&quot; class=&quot;headerlink&quot; title=&quot;11. JSON对象&quot;&gt;&lt;/a&gt;11. JSON对象&lt;/h3&gt;&lt;h4 id=&quot;11-1-JSON格式&quot;&gt;&lt;a href=&quot;#11-1-JSON格式&quot; class=&quot;headerlink&quot; title=&quot;11.1 JSON格式&quot;&gt;&lt;/a&gt;11.1 JSON格式&lt;/h4&gt;&lt;p&gt;JSON 格式（JavaScript Object Notation 的缩写）是一种用于数据交换的文本格式，2001年由 Douglas Crockford 提出，目的是取代繁琐笨重的 XML 格式。&lt;/p&gt;
 &lt;p&gt;相比 XML 格式，JSON 格式有两个显著的优点：书写简单，一目了然；符合 JavaScript 原生语法，可以由解释引擎直接处理，不用另外添加解析代码。所以，JSON 迅速被接受，已经成为各大网站交换数据的标准格式，并被写入标准。&lt;/p&gt;
 &lt;p&gt;每个 JSON 对象就是一个值，可能是一个数组或对象，也可能是一个原始类型的值。总之，只能是一个值，不能是两个或更多的值。&lt;/p&gt;
 &lt;p&gt;JSON 对值的类型和格式有严格的规定。&lt;/p&gt;
@@ -228,11 +320,11 @@
     <link href="https://codermae.github.io/2021/05/16/%E6%89%93%E5%8D%A10024/"/>
     <id>https://codermae.github.io/2021/05/16/%E6%89%93%E5%8D%A10024/</id>
     <published>2021-05-16T04:51:55.000Z</published>
-    <updated>2021-05-16T07:51:25.762Z</updated>
+    <updated>2021-05-22T02:02:33.842Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#afdfe4&gt;真正重要的东西，总是没有的人比拥有的人清楚。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;10-RegExp对象&quot;&gt;&lt;a href=&quot;#10-RegExp对象&quot; class=&quot;headerlink&quot; title=&quot;10. RegExp对象&quot;&gt;&lt;/a&gt;10. RegExp对象&lt;/h3&gt;&lt;h4 id=&quot;10-1-概述&quot;&gt;&lt;a href=&quot;#10-1-概述&quot; class=&quot;headerlink&quot; title=&quot;10.1 概述&quot;&gt;&lt;/a&gt;10.1 概述&lt;/h4&gt;&lt;p&gt;正则表达式（regular expression）是一种表达文本模式（即字符串结构）的方法，有点像字符串的模板，常常用来按照“给定模式”匹配文本。比如，正则表达式给出一个 Email 地址的模式，然后用它来确定一个字符串是否为 Email 地址。JavaScript 的正则表达式体系是参照 Perl 5 建立的。&lt;br&gt;新建正则表达式有两种方法。一种是使用字面量，以斜杠表示开始和结束。&lt;/p&gt;
+&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;10-RegExp对象&quot;&gt;&lt;a href=&quot;#10-RegExp对象&quot; class=&quot;headerlink&quot; title=&quot;10. RegExp对象&quot;&gt;&lt;/a&gt;10. RegExp对象&lt;/h3&gt;&lt;h4 id=&quot;10-1-概述&quot;&gt;&lt;a href=&quot;#10-1-概述&quot; class=&quot;headerlink&quot; title=&quot;10.1 概述&quot;&gt;&lt;/a&gt;10.1 概述&lt;/h4&gt;&lt;p&gt;正则表达式（regular expression）是一种表达文本模式（即字符串结构）的方法，有点像字符串的模板，常常用来按照“给定模式”匹配文本。比如，正则表达式给出一个 Email 地址的模式，然后用它来确定一个字符串是否为 Email 地址。JavaScript 的正则表达式体系是参照 Perl 5 建立的。&lt;br&gt;新建正则表达式有两种方法。一种是使用字面量，以斜杠表示开始和结束。&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;regexp&quot;&gt;/xyz/&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;另一种是使用&lt;code&gt;RegExp&lt;/code&gt;构造函数。&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;xyz&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
@@ -251,11 +343,11 @@
     <link href="https://codermae.github.io/2021/05/15/%E6%89%93%E5%8D%A10023/"/>
     <id>https://codermae.github.io/2021/05/15/%E6%89%93%E5%8D%A10023/</id>
     <published>2021-05-15T05:01:26.000Z</published>
-    <updated>2021-05-15T06:39:32.259Z</updated>
+    <updated>2021-05-22T02:02:28.150Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#999d9c&gt;生命好在无意义，才容得下各自赋予意义。假如生命是有意义的，这个意义却不合我的志趣，那才尴尬狼狈。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;9-Date对象&quot;&gt;&lt;a href=&quot;#9-Date对象&quot; class=&quot;headerlink&quot; title=&quot;9. Date对象&quot;&gt;&lt;/a&gt;9. Date对象&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Date&lt;/code&gt;对象是 JavaScript 原生的时间库。它以国际标准时间（UTC）1970年1月1日00:00:00作为时间的零点，可以表示的时间范围是前后各1亿天（单位为毫秒）&lt;/p&gt;
+&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;9-Date对象&quot;&gt;&lt;a href=&quot;#9-Date对象&quot; class=&quot;headerlink&quot; title=&quot;9. Date对象&quot;&gt;&lt;/a&gt;9. Date对象&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Date&lt;/code&gt;对象是 JavaScript 原生的时间库。它以国际标准时间（UTC）1970年1月1日00:00:00作为时间的零点，可以表示的时间范围是前后各1亿天（单位为毫秒）&lt;/p&gt;
 &lt;h4 id=&quot;9-1-普通函数的用法&quot;&gt;&lt;a href=&quot;#9-1-普通函数的用法&quot; class=&quot;headerlink&quot; title=&quot;9.1 普通函数的用法&quot;&gt;&lt;/a&gt;9.1 普通函数的用法&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Date&lt;/code&gt;对象可以作为普通函数直接调用，返回一个代表当前时间的字符串。&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Date&lt;/span&gt;()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;Tue Dec 01 2015 09:34:43 GMT+0800 (CST)&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;注意，即使带有参数，&lt;code&gt;Date&lt;/code&gt;作为普通函数使用时，返回的还是当前时间。&lt;/p&gt;
@@ -276,11 +368,11 @@
     <link href="https://codermae.github.io/2021/05/15/%E6%89%93%E5%8D%A10022/"/>
     <id>https://codermae.github.io/2021/05/15/%E6%89%93%E5%8D%A10022/</id>
     <published>2021-05-15T04:29:58.000Z</published>
-    <updated>2021-05-15T06:36:51.987Z</updated>
+    <updated>2021-05-22T02:02:20.092Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=d71345&gt;把你手给我哈哈哈哈哈&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;8-Math对象&quot;&gt;&lt;a href=&quot;#8-Math对象&quot; class=&quot;headerlink&quot; title=&quot;8. Math对象&quot;&gt;&lt;/a&gt;8. Math对象&lt;/h3&gt;&lt;h4 id=&quot;8-1-静态属性&quot;&gt;&lt;a href=&quot;#8-1-静态属性&quot; class=&quot;headerlink&quot; title=&quot;8.1 静态属性&quot;&gt;&lt;/a&gt;8.1 静态属性&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Math&lt;/code&gt;对象的静态属性，提供以下一些数学常数。&lt;/p&gt;
+&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;8-Math对象&quot;&gt;&lt;a href=&quot;#8-Math对象&quot; class=&quot;headerlink&quot; title=&quot;8. Math对象&quot;&gt;&lt;/a&gt;8. Math对象&lt;/h3&gt;&lt;h4 id=&quot;8-1-静态属性&quot;&gt;&lt;a href=&quot;#8-1-静态属性&quot; class=&quot;headerlink&quot; title=&quot;8.1 静态属性&quot;&gt;&lt;/a&gt;8.1 静态属性&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Math&lt;/code&gt;对象的静态属性，提供以下一些数学常数。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Math.E&lt;/code&gt;：常数&lt;code&gt;e&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Math.LN2&lt;/code&gt;：2 的自然对数。&lt;/li&gt;
@@ -305,11 +397,11 @@
     <link href="https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10021/"/>
     <id>https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10021/</id>
     <published>2021-05-14T07:19:14.000Z</published>
-    <updated>2021-05-14T08:30:28.843Z</updated>
+    <updated>2021-05-22T02:04:26.911Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#fcaf17&gt;希望你活得尽兴，而不是过的庆幸&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;7-String对象&quot;&gt;&lt;a href=&quot;#7-String对象&quot; class=&quot;headerlink&quot; title=&quot;7. String对象&quot;&gt;&lt;/a&gt;7. String对象&lt;/h3&gt;&lt;h4 id=&quot;7-1-概述&quot;&gt;&lt;a href=&quot;#7-1-概述&quot; class=&quot;headerlink&quot; title=&quot;7.1 概述&quot;&gt;&lt;/a&gt;7.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;String&lt;/code&gt;对象是 JavaScript 原生提供的三个包装对象之一，用来生成字符串对象。&lt;/p&gt;
+&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;7-String对象&quot;&gt;&lt;a href=&quot;#7-String对象&quot; class=&quot;headerlink&quot; title=&quot;7. String对象&quot;&gt;&lt;/a&gt;7. String对象&lt;/h3&gt;&lt;h4 id=&quot;7-1-概述&quot;&gt;&lt;a href=&quot;#7-1-概述&quot; class=&quot;headerlink&quot; title=&quot;7.1 概述&quot;&gt;&lt;/a&gt;7.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;String&lt;/code&gt;对象是 JavaScript 原生提供的三个包装对象之一，用来生成字符串对象。&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; s1 = &lt;span class=&quot;string&quot;&gt;&amp;#x27;abc&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; s2 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;String&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;abc&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; s1 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;string&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; s2 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s2.valueOf() &lt;span class=&quot;comment&quot;&gt;// &amp;quot;abc&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
@@ -326,11 +418,11 @@
     <link href="https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10020/"/>
     <id>https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10020/</id>
     <published>2021-05-14T06:36:46.000Z</published>
-    <updated>2021-05-14T07:21:16.184Z</updated>
+    <updated>2021-05-22T02:02:05.109Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#1d953f&gt;即使不开心也不要愁眉不展，因为你不知道谁会爱上你的笑容。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;6-Number对象&quot;&gt;&lt;a href=&quot;#6-Number对象&quot; class=&quot;headerlink&quot; title=&quot;6. Number对象&quot;&gt;&lt;/a&gt;6. Number对象&lt;/h3&gt;&lt;h4 id=&quot;6-1-概述&quot;&gt;&lt;a href=&quot;#6-1-概述&quot; class=&quot;headerlink&quot; title=&quot;6.1 概述&quot;&gt;&lt;/a&gt;6.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Number&lt;/code&gt;对象是数值对应的包装对象，可以作为构造函数使用，也可以作为工具函数使用。&lt;br&gt;作为构造函数时，它用于生成值为数值的对象。&lt;/p&gt;
+&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;6-Number对象&quot;&gt;&lt;a href=&quot;#6-Number对象&quot; class=&quot;headerlink&quot; title=&quot;6. Number对象&quot;&gt;&lt;/a&gt;6. Number对象&lt;/h3&gt;&lt;h4 id=&quot;6-1-概述&quot;&gt;&lt;a href=&quot;#6-1-概述&quot; class=&quot;headerlink&quot; title=&quot;6.1 概述&quot;&gt;&lt;/a&gt;6.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Number&lt;/code&gt;对象是数值对应的包装对象，可以作为构造函数使用，也可以作为工具函数使用。&lt;br&gt;作为构造函数时，它用于生成值为数值的对象。&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; n = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Number&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; n &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
@@ -347,11 +439,11 @@
     <link href="https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10019/"/>
     <id>https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10019/</id>
     <published>2021-05-14T03:12:21.000Z</published>
-    <updated>2021-05-14T06:33:45.264Z</updated>
+    <updated>2021-05-22T02:01:56.497Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#bed742&gt;如果你是异性，你会不会爱上现在的自己？&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;5-Boolean对象&quot;&gt;&lt;a href=&quot;#5-Boolean对象&quot; class=&quot;headerlink&quot; title=&quot;5. Boolean对象&quot;&gt;&lt;/a&gt;5. Boolean对象&lt;/h3&gt;&lt;h4 id=&quot;5-1-概述&quot;&gt;&lt;a href=&quot;#5-1-概述&quot; class=&quot;headerlink&quot; title=&quot;5.1 概述&quot;&gt;&lt;/a&gt;5.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Boolean&lt;/code&gt;对象是 JavaScript 的三个包装对象之一。作为构造函数，它主要用于生成布尔值的包装对象实例。&lt;/p&gt;
+&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;5-Boolean对象&quot;&gt;&lt;a href=&quot;#5-Boolean对象&quot; class=&quot;headerlink&quot; title=&quot;5. Boolean对象&quot;&gt;&lt;/a&gt;5. Boolean对象&lt;/h3&gt;&lt;h4 id=&quot;5-1-概述&quot;&gt;&lt;a href=&quot;#5-1-概述&quot; class=&quot;headerlink&quot; title=&quot;5.1 概述&quot;&gt;&lt;/a&gt;5.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Boolean&lt;/code&gt;对象是 JavaScript 的三个包装对象之一。作为构造函数，它主要用于生成布尔值的包装对象实例。&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; b = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Boolean&lt;/span&gt;(&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; b &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;b.valueOf() &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
@@ -368,11 +460,11 @@
     <link href="https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10018/"/>
     <id>https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10018/</id>
     <published>2021-05-14T01:34:06.000Z</published>
-    <updated>2021-05-14T06:33:03.568Z</updated>
+    <updated>2021-05-22T02:01:48.774Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#4e72b8&gt;努力经营当下，直至未来明朗。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;4-包装对象&quot;&gt;&lt;a href=&quot;#4-包装对象&quot; class=&quot;headerlink&quot; title=&quot;4. 包装对象&quot;&gt;&lt;/a&gt;4. 包装对象&lt;/h3&gt;&lt;h4 id=&quot;4-1-定义&quot;&gt;&lt;a href=&quot;#4-1-定义&quot; class=&quot;headerlink&quot; title=&quot;4.1 定义&quot;&gt;&lt;/a&gt;4.1 定义&lt;/h4&gt;&lt;p&gt;对象是 JavaScript 语言最主要的数据类型，三种原始类型的值——数值、字符串、布尔值——在一定条件下，也会自动转为对象，也就是原始类型的“包装对象”（wrapper）&lt;br&gt;所谓“包装对象”，指的是与数值、字符串、布尔值分别相对应的&lt;code&gt;Number&lt;/code&gt;、&lt;code&gt;String&lt;/code&gt;、&lt;code&gt;Boolean&lt;/code&gt;三个原生对象。这三个原生对象可以把原始类型的值变成（包装成）对象&lt;/p&gt;
+&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;4-包装对象&quot;&gt;&lt;a href=&quot;#4-包装对象&quot; class=&quot;headerlink&quot; title=&quot;4. 包装对象&quot;&gt;&lt;/a&gt;4. 包装对象&lt;/h3&gt;&lt;h4 id=&quot;4-1-定义&quot;&gt;&lt;a href=&quot;#4-1-定义&quot; class=&quot;headerlink&quot; title=&quot;4.1 定义&quot;&gt;&lt;/a&gt;4.1 定义&lt;/h4&gt;&lt;p&gt;对象是 JavaScript 语言最主要的数据类型，三种原始类型的值——数值、字符串、布尔值——在一定条件下，也会自动转为对象，也就是原始类型的“包装对象”（wrapper）&lt;br&gt;所谓“包装对象”，指的是与数值、字符串、布尔值分别相对应的&lt;code&gt;Number&lt;/code&gt;、&lt;code&gt;String&lt;/code&gt;、&lt;code&gt;Boolean&lt;/code&gt;三个原生对象。这三个原生对象可以把原始类型的值变成（包装成）对象&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; v1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Number&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;123&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; v2 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;String&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;abc&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; v3 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Boolean&lt;/span&gt;(&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; v1 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; v2 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; v3 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;v1 === &lt;span class=&quot;number&quot;&gt;123&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;v2 === &lt;span class=&quot;string&quot;&gt;&amp;#x27;abc&amp;#x27;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;v3 === &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
@@ -389,7 +481,7 @@
     <link href="https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10017/"/>
     <id>https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10017/</id>
     <published>2021-05-13T07:11:13.000Z</published>
-    <updated>2021-05-14T01:36:16.926Z</updated>
+    <updated>2021-05-22T02:01:34.625Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#f15a22&gt;希望你有对感情的向往，也能始终把握感情的走向，让心有所归，感情踏实稳固，愿我们遇见的感情，都是最好的模样。&lt;/font&gt;&lt;/p&gt;
@@ -411,7 +503,7 @@
     <link href="https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10016/"/>
     <id>https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10016/</id>
     <published>2021-05-13T00:35:33.000Z</published>
-    <updated>2021-05-13T02:43:30.261Z</updated>
+    <updated>2021-05-22T02:01:25.757Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#ac6767&gt;如果你感觉到自己不幸福，是因为你追求的不是幸福，而是比别人幸福。&lt;/font&gt;&lt;/p&gt;
@@ -425,72 +517,6 @@
     
     
     <category term="JS标准库-属性描述对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0015</title>
-    <link href="https://codermae.github.io/2021/05/12/%E6%89%93%E5%8D%A10015/"/>
-    <id>https://codermae.github.io/2021/05/12/%E6%89%93%E5%8D%A10015/</id>
-    <published>2021-05-12T01:07:21.000Z</published>
-    <updated>2021-05-12T07:47:57.657Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#7bbbea&gt;所谓无底深渊，下去，也是前程万里。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;1-Object对象&quot;&gt;&lt;a href=&quot;#1-Object对象&quot; class=&quot;headerlink&quot; title=&quot;1. Object对象&quot;&gt;&lt;/a&gt;1. Object对象&lt;/h3&gt;&lt;h4 id=&quot;1-1-概述&quot;&gt;&lt;a href=&quot;#1-1-概述&quot; class=&quot;headerlink&quot; title=&quot;1.1 概述&quot;&gt;&lt;/a&gt;1.1 概述&lt;/h4&gt;&lt;p&gt;JavaScript 原生提供&lt;code&gt;Object&lt;/code&gt;对象（注意起首的&lt;code&gt;O&lt;/code&gt;是大写），本章介绍该对象原生的各种方法&lt;br&gt;JavaScript 的所有其他对象都继承自&lt;code&gt;Object&lt;/code&gt;对象，即那些对象都是&lt;code&gt;Object&lt;/code&gt;的实例。&lt;br&gt;&lt;code&gt;Object&lt;/code&gt;对象的原生方法分成两类：&lt;code&gt;Object&lt;/code&gt;本身的方法与&lt;code&gt;Object&lt;/code&gt;的实例方法。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS标准库-Object对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Object%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0014</title>
-    <link href="https://codermae.github.io/2021/05/11/%E6%89%93%E5%8D%A10014/"/>
-    <id>https://codermae.github.io/2021/05/11/%E6%89%93%E5%8D%A10014/</id>
-    <published>2021-05-11T07:06:15.000Z</published>
-    <updated>2021-05-11T08:18:37.181Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#c0c0c0&gt;清夜无尘，月色如银。酒斟时、须满十分。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS语法&quot;&gt;&lt;a href=&quot;#JS语法&quot; class=&quot;headerlink&quot; title=&quot;JS语法&quot;&gt;&lt;/a&gt;JS语法&lt;/h2&gt;&lt;h3 id=&quot;4-console对象与控制台&quot;&gt;&lt;a href=&quot;#4-console对象与控制台&quot; class=&quot;headerlink&quot; title=&quot;4. console对象与控制台&quot;&gt;&lt;/a&gt;4. console对象与控制台&lt;/h3&gt;&lt;h4 id=&quot;4-1-console对象&quot;&gt;&lt;a href=&quot;#4-1-console对象&quot; class=&quot;headerlink&quot; title=&quot;4.1 console对象&quot;&gt;&lt;/a&gt;4.1 console对象&lt;/h4&gt;&lt;p&gt;&lt;code&gt;console&lt;/code&gt;对象是 JavaScript 的原生对象，它有点像 Unix 系统的标准输出&lt;code&gt;stdout&lt;/code&gt;和标准错误&lt;code&gt;stderr&lt;/code&gt;，可以输出各种信息到控制台，并且还提供了很多有用的辅助方法。&lt;br&gt;&lt;code&gt;console&lt;/code&gt;的常见用途有两个:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;调试程序，显示网页代码运行时的错误信息。&lt;/li&gt;
-&lt;li&gt;提供了一个命令行接口，用来与网页代码互动。</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS语法-console对象与控制台" scheme="https://codermae.github.io/tags/JS%E8%AF%AD%E6%B3%95-console%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8E%A7%E5%88%B6%E5%8F%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0013</title>
-    <link href="https://codermae.github.io/2021/05/11/%E6%89%93%E5%8D%A10013/"/>
-    <id>https://codermae.github.io/2021/05/11/%E6%89%93%E5%8D%A10013/</id>
-    <published>2021-05-11T06:10:28.000Z</published>
-    <updated>2021-05-11T07:05:00.627Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=pink&gt;我们总是在无止境的追求幸福，幻想彩色的气球，夏夜的喷泉，冬天的初雪，以为足够夸张，足够梦幻才算的上是浪漫，所以我们不满足平凡的生活，拼了命的去追求那些存在于童话世界的美好。但其实，我们的生活才是唯一有色彩的真实世界。在那些被忽略的日子里，也有很多浪漫的细节。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS语法&quot;&gt;&lt;a href=&quot;#JS语法&quot; class=&quot;headerlink&quot; title=&quot;JS语法&quot;&gt;&lt;/a&gt;JS语法&lt;/h2&gt;&lt;h3 id=&quot;3-编程风格&quot;&gt;&lt;a href=&quot;#3-编程风格&quot; class=&quot;headerlink&quot; title=&quot;3. 编程风格&quot;&gt;&lt;/a&gt;3. 编程风格&lt;/h3&gt;&lt;h4 id=&quot;3-1-概括&quot;&gt;&lt;a href=&quot;#3-1-概括&quot; class=&quot;headerlink&quot; title=&quot;3.1 概括&quot;&gt;&lt;/a&gt;3.1 概括&lt;/h4&gt;&lt;p&gt;“编程风格”（programming style）指的是编写代码的样式规则。不同的程序员，往往有不同的编程风格。&lt;/p&gt;
-&lt;p&gt;有人说，编译器的规范叫做“语法规则”（grammar），这是程序员必须遵守的；而编译器忽略的部分，就叫“编程风格”（programming style），这是程序员可以自由选择的。这种说法不完全正确，程序员固然可以自由选择编程风格，但是好的编程风格有助于写出质量更高、错误更少、更易于维护的程序。&lt;/p&gt;
-&lt;p&gt;所以，编程风格的选择不应该基于个人爱好、熟悉程度、打字量等因素，而要考虑如何尽量使代码清晰易读、减少出错。你选择的，不是你喜欢的风格，而是一种能够清晰表达你的意图的风格。这一点，对于 JavaScript 这种语法自由度很高的语言尤其重要。&lt;/p&gt;
-&lt;p&gt;必须牢记的一点是，如果你选定了一种“编程风格”，就应该坚持遵守，切忌多种风格混用。如果你加入他人的项目，就应该遵守现有的风格。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS语法-编程风格" scheme="https://codermae.github.io/tags/JS%E8%AF%AD%E6%B3%95-%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC/"/>
     
   </entry>
   
