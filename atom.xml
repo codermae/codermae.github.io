@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-22T03:22:26.180Z</updated>
+  <updated>2021-05-23T05:28:20.221Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0037</title>
+    <link href="https://codermae.github.io/2021/05/23/%E6%89%93%E5%8D%A10037/"/>
+    <id>https://codermae.github.io/2021/05/23/%E6%89%93%E5%8D%A10037/</id>
+    <published>2021-05-23T05:09:14.000Z</published>
+    <updated>2021-05-23T05:28:20.221Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=gray&gt;他进入了一个梦乡，那里的稻穗比高粱还高，穗粒比花生还大。风轻轻吹过，他就坐在稻穗下乘凉。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;4-ParentNode-接口，ChildNode-接口&quot;&gt;&lt;a href=&quot;#4-ParentNode-接口，ChildNode-接口&quot; class=&quot;headerlink&quot; title=&quot;4. ParentNode 接口，ChildNode 接口&quot;&gt;&lt;/a&gt;4. ParentNode 接口，ChildNode 接口&lt;/h3&gt;&lt;p&gt;节点对象除了继承 Node 接口以外，还拥有其他接口。&lt;code&gt;ParentNode&lt;/code&gt;接口表示当前节点是一个父节点，提供一些处理子节点的方法。&lt;code&gt;ChildNode&lt;/code&gt;接口表示当前节点是一个子节点，提供一些相关方法。&lt;/p&gt;
+&lt;h4 id=&quot;4-1-ParentNode-接口&quot;&gt;&lt;a href=&quot;#4-1-ParentNode-接口&quot; class=&quot;headerlink&quot; title=&quot;4.1 ParentNode 接口&quot;&gt;&lt;/a&gt;4.1 ParentNode 接口&lt;/h4&gt;&lt;p&gt;如果当前节点是父节点，就会混入了（mixin）&lt;code&gt;ParentNode&lt;/code&gt;接口。由于只有元素节点（element）、文档节点（document）和文档片段节点（documentFragment）拥有子节点，因此只有这三类节点会拥有&lt;code&gt;ParentNode&lt;/code&gt;接口。&lt;/p&gt;
+&lt;h5 id=&quot;4-1-1-ParentNode-children&quot;&gt;&lt;a href=&quot;#4-1-1-ParentNode-children&quot; class=&quot;headerlink&quot; title=&quot;4.1.1 ParentNode.children&quot;&gt;&lt;/a&gt;4.1.1 ParentNode.children&lt;/h5&gt;&lt;p&gt;&lt;code&gt;children&lt;/code&gt;属性返回一个&lt;code&gt;HTMLCollection&lt;/code&gt;实例，成员是当前节点的所有元素子节点。该属性只读。&lt;/p&gt;
+&lt;p&gt;下面是遍历某个节点的所有元素子节点的示例。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; el.children.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS DOM-ParentNode 接口，ChildNode 接口" scheme="https://codermae.github.io/tags/JS-DOM-ParentNode-%E6%8E%A5%E5%8F%A3%EF%BC%8CChildNode-%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0036</title>
+    <link href="https://codermae.github.io/2021/05/23/%E6%89%93%E5%8D%A10036/"/>
+    <id>https://codermae.github.io/2021/05/23/%E6%89%93%E5%8D%A10036/</id>
+    <published>2021-05-23T04:48:16.000Z</published>
+    <updated>2021-05-23T05:23:42.416Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=gray&gt;老骥伏枥，志在千里。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;3-NodeList-接口，HTMLCollection-接口&quot;&gt;&lt;a href=&quot;#3-NodeList-接口，HTMLCollection-接口&quot; class=&quot;headerlink&quot; title=&quot;3. NodeList 接口，HTMLCollection 接口&quot;&gt;&lt;/a&gt;3. NodeList 接口，HTMLCollection 接口&lt;/h3&gt;&lt;p&gt;节点都是单个对象，有时需要一种数据结构，能够容纳多个节点。DOM 提供两种节点集合，用于容纳多个节点：&lt;code&gt;NodeList&lt;/code&gt;和&lt;code&gt;HTMLCollection&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;这两种集合都属于接口规范。许多 DOM 属性和方法，返回的结果是&lt;code&gt;NodeList&lt;/code&gt;实例或&lt;code&gt;HTMLCollection&lt;/code&gt;实例。主要区别是，&lt;code&gt;NodeList&lt;/code&gt;可以包含各种类型的节点，&lt;code&gt;HTMLCollection&lt;/code&gt;只能包含 HTML 元素节点。&lt;/p&gt;
+&lt;h4 id=&quot;3-1-NodeList-接口&quot;&gt;&lt;a href=&quot;#3-1-NodeList-接口&quot; class=&quot;headerlink&quot; title=&quot;3.1 NodeList 接口&quot;&gt;&lt;/a&gt;3.1 NodeList 接口&lt;/h4&gt;&lt;h5 id=&quot;3-1-1-概述&quot;&gt;&lt;a href=&quot;#3-1-1-概述&quot; class=&quot;headerlink&quot; title=&quot;3.1.1 概述&quot;&gt;&lt;/a&gt;3.1.1 概述&lt;/h5&gt;&lt;p&gt;&lt;code&gt;NodeList&lt;/code&gt;实例是一个类似数组的对象，它的成员是节点对象。通过以下方法可以得到&lt;code&gt;NodeList&lt;/code&gt;实例。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Node.childNodes&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;document.querySelectorAll()&lt;/code&gt;等节点搜索方法&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS DOM-NodeList 接口，HTMLCollection 接口" scheme="https://codermae.github.io/tags/JS-DOM-NodeList-%E6%8E%A5%E5%8F%A3%EF%BC%8CHTMLCollection-%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0035</title>
@@ -473,50 +523,6 @@
     
     
     <category term="JS标准库-包装对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-%E5%8C%85%E8%A3%85%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0017</title>
-    <link href="https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10017/"/>
-    <id>https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10017/</id>
-    <published>2021-05-13T07:11:13.000Z</published>
-    <updated>2021-05-22T02:01:34.625Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#f15a22&gt;希望你有对感情的向往，也能始终把握感情的走向，让心有所归，感情踏实稳固，愿我们遇见的感情，都是最好的模样。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;3-Array对象&quot;&gt;&lt;a href=&quot;#3-Array对象&quot; class=&quot;headerlink&quot; title=&quot;3. Array对象&quot;&gt;&lt;/a&gt;3. Array对象&lt;/h3&gt;&lt;h4 id=&quot;3-1-构造函数&quot;&gt;&lt;a href=&quot;#3-1-构造函数&quot; class=&quot;headerlink&quot; title=&quot;3.1 构造函数&quot;&gt;&lt;/a&gt;3.1 构造函数&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Array&lt;/code&gt;是 JavaScript 的原生对象，同时也是一个构造函数，可以用它生成新的数组&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; arr = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;arr.length &lt;span class=&quot;comment&quot;&gt;// 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;arr &lt;span class=&quot;comment&quot;&gt;// [ empty x 2 ]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，&lt;code&gt;Array()&lt;/code&gt;构造函数的参数&lt;code&gt;2&lt;/code&gt;，表示生成一个两个成员的数组，每个位置都是空值。&lt;br&gt;如果没有使用&lt;code&gt;new&lt;/code&gt;关键字，运行结果也是一样的。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS标准库-Array对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Array%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0016</title>
-    <link href="https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10016/"/>
-    <id>https://codermae.github.io/2021/05/13/%E6%89%93%E5%8D%A10016/</id>
-    <published>2021-05-13T00:35:33.000Z</published>
-    <updated>2021-05-22T02:01:25.757Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#ac6767&gt;如果你感觉到自己不幸福，是因为你追求的不是幸福，而是比别人幸福。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;2-属性描述对象&quot;&gt;&lt;a href=&quot;#2-属性描述对象&quot; class=&quot;headerlink&quot; title=&quot;2. 属性描述对象&quot;&gt;&lt;/a&gt;2. 属性描述对象&lt;/h3&gt;&lt;h4 id=&quot;2-1-概述&quot;&gt;&lt;a href=&quot;#2-1-概述&quot; class=&quot;headerlink&quot; title=&quot;2.1 概述&quot;&gt;&lt;/a&gt;2.1 概述&lt;/h4&gt;&lt;p&gt;JavaScript 提供了一个内部数据结构，用来描述对象的属性，控制它的行为，比如该属性是否可写、可遍历等等。这个内部数据结构称为“属性描述对象”（attributes object）。每个属性都有自己对应的属性描述对象，保存该属性的一些元信息。&lt;/p&gt;
-&lt;p&gt;下面是属性描述对象的一个例子：&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  value: &lt;span class=&quot;number&quot;&gt;123&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  writable: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  enumerable: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  configurable: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  get: &lt;span class=&quot;literal&quot;&gt;undefined&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  set: &lt;span class=&quot;literal&quot;&gt;undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS标准库-属性描述对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-%E5%B1%9E%E6%80%A7%E6%8F%8F%E8%BF%B0%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
