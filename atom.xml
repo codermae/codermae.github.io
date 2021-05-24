@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-23T05:28:20.221Z</updated>
+  <updated>2021-05-24T08:15:11.096Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0038</title>
+    <link href="https://codermae.github.io/2021/05/24/%E6%89%93%E5%8D%A10038/"/>
+    <id>https://codermae.github.io/2021/05/24/%E6%89%93%E5%8D%A10038/</id>
+    <published>2021-05-24T01:03:42.000Z</published>
+    <updated>2021-05-24T08:15:11.096Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#987165&gt;人海茫茫，能够相遇本来就是难得的缘分，愿我们都能够以体谅之心爱人，不敷衍每一份真情，互相体谅，好好珍惜。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;5-Document-节点&quot;&gt;&lt;a href=&quot;#5-Document-节点&quot; class=&quot;headerlink&quot; title=&quot;5. Document 节点&quot;&gt;&lt;/a&gt;5. Document 节点&lt;/h3&gt;&lt;h4 id=&quot;5-1-概述&quot;&gt;&lt;a href=&quot;#5-1-概述&quot; class=&quot;headerlink&quot; title=&quot;5.1 概述&quot;&gt;&lt;/a&gt;5.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;document&lt;/code&gt;节点对象代表整个文档，每张网页都有自己的&lt;code&gt;document&lt;/code&gt;对象。&lt;code&gt;window.document&lt;/code&gt;属性就指向这个对象。只要浏览器开始载入 HTML 文档，该对象就存在了，可以直接使用。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;document&lt;/code&gt;对象有不同的办法可以获取。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正常的网页，直接使用&lt;code&gt;document&lt;/code&gt;或&lt;code&gt;window.document&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;iframe&lt;/code&gt;框架里面的网页，使用&lt;code&gt;iframe&lt;/code&gt;节点的&lt;code&gt;contentDocument&lt;/code&gt;属性 。&lt;/li&gt;
+&lt;li&gt;Ajax 操作返回的文档，使用&lt;code&gt;XMLHttpRequest&lt;/code&gt;对象的&lt;code&gt;responseXML&lt;/code&gt;属性。&lt;/li&gt;
+&lt;li&gt;内部节点的&lt;code&gt;ownerDocument&lt;/code&gt;属性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;document&lt;/code&gt;对象继承了&lt;code&gt;EventTarget&lt;/code&gt;接口和&lt;code&gt;Node&lt;/code&gt;接口，并且混入（mixin）了&lt;code&gt;ParentNode&lt;/code&gt;接口。这意味着，这些接口的方法都可以在&lt;code&gt;document&lt;/code&gt;对象上调用。除此之外，&lt;code&gt;document&lt;/code&gt;对象还有很多自己的属性和方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS DOM-Document 节点" scheme="https://codermae.github.io/tags/JS-DOM-Document-%E8%8A%82%E7%82%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0037</title>
@@ -502,27 +530,6 @@
     
     
     <category term="JS标准库-Boolean对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Boolean%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0018</title>
-    <link href="https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10018/"/>
-    <id>https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10018/</id>
-    <published>2021-05-14T01:34:06.000Z</published>
-    <updated>2021-05-22T02:01:48.774Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#4e72b8&gt;努力经营当下，直至未来明朗。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;4-包装对象&quot;&gt;&lt;a href=&quot;#4-包装对象&quot; class=&quot;headerlink&quot; title=&quot;4. 包装对象&quot;&gt;&lt;/a&gt;4. 包装对象&lt;/h3&gt;&lt;h4 id=&quot;4-1-定义&quot;&gt;&lt;a href=&quot;#4-1-定义&quot; class=&quot;headerlink&quot; title=&quot;4.1 定义&quot;&gt;&lt;/a&gt;4.1 定义&lt;/h4&gt;&lt;p&gt;对象是 JavaScript 语言最主要的数据类型，三种原始类型的值——数值、字符串、布尔值——在一定条件下，也会自动转为对象，也就是原始类型的“包装对象”（wrapper）&lt;br&gt;所谓“包装对象”，指的是与数值、字符串、布尔值分别相对应的&lt;code&gt;Number&lt;/code&gt;、&lt;code&gt;String&lt;/code&gt;、&lt;code&gt;Boolean&lt;/code&gt;三个原生对象。这三个原生对象可以把原始类型的值变成（包装成）对象&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; v1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Number&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;123&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; v2 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;String&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;abc&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; v3 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Boolean&lt;/span&gt;(&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; v1 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; v2 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; v3 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;v1 === &lt;span class=&quot;number&quot;&gt;123&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;v2 === &lt;span class=&quot;string&quot;&gt;&amp;#x27;abc&amp;#x27;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;v3 === &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS标准库-包装对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-%E5%8C%85%E8%A3%85%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
