@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-24T08:15:11.096Z</updated>
+  <updated>2021-05-25T02:36:50.104Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0039</title>
+    <link href="https://codermae.github.io/2021/05/25/%E6%89%93%E5%8D%A10039/"/>
+    <id>https://codermae.github.io/2021/05/25/%E6%89%93%E5%8D%A10039/</id>
+    <published>2021-05-25T01:05:50.000Z</published>
+    <updated>2021-05-25T02:36:50.104Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#9b95c9&gt;星光不问赶路人，时光不负有心人。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;6-Element-节点&quot;&gt;&lt;a href=&quot;#6-Element-节点&quot; class=&quot;headerlink&quot; title=&quot;6. Element 节点&quot;&gt;&lt;/a&gt;6. Element 节点&lt;/h3&gt;&lt;h4 id=&quot;6-1-简介&quot;&gt;&lt;a href=&quot;#6-1-简介&quot; class=&quot;headerlink&quot; title=&quot;6.1 简介&quot;&gt;&lt;/a&gt;6.1 简介&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Element&lt;/code&gt;节点对象对应网页的 HTML 元素。每一个 HTML 元素，在 DOM 树上都会转化成一个&lt;code&gt;Element&lt;/code&gt;节点对象（以下简称元素节点）。&lt;/p&gt;
+&lt;p&gt;元素节点的&lt;code&gt;nodeType&lt;/code&gt;属性都是&lt;code&gt;1&lt;/code&gt;。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; p = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.querySelector(&lt;span class=&quot;string&quot;&gt;&amp;#x27;p&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;p.nodeName &lt;span class=&quot;comment&quot;&gt;// &amp;quot;P&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;p.nodeType &lt;span class=&quot;comment&quot;&gt;// 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;Element&lt;/code&gt;对象继承了&lt;code&gt;Node&lt;/code&gt;接口，因此&lt;code&gt;Node&lt;/code&gt;的属性和方法在&lt;code&gt;Element&lt;/code&gt;对象都存在。&lt;/p&gt;
+&lt;p&gt;此外，不同的 HTML 元素对应的元素节点是不一样的，浏览器使用不同的构造函数，生成不同的元素节点，比如&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;元素的构造函数是&lt;code&gt;HTMLAnchorElement()&lt;/code&gt;，&lt;code&gt;&amp;lt;button&amp;gt;&lt;/code&gt;是&lt;code&gt;HTMLButtonElement()&lt;/code&gt;。因此，元素节点不是一种对象，而是许多种对象，这些对象除了继承&lt;code&gt;Element&lt;/code&gt;对象的属性和方法，还有各自独有的属性和方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS DOM-Element 节点" scheme="https://codermae.github.io/tags/JS-DOM-Element-%E8%8A%82%E7%82%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0038</title>
@@ -509,27 +533,6 @@
     
     
     <category term="JS标准库-Number对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Number%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0019</title>
-    <link href="https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10019/"/>
-    <id>https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10019/</id>
-    <published>2021-05-14T03:12:21.000Z</published>
-    <updated>2021-05-22T02:01:56.497Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#bed742&gt;如果你是异性，你会不会爱上现在的自己？&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;5-Boolean对象&quot;&gt;&lt;a href=&quot;#5-Boolean对象&quot; class=&quot;headerlink&quot; title=&quot;5. Boolean对象&quot;&gt;&lt;/a&gt;5. Boolean对象&lt;/h3&gt;&lt;h4 id=&quot;5-1-概述&quot;&gt;&lt;a href=&quot;#5-1-概述&quot; class=&quot;headerlink&quot; title=&quot;5.1 概述&quot;&gt;&lt;/a&gt;5.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Boolean&lt;/code&gt;对象是 JavaScript 的三个包装对象之一。作为构造函数，它主要用于生成布尔值的包装对象实例。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; b = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Boolean&lt;/span&gt;(&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; b &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;b.valueOf() &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS标准库-Boolean对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Boolean%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
