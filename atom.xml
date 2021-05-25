@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-25T02:36:50.104Z</updated>
+  <updated>2021-05-25T03:04:51.485Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打卡0040</title>
+    <link href="https://codermae.github.io/2021/05/25/%E6%89%93%E5%8D%A10040/"/>
+    <id>https://codermae.github.io/2021/05/25/%E6%89%93%E5%8D%A10040/</id>
+    <published>2021-05-25T02:38:38.000Z</published>
+    <updated>2021-05-25T03:04:51.485Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#f58220&gt;这世界有那么多人~&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;7-属性的操作&quot;&gt;&lt;a href=&quot;#7-属性的操作&quot; class=&quot;headerlink&quot; title=&quot;7. 属性的操作&quot;&gt;&lt;/a&gt;7. 属性的操作&lt;/h3&gt;&lt;p&gt;HTML 元素包括标签名和若干个键值对，这个键值对就称为“属性”（attribute）。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;a id=&lt;span class=&quot;string&quot;&gt;&amp;quot;test&amp;quot;&lt;/span&gt; href=&lt;span class=&quot;string&quot;&gt;&amp;quot;http://www.example.com&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  链接&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，&lt;code&gt;a&lt;/code&gt;元素包括两个属性：&lt;code&gt;id&lt;/code&gt;属性和&lt;code&gt;href&lt;/code&gt;属性。&lt;/p&gt;
+&lt;p&gt;属性本身是一个对象（&lt;code&gt;Attr&lt;/code&gt;对象），但是实际上，这个对象极少使用。一般都是通过元素节点对象（&lt;code&gt;HTMlElement&lt;/code&gt;对象）来操作属性。本章介绍如何操作这些属性。&lt;/p&gt;
+&lt;h4 id=&quot;7-1-Element-attributes-属性&quot;&gt;&lt;a href=&quot;#7-1-Element-attributes-属性&quot; class=&quot;headerlink&quot; title=&quot;7.1 Element.attributes 属性&quot;&gt;&lt;/a&gt;7.1 Element.attributes 属性&lt;/h4&gt;&lt;p&gt;元素对象有一个&lt;code&gt;attributes&lt;/code&gt;属性，返回一个类似数组的动态对象，成员是该元素标签的所有属性节点对象，属性的实时变化都会反映在这个节点对象上。其他类型的节点对象，虽然也有&lt;code&gt;attributes&lt;/code&gt;属性，但返回的都是&lt;code&gt;null&lt;/code&gt;，因此可以把这个属性视为元素对象独有的。&lt;/p&gt;
+&lt;p&gt;单个属性可以通过序号引用，也可以通过属性名引用。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// HTML 代码如下&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;lt;body bgcolor=&amp;quot;yellow&amp;quot; onload=&amp;quot;&amp;quot;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.body.attributes[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.body.attributes.bgcolor&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.body.attributes[&lt;span class=&quot;string&quot;&gt;&amp;#x27;ONLOAD&amp;#x27;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS DOM-属性的操作" scheme="https://codermae.github.io/tags/JS-DOM-%E5%B1%9E%E6%80%A7%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>打卡0039</title>
     <link href="https://codermae.github.io/2021/05/25/%E6%89%93%E5%8D%A10039/"/>
     <id>https://codermae.github.io/2021/05/25/%E6%89%93%E5%8D%A10039/</id>
     <published>2021-05-25T01:05:50.000Z</published>
-    <updated>2021-05-25T02:36:50.104Z</updated>
+    <updated>2021-05-25T03:05:21.350Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#9b95c9&gt;星光不问赶路人，时光不负有心人。&lt;/font&gt;&lt;/p&gt;
@@ -512,27 +538,6 @@
     
     
     <category term="JS标准库-String对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-String%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0020</title>
-    <link href="https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10020/"/>
-    <id>https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10020/</id>
-    <published>2021-05-14T06:36:46.000Z</published>
-    <updated>2021-05-22T02:02:05.109Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#1d953f&gt;即使不开心也不要愁眉不展，因为你不知道谁会爱上你的笑容。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;6-Number对象&quot;&gt;&lt;a href=&quot;#6-Number对象&quot; class=&quot;headerlink&quot; title=&quot;6. Number对象&quot;&gt;&lt;/a&gt;6. Number对象&lt;/h3&gt;&lt;h4 id=&quot;6-1-概述&quot;&gt;&lt;a href=&quot;#6-1-概述&quot; class=&quot;headerlink&quot; title=&quot;6.1 概述&quot;&gt;&lt;/a&gt;6.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Number&lt;/code&gt;对象是数值对应的包装对象，可以作为构造函数使用，也可以作为工具函数使用。&lt;br&gt;作为构造函数时，它用于生成值为数值的对象。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; n = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Number&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; n &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS标准库-Number对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Number%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
