@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-25T03:04:51.485Z</updated>
+  <updated>2021-05-26T02:27:49.614Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,84 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0043</title>
+    <link href="https://codermae.github.io/2021/05/26/%E6%89%93%E5%8D%A10043/"/>
+    <id>https://codermae.github.io/2021/05/26/%E6%89%93%E5%8D%A10043/</id>
+    <published>2021-05-26T02:08:37.000Z</published>
+    <updated>2021-05-26T02:27:49.614Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#fedcbd&gt;别让纠结怨怼，耽误了你对美好风景的体验。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;10-Mutation-Observer-API&quot;&gt;&lt;a href=&quot;#10-Mutation-Observer-API&quot; class=&quot;headerlink&quot; title=&quot;10. Mutation Observer API&quot;&gt;&lt;/a&gt;10. Mutation Observer API&lt;/h3&gt;&lt;h4 id=&quot;10-1-概述&quot;&gt;&lt;a href=&quot;#10-1-概述&quot; class=&quot;headerlink&quot; title=&quot;10.1 概述&quot;&gt;&lt;/a&gt;10.1 概述&lt;/h4&gt;&lt;p&gt;Mutation Observer API 用来监视 DOM 变动。DOM 的任何变动，比如节点的增减、属性的变动、文本内容的变动，这个 API 都可以得到通知。&lt;/p&gt;
+&lt;p&gt;概念上，它很接近事件，可以理解为 DOM 发生变动就会触发 Mutation Observer 事件。但是，它与事件有一个本质不同：事件是同步触发，也就是说，DOM 的变动立刻会触发相应的事件；Mutation Observer 则是异步触发，DOM 的变动并不会马上触发，而是要等到当前所有 DOM 操作都结束才触发。&lt;/p&gt;
+&lt;p&gt;这样设计是为了应付 DOM 变动频繁的特点。举例来说，如果文档中连续插入1000个&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;元素，就会连续触发1000个插入事件，执行每个事件的回调函数，这很可能造成浏览器的卡顿；而 Mutation Observer 完全不同，只在1000个段落都插入结束后才会触发，而且只触发一次。&lt;/p&gt;
+&lt;p&gt;Mutation Observer 有以下特点。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它等待所有脚本任务完成后，才会运行（即异步触发方式）。&lt;/li&gt;
+&lt;li&gt;它把 DOM 变动记录封装成一个数组进行处理，而不是一条条个别处理 DOM 变动。&lt;/li&gt;
+&lt;li&gt;它既可以观察 DOM 的所有类型变动，也可以指定只观察某一类变动。&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS DOM-Mutation Observer API" scheme="https://codermae.github.io/tags/JS-DOM-Mutation-Observer-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0042</title>
+    <link href="https://codermae.github.io/2021/05/26/%E6%89%93%E5%8D%A10042/"/>
+    <id>https://codermae.github.io/2021/05/26/%E6%89%93%E5%8D%A10042/</id>
+    <published>2021-05-26T01:16:08.000Z</published>
+    <updated>2021-05-26T02:27:30.446Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#2a5caa&gt;谁不曾仰望过繁星呢，但你也可以拥有自己的可爱光芒。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;9-CSS-操作&quot;&gt;&lt;a href=&quot;#9-CSS-操作&quot; class=&quot;headerlink&quot; title=&quot;9. CSS 操作&quot;&gt;&lt;/a&gt;9. CSS 操作&lt;/h3&gt;&lt;p&gt;CSS 与 JavaScript 是两个有着明确分工的领域，前者负责页面的视觉效果，后者负责与用户的行为互动。但是，它们毕竟同属网页开发的前端，因此不可避免有着交叉和互相配合。本章介绍如何通过 JavaScript 操作 CSS。&lt;/p&gt;
+&lt;h4 id=&quot;9-1-HTML-元素的-style-属性&quot;&gt;&lt;a href=&quot;#9-1-HTML-元素的-style-属性&quot; class=&quot;headerlink&quot; title=&quot;9.1 HTML 元素的 style 属性&quot;&gt;&lt;/a&gt;9.1 HTML 元素的 style 属性&lt;/h4&gt;&lt;p&gt;操作 CSS 样式最简单的方法，就是使用网页元素节点的&lt;code&gt;getAttribute()&lt;/code&gt;方法、&lt;code&gt;setAttribute()&lt;/code&gt;方法和&lt;code&gt;removeAttribute()&lt;/code&gt;方法，直接读写或删除网页元素的&lt;code&gt;style&lt;/code&gt;属性。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;div.setAttribute(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&amp;#x27;style&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&amp;#x27;background-color:red;&amp;#x27;&lt;/span&gt; + &lt;span class=&quot;string&quot;&gt;&amp;#x27;border:1px solid black;&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面的代码相当于下面的 HTML 代码。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div style=&lt;span class=&quot;string&quot;&gt;&amp;quot;background-color:red; border:1px solid black;&amp;quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;style&lt;/code&gt;不仅可以使用字符串读写，它本身还是一个对象，部署了 CSSStyleDeclaration 接口（详见下面的介绍），可以直接读写个别属性。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;e.style.fontSize = &lt;span class=&quot;string&quot;&gt;&amp;#x27;18px&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;e.style.color = &lt;span class=&quot;string&quot;&gt;&amp;#x27;black&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS DOM-CSS 操作" scheme="https://codermae.github.io/tags/JS-DOM-CSS-%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0041</title>
+    <link href="https://codermae.github.io/2021/05/26/%E6%89%93%E5%8D%A10041/"/>
+    <id>https://codermae.github.io/2021/05/26/%E6%89%93%E5%8D%A10041/</id>
+    <published>2021-05-26T00:48:38.000Z</published>
+    <updated>2021-05-26T02:27:01.435Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#cde6c7&gt;生活可以迷茫，但不应虚度。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;8-Text-节点和-DocumentFragment-节点&quot;&gt;&lt;a href=&quot;#8-Text-节点和-DocumentFragment-节点&quot; class=&quot;headerlink&quot; title=&quot;8. Text 节点和 DocumentFragment 节点&quot;&gt;&lt;/a&gt;8. Text 节点和 DocumentFragment 节点&lt;/h3&gt;&lt;h4 id=&quot;8-1-Text-节点的概念&quot;&gt;&lt;a href=&quot;#8-1-Text-节点的概念&quot; class=&quot;headerlink&quot; title=&quot;8.1 Text 节点的概念&quot;&gt;&lt;/a&gt;8.1 Text 节点的概念&lt;/h4&gt;&lt;p&gt;文本节点（&lt;code&gt;Text&lt;/code&gt;）代表元素节点（&lt;code&gt;Element&lt;/code&gt;）和属性节点（&lt;code&gt;Attribute&lt;/code&gt;）的文本内容。如果一个节点只包含一段文本，那么它就有一个文本子节点，代表该节点的文本内容。&lt;/p&gt;
+&lt;p&gt;通常我们使用父节点的&lt;code&gt;firstChild&lt;/code&gt;、&lt;code&gt;nextSibling&lt;/code&gt;等属性获取文本节点，或者使用&lt;code&gt;Document&lt;/code&gt;节点的&lt;code&gt;createTextNode&lt;/code&gt;方法创造一个文本节点。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 获取文本节点&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; textNode = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.querySelector(&lt;span class=&quot;string&quot;&gt;&amp;#x27;p&amp;#x27;&lt;/span&gt;).firstChild;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 创造文本节点&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; textNode = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.createTextNode(&lt;span class=&quot;string&quot;&gt;&amp;#x27;Hi&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.querySelector(&lt;span class=&quot;string&quot;&gt;&amp;#x27;div&amp;#x27;&lt;/span&gt;).appendChild(textNode);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;浏览器原生提供一个&lt;code&gt;Text&lt;/code&gt;构造函数。它返回一个文本节点实例。它的参数就是该文本节点的文本内容。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 空字符串&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; text1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Text();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 非空字符串&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; text2 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Text(&lt;span class=&quot;string&quot;&gt;&amp;#x27;This is a text node&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS DOM-Text 节点和 DocumentFragment 节点" scheme="https://codermae.github.io/tags/JS-DOM-Text-%E8%8A%82%E7%82%B9%E5%92%8C-DocumentFragment-%E8%8A%82%E7%82%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0040</title>
@@ -463,81 +541,6 @@
     
     
     <category term="JS标准库-RegExp对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-RegExp%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0023</title>
-    <link href="https://codermae.github.io/2021/05/15/%E6%89%93%E5%8D%A10023/"/>
-    <id>https://codermae.github.io/2021/05/15/%E6%89%93%E5%8D%A10023/</id>
-    <published>2021-05-15T05:01:26.000Z</published>
-    <updated>2021-05-22T02:02:28.150Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#999d9c&gt;生命好在无意义，才容得下各自赋予意义。假如生命是有意义的，这个意义却不合我的志趣，那才尴尬狼狈。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;9-Date对象&quot;&gt;&lt;a href=&quot;#9-Date对象&quot; class=&quot;headerlink&quot; title=&quot;9. Date对象&quot;&gt;&lt;/a&gt;9. Date对象&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Date&lt;/code&gt;对象是 JavaScript 原生的时间库。它以国际标准时间（UTC）1970年1月1日00:00:00作为时间的零点，可以表示的时间范围是前后各1亿天（单位为毫秒）&lt;/p&gt;
-&lt;h4 id=&quot;9-1-普通函数的用法&quot;&gt;&lt;a href=&quot;#9-1-普通函数的用法&quot; class=&quot;headerlink&quot; title=&quot;9.1 普通函数的用法&quot;&gt;&lt;/a&gt;9.1 普通函数的用法&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Date&lt;/code&gt;对象可以作为普通函数直接调用，返回一个代表当前时间的字符串。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Date&lt;/span&gt;()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;Tue Dec 01 2015 09:34:43 GMT+0800 (CST)&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;注意，即使带有参数，&lt;code&gt;Date&lt;/code&gt;作为普通函数使用时，返回的还是当前时间。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Date&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;2000&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;Tue Dec 01 2015 09:34:43 GMT+0800 (CST)&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码说明，无论有没有参数，直接调用&lt;code&gt;Date&lt;/code&gt;总是返回当前时间&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS标准库-Date对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Date%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0022</title>
-    <link href="https://codermae.github.io/2021/05/15/%E6%89%93%E5%8D%A10022/"/>
-    <id>https://codermae.github.io/2021/05/15/%E6%89%93%E5%8D%A10022/</id>
-    <published>2021-05-15T04:29:58.000Z</published>
-    <updated>2021-05-22T02:02:20.092Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=d71345&gt;把你手给我哈哈哈哈哈&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;8-Math对象&quot;&gt;&lt;a href=&quot;#8-Math对象&quot; class=&quot;headerlink&quot; title=&quot;8. Math对象&quot;&gt;&lt;/a&gt;8. Math对象&lt;/h3&gt;&lt;h4 id=&quot;8-1-静态属性&quot;&gt;&lt;a href=&quot;#8-1-静态属性&quot; class=&quot;headerlink&quot; title=&quot;8.1 静态属性&quot;&gt;&lt;/a&gt;8.1 静态属性&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Math&lt;/code&gt;对象的静态属性，提供以下一些数学常数。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Math.E&lt;/code&gt;：常数&lt;code&gt;e&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Math.LN2&lt;/code&gt;：2 的自然对数。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Math.LN10&lt;/code&gt;：10 的自然对数。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Math.LOG2E&lt;/code&gt;：以 2 为底的&lt;code&gt;e&lt;/code&gt;的对数。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Math.LOG10E&lt;/code&gt;：以 10 为底的&lt;code&gt;e&lt;/code&gt;的对数。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Math.PI&lt;/code&gt;：常数&lt;code&gt;π&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Math.SQRT1_2&lt;/code&gt;：0.5 的平方根。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Math.SQRT2&lt;/code&gt;：2 的平方根。</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS标准库-Math对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Math%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0021</title>
-    <link href="https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10021/"/>
-    <id>https://codermae.github.io/2021/05/14/%E6%89%93%E5%8D%A10021/</id>
-    <published>2021-05-14T07:19:14.000Z</published>
-    <updated>2021-05-22T02:04:26.911Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#fcaf17&gt;希望你活得尽兴，而不是过的庆幸&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;7-String对象&quot;&gt;&lt;a href=&quot;#7-String对象&quot; class=&quot;headerlink&quot; title=&quot;7. String对象&quot;&gt;&lt;/a&gt;7. String对象&lt;/h3&gt;&lt;h4 id=&quot;7-1-概述&quot;&gt;&lt;a href=&quot;#7-1-概述&quot; class=&quot;headerlink&quot; title=&quot;7.1 概述&quot;&gt;&lt;/a&gt;7.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;String&lt;/code&gt;对象是 JavaScript 原生提供的三个包装对象之一，用来生成字符串对象。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; s1 = &lt;span class=&quot;string&quot;&gt;&amp;#x27;abc&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; s2 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;String&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;abc&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; s1 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;string&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; s2 &lt;span class=&quot;comment&quot;&gt;// &amp;quot;object&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s2.valueOf() &lt;span class=&quot;comment&quot;&gt;// &amp;quot;abc&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS标准库-String对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-String%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   

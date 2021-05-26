@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
+       
+      <meta name="keywords" content="blog" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>打卡0041 |  maeBlog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-打卡0041"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  打卡0041
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/26/%E6%89%93%E5%8D%A10041/" class="article-date">
+  <time datetime="2021-05-26T00:48:38.000Z" itemprop="datePublished">2021-05-26</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.8k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">7 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#cde6c7>生活可以迷茫，但不应虚度。</font></p>
+<h2 id="JS-DOM"><a href="#JS-DOM" class="headerlink" title="JS DOM"></a>JS DOM</h2><h3 id="8-Text-节点和-DocumentFragment-节点"><a href="#8-Text-节点和-DocumentFragment-节点" class="headerlink" title="8. Text 节点和 DocumentFragment 节点"></a>8. Text 节点和 DocumentFragment 节点</h3><h4 id="8-1-Text-节点的概念"><a href="#8-1-Text-节点的概念" class="headerlink" title="8.1 Text 节点的概念"></a>8.1 Text 节点的概念</h4><p>文本节点（<code>Text</code>）代表元素节点（<code>Element</code>）和属性节点（<code>Attribute</code>）的文本内容。如果一个节点只包含一段文本，那么它就有一个文本子节点，代表该节点的文本内容。</p>
+<p>通常我们使用父节点的<code>firstChild</code>、<code>nextSibling</code>等属性获取文本节点，或者使用<code>Document</code>节点的<code>createTextNode</code>方法创造一个文本节点。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取文本节点</span></span><br><span class="line"><span class="keyword">var</span> textNode = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;p&#x27;</span>).firstChild;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创造文本节点</span></span><br><span class="line"><span class="keyword">var</span> textNode = <span class="built_in">document</span>.createTextNode(<span class="string">&#x27;Hi&#x27;</span>);</span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;div&#x27;</span>).appendChild(textNode);</span><br></pre></td></tr></table></figure>
+<p>浏览器原生提供一个<code>Text</code>构造函数。它返回一个文本节点实例。它的参数就是该文本节点的文本内容。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 空字符串</span></span><br><span class="line"><span class="keyword">var</span> text1 = <span class="keyword">new</span> Text();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 非空字符串</span></span><br><span class="line"><span class="keyword">var</span> text2 = <span class="keyword">new</span> Text(<span class="string">&#x27;This is a text node&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p>注意，由于空格也是一个字符，所以哪怕只有一个空格，也会形成文本节点。比如，<code>&lt;p&gt; &lt;/p&gt;</code>包含一个空格，它的子节点就是一个文本节点。</p>
+<p>文本节点除了继承<code>Node</code>接口，还继承了<code>CharacterData</code>接口。<code>Node</code>接口的属性和方法请参考《Node 接口》一章，这里不再重复介绍了，以下的属性和方法大部分来自<code>CharacterData</code>接口。</p>
+<h4 id="8-2-Text-节点的属性"><a href="#8-2-Text-节点的属性" class="headerlink" title="8.2 Text 节点的属性"></a>8.2 Text 节点的属性</h4><h5 id="8-2-1-data"><a href="#8-2-1-data" class="headerlink" title="8.2.1 data"></a>8.2.1 data</h5><p><code>data</code>属性等同于<code>nodeValue</code>属性，用来设置或读取文本节点的内容。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 读取文本内容</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;p&#x27;</span>).firstChild.data</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;p&#x27;</span>).firstChild.nodeValue</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置文本内容</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;p&#x27;</span>).firstChild.data = <span class="string">&#x27;Hello World&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<h5 id="8-2-2-wholeText"><a href="#8-2-2-wholeText" class="headerlink" title="8.2.2 wholeText"></a>8.2.2 wholeText</h5><p><code>wholeText</code>属性将当前文本节点与毗邻的文本节点，作为一个整体返回。大多数情况下，<code>wholeText</code>属性的返回值，与<code>data</code>属性和<code>textContent</code>属性相同。但是，某些特殊情况会有差异。</p>
+<p>举例来说，HTML 代码如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p id=<span class="string">&quot;para&quot;</span>&gt;A &lt;em&gt;B&lt;<span class="regexp">/em&gt; C&lt;/</span>p&gt;</span><br></pre></td></tr></table></figure>
+<p>这时，文本节点的<code>wholeText</code>属性和<code>data</code>属性，返回值相同。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;para&#x27;</span>);</span><br><span class="line">el.firstChild.wholeText <span class="comment">// &quot;A &quot;</span></span><br><span class="line">el.firstChild.data <span class="comment">// &quot;A &quot;</span></span><br></pre></td></tr></table></figure>
+<p>但是，一旦移除<code>&lt;em&gt;</code>节点，<code>wholeText</code>属性与<code>data</code>属性就会有差异，因为这时其实<code>&lt;p&gt;</code>节点下面包含了两个毗邻的文本节点。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">el.removeChild(para.childNodes[<span class="number">1</span>]);</span><br><span class="line">el.firstChild.wholeText <span class="comment">// &quot;A C&quot;</span></span><br><span class="line">el.firstChild.data <span class="comment">// &quot;A &quot;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="8-2-3-length"><a href="#8-2-3-length" class="headerlink" title="8.2.3 length"></a>8.2.3 length</h5><p><code>length</code>属性返回当前文本节点的文本长度。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">new</span> Text(<span class="string">&#x27;Hello&#x27;</span>)).length <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="8-2-4-nextElementSibling，previousElementSibling"><a href="#8-2-4-nextElementSibling，previousElementSibling" class="headerlink" title="8.2.4 nextElementSibling，previousElementSibling"></a>8.2.4 nextElementSibling，previousElementSibling</h5><p><code>nextElementSibling</code>属性返回紧跟在当前文本节点后面的那个同级元素节点。如果取不到元素节点，则返回<code>null</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 为</span></span><br><span class="line"><span class="comment">// &lt;div&gt;Hello &lt;em&gt;World&lt;/em&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="keyword">var</span> tn = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;div&#x27;</span>).firstChild;</span><br><span class="line">tn.nextElementSibling</span><br><span class="line"><span class="comment">// &lt;em&gt;World&lt;/em&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>previousElementSibling</code>属性返回当前文本节点前面最近的同级元素节点。如果取不到元素节点，则返回<code>null：</code>。</p>
+<h4 id="8-3-Text-节点的方法"><a href="#8-3-Text-节点的方法" class="headerlink" title="8.3 Text 节点的方法"></a>8.3 Text 节点的方法</h4><h5 id="8-3-1-appendData-，deleteData-，insertData-，replaceData-，subStringData"><a href="#8-3-1-appendData-，deleteData-，insertData-，replaceData-，subStringData" class="headerlink" title="8.3.1 appendData()，deleteData()，insertData()，replaceData()，subStringData()"></a>8.3.1 appendData()，deleteData()，insertData()，replaceData()，subStringData()</h5><p>以下5个方法都是编辑<code>Text</code>节点文本内容的方法。</p>
+<ul>
+<li><code>appendData()</code>：在<code>Text</code>节点尾部追加字符串。</li>
+<li><code>deleteData()</code>：删除<code>Text</code>节点内部的子字符串，第一个参数为子字符串开始位置，第二个参数为子字符串长度。</li>
+<li><code>insertData()</code>：在<code>Text</code>节点插入字符串，第一个参数为插入位置，第二个参数为插入的子字符串。</li>
+<li><code>replaceData()</code>：用于替换文本，第一个参数为替换开始位置，第二个参数为需要被替换掉的长度，第三个参数为新加入的字符串。</li>
+<li><code>subStringData()</code>：用于获取子字符串，第一个参数为子字符串在<code>Text</code>节点中的开始位置，第二个参数为子字符串长度。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码为</span></span><br><span class="line"><span class="comment">// &lt;p&gt;Hello World&lt;/p&gt;</span></span><br><span class="line"><span class="keyword">var</span> pElementText = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;p&#x27;</span>).firstChild;</span><br><span class="line"></span><br><span class="line">pElementText.appendData(<span class="string">&#x27;!&#x27;</span>);</span><br><span class="line"><span class="comment">// 页面显示 Hello World!</span></span><br><span class="line">pElementText.deleteData(<span class="number">7</span>, <span class="number">5</span>);</span><br><span class="line"><span class="comment">// 页面显示 Hello W</span></span><br><span class="line">pElementText.insertData(<span class="number">7</span>, <span class="string">&#x27;Hello &#x27;</span>);</span><br><span class="line"><span class="comment">// 页面显示 Hello WHello</span></span><br><span class="line">pElementText.replaceData(<span class="number">7</span>, <span class="number">5</span>, <span class="string">&#x27;World&#x27;</span>);</span><br><span class="line"><span class="comment">// 页面显示 Hello WWorld</span></span><br><span class="line">pElementText.substringData(<span class="number">7</span>, <span class="number">10</span>);</span><br><span class="line"><span class="comment">// 页面显示不变，返回&quot;World &quot;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="8-3-2-remove"><a href="#8-3-2-remove" class="headerlink" title="8.3.2 remove()"></a>8.3.2 remove()</h5><p><code>remove</code>方法用于移除当前<code>Text</code>节点。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码为</span></span><br><span class="line"><span class="comment">// &lt;p&gt;Hello World&lt;/p&gt;</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;p&#x27;</span>).firstChild.remove()</span><br><span class="line"><span class="comment">// 现在 HTML 代码为</span></span><br><span class="line"><span class="comment">// &lt;p&gt;&lt;/p&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="8-3-3-splitText"><a href="#8-3-3-splitText" class="headerlink" title="8.3.3 splitText()"></a>8.3.3 splitText()</h5><p><code>splitText</code>方法将<code>Text</code>节点一分为二，变成两个毗邻的<code>Text</code>节点。它的参数就是分割位置（从零开始），分割到该位置的字符前结束。如果分割位置不存在，将报错。</p>
+<p>分割后，该方法返回分割位置后方的字符串，而原<code>Text</code>节点变成只包含分割位置前方的字符串。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// html 代码为 &lt;p id=&quot;p&quot;&gt;foobar&lt;/p&gt;</span></span><br><span class="line"><span class="keyword">var</span> p = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;p&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> textnode = p.firstChild;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> newText = textnode.splitText(<span class="number">3</span>);</span><br><span class="line">newText <span class="comment">// &quot;bar&quot;</span></span><br><span class="line">textnode <span class="comment">// &quot;foo&quot;</span></span><br></pre></td></tr></table></figure>
+<p>父元素节点的<code>normalize</code>方法可以将毗邻的两个<code>Text</code>节点合并。</p>
+<p>接上面的例子，文本节点的<code>splitText</code>方法将一个<code>Text</code>节点分割成两个，父元素的<code>normalize</code>方法可以实现逆操作，将它们合并。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p.childNodes.length <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 将毗邻的两个 Text 节点合并</span></span><br><span class="line">p.normalize();</span><br><span class="line">p.childNodes.length <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="8-4-DocumentFragment-节点"><a href="#8-4-DocumentFragment-节点" class="headerlink" title="8.4 DocumentFragment 节点"></a>8.4 DocumentFragment 节点</h4><p><code>DocumentFragment</code>节点代表一个文档的片段，本身就是一个完整的 DOM 树形结构。它没有父节点，<code>parentNode</code>返回<code>null</code>，但是可以插入任意数量的子节点。它不属于当前文档，操作<code>DocumentFragment</code>节点，要比直接操作 DOM 树快得多。</p>
+<p>它一般用于构建一个 DOM 结构，然后插入当前文档。<code>document.createDocumentFragment</code>方法，以及浏览器原生的<code>DocumentFragment</code>构造函数，可以创建一个空的<code>DocumentFragment</code>节点。然后再使用其他 DOM 方法，向其添加子节点。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> docFrag = <span class="built_in">document</span>.createDocumentFragment();</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">var</span> docFrag = <span class="keyword">new</span> DocumentFragment();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> li = <span class="built_in">document</span>.createElement(<span class="string">&#x27;li&#x27;</span>);</span><br><span class="line">li.textContent = <span class="string">&#x27;Hello World&#x27;</span>;</span><br><span class="line">docFrag.appendChild(li);</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;ul&#x27;</span>).appendChild(docFrag);</span><br></pre></td></tr></table></figure>
+<p>上面代码创建了一个<code>DocumentFragment</code>节点，然后将一个<code>li</code>节点添加在它里面，最后将<code>DocumentFragment</code>节点移动到原文档。</p>
+<p>注意，<code>DocumentFragment</code>节点本身不能被插入当前文档。当它作为<code>appendChild()</code>、<code>insertBefore()</code>、<code>replaceChild()</code>等方法的参数时，是它的所有子节点插入当前文档，而不是它自身。一旦<code>DocumentFragment</code>节点被添加进当前文档，它自身就变成了空节点（<code>textContent</code>属性为空字符串），可以被再次使用。如果想要保存<code>DocumentFragment</code>节点的内容，可以使用<code>cloneNode</code>方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span></span><br><span class="line">  .querySelector(<span class="string">&#x27;ul&#x27;</span>)</span><br><span class="line">  .appendChild(docFrag.cloneNode(<span class="literal">true</span>));</span><br></pre></td></tr></table></figure>
+<p>上面这样添加<code>DocumentFragment</code>节点进入当前文档，不会清空<code>DocumentFragment</code>节点。</p>
+<p>下面是一个例子，使用<code>DocumentFragment</code>反转一个指定节点的所有子节点的顺序。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reverse</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> f = <span class="built_in">document</span>.createDocumentFragment();</span><br><span class="line">  <span class="keyword">while</span>(n.lastChild) f.appendChild(n.lastChild);</span><br><span class="line">  n.appendChild(f);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>DocumentFragment</code>节点对象没有自己的属性和方法，全部继承自<code>Node</code>节点和<code>ParentNode</code>接口。也就是说，<code>DocumentFragment</code>节点比<code>Node</code>节点多出以下四个属性。</p>
+<ul>
+<li><code>children</code>：返回一个动态的<code>HTMLCollection</code>集合对象，包括当前<code>DocumentFragment</code>对象的所有子元素节点。</li>
+<li><code>firstElementChild</code>：返回当前<code>DocumentFragment</code>对象的第一个子元素节点，如果没有则返回<code>null</code>。</li>
+<li><code>lastElementChild</code>：返回当前<code>DocumentFragment</code>对象的最后一个子元素节点，如果没有则返回<code>null</code>。</li>
+<li><code>childElementCount</code>：返回当前<code>DocumentFragment</code>对象的所有子元素数量。</li>
+</ul>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/05/26/%E6%89%93%E5%8D%A10041/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-DOM-Text-%E8%8A%82%E7%82%B9%E5%92%8C-DocumentFragment-%E8%8A%82%E7%82%B9/" rel="tag">JS DOM-Text 节点和 DocumentFragment 节点</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2021/05/26/%E6%89%93%E5%8D%A10042/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            打卡0042
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/05/25/%E6%89%93%E5%8D%A10040/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">打卡0040</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
+    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Ye Ma
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        <!-- 
+         -->
+        
+        
+        Powered by Hexo
+        <span class="division">|</span>
+        Theme - Ayer
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="maeBlog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/travel/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about/2021">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/gHZjdQRcOL1WxSP.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/pZNYuI4QFnfwb7l.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>
