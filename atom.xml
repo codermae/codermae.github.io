@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-26T02:27:49.614Z</updated>
+  <updated>2021-05-27T01:57:07.648Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0045</title>
+    <link href="https://codermae.github.io/2021/05/27/%E6%89%93%E5%8D%A10045/"/>
+    <id>https://codermae.github.io/2021/05/27/%E6%89%93%E5%8D%A10045/</id>
+    <published>2021-05-27T02:23:26.000Z</published>
+    <updated>2021-05-27T01:57:07.648Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#f47a55&gt;只想着相见时春风细雨甜，哪管他相思夜星前月下苦。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;2-事件模型&quot;&gt;&lt;a href=&quot;#2-事件模型&quot; class=&quot;headerlink&quot; title=&quot;2. 事件模型&quot;&gt;&lt;/a&gt;2. 事件模型&lt;/h3&gt;&lt;h4 id=&quot;2-1-监听函数&quot;&gt;&lt;a href=&quot;#2-1-监听函数&quot; class=&quot;headerlink&quot; title=&quot;2.1 监听函数&quot;&gt;&lt;/a&gt;2.1 监听函数&lt;/h4&gt;&lt;p&gt;浏览器的事件模型，就是通过监听函数（listener）对事件做出反应。事件发生后，浏览器监听到了这个事件，就会执行对应的监听函数。这是事件驱动编程模式（event-driven）的主要编程方式。&lt;/p&gt;
+&lt;p&gt;JavaScript 有三种方法，可以为事件绑定监听函数。&lt;/p&gt;
+&lt;h5 id=&quot;2-1-1-HTML-的-on-属性&quot;&gt;&lt;a href=&quot;#2-1-1-HTML-的-on-属性&quot; class=&quot;headerlink&quot; title=&quot;2.1.1 HTML 的 on- 属性&quot;&gt;&lt;/a&gt;2.1.1 HTML 的 on- 属性&lt;/h5&gt;&lt;p&gt;HTML 语言允许在元素的属性中，直接定义某些事件的监听代码。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;body onload=&lt;span class=&quot;string&quot;&gt;&amp;quot;doSomething()&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div onclick=&lt;span class=&quot;string&quot;&gt;&amp;quot;console.log(&amp;#x27;触发事件&amp;#x27;)&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码为&lt;code&gt;body&lt;/code&gt;节点的&lt;code&gt;load&lt;/code&gt;事件、&lt;code&gt;div&lt;/code&gt;节点的&lt;code&gt;click&lt;/code&gt;事件，指定了监听代码。一旦事件发生，就会执行这段代码。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 事件-事件模型" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0044</title>
+    <link href="https://codermae.github.io/2021/05/27/%E6%89%93%E5%8D%A10044/"/>
+    <id>https://codermae.github.io/2021/05/27/%E6%89%93%E5%8D%A10044/</id>
+    <published>2021-05-27T01:34:39.000Z</published>
+    <updated>2021-05-27T01:56:54.303Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#853f04&gt;最孤独的人最亲切，受过伤的人总是笑的最灿烂。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;1-EventTarget-接口&quot;&gt;&lt;a href=&quot;#1-EventTarget-接口&quot; class=&quot;headerlink&quot; title=&quot;1. EventTarget 接口&quot;&gt;&lt;/a&gt;1. EventTarget 接口&lt;/h3&gt;&lt;p&gt;事件的本质是程序各个组成部分之间的一种通信方式，也是异步编程的一种实现。DOM 支持大量的事件，本章开始介绍 DOM 的事件编程。&lt;/p&gt;
+&lt;h4 id=&quot;1-1-概述&quot;&gt;&lt;a href=&quot;#1-1-概述&quot; class=&quot;headerlink&quot; title=&quot;1.1 概述&quot;&gt;&lt;/a&gt;1.1 概述&lt;/h4&gt;&lt;p&gt;DOM 的事件操作（监听和触发），都定义在&lt;code&gt;EventTarget&lt;/code&gt;接口。所有节点对象都部署了这个接口，其他一些需要事件通信的浏览器内置对象（比如，&lt;code&gt;XMLHttpRequest&lt;/code&gt;、&lt;code&gt;AudioNode&lt;/code&gt;、&lt;code&gt;AudioContext&lt;/code&gt;）也部署了这个接口。&lt;/p&gt;
+&lt;p&gt;该接口主要提供三个实例方法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;addEventListener&lt;/code&gt;：绑定事件的监听函数&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;removeEventListener&lt;/code&gt;：移除事件的监听函数&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dispatchEvent&lt;/code&gt;：触发事件&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 事件-EventTarget 接口" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-EventTarget-%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0043</title>
@@ -483,64 +534,6 @@
     
     
     <category term="JS面向对象编程-实例对象与new命令" scheme="https://codermae.github.io/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E5%AE%9E%E4%BE%8B%E5%AF%B9%E8%B1%A1%E4%B8%8Enew%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0025</title>
-    <link href="https://codermae.github.io/2021/05/16/%E6%89%93%E5%8D%A10025/"/>
-    <id>https://codermae.github.io/2021/05/16/%E6%89%93%E5%8D%A10025/</id>
-    <published>2021-05-16T07:21:35.000Z</published>
-    <updated>2021-05-22T02:02:39.870Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#ffc20e&gt;白日不到处，青春恰自来。苔花如米小，也学牡丹开。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;11-JSON对象&quot;&gt;&lt;a href=&quot;#11-JSON对象&quot; class=&quot;headerlink&quot; title=&quot;11. JSON对象&quot;&gt;&lt;/a&gt;11. JSON对象&lt;/h3&gt;&lt;h4 id=&quot;11-1-JSON格式&quot;&gt;&lt;a href=&quot;#11-1-JSON格式&quot; class=&quot;headerlink&quot; title=&quot;11.1 JSON格式&quot;&gt;&lt;/a&gt;11.1 JSON格式&lt;/h4&gt;&lt;p&gt;JSON 格式（JavaScript Object Notation 的缩写）是一种用于数据交换的文本格式，2001年由 Douglas Crockford 提出，目的是取代繁琐笨重的 XML 格式。&lt;/p&gt;
-&lt;p&gt;相比 XML 格式，JSON 格式有两个显著的优点：书写简单，一目了然；符合 JavaScript 原生语法，可以由解释引擎直接处理，不用另外添加解析代码。所以，JSON 迅速被接受，已经成为各大网站交换数据的标准格式，并被写入标准。&lt;/p&gt;
-&lt;p&gt;每个 JSON 对象就是一个值，可能是一个数组或对象，也可能是一个原始类型的值。总之，只能是一个值，不能是两个或更多的值。&lt;/p&gt;
-&lt;p&gt;JSON 对值的类型和格式有严格的规定。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;复合类型的值只能是数组或对象，不能是函数、正则表达式对象、日期对象。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;原始类型的值只有四种：字符串、数值（必须以十进制表示）、布尔值和&lt;code&gt;null&lt;/code&gt;（不能使用&lt;code&gt;NaN&lt;/code&gt;, &lt;code&gt;Infinity&lt;/code&gt;, &lt;code&gt;-Infinity&lt;/code&gt;和&lt;code&gt;undefined&lt;/code&gt;）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;字符串必须使用双引号表示，不能使用单引号。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;对象的键名必须放在双引号里面。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;数组或对象最后一个成员的后面，不能加逗号。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS标准库-JSON对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-JSON%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0024</title>
-    <link href="https://codermae.github.io/2021/05/16/%E6%89%93%E5%8D%A10024/"/>
-    <id>https://codermae.github.io/2021/05/16/%E6%89%93%E5%8D%A10024/</id>
-    <published>2021-05-16T04:51:55.000Z</published>
-    <updated>2021-05-22T02:02:33.842Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#afdfe4&gt;真正重要的东西，总是没有的人比拥有的人清楚。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS标准库&quot;&gt;&lt;a href=&quot;#JS标准库&quot; class=&quot;headerlink&quot; title=&quot;JS标准库&quot;&gt;&lt;/a&gt;JS标准库&lt;/h2&gt;&lt;h3 id=&quot;10-RegExp对象&quot;&gt;&lt;a href=&quot;#10-RegExp对象&quot; class=&quot;headerlink&quot; title=&quot;10. RegExp对象&quot;&gt;&lt;/a&gt;10. RegExp对象&lt;/h3&gt;&lt;h4 id=&quot;10-1-概述&quot;&gt;&lt;a href=&quot;#10-1-概述&quot; class=&quot;headerlink&quot; title=&quot;10.1 概述&quot;&gt;&lt;/a&gt;10.1 概述&lt;/h4&gt;&lt;p&gt;正则表达式（regular expression）是一种表达文本模式（即字符串结构）的方法，有点像字符串的模板，常常用来按照“给定模式”匹配文本。比如，正则表达式给出一个 Email 地址的模式，然后用它来确定一个字符串是否为 Email 地址。JavaScript 的正则表达式体系是参照 Perl 5 建立的。&lt;br&gt;新建正则表达式有两种方法。一种是使用字面量，以斜杠表示开始和结束。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;regexp&quot;&gt;/xyz/&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;另一种是使用&lt;code&gt;RegExp&lt;/code&gt;构造函数。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;xyz&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS标准库-RegExp对象" scheme="https://codermae.github.io/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-RegExp%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
