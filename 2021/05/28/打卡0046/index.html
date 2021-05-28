@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
+       
+      <meta name="keywords" content="blog" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>打卡0046 |  maeBlog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-打卡0046"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  打卡0046
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/28/%E6%89%93%E5%8D%A10046/" class="article-date">
+  <time datetime="2021-05-28T01:04:21.000Z" itemprop="datePublished">2021-05-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.8k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">11 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#90d7ec>一个人做再大的承诺，都不及踏踏实实、认认真真做事更让人放心。</font></p>
+<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="3-Event-对象"><a href="#3-Event-对象" class="headerlink" title="3. Event 对象"></a>3. Event 对象</h3><h4 id="3-1-概述"><a href="#3-1-概述" class="headerlink" title="3.1 概述"></a>3.1 概述</h4><p>事件发生以后，会产生一个事件对象，作为参数传给监听函数。浏览器原生提供一个<code>Event</code>对象，所有的事件都是这个对象的实例，或者说继承了<code>Event.prototype</code>对象。</p>
+<p><code>Event</code>对象本身就是一个构造函数，可以用来生成新的实例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">event = <span class="keyword">new</span> Event(type, options);</span><br></pre></td></tr></table></figure>
+<p><code>Event</code>构造函数接受两个参数。第一个参数<code>type</code>是字符串，表示事件的名称；第二个参数<code>options</code>是一个对象，表示事件对象的配置。该对象主要有下面两个属性。</p>
+<ul>
+<li><code>bubbles</code>：布尔值，可选，默认为<code>false</code>，表示事件对象是否冒泡。</li>
+<li><code>cancelable</code>：布尔值，可选，默认为<code>false</code>，表示事件是否可以被取消，即能否用<code>Event.preventDefault()</code>取消这个事件。一旦事件被取消，就好像从来没有发生过，不会触发浏览器对该事件的默认行为。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ev = <span class="keyword">new</span> Event(</span><br><span class="line">  <span class="string">&#x27;look&#x27;</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">&#x27;bubbles&#x27;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">&#x27;cancelable&#x27;</span>: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"><span class="built_in">document</span>.dispatchEvent(ev);</span><br></pre></td></tr></table></figure>
+<p>上面代码新建一个<code>look</code>事件实例，然后使用<code>dispatchEvent</code>方法触发该事件。</p>
+<span id="more"></span>
+<p>注意，如果不是显式指定<code>bubbles</code>属性为<code>true</code>，生成的事件就只能在“捕获阶段”触发监听函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码为</span></span><br><span class="line"><span class="comment">// &lt;div&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> p = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;p&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> tag = event.currentTarget.tagName;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Tag: &#x27;</span> + tag); <span class="comment">// 没有任何输出</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div.addEventListener(<span class="string">&#x27;click&#x27;</span>, callback, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> click = <span class="keyword">new</span> Event(<span class="string">&#x27;click&#x27;</span>);</span><br><span class="line">p.dispatchEvent(click);</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>p</code>元素发出一个<code>click</code>事件，该事件默认不会冒泡。<code>div.addEventListener</code>方法指定在冒泡阶段监听，因此监听函数不会触发。如果写成<code>div.addEventListener(&#39;click&#39;, callback, true)</code>，那么在“捕获阶段”可以监听到这个事件。</p>
+<p>另一方面，如果这个事件在<code>div</code>元素上触发。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div.dispatchEvent(click);</span><br></pre></td></tr></table></figure>
+<p>那么，不管<code>div</code>元素是在冒泡阶段监听，还是在捕获阶段监听，都会触发监听函数。因为这时<code>div</code>元素是事件的目标，不存在是否冒泡的问题，<code>div</code>元素总是会接收到事件，因此导致监听函数生效。</p>
+<h4 id="3-2-实例属性"><a href="#3-2-实例属性" class="headerlink" title="3.2 实例属性"></a>3.2 实例属性</h4><h5 id="3-2-1-Event-bubbles，Event-eventPhase"><a href="#3-2-1-Event-bubbles，Event-eventPhase" class="headerlink" title="3.2.1 Event.bubbles，Event.eventPhase"></a>3.2.1 Event.bubbles，Event.eventPhase</h5><p><code>Event.bubbles</code>属性返回一个布尔值，表示当前事件是否会冒泡。该属性为只读属性，一般用来了解 Event 实例是否可以冒泡。前面说过，除非显式声明，<code>Event</code>构造函数生成的事件，默认是不冒泡的。</p>
+<p><code>Event.eventPhase</code>属性返回一个整数常量，表示事件目前所处的阶段。该属性只读。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> phase = event.eventPhase;</span><br></pre></td></tr></table></figure>
+<p><code>Event.eventPhase</code>的返回值有四种可能。</p>
+<ul>
+<li>0，事件目前没有发生。</li>
+<li>1，事件目前处于捕获阶段，即处于从祖先节点向目标节点的传播过程中。</li>
+<li>2，事件到达目标节点，即<code>Event.target</code>属性指向的那个节点。</li>
+<li>3，事件处于冒泡阶段，即处于从目标节点向祖先节点的反向传播过程中。</li>
+</ul>
+<h5 id="3-2-2-Event-cancelable，Event-cancelBubble，event-defaultPrevented"><a href="#3-2-2-Event-cancelable，Event-cancelBubble，event-defaultPrevented" class="headerlink" title="3.2.2 Event.cancelable，Event.cancelBubble，event.defaultPrevented"></a>3.2.2 Event.cancelable，Event.cancelBubble，event.defaultPrevented</h5><p><code>Event.cancelable</code>属性返回一个布尔值，表示事件是否可以取消。该属性为只读属性，一般用来了解 Event 实例的特性。</p>
+<p>大多数浏览器的原生事件是可以取消的。比如，取消<code>click</code>事件，点击链接将无效。但是除非显式声明，<code>Event</code>构造函数生成的事件，默认是不可以取消的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> evt = <span class="keyword">new</span> Event(<span class="string">&#x27;foo&#x27;</span>);</span><br><span class="line">evt.cancelable  <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>当<code>Event.cancelable</code>属性为<code>true</code>时，调用<code>Event.preventDefault()</code>就可以取消这个事件，阻止浏览器对该事件的默认行为。</p>
+<p>如果事件不能取消，调用<code>Event.preventDefault()</code>会没有任何效果。所以使用这个方法之前，最好用<code>Event.cancelable</code>属性判断一下是否可以取消。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">preventEvent</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (event.cancelable) &#123;</span><br><span class="line">    event.preventDefault();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.warn(<span class="string">&#x27;This event couldn\&#x27;t be canceled.&#x27;</span>);</span><br><span class="line">    <span class="built_in">console</span>.dir(event);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>Event.cancelBubble</code>属性是一个布尔值，如果设为<code>true</code>，相当于执行<code>Event.stopPropagation()</code>，可以阻止事件的传播。</p>
+<p><code>Event.defaultPrevented</code>属性返回一个布尔值，表示该事件是否调用过<code>Event.preventDefault</code>方法。该属性只读。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (event.defaultPrevented) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;该事件已经取消了&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-2-3-Event-currentTarget，Event-target"><a href="#3-2-3-Event-currentTarget，Event-target" class="headerlink" title="3.2.3 Event.currentTarget，Event.target"></a>3.2.3 Event.currentTarget，Event.target</h5><p>事件发生以后，会经过捕获和冒泡两个阶段，依次通过多个 DOM 节点。因此，任意事件都有两个与事件相关的节点，一个是事件的原始触发节点（<code>Event.target</code>），另一个是事件当前正在通过的节点（<code>Event.currentTarget</code>）。前者通常是后者的后代节点。</p>
+<p><code>Event.currentTarget</code>属性返回事件当前所在的节点，即事件当前正在通过的节点，也就是当前正在执行的监听函数所在的那个节点。随着事件的传播，这个属性的值会变。</p>
+<p><code>Event.target</code>属性返回原始触发事件的那个节点，即事件最初发生的节点。这个属性不会随着事件的传播而改变。</p>
+<p>事件传播过程中，不同节点的监听函数内部的<code>Event.target</code>与<code>Event.currentTarget</code>属性的值是不一样的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码为</span></span><br><span class="line"><span class="comment">// &lt;p id=&quot;para&quot;&gt;Hello &lt;em&gt;World&lt;/em&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hide</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 不管点击 Hello 或 World，总是返回 true</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span> === e.currentTarget);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 点击 Hello，返回 true</span></span><br><span class="line">  <span class="comment">// 点击 World，返回 false</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span> === e.target);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;para&#x27;</span>).addEventListener(<span class="string">&#x27;click&#x27;</span>, hide, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>&lt;em&gt;</code>是<code>&lt;p&gt;</code>的子节点，点击<code>&lt;em&gt;</code>或者点击<code>&lt;p&gt;</code>，都会导致监听函数执行。这时，<code>e.target</code>总是指向原始点击位置的那个节点，而<code>e.currentTarget</code>指向事件传播过程中正在经过的那个节点。由于监听函数只有事件经过时才会触发，所以<code>e.currentTarget</code>总是等同于监听函数内部的<code>this</code>。</p>
+<h5 id="3-2-4-Event-type"><a href="#3-2-4-Event-type" class="headerlink" title="3.2.4 Event.type"></a>3.2.4 Event.type</h5><p><code>Event.type</code>属性返回一个字符串，表示事件类型。事件的类型是在生成事件的时候指定的。该属性只读。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> evt = <span class="keyword">new</span> Event(<span class="string">&#x27;foo&#x27;</span>);</span><br><span class="line">evt.type <span class="comment">// &quot;foo&quot;</span></span><br></pre></td></tr></table></figure>
+<h5 id="3-2-5-Event-timeStamp"><a href="#3-2-5-Event-timeStamp" class="headerlink" title="3.2.5 Event.timeStamp"></a>3.2.5 Event.timeStamp</h5><p><code>Event.timeStamp</code>属性返回一个毫秒时间戳，表示事件发生的时间。它是相对于网页加载成功开始计算的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> evt = <span class="keyword">new</span> Event(<span class="string">&#x27;foo&#x27;</span>);</span><br><span class="line">evt.timeStamp <span class="comment">// 3683.6999999995896</span></span><br></pre></td></tr></table></figure>
+<p>它的返回值有可能是整数，也有可能是小数（高精度时间戳），取决于浏览器的设置。</p>
+<p>下面是一个计算鼠标移动速度的例子，显示每秒移动的像素数量。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> previousX;</span><br><span class="line"><span class="keyword">var</span> previousY;</span><br><span class="line"><span class="keyword">var</span> previousT;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">&#x27;mousemove&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (</span><br><span class="line">    previousX !== <span class="literal">undefined</span> &amp;&amp;</span><br><span class="line">    previousY !== <span class="literal">undefined</span> &amp;&amp;</span><br><span class="line">    previousT !== <span class="literal">undefined</span></span><br><span class="line">  ) &#123;</span><br><span class="line">    <span class="keyword">var</span> deltaX = event.screenX - previousX;</span><br><span class="line">    <span class="keyword">var</span> deltaY = event.screenY - previousY;</span><br><span class="line">    <span class="keyword">var</span> deltaD = <span class="built_in">Math</span>.sqrt(<span class="built_in">Math</span>.pow(deltaX, <span class="number">2</span>) + <span class="built_in">Math</span>.pow(deltaY, <span class="number">2</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> deltaT = event.timeStamp - previousT;</span><br><span class="line">    <span class="built_in">console</span>.log(deltaD / deltaT * <span class="number">1000</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  previousX = event.screenX;</span><br><span class="line">  previousY = event.screenY;</span><br><span class="line">  previousT = event.timeStamp;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h5 id="3-2-6-Event-isTrusted"><a href="#3-2-6-Event-isTrusted" class="headerlink" title="3.2.6 Event.isTrusted"></a>3.2.6 Event.isTrusted</h5><p><code>Event.isTrusted</code>属性返回一个布尔值，表示该事件是否由真实的用户行为产生。比如，用户点击链接会产生一个<code>click</code>事件，该事件是用户产生的；<code>Event</code>构造函数生成的事件，则是脚本产生的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> evt = <span class="keyword">new</span> Event(<span class="string">&#x27;foo&#x27;</span>);</span><br><span class="line">evt.isTrusted <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>evt</code>对象是脚本产生的，所以<code>isTrusted</code>属性返回<code>false</code>。</p>
+<h5 id="3-2-7-Event-detail"><a href="#3-2-7-Event-detail" class="headerlink" title="3.2.7 Event.detail"></a>3.2.7 Event.detail</h5><p><code>Event.detail</code>属性只有浏览器的 UI （用户界面）事件才具有。该属性返回一个数值，表示事件的某种信息。具体含义与事件类型相关。比如，对于<code>click</code>和<code>dblclick</code>事件，<code>Event.detail</code>是鼠标按下的次数（1表示单击，2表示双击，3表示三击）；对于鼠标滚轮事件，<code>Event.detail</code>是滚轮正向滚动的距离，负值就是负向滚动的距离，返回值总是3的倍数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码如下</span></span><br><span class="line"><span class="comment">// &lt;p&gt;Hello&lt;/p&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">giveDetails</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e.detail);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;p&#x27;</span>).onclick = giveDetails;</span><br></pre></td></tr></table></figure>
+<h4 id="3-3-实例方法"><a href="#3-3-实例方法" class="headerlink" title="3.3 实例方法"></a>3.3 实例方法</h4><h5 id="3-3-1-Event-preventDefault"><a href="#3-3-1-Event-preventDefault" class="headerlink" title="3.3.1 Event.preventDefault()"></a>3.3.1 Event.preventDefault()</h5><p><code>Event.preventDefault</code>方法取消浏览器对当前事件的默认行为。比如点击链接后，浏览器默认会跳转到另一个页面，使用这个方法以后，就不会跳转了；再比如，按一下空格键，页面向下滚动一段距离，使用这个方法以后也不会滚动了。该方法生效的前提是，事件对象的<code>cancelable</code>属性为<code>true</code>，如果为<code>false</code>，调用该方法没有任何效果。</p>
+<p>注意，该方法只是取消事件对当前元素的默认影响，不会阻止事件的传播。如果要阻止传播，可以使用<code>stopPropagation()</code>或<code>stopImmediatePropagation()</code>方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码为</span></span><br><span class="line"><span class="comment">// &lt;input type=&quot;checkbox&quot; id=&quot;my-checkbox&quot; /&gt;</span></span><br><span class="line"><span class="keyword">var</span> cb = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;my-checkbox&#x27;</span>);</span><br><span class="line"></span><br><span class="line">cb.addEventListener(</span><br><span class="line">  <span class="string">&#x27;click&#x27;</span>,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">e</span>)</span>&#123; e.preventDefault(); &#125;,</span><br><span class="line">  <span class="literal">false</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>上面代码中，浏览器的默认行为是单击会选中单选框，取消这个行为，就导致无法选中单选框。</p>
+<p>利用这个方法，可以为文本输入框设置校验条件。如果用户的输入不符合条件，就无法将字符输入文本框。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码为</span></span><br><span class="line"><span class="comment">// &lt;input type=&quot;text&quot; id=&quot;my-input&quot; /&gt;</span></span><br><span class="line"><span class="keyword">var</span> input = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;my-input&#x27;</span>);</span><br><span class="line">input.addEventListener(<span class="string">&#x27;keypress&#x27;</span>, checkName, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkName</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (e.charCode &lt; <span class="number">97</span> || e.charCode &gt; <span class="number">122</span>) &#123;</span><br><span class="line">    e.preventDefault();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码为文本框的<code>keypress</code>事件设定监听函数后，将只能输入小写字母，否则输入事件的默认行为（写入文本框）将被取消，导致不能向文本框输入内容。</p>
+<h5 id="3-3-2-Event-stopPropagation"><a href="#3-3-2-Event-stopPropagation" class="headerlink" title="3.3.2 Event.stopPropagation()"></a>3.3.2 Event.stopPropagation()</h5><p><code>stopPropagation</code>方法阻止事件在 DOM 中继续传播，防止再触发定义在别的节点上的监听函数，但是不包括在当前节点上其他的事件监听函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stopEvent</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  e.stopPropagation();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">el.addEventListener(<span class="string">&#x27;click&#x27;</span>, stopEvent, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>click</code>事件将不会进一步冒泡到el节点的父节点。</p>
+<h5 id="3-3-3-Event-stopImmediatePropagation"><a href="#3-3-3-Event-stopImmediatePropagation" class="headerlink" title="3.3.3 Event.stopImmediatePropagation()"></a>3.3.3 Event.stopImmediatePropagation()</h5><p><code>Event.stopImmediatePropagation</code>方法阻止同一个事件的其他监听函数被调用，不管监听函数定义在当前节点还是其他节点。也就是说，该方法阻止事件的传播，比<code>Event.stopPropagation()</code>更彻底。</p>
+<p>如果同一个节点对于同一个事件指定了多个监听函数，这些函数会根据添加的顺序依次调用。只要其中有一个监听函数调用了<code>Event.stopImmediatePropagation</code>方法，其他的监听函数就不会再执行了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">l1</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">  e.stopImmediatePropagation();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">l2</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;hello world&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">el.addEventListener(<span class="string">&#x27;click&#x27;</span>, l1, <span class="literal">false</span>);</span><br><span class="line">el.addEventListener(<span class="string">&#x27;click&#x27;</span>, l2, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<p>上面代码在<code>el</code>节点上，为<code>click</code>事件添加了两个监听函数<code>l1</code>和<code>l2</code>。由于<code>l1</code>调用了<code>event.stopImmediatePropagation</code>方法，所以<code>l2</code>不会被调用。</p>
+<h5 id="3-3-4-Event-composedPath"><a href="#3-3-4-Event-composedPath" class="headerlink" title="3.3.4 Event.composedPath()"></a>3.3.4 Event.composedPath()</h5><p><code>Event.composedPath()</code>返回一个数组，成员是事件的最底层节点和依次冒泡经过的所有上层节点。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码如下</span></span><br><span class="line"><span class="comment">// &lt;div&gt;</span></span><br><span class="line"><span class="comment">//   &lt;p&gt;Hello&lt;/p&gt;</span></span><br><span class="line"><span class="comment">// &lt;/div&gt;</span></span><br><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> p = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;p&#x27;</span>);</span><br><span class="line"></span><br><span class="line">div.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e.composedPath());</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br><span class="line"><span class="comment">// [p, div, body, html, document, Window]</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>click</code>事件的最底层节点是<code>p</code>，向上依次是<code>div</code>、<code>body</code>、<code>html</code>、<code>document</code>、<code>Window</code>。</p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/05/28/%E6%89%93%E5%8D%A10046/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-Event-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 事件-Event 对象</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2021/05/28/%E6%89%93%E5%8D%A10047/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            打卡0047
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/05/27/%E6%89%93%E5%8D%A10045/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">打卡0045</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
+    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Ye Ma
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        <!-- 
+         -->
+        
+        
+        Powered by Hexo
+        <span class="division">|</span>
+        Theme - Ayer
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="maeBlog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/travel/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about/2021">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/gHZjdQRcOL1WxSP.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/pZNYuI4QFnfwb7l.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>

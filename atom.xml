@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-27T01:57:07.648Z</updated>
+  <updated>2021-05-28T02:40:52.699Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,68 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0047</title>
+    <link href="https://codermae.github.io/2021/05/28/%E6%89%93%E5%8D%A10047/"/>
+    <id>https://codermae.github.io/2021/05/28/%E6%89%93%E5%8D%A10047/</id>
+    <published>2021-05-28T02:04:34.000Z</published>
+    <updated>2021-05-28T02:40:52.699Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#ffc20e&gt; “Let there be light.”&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;4-鼠标事件&quot;&gt;&lt;a href=&quot;#4-鼠标事件&quot; class=&quot;headerlink&quot; title=&quot;4. 鼠标事件&quot;&gt;&lt;/a&gt;4. 鼠标事件&lt;/h3&gt;&lt;h4 id=&quot;4-1-鼠标事件的种类&quot;&gt;&lt;a href=&quot;#4-1-鼠标事件的种类&quot; class=&quot;headerlink&quot; title=&quot;4.1 鼠标事件的种类&quot;&gt;&lt;/a&gt;4.1 鼠标事件的种类&lt;/h4&gt;&lt;p&gt;鼠标事件指与鼠标相关的事件，继承了&lt;code&gt;MouseEvent&lt;/code&gt;接口。具体的事件主要有以下一些。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;click&lt;/code&gt;:按下鼠标（通常是按下主按钮）时触发。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dblclick&lt;/code&gt;:在同一个元素上双击鼠标时触发。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mousedown&lt;/code&gt;:按下鼠标键时触发。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mouseup&lt;/code&gt;:释放按下的鼠标键时触发。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mousemove&lt;/code&gt;:当鼠标在一个节点内部移动时触发。当鼠标持续移动时，该事件会连续触发。为了避免性能问题，建议对该事件的监听函数做一些限定，比如限定一段时间内只能运行一次。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mouseenter&lt;/code&gt;:鼠标进入一个节点时触发，进入子节点不会触发这个事件（详见后文）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mouseover&lt;/code&gt;:鼠标进入一个节点时触发，进入子节点会再一次触发这个事件（详见后文）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mouseout&lt;/code&gt;:鼠标离开一个节点时触发，离开父节点也会触发这个事件（详见后文）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mouseleave&lt;/code&gt;:鼠标离开一个节点时触发，离开父节点不会触发这个事件（详见后文）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;contextmenu&lt;/code&gt;:按下鼠标右键时（上下文菜单出现前）触发，或者按下“上下文菜单键”时触发。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wheel&lt;/code&gt;:滚动鼠标的滚轮时触发，该事件继承的是&lt;code&gt;WheelEvent&lt;/code&gt;接口。&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 事件-鼠标事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0046</title>
+    <link href="https://codermae.github.io/2021/05/28/%E6%89%93%E5%8D%A10046/"/>
+    <id>https://codermae.github.io/2021/05/28/%E6%89%93%E5%8D%A10046/</id>
+    <published>2021-05-28T01:04:21.000Z</published>
+    <updated>2021-05-28T02:41:05.149Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#90d7ec&gt;一个人做再大的承诺，都不及踏踏实实、认认真真做事更让人放心。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;3-Event-对象&quot;&gt;&lt;a href=&quot;#3-Event-对象&quot; class=&quot;headerlink&quot; title=&quot;3. Event 对象&quot;&gt;&lt;/a&gt;3. Event 对象&lt;/h3&gt;&lt;h4 id=&quot;3-1-概述&quot;&gt;&lt;a href=&quot;#3-1-概述&quot; class=&quot;headerlink&quot; title=&quot;3.1 概述&quot;&gt;&lt;/a&gt;3.1 概述&lt;/h4&gt;&lt;p&gt;事件发生以后，会产生一个事件对象，作为参数传给监听函数。浏览器原生提供一个&lt;code&gt;Event&lt;/code&gt;对象，所有的事件都是这个对象的实例，或者说继承了&lt;code&gt;Event.prototype&lt;/code&gt;对象。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Event&lt;/code&gt;对象本身就是一个构造函数，可以用来生成新的实例。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;event = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Event(type, options);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;Event&lt;/code&gt;构造函数接受两个参数。第一个参数&lt;code&gt;type&lt;/code&gt;是字符串，表示事件的名称；第二个参数&lt;code&gt;options&lt;/code&gt;是一个对象，表示事件对象的配置。该对象主要有下面两个属性。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;bubbles&lt;/code&gt;：布尔值，可选，默认为&lt;code&gt;false&lt;/code&gt;，表示事件对象是否冒泡。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cancelable&lt;/code&gt;：布尔值，可选，默认为&lt;code&gt;false&lt;/code&gt;，表示事件是否可以被取消，即能否用&lt;code&gt;Event.preventDefault()&lt;/code&gt;取消这个事件。一旦事件被取消，就好像从来没有发生过，不会触发浏览器对该事件的默认行为。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; ev = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Event(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&amp;#x27;look&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;bubbles&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;cancelable&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.dispatchEvent(ev);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码新建一个&lt;code&gt;look&lt;/code&gt;事件实例，然后使用&lt;code&gt;dispatchEvent&lt;/code&gt;方法触发该事件。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 事件-Event 对象" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-Event-%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0045</title>
@@ -489,51 +551,6 @@
     
     
     <category term="JS面向对象编程-对象的继承" scheme="https://codermae.github.io/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%BB%A7%E6%89%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0027</title>
-    <link href="https://codermae.github.io/2021/05/17/%E6%89%93%E5%8D%A10027/"/>
-    <id>https://codermae.github.io/2021/05/17/%E6%89%93%E5%8D%A10027/</id>
-    <published>2021-05-17T02:07:18.000Z</published>
-    <updated>2021-05-22T02:03:02.302Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#73b9a2&gt;走在未知的道路上，不能停也不能回头。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS面向对象编程&quot;&gt;&lt;a href=&quot;#JS面向对象编程&quot; class=&quot;headerlink&quot; title=&quot;JS面向对象编程&quot;&gt;&lt;/a&gt;JS面向对象编程&lt;/h2&gt;&lt;h3 id=&quot;2-this关键字&quot;&gt;&lt;a href=&quot;#2-this关键字&quot; class=&quot;headerlink&quot; title=&quot;2. this关键字&quot;&gt;&lt;/a&gt;2. this关键字&lt;/h3&gt;&lt;h4 id=&quot;2-1-涵义&quot;&gt;&lt;a href=&quot;#2-1-涵义&quot; class=&quot;headerlink&quot; title=&quot;2.1 涵义&quot;&gt;&lt;/a&gt;2.1 涵义&lt;/h4&gt;&lt;p&gt;&lt;code&gt;this&lt;/code&gt;关键字是一个非常重要的语法点。毫不夸张地说，不理解它的含义，大部分开发任务都无法完成。&lt;br&gt;前一章已经提到，&lt;code&gt;this&lt;/code&gt;可以用在构造函数之中，表示实例对象。除此之外，&lt;code&gt;this&lt;/code&gt;还可以用在别的场合。但不管是什么场合，&lt;code&gt;this&lt;/code&gt;都有一个共同点：它总是返回一个对象。&lt;br&gt;简单说，&lt;code&gt;this&lt;/code&gt;就是属性或方法“当前”所在的对象。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.property&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，&lt;code&gt;this&lt;/code&gt;就代表&lt;code&gt;property&lt;/code&gt;属性当前所在的对象。&lt;br&gt;下面是一个实际的例子。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; person = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  name: &lt;span class=&quot;string&quot;&gt;&amp;#x27;张三&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  describe: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;#x27;姓名：&amp;#x27;&lt;/span&gt;+ &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;person.describe()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;姓名：张三&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS面向对象编程-this关键字" scheme="https://codermae.github.io/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-this%E5%85%B3%E9%94%AE%E5%AD%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0026</title>
-    <link href="https://codermae.github.io/2021/05/17/%E6%89%93%E5%8D%A10026/"/>
-    <id>https://codermae.github.io/2021/05/17/%E6%89%93%E5%8D%A10026/</id>
-    <published>2021-05-17T01:01:45.000Z</published>
-    <updated>2021-05-22T02:02:54.830Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#8e7437&gt;空荡荡的树上 树叶固执地挂着妄想何方 云身后的昏黄 揭穿了好几颗心的迷惘 杂乱的楼房太遮挡 不认输的脸庞 思念追寻的 那么的相像&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS面向对象编程&quot;&gt;&lt;a href=&quot;#JS面向对象编程&quot; class=&quot;headerlink&quot; title=&quot;JS面向对象编程&quot;&gt;&lt;/a&gt;JS面向对象编程&lt;/h2&gt;&lt;h3 id=&quot;1-实例对象与new命令&quot;&gt;&lt;a href=&quot;#1-实例对象与new命令&quot; class=&quot;headerlink&quot; title=&quot;1. 实例对象与new命令&quot;&gt;&lt;/a&gt;1. 实例对象与new命令&lt;/h3&gt;&lt;h4 id=&quot;1-1-对象是什么&quot;&gt;&lt;a href=&quot;#1-1-对象是什么&quot; class=&quot;headerlink&quot; title=&quot;1.1 对象是什么&quot;&gt;&lt;/a&gt;1.1 对象是什么&lt;/h4&gt;&lt;p&gt;面向对象编程（Object Oriented Programming，缩写为 OOP）是目前主流的编程范式。它将真实世界各种复杂的关系，抽象为一个个对象，然后由对象之间的分工与合作，完成对真实世界的模拟。&lt;/p&gt;
-&lt;p&gt;每一个对象都是功能中心，具有明确分工，可以完成接受信息、处理数据、发出信息等任务。对象可以复用，通过继承机制还可以定制。因此，面向对象编程具有灵活、代码可复用、高度模块化等特点，容易维护和开发，比起由一系列函数或指令组成的传统的过程式编程（procedural programming），更适合多人合作的大型软件项目。&lt;/p&gt;
-&lt;p&gt;那么，“对象”（object）到底是什么？我们从两个层次来理解。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS面向对象编程-实例对象与new命令" scheme="https://codermae.github.io/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E5%AE%9E%E4%BE%8B%E5%AF%B9%E8%B1%A1%E4%B8%8Enew%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
