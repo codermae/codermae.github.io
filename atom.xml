@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-28T02:40:52.699Z</updated>
+  <updated>2021-05-29T05:48:27.034Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,145 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0052</title>
+    <link href="https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10052/"/>
+    <id>https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10052/</id>
+    <published>2021-05-29T05:08:24.000Z</published>
+    <updated>2021-05-29T05:48:27.034Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#f47920&gt;劝君更尽一杯酒，西出阳关无故人。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;9-拖拉事件&quot;&gt;&lt;a href=&quot;#9-拖拉事件&quot; class=&quot;headerlink&quot; title=&quot;9. 拖拉事件&quot;&gt;&lt;/a&gt;9. 拖拉事件&lt;/h3&gt;&lt;h4 id=&quot;9-1-拖拉事件的种类&quot;&gt;&lt;a href=&quot;#9-1-拖拉事件的种类&quot; class=&quot;headerlink&quot; title=&quot;9.1 拖拉事件的种类&quot;&gt;&lt;/a&gt;9.1 拖拉事件的种类&lt;/h4&gt;&lt;p&gt;拖拉（drag）指的是，用户在某个对象上按下鼠标键不放，拖动它到另一个位置，然后释放鼠标键，将该对象放在那里。&lt;/p&gt;
+&lt;p&gt;拖拉的对象有好几种，包括元素节点、图片、链接、选中的文字等等。在网页中，除了元素节点默认不可以拖拉，其他（图片、链接、选中的文字）都可以直接拖拉。为了让元素节点可拖拉，可以将该节点的&lt;code&gt;draggable&lt;/code&gt;属性设为&lt;code&gt;true&lt;/code&gt;。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div draggable=&lt;span class=&quot;string&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  此区域可拖拉&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码的&lt;code&gt;div&lt;/code&gt;区块，在网页中可以直接用鼠标拖动。松开鼠标键时，拖动效果就会消失，该区块依然在原来的位置。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;draggable&lt;/code&gt;属性可用于任何元素节点，但是图片（&lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;）和链接（&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;）不加这个属性，就可以拖拉。对于它们，用到这个属性的时候，往往是将其设为&lt;code&gt;false&lt;/code&gt;，防止拖拉这两种元素。&lt;/p&gt;
+&lt;p&gt;注意，一旦某个元素节点的&lt;code&gt;draggable&lt;/code&gt;属性设为&lt;code&gt;true&lt;/code&gt;，就无法再用鼠标选中该节点内部的文字或子节点了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 事件-拖拉事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E6%8B%96%E6%8B%89%E4%BA%8B%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0051</title>
+    <link href="https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10051/"/>
+    <id>https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10051/</id>
+    <published>2021-05-29T04:45:38.000Z</published>
+    <updated>2021-05-29T05:48:15.338Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#444693&gt;今夜不知何处宿，平沙万里绝人烟。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;8-触摸事件&quot;&gt;&lt;a href=&quot;#8-触摸事件&quot; class=&quot;headerlink&quot; title=&quot;8. 触摸事件&quot;&gt;&lt;/a&gt;8. 触摸事件&lt;/h3&gt;&lt;h4 id=&quot;8-1-触摸操作概述&quot;&gt;&lt;a href=&quot;#8-1-触摸操作概述&quot; class=&quot;headerlink&quot; title=&quot;8.1 触摸操作概述&quot;&gt;&lt;/a&gt;8.1 触摸操作概述&lt;/h4&gt;&lt;p&gt;浏览器的触摸 API 由三个部分组成。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Touch：一个触摸点&lt;/li&gt;
+&lt;li&gt;TouchList：多个触摸点的集合&lt;/li&gt;
+&lt;li&gt;TouchEvent：触摸引发的事件实例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;Touch&lt;/code&gt;接口的实例对象用来表示触摸点（一根手指或者一根触摸笔），包括位置、大小、形状、压力、目标元素等属性。有时，触摸动作由多个触摸点（多根手指）组成，多个触摸点的集合由&lt;code&gt;TouchList&lt;/code&gt;接口的实例对象表示。&lt;code&gt;TouchEvent&lt;/code&gt;接口的实例对象代表由触摸引发的事件，只有触摸屏才会引发这一类事件。&lt;/p&gt;
+&lt;p&gt;很多时候，触摸事件和鼠标事件同时触发，即使这个时候并没有用到鼠标。这是为了让那些只定义鼠标事件、没有定义触摸事件的代码，在触摸屏的情况下仍然能用。如果想避免这种情况，可以用&lt;code&gt;event.preventDefault&lt;/code&gt;方法阻止发出鼠标事件。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 事件-触摸事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0050</title>
+    <link href="https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10050/"/>
+    <id>https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10050/</id>
+    <published>2021-05-29T04:27:52.000Z</published>
+    <updated>2021-05-29T05:48:08.150Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#817936&gt;每个人都在自己的生命中频繁地抛弃着自己的过去。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;7-表单事件&quot;&gt;&lt;a href=&quot;#7-表单事件&quot; class=&quot;headerlink&quot; title=&quot;7. 表单事件&quot;&gt;&lt;/a&gt;7. 表单事件&lt;/h3&gt;&lt;h4 id=&quot;7-1-表单事件的种类&quot;&gt;&lt;a href=&quot;#7-1-表单事件的种类&quot; class=&quot;headerlink&quot; title=&quot;7.1 表单事件的种类&quot;&gt;&lt;/a&gt;7.1 表单事件的种类&lt;/h4&gt;&lt;h5 id=&quot;7-1-1-input-事件&quot;&gt;&lt;a href=&quot;#7-1-1-input-事件&quot; class=&quot;headerlink&quot; title=&quot;7.1.1 input 事件&quot;&gt;&lt;/a&gt;7.1.1 input 事件&lt;/h5&gt;&lt;p&gt;&lt;code&gt;input&lt;/code&gt;事件当&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt;的值发生变化时触发。对于复选框（&lt;code&gt;&amp;lt;input type=checkbox&amp;gt;&lt;/code&gt;）或单选框（&lt;code&gt;&amp;lt;input type=radio&amp;gt;&lt;/code&gt;），用户改变选项时，也会触发这个事件。另外，对于打开&lt;code&gt;contenteditable&lt;/code&gt;属性的元素，只要值发生变化，也会触发&lt;code&gt;input&lt;/code&gt;事件。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;input&lt;/code&gt;事件的一个特点，就是会连续触发，比如用户每按下一次按键，就会触发一次&lt;code&gt;input&lt;/code&gt;事件。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;input&lt;/code&gt;事件对象继承了&lt;code&gt;InputEvent&lt;/code&gt;接口。&lt;/p&gt;
+&lt;p&gt;该事件跟&lt;code&gt;change&lt;/code&gt;事件很像，不同之处在于&lt;code&gt;input&lt;/code&gt;事件在元素的值发生变化后立即发生，而&lt;code&gt;change&lt;/code&gt;在元素失去焦点时发生，而内容此时可能已经变化多次。也就是说，如果有连续变化，&lt;code&gt;input&lt;/code&gt;事件会触发多次，而&lt;code&gt;change&lt;/code&gt;事件只在失去焦点时触发一次。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 事件-表单事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%A1%A8%E5%8D%95%E4%BA%8B%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0049</title>
+    <link href="https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10049/"/>
+    <id>https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10049/</id>
+    <published>2021-05-29T04:12:46.000Z</published>
+    <updated>2021-05-29T05:47:59.850Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#deab8a&gt;相逢尽道休官好，林下何曾见一人。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;6-进度事件&quot;&gt;&lt;a href=&quot;#6-进度事件&quot; class=&quot;headerlink&quot; title=&quot;6. 进度事件&quot;&gt;&lt;/a&gt;6. 进度事件&lt;/h3&gt;&lt;h4 id=&quot;6-1-进度事件的种类&quot;&gt;&lt;a href=&quot;#6-1-进度事件的种类&quot; class=&quot;headerlink&quot; title=&quot;6.1 进度事件的种类&quot;&gt;&lt;/a&gt;6.1 进度事件的种类&lt;/h4&gt;&lt;p&gt;进度事件用来描述资源加载的进度，主要由 AJAX 请求、&lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;等外部资源的加载触发，继承了&lt;code&gt;ProgressEvent&lt;/code&gt;接口。它主要包含以下几种事件。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;abort&lt;/code&gt;:外部资源中止加载时（比如用户取消）触发。如果发生错误导致中止，不会触发该事件。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;error&lt;/code&gt;:由于错误导致外部资源无法加载时触发。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;load&lt;/code&gt;:外部资源加载成功时触发。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;loadstart&lt;/code&gt;:外部资源开始加载时触发。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;loadend&lt;/code&gt;:外部资源停止加载时触发，发生顺序排在&lt;code&gt;error&lt;/code&gt;、&lt;code&gt;abort&lt;/code&gt;、&lt;code&gt;load&lt;/code&gt;等事件的后面。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;progress&lt;/code&gt;:外部资源加载过程中不断触发。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;timeout&lt;/code&gt;:加载超时时触发。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意，除了资源下载，文件上传也存在这些事件。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 事件-进度事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%BF%9B%E5%BA%A6%E4%BA%8B%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0048</title>
+    <link href="https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10048/"/>
+    <id>https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10048/</id>
+    <published>2021-05-29T03:58:59.000Z</published>
+    <updated>2021-05-29T05:47:43.675Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#ef5b9c&gt;在自称善意的之时，即存恶意。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;5-键盘事件&quot;&gt;&lt;a href=&quot;#5-键盘事件&quot; class=&quot;headerlink&quot; title=&quot;5. 键盘事件&quot;&gt;&lt;/a&gt;5. 键盘事件&lt;/h3&gt;&lt;h4 id=&quot;5-1-键盘事件的种类&quot;&gt;&lt;a href=&quot;#5-1-键盘事件的种类&quot; class=&quot;headerlink&quot; title=&quot;5.1 键盘事件的种类&quot;&gt;&lt;/a&gt;5.1 键盘事件的种类&lt;/h4&gt;&lt;p&gt;键盘事件由用户击打键盘触发，主要有&lt;code&gt;keydown&lt;/code&gt;、&lt;code&gt;keypress&lt;/code&gt;、&lt;code&gt;keyup&lt;/code&gt;三个事件，它们都继承了&lt;code&gt;KeyboardEvent&lt;/code&gt;接口。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;keydown&lt;/code&gt;：按下键盘时触发。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;keypress&lt;/code&gt;：按下有值的键时触发，即按下 Ctrl、Alt、Shift、Meta 这样无值的键，这个事件不会触发。对于有值的键，按下时先触发keydown事件，再触发这个事件。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;keyup&lt;/code&gt;：松开键盘时触发该事件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果用户一直按键不松开，就会连续触发键盘事件，触发的顺序如下。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;keydown&lt;/li&gt;
+&lt;li&gt;keypress&lt;/li&gt;
+&lt;li&gt;keydown&lt;/li&gt;
+&lt;li&gt;keypress&lt;/li&gt;
+&lt;li&gt;…（重复以上过程）&lt;/li&gt;
+&lt;li&gt;keyup&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 事件-键盘事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0047</title>
@@ -424,133 +563,6 @@
     
     
     <category term="JS异步操作-Promise对象" scheme="https://codermae.github.io/tags/JS%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C-Promise%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0032</title>
-    <link href="https://codermae.github.io/2021/05/21/%E6%89%93%E5%8D%A10032/"/>
-    <id>https://codermae.github.io/2021/05/21/%E6%89%93%E5%8D%A10032/</id>
-    <published>2021-05-21T00:16:46.000Z</published>
-    <updated>2021-05-22T02:03:51.525Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#2eb806&gt;夜莺啼绿柳 皓月醒长空 最爱垄头麦 迎风笑落红&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS异步操作&quot;&gt;&lt;a href=&quot;#JS异步操作&quot; class=&quot;headerlink&quot; title=&quot;JS异步操作&quot;&gt;&lt;/a&gt;JS异步操作&lt;/h2&gt;&lt;h3 id=&quot;2-定时器&quot;&gt;&lt;a href=&quot;#2-定时器&quot; class=&quot;headerlink&quot; title=&quot;2. 定时器&quot;&gt;&lt;/a&gt;2. 定时器&lt;/h3&gt;&lt;p&gt;JavaScript 提供定时执行代码的功能，叫做定时器（timer），主要由&lt;code&gt;setTimeout()&lt;/code&gt;和&lt;code&gt;setInterval()&lt;/code&gt;这两个函数来完成。它们向任务队列添加定时任务。&lt;/p&gt;
-&lt;h4 id=&quot;2-1-setTimeout&quot;&gt;&lt;a href=&quot;#2-1-setTimeout&quot; class=&quot;headerlink&quot; title=&quot;2.1  setTimeout()&quot;&gt;&lt;/a&gt;2.1  setTimeout()&lt;/h4&gt;&lt;p&gt;&lt;code&gt;setTimeout&lt;/code&gt;函数用来指定某个函数或某段代码，在多少毫秒之后执行。它返回一个整数，表示定时器的编号，以后可以用来取消这个定时器。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; timerId = &lt;span class=&quot;built_in&quot;&gt;setTimeout&lt;/span&gt;(func|code, delay);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，&lt;code&gt;setTimeout&lt;/code&gt;函数接受两个参数，第一个参数&lt;code&gt;func|code&lt;/code&gt;是将要推迟执行的函数名或者一段代码，第二个参数&lt;code&gt;delay&lt;/code&gt;是推迟执行的毫秒数。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;setTimeout&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;console.log(2)&amp;#x27;&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1000&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS异步操作-定时器" scheme="https://codermae.github.io/tags/JS%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C-%E5%AE%9A%E6%97%B6%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0031</title>
-    <link href="https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10031/"/>
-    <id>https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10031/</id>
-    <published>2021-05-20T06:51:46.000Z</published>
-    <updated>2021-05-22T02:03:40.338Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#8c531b&gt;步伐虽小，密而不停&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS异步操作&quot;&gt;&lt;a href=&quot;#JS异步操作&quot; class=&quot;headerlink&quot; title=&quot;JS异步操作&quot;&gt;&lt;/a&gt;JS异步操作&lt;/h2&gt;&lt;h3 id=&quot;1-概述&quot;&gt;&lt;a href=&quot;#1-概述&quot; class=&quot;headerlink&quot; title=&quot;1. 概述&quot;&gt;&lt;/a&gt;1. 概述&lt;/h3&gt;&lt;h4 id=&quot;1-1单线程模型&quot;&gt;&lt;a href=&quot;#1-1单线程模型&quot; class=&quot;headerlink&quot; title=&quot;1.1单线程模型&quot;&gt;&lt;/a&gt;1.1单线程模型&lt;/h4&gt;&lt;p&gt;单线程模型指的是，JavaScript 只在一个线程上运行。也就是说，JavaScript 同时只能执行一个任务，其他任务都必须在后面排队等待。&lt;/p&gt;
-&lt;p&gt;注意，JavaScript 只在一个线程上运行，不代表 JavaScript 引擎只有一个线程。事实上，JavaScript 引擎有多个线程，单个脚本只能在一个线程上运行（称为主线程），其他线程都是在后台配合。&lt;/p&gt;
-&lt;p&gt;JavaScript 之所以采用单线程，而不是多线程，跟历史有关系。JavaScript 从诞生起就是单线程，原因是不想让浏览器变得太复杂，因为多线程需要共享资源、且有可能修改彼此的运行结果，对于一种网页脚本语言来说，这就太复杂了。如果 JavaScript 同时有两个线程，一个线程在网页 DOM 节点上添加内容，另一个线程删除了这个节点，这时浏览器应该以哪个线程为准？是不是还要有锁机制？所以，为了避免复杂性，JavaScript 一开始就是单线程，这已经成了这门语言的核心特征，将来也不会改变。&lt;/p&gt;
-&lt;p&gt;这种模式的好处是实现起来比较简单，执行环境相对单纯；坏处是只要有一个任务耗时很长，后面的任务都必须排队等着，会拖延整个程序的执行。常见的浏览器无响应（假死），往往就是因为某一段 JavaScript 代码长时间运行（比如死循环），导致整个页面卡在这个地方，其他任务无法执行。JavaScript 语言本身并不慢，慢的是读写外部数据，比如等待 Ajax 请求返回结果。这个时候，如果对方服务器迟迟没有响应，或者网络不通畅，就会导致脚本的长时间停滞。&lt;/p&gt;
-&lt;p&gt;如果排队是因为计算量大，CPU 忙不过来，倒也算了，但是很多时候 CPU 是闲着的，因为 IO 操作（输入输出）很慢（比如 Ajax 操作从网络读取数据），不得不等着结果出来，再往下执行。JavaScript 语言的设计者意识到，这时 CPU 完全可以不管 IO 操作，挂起处于等待中的任务，先运行排在后面的任务。等到 IO 操作返回了结果，再回过头，把挂起的任务继续执行下去。这种机制就是 JavaScript 内部采用的“事件循环”机制（Event Loop）。&lt;/p&gt;
-&lt;p&gt;单线程模型虽然对 JavaScript 构成了很大的限制，但也因此使它具备了其他语言不具备的优势。如果用得好，JavaScript 程序是不会出现堵塞的，这就是为什么 Node 可以用很少的资源，应付大流量访问的原因。&lt;/p&gt;
-&lt;p&gt;为了利用多核 CPU 的计算能力，HTML5 提出 Web Worker 标准，允许 JavaScript 脚本创建多个线程，但是子线程完全受主线程控制，且不得操作 DOM。所以，这个新标准并没有改变 JavaScript 单线程的本质。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS异步操作-概述" scheme="https://codermae.github.io/tags/JS%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C-%E6%A6%82%E8%BF%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0030</title>
-    <link href="https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10030/"/>
-    <id>https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10030/</id>
-    <published>2021-05-20T01:37:29.000Z</published>
-    <updated>2021-05-22T02:03:23.866Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=gray&gt;真正的好朋友，不一定是和你聊天最多的人，却一定会在你需要的时候挺身而出，在你难熬的时候给你鼓励和力量。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS面向对象编程&quot;&gt;&lt;a href=&quot;#JS面向对象编程&quot; class=&quot;headerlink&quot; title=&quot;JS面向对象编程&quot;&gt;&lt;/a&gt;JS面向对象编程&lt;/h2&gt;&lt;h3 id=&quot;5-严格模式&quot;&gt;&lt;a href=&quot;#5-严格模式&quot; class=&quot;headerlink&quot; title=&quot;5. 严格模式&quot;&gt;&lt;/a&gt;5. 严格模式&lt;/h3&gt;&lt;p&gt;除了正常的运行模式，JavaScript 还有第二种运行模式：严格模式（strict mode）。顾名思义，这种模式采用更加严格的 JavaScript 语法。&lt;/p&gt;
-&lt;p&gt;同样的代码，在正常模式和严格模式中，可能会有不一样的运行结果。一些在正常模式下可以运行的语句，在严格模式下将不能运行。&lt;/p&gt;
-&lt;h4 id=&quot;5-1-设计目的&quot;&gt;&lt;a href=&quot;#5-1-设计目的&quot; class=&quot;headerlink&quot; title=&quot;5.1 设计目的&quot;&gt;&lt;/a&gt;5.1 设计目的&lt;/h4&gt;&lt;p&gt;早期的 JavaScript 语言有很多设计不合理的地方，但是为了兼容以前的代码，又不能改变老的语法，只能不断添加新的语法，引导程序员使用新语法。&lt;/p&gt;
-&lt;p&gt;严格模式是从 ES5 进入标准的，主要目的有以下几个。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;明确禁止一些不合理、不严谨的语法，减少 JavaScript 语言的一些怪异行为。&lt;/li&gt;
-&lt;li&gt;增加更多报错的场合，消除代码运行的一些不安全之处，保证代码运行的安全。&lt;/li&gt;
-&lt;li&gt;提高编译器效率，增加运行速度。&lt;/li&gt;
-&lt;li&gt;为未来新版本的 JavaScript 语法做好铺垫。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;总之，严格模式体现了 JavaScript 更合理、更安全、更严谨的发展方向。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS面向对象编程-严格模式" scheme="https://codermae.github.io/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0029</title>
-    <link href="https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10029/"/>
-    <id>https://codermae.github.io/2021/05/20/%E6%89%93%E5%8D%A10029/</id>
-    <published>2021-05-20T00:50:47.000Z</published>
-    <updated>2021-05-22T02:03:16.594Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#0080FF&gt;我是只化身孤岛的蓝鲸 有着最巨大的身影 鱼虾在身侧穿行 也有飞鸟在背上停&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS面向对象编程&quot;&gt;&lt;a href=&quot;#JS面向对象编程&quot; class=&quot;headerlink&quot; title=&quot;JS面向对象编程&quot;&gt;&lt;/a&gt;JS面向对象编程&lt;/h2&gt;&lt;h3 id=&quot;4-Object对象的相关方法&quot;&gt;&lt;a href=&quot;#4-Object对象的相关方法&quot; class=&quot;headerlink&quot; title=&quot;4. Object对象的相关方法&quot;&gt;&lt;/a&gt;4. Object对象的相关方法&lt;/h3&gt;&lt;h4 id=&quot;4-1-Object-getPrototypeOf&quot;&gt;&lt;a href=&quot;#4-1-Object-getPrototypeOf&quot; class=&quot;headerlink&quot; title=&quot;4.1 Object.getPrototypeOf()&quot;&gt;&lt;/a&gt;4.1 Object.getPrototypeOf()&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Object.getPrototypeOf&lt;/code&gt;方法返回参数对象的原型。这是获取原型对象的标准方法。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; F = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; f = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; F();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.getPrototypeOf(f) === F.prototype &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，实例对象&lt;code&gt;f&lt;/code&gt;的原型是&lt;code&gt;F.prototype&lt;/code&gt;。&lt;br&gt;下面是几种特殊对象的原型。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 空对象的原型是 Object.prototype&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.getPrototypeOf(&amp;#123;&amp;#125;) === &lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.prototype &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Object.prototype 的原型是 null&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.getPrototypeOf(&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.prototype) === &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 函数的原型是 Function.prototype&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;f&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.getPrototypeOf(f) === &lt;span class=&quot;built_in&quot;&gt;Function&lt;/span&gt;.prototype &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS面向对象编程-Object对象的相关方法" scheme="https://codermae.github.io/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-Object%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0028</title>
-    <link href="https://codermae.github.io/2021/05/19/%E6%89%93%E5%8D%A10028/"/>
-    <id>https://codermae.github.io/2021/05/19/%E6%89%93%E5%8D%A10028/</id>
-    <published>2021-05-19T00:54:43.000Z</published>
-    <updated>2021-05-22T02:03:09.590Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#2585a6&gt;难过的时候就抱抱自己，允许自己脆弱一会儿，收拾好心情再出发。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS面向对象编程&quot;&gt;&lt;a href=&quot;#JS面向对象编程&quot; class=&quot;headerlink&quot; title=&quot;JS面向对象编程&quot;&gt;&lt;/a&gt;JS面向对象编程&lt;/h2&gt;&lt;h3 id=&quot;3-对象的继承&quot;&gt;&lt;a href=&quot;#3-对象的继承&quot; class=&quot;headerlink&quot; title=&quot;3. 对象的继承&quot;&gt;&lt;/a&gt;3. 对象的继承&lt;/h3&gt;&lt;p&gt;面向对象编程很重要的一个方面，就是对象的继承。A 对象通过继承 B 对象，就能直接拥有 B 对象的所有属性和方法。这对于代码的复用是非常有用的。&lt;/p&gt;
-&lt;p&gt;大部分面向对象的编程语言，都是通过“类”（class）实现对象的继承。传统上，JavaScript 语言的继承不通过 class，而是通过“原型对象”（prototype）实现，本章介绍 JavaScript 的原型链继承。&lt;/p&gt;
-&lt;p&gt;ES6 引入了 class 语法，基于 class 的继承不在这个教程介绍，请参阅《ES6 标准入门》一书的相关章节。&lt;/p&gt;
-&lt;h4 id=&quot;3-1-原型对象的概述&quot;&gt;&lt;a href=&quot;#3-1-原型对象的概述&quot; class=&quot;headerlink&quot; title=&quot;3.1 原型对象的概述&quot;&gt;&lt;/a&gt;3.1 原型对象的概述&lt;/h4&gt;&lt;h5 id=&quot;3-1-1-构造函数的缺点&quot;&gt;&lt;a href=&quot;#3-1-1-构造函数的缺点&quot; class=&quot;headerlink&quot; title=&quot;3.1.1 构造函数的缺点&quot;&gt;&lt;/a&gt;3.1.1 构造函数的缺点&lt;/h5&gt;&lt;p&gt;JavaScript 通过构造函数生成新对象，因此构造函数可以视为对象的模板。实例对象的属性和方法，可以定义在构造函数内部。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Cat&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;name, color&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.name = name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.color = color;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; cat1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Cat(&lt;span class=&quot;string&quot;&gt;&amp;#x27;大毛&amp;#x27;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;白色&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cat1.name &lt;span class=&quot;comment&quot;&gt;// &amp;#x27;大毛&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cat1.color &lt;span class=&quot;comment&quot;&gt;// &amp;#x27;白色&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS面向对象编程-对象的继承" scheme="https://codermae.github.io/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%BB%A7%E6%89%BF/"/>
     
   </entry>
   

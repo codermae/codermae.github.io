@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
+       
+      <meta name="keywords" content="blog" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>打卡0050 |  maeBlog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-打卡0050"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  打卡0050
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/29/%E6%89%93%E5%8D%A10050/" class="article-date">
+  <time datetime="2021-05-29T04:27:52.000Z" itemprop="datePublished">2021-05-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.5k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">6 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#817936>每个人都在自己的生命中频繁地抛弃着自己的过去。</font></p>
+<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="7-表单事件"><a href="#7-表单事件" class="headerlink" title="7. 表单事件"></a>7. 表单事件</h3><h4 id="7-1-表单事件的种类"><a href="#7-1-表单事件的种类" class="headerlink" title="7.1 表单事件的种类"></a>7.1 表单事件的种类</h4><h5 id="7-1-1-input-事件"><a href="#7-1-1-input-事件" class="headerlink" title="7.1.1 input 事件"></a>7.1.1 input 事件</h5><p><code>input</code>事件当<code>&lt;input&gt;</code>、<code>&lt;select&gt;</code>、<code>&lt;textarea&gt;</code>的值发生变化时触发。对于复选框（<code>&lt;input type=checkbox&gt;</code>）或单选框（<code>&lt;input type=radio&gt;</code>），用户改变选项时，也会触发这个事件。另外，对于打开<code>contenteditable</code>属性的元素，只要值发生变化，也会触发<code>input</code>事件。</p>
+<p><code>input</code>事件的一个特点，就是会连续触发，比如用户每按下一次按键，就会触发一次<code>input</code>事件。</p>
+<p><code>input</code>事件对象继承了<code>InputEvent</code>接口。</p>
+<p>该事件跟<code>change</code>事件很像，不同之处在于<code>input</code>事件在元素的值发生变化后立即发生，而<code>change</code>在元素失去焦点时发生，而内容此时可能已经变化多次。也就是说，如果有连续变化，<code>input</code>事件会触发多次，而<code>change</code>事件只在失去焦点时触发一次。</p>
+<span id="more"></span>
+<p>下面是<code>&lt;select&gt;</code>元素的例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* HTML 代码如下</span></span><br><span class="line"><span class="comment">&lt;select id=&quot;mySelect&quot;&gt;</span></span><br><span class="line"><span class="comment">  &lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;</span></span><br><span class="line"><span class="comment">  &lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;</span></span><br><span class="line"><span class="comment">  &lt;option value=&quot;3&quot;&gt;3&lt;/option&gt;</span></span><br><span class="line"><span class="comment">&lt;/select&gt;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">inputHandler</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e.target.value)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> mySelect = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#mySelect&#x27;</span>);</span><br><span class="line">mySelect.addEventListener(<span class="string">&#x27;input&#x27;</span>, inputHandler);</span><br></pre></td></tr></table></figure>
+<p>上面代码中，改变下拉框选项时，会触发<code>input</code>事件，从而执行回调函数<code>inputHandler</code>。</p>
+<h5 id="7-1-2-select-事件"><a href="#7-1-2-select-事件" class="headerlink" title="7.1.2 select 事件"></a>7.1.2 select 事件</h5><p><code>select</code>事件当在<code>&lt;input&gt;</code>、<code>&lt;textarea&gt;</code>里面选中文本时触发。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码如下</span></span><br><span class="line"><span class="comment">// &lt;input id=&quot;test&quot; type=&quot;text&quot; value=&quot;Select me!&quot; /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> elem = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;test&#x27;</span>);</span><br><span class="line">elem.addEventListener(<span class="string">&#x27;select&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e.type); <span class="comment">// &quot;select&quot;</span></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<p>选中的文本可以通过<code>event.target</code>元素的<code>selectionDirection</code>、<code>selectionEnd</code>、<code>selectionStart</code>和<code>value</code>属性拿到。</p>
+<h5 id="7-1-3-change-事件"><a href="#7-1-3-change-事件" class="headerlink" title="7.1.3 change 事件"></a>7.1.3 change 事件</h5><p><code>change</code>事件当<code>&lt;input&gt;</code>、<code>&lt;select&gt;</code>、<code>&lt;textarea&gt;</code>的值发生变化时触发。它与<code>input</code>事件的最大不同，就是不会连续触发，只有当全部修改完成时才会触发，另一方面<code>input</code>事件必然伴随<code>change</code>事件。具体来说，分成以下几种情况。</p>
+<ul>
+<li>激活单选框（radio）或复选框（checkbox）时触发。</li>
+<li>用户提交时触发。比如，从下列列表（select）完成选择，在日期或文件输入框完成选择。</li>
+<li>当文本框或<code>&lt;textarea&gt;</code>元素的值发生改变，并且丧失焦点时触发。</li>
+</ul>
+<p>下面是一个例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码如下</span></span><br><span class="line"><span class="comment">// &lt;select size=&quot;1&quot; onchange=&quot;changeEventHandler(event);&quot;&gt;</span></span><br><span class="line"><span class="comment">//   &lt;option&gt;chocolate&lt;/option&gt;</span></span><br><span class="line"><span class="comment">//   &lt;option&gt;strawberry&lt;/option&gt;</span></span><br><span class="line"><span class="comment">//   &lt;option&gt;vanilla&lt;/option&gt;</span></span><br><span class="line"><span class="comment">// &lt;/select&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeEventHandler</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(event.target.value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果比较一下上面<code>input</code>事件的例子，你会发现对于<code>&lt;select&gt;</code>元素来说，<code>input</code>和<code>change</code>事件基本是等价的。</p>
+<h5 id="7-1-4-invalid-事件"><a href="#7-1-4-invalid-事件" class="headerlink" title="7.1.4 invalid 事件"></a>7.1.4 invalid 事件</h5><p>用户提交表单时，如果表单元素的值不满足校验条件，就会触发<code>invalid</code>事件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;</span><br><span class="line">  &lt;input type=<span class="string">&quot;text&quot;</span> required oninvalid=<span class="string">&quot;console.log(&#x27;invalid input&#x27;)&quot;</span> /&gt;</span><br><span class="line">  &lt;button type=<span class="string">&quot;submit&quot;</span>&gt;提交&lt;/button&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，输入框是必填的。如果不填，用户点击按钮提交时，就会触发输入框的<code>invalid</code>事件，导致提交被取消。</p>
+<h5 id="7-1-5-reset-事件，submit-事件"><a href="#7-1-5-reset-事件，submit-事件" class="headerlink" title="7.1.5 reset 事件，submit 事件"></a>7.1.5 reset 事件，submit 事件</h5><p>这两个事件发生在表单对象<code>&lt;form&gt;</code>上，而不是发生在表单的成员上。</p>
+<p><code>reset</code>事件当表单重置（所有表单成员变回默认值）时触发。</p>
+<p><code>submit</code>事件当表单数据向服务器提交时触发。注意，<code>submit</code>事件的发生对象是<code>&lt;form&gt;</code>元素，而不是<code>&lt;button&gt;</code>元素，因为提交的是表单，而不是按钮。</p>
+<h4 id="7-2-InputEvent-接口"><a href="#7-2-InputEvent-接口" class="headerlink" title="7.2 InputEvent 接口"></a>7.2 InputEvent 接口</h4><p><code>InputEvent</code>接口主要用来描述<code>input</code>事件的实例。该接口继承了<code>Event</code>接口，还定义了一些自己的实例属性和实例方法。</p>
+<p>浏览器原生提供<code>InputEvent()</code>构造函数，用来生成实例对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> InputEvent(type, options)</span><br></pre></td></tr></table></figure>
+<p><code>InputEvent</code>构造函数可以接受两个参数。第一个参数是字符串，表示事件名称，该参数是必需的。第二个参数是一个配置对象，用来设置事件实例的属性，该参数是可选的。配置对象的字段除了<code>Event</code>构造函数的配置属性，还可以设置下面的字段，这些字段都是可选的。</p>
+<ul>
+<li><code>inputType</code>：字符串，表示发生变更的类型（详见下文）。</li>
+<li><code>data</code>：字符串，表示插入的字符串。如果没有插入的字符串（比如删除操作），则返回<code>null</code>或空字符串。</li>
+<li><code>dataTransfer</code>：返回一个 DataTransfer 对象实例，该属性通常只在输入框接受富文本输入时有效。</li>
+</ul>
+<p><code>InputEvent</code>的实例属性主要就是上面三个属性，这三个实例属性都是只读的。</p>
+<h5 id="1-InputEvent-data"><a href="#1-InputEvent-data" class="headerlink" title="(1)InputEvent.data"></a>(1)InputEvent.data</h5><p><code>InputEvent.data</code>属性返回一个字符串，表示变动的内容。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码如下</span></span><br><span class="line"><span class="comment">// &lt;input type=&quot;text&quot; id=&quot;myInput&quot;&gt;</span></span><br><span class="line"><span class="keyword">var</span> input = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myInput&#x27;</span>);</span><br><span class="line">input.addEventListener(<span class="string">&#x27;input&#x27;</span>, myFunction, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e.data);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，如果手动在输入框里面输入<code>abc</code>，控制台会先输出<code>a</code>，再在下一行输出<code>b</code>，再在下一行输出<code>c</code>。然后选中<code>abc</code>，一次性将它们删除，控制台会输出<code>null</code>或一个空字符串。</p>
+<h5 id="（2）InputEvent-inputType"><a href="#（2）InputEvent-inputType" class="headerlink" title="（2）InputEvent.inputType"></a>（2）InputEvent.inputType</h5><p><code>InputEvent.inputType</code>属性返回一个字符串，表示字符串发生变更的类型。</p>
+<p>对于常见情况，Chrome 浏览器的返回值如下。完整列表可以参考文档。</p>
+<ul>
+<li>手动插入文本：<code>insertText</code></li>
+<li>粘贴插入文本：<code>insertFromPaste</code></li>
+<li>向后删除：<code>deleteContentBackward</code></li>
+<li>向前删除：<code>deleteContentForward</code></li>
+</ul>
+<h5 id="（3）InputEvent-dataTransfer"><a href="#（3）InputEvent-dataTransfer" class="headerlink" title="（3）InputEvent.dataTransfer"></a>（3）InputEvent.dataTransfer</h5><p><code>InputEvent.dataTransfer</code>属性返回一个 DataTransfer 实例。该属性只在文本框接受粘贴内容（<code>insertFromPaste</code>）或拖拽内容（<code>insertFromDrop</code>）时才有效。</p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10050/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%A1%A8%E5%8D%95%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-表单事件</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2021/05/29/%E6%89%93%E5%8D%A10051/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            打卡0051
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/05/29/%E6%89%93%E5%8D%A10049/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">打卡0049</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
+    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Ye Ma
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        <!-- 
+         -->
+        
+        
+        Powered by Hexo
+        <span class="division">|</span>
+        Theme - Ayer
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="maeBlog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/travel/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about/2021">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/gHZjdQRcOL1WxSP.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/pZNYuI4QFnfwb7l.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>

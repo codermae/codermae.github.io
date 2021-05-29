@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
+       
+      <meta name="keywords" content="blog" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>打卡0048 |  maeBlog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-打卡0048"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  打卡0048
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/29/%E6%89%93%E5%8D%A10048/" class="article-date">
+  <time datetime="2021-05-29T03:58:59.000Z" itemprop="datePublished">2021-05-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">4 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#ef5b9c>在自称善意的之时，即存恶意。</font></p>
+<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="5-键盘事件"><a href="#5-键盘事件" class="headerlink" title="5. 键盘事件"></a>5. 键盘事件</h3><h4 id="5-1-键盘事件的种类"><a href="#5-1-键盘事件的种类" class="headerlink" title="5.1 键盘事件的种类"></a>5.1 键盘事件的种类</h4><p>键盘事件由用户击打键盘触发，主要有<code>keydown</code>、<code>keypress</code>、<code>keyup</code>三个事件，它们都继承了<code>KeyboardEvent</code>接口。</p>
+<ul>
+<li><code>keydown</code>：按下键盘时触发。</li>
+<li><code>keypress</code>：按下有值的键时触发，即按下 Ctrl、Alt、Shift、Meta 这样无值的键，这个事件不会触发。对于有值的键，按下时先触发keydown事件，再触发这个事件。</li>
+<li><code>keyup</code>：松开键盘时触发该事件。</li>
+</ul>
+<p>如果用户一直按键不松开，就会连续触发键盘事件，触发的顺序如下。</p>
+<ol>
+<li>keydown</li>
+<li>keypress</li>
+<li>keydown</li>
+<li>keypress</li>
+<li>…（重复以上过程）</li>
+<li>keyup</li>
+</ol>
+<span id="more"></span>
+<h4 id="5-2-KeyboardEvent-接口概述"><a href="#5-2-KeyboardEvent-接口概述" class="headerlink" title="5.2 KeyboardEvent 接口概述"></a>5.2 KeyboardEvent 接口概述</h4><p><code>KeyboardEvent</code>接口用来描述用户与键盘的互动。这个接口继承了<code>Event</code>接口，并且定义了自己的实例属性和实例方法。</p>
+<p>浏览器原生提供<code>KeyboardEvent</code>构造函数，用来新建键盘事件的实例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> KeyboardEvent(type, options)</span><br></pre></td></tr></table></figure>
+<p><code>KeyboardEvent</code>构造函数接受两个参数。第一个参数是字符串，表示事件类型；第二个参数是一个事件配置对象，该参数可选。除了<code>Event</code>接口提供的属性，还可以配置以下字段，它们都是可选。</p>
+<ul>
+<li><code>key</code>：字符串，当前按下的键，默认为空字符串。</li>
+<li><code>code</code>：字符串，表示当前按下的键的字符串形式，默认为空字符串。</li>
+<li><code>location</code>：整数，当前按下的键的位置，默认为<code>0</code>。</li>
+<li><code>ctrlKey</code>：布尔值，是否按下 Ctrl 键，默认为<code>false</code>。</li>
+<li><code>shiftKey</code>：布尔值，是否按下 Shift 键，默认为<code>false</code>。</li>
+<li><code>altKey</code>：布尔值，是否按下 Alt 键，默认为<code>false</code>。</li>
+<li><code>metaKey</code>：布尔值，是否按下 Meta 键，默认为<code>false</code>。</li>
+<li><code>repeat</code>：布尔值，是否重复按键，默认为<code>false</code>。</li>
+</ul>
+<h4 id="5-3-KeyboardEvent-的实例属性"><a href="#5-3-KeyboardEvent-的实例属性" class="headerlink" title="5.3 KeyboardEvent 的实例属性"></a>5.3 KeyboardEvent 的实例属性</h4><h5 id="5-3-1-KeyboardEvent-altKey，KeyboardEvent-ctrlKey，KeyboardEvent-metaKey，KeyboardEvent-shiftKey"><a href="#5-3-1-KeyboardEvent-altKey，KeyboardEvent-ctrlKey，KeyboardEvent-metaKey，KeyboardEvent-shiftKey" class="headerlink" title="5.3.1 KeyboardEvent.altKey，KeyboardEvent.ctrlKey，KeyboardEvent.metaKey，KeyboardEvent.shiftKey"></a>5.3.1 KeyboardEvent.altKey，KeyboardEvent.ctrlKey，KeyboardEvent.metaKey，KeyboardEvent.shiftKey</h5><p>以下属性都是只读属性，返回一个布尔值，表示是否按下对应的键。</p>
+<ul>
+<li><code>KeyboardEvent.altKey</code>：是否按下 Alt 键</li>
+<li><code>KeyboardEvent.ctrlKey</code>：是否按下 Ctrl 键</li>
+<li><code>KeyboardEvent.metaKey</code>：是否按下 meta 键（Mac 系统是一个四瓣的小花，Windows 系统是 windows 键）</li>
+<li><code>KeyboardEvent.shiftKey</code>：是否按下 Shift 键</li>
+</ul>
+<p>下面是一个示例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showChar</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;ALT: &#x27;</span> + e.altKey);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;CTRL: &#x27;</span> + e.ctrlKey);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Meta: &#x27;</span> + e.metaKey);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Shift: &#x27;</span> + e.shiftKey);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.body.addEventListener(<span class="string">&#x27;keydown&#x27;</span>, showChar, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h5 id="5-3-2-KeyboardEvent-code"><a href="#5-3-2-KeyboardEvent-code" class="headerlink" title="5.3.2 KeyboardEvent.code"></a>5.3.2 KeyboardEvent.code</h5><p><code>KeyboardEvent.code</code>属性返回一个字符串，表示当前按下的键的字符串形式。该属性只读。</p>
+<p>下面是一些常用键的字符串形式，其他键请查文档。</p>
+<ul>
+<li>数字键0 - 9：返回<code>digit0</code> - <code>digit9</code></li>
+<li>字母键A - z：返回<code>KeyA</code> - <code>KeyZ</code></li>
+<li>功能键F1 - F12：返回 <code>F1</code> - <code>F12</code></li>
+<li>方向键：返回<code>ArrowDown</code>、<code>ArrowUp</code>、<code>ArrowLeft</code>、<code>ArrowRight</code></li>
+<li>Alt 键：返回<code>AltLeft</code>或<code>AltRight</code></li>
+<li>Shift 键：返回<code>ShiftLeft</code>或<code>ShiftRight</code></li>
+<li>Ctrl 键：返回<code>ControlLeft</code>或<code>ControlRight</code></li>
+</ul>
+<h5 id="5-3-3-KeyboardEvent-key"><a href="#5-3-3-KeyboardEvent-key" class="headerlink" title="5.3.3 KeyboardEvent.key"></a>5.3.3 KeyboardEvent.key</h5><p><code>KeyboardEvent.key</code>属性返回一个字符串，表示按下的键名。该属性只读。</p>
+<p>如果按下的键代表可打印字符，则返回这个字符，比如数字、字母。</p>
+<p>如果按下的键代表不可打印的特殊字符，则返回预定义的键值，比如 Backspace，Tab，Enter，Shift，Control，Alt，CapsLock，Esc，Spacebar，PageUp，PageDown，End，Home，Left，Right，Up，Down，PrintScreen，Insert，Del，Win，F1～F12，NumLock，Scroll 等。</p>
+<p>如果同时按下一个控制键和一个符号键，则返回符号键的键名。比如，按下 Ctrl + a，则返回<code>a</code>；按下 Shift + a，则返回大写的<code>A</code>。</p>
+<p>如果无法识别键名，返回字符串<code>Unidentified</code>。</p>
+<h5 id="5-3-4-KeyboardEvent-location"><a href="#5-3-4-KeyboardEvent-location" class="headerlink" title="5.3.4 KeyboardEvent.location"></a>5.3.4 KeyboardEvent.location</h5><p><code>KeyboardEvent.location</code>属性返回一个整数，表示按下的键处在键盘的哪一个区域。它可能取以下值。</p>
+<ul>
+<li>0：处在键盘的主区域，或者无法判断处于哪一个区域。</li>
+<li>1：处在键盘的左侧，只适用那些有两个位置的键（比如 Ctrl 和 Shift 键）。</li>
+<li>2：处在键盘的右侧，只适用那些有两个位置的键（比如 Ctrl 和 Shift 键）。</li>
+<li>3：处在数字小键盘。</li>
+</ul>
+<h5 id="5-3-5-KeyboardEvent-repeat"><a href="#5-3-5-KeyboardEvent-repeat" class="headerlink" title="5.3.5 KeyboardEvent.repeat"></a>5.3.5 KeyboardEvent.repeat</h5><p><code>KeyboardEvent.repeat</code>返回一个布尔值，代表该键是否被按着不放，以便判断是否重复这个键，即浏览器会持续触发<code>keydown</code>和<code>keypress</code>事件，直到用户松开手为止。</p>
+<h4 id="5-4-KeyboardEvent-的实例方法"><a href="#5-4-KeyboardEvent-的实例方法" class="headerlink" title="5.4 KeyboardEvent 的实例方法"></a>5.4 KeyboardEvent 的实例方法</h4><h5 id="5-4-1-KeyboardEvent-getModifierState"><a href="#5-4-1-KeyboardEvent-getModifierState" class="headerlink" title="5.4.1 KeyboardEvent.getModifierState()"></a>5.4.1 KeyboardEvent.getModifierState()</h5><p><code>KeyboardEvent.getModifierState()</code>方法返回一个布尔值，表示是否按下或激活指定的功能键。它的常用参数如下。</p>
+<ul>
+<li>Alt：Alt 键</li>
+<li>CapsLock：大写锁定键</li>
+<li>Control：Ctrl 键</li>
+<li>Meta：Meta 键</li>
+<li>NumLock：数字键盘开关键</li>
+<li>Shift：Shift 键</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (</span><br><span class="line">  event.getModifierState(<span class="string">&#x27;Control&#x27;</span>) +</span><br><span class="line">  event.getModifierState(<span class="string">&#x27;Alt&#x27;</span>) +</span><br><span class="line">  event.getModifierState(<span class="string">&#x27;Meta&#x27;</span>) &gt; <span class="number">1</span></span><br><span class="line">) &#123;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码表示，只要<code>Control</code>、<code>Alt</code>、<code>Meta</code>里面，同时按下任意两个或两个以上的键就返回。</p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10048/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-键盘事件</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2021/05/29/%E6%89%93%E5%8D%A10049/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            打卡0049
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/05/28/%E6%89%93%E5%8D%A10047/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">打卡0047</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
+    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Ye Ma
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        <!-- 
+         -->
+        
+        
+        Powered by Hexo
+        <span class="division">|</span>
+        Theme - Ayer
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="maeBlog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/travel/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about/2021">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/gHZjdQRcOL1WxSP.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/pZNYuI4QFnfwb7l.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>

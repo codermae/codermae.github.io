@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
+       
+      <meta name="keywords" content="blog" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>打卡0051 |  maeBlog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-打卡0051"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  打卡0051
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/29/%E6%89%93%E5%8D%A10051/" class="article-date">
+  <time datetime="2021-05-29T04:45:38.000Z" itemprop="datePublished">2021-05-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.7k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">10 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#444693>今夜不知何处宿，平沙万里绝人烟。</font></p>
+<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="8-触摸事件"><a href="#8-触摸事件" class="headerlink" title="8. 触摸事件"></a>8. 触摸事件</h3><h4 id="8-1-触摸操作概述"><a href="#8-1-触摸操作概述" class="headerlink" title="8.1 触摸操作概述"></a>8.1 触摸操作概述</h4><p>浏览器的触摸 API 由三个部分组成。</p>
+<ul>
+<li>Touch：一个触摸点</li>
+<li>TouchList：多个触摸点的集合</li>
+<li>TouchEvent：触摸引发的事件实例</li>
+</ul>
+<p><code>Touch</code>接口的实例对象用来表示触摸点（一根手指或者一根触摸笔），包括位置、大小、形状、压力、目标元素等属性。有时，触摸动作由多个触摸点（多根手指）组成，多个触摸点的集合由<code>TouchList</code>接口的实例对象表示。<code>TouchEvent</code>接口的实例对象代表由触摸引发的事件，只有触摸屏才会引发这一类事件。</p>
+<p>很多时候，触摸事件和鼠标事件同时触发，即使这个时候并没有用到鼠标。这是为了让那些只定义鼠标事件、没有定义触摸事件的代码，在触摸屏的情况下仍然能用。如果想避免这种情况，可以用<code>event.preventDefault</code>方法阻止发出鼠标事件。</p>
+<span id="more"></span>
+<h4 id="8-2-Touch-接口"><a href="#8-2-Touch-接口" class="headerlink" title="8.2 Touch 接口"></a>8.2 Touch 接口</h4><h5 id="8-2-1-Touch-接口概述"><a href="#8-2-1-Touch-接口概述" class="headerlink" title="8.2.1 Touch 接口概述"></a>8.2.1 Touch 接口概述</h5><p>Touch 接口代表单个触摸点。触摸点可能是一根手指，也可能是一根触摸笔。</p>
+<p>浏览器原生提供<code>Touch</code>构造函数，用来生成<code>Touch</code>实例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> touch = <span class="keyword">new</span> Touch(touchOptions);</span><br></pre></td></tr></table></figure>
+<p><code>Touch</code>构造函数接受一个配置对象作为参数，它有以下属性。</p>
+<ul>
+<li><code>identifier</code>：必需，类型为整数，表示触摸点的唯一 ID。</li>
+<li><code>target</code>：必需，类型为元素节点，表示触摸点开始时所在的网页元素。</li>
+<li><code>clientX</code>：可选，类型为数值，表示触摸点相对于浏览器窗口左上角的水平距离，默认为0。</li>
+<li><code>clientY</code>：可选，类型为数值，表示触摸点相对于浏览器窗口左上角的垂直距离，默认为0。</li>
+<li><code>screenX</code>：可选，类型为数值，表示触摸点相对于屏幕左上角的水平距离，默认为0。</li>
+<li><code>screenY</code>：可选，类型为数值，表示触摸点相对于屏幕左上角的垂直距离，默认为0。</li>
+<li><code>pageX</code>：可选，类型为数值，表示触摸点相对于网页左上角的水平位置（即包括页面的滚动距离），默认为0。</li>
+<li><code>pageY</code>：可选，类型为数值，表示触摸点相对于网页左上角的垂直位置（即包括页面的滚动距离），默认为0。</li>
+<li><code>radiusX</code>：可选，类型为数值，表示触摸点周围受到影响的椭圆范围的 X 轴半径，默认为0。</li>
+<li><code>radiusY</code>：可选：类型为数值，表示触摸点周围受到影响的椭圆范围的 Y 轴半径，默认为0。</li>
+<li><code>rotationAngle</code>：可选，类型为数值，表示触摸区域的椭圆的旋转角度，单位为度数，在0到90度之间，默认值为0。</li>
+<li><code>force</code>：可选，类型为数值，范围在<code>0</code>到<code>1</code>之间，表示触摸压力。<code>0</code>代表没有压力，<code>1</code>代表硬件所能识别的最大压力，默认为<code>0</code>。</li>
+</ul>
+<h5 id="8-2-2-Touch-接口的实例属性"><a href="#8-2-2-Touch-接口的实例属性" class="headerlink" title="8.2.2 Touch 接口的实例属性"></a>8.2.2 Touch 接口的实例属性</h5><h6 id="（1）Touch-identifier"><a href="#（1）Touch-identifier" class="headerlink" title="（1）Touch.identifier"></a>（1）Touch.identifier</h6><p><code>Touch.identifier</code>属性返回一个整数，表示触摸点的唯一 ID。这个值在整个触摸过程保持不变，直到触摸事件结束。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">someElement.addEventListener(<span class="string">&#x27;touchmove&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; e.changedTouches.length; i++) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.changedTouches[i].identifier);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h6 id="（2）Touch-screenX，Touch-screenY，Touch-clientX，Touch-clientY，pageX，pageY"><a href="#（2）Touch-screenX，Touch-screenY，Touch-clientX，Touch-clientY，pageX，pageY" class="headerlink" title="（2）Touch.screenX，Touch.screenY，Touch.clientX，Touch.clientY，pageX，pageY"></a>（2）Touch.screenX，Touch.screenY，Touch.clientX，Touch.clientY，pageX，pageY</h6><p><code>Touch.screenX</code>属性和<code>Touch.screenY</code>属性，分别表示触摸点相对于屏幕左上角的横坐标和纵坐标，与页面是否滚动无关。</p>
+<p><code>Touch.clientX</code>属性和<code>Touch.clientY</code>属性，分别表示触摸点相对于浏览器视口左上角的横坐标和纵坐标，与页面是否滚动无关。</p>
+<p><code>Touch.pageX</code>属性和<code>Touch.pageY</code>属性，分别表示触摸点相对于当前页面左上角的横坐标和纵坐标，包含了页面滚动带来的位移。</p>
+<h6 id="（3）Touch-radiusX，Touch-radiusY，Touch-rotationAngle"><a href="#（3）Touch-radiusX，Touch-radiusY，Touch-rotationAngle" class="headerlink" title="（3）Touch.radiusX，Touch.radiusY，Touch.rotationAngle"></a>（3）Touch.radiusX，Touch.radiusY，Touch.rotationAngle</h6><p><code>Touch.radiusX</code>属性和<code>Touch.radiusY</code>属性，分别返回触摸点周围受到影响的椭圆范围的 X 轴半径和 Y 轴半径，单位为像素。乘以 2 就可以得到触摸范围的宽度和高度。</p>
+<p><code>Touch.rotationAngle</code>属性表示触摸区域的椭圆的旋转角度，单位为度数，在<code>0</code>到<code>90</code>度之间。</p>
+<p>上面这三个属性共同定义了用户与屏幕接触的区域，对于描述手指这一类非精确的触摸，很有帮助。指尖接触屏幕，触摸范围会形成一个椭圆，这三个属性就用来描述这个椭圆区域。</p>
+<p>下面是一个示例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">div.addEventListener(<span class="string">&#x27;touchstart&#x27;</span>, rotate);</span><br><span class="line">div.addEventListener(<span class="string">&#x27;touchmove&#x27;</span>, rotate);</span><br><span class="line">div.addEventListener(<span class="string">&#x27;touchend&#x27;</span>, rotate);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">rotate</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> touch = e.changedTouches.item(<span class="number">0</span>);</span><br><span class="line">  e.preventDefault();</span><br><span class="line"></span><br><span class="line">  src.style.width = touch.radiusX * <span class="number">2</span> + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">  src.style.height = touch.radiusY * <span class="number">2</span> + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">  src.style.transform = <span class="string">&#x27;rotate(&#x27;</span> + touch.rotationAngle + <span class="string">&#x27;deg)&#x27;</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h6 id="（4）Touch-force"><a href="#（4）Touch-force" class="headerlink" title="（4）Touch.force"></a>（4）Touch.force</h6><p><code>Touch.force</code>属性返回一个<code>0</code>到<code>1</code>之间的数值，表示触摸压力。<code>0</code>代表没有压力，<code>1</code>代表硬件所能识别的最大压力。</p>
+<h6 id="（5）Touch-target"><a href="#（5）Touch-target" class="headerlink" title="（5）Touch.target"></a>（5）Touch.target</h6><p><code>Touch.target</code>属性返回一个元素节点，代表触摸发生时所在的那个元素节点。即使触摸点已经离开了这个节点，该属性依然不变。</p>
+<h4 id="8-3-TouchList-接口"><a href="#8-3-TouchList-接口" class="headerlink" title="8.3 TouchList 接口"></a>8.3 TouchList 接口</h4><p><code>TouchList</code>接口表示一组触摸点的集合。它的实例是一个类似数组的对象，成员是<code>Touch</code>的实例对象，表示所有触摸点。用户用三根手指触摸，产生的<code>TouchList</code>实例就会包含三个成员，每根手指的触摸点对应一个<code>Touch</code>实例对象。</p>
+<p>它的实例主要通过触摸事件的<code>TouchEvent.touches</code>、<code>TouchEvent.changedTouches</code>、<code>TouchEvent.targetTouches</code>这几个属性获取。</p>
+<p>它的实例属性和实例方法只有两个。</p>
+<ul>
+<li><code>TouchList.length</code>：数值，表示成员数量（即触摸点的数量）。</li>
+<li><code>TouchList.item()</code>：返回指定位置的成员，它的参数是该成员的位置编号（从零开始）。</li>
+</ul>
+<h4 id="8-4-TouchEvent-接口"><a href="#8-4-TouchEvent-接口" class="headerlink" title="8.4 TouchEvent 接口"></a>8.4 TouchEvent 接口</h4><h5 id="8-4-1-概述"><a href="#8-4-1-概述" class="headerlink" title="8.4.1 概述"></a>8.4.1 概述</h5><p>TouchEvent 接口继承了 Event 接口，表示由触摸引发的事件实例，通常来自触摸屏或轨迹板。除了被继承的属性以外，它还有一些自己的属性。</p>
+<p>浏览器原生提供<code>TouchEvent()</code>构造函数，用来生成触摸事件的实例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> TouchEvent(type, options)</span><br></pre></td></tr></table></figure>
+<p><code>TouchEvent()</code>构造函数可以接受两个参数，第一个参数是字符串，表示事件类型；第二个参数是事件的配置对象，该参数是可选的，对象的所有属性也是可选的。除了Event接口的配置属性，该接口还有一些自己的配置属性。</p>
+<ul>
+<li><code>touches</code>：<code>TouchList</code>实例，代表所有的当前处于活跃状态的触摸点，默认值是一个空数组<code>[]</code>。</li>
+<li><code>targetTouches</code>：<code>TouchList</code>实例，代表所有处在触摸的目标元素节点内部、且仍然处于活动状态的触摸点，默认值是一个空数组<code>[]</code>。</li>
+<li><code>changedTouches</code>：<code>TouchList</code>实例，代表本次触摸事件的相关触摸点，默认值是一个空数组<code>[]</code>。</li>
+<li><code>ctrlKey</code>：布尔值，表示 Ctrl 键是否同时按下，默认值为<code>false</code>。</li>
+<li><code>shiftKey</code>：布尔值，表示 Shift 键是否同时按下，默认值为<code>false</code>。</li>
+<li><code>altKey</code>：布尔值，表示 Alt 键是否同时按下，默认值为<code>false</code>。</li>
+<li><code>metaKey</code>：布尔值，表示 Meta 键（或 Windows 键）是否同时按下，默认值为<code>false</code>。</li>
+</ul>
+<h5 id="8-4-2-实例属性"><a href="#8-4-2-实例属性" class="headerlink" title="8.4.2 实例属性"></a>8.4.2 实例属性</h5><p>TouchEvent 接口的实例具有<code>Event</code>实例的所有属性和方法，此外还有一些它自己的实例属性，这些属性全部都是只读。</p>
+<h6 id="（1）TouchEvent-altKey，TouchEvent-ctrlKey，TouchEvent-shiftKey，TouchEvent-metaKey"><a href="#（1）TouchEvent-altKey，TouchEvent-ctrlKey，TouchEvent-shiftKey，TouchEvent-metaKey" class="headerlink" title="（1）TouchEvent.altKey，TouchEvent.ctrlKey，TouchEvent.shiftKey，TouchEvent.metaKey"></a>（1）TouchEvent.altKey，TouchEvent.ctrlKey，TouchEvent.shiftKey，TouchEvent.metaKey</h6><ul>
+<li><code>TouchEvent.altKey</code>：布尔值，表示触摸时是否按下了 Alt 键。</li>
+<li><code>TouchEvent.ctrlKey</code>：布尔值，表示触摸时是否按下了 Ctrl 键。</li>
+<li><code>TouchEvent.shiftKey</code>：布尔值：表示触摸时是否按下了 Shift 键。</li>
+<li><code>TouchEvent.metaKey</code>：布尔值，表示触摸时是否按下了 Meta 键（或 Windows 键）。</li>
+</ul>
+<p>下面是一个示例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">someElement.addEventListener(<span class="string">&#x27;touchstart&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;altKey = &#x27;</span> + e.altKey);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;ctrlKey = &#x27;</span> + e.ctrlKey);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;metaKey = &#x27;</span> + e.metaKey);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;shiftKey = &#x27;</span> + e.shiftKey);</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h6 id="（2）TouchEvent-changedTouches"><a href="#（2）TouchEvent-changedTouches" class="headerlink" title="（2）TouchEvent.changedTouches"></a>（2）TouchEvent.changedTouches</h6><p><code>TouchEvent.changedTouches</code>属性返回一个<code>TouchList</code>实例，成员是一组<code>Touch</code>实例对象，表示本次触摸事件的相关触摸点。</p>
+<p>对于不同的时间，该属性的含义有所不同。</p>
+<ul>
+<li><code>touchstart</code>事件：被激活的触摸点</li>
+<li><code>touchmove</code>事件：发生变化的触摸点</li>
+<li><code>touchend</code>事件：消失的触摸点（即不再被触碰的点）</li>
+</ul>
+<p>下面是一个示例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">someElement.addEventListener(<span class="string">&#x27;touchmove&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; e.changedTouches.length; i++) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.changedTouches[i].identifier);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h6 id="（3）TouchEvent-touches"><a href="#（3）TouchEvent-touches" class="headerlink" title="（3）TouchEvent.touches"></a>（3）TouchEvent.touches</h6><p><code>TouchEvent.touches</code>属性返回一个<code>TouchList</code>实例，成员是所有仍然处于活动状态（即触摸中）的触摸点。一般来说，一个手指就是一个触摸点。</p>
+<p>下面是一个示例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">someElement.addEventListener(<span class="string">&#x27;touchstart&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">switch</span> (e.touches.length) &#123;</span><br><span class="line">    <span class="comment">// 一根手指触摸</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: handle_one_touch(e); <span class="keyword">break</span>;</span><br><span class="line">    <span class="comment">// 两根手指触摸</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: handle_two_touches(e); <span class="keyword">break</span>;</span><br><span class="line">    <span class="comment">// 三根手指触摸</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>: handle_three_touches(e); <span class="keyword">break</span>;</span><br><span class="line">    <span class="comment">// 其他情况</span></span><br><span class="line">    <span class="keyword">default</span>: <span class="built_in">console</span>.log(<span class="string">&#x27;Not supported&#x27;</span>); <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h6 id="（4）TouchEvent-targetTouches"><a href="#（4）TouchEvent-targetTouches" class="headerlink" title="（4）TouchEvent.targetTouches"></a>（4）TouchEvent.targetTouches</h6><p><code>TouchEvent.targetTouches</code>属性返回一个<code>TouchList</code>实例，成员是触摸事件的目标元素节点内部、所有仍然处于活动状态（即触摸中）的触摸点。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">touches_in_target</span>(<span class="params">ev</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (ev.touches.length === ev.targetTouches.length ? <span class="literal">true</span> : <span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码用来判断，是否所有触摸点都在目标元素内。</p>
+<h4 id="8-5-触摸事件的种类"><a href="#8-5-触摸事件的种类" class="headerlink" title="8.5 触摸事件的种类"></a>8.5 触摸事件的种类</h4><p>触摸引发的事件，有以下几种。可以通过<code>TouchEvent.type</code>属性，查看到底发生的是哪一种事件。</p>
+<ul>
+<li><code>touchstart</code>：用户开始触摸时触发，它的<code>target</code>属性返回发生触摸的元素节点。</li>
+<li><code>touchend</code>：用户不再接触触摸屏时（或者移出屏幕边缘时）触发，它的<code>target</code>属性与<code>touchstart</code>事件一致的，就是开始触摸时所在的元素节点。它的<code>changedTouches</code>属性返回一个<code>TouchList</code>实例，包含所有不再触摸的触摸点（即<code>Touch</code>实例对象）。</li>
+<li><code>touchmove</code>：用户移动触摸点时触发，它的<code>target</code>属性与<code>touchstart</code>事件一致。如果触摸的半径、角度、力度发生变化，也会触发该事件。</li>
+<li><code>touchcancel</code>：触摸点取消时触发，比如在触摸区域跳出一个模态窗口（modal window）、触摸点离开了文档区域（进入浏览器菜单栏）、用户的触摸点太多，超过了支持的上限（自动取消早先的触摸点）。</li>
+</ul>
+<p>下面是一个例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;canvas&#x27;</span>)[<span class="number">0</span>];</span><br><span class="line">el.addEventListener(<span class="string">&#x27;touchstart&#x27;</span>, handleStart, <span class="literal">false</span>);</span><br><span class="line">el.addEventListener(<span class="string">&#x27;touchmove&#x27;</span>, handleMove, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleStart</span>(<span class="params">evt</span>) </span>&#123;</span><br><span class="line">  evt.preventDefault();</span><br><span class="line">  <span class="keyword">var</span> touches = evt.changedTouches;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; touches.length; i++) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(touches[i].pageX, touches[i].pageY);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleMove</span>(<span class="params">evt</span>) </span>&#123;</span><br><span class="line">  evt.preventDefault();</span><br><span class="line">  <span class="keyword">var</span> touches = evt.changedTouches;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; touches.length; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> touch = touches[i];</span><br><span class="line">    <span class="built_in">console</span>.log(touch.pageX, touch.pageY);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10051/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-触摸事件</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2021/05/29/%E6%89%93%E5%8D%A10052/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            打卡0052
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/05/29/%E6%89%93%E5%8D%A10050/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">打卡0050</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
+    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Ye Ma
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        <!-- 
+         -->
+        
+        
+        Powered by Hexo
+        <span class="division">|</span>
+        Theme - Ayer
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="maeBlog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/travel/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about/2021">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/gHZjdQRcOL1WxSP.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/pZNYuI4QFnfwb7l.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>
