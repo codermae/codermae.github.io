@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-29T05:48:27.034Z</updated>
+  <updated>2021-05-30T08:39:56.392Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,108 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0056</title>
+    <link href="https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10056/"/>
+    <id>https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10056/</id>
+    <published>2021-05-30T06:39:04.000Z</published>
+    <updated>2021-05-30T08:39:56.392Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#c77eb5&gt;最好的时光在路上，一路向阳。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;2-window-对象&quot;&gt;&lt;a href=&quot;#2-window-对象&quot; class=&quot;headerlink&quot; title=&quot;2. window 对象&quot;&gt;&lt;/a&gt;2. window 对象&lt;/h3&gt;&lt;h4 id=&quot;2-1-概述&quot;&gt;&lt;a href=&quot;#2-1-概述&quot; class=&quot;headerlink&quot; title=&quot;2.1 概述&quot;&gt;&lt;/a&gt;2.1 概述&lt;/h4&gt;&lt;p&gt;浏览器里面，&lt;code&gt;window&lt;/code&gt;对象（注意，&lt;code&gt;w&lt;/code&gt;为小写）指当前的浏览器窗口。它也是当前页面的顶层对象，即最高一层的对象，所有其他对象都是它的下属。一个变量如果未声明，那么默认就是顶层对象的属性。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;a = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.a &lt;span class=&quot;comment&quot;&gt;// 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，&lt;code&gt;a&lt;/code&gt;是一个没有声明就直接赋值的变量，它自动成为顶层对象的属性。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;window&lt;/code&gt;有自己的实体含义，其实不适合当作最高一层的顶层对象，这是一个语言的设计失误。最早，设计这门语言的时候，原始设想是语言内置的对象越少越好，这样可以提高浏览器的性能。因此，语言设计者 Brendan Eich 就把&lt;code&gt;window&lt;/code&gt;对象当作顶层对象，所有未声明就赋值的变量都自动变成&lt;code&gt;window&lt;/code&gt;对象的属性。这种设计使得编译阶段无法检测出未声明变量，但到了今天已经没有办法纠正了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 浏览器模型-window 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-window-%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0055</title>
+    <link href="https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10055/"/>
+    <id>https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10055/</id>
+    <published>2021-05-30T05:53:33.000Z</published>
+    <updated>2021-05-30T08:39:48.476Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#7a1723&gt;我与春风皆过客，你携秋水揽星河。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;1-浏览器环境概述&quot;&gt;&lt;a href=&quot;#1-浏览器环境概述&quot; class=&quot;headerlink&quot; title=&quot;1. 浏览器环境概述&quot;&gt;&lt;/a&gt;1. 浏览器环境概述&lt;/h3&gt;&lt;p&gt;JavaScript 是浏览器的内置脚本语言。也就是说，浏览器内置了 JavaScript 引擎，并且提供各种接口，让 JavaScript 脚本可以控制浏览器的各种功能。一旦网页内嵌了 JavaScript 脚本，浏览器加载网页，就会去执行脚本，从而达到操作浏览器的目的，实现网页的各种动态效果。&lt;/p&gt;
+&lt;p&gt;本章开始介绍浏览器提供的各种 JavaScript 接口。首先，介绍 JavaScript 代码嵌入网页的方法。&lt;/p&gt;
+&lt;h4 id=&quot;1-1-代码嵌入网页的方法&quot;&gt;&lt;a href=&quot;#1-1-代码嵌入网页的方法&quot; class=&quot;headerlink&quot; title=&quot;1.1 代码嵌入网页的方法&quot;&gt;&lt;/a&gt;1.1 代码嵌入网页的方法&lt;/h4&gt;&lt;p&gt;网页中嵌入 JavaScript 代码，主要有四种方法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;元素直接嵌入代码。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;标签加载外部脚本&lt;/li&gt;
+&lt;li&gt;事件属性&lt;/li&gt;
+&lt;li&gt;URL 协议&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 浏览器模型-浏览器环境概述" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83%E6%A6%82%E8%BF%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0054</title>
+    <link href="https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10054/"/>
+    <id>https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10054/</id>
+    <published>2021-05-30T05:39:22.000Z</published>
+    <updated>2021-05-30T08:39:35.237Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#65c294&gt;生活就是这样，别人只看结果，自我独撑过程。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;11-GlobalEventHandlers-接口&quot;&gt;&lt;a href=&quot;#11-GlobalEventHandlers-接口&quot; class=&quot;headerlink&quot; title=&quot;11. GlobalEventHandlers 接口&quot;&gt;&lt;/a&gt;11. GlobalEventHandlers 接口&lt;/h3&gt;&lt;p&gt;指定事件的回调函数，推荐使用的方法是元素的&lt;code&gt;addEventListener&lt;/code&gt;方法。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;div.addEventListener(&lt;span class=&quot;string&quot;&gt;&amp;#x27;click&amp;#x27;&lt;/span&gt;, clickHandler, &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;除了之外，还有一种方法可以直接指定事件的回调函数。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;div.onclick = clickHandler;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这个接口是由&lt;code&gt;GlobalEventHandlers&lt;/code&gt;接口提供的。它的优点是使用比较方便，缺点是只能为每个事件指定一个回调函数，并且无法指定事件触发的阶段（捕获阶段还是冒泡阶段）。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;HTMLElement&lt;/code&gt;、&lt;code&gt;Document&lt;/code&gt;和&lt;code&gt;Window&lt;/code&gt;都继承了这个接口，也就是说，各种 HTML 元素、&lt;code&gt;document&lt;/code&gt;对象、&lt;code&gt;window&lt;/code&gt;对象上面都可以使用&lt;code&gt;GlobalEventHandlers&lt;/code&gt;接口提供的属性。下面就列出这个接口提供的主要的事件属性。&lt;/p&gt;
+&lt;h4 id=&quot;11-1-GlobalEventHandlers-onabort&quot;&gt;&lt;a href=&quot;#11-1-GlobalEventHandlers-onabort&quot; class=&quot;headerlink&quot; title=&quot;11.1 GlobalEventHandlers.onabort&quot;&gt;&lt;/a&gt;11.1 GlobalEventHandlers.onabort&lt;/h4&gt;&lt;p&gt; 某个对象的&lt;code&gt;abort&lt;/code&gt;事件（停止加载）发生时，就会调用&lt;code&gt;onabort&lt;/code&gt;属性指定的回调函数。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 事件-GlobalEventHandlers 接口" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-GlobalEventHandlers-%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0053</title>
+    <link href="https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10053/"/>
+    <id>https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10053/</id>
+    <published>2021-05-30T04:50:15.000Z</published>
+    <updated>2021-05-30T08:39:25.641Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#c37e00&gt;你未必万丈光芒，但你温暖有光。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;10-其他常见事件&quot;&gt;&lt;a href=&quot;#10-其他常见事件&quot; class=&quot;headerlink&quot; title=&quot;10. 其他常见事件&quot;&gt;&lt;/a&gt;10. 其他常见事件&lt;/h3&gt;&lt;h4 id=&quot;10-1-资源事件&quot;&gt;&lt;a href=&quot;#10-1-资源事件&quot; class=&quot;headerlink&quot; title=&quot;10.1 资源事件&quot;&gt;&lt;/a&gt;10.1 资源事件&lt;/h4&gt;&lt;h5 id=&quot;10-1-1-beforeunload-事件&quot;&gt;&lt;a href=&quot;#10-1-1-beforeunload-事件&quot; class=&quot;headerlink&quot; title=&quot;10.1.1 beforeunload 事件&quot;&gt;&lt;/a&gt;10.1.1 beforeunload 事件&lt;/h5&gt;&lt;p&gt;&lt;code&gt;beforeunload&lt;/code&gt;事件在窗口、文档、各种资源将要卸载前触发。它可以用来防止用户不小心卸载资源。&lt;/p&gt;
+&lt;p&gt;如果该事件对象的&lt;code&gt;returnValue&lt;/code&gt;属性是一个非空字符串，那么浏览器就会弹出一个对话框，询问用户是否要卸载该资源。但是，用户指定的字符串可能无法显示，浏览器会展示预定义的字符串。如果用户点击“取消”按钮，资源就不会卸载。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.addEventListener(&lt;span class=&quot;string&quot;&gt;&amp;#x27;beforeunload&amp;#x27;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;event&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  event.returnValue = &lt;span class=&quot;string&quot;&gt;&amp;#x27;你确定离开吗？&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，用户如果关闭窗口，浏览器会弹出一个窗口，要求用户确认。&lt;/p&gt;
+&lt;p&gt;浏览器对这个事件的行为很不一致，有的浏览器调用&lt;code&gt;event.preventDefault()&lt;/code&gt;，也会弹出对话框。IE 浏览器需要显式返回一个非空的字符串，才会弹出对话框。而且，大多数浏览器在对话框中不显示指定文本，只显示默认文本。因此，可以采用下面的写法，取得最大的兼容性。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.addEventListener(&lt;span class=&quot;string&quot;&gt;&amp;#x27;beforeunload&amp;#x27;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;e&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; confirmationMessage = &lt;span class=&quot;string&quot;&gt;&amp;#x27;确认关闭窗口？&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  e.returnValue = confirmationMessage;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; confirmationMessage;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 事件-其他常见事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E5%85%B6%E4%BB%96%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0052</title>
@@ -445,124 +547,6 @@
     
     
     <category term="JS DOM-ParentNode 接口，ChildNode 接口" scheme="https://codermae.github.io/tags/JS-DOM-ParentNode-%E6%8E%A5%E5%8F%A3%EF%BC%8CChildNode-%E6%8E%A5%E5%8F%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0036</title>
-    <link href="https://codermae.github.io/2021/05/23/%E6%89%93%E5%8D%A10036/"/>
-    <id>https://codermae.github.io/2021/05/23/%E6%89%93%E5%8D%A10036/</id>
-    <published>2021-05-23T04:48:16.000Z</published>
-    <updated>2021-05-23T05:23:42.416Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=gray&gt;老骥伏枥，志在千里。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;3-NodeList-接口，HTMLCollection-接口&quot;&gt;&lt;a href=&quot;#3-NodeList-接口，HTMLCollection-接口&quot; class=&quot;headerlink&quot; title=&quot;3. NodeList 接口，HTMLCollection 接口&quot;&gt;&lt;/a&gt;3. NodeList 接口，HTMLCollection 接口&lt;/h3&gt;&lt;p&gt;节点都是单个对象，有时需要一种数据结构，能够容纳多个节点。DOM 提供两种节点集合，用于容纳多个节点：&lt;code&gt;NodeList&lt;/code&gt;和&lt;code&gt;HTMLCollection&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;这两种集合都属于接口规范。许多 DOM 属性和方法，返回的结果是&lt;code&gt;NodeList&lt;/code&gt;实例或&lt;code&gt;HTMLCollection&lt;/code&gt;实例。主要区别是，&lt;code&gt;NodeList&lt;/code&gt;可以包含各种类型的节点，&lt;code&gt;HTMLCollection&lt;/code&gt;只能包含 HTML 元素节点。&lt;/p&gt;
-&lt;h4 id=&quot;3-1-NodeList-接口&quot;&gt;&lt;a href=&quot;#3-1-NodeList-接口&quot; class=&quot;headerlink&quot; title=&quot;3.1 NodeList 接口&quot;&gt;&lt;/a&gt;3.1 NodeList 接口&lt;/h4&gt;&lt;h5 id=&quot;3-1-1-概述&quot;&gt;&lt;a href=&quot;#3-1-1-概述&quot; class=&quot;headerlink&quot; title=&quot;3.1.1 概述&quot;&gt;&lt;/a&gt;3.1.1 概述&lt;/h5&gt;&lt;p&gt;&lt;code&gt;NodeList&lt;/code&gt;实例是一个类似数组的对象，它的成员是节点对象。通过以下方法可以得到&lt;code&gt;NodeList&lt;/code&gt;实例。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Node.childNodes&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;document.querySelectorAll()&lt;/code&gt;等节点搜索方法&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS DOM-NodeList 接口，HTMLCollection 接口" scheme="https://codermae.github.io/tags/JS-DOM-NodeList-%E6%8E%A5%E5%8F%A3%EF%BC%8CHTMLCollection-%E6%8E%A5%E5%8F%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0035</title>
-    <link href="https://codermae.github.io/2021/05/22/%E6%89%93%E5%8D%A10035/"/>
-    <id>https://codermae.github.io/2021/05/22/%E6%89%93%E5%8D%A10035/</id>
-    <published>2021-05-22T01:56:52.000Z</published>
-    <updated>2021-05-22T03:22:26.180Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#375830&gt;恰沐春风共同游，终只叹，木已舟。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;2-Node接口&quot;&gt;&lt;a href=&quot;#2-Node接口&quot; class=&quot;headerlink&quot; title=&quot;2. Node接口&quot;&gt;&lt;/a&gt;2. Node接口&lt;/h3&gt;&lt;p&gt;所有 DOM 节点对象都继承了 Node 接口，拥有一些共同的属性和方法。这是 DOM 操作的基础。&lt;/p&gt;
-&lt;h4 id=&quot;2-1-属性&quot;&gt;&lt;a href=&quot;#2-1-属性&quot; class=&quot;headerlink&quot; title=&quot;2.1 属性&quot;&gt;&lt;/a&gt;2.1 属性&lt;/h4&gt;&lt;h5 id=&quot;2-1-1-Node-prototype-nodeType&quot;&gt;&lt;a href=&quot;#2-1-1-Node-prototype-nodeType&quot; class=&quot;headerlink&quot; title=&quot;2.1.1 Node.prototype.nodeType&quot;&gt;&lt;/a&gt;2.1.1 Node.prototype.nodeType&lt;/h5&gt;&lt;p&gt;&lt;code&gt;nodeType&lt;/code&gt;属性返回一个整数值，表示节点的类型。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.nodeType &lt;span class=&quot;comment&quot;&gt;// 9&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，文档节点的类型值为9。&lt;/p&gt;
-&lt;p&gt;Node 对象定义了几个常量，对应这些类型值。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.nodeType === Node.DOCUMENT_NODE &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，文档节点的&lt;code&gt;nodeType&lt;/code&gt;属性等于常量&lt;code&gt;Node.DOCUMENT_NODE&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;不同节点的&lt;code&gt;nodeType&lt;/code&gt;属性值和对应的常量如下。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;文档节点（document）：9，对应常量&lt;code&gt;Node.DOCUMENT_NODE&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;元素节点（element）：1，对应常量&lt;code&gt;Node.ELEMENT_NODE&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;属性节点（attr）：2，对应常量&lt;code&gt;Node.ATTRIBUTE_NODE&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;文本节点（text）：3，对应常量&lt;code&gt;Node.TEXT_NODE&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;文档片断节点（DocumentFragment）：11，对应常量&lt;code&gt;Node.DOCUMENT_FRAGMENT_NODE&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;文档类型节点（DocumentType）：10，对应常量&lt;code&gt;Node.DOCUMENT_TYPE_NODE&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;注释节点（Comment）：8，对应常量&lt;code&gt;Node.COMMENT_NODE&lt;/code&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS DOM-Node接口" scheme="https://codermae.github.io/tags/JS-DOM-Node%E6%8E%A5%E5%8F%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0034</title>
-    <link href="https://codermae.github.io/2021/05/22/%E6%89%93%E5%8D%A10034/"/>
-    <id>https://codermae.github.io/2021/05/22/%E6%89%93%E5%8D%A10034/</id>
-    <published>2021-05-22T01:21:24.000Z</published>
-    <updated>2021-05-22T03:22:05.059Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#ae6642&gt;无情最是台城柳，依旧烟笼十里堤。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;1-概述&quot;&gt;&lt;a href=&quot;#1-概述&quot; class=&quot;headerlink&quot; title=&quot;1. 概述&quot;&gt;&lt;/a&gt;1. 概述&lt;/h3&gt;&lt;h4 id=&quot;1-1-DOM&quot;&gt;&lt;a href=&quot;#1-1-DOM&quot; class=&quot;headerlink&quot; title=&quot;1.1 DOM&quot;&gt;&lt;/a&gt;1.1 DOM&lt;/h4&gt;&lt;p&gt;DOM 是 JavaScript 操作网页的接口，全称为“文档对象模型”（Document Object Model）。它的作用是将网页转为一个 JavaScript 对象，从而可以用脚本进行各种操作（比如增删内容）。&lt;/p&gt;
-&lt;p&gt;浏览器会根据 DOM 模型，将结构化文档（比如 HTML 和 XML）解析成一系列的节点，再由这些节点组成一个树状结构（DOM Tree）。所有的节点和最终的树状结构，都有规范的对外接口。&lt;/p&gt;
-&lt;p&gt;DOM 只是一个接口规范，可以用各种语言实现。所以严格地说，DOM 不是 JavaScript 语法的一部分，但是 DOM 操作是 JavaScript 最常见的任务，离开了 DOM，JavaScript 就无法控制网页。另一方面，JavaScript 也是最常用于 DOM 操作的语言。后面介绍的就是 JavaScript 对 DOM 标准的实现和用法。&lt;/p&gt;
-&lt;h4 id=&quot;1-2节点&quot;&gt;&lt;a href=&quot;#1-2节点&quot; class=&quot;headerlink&quot; title=&quot;1.2节点&quot;&gt;&lt;/a&gt;1.2节点&lt;/h4&gt;&lt;p&gt;DOM 的最小组成单位叫做节点（node）。文档的树形结构（DOM 树），就是由各种不同类型的节点组成。每个节点可以看作是文档树的一片叶子。&lt;/p&gt;
-&lt;p&gt;节点的类型有七种。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Document&lt;/code&gt;：整个文档树的顶层节点&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DocumentType&lt;/code&gt;：&lt;code&gt;doctype&lt;/code&gt;标签（比如&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt;）&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Element&lt;/code&gt;：网页的各种HTML标签（比如&lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;等）&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Attr&lt;/code&gt;：网页元素的属性（比如&lt;code&gt;class=&amp;quot;right&amp;quot;&lt;/code&gt;）&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Text&lt;/code&gt;：标签之间或标签包含的文本&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Comment&lt;/code&gt;：注释&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DocumentFragment&lt;/code&gt;：文档的片段</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS DOM-概述" scheme="https://codermae.github.io/tags/JS-DOM-%E6%A6%82%E8%BF%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0033</title>
-    <link href="https://codermae.github.io/2021/05/22/%E6%89%93%E5%8D%A10033/"/>
-    <id>https://codermae.github.io/2021/05/22/%E6%89%93%E5%8D%A10033/</id>
-    <published>2021-05-22T00:36:17.000Z</published>
-    <updated>2021-05-22T03:21:03.617Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#ef5b9c&gt;你相信时间会抚平一切，可时过境迁，你已不复醒&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS异步操作&quot;&gt;&lt;a href=&quot;#JS异步操作&quot; class=&quot;headerlink&quot; title=&quot;JS异步操作&quot;&gt;&lt;/a&gt;JS异步操作&lt;/h2&gt;&lt;h3 id=&quot;3-Promise对象&quot;&gt;&lt;a href=&quot;#3-Promise对象&quot; class=&quot;headerlink&quot; title=&quot;3. Promise对象&quot;&gt;&lt;/a&gt;3. Promise对象&lt;/h3&gt;&lt;h4 id=&quot;3-1-概述&quot;&gt;&lt;a href=&quot;#3-1-概述&quot; class=&quot;headerlink&quot; title=&quot;3.1 概述&quot;&gt;&lt;/a&gt;3.1 概述&lt;/h4&gt;&lt;p&gt;Promise 对象是 JavaScript 的异步操作解决方案，为异步操作提供统一接口。它起到代理作用（proxy），充当异步操作与回调函数之间的中介，使得异步操作具备同步操作的接口。Promise 可以让异步操作写起来，就像在写同步操作的流程，而不必一层层地嵌套回调函数。&lt;/p&gt;
-&lt;p&gt;注意，本章只是 Promise 对象的简单介绍。为了避免与后续教程的重复，更完整的介绍请看《ES6 标准入门》的《Promise 对象》一章。&lt;/p&gt;
-&lt;p&gt;首先，Promise 是一个对象，也是一个构造函数。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;f1&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;resolve, reject&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// 异步代码...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; p1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Promise&lt;/span&gt;(f1);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，&lt;code&gt;Promise&lt;/code&gt;构造函数接受一个回调函数&lt;code&gt;f1&lt;/code&gt;作为参数，&lt;code&gt;f1&lt;/code&gt;里面是异步操作的代码。然后，返回的&lt;code&gt;p1&lt;/code&gt;就是一个 Promise 实例。&lt;/p&gt;
-&lt;p&gt;Promise 的设计思想是，所有异步任务都返回一个 Promise 实例。Promise 实例有一个&lt;code&gt;then&lt;/code&gt;方法，用来指定下一步的回调函数。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS异步操作-Promise对象" scheme="https://codermae.github.io/tags/JS%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C-Promise%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
