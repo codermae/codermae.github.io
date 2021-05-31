@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-05-30T08:39:56.392Z</updated>
+  <updated>2021-05-31T02:12:17.822Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0058</title>
+    <link href="https://codermae.github.io/2021/05/31/%E6%89%93%E5%8D%A10058/"/>
+    <id>https://codermae.github.io/2021/05/31/%E6%89%93%E5%8D%A10058/</id>
+    <published>2021-05-31T01:26:09.000Z</published>
+    <updated>2021-05-31T02:12:17.822Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#6a6da9&gt;“我拥向宇宙吹来的风 与夏夜相逢 是八月盛景 是清寂长生”&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;4-Cookie&quot;&gt;&lt;a href=&quot;#4-Cookie&quot; class=&quot;headerlink&quot; title=&quot;4. Cookie&quot;&gt;&lt;/a&gt;4. Cookie&lt;/h3&gt;&lt;h4 id=&quot;4-1-概述&quot;&gt;&lt;a href=&quot;#4-1-概述&quot; class=&quot;headerlink&quot; title=&quot;4.1 概述&quot;&gt;&lt;/a&gt;4.1 概述&lt;/h4&gt;&lt;p&gt;Cookie 是服务器保存在浏览器的一小段文本信息，一般大小不能超过4KB。浏览器每次向服务器发出请求，就会自动附上这段信息。&lt;/p&gt;
+&lt;p&gt;Cookie 主要保存状态信息，以下是一些主要用途。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对话（session）管理：保存登录、购物车等需要记录的信息。&lt;/li&gt;
+&lt;li&gt;个性化信息：保存用户的偏好，比如网页的字体大小、背景色等等。&lt;/li&gt;
+&lt;li&gt;追踪用户：记录和分析用户行为。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cookie 不是一种理想的客户端储存机制。它的容量很小（4KB），缺乏数据操作接口，而且会影响性能。客户端储存应该使用 Web storage API 和 IndexedDB。只有那些每次请求都需要让服务器知道的信息，才应该放在 Cookie 里面。&lt;/p&gt;
+&lt;p&gt;每个 Cookie 都有以下几方面的元数据。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cookie 的名字&lt;/li&gt;
+&lt;li&gt;Cookie 的值（真正的数据写在这里面）&lt;/li&gt;
+&lt;li&gt;到期时间（超过这个时间会失效）&lt;/li&gt;
+&lt;li&gt;所属域名（默认为当前域名）&lt;/li&gt;
+&lt;li&gt;生效的路径（默认为当前网址）&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 浏览器模型-Cookie" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Cookie/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0057</title>
+    <link href="https://codermae.github.io/2021/05/31/%E6%89%93%E5%8D%A10057/"/>
+    <id>https://codermae.github.io/2021/05/31/%E6%89%93%E5%8D%A10057/</id>
+    <published>2021-05-31T00:59:48.000Z</published>
+    <updated>2021-05-31T02:12:11.178Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#a3cf62&gt;跟这个世界交手的许多年来，你是否，光彩依旧，兴趣盎然。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;3-Navigator-对象，Screen-对象&quot;&gt;&lt;a href=&quot;#3-Navigator-对象，Screen-对象&quot; class=&quot;headerlink&quot; title=&quot;3. Navigator 对象，Screen 对象&quot;&gt;&lt;/a&gt;3. Navigator 对象，Screen 对象&lt;/h3&gt;&lt;p&gt;&lt;code&gt;window.navigator&lt;/code&gt;属性指向一个包含浏览器和系统信息的 Navigator 对象。脚本通过这个属性了解用户的环境信息。&lt;/p&gt;
+&lt;h4 id=&quot;3-1-Navigator-对象的属性&quot;&gt;&lt;a href=&quot;#3-1-Navigator-对象的属性&quot; class=&quot;headerlink&quot; title=&quot;3.1 Navigator 对象的属性&quot;&gt;&lt;/a&gt;3.1 Navigator 对象的属性&lt;/h4&gt;&lt;h5 id=&quot;3-1-1-Navigator-userAgent&quot;&gt;&lt;a href=&quot;#3-1-1-Navigator-userAgent&quot; class=&quot;headerlink&quot; title=&quot;3.1.1 Navigator.userAgent&quot;&gt;&lt;/a&gt;3.1.1 Navigator.userAgent&lt;/h5&gt;&lt;p&gt;&lt;code&gt;navigator.userAgent&lt;/code&gt;属性返回浏览器的 User Agent 字符串，表示浏览器的厂商和版本信息。&lt;/p&gt;
+&lt;p&gt;下面是 Chrome 浏览器的&lt;code&gt;userAgent&lt;/code&gt;。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;navigator.userAgent&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;通过&lt;code&gt;userAgent&lt;/code&gt;属性识别浏览器，不是一个好办法。因为必须考虑所有的情况（不同的浏览器，不同的版本），非常麻烦，而且用户可以改变这个字符串。这个字符串的格式并无统一规定，也无法保证未来的适用性，各种上网设备层出不穷，难以穷尽。所以，现在一般不再通过它识别浏览器了，而是使用“功能识别”方法，即逐一测试当前浏览器是否支持要用到的 JavaScript 功能。&lt;/p&gt;
+&lt;p&gt;不过，通过&lt;code&gt;userAgent&lt;/code&gt;可以大致准确地识别手机浏览器，方法就是测试是否包含&lt;code&gt;mobi&lt;/code&gt;字符串。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; ua = navigator.userAgent.toLowerCase();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;regexp&quot;&gt;/mobi/i&lt;/span&gt;.test(ua)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// 手机浏览器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// 非手机浏览器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 浏览器模型-Navigator 对象，Screen 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Navigator-%E5%AF%B9%E8%B1%A1%EF%BC%8CScreen-%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0056</title>
@@ -495,58 +556,6 @@
     
     
     <category term="JS DOM-Element 节点" scheme="https://codermae.github.io/tags/JS-DOM-Element-%E8%8A%82%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0038</title>
-    <link href="https://codermae.github.io/2021/05/24/%E6%89%93%E5%8D%A10038/"/>
-    <id>https://codermae.github.io/2021/05/24/%E6%89%93%E5%8D%A10038/</id>
-    <published>2021-05-24T01:03:42.000Z</published>
-    <updated>2021-05-24T08:15:11.096Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#987165&gt;人海茫茫，能够相遇本来就是难得的缘分，愿我们都能够以体谅之心爱人，不敷衍每一份真情，互相体谅，好好珍惜。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;5-Document-节点&quot;&gt;&lt;a href=&quot;#5-Document-节点&quot; class=&quot;headerlink&quot; title=&quot;5. Document 节点&quot;&gt;&lt;/a&gt;5. Document 节点&lt;/h3&gt;&lt;h4 id=&quot;5-1-概述&quot;&gt;&lt;a href=&quot;#5-1-概述&quot; class=&quot;headerlink&quot; title=&quot;5.1 概述&quot;&gt;&lt;/a&gt;5.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;document&lt;/code&gt;节点对象代表整个文档，每张网页都有自己的&lt;code&gt;document&lt;/code&gt;对象。&lt;code&gt;window.document&lt;/code&gt;属性就指向这个对象。只要浏览器开始载入 HTML 文档，该对象就存在了，可以直接使用。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;document&lt;/code&gt;对象有不同的办法可以获取。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;正常的网页，直接使用&lt;code&gt;document&lt;/code&gt;或&lt;code&gt;window.document&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;iframe&lt;/code&gt;框架里面的网页，使用&lt;code&gt;iframe&lt;/code&gt;节点的&lt;code&gt;contentDocument&lt;/code&gt;属性 。&lt;/li&gt;
-&lt;li&gt;Ajax 操作返回的文档，使用&lt;code&gt;XMLHttpRequest&lt;/code&gt;对象的&lt;code&gt;responseXML&lt;/code&gt;属性。&lt;/li&gt;
-&lt;li&gt;内部节点的&lt;code&gt;ownerDocument&lt;/code&gt;属性。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;document&lt;/code&gt;对象继承了&lt;code&gt;EventTarget&lt;/code&gt;接口和&lt;code&gt;Node&lt;/code&gt;接口，并且混入（mixin）了&lt;code&gt;ParentNode&lt;/code&gt;接口。这意味着，这些接口的方法都可以在&lt;code&gt;document&lt;/code&gt;对象上调用。除此之外，&lt;code&gt;document&lt;/code&gt;对象还有很多自己的属性和方法。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS DOM-Document 节点" scheme="https://codermae.github.io/tags/JS-DOM-Document-%E8%8A%82%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0037</title>
-    <link href="https://codermae.github.io/2021/05/23/%E6%89%93%E5%8D%A10037/"/>
-    <id>https://codermae.github.io/2021/05/23/%E6%89%93%E5%8D%A10037/</id>
-    <published>2021-05-23T05:09:14.000Z</published>
-    <updated>2021-05-23T05:28:20.221Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=gray&gt;他进入了一个梦乡，那里的稻穗比高粱还高，穗粒比花生还大。风轻轻吹过，他就坐在稻穗下乘凉。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-DOM&quot;&gt;&lt;a href=&quot;#JS-DOM&quot; class=&quot;headerlink&quot; title=&quot;JS DOM&quot;&gt;&lt;/a&gt;JS DOM&lt;/h2&gt;&lt;h3 id=&quot;4-ParentNode-接口，ChildNode-接口&quot;&gt;&lt;a href=&quot;#4-ParentNode-接口，ChildNode-接口&quot; class=&quot;headerlink&quot; title=&quot;4. ParentNode 接口，ChildNode 接口&quot;&gt;&lt;/a&gt;4. ParentNode 接口，ChildNode 接口&lt;/h3&gt;&lt;p&gt;节点对象除了继承 Node 接口以外，还拥有其他接口。&lt;code&gt;ParentNode&lt;/code&gt;接口表示当前节点是一个父节点，提供一些处理子节点的方法。&lt;code&gt;ChildNode&lt;/code&gt;接口表示当前节点是一个子节点，提供一些相关方法。&lt;/p&gt;
-&lt;h4 id=&quot;4-1-ParentNode-接口&quot;&gt;&lt;a href=&quot;#4-1-ParentNode-接口&quot; class=&quot;headerlink&quot; title=&quot;4.1 ParentNode 接口&quot;&gt;&lt;/a&gt;4.1 ParentNode 接口&lt;/h4&gt;&lt;p&gt;如果当前节点是父节点，就会混入了（mixin）&lt;code&gt;ParentNode&lt;/code&gt;接口。由于只有元素节点（element）、文档节点（document）和文档片段节点（documentFragment）拥有子节点，因此只有这三类节点会拥有&lt;code&gt;ParentNode&lt;/code&gt;接口。&lt;/p&gt;
-&lt;h5 id=&quot;4-1-1-ParentNode-children&quot;&gt;&lt;a href=&quot;#4-1-1-ParentNode-children&quot; class=&quot;headerlink&quot; title=&quot;4.1.1 ParentNode.children&quot;&gt;&lt;/a&gt;4.1.1 ParentNode.children&lt;/h5&gt;&lt;p&gt;&lt;code&gt;children&lt;/code&gt;属性返回一个&lt;code&gt;HTMLCollection&lt;/code&gt;实例，成员是当前节点的所有元素子节点。该属性只读。&lt;/p&gt;
-&lt;p&gt;下面是遍历某个节点的所有元素子节点的示例。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; el.children.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS DOM-ParentNode 接口，ChildNode 接口" scheme="https://codermae.github.io/tags/JS-DOM-ParentNode-%E6%8E%A5%E5%8F%A3%EF%BC%8CChildNode-%E6%8E%A5%E5%8F%A3/"/>
     
   </entry>
   
