@@ -159,6 +159,206 @@
     
     
     <article
+  id="post-打卡0063"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/02/%E6%89%93%E5%8D%A10063/"
+    >打卡0063</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/02/%E6%89%93%E5%8D%A10063/" class="article-date">
+  <time datetime="2021-06-02T02:01:32.000Z" itemprop="datePublished">2021-06-02</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#2585a6>独行的人总会遇到有趣的人</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="9-History-对象"><a href="#9-History-对象" class="headerlink" title="9.History 对象"></a>9.History 对象</h3><h4 id="9-1-概述"><a href="#9-1-概述" class="headerlink" title="9.1 概述"></a>9.1 概述</h4><p><code>window.history</code>属性指向 History 对象，它表示当前窗口的浏览历史。</p>
+<p>History 对象保存了当前窗口访问过的所有页面网址。下面代码表示当前窗口一共访问过3个网址。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.history.length <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<p>由于安全原因，浏览器不允许脚本读取这些地址，但是允许在地址之间导航。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 后退到前一个网址</span></span><br><span class="line">history.back()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line">history.go(-<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>浏览器工具栏的“前进”和“后退”按钮，其实就是对 History 对象进行操作。</p> 
+      <a class="article-more-link" href="/2021/06/02/%E6%89%93%E5%8D%A10063/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-History-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 浏览器模型-History 对象</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-打卡0062"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/02/%E6%89%93%E5%8D%A10062/"
+    >打卡0062</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/02/%E6%89%93%E5%8D%A10062/" class="article-date">
+  <time datetime="2021-06-02T01:45:51.000Z" itemprop="datePublished">2021-06-02</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#525f42>无论到了什么年龄，眼里都要有清澈的光芒，看过黑白之后，心中还有彩色留存。</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="8-Storage-接口"><a href="#8-Storage-接口" class="headerlink" title="8.Storage 接口"></a>8.Storage 接口</h3><h4 id="8-1-概述"><a href="#8-1-概述" class="headerlink" title="8.1 概述"></a>8.1 概述</h4><p>Storage 接口用于脚本在浏览器保存数据。两个对象部署了这个接口：<code>window.sessionStorage</code>和<code>window.localStorage</code>。</p>
+<p><code>sessionStorage</code>保存的数据用于浏览器的一次会话（session），当会话结束（通常是窗口关闭），数据被清空；<code>localStorage</code>保存的数据长期存在，下一次访问该网站的时候，网页可以直接读取以前保存的数据。除了保存期限的长短不同，这两个对象的其他方面都一致。</p>
+<p>保存的数据都以“键值对”的形式存在。也就是说，每一项数据都有一个键名和对应的值。所有的数据都是以文本格式保存。</p>
+<p>这个接口很像 Cookie 的强化版，能够使用大得多的存储空间。目前，每个域名的存储上限视浏览器而定，Chrome 是 2.5MB，Firefox 和 Opera 是 5MB，IE 是 10MB。其中，Firefox 的存储空间由一级域名决定，而其他浏览器没有这个限制。也就是说，Firefox 中，<code>a.example.com</code>和<code>b.example.com</code>共享 5MB 的存储空间。另外，与 Cookie 一样，它们也受同域限制。某个网页存入的数据，只有同域下的网页才能读取，如果跨域操作会报错。</p> 
+      <a class="article-more-link" href="/2021/06/02/%E6%89%93%E5%8D%A10062/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Storage-%E6%8E%A5%E5%8F%A3/" rel="tag">JS 浏览器模型-Storage 接口</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-打卡0061"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/02/%E6%89%93%E5%8D%A10061/"
+    >打卡0061</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/02/%E6%89%93%E5%8D%A10061/" class="article-date">
+  <time datetime="2021-06-02T01:04:28.000Z" itemprop="datePublished">2021-06-02</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#2f271d>修炼匠心，在重复的岁月里，对得起每一寸光阴。</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="7-CORS-通信"><a href="#7-CORS-通信" class="headerlink" title="7. CORS 通信"></a>7. CORS 通信</h3><p>CORS 是一个 W3C 标准，全称是“跨域资源共享”（Cross-origin resource sharing）。它允许浏览器向跨域的服务器，发出<code>XMLHttpRequest</code>请求，从而克服了 AJAX 只能同源使用的限制。</p>
+<h4 id="7-1-简介"><a href="#7-1-简介" class="headerlink" title="7.1 简介"></a>7.1 简介</h4><p>CORS 需要浏览器和服务器同时支持。目前，所有浏览器都支持该功能。</p>
+<p>整个 CORS 通信过程，都是浏览器自动完成，不需要用户参与。对于开发者来说，CORS 通信与普通的 AJAX 通信没有差别，代码完全一样。浏览器一旦发现 AJAX 请求跨域，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感知。因此，实现 CORS 通信的关键是服务器。只要服务器实现了 CORS 接口，就可以跨域通信。</p>
+<h4 id="7-2-两种请求"><a href="#7-2-两种请求" class="headerlink" title="7.2 两种请求"></a>7.2 两种请求</h4><p>CORS 请求分成两类：简单请求（simple request）和非简单请求（not-so-simple request）。</p>
+<p>只要同时满足以下两大条件，就属于简单请求。</p>
+<p>（1）请求方法是以下三种方法之一。</p>
+<ul>
+<li>HEAD</li>
+<li>GET</li>
+<li>POST</li>
+</ul>
+<p>（2）HTTP 的头信息不超出以下几种字段。</p>
+<ul>
+<li>Accept</li>
+<li>Accept-Language</li>
+<li>Content-Language</li>
+<li>Last-Event-ID</li>
+<li>Content-Type：只限于三个值<code>application/x-www-form-urlencoded</code>、<code>multipart/form-data</code>、<code>text/plain</code></li>
+</ul> 
+      <a class="article-more-link" href="/2021/06/02/%E6%89%93%E5%8D%A10061/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-CORS-%E9%80%9A%E4%BF%A1/" rel="tag">JS 浏览器模型-CORS 通信</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0060"
   class="article article-type-post"
   itemscope
@@ -619,197 +819,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-GlobalEventHandlers-%E6%8E%A5%E5%8F%A3/" rel="tag">JS 事件-GlobalEventHandlers 接口</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0053"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/30/%E6%89%93%E5%8D%A10053/"
-    >打卡0053</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/30/%E6%89%93%E5%8D%A10053/" class="article-date">
-  <time datetime="2021-05-30T04:50:15.000Z" itemprop="datePublished">2021-05-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#c37e00>你未必万丈光芒，但你温暖有光。</font></p>
-<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="10-其他常见事件"><a href="#10-其他常见事件" class="headerlink" title="10. 其他常见事件"></a>10. 其他常见事件</h3><h4 id="10-1-资源事件"><a href="#10-1-资源事件" class="headerlink" title="10.1 资源事件"></a>10.1 资源事件</h4><h5 id="10-1-1-beforeunload-事件"><a href="#10-1-1-beforeunload-事件" class="headerlink" title="10.1.1 beforeunload 事件"></a>10.1.1 beforeunload 事件</h5><p><code>beforeunload</code>事件在窗口、文档、各种资源将要卸载前触发。它可以用来防止用户不小心卸载资源。</p>
-<p>如果该事件对象的<code>returnValue</code>属性是一个非空字符串，那么浏览器就会弹出一个对话框，询问用户是否要卸载该资源。但是，用户指定的字符串可能无法显示，浏览器会展示预定义的字符串。如果用户点击“取消”按钮，资源就不会卸载。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">&#x27;beforeunload&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">  event.returnValue = <span class="string">&#x27;你确定离开吗？&#x27;</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>上面代码中，用户如果关闭窗口，浏览器会弹出一个窗口，要求用户确认。</p>
-<p>浏览器对这个事件的行为很不一致，有的浏览器调用<code>event.preventDefault()</code>，也会弹出对话框。IE 浏览器需要显式返回一个非空的字符串，才会弹出对话框。而且，大多数浏览器在对话框中不显示指定文本，只显示默认文本。因此，可以采用下面的写法，取得最大的兼容性。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">&#x27;beforeunload&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> confirmationMessage = <span class="string">&#x27;确认关闭窗口？&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  e.returnValue = confirmationMessage;</span><br><span class="line">  <span class="keyword">return</span> confirmationMessage;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/05/30/%E6%89%93%E5%8D%A10053/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E5%85%B6%E4%BB%96%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-其他常见事件</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0052"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/29/%E6%89%93%E5%8D%A10052/"
-    >打卡0052</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/29/%E6%89%93%E5%8D%A10052/" class="article-date">
-  <time datetime="2021-05-29T05:08:24.000Z" itemprop="datePublished">2021-05-29</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#f47920>劝君更尽一杯酒，西出阳关无故人。</font></p>
-<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="9-拖拉事件"><a href="#9-拖拉事件" class="headerlink" title="9. 拖拉事件"></a>9. 拖拉事件</h3><h4 id="9-1-拖拉事件的种类"><a href="#9-1-拖拉事件的种类" class="headerlink" title="9.1 拖拉事件的种类"></a>9.1 拖拉事件的种类</h4><p>拖拉（drag）指的是，用户在某个对象上按下鼠标键不放，拖动它到另一个位置，然后释放鼠标键，将该对象放在那里。</p>
-<p>拖拉的对象有好几种，包括元素节点、图片、链接、选中的文字等等。在网页中，除了元素节点默认不可以拖拉，其他（图片、链接、选中的文字）都可以直接拖拉。为了让元素节点可拖拉，可以将该节点的<code>draggable</code>属性设为<code>true</code>。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div draggable=<span class="string">&quot;true&quot;</span>&gt;</span><br><span class="line">  此区域可拖拉</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>上面代码的<code>div</code>区块，在网页中可以直接用鼠标拖动。松开鼠标键时，拖动效果就会消失，该区块依然在原来的位置。</p>
-<p><code>draggable</code>属性可用于任何元素节点，但是图片（<code>&lt;img&gt;</code>）和链接（<code>&lt;a&gt;</code>）不加这个属性，就可以拖拉。对于它们，用到这个属性的时候，往往是将其设为<code>false</code>，防止拖拉这两种元素。</p>
-<p>注意，一旦某个元素节点的<code>draggable</code>属性设为<code>true</code>，就无法再用鼠标选中该节点内部的文字或子节点了。</p> 
-      <a class="article-more-link" href="/2021/05/29/%E6%89%93%E5%8D%A10052/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E6%8B%96%E6%8B%89%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-拖拉事件</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0051"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/29/%E6%89%93%E5%8D%A10051/"
-    >打卡0051</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/29/%E6%89%93%E5%8D%A10051/" class="article-date">
-  <time datetime="2021-05-29T04:45:38.000Z" itemprop="datePublished">2021-05-29</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#444693>今夜不知何处宿，平沙万里绝人烟。</font></p>
-<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="8-触摸事件"><a href="#8-触摸事件" class="headerlink" title="8. 触摸事件"></a>8. 触摸事件</h3><h4 id="8-1-触摸操作概述"><a href="#8-1-触摸操作概述" class="headerlink" title="8.1 触摸操作概述"></a>8.1 触摸操作概述</h4><p>浏览器的触摸 API 由三个部分组成。</p>
-<ul>
-<li>Touch：一个触摸点</li>
-<li>TouchList：多个触摸点的集合</li>
-<li>TouchEvent：触摸引发的事件实例</li>
-</ul>
-<p><code>Touch</code>接口的实例对象用来表示触摸点（一根手指或者一根触摸笔），包括位置、大小、形状、压力、目标元素等属性。有时，触摸动作由多个触摸点（多根手指）组成，多个触摸点的集合由<code>TouchList</code>接口的实例对象表示。<code>TouchEvent</code>接口的实例对象代表由触摸引发的事件，只有触摸屏才会引发这一类事件。</p>
-<p>很多时候，触摸事件和鼠标事件同时触发，即使这个时候并没有用到鼠标。这是为了让那些只定义鼠标事件、没有定义触摸事件的代码，在触摸屏的情况下仍然能用。如果想避免这种情况，可以用<code>event.preventDefault</code>方法阻止发出鼠标事件。</p> 
-      <a class="article-more-link" href="/2021/05/29/%E6%89%93%E5%8D%A10051/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-触摸事件</a></li></ul>
 
     </footer>
   </div>
