@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-06-02T02:32:50.472Z</updated>
+  <updated>2021-06-02T03:31:14.971Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0064</title>
+    <link href="https://codermae.github.io/2021/06/02/%E6%89%93%E5%8D%A10064/"/>
+    <id>https://codermae.github.io/2021/06/02/%E6%89%93%E5%8D%A10064/</id>
+    <published>2021-06-02T02:33:40.000Z</published>
+    <updated>2021-06-02T03:31:14.971Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#84bf96&gt;It’s raining all the time, but we won’t stop.&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;10-Location对象，URL对象，URLSearchParams对象&quot;&gt;&lt;a href=&quot;#10-Location对象，URL对象，URLSearchParams对象&quot; class=&quot;headerlink&quot; title=&quot;10. Location对象，URL对象，URLSearchParams对象&quot;&gt;&lt;/a&gt;10. Location对象，URL对象，URLSearchParams对象&lt;/h3&gt;&lt;p&gt;URL 是互联网的基础设施之一。浏览器提供了一些原生对象，用来管理 URL。&lt;/p&gt;
+&lt;h4 id=&quot;10-1-Location-对象&quot;&gt;&lt;a href=&quot;#10-1-Location-对象&quot; class=&quot;headerlink&quot; title=&quot;10.1 Location 对象&quot;&gt;&lt;/a&gt;10.1 Location 对象&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Location&lt;/code&gt;对象是浏览器提供的原生对象，提供 URL 相关的信息和操作方法。通过&lt;code&gt;window.location&lt;/code&gt;和&lt;code&gt;document.location&lt;/code&gt;属性，可以拿到这个对象。&lt;/p&gt;
+&lt;h5 id=&quot;10-1-1-属性&quot;&gt;&lt;a href=&quot;#10-1-1-属性&quot; class=&quot;headerlink&quot; title=&quot;10.1.1 属性&quot;&gt;&lt;/a&gt;10.1.1 属性&lt;/h5&gt;&lt;p&gt;&lt;code&gt;Location&lt;/code&gt;对象提供以下属性。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Location.href&lt;/code&gt;:整个 URL。&lt;br&gt;&lt;code&gt;Location.protocol&lt;/code&gt;:当前 URL 的协议，包括冒号（&lt;code&gt;:&lt;/code&gt;）。&lt;br&gt;&lt;code&gt;Location.host&lt;/code&gt;:主机。如果端口不是协议默认的&lt;code&gt;80&lt;/code&gt;和&lt;code&gt;433&lt;/code&gt;，则还会包括冒号（&lt;code&gt;:&lt;/code&gt;）和端口。&lt;br&gt;&lt;code&gt;Location.hostname&lt;/code&gt;:主机名，不包括端口。&lt;br&gt;&lt;code&gt;Location.port&lt;/code&gt;:端口号。&lt;br&gt;&lt;code&gt;Location.pathname&lt;/code&gt;:URL 的路径部分，从根路径/开始。&lt;br&gt;&lt;code&gt;Location.search&lt;/code&gt;:查询字符串部分，从问号&lt;code&gt;?&lt;/code&gt;开始。&lt;br&gt;&lt;code&gt;Location.hash&lt;/code&gt;:片段字符串部分，从&lt;code&gt;#&lt;/code&gt;开始。&lt;br&gt;&lt;code&gt;Location.username&lt;/code&gt;:域名前面的用户名。&lt;br&gt;&lt;code&gt;Location.password&lt;/code&gt;:域名前面的密码。&lt;br&gt;&lt;code&gt;Location.origin&lt;/code&gt;:URL 的协议、主机名和端口。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 浏览器模型-Location对象，URL对象，URLSearchParams对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Location%E5%AF%B9%E8%B1%A1%EF%BC%8CURL%E5%AF%B9%E8%B1%A1%EF%BC%8CURLSearchParams%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0063</title>
@@ -554,33 +577,6 @@
     
     
     <category term="JS 事件-事件模型" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0044</title>
-    <link href="https://codermae.github.io/2021/05/27/%E6%89%93%E5%8D%A10044/"/>
-    <id>https://codermae.github.io/2021/05/27/%E6%89%93%E5%8D%A10044/</id>
-    <published>2021-05-27T01:34:39.000Z</published>
-    <updated>2021-05-27T01:56:54.303Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#853f04&gt;最孤独的人最亲切，受过伤的人总是笑的最灿烂。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;1-EventTarget-接口&quot;&gt;&lt;a href=&quot;#1-EventTarget-接口&quot; class=&quot;headerlink&quot; title=&quot;1. EventTarget 接口&quot;&gt;&lt;/a&gt;1. EventTarget 接口&lt;/h3&gt;&lt;p&gt;事件的本质是程序各个组成部分之间的一种通信方式，也是异步编程的一种实现。DOM 支持大量的事件，本章开始介绍 DOM 的事件编程。&lt;/p&gt;
-&lt;h4 id=&quot;1-1-概述&quot;&gt;&lt;a href=&quot;#1-1-概述&quot; class=&quot;headerlink&quot; title=&quot;1.1 概述&quot;&gt;&lt;/a&gt;1.1 概述&lt;/h4&gt;&lt;p&gt;DOM 的事件操作（监听和触发），都定义在&lt;code&gt;EventTarget&lt;/code&gt;接口。所有节点对象都部署了这个接口，其他一些需要事件通信的浏览器内置对象（比如，&lt;code&gt;XMLHttpRequest&lt;/code&gt;、&lt;code&gt;AudioNode&lt;/code&gt;、&lt;code&gt;AudioContext&lt;/code&gt;）也部署了这个接口。&lt;/p&gt;
-&lt;p&gt;该接口主要提供三个实例方法。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;addEventListener&lt;/code&gt;：绑定事件的监听函数&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;removeEventListener&lt;/code&gt;：移除事件的监听函数&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;dispatchEvent&lt;/code&gt;：触发事件&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 事件-EventTarget 接口" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-EventTarget-%E6%8E%A5%E5%8F%A3/"/>
     
   </entry>
   
