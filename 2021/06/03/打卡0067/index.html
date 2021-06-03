@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
+       
+      <meta name="keywords" content="blog" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>打卡0067 |  maeBlog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-打卡0067"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  打卡0067
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/03/%E6%89%93%E5%8D%A10067/" class="article-date">
+  <time datetime="2021-06-03T01:50:16.000Z" itemprop="datePublished">2021-06-03</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">4.6k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">20 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#733a31>不要轻易向别人诉苦，因为有很多人并不关心，还有很多人听到后会很高兴。</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="13-表单，FormData-对象"><a href="#13-表单，FormData-对象" class="headerlink" title="13. 表单，FormData 对象"></a>13. 表单，FormData 对象</h3><h4 id="13-1-表单概述"><a href="#13-1-表单概述" class="headerlink" title="13.1 表单概述"></a>13.1 表单概述</h4><p>表单（<code>&lt;form&gt;</code>）用来收集用户提交的数据，发送到服务器。比如，用户提交用户名和密码，让服务器验证，就要通过表单。表单提供多种控件，让开发者使用，具体的控件种类和用法请参考 HTML 语言的教程。本章主要介绍 JavaScript 与表单的交互。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=<span class="string">&quot;/handling-page&quot;</span> method=<span class="string">&quot;post&quot;</span>&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;label <span class="keyword">for</span>=<span class="string">&quot;name&quot;</span>&gt;用户名：&lt;/label&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;text&quot;</span> id=<span class="string">&quot;name&quot;</span> name=<span class="string">&quot;user_name&quot;</span> /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;label <span class="keyword">for</span>=<span class="string">&quot;passwd&quot;</span>&gt;密码：&lt;/label&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;password&quot;</span> id=<span class="string">&quot;passwd&quot;</span> name=<span class="string">&quot;user_passwd&quot;</span> /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;submit&quot;</span> id=<span class="string">&quot;submit&quot;</span> name=<span class="string">&quot;submit_button&quot;</span> value=<span class="string">&quot;提交&quot;</span> /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>上面代码就是一个简单的表单，包含三个控件：用户名输入框、密码输入框和提交按钮。</p>
+<p>用户点击“提交”按钮，每一个控件都会生成一个键值对，键名是控件的<code>name</code>属性，键值是控件的<code>value</code>属性，键名和键值之间由等号连接。比如，用户名输入框的<code>name</code>属性是<code>user_name</code>，<code>value</code>属性是用户输入的值，假定是“张三”，提交到服务器的时候，就会生成一个键值对<code>user_name=张三</code>。</p>
+<span id="more"></span>
+<p>所有的键值对都会提交到服务器。但是，提交的数据格式跟<code>&lt;form&gt;</code>元素的<code>method</code>属性有关。该属性指定了提交数据的 HTTP 方法。如果是 GET 方法，所有键值对会以 URL 的查询字符串形式，提交到服务器，比如<code>/handling-page?user_name=张三&amp;user_passwd=123&amp;submit_button=提交</code>。下面就是 GET 请求的 HTTP 头信息。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /handling-page?user_name=张三&amp;user_passwd=<span class="number">123</span>&amp;submit_button=提交</span><br><span class="line">Host: example.com</span><br></pre></td></tr></table></figure>
+<p>如果是 POST 方法，所有键值对会连接成一行，作为 HTTP 请求的数据体发送到服务器，比如<code>user_name=张三&amp;user_passwd=123&amp;submit_button=提交</code>。下面就是 POST 请求的头信息。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">POST /handling-page HTTP/<span class="number">1.1</span></span><br><span class="line">Host: example.com</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Content-Length: <span class="number">74</span></span><br><span class="line"></span><br><span class="line">user_name=张三&amp;user_passwd=<span class="number">123</span>&amp;submit_button=提交</span><br></pre></td></tr></table></figure>
+<p>注意，实际提交的时候，只要键值不是 URL 的合法字符（比如汉字“张三”和“提交”），浏览器会自动对其进行编码。</p>
+<p>点击<code>submit</code>控件，就可以提交表单。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;</span><br><span class="line">  &lt;input type=<span class="string">&quot;submit&quot;</span> value=<span class="string">&quot;提交&quot;</span>&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>上面表单就包含一个<code>submit</code>控件，点击这个控件，浏览器就会把表单数据向服务器提交。</p>
+<p>注意，表单里面的<code>&lt;button&gt;</code>元素如果没有用<code>type</code>属性指定类型，那么默认就是<code>submit</code>控件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;</span><br><span class="line">  &lt;button&gt;提交&lt;/button&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>上面表单的<code>&lt;button&gt;</code>元素，点击以后也会提交表单。</p>
+<p>除了点击<code>submit</code>控件提交表单，还可以用表单元素的<code>submit()</code>方法，通过脚本提交表单。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">formElement.submit();</span><br></pre></td></tr></table></figure>
+<p>表单元素的<code>reset()</code>方法可以重置所有控件的值（重置为默认值）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">formElement.reset()</span><br></pre></td></tr></table></figure>
+<h4 id="13-2-FormData-对象"><a href="#13-2-FormData-对象" class="headerlink" title="13.2 FormData 对象"></a>13.2 FormData 对象</h4><h5 id="13-2-1-概述"><a href="#13-2-1-概述" class="headerlink" title="13.2.1 概述"></a>13.2.1 概述</h5><p>表单数据以键值对的形式向服务器发送，这个过程是浏览器自动完成的。但是有时候，我们希望通过脚本完成这个过程，构造或编辑表单的键值对，然后通过脚本发送给服务器。浏览器原生提供了 FormData 对象来完成这项工作。</p>
+<p><code>FormData()</code>首先是一个构造函数，用来生成表单的实例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> formdata = <span class="keyword">new</span> FormData(form);</span><br></pre></td></tr></table></figure>
+<p><code>FormData()</code>构造函数的参数是一个 DOM 的表单元素，构造函数会自动处理表单的键值对。这个参数是可选的，如果省略该参数，就表示一个空的表单。</p>
+<p>下面是一个表单。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;form id=<span class="string">&quot;myForm&quot;</span> name=<span class="string">&quot;myForm&quot;</span>&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;label <span class="keyword">for</span>=<span class="string">&quot;username&quot;</span>&gt;用户名：&lt;/label&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;text&quot;</span> id=<span class="string">&quot;username&quot;</span> name=<span class="string">&quot;username&quot;</span>&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;label <span class="keyword">for</span>=<span class="string">&quot;useracc&quot;</span>&gt;账号：&lt;/label&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;text&quot;</span> id=<span class="string">&quot;useracc&quot;</span> name=<span class="string">&quot;useracc&quot;</span>&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;label <span class="keyword">for</span>=<span class="string">&quot;userfile&quot;</span>&gt;上传文件：&lt;/label&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;file&quot;</span> id=<span class="string">&quot;userfile&quot;</span> name=<span class="string">&quot;userfile&quot;</span>&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;input type=<span class="string">&quot;submit&quot;</span> value=<span class="string">&quot;Submit!&quot;</span>&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>我们用<code>FormData()</code>处理上面这个表单。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myForm = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myForm&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> formData = <span class="keyword">new</span> FormData(myForm);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取某个控件的值</span></span><br><span class="line">formData.get(<span class="string">&#x27;username&#x27;</span>) <span class="comment">// &quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置某个控件的值</span></span><br><span class="line">formData.set(<span class="string">&#x27;username&#x27;</span>, <span class="string">&#x27;张三&#x27;</span>);</span><br><span class="line"></span><br><span class="line">formData.get(<span class="string">&#x27;username&#x27;</span>) <span class="comment">// &quot;张三&quot;</span></span><br></pre></td></tr></table></figure>
+<h5 id="13-2-2-实例方法"><a href="#13-2-2-实例方法" class="headerlink" title="13.2.2 实例方法"></a>13.2.2 实例方法</h5><p>FormData 提供以下实例方法。</p>
+<ul>
+<li><code>FormData.get(key)</code>：获取指定键名对应的键值，参数为键名。如果有多个同名的键值对，则返回第一个键值对的键值。</li>
+<li><code>FormData.getAll(key)</code>：返回一个数组，表示指定键名对应的所有键值。如果有多个同名的键值对，数组会包含所有的键值。</li>
+<li><code>FormData.set(key, value)</code>：设置指定键名的键值，参数为键名。如果键名不存在，会添加这个键值对，否则会更新指定键名的键值。如果第二个参数是文件，还可以使用第三个参数，表示文件名。</li>
+<li><code>FormData.delete(key)</code>：删除一个键值对，参数为键名。</li>
+<li><code>FormData.append(key, value)</code>：添加一个键值对。如果键名重复，则会生成两个相同键名的键值对。如果第二个参数是文件，还可以使用第三个参数，表示文件名。</li>
+<li><code>FormData.has(key)</code>：返回一个布尔值，表示是否具有该键名的键值对。</li>
+<li><code>FormData.keys()</code>：返回一个遍历器对象，用于<code>for...of</code>循环遍历所有的键名。</li>
+<li><code>FormData.values()</code>：返回一个遍历器对象，用于<code>for...of</code>循环遍历所有的键值。</li>
+<li><code>FormData.entries()</code>：返回一个遍历器对象，用于<code>for...of</code>循环遍历所有的键值对。如果直接用<code>for...of</code>循环遍历 FormData 实例，默认就会调用这个方法。</li>
+</ul>
+<p>下面是<code>get()</code>、<code>getAll()</code>、<code>set()</code>、<code>append()</code>方法的例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> formData = <span class="keyword">new</span> FormData();</span><br><span class="line"></span><br><span class="line">formData.set(<span class="string">&#x27;username&#x27;</span>, <span class="string">&#x27;张三&#x27;</span>);</span><br><span class="line">formData.append(<span class="string">&#x27;username&#x27;</span>, <span class="string">&#x27;李四&#x27;</span>);</span><br><span class="line">formData.get(<span class="string">&#x27;username&#x27;</span>) <span class="comment">// &quot;张三&quot;</span></span><br><span class="line">formData.getAll(<span class="string">&#x27;username&#x27;</span>) <span class="comment">// [&quot;张三&quot;, &quot;李四&quot;]</span></span><br><span class="line"></span><br><span class="line">formData.append(<span class="string">&#x27;userpic[]&#x27;</span>, myFileInput.files[<span class="number">0</span>], <span class="string">&#x27;user1.jpg&#x27;</span>);</span><br><span class="line">formData.append(<span class="string">&#x27;userpic[]&#x27;</span>, myFileInput.files[<span class="number">1</span>], <span class="string">&#x27;user2.jpg&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>下面是遍历器的例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> formData = <span class="keyword">new</span> FormData();</span><br><span class="line">formData.append(<span class="string">&#x27;key1&#x27;</span>, <span class="string">&#x27;value1&#x27;</span>);</span><br><span class="line">formData.append(<span class="string">&#x27;key2&#x27;</span>, <span class="string">&#x27;value2&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">of</span> formData.keys()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(key);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// &quot;key1&quot;</span></span><br><span class="line"><span class="comment">// &quot;key2&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> value <span class="keyword">of</span> formData.values()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(value);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// &quot;value1&quot;</span></span><br><span class="line"><span class="comment">// &quot;value2&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> pair <span class="keyword">of</span> formData.entries()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(pair[<span class="number">0</span>] + <span class="string">&#x27;: &#x27;</span> + pair[<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// key1: value1</span></span><br><span class="line"><span class="comment">// key2: value2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于遍历 formData.entries()</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> pair <span class="keyword">of</span> formData) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(pair[<span class="number">0</span>] + <span class="string">&#x27;: &#x27;</span> + pair[<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// key1: value1</span></span><br><span class="line"><span class="comment">// key2: value2</span></span><br></pre></td></tr></table></figure>
+<h4 id="13-3-表单的内置验证"><a href="#13-3-表单的内置验证" class="headerlink" title="13.3 表单的内置验证"></a>13.3 表单的内置验证</h4><h5 id="13-3-1-自动校验"><a href="#13-3-1-自动校验" class="headerlink" title="13.3.1 自动校验"></a>13.3.1 自动校验</h5><p>表单提交的时候，浏览器允许开发者指定一些条件，它会自动验证各个表单控件的值是否符合条件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 必填 --&gt;</span><br><span class="line">&lt;input required&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 必须符合正则表达式 --&gt;</span><br><span class="line">&lt;input pattern=<span class="string">&quot;banana|cherry&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 字符串长度必须为<span class="number">6</span>个字符 --&gt;</span><br><span class="line">&lt;input minlength=<span class="string">&quot;6&quot;</span> maxlength=<span class="string">&quot;6&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 数值必须在<span class="number">1</span>到<span class="number">10</span>之间 --&gt;</span><br><span class="line">&lt;input type=<span class="string">&quot;number&quot;</span> min=<span class="string">&quot;1&quot;</span> max=<span class="string">&quot;10&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 必须填入 Email 地址 --&gt;</span><br><span class="line">&lt;input type=<span class="string">&quot;email&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 必须填入 URL --&gt;</span><br><span class="line">&lt;input type=<span class="string">&quot;URL&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>如果一个控件通过验证，它就会匹配<code>:valid</code>的 CSS 伪类，浏览器会继续进行表单提交的流程。如果没有通过验证，该控件就会匹配<code>:invalid</code>的 CSS 伪类，浏览器会终止表单提交，并显示一个错误信息。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">input:invalid &#123;</span><br><span class="line">  border-color: red;</span><br><span class="line">&#125;</span><br><span class="line">input,</span><br><span class="line">input:valid &#123;</span><br><span class="line">  border-color: #ccc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="13-3-2-checkValidity"><a href="#13-3-2-checkValidity" class="headerlink" title="13.3.2 checkValidity()"></a>13.3.2 checkValidity()</h5><p>除了提交表单的时候，浏览器自动校验表单，还可以手动触发表单的校验。表单元素和表单控件都有<code>checkValidity()</code>方法，用于手动触发校验。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 触发整个表单的校验</span></span><br><span class="line">form.checkValidity()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 触发单个表单控件的校验</span></span><br><span class="line">formControl.checkValidity()</span><br></pre></td></tr></table></figure>
+<p><code>checkValidity()</code>方法返回一个布尔值，<code>true</code>表示通过校验，<code>false</code>表示没有通过校验。因此，提交表单可以封装为下面的函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">submitForm</span>(<span class="params">action</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> form = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;form&#x27;</span>);</span><br><span class="line">  form.action = action;</span><br><span class="line">  <span class="keyword">if</span> (form.checkValidity()) &#123;</span><br><span class="line">    form.submit();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="13-3-3-willValidate-属性"><a href="#13-3-3-willValidate-属性" class="headerlink" title="13.3.3 willValidate 属性"></a>13.3.3 willValidate 属性</h5><p>控件元素的<code>willValidate</code>属性是一个布尔值，表示该控件是否会在提交时进行校验。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码如下</span></span><br><span class="line"><span class="comment">// &lt;form novalidate&gt;</span></span><br><span class="line"><span class="comment">//   &lt;input id=&quot;name&quot; name=&quot;name&quot; required /&gt;</span></span><br><span class="line"><span class="comment">// &lt;/form&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> input = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#name&#x27;</span>);</span><br><span class="line">input.willValidate <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h5 id="13-3-4-validationMessage-属性"><a href="#13-3-4-validationMessage-属性" class="headerlink" title="13.3.4 validationMessage 属性"></a>13.3.4 validationMessage 属性</h5><p>控件元素的<code>validationMessage</code>属性返回一个字符串，表示控件不满足校验条件时，浏览器显示的提示文本。以下两种情况，该属性返回空字符串。</p>
+<ul>
+<li>该控件不会在提交时自动校验</li>
+<li>该控件满足校验条件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码如下</span></span><br><span class="line"><span class="comment">// &lt;form&gt;&lt;input type=&quot;text&quot; required&gt;&lt;/form&gt;</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;form input&#x27;</span>).validationMessage</span><br><span class="line"><span class="comment">// &quot;请填写此字段。&quot;</span></span><br></pre></td></tr></table></figure>
+<p>下面是另一个例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myInput = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myinput&#x27;</span>);</span><br><span class="line"><span class="keyword">if</span> (!myInput.checkValidity()) &#123;</span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">&#x27;prompt&#x27;</span>).innerHTML = myInput.validationMessage;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="13-3-5-setCustomValidity"><a href="#13-3-5-setCustomValidity" class="headerlink" title="13.3.5 setCustomValidity()"></a>13.3.5 setCustomValidity()</h5><p>控件元素的<code>setCustomValidity()</code>方法用来定制校验失败时的报错信息。它接受一个字符串作为参数，该字符串就是定制的报错信息。如果参数为空字符串，则上次设置的报错信息被清除。</p>
+<p>这个方法可以替换浏览器内置的表单验证报错信息，参数就是要显示的报错信息。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=<span class="string">&quot;somefile.php&quot;</span>&gt;</span><br><span class="line">  &lt;input</span><br><span class="line">    type=<span class="string">&quot;text&quot;</span></span><br><span class="line">    name=<span class="string">&quot;username&quot;</span></span><br><span class="line">    placeholder=<span class="string">&quot;Username&quot;</span></span><br><span class="line">    pattern=<span class="string">&quot;[a-z]&#123;1,15&#125;&quot;</span></span><br><span class="line">    id=<span class="string">&quot;username&quot;</span></span><br><span class="line">  &gt;</span><br><span class="line">  &lt;input type=<span class="string">&quot;submit&quot;</span>&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>上面的表单输入框，要求只能输入小写字母，且不得超过15个字符。如果输入不符合要求（比如输入“ABC”），提交表单的时候，Chrome 浏览器会弹出报错信息“Please match the requested format.”，禁止表单提交。下面使用<code>setCustomValidity()</code>方法替换掉报错信息。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> input = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;username&#x27;</span>);</span><br><span class="line">input.oninvalid = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">  event.target.setCustomValidity(</span><br><span class="line">    <span class="string">&#x27;用户名必须是小写字母，不能为空，最长不超过15个字符&#x27;</span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>setCustomValidity()</code>方法是在<code>invalid</code>事件的监听函数里面调用。该方法也可以直接调用，这时如果参数不为空字符串，浏览器就会认为该控件没有通过校验，就会立刻显示该方法设置的报错信息。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* HTML 代码如下</span></span><br><span class="line"><span class="comment">&lt;form&gt;</span></span><br><span class="line"><span class="comment">  &lt;p&gt;&lt;input type=&quot;file&quot; id=&quot;fs&quot;&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="comment">  &lt;p&gt;&lt;input type=&quot;submit&quot;&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="comment">&lt;/form&gt;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;fs&#x27;</span>).onchange = checkFileSize;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkFileSize</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> fs = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line">  <span class="keyword">var</span> files = fs.files;</span><br><span class="line">  <span class="keyword">if</span> (files.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">     <span class="keyword">if</span> (files[<span class="number">0</span>].size &gt; <span class="number">75</span> * <span class="number">1024</span>) &#123;</span><br><span class="line">       fs.setCustomValidity(<span class="string">&#x27;文件不能大于 75KB&#x27;</span>);</span><br><span class="line">       <span class="keyword">return</span>;</span><br><span class="line">     &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  fs.setCustomValidity(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码一旦发现文件大于 75KB，就会设置校验失败，同时给出自定义的报错信息。然后，点击提交按钮时，就会显示报错信息。这种校验失败是不会自动消除的，所以如果所有文件都符合条件，要将报错信息设为空字符串，手动消除校验失败的状态。</p>
+<h5 id="13-3-6-validity-属性"><a href="#13-3-6-validity-属性" class="headerlink" title="13.3.6 validity 属性"></a>13.3.6 validity 属性</h5><p>控件元素的属性<code>validity</code>属性返回一个<code>ValidityState</code>对象，包含当前校验状态的信息。</p>
+<p>该对象有以下属性，全部为只读属性。</p>
+<ul>
+<li><code>ValidityState.badInput</code>:布尔值，表示浏览器是否不能将用户的输入转换成正确的类型，比如用户在数值框里面输入字符串。</li>
+<li><code>ValidityState.customError</code>:布尔值，表示是否已经调用setCustom+ `Validity()方法，将校验信息设置为一个非空字符串。</li>
+<li><code>ValidityState.patternMismatch</code>:布尔值，表示用户输入的值是否不满足模式的要求。</li>
+<li><code>ValidityState.rangeOverflow</code>:布尔值，表示用户输入的值是否大于最大范围。</li>
+<li><code>ValidityState.rangeUnderflow</code>:布尔值，表示用户输入的值是否小于最小范围。</li>
+<li><code>ValidityState.stepMismatch</code>:布尔值，表示用户输入的值不符合步长的设置（即不能被步长值整除）。</li>
+<li><code>ValidityState.tooLong</code>:布尔值，表示用户输入的字数超出了最长字数。</li>
+<li><code>ValidityState.tooShort</code>:布尔值，表示用户输入的字符少于最短字数。</li>
+<li><code>ValidityState.typeMismatch</code>:布尔值，表示用户填入的值不符合类型要求（主要是类型为 Email 或 URL 的情况）。</li>
+<li><code>ValidityState.Valid</code>:布尔值，表示用户是否满足所有校验条件。</li>
+<li><code>ValidityState.valueMissing</code>:布尔值，表示用户没有填入必填的值。</li>
+</ul>
+<p>下面是一个例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> input = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myinput&#x27;</span>);</span><br><span class="line"><span class="keyword">if</span> (input.validity.valid) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;通过校验&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;校验失败&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>下面是另外一个例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> txt = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.getElementById(<span class="string">&#x27;myInput&#x27;</span>).validity.rangeOverflow) &#123;</span><br><span class="line">  txt = <span class="string">&#x27;数值超过上限&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;prompt&#x27;</span>).innerHTML = txt;</span><br></pre></td></tr></table></figure>
+<p>如果想禁止浏览器弹出表单验证的报错信息，可以监听<code>invalid</code>事件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> input = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;username&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> form  = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;form&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> elem = <span class="built_in">document</span>.createElement(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">elem.id  = <span class="string">&#x27;notify&#x27;</span>;</span><br><span class="line">elem.style.display = <span class="string">&#x27;none&#x27;</span>;</span><br><span class="line">form.appendChild(elem);</span><br><span class="line"></span><br><span class="line">input.addEventListener(<span class="string">&#x27;invalid&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">  event.preventDefault();</span><br><span class="line">  <span class="keyword">if</span> (!event.target.validity.valid) &#123;</span><br><span class="line">    elem.textContent   = <span class="string">&#x27;用户名必须是小写字母&#x27;</span>;</span><br><span class="line">    elem.className     = <span class="string">&#x27;error&#x27;</span>;</span><br><span class="line">    elem.style.display = <span class="string">&#x27;block&#x27;</span>;</span><br><span class="line">    input.className    = <span class="string">&#x27;invalid animated shake&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">input.addEventListener(<span class="string">&#x27;input&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span> ( <span class="string">&#x27;block&#x27;</span> === elem.style.display ) &#123;</span><br><span class="line">    input.className = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    elem.style.display = <span class="string">&#x27;none&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>上面代码中，一旦发生<code>invalid</code>事件（表单验证失败），<code>event.preventDefault()</code>用来禁止浏览器弹出默认的验证失败提示，然后设置定制的报错提示框。</p>
+<h5 id="13-3-7-表单的-novalidate-属性"><a href="#13-3-7-表单的-novalidate-属性" class="headerlink" title="13.3.7 表单的 novalidate 属性"></a>13.3.7 表单的 novalidate 属性</h5><p>表单元素的 HTML 属性<code>novalidate</code>，可以关闭浏览器的自动校验。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;form novalidate&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>这个属性也可以在脚本里设置。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">form.noValidate = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<p>如果表单元素没有设置<code>novalidate</code>属性，那么提交按钮（<code>&lt;button&gt;</code>或<code>&lt;input&gt;</code>元素）的<code>formnovalidate</code>属性也有同样的作用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;</span><br><span class="line">  &lt;input type=<span class="string">&quot;submit&quot;</span> value=<span class="string">&quot;submit&quot;</span> formnovalidate&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="13-4-enctype-属性"><a href="#13-4-enctype-属性" class="headerlink" title="13.4 enctype 属性"></a>13.4 enctype 属性</h4><p>表单能够用四种编码，向服务器发送数据。编码格式由表单的<code>enctype</code>属性决定。</p>
+<p>假定表单有两个字段，分别是<code>foo</code>和<code>baz</code>，其中<code>foo</code>字段的值等于<code>bar</code>，<code>baz</code>字段的值是一个分为两行的字符串。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">The first line.</span><br><span class="line">The second line.</span><br></pre></td></tr></table></figure>
+<p>下面四种格式，都可以将这个表单发送到服务器。</p>
+<h6 id="（1）GET-方法"><a href="#（1）GET-方法" class="headerlink" title="（1）GET 方法"></a>（1）GET 方法</h6><p>如果表单使用<code>GET</code>方法发送数据，<code>enctype</code>属性无效。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;form</span><br><span class="line">  action=<span class="string">&quot;register.php&quot;</span></span><br><span class="line">  method=<span class="string">&quot;get&quot;</span></span><br><span class="line">  onsubmit=<span class="string">&quot;AJAXSubmit(this); return false;&quot;</span></span><br><span class="line">&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>数据将以 URL 的查询字符串发出。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?foo=bar&amp;baz=The%20first%20line.%0AThe%20second%20line.</span><br></pre></td></tr></table></figure>
+<h6 id="（2）application-x-www-form-urlencoded"><a href="#（2）application-x-www-form-urlencoded" class="headerlink" title="（2）application/x-www-form-urlencoded"></a>（2）application/x-www-form-urlencoded</h6><p>如果表单用<code>POST</code>方法发送数据，并省略<code>enctype</code>属性，那么数据以<code>application/x-www-form-urlencoded</code>格式发送（因为这是默认值）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;form</span><br><span class="line">  action=<span class="string">&quot;register.php&quot;</span></span><br><span class="line">  method=<span class="string">&quot;post&quot;</span></span><br><span class="line">  onsubmit=<span class="string">&quot;AJAXSubmit(this); return false;&quot;</span></span><br><span class="line">&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>发送的 HTTP 请求如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line"></span><br><span class="line">foo=bar&amp;baz=The+first+line.%0D%0AThe+second+line.%0D%0A</span><br></pre></td></tr></table></figure>
+<p>上面代码中，数据体里面的<code>%0D%0A</code>代表换行符（<code>\r\n</code>）。</p>
+<h6 id="（3）text-plain"><a href="#（3）text-plain" class="headerlink" title="（3）text/plain"></a>（3）text/plain</h6><p>如果表单使用<code>POST</code>方法发送数据，<code>enctype</code>属性为<code>text/plain</code>，那么数据将以纯文本格式发送。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;form</span><br><span class="line">  action=<span class="string">&quot;register.php&quot;</span></span><br><span class="line">  method=<span class="string">&quot;post&quot;</span></span><br><span class="line">  enctype=<span class="string">&quot;text/plain&quot;</span></span><br><span class="line">  onsubmit=<span class="string">&quot;AJAXSubmit(this); return false;&quot;</span></span><br><span class="line">&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>发送的 HTTP 请求如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: text/plain</span><br><span class="line"></span><br><span class="line">foo=bar</span><br><span class="line">baz=The first line.</span><br><span class="line">The second line.</span><br></pre></td></tr></table></figure>
+<h6 id="（4）multipart-form-data"><a href="#（4）multipart-form-data" class="headerlink" title="（4）multipart/form-data"></a>（4）multipart/form-data</h6><p>如果表单使用<code>POST</code>方法，<code>enctype</code>属性为<code>multipart/form-data</code>，那么数据将以混合的格式发送。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;form</span><br><span class="line">  action=<span class="string">&quot;register.php&quot;</span></span><br><span class="line">  method=<span class="string">&quot;post&quot;</span></span><br><span class="line">  enctype=<span class="string">&quot;multipart/form-data&quot;</span></span><br><span class="line">  onsubmit=<span class="string">&quot;AJAXSubmit(this); return false;&quot;</span></span><br><span class="line">&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>发送的 HTTP 请求如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: multipart/form-data; boundary=---------------------------<span class="number">314911788813839</span></span><br><span class="line"></span><br><span class="line">-----------------------------<span class="number">314911788813839</span></span><br><span class="line">Content-Disposition: form-data; name=<span class="string">&quot;foo&quot;</span></span><br><span class="line"></span><br><span class="line">bar</span><br><span class="line">-----------------------------<span class="number">314911788813839</span></span><br><span class="line">Content-Disposition: form-data; name=<span class="string">&quot;baz&quot;</span></span><br><span class="line"></span><br><span class="line">The first line.</span><br><span class="line">The second line.</span><br><span class="line"></span><br><span class="line">-----------------------------<span class="number">314911788813839</span>--</span><br></pre></td></tr></table></figure>
+<p>这种格式也是文件上传的格式。</p>
+<h4 id="13-5-文件上传"><a href="#13-5-文件上传" class="headerlink" title="13.5 文件上传"></a>13.5 文件上传</h4><p>用户上传文件，也是通过表单。具体来说，就是通过文件输入框选择本地文件，提交表单的时候，浏览器就会把这个文件发送到服务器。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">&quot;file&quot;</span> id=<span class="string">&quot;file&quot;</span> name=<span class="string">&quot;myFile&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>此外，还需要将表单<code>&lt;form&gt;</code>元素的<code>method</code>属性设为<code>POST</code>，<code>enctype</code>属性设为<code>multipart/form-data</code>。其中，<code>enctype</code>属性决定了 HTTP 头信息的<code>Content-Type</code>字段的值，默认情况下这个字段的值是<code>application/x-www-form-urlencoded</code>，但是文件上传的时候要改成<code>multipart/form-data</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;form method=<span class="string">&quot;post&quot;</span> enctype=<span class="string">&quot;multipart/form-data&quot;</span>&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;label <span class="keyword">for</span>=<span class="string">&quot;file&quot;</span>&gt;选择一个文件&lt;/label&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;file&quot;</span> id=<span class="string">&quot;file&quot;</span> name=<span class="string">&quot;myFile&quot;</span> multiple&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;submit&quot;</span> id=<span class="string">&quot;submit&quot;</span> name=<span class="string">&quot;submit_button&quot;</span> value=<span class="string">&quot;上传&quot;</span> /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>上面的 HTML 代码中，file 控件的<code>multiple</code>属性，指定可以一次选择多个文件；如果没有这个属性，则一次只能选择一个文件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fileSelect = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;file&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> files = fileSelect.files;</span><br></pre></td></tr></table></figure>
+<p>然后，新建一个 FormData 实例对象，模拟发送到服务器的表单数据，把选中的文件添加到这个对象上面。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> formData = <span class="keyword">new</span> FormData();</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; files.length; i++) &#123;</span><br><span class="line">  <span class="keyword">var</span> file = files[i];</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 只上传图片文件</span></span><br><span class="line">  <span class="keyword">if</span> (!file.type.match(<span class="string">&#x27;image.*&#x27;</span>)) &#123;</span><br><span class="line">    <span class="keyword">continue</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  formData.append(<span class="string">&#x27;photos[]&#x27;</span>, file, file.name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最后，使用 Ajax 向服务器上传文件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">xhr.open(<span class="string">&#x27;POST&#x27;</span>, <span class="string">&#x27;handler.php&#x27;</span>, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">xhr.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (xhr.status !== <span class="number">200</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;An error occurred!&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xhr.send(formData);</span><br></pre></td></tr></table></figure>
+<p>除了发送 FormData 实例，也可以直接 AJAX 发送文件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> file = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;test-input&#x27;</span>).files[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">xhr.open(<span class="string">&#x27;POST&#x27;</span>, <span class="string">&#x27;myserver/uploads&#x27;</span>);</span><br><span class="line">xhr.setRequestHeader(<span class="string">&#x27;Content-Type&#x27;</span>, file.type);</span><br><span class="line">xhr.send(file);</span><br></pre></td></tr></table></figure>
+<p><code>Well,that&#39;s all for today</code></p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/06/03/%E6%89%93%E5%8D%A10067/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-%E8%A1%A8%E5%8D%95%EF%BC%8CFormData-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 浏览器模型-表单，FormData 对象</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2021/06/03/%E6%89%93%E5%8D%A10066/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">打卡0066</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
+    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Ye Ma
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        <!-- 
+         -->
+        
+        
+        Powered by Hexo
+        <span class="division">|</span>
+        Theme - Ayer
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="maeBlog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/travel/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about/2021">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/gHZjdQRcOL1WxSP.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/pZNYuI4QFnfwb7l.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>

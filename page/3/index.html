@@ -159,6 +159,206 @@
     
     
     <article
+  id="post-打卡0047"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/28/%E6%89%93%E5%8D%A10047/"
+    >打卡0047</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/28/%E6%89%93%E5%8D%A10047/" class="article-date">
+  <time datetime="2021-05-28T02:04:34.000Z" itemprop="datePublished">2021-05-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#ffc20e> “Let there be light.”</font></p>
+<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="4-鼠标事件"><a href="#4-鼠标事件" class="headerlink" title="4. 鼠标事件"></a>4. 鼠标事件</h3><h4 id="4-1-鼠标事件的种类"><a href="#4-1-鼠标事件的种类" class="headerlink" title="4.1 鼠标事件的种类"></a>4.1 鼠标事件的种类</h4><p>鼠标事件指与鼠标相关的事件，继承了<code>MouseEvent</code>接口。具体的事件主要有以下一些。</p>
+<ul>
+<li><code>click</code>:按下鼠标（通常是按下主按钮）时触发。</li>
+<li><code>dblclick</code>:在同一个元素上双击鼠标时触发。</li>
+<li><code>mousedown</code>:按下鼠标键时触发。</li>
+<li><code>mouseup</code>:释放按下的鼠标键时触发。</li>
+<li><code>mousemove</code>:当鼠标在一个节点内部移动时触发。当鼠标持续移动时，该事件会连续触发。为了避免性能问题，建议对该事件的监听函数做一些限定，比如限定一段时间内只能运行一次。</li>
+<li><code>mouseenter</code>:鼠标进入一个节点时触发，进入子节点不会触发这个事件（详见后文）。</li>
+<li><code>mouseover</code>:鼠标进入一个节点时触发，进入子节点会再一次触发这个事件（详见后文）。</li>
+<li><code>mouseout</code>:鼠标离开一个节点时触发，离开父节点也会触发这个事件（详见后文）。</li>
+<li><code>mouseleave</code>:鼠标离开一个节点时触发，离开父节点不会触发这个事件（详见后文）。</li>
+<li><code>contextmenu</code>:按下鼠标右键时（上下文菜单出现前）触发，或者按下“上下文菜单键”时触发。</li>
+<li><code>wheel</code>:滚动鼠标的滚轮时触发，该事件继承的是<code>WheelEvent</code>接口。</li>
+</ul> 
+      <a class="article-more-link" href="/2021/05/28/%E6%89%93%E5%8D%A10047/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-鼠标事件</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-打卡0046"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/28/%E6%89%93%E5%8D%A10046/"
+    >打卡0046</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/28/%E6%89%93%E5%8D%A10046/" class="article-date">
+  <time datetime="2021-05-28T01:04:21.000Z" itemprop="datePublished">2021-05-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#90d7ec>一个人做再大的承诺，都不及踏踏实实、认认真真做事更让人放心。</font></p>
+<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="3-Event-对象"><a href="#3-Event-对象" class="headerlink" title="3. Event 对象"></a>3. Event 对象</h3><h4 id="3-1-概述"><a href="#3-1-概述" class="headerlink" title="3.1 概述"></a>3.1 概述</h4><p>事件发生以后，会产生一个事件对象，作为参数传给监听函数。浏览器原生提供一个<code>Event</code>对象，所有的事件都是这个对象的实例，或者说继承了<code>Event.prototype</code>对象。</p>
+<p><code>Event</code>对象本身就是一个构造函数，可以用来生成新的实例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">event = <span class="keyword">new</span> Event(type, options);</span><br></pre></td></tr></table></figure>
+<p><code>Event</code>构造函数接受两个参数。第一个参数<code>type</code>是字符串，表示事件的名称；第二个参数<code>options</code>是一个对象，表示事件对象的配置。该对象主要有下面两个属性。</p>
+<ul>
+<li><code>bubbles</code>：布尔值，可选，默认为<code>false</code>，表示事件对象是否冒泡。</li>
+<li><code>cancelable</code>：布尔值，可选，默认为<code>false</code>，表示事件是否可以被取消，即能否用<code>Event.preventDefault()</code>取消这个事件。一旦事件被取消，就好像从来没有发生过，不会触发浏览器对该事件的默认行为。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ev = <span class="keyword">new</span> Event(</span><br><span class="line">  <span class="string">&#x27;look&#x27;</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">&#x27;bubbles&#x27;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">&#x27;cancelable&#x27;</span>: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"><span class="built_in">document</span>.dispatchEvent(ev);</span><br></pre></td></tr></table></figure>
+<p>上面代码新建一个<code>look</code>事件实例，然后使用<code>dispatchEvent</code>方法触发该事件。</p> 
+      <a class="article-more-link" href="/2021/05/28/%E6%89%93%E5%8D%A10046/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-Event-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 事件-Event 对象</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-打卡0045"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/27/%E6%89%93%E5%8D%A10045/"
+    >打卡0045</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/27/%E6%89%93%E5%8D%A10045/" class="article-date">
+  <time datetime="2021-05-27T02:23:26.000Z" itemprop="datePublished">2021-05-27</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#f47a55>只想着相见时春风细雨甜，哪管他相思夜星前月下苦。</font></p>
+<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="2-事件模型"><a href="#2-事件模型" class="headerlink" title="2. 事件模型"></a>2. 事件模型</h3><h4 id="2-1-监听函数"><a href="#2-1-监听函数" class="headerlink" title="2.1 监听函数"></a>2.1 监听函数</h4><p>浏览器的事件模型，就是通过监听函数（listener）对事件做出反应。事件发生后，浏览器监听到了这个事件，就会执行对应的监听函数。这是事件驱动编程模式（event-driven）的主要编程方式。</p>
+<p>JavaScript 有三种方法，可以为事件绑定监听函数。</p>
+<h5 id="2-1-1-HTML-的-on-属性"><a href="#2-1-1-HTML-的-on-属性" class="headerlink" title="2.1.1 HTML 的 on- 属性"></a>2.1.1 HTML 的 on- 属性</h5><p>HTML 语言允许在元素的属性中，直接定义某些事件的监听代码。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onload=<span class="string">&quot;doSomething()&quot;</span>&gt;</span><br><span class="line">&lt;div onclick=<span class="string">&quot;console.log(&#x27;触发事件&#x27;)&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>上面代码为<code>body</code>节点的<code>load</code>事件、<code>div</code>节点的<code>click</code>事件，指定了监听代码。一旦事件发生，就会执行这段代码。</p> 
+      <a class="article-more-link" href="/2021/05/27/%E6%89%93%E5%8D%A10045/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/" rel="tag">JS 事件-事件模型</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0044"
   class="article article-type-post"
   itemscope
@@ -597,205 +797,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-DOM-Document-%E8%8A%82%E7%82%B9/" rel="tag">JS DOM-Document 节点</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0037"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/23/%E6%89%93%E5%8D%A10037/"
-    >打卡0037</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/23/%E6%89%93%E5%8D%A10037/" class="article-date">
-  <time datetime="2021-05-23T05:09:14.000Z" itemprop="datePublished">2021-05-23</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=gray>他进入了一个梦乡，那里的稻穗比高粱还高，穗粒比花生还大。风轻轻吹过，他就坐在稻穗下乘凉。</font></p>
-<h2 id="JS-DOM"><a href="#JS-DOM" class="headerlink" title="JS DOM"></a>JS DOM</h2><h3 id="4-ParentNode-接口，ChildNode-接口"><a href="#4-ParentNode-接口，ChildNode-接口" class="headerlink" title="4. ParentNode 接口，ChildNode 接口"></a>4. ParentNode 接口，ChildNode 接口</h3><p>节点对象除了继承 Node 接口以外，还拥有其他接口。<code>ParentNode</code>接口表示当前节点是一个父节点，提供一些处理子节点的方法。<code>ChildNode</code>接口表示当前节点是一个子节点，提供一些相关方法。</p>
-<h4 id="4-1-ParentNode-接口"><a href="#4-1-ParentNode-接口" class="headerlink" title="4.1 ParentNode 接口"></a>4.1 ParentNode 接口</h4><p>如果当前节点是父节点，就会混入了（mixin）<code>ParentNode</code>接口。由于只有元素节点（element）、文档节点（document）和文档片段节点（documentFragment）拥有子节点，因此只有这三类节点会拥有<code>ParentNode</code>接口。</p>
-<h5 id="4-1-1-ParentNode-children"><a href="#4-1-1-ParentNode-children" class="headerlink" title="4.1.1 ParentNode.children"></a>4.1.1 ParentNode.children</h5><p><code>children</code>属性返回一个<code>HTMLCollection</code>实例，成员是当前节点的所有元素子节点。该属性只读。</p>
-<p>下面是遍历某个节点的所有元素子节点的示例。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; el.children.length; i++) &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/05/23/%E6%89%93%E5%8D%A10037/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-DOM-ParentNode-%E6%8E%A5%E5%8F%A3%EF%BC%8CChildNode-%E6%8E%A5%E5%8F%A3/" rel="tag">JS DOM-ParentNode 接口，ChildNode 接口</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0036"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/23/%E6%89%93%E5%8D%A10036/"
-    >打卡0036</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/23/%E6%89%93%E5%8D%A10036/" class="article-date">
-  <time datetime="2021-05-23T04:48:16.000Z" itemprop="datePublished">2021-05-23</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=gray>老骥伏枥，志在千里。</font></p>
-<h2 id="JS-DOM"><a href="#JS-DOM" class="headerlink" title="JS DOM"></a>JS DOM</h2><h3 id="3-NodeList-接口，HTMLCollection-接口"><a href="#3-NodeList-接口，HTMLCollection-接口" class="headerlink" title="3. NodeList 接口，HTMLCollection 接口"></a>3. NodeList 接口，HTMLCollection 接口</h3><p>节点都是单个对象，有时需要一种数据结构，能够容纳多个节点。DOM 提供两种节点集合，用于容纳多个节点：<code>NodeList</code>和<code>HTMLCollection</code>。</p>
-<p>这两种集合都属于接口规范。许多 DOM 属性和方法，返回的结果是<code>NodeList</code>实例或<code>HTMLCollection</code>实例。主要区别是，<code>NodeList</code>可以包含各种类型的节点，<code>HTMLCollection</code>只能包含 HTML 元素节点。</p>
-<h4 id="3-1-NodeList-接口"><a href="#3-1-NodeList-接口" class="headerlink" title="3.1 NodeList 接口"></a>3.1 NodeList 接口</h4><h5 id="3-1-1-概述"><a href="#3-1-1-概述" class="headerlink" title="3.1.1 概述"></a>3.1.1 概述</h5><p><code>NodeList</code>实例是一个类似数组的对象，它的成员是节点对象。通过以下方法可以得到<code>NodeList</code>实例。</p>
-<ul>
-<li><code>Node.childNodes</code></li>
-<li><code>document.querySelectorAll()</code>等节点搜索方法</li>
-</ul> 
-      <a class="article-more-link" href="/2021/05/23/%E6%89%93%E5%8D%A10036/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-DOM-NodeList-%E6%8E%A5%E5%8F%A3%EF%BC%8CHTMLCollection-%E6%8E%A5%E5%8F%A3/" rel="tag">JS DOM-NodeList 接口，HTMLCollection 接口</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0035"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/22/%E6%89%93%E5%8D%A10035/"
-    >打卡0035</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/22/%E6%89%93%E5%8D%A10035/" class="article-date">
-  <time datetime="2021-05-22T01:56:52.000Z" itemprop="datePublished">2021-05-22</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#375830>恰沐春风共同游，终只叹，木已舟。</font></p>
-<h2 id="JS-DOM"><a href="#JS-DOM" class="headerlink" title="JS DOM"></a>JS DOM</h2><h3 id="2-Node接口"><a href="#2-Node接口" class="headerlink" title="2. Node接口"></a>2. Node接口</h3><p>所有 DOM 节点对象都继承了 Node 接口，拥有一些共同的属性和方法。这是 DOM 操作的基础。</p>
-<h4 id="2-1-属性"><a href="#2-1-属性" class="headerlink" title="2.1 属性"></a>2.1 属性</h4><h5 id="2-1-1-Node-prototype-nodeType"><a href="#2-1-1-Node-prototype-nodeType" class="headerlink" title="2.1.1 Node.prototype.nodeType"></a>2.1.1 Node.prototype.nodeType</h5><p><code>nodeType</code>属性返回一个整数值，表示节点的类型。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.nodeType <span class="comment">// 9</span></span><br></pre></td></tr></table></figure>
-<p>上面代码中，文档节点的类型值为9。</p>
-<p>Node 对象定义了几个常量，对应这些类型值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.nodeType === Node.DOCUMENT_NODE <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<p>上面代码中，文档节点的<code>nodeType</code>属性等于常量<code>Node.DOCUMENT_NODE</code>。</p>
-<p>不同节点的<code>nodeType</code>属性值和对应的常量如下。</p>
-<ul>
-<li>文档节点（document）：9，对应常量<code>Node.DOCUMENT_NODE</code></li>
-<li>元素节点（element）：1，对应常量<code>Node.ELEMENT_NODE</code></li>
-<li>属性节点（attr）：2，对应常量<code>Node.ATTRIBUTE_NODE</code></li>
-<li>文本节点（text）：3，对应常量<code>Node.TEXT_NODE</code></li>
-<li>文档片断节点（DocumentFragment）：11，对应常量<code>Node.DOCUMENT_FRAGMENT_NODE</code></li>
-<li>文档类型节点（DocumentType）：10，对应常量<code>Node.DOCUMENT_TYPE_NODE</code></li>
-<li>注释节点（Comment）：8，对应常量<code>Node.COMMENT_NODE</code> 
-      <a class="article-more-link" href="/2021/05/22/%E6%89%93%E5%8D%A10035/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-DOM-Node%E6%8E%A5%E5%8F%A3/" rel="tag">JS DOM-Node接口</a></li></ul>
 
     </footer>
   </div>

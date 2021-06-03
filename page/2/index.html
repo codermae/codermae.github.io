@@ -159,6 +159,197 @@
     
     
     <article
+  id="post-打卡0057"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/31/%E6%89%93%E5%8D%A10057/"
+    >打卡0057</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/31/%E6%89%93%E5%8D%A10057/" class="article-date">
+  <time datetime="2021-05-31T00:59:48.000Z" itemprop="datePublished">2021-05-31</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#a3cf62>跟这个世界交手的许多年来，你是否，光彩依旧，兴趣盎然。</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="3-Navigator-对象，Screen-对象"><a href="#3-Navigator-对象，Screen-对象" class="headerlink" title="3. Navigator 对象，Screen 对象"></a>3. Navigator 对象，Screen 对象</h3><p><code>window.navigator</code>属性指向一个包含浏览器和系统信息的 Navigator 对象。脚本通过这个属性了解用户的环境信息。</p>
+<h4 id="3-1-Navigator-对象的属性"><a href="#3-1-Navigator-对象的属性" class="headerlink" title="3.1 Navigator 对象的属性"></a>3.1 Navigator 对象的属性</h4><h5 id="3-1-1-Navigator-userAgent"><a href="#3-1-1-Navigator-userAgent" class="headerlink" title="3.1.1 Navigator.userAgent"></a>3.1.1 Navigator.userAgent</h5><p><code>navigator.userAgent</code>属性返回浏览器的 User Agent 字符串，表示浏览器的厂商和版本信息。</p>
+<p>下面是 Chrome 浏览器的<code>userAgent</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">navigator.userAgent</span><br><span class="line"><span class="comment">// &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36&quot;</span></span><br></pre></td></tr></table></figure>
+<p>通过<code>userAgent</code>属性识别浏览器，不是一个好办法。因为必须考虑所有的情况（不同的浏览器，不同的版本），非常麻烦，而且用户可以改变这个字符串。这个字符串的格式并无统一规定，也无法保证未来的适用性，各种上网设备层出不穷，难以穷尽。所以，现在一般不再通过它识别浏览器了，而是使用“功能识别”方法，即逐一测试当前浏览器是否支持要用到的 JavaScript 功能。</p>
+<p>不过，通过<code>userAgent</code>可以大致准确地识别手机浏览器，方法就是测试是否包含<code>mobi</code>字符串。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ua = navigator.userAgent.toLowerCase();</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="regexp">/mobi/i</span>.test(ua)) &#123;</span><br><span class="line">  <span class="comment">// 手机浏览器</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// 非手机浏览器</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
+      <a class="article-more-link" href="/2021/05/31/%E6%89%93%E5%8D%A10057/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Navigator-%E5%AF%B9%E8%B1%A1%EF%BC%8CScreen-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 浏览器模型-Navigator 对象，Screen 对象</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-打卡0056"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/30/%E6%89%93%E5%8D%A10056/"
+    >打卡0056</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/30/%E6%89%93%E5%8D%A10056/" class="article-date">
+  <time datetime="2021-05-30T06:39:04.000Z" itemprop="datePublished">2021-05-30</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#c77eb5>最好的时光在路上，一路向阳。</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="2-window-对象"><a href="#2-window-对象" class="headerlink" title="2. window 对象"></a>2. window 对象</h3><h4 id="2-1-概述"><a href="#2-1-概述" class="headerlink" title="2.1 概述"></a>2.1 概述</h4><p>浏览器里面，<code>window</code>对象（注意，<code>w</code>为小写）指当前的浏览器窗口。它也是当前页面的顶层对象，即最高一层的对象，所有其他对象都是它的下属。一个变量如果未声明，那么默认就是顶层对象的属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">window</span>.a <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>a</code>是一个没有声明就直接赋值的变量，它自动成为顶层对象的属性。</p>
+<p><code>window</code>有自己的实体含义，其实不适合当作最高一层的顶层对象，这是一个语言的设计失误。最早，设计这门语言的时候，原始设想是语言内置的对象越少越好，这样可以提高浏览器的性能。因此，语言设计者 Brendan Eich 就把<code>window</code>对象当作顶层对象，所有未声明就赋值的变量都自动变成<code>window</code>对象的属性。这种设计使得编译阶段无法检测出未声明变量，但到了今天已经没有办法纠正了。</p> 
+      <a class="article-more-link" href="/2021/05/30/%E6%89%93%E5%8D%A10056/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-window-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 浏览器模型-window 对象</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-打卡0055"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/30/%E6%89%93%E5%8D%A10055/"
+    >打卡0055</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/30/%E6%89%93%E5%8D%A10055/" class="article-date">
+  <time datetime="2021-05-30T05:53:33.000Z" itemprop="datePublished">2021-05-30</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#7a1723>我与春风皆过客，你携秋水揽星河。</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="1-浏览器环境概述"><a href="#1-浏览器环境概述" class="headerlink" title="1. 浏览器环境概述"></a>1. 浏览器环境概述</h3><p>JavaScript 是浏览器的内置脚本语言。也就是说，浏览器内置了 JavaScript 引擎，并且提供各种接口，让 JavaScript 脚本可以控制浏览器的各种功能。一旦网页内嵌了 JavaScript 脚本，浏览器加载网页，就会去执行脚本，从而达到操作浏览器的目的，实现网页的各种动态效果。</p>
+<p>本章开始介绍浏览器提供的各种 JavaScript 接口。首先，介绍 JavaScript 代码嵌入网页的方法。</p>
+<h4 id="1-1-代码嵌入网页的方法"><a href="#1-1-代码嵌入网页的方法" class="headerlink" title="1.1 代码嵌入网页的方法"></a>1.1 代码嵌入网页的方法</h4><p>网页中嵌入 JavaScript 代码，主要有四种方法。</p>
+<ul>
+<li><code>&lt;script&gt;</code>元素直接嵌入代码。</li>
+<li><code>&lt;script&gt;</code>标签加载外部脚本</li>
+<li>事件属性</li>
+<li>URL 协议</li>
+</ul> 
+      <a class="article-more-link" href="/2021/05/30/%E6%89%93%E5%8D%A10055/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83%E6%A6%82%E8%BF%B0/" rel="tag">JS 浏览器模型-浏览器环境概述</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0054"
   class="article article-type-post"
   itemscope
@@ -604,206 +795,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-键盘事件</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0047"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/28/%E6%89%93%E5%8D%A10047/"
-    >打卡0047</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/28/%E6%89%93%E5%8D%A10047/" class="article-date">
-  <time datetime="2021-05-28T02:04:34.000Z" itemprop="datePublished">2021-05-28</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#ffc20e> “Let there be light.”</font></p>
-<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="4-鼠标事件"><a href="#4-鼠标事件" class="headerlink" title="4. 鼠标事件"></a>4. 鼠标事件</h3><h4 id="4-1-鼠标事件的种类"><a href="#4-1-鼠标事件的种类" class="headerlink" title="4.1 鼠标事件的种类"></a>4.1 鼠标事件的种类</h4><p>鼠标事件指与鼠标相关的事件，继承了<code>MouseEvent</code>接口。具体的事件主要有以下一些。</p>
-<ul>
-<li><code>click</code>:按下鼠标（通常是按下主按钮）时触发。</li>
-<li><code>dblclick</code>:在同一个元素上双击鼠标时触发。</li>
-<li><code>mousedown</code>:按下鼠标键时触发。</li>
-<li><code>mouseup</code>:释放按下的鼠标键时触发。</li>
-<li><code>mousemove</code>:当鼠标在一个节点内部移动时触发。当鼠标持续移动时，该事件会连续触发。为了避免性能问题，建议对该事件的监听函数做一些限定，比如限定一段时间内只能运行一次。</li>
-<li><code>mouseenter</code>:鼠标进入一个节点时触发，进入子节点不会触发这个事件（详见后文）。</li>
-<li><code>mouseover</code>:鼠标进入一个节点时触发，进入子节点会再一次触发这个事件（详见后文）。</li>
-<li><code>mouseout</code>:鼠标离开一个节点时触发，离开父节点也会触发这个事件（详见后文）。</li>
-<li><code>mouseleave</code>:鼠标离开一个节点时触发，离开父节点不会触发这个事件（详见后文）。</li>
-<li><code>contextmenu</code>:按下鼠标右键时（上下文菜单出现前）触发，或者按下“上下文菜单键”时触发。</li>
-<li><code>wheel</code>:滚动鼠标的滚轮时触发，该事件继承的是<code>WheelEvent</code>接口。</li>
-</ul> 
-      <a class="article-more-link" href="/2021/05/28/%E6%89%93%E5%8D%A10047/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-鼠标事件</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0046"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/28/%E6%89%93%E5%8D%A10046/"
-    >打卡0046</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/28/%E6%89%93%E5%8D%A10046/" class="article-date">
-  <time datetime="2021-05-28T01:04:21.000Z" itemprop="datePublished">2021-05-28</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#90d7ec>一个人做再大的承诺，都不及踏踏实实、认认真真做事更让人放心。</font></p>
-<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="3-Event-对象"><a href="#3-Event-对象" class="headerlink" title="3. Event 对象"></a>3. Event 对象</h3><h4 id="3-1-概述"><a href="#3-1-概述" class="headerlink" title="3.1 概述"></a>3.1 概述</h4><p>事件发生以后，会产生一个事件对象，作为参数传给监听函数。浏览器原生提供一个<code>Event</code>对象，所有的事件都是这个对象的实例，或者说继承了<code>Event.prototype</code>对象。</p>
-<p><code>Event</code>对象本身就是一个构造函数，可以用来生成新的实例。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">event = <span class="keyword">new</span> Event(type, options);</span><br></pre></td></tr></table></figure>
-<p><code>Event</code>构造函数接受两个参数。第一个参数<code>type</code>是字符串，表示事件的名称；第二个参数<code>options</code>是一个对象，表示事件对象的配置。该对象主要有下面两个属性。</p>
-<ul>
-<li><code>bubbles</code>：布尔值，可选，默认为<code>false</code>，表示事件对象是否冒泡。</li>
-<li><code>cancelable</code>：布尔值，可选，默认为<code>false</code>，表示事件是否可以被取消，即能否用<code>Event.preventDefault()</code>取消这个事件。一旦事件被取消，就好像从来没有发生过，不会触发浏览器对该事件的默认行为。</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ev = <span class="keyword">new</span> Event(</span><br><span class="line">  <span class="string">&#x27;look&#x27;</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">&#x27;bubbles&#x27;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">&#x27;cancelable&#x27;</span>: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"><span class="built_in">document</span>.dispatchEvent(ev);</span><br></pre></td></tr></table></figure>
-<p>上面代码新建一个<code>look</code>事件实例，然后使用<code>dispatchEvent</code>方法触发该事件。</p> 
-      <a class="article-more-link" href="/2021/05/28/%E6%89%93%E5%8D%A10046/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-Event-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 事件-Event 对象</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0045"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/27/%E6%89%93%E5%8D%A10045/"
-    >打卡0045</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/27/%E6%89%93%E5%8D%A10045/" class="article-date">
-  <time datetime="2021-05-27T02:23:26.000Z" itemprop="datePublished">2021-05-27</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#f47a55>只想着相见时春风细雨甜，哪管他相思夜星前月下苦。</font></p>
-<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="2-事件模型"><a href="#2-事件模型" class="headerlink" title="2. 事件模型"></a>2. 事件模型</h3><h4 id="2-1-监听函数"><a href="#2-1-监听函数" class="headerlink" title="2.1 监听函数"></a>2.1 监听函数</h4><p>浏览器的事件模型，就是通过监听函数（listener）对事件做出反应。事件发生后，浏览器监听到了这个事件，就会执行对应的监听函数。这是事件驱动编程模式（event-driven）的主要编程方式。</p>
-<p>JavaScript 有三种方法，可以为事件绑定监听函数。</p>
-<h5 id="2-1-1-HTML-的-on-属性"><a href="#2-1-1-HTML-的-on-属性" class="headerlink" title="2.1.1 HTML 的 on- 属性"></a>2.1.1 HTML 的 on- 属性</h5><p>HTML 语言允许在元素的属性中，直接定义某些事件的监听代码。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onload=<span class="string">&quot;doSomething()&quot;</span>&gt;</span><br><span class="line">&lt;div onclick=<span class="string">&quot;console.log(&#x27;触发事件&#x27;)&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
-<p>上面代码为<code>body</code>节点的<code>load</code>事件、<code>div</code>节点的<code>click</code>事件，指定了监听代码。一旦事件发生，就会执行这段代码。</p> 
-      <a class="article-more-link" href="/2021/05/27/%E6%89%93%E5%8D%A10045/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/" rel="tag">JS 事件-事件模型</a></li></ul>
 
     </footer>
   </div>

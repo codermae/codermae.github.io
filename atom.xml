@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-06-02T03:31:14.971Z</updated>
+  <updated>2021-06-03T02:40:20.818Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0067</title>
+    <link href="https://codermae.github.io/2021/06/03/%E6%89%93%E5%8D%A10067/"/>
+    <id>https://codermae.github.io/2021/06/03/%E6%89%93%E5%8D%A10067/</id>
+    <published>2021-06-03T01:50:16.000Z</published>
+    <updated>2021-06-03T02:40:20.818Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#733a31&gt;不要轻易向别人诉苦，因为有很多人并不关心，还有很多人听到后会很高兴。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;13-表单，FormData-对象&quot;&gt;&lt;a href=&quot;#13-表单，FormData-对象&quot; class=&quot;headerlink&quot; title=&quot;13. 表单，FormData 对象&quot;&gt;&lt;/a&gt;13. 表单，FormData 对象&lt;/h3&gt;&lt;h4 id=&quot;13-1-表单概述&quot;&gt;&lt;a href=&quot;#13-1-表单概述&quot; class=&quot;headerlink&quot; title=&quot;13.1 表单概述&quot;&gt;&lt;/a&gt;13.1 表单概述&lt;/h4&gt;&lt;p&gt;表单（&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;）用来收集用户提交的数据，发送到服务器。比如，用户提交用户名和密码，让服务器验证，就要通过表单。表单提供多种控件，让开发者使用，具体的控件种类和用法请参考 HTML 语言的教程。本章主要介绍 JavaScript 与表单的交互。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;form action=&lt;span class=&quot;string&quot;&gt;&amp;quot;/handling-page&amp;quot;&lt;/span&gt; method=&lt;span class=&quot;string&quot;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;label &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&amp;gt;用户名：&amp;lt;/label&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;input type=&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt; id=&lt;span class=&quot;string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt; name=&lt;span class=&quot;string&quot;&gt;&amp;quot;user_name&amp;quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;label &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;passwd&amp;quot;&lt;/span&gt;&amp;gt;密码：&amp;lt;/label&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;input type=&lt;span class=&quot;string&quot;&gt;&amp;quot;password&amp;quot;&lt;/span&gt; id=&lt;span class=&quot;string&quot;&gt;&amp;quot;passwd&amp;quot;&lt;/span&gt; name=&lt;span class=&quot;string&quot;&gt;&amp;quot;user_passwd&amp;quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;input type=&lt;span class=&quot;string&quot;&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; id=&lt;span class=&quot;string&quot;&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; name=&lt;span class=&quot;string&quot;&gt;&amp;quot;submit_button&amp;quot;&lt;/span&gt; value=&lt;span class=&quot;string&quot;&gt;&amp;quot;提交&amp;quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码就是一个简单的表单，包含三个控件：用户名输入框、密码输入框和提交按钮。&lt;/p&gt;
+&lt;p&gt;用户点击“提交”按钮，每一个控件都会生成一个键值对，键名是控件的&lt;code&gt;name&lt;/code&gt;属性，键值是控件的&lt;code&gt;value&lt;/code&gt;属性，键名和键值之间由等号连接。比如，用户名输入框的&lt;code&gt;name&lt;/code&gt;属性是&lt;code&gt;user_name&lt;/code&gt;，&lt;code&gt;value&lt;/code&gt;属性是用户输入的值，假定是“张三”，提交到服务器的时候，就会生成一个键值对&lt;code&gt;user_name=张三&lt;/code&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 浏览器模型-表单，FormData 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-%E8%A1%A8%E5%8D%95%EF%BC%8CFormData-%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0066</title>
+    <link href="https://codermae.github.io/2021/06/03/%E6%89%93%E5%8D%A10066/"/>
+    <id>https://codermae.github.io/2021/06/03/%E6%89%93%E5%8D%A10066/</id>
+    <published>2021-06-03T01:27:38.000Z</published>
+    <updated>2021-06-03T02:40:03.013Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#c1a173&gt;存储阳光，必有远芳；心中有暖，又何惧人生荒凉。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;12-File-对象，FileList-对象，FileReader-对象&quot;&gt;&lt;a href=&quot;#12-File-对象，FileList-对象，FileReader-对象&quot; class=&quot;headerlink&quot; title=&quot;12. File 对象，FileList 对象，FileReader 对象&quot;&gt;&lt;/a&gt;12. File 对象，FileList 对象，FileReader 对象&lt;/h3&gt;&lt;h4 id=&quot;12-1-File-对象&quot;&gt;&lt;a href=&quot;#12-1-File-对象&quot; class=&quot;headerlink&quot; title=&quot;12.1 File 对象&quot;&gt;&lt;/a&gt;12.1 File 对象&lt;/h4&gt;&lt;p&gt;File 对象代表一个文件，用来读写文件信息。它继承了 Blob 对象，或者说是一种特殊的 Blob 对象，所有可以使用 Blob 对象的场合都可以使用它。&lt;/p&gt;
+&lt;p&gt;最常见的使用场合是表单的文件上传控件（&lt;code&gt;&amp;lt;input type=&amp;quot;file&amp;quot;&amp;gt;&lt;/code&gt;），用户选中文件以后，浏览器就会生成一个数组，里面是每一个用户选中的文件，它们都是 File 实例对象。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// HTML 代码如下&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;lt;input id=&amp;quot;fileItem&amp;quot; type=&amp;quot;file&amp;quot;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; file = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementById(&lt;span class=&quot;string&quot;&gt;&amp;#x27;fileItem&amp;#x27;&lt;/span&gt;).files[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;file &lt;span class=&quot;keyword&quot;&gt;instanceof&lt;/span&gt; File &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，&lt;code&gt;file&lt;/code&gt;是用户选中的第一个文件，它是 File 的实例。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 浏览器模型-File 对象，FileList 对象，FileReader 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-File-%E5%AF%B9%E8%B1%A1%EF%BC%8CFileList-%E5%AF%B9%E8%B1%A1%EF%BC%8CFileReader-%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0065</title>
+    <link href="https://codermae.github.io/2021/06/03/%E6%89%93%E5%8D%A10065/"/>
+    <id>https://codermae.github.io/2021/06/03/%E6%89%93%E5%8D%A10065/</id>
+    <published>2021-06-03T01:03:16.000Z</published>
+    <updated>2021-06-03T02:39:30.158Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#afdfe4&gt;有人弃棋，有人做泥荷做清溪，有人成为风雨里的一行诗句。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;11-ArrayBuffer-对象，Blob-对象&quot;&gt;&lt;a href=&quot;#11-ArrayBuffer-对象，Blob-对象&quot; class=&quot;headerlink&quot; title=&quot;11. ArrayBuffer 对象，Blob 对象&quot;&gt;&lt;/a&gt;11. ArrayBuffer 对象，Blob 对象&lt;/h3&gt;&lt;h4 id=&quot;11-1-ArrayBuffer-对象&quot;&gt;&lt;a href=&quot;#11-1-ArrayBuffer-对象&quot; class=&quot;headerlink&quot; title=&quot;11.1 ArrayBuffer 对象&quot;&gt;&lt;/a&gt;11.1 ArrayBuffer 对象&lt;/h4&gt;&lt;p&gt;ArrayBuffer 对象表示一段二进制数据，用来模拟内存里面的数据。通过这个对象，JavaScript 可以读写二进制数据。这个对象可以看作内存数据的表达。&lt;/p&gt;
+&lt;p&gt;这个对象是 ES6 才写入标准的，普通的网页编程用不到它，为了教程体系的完整，下面只提供一个简略的介绍，详细介绍请看《ES6 标准入门》里面的章节。&lt;/p&gt;
+&lt;p&gt;浏览器原生提供&lt;code&gt;ArrayBuffer()&lt;/code&gt; 构造函数，用来生成实例。它接受一个整数作为参数，表示这段二进制数据占用多少个字节。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; buffer = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;ArrayBuffer&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，实例对象&lt;code&gt;buffer&lt;/code&gt;占用8个字节。&lt;/p&gt;
+&lt;p&gt;ArrayBuffer 对象有实例属性&lt;code&gt;byteLength&lt;/code&gt;，表示当前实例占用的内存长度（单位字节）。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; buffer = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;ArrayBuffer&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;buffer.byteLength &lt;span class=&quot;comment&quot;&gt;// 8&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;ArrayBuffer 对象有实例方法&lt;code&gt;slice()&lt;/code&gt;，用来复制一部分内存。它接受两个整数参数，分别表示复制的开始位置（从0开始）和结束位置（复制时不包括结束位置），如果省略第二个参数，则表示一直复制到结束。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; buf1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;ArrayBuffer&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; buf2 = buf1.slice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码表示复制原来的实例。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 浏览器模型-ArrayBuffer 对象，Blob 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-ArrayBuffer-%E5%AF%B9%E8%B1%A1%EF%BC%8CBlob-%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0064</title>
@@ -491,92 +566,6 @@
     
     
     <category term="JS 事件-键盘事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0047</title>
-    <link href="https://codermae.github.io/2021/05/28/%E6%89%93%E5%8D%A10047/"/>
-    <id>https://codermae.github.io/2021/05/28/%E6%89%93%E5%8D%A10047/</id>
-    <published>2021-05-28T02:04:34.000Z</published>
-    <updated>2021-05-28T02:40:52.699Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#ffc20e&gt; “Let there be light.”&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;4-鼠标事件&quot;&gt;&lt;a href=&quot;#4-鼠标事件&quot; class=&quot;headerlink&quot; title=&quot;4. 鼠标事件&quot;&gt;&lt;/a&gt;4. 鼠标事件&lt;/h3&gt;&lt;h4 id=&quot;4-1-鼠标事件的种类&quot;&gt;&lt;a href=&quot;#4-1-鼠标事件的种类&quot; class=&quot;headerlink&quot; title=&quot;4.1 鼠标事件的种类&quot;&gt;&lt;/a&gt;4.1 鼠标事件的种类&lt;/h4&gt;&lt;p&gt;鼠标事件指与鼠标相关的事件，继承了&lt;code&gt;MouseEvent&lt;/code&gt;接口。具体的事件主要有以下一些。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;click&lt;/code&gt;:按下鼠标（通常是按下主按钮）时触发。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;dblclick&lt;/code&gt;:在同一个元素上双击鼠标时触发。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mousedown&lt;/code&gt;:按下鼠标键时触发。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mouseup&lt;/code&gt;:释放按下的鼠标键时触发。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mousemove&lt;/code&gt;:当鼠标在一个节点内部移动时触发。当鼠标持续移动时，该事件会连续触发。为了避免性能问题，建议对该事件的监听函数做一些限定，比如限定一段时间内只能运行一次。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mouseenter&lt;/code&gt;:鼠标进入一个节点时触发，进入子节点不会触发这个事件（详见后文）。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mouseover&lt;/code&gt;:鼠标进入一个节点时触发，进入子节点会再一次触发这个事件（详见后文）。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mouseout&lt;/code&gt;:鼠标离开一个节点时触发，离开父节点也会触发这个事件（详见后文）。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mouseleave&lt;/code&gt;:鼠标离开一个节点时触发，离开父节点不会触发这个事件（详见后文）。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;contextmenu&lt;/code&gt;:按下鼠标右键时（上下文菜单出现前）触发，或者按下“上下文菜单键”时触发。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;wheel&lt;/code&gt;:滚动鼠标的滚轮时触发，该事件继承的是&lt;code&gt;WheelEvent&lt;/code&gt;接口。&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 事件-鼠标事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0046</title>
-    <link href="https://codermae.github.io/2021/05/28/%E6%89%93%E5%8D%A10046/"/>
-    <id>https://codermae.github.io/2021/05/28/%E6%89%93%E5%8D%A10046/</id>
-    <published>2021-05-28T01:04:21.000Z</published>
-    <updated>2021-05-28T02:41:05.149Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#90d7ec&gt;一个人做再大的承诺，都不及踏踏实实、认认真真做事更让人放心。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;3-Event-对象&quot;&gt;&lt;a href=&quot;#3-Event-对象&quot; class=&quot;headerlink&quot; title=&quot;3. Event 对象&quot;&gt;&lt;/a&gt;3. Event 对象&lt;/h3&gt;&lt;h4 id=&quot;3-1-概述&quot;&gt;&lt;a href=&quot;#3-1-概述&quot; class=&quot;headerlink&quot; title=&quot;3.1 概述&quot;&gt;&lt;/a&gt;3.1 概述&lt;/h4&gt;&lt;p&gt;事件发生以后，会产生一个事件对象，作为参数传给监听函数。浏览器原生提供一个&lt;code&gt;Event&lt;/code&gt;对象，所有的事件都是这个对象的实例，或者说继承了&lt;code&gt;Event.prototype&lt;/code&gt;对象。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Event&lt;/code&gt;对象本身就是一个构造函数，可以用来生成新的实例。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;event = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Event(type, options);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;code&gt;Event&lt;/code&gt;构造函数接受两个参数。第一个参数&lt;code&gt;type&lt;/code&gt;是字符串，表示事件的名称；第二个参数&lt;code&gt;options&lt;/code&gt;是一个对象，表示事件对象的配置。该对象主要有下面两个属性。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;bubbles&lt;/code&gt;：布尔值，可选，默认为&lt;code&gt;false&lt;/code&gt;，表示事件对象是否冒泡。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cancelable&lt;/code&gt;：布尔值，可选，默认为&lt;code&gt;false&lt;/code&gt;，表示事件是否可以被取消，即能否用&lt;code&gt;Event.preventDefault()&lt;/code&gt;取消这个事件。一旦事件被取消，就好像从来没有发生过，不会触发浏览器对该事件的默认行为。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; ev = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Event(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;string&quot;&gt;&amp;#x27;look&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;bubbles&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&amp;#x27;cancelable&amp;#x27;&lt;/span&gt;: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.dispatchEvent(ev);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码新建一个&lt;code&gt;look&lt;/code&gt;事件实例，然后使用&lt;code&gt;dispatchEvent&lt;/code&gt;方法触发该事件。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 事件-Event 对象" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-Event-%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0045</title>
-    <link href="https://codermae.github.io/2021/05/27/%E6%89%93%E5%8D%A10045/"/>
-    <id>https://codermae.github.io/2021/05/27/%E6%89%93%E5%8D%A10045/</id>
-    <published>2021-05-27T02:23:26.000Z</published>
-    <updated>2021-05-27T01:57:07.648Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#f47a55&gt;只想着相见时春风细雨甜，哪管他相思夜星前月下苦。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;2-事件模型&quot;&gt;&lt;a href=&quot;#2-事件模型&quot; class=&quot;headerlink&quot; title=&quot;2. 事件模型&quot;&gt;&lt;/a&gt;2. 事件模型&lt;/h3&gt;&lt;h4 id=&quot;2-1-监听函数&quot;&gt;&lt;a href=&quot;#2-1-监听函数&quot; class=&quot;headerlink&quot; title=&quot;2.1 监听函数&quot;&gt;&lt;/a&gt;2.1 监听函数&lt;/h4&gt;&lt;p&gt;浏览器的事件模型，就是通过监听函数（listener）对事件做出反应。事件发生后，浏览器监听到了这个事件，就会执行对应的监听函数。这是事件驱动编程模式（event-driven）的主要编程方式。&lt;/p&gt;
-&lt;p&gt;JavaScript 有三种方法，可以为事件绑定监听函数。&lt;/p&gt;
-&lt;h5 id=&quot;2-1-1-HTML-的-on-属性&quot;&gt;&lt;a href=&quot;#2-1-1-HTML-的-on-属性&quot; class=&quot;headerlink&quot; title=&quot;2.1.1 HTML 的 on- 属性&quot;&gt;&lt;/a&gt;2.1.1 HTML 的 on- 属性&lt;/h5&gt;&lt;p&gt;HTML 语言允许在元素的属性中，直接定义某些事件的监听代码。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;body onload=&lt;span class=&quot;string&quot;&gt;&amp;quot;doSomething()&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div onclick=&lt;span class=&quot;string&quot;&gt;&amp;quot;console.log(&amp;#x27;触发事件&amp;#x27;)&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码为&lt;code&gt;body&lt;/code&gt;节点的&lt;code&gt;load&lt;/code&gt;事件、&lt;code&gt;div&lt;/code&gt;节点的&lt;code&gt;click&lt;/code&gt;事件，指定了监听代码。一旦事件发生，就会执行这段代码。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 事件-事件模型" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/"/>
     
   </entry>
   
