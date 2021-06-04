@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-06-03T02:40:20.818Z</updated>
+  <updated>2021-06-04T02:36:16.494Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0068</title>
+    <link href="https://codermae.github.io/2021/06/04/%E6%89%93%E5%8D%A10068/"/>
+    <id>https://codermae.github.io/2021/06/04/%E6%89%93%E5%8D%A10068/</id>
+    <published>2021-06-04T01:08:16.000Z</published>
+    <updated>2021-06-04T02:36:16.494Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#faa755&gt;要保持希望在每天清晨太阳升起。&lt;/font&gt;&lt;br&gt;菜鸟一个，一直没搞明白Vue和Node项目环境的搭建，处在雾里，昨晚终于卷完了，记录一下。&lt;br&gt;如果有人能看到，欢迎留言！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="总结" scheme="https://codermae.github.io/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="Vue+Node+Express+postgresql" scheme="https://codermae.github.io/tags/Vue-Node-Express-postgresql/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0067</title>
@@ -532,40 +551,6 @@
     
     
     <category term="JS 事件-进度事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%BF%9B%E5%BA%A6%E4%BA%8B%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0048</title>
-    <link href="https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10048/"/>
-    <id>https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10048/</id>
-    <published>2021-05-29T03:58:59.000Z</published>
-    <updated>2021-05-29T05:47:43.675Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#ef5b9c&gt;在自称善意的之时，即存恶意。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;5-键盘事件&quot;&gt;&lt;a href=&quot;#5-键盘事件&quot; class=&quot;headerlink&quot; title=&quot;5. 键盘事件&quot;&gt;&lt;/a&gt;5. 键盘事件&lt;/h3&gt;&lt;h4 id=&quot;5-1-键盘事件的种类&quot;&gt;&lt;a href=&quot;#5-1-键盘事件的种类&quot; class=&quot;headerlink&quot; title=&quot;5.1 键盘事件的种类&quot;&gt;&lt;/a&gt;5.1 键盘事件的种类&lt;/h4&gt;&lt;p&gt;键盘事件由用户击打键盘触发，主要有&lt;code&gt;keydown&lt;/code&gt;、&lt;code&gt;keypress&lt;/code&gt;、&lt;code&gt;keyup&lt;/code&gt;三个事件，它们都继承了&lt;code&gt;KeyboardEvent&lt;/code&gt;接口。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;keydown&lt;/code&gt;：按下键盘时触发。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;keypress&lt;/code&gt;：按下有值的键时触发，即按下 Ctrl、Alt、Shift、Meta 这样无值的键，这个事件不会触发。对于有值的键，按下时先触发keydown事件，再触发这个事件。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;keyup&lt;/code&gt;：松开键盘时触发该事件。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果用户一直按键不松开，就会连续触发键盘事件，触发的顺序如下。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;keydown&lt;/li&gt;
-&lt;li&gt;keypress&lt;/li&gt;
-&lt;li&gt;keydown&lt;/li&gt;
-&lt;li&gt;keypress&lt;/li&gt;
-&lt;li&gt;…（重复以上过程）&lt;/li&gt;
-&lt;li&gt;keyup&lt;/li&gt;
-&lt;/ol&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 事件-键盘事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/"/>
     
   </entry>
   
