@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-06-04T02:36:16.494Z</updated>
+  <updated>2021-06-05T06:45:18.135Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0070</title>
+    <link href="https://codermae.github.io/2021/06/05/%E6%89%93%E5%8D%A10070/"/>
+    <id>https://codermae.github.io/2021/06/05/%E6%89%93%E5%8D%A10070/</id>
+    <published>2021-06-05T06:23:56.000Z</published>
+    <updated>2021-06-05T06:45:18.135Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#007d65&gt;愿你执迷不悟时有人陪你颠沛流离，愿你幡然醒悟时物是人是。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;15-Web-Worker&quot;&gt;&lt;a href=&quot;#15-Web-Worker&quot; class=&quot;headerlink&quot; title=&quot;15. Web Worker&quot;&gt;&lt;/a&gt;15. Web Worker&lt;/h3&gt;&lt;h4 id=&quot;15-1-概述&quot;&gt;&lt;a href=&quot;#15-1-概述&quot; class=&quot;headerlink&quot; title=&quot;15.1 概述&quot;&gt;&lt;/a&gt;15.1 概述&lt;/h4&gt;&lt;p&gt;JavaScript 语言采用的是单线程模型，也就是说，所有任务只能在一个线程上完成，一次只能做一件事。前面的任务没做完，后面的任务只能等着。随着电脑计算能力的增强，尤其是多核 CPU 的出现，单线程带来很大的不便，无法充分发挥计算机的计算能力。&lt;/p&gt;
+&lt;p&gt;Web Worker 的作用，就是为 JavaScript 创造多线程环境，允许主线程创建 Worker 线程，将一些任务分配给后者运行。在主线程运行的同时，Worker 线程在后台运行，两者互不干扰。等到 Worker 线程完成计算任务，再把结果返回给主线程。这样的好处是，一些计算密集型或高延迟的任务可以交由 Worker 线程执行，主线程（通常负责 UI 交互）能够保持流畅，不会被阻塞或拖慢。&lt;/p&gt;
+&lt;p&gt;Worker 线程一旦新建成功，就会始终运行，不会被主线程上的活动（比如用户点击按钮、提交表单）打断。这样有利于随时响应主线程的通信。但是，这也造成了 Worker 比较耗费资源，不应该过度使用，而且一旦使用完毕，就应该关闭。&lt;/p&gt;
+&lt;p&gt;Web Worker 有以下几个使用注意点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 浏览器模型-Web Worker" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Web-Worker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0069</title>
+    <link href="https://codermae.github.io/2021/06/05/%E6%89%93%E5%8D%A10069/"/>
+    <id>https://codermae.github.io/2021/06/05/%E6%89%93%E5%8D%A10069/</id>
+    <published>2021-06-05T04:42:43.000Z</published>
+    <updated>2021-06-05T06:45:25.444Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#412f1f&gt;当你觉得孤独无助时，想一想还有十几亿细胞只为了你一个人而活。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;14-IndexedDB-API&quot;&gt;&lt;a href=&quot;#14-IndexedDB-API&quot; class=&quot;headerlink&quot; title=&quot;14. IndexedDB API&quot;&gt;&lt;/a&gt;14. IndexedDB API&lt;/h3&gt;&lt;h4 id=&quot;14-1-概述&quot;&gt;&lt;a href=&quot;#14-1-概述&quot; class=&quot;headerlink&quot; title=&quot;14.1 概述&quot;&gt;&lt;/a&gt;14.1 概述&lt;/h4&gt;&lt;p&gt;随着浏览器的功能不断增强，越来越多的网站开始考虑，将大量数据储存在客户端，这样可以减少从服务器获取数据，直接从本地获取数据。&lt;/p&gt;
+&lt;p&gt;现有的浏览器数据储存方案，都不适合储存大量数据：Cookie 的大小不超过 4KB，且每次请求都会发送回服务器；LocalStorage 在 2.5MB 到 10MB 之间（各家浏览器不同），而且不提供搜索功能，不能建立自定义的索引。所以，需要一种新的解决方案，这就是 IndexedDB 诞生的背景。&lt;/p&gt;
+&lt;p&gt;通俗地说，IndexedDB 就是浏览器提供的本地数据库，它可以被网页脚本创建和操作。IndexedDB 允许储存大量数据，提供查找接口，还能建立索引。这些都是 LocalStorage 所不具备的。就数据库类型而言，IndexedDB 不属于关系型数据库（不支持 SQL 查询语句），更接近 NoSQL 数据库。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
+    
+    
+    <category term="JS 浏览器模型-IndexedDB API" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-IndexedDB-API/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0068</title>
@@ -498,59 +543,6 @@
     
     
     <category term="JS 事件-触摸事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0050</title>
-    <link href="https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10050/"/>
-    <id>https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10050/</id>
-    <published>2021-05-29T04:27:52.000Z</published>
-    <updated>2021-05-29T05:48:08.150Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#817936&gt;每个人都在自己的生命中频繁地抛弃着自己的过去。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;7-表单事件&quot;&gt;&lt;a href=&quot;#7-表单事件&quot; class=&quot;headerlink&quot; title=&quot;7. 表单事件&quot;&gt;&lt;/a&gt;7. 表单事件&lt;/h3&gt;&lt;h4 id=&quot;7-1-表单事件的种类&quot;&gt;&lt;a href=&quot;#7-1-表单事件的种类&quot; class=&quot;headerlink&quot; title=&quot;7.1 表单事件的种类&quot;&gt;&lt;/a&gt;7.1 表单事件的种类&lt;/h4&gt;&lt;h5 id=&quot;7-1-1-input-事件&quot;&gt;&lt;a href=&quot;#7-1-1-input-事件&quot; class=&quot;headerlink&quot; title=&quot;7.1.1 input 事件&quot;&gt;&lt;/a&gt;7.1.1 input 事件&lt;/h5&gt;&lt;p&gt;&lt;code&gt;input&lt;/code&gt;事件当&lt;code&gt;&amp;lt;input&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt;的值发生变化时触发。对于复选框（&lt;code&gt;&amp;lt;input type=checkbox&amp;gt;&lt;/code&gt;）或单选框（&lt;code&gt;&amp;lt;input type=radio&amp;gt;&lt;/code&gt;），用户改变选项时，也会触发这个事件。另外，对于打开&lt;code&gt;contenteditable&lt;/code&gt;属性的元素，只要值发生变化，也会触发&lt;code&gt;input&lt;/code&gt;事件。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;input&lt;/code&gt;事件的一个特点，就是会连续触发，比如用户每按下一次按键，就会触发一次&lt;code&gt;input&lt;/code&gt;事件。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;input&lt;/code&gt;事件对象继承了&lt;code&gt;InputEvent&lt;/code&gt;接口。&lt;/p&gt;
-&lt;p&gt;该事件跟&lt;code&gt;change&lt;/code&gt;事件很像，不同之处在于&lt;code&gt;input&lt;/code&gt;事件在元素的值发生变化后立即发生，而&lt;code&gt;change&lt;/code&gt;在元素失去焦点时发生，而内容此时可能已经变化多次。也就是说，如果有连续变化，&lt;code&gt;input&lt;/code&gt;事件会触发多次，而&lt;code&gt;change&lt;/code&gt;事件只在失去焦点时触发一次。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 事件-表单事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%A1%A8%E5%8D%95%E4%BA%8B%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0049</title>
-    <link href="https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10049/"/>
-    <id>https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10049/</id>
-    <published>2021-05-29T04:12:46.000Z</published>
-    <updated>2021-05-29T05:47:59.850Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#deab8a&gt;相逢尽道休官好，林下何曾见一人。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;6-进度事件&quot;&gt;&lt;a href=&quot;#6-进度事件&quot; class=&quot;headerlink&quot; title=&quot;6. 进度事件&quot;&gt;&lt;/a&gt;6. 进度事件&lt;/h3&gt;&lt;h4 id=&quot;6-1-进度事件的种类&quot;&gt;&lt;a href=&quot;#6-1-进度事件的种类&quot; class=&quot;headerlink&quot; title=&quot;6.1 进度事件的种类&quot;&gt;&lt;/a&gt;6.1 进度事件的种类&lt;/h4&gt;&lt;p&gt;进度事件用来描述资源加载的进度，主要由 AJAX 请求、&lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;等外部资源的加载触发，继承了&lt;code&gt;ProgressEvent&lt;/code&gt;接口。它主要包含以下几种事件。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;abort&lt;/code&gt;:外部资源中止加载时（比如用户取消）触发。如果发生错误导致中止，不会触发该事件。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;error&lt;/code&gt;:由于错误导致外部资源无法加载时触发。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;load&lt;/code&gt;:外部资源加载成功时触发。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;loadstart&lt;/code&gt;:外部资源开始加载时触发。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;loadend&lt;/code&gt;:外部资源停止加载时触发，发生顺序排在&lt;code&gt;error&lt;/code&gt;、&lt;code&gt;abort&lt;/code&gt;、&lt;code&gt;load&lt;/code&gt;等事件的后面。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;progress&lt;/code&gt;:外部资源加载过程中不断触发。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;timeout&lt;/code&gt;:加载超时时触发。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;注意，除了资源下载，文件上传也存在这些事件。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 事件-进度事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%BF%9B%E5%BA%A6%E4%BA%8B%E4%BB%B6/"/>
     
   </entry>
   
