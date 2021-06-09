@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">676</span>
+            <span class="post-count">867</span>
         </span>
     </span>
 
@@ -153,6 +153,15 @@
 <ol start="3">
 <li>测试<br><img src="https://i.loli.net/2021/06/04/dkVRwe1jf54XcpU.png" alt="click"><br>点击之后终端成功返回数据<br><img src="https://i.loli.net/2021/06/04/9Zw7nMkdTj3WEgD.png" alt="over"></li>
 </ol>
+<h3 id="5-更新-post"><a href="#5-更新-post" class="headerlink" title="5. 更新-post"></a>5. 更新-post</h3><hr>
+<p>更</p>
+<hr>
+<p>新</p>
+<hr>
+<p>刚开始只有一个get请求，后来换了张表又加入了一个post请求，于是又有了新的问题…</p>
+<p>下面是sql以及post<br><img src="https://i.loli.net/2021/06/09/hjUNk4tm9qcCbLr.png" alt="sql.add"><br><img src="https://i.loli.net/2021/06/09/4tNkfW7MlDLebVo.png" alt="post"></p>
+<p>运行之后发现post请求一直处于<code>pending</code>状态,并且node终端也报出了如下error<br><img src="https://i.loli.net/2021/06/09/QYeGEJz9kWCHBr8.png" alt="pending"><br><img src="https://i.loli.net/2021/06/09/2JO6MGeu1Uly98E.png" alt="node-error"></p>
+<p>第一反应看看sql语句，但是并没有发现错误…于是百度post请求处于pending状态的相关问题于是在<code>mock/mock-server.js</code>中做了以下更改<br><img src="https://i.loli.net/2021/06/09/HagnECLjTV3mbMJ.png" alt="mock-server"><br><img src="https://i.loli.net/2021/06/09/3VkWl1ontO7UEb8.png" alt="mock-server"><br>但是改完之后post依旧还是pending状态，node终端的报错也依旧存在。<br>two days later ···<br>两天之后，继续百度，终于发现了sql语句的错误，于是做了以下更改<br><img src="https://i.loli.net/2021/06/09/pYSJ61xQrN7bcI2.png" alt="sqlUpdate"><br>果然！！！post请求发送成功，数据也成功插入到postgresql中。<br><img src="https://i.loli.net/2021/06/09/5laGKMWSInwJEcz.png" alt="suc"></p>
  
       <!-- reward -->
       

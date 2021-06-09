@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-06-05T06:45:18.135Z</updated>
+  <updated>2021-06-09T06:46:04.177Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0071</title>
+    <link href="https://codermae.github.io/2021/06/09/%E6%89%93%E5%8D%A10071/"/>
+    <id>https://codermae.github.io/2021/06/09/%E6%89%93%E5%8D%A10071/</id>
+    <published>2021-06-09T06:46:04.000Z</published>
+    <updated>2021-06-09T06:46:04.177Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>打卡0070</title>
@@ -66,7 +79,7 @@
     <link href="https://codermae.github.io/2021/06/04/%E6%89%93%E5%8D%A10068/"/>
     <id>https://codermae.github.io/2021/06/04/%E6%89%93%E5%8D%A10068/</id>
     <published>2021-06-04T01:08:16.000Z</published>
-    <updated>2021-06-04T02:36:16.494Z</updated>
+    <updated>2021-06-09T07:30:43.366Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#faa755&gt;要保持希望在每天清晨太阳升起。&lt;/font&gt;&lt;br&gt;菜鸟一个，一直没搞明白Vue和Node项目环境的搭建，处在雾里，昨晚终于卷完了，记录一下。&lt;br&gt;如果有人能看到，欢迎留言！&lt;/p&gt;</summary>
@@ -516,33 +529,6 @@
     
     
     <category term="JS 事件-拖拉事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E6%8B%96%E6%8B%89%E4%BA%8B%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0051</title>
-    <link href="https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10051/"/>
-    <id>https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10051/</id>
-    <published>2021-05-29T04:45:38.000Z</published>
-    <updated>2021-05-29T05:48:15.338Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#444693&gt;今夜不知何处宿，平沙万里绝人烟。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;8-触摸事件&quot;&gt;&lt;a href=&quot;#8-触摸事件&quot; class=&quot;headerlink&quot; title=&quot;8. 触摸事件&quot;&gt;&lt;/a&gt;8. 触摸事件&lt;/h3&gt;&lt;h4 id=&quot;8-1-触摸操作概述&quot;&gt;&lt;a href=&quot;#8-1-触摸操作概述&quot; class=&quot;headerlink&quot; title=&quot;8.1 触摸操作概述&quot;&gt;&lt;/a&gt;8.1 触摸操作概述&lt;/h4&gt;&lt;p&gt;浏览器的触摸 API 由三个部分组成。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Touch：一个触摸点&lt;/li&gt;
-&lt;li&gt;TouchList：多个触摸点的集合&lt;/li&gt;
-&lt;li&gt;TouchEvent：触摸引发的事件实例&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Touch&lt;/code&gt;接口的实例对象用来表示触摸点（一根手指或者一根触摸笔），包括位置、大小、形状、压力、目标元素等属性。有时，触摸动作由多个触摸点（多根手指）组成，多个触摸点的集合由&lt;code&gt;TouchList&lt;/code&gt;接口的实例对象表示。&lt;code&gt;TouchEvent&lt;/code&gt;接口的实例对象代表由触摸引发的事件，只有触摸屏才会引发这一类事件。&lt;/p&gt;
-&lt;p&gt;很多时候，触摸事件和鼠标事件同时触发，即使这个时候并没有用到鼠标。这是为了让那些只定义鼠标事件、没有定义触摸事件的代码，在触摸屏的情况下仍然能用。如果想避免这种情况，可以用&lt;code&gt;event.preventDefault&lt;/code&gt;方法阻止发出鼠标事件。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 事件-触摸事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6/"/>
     
   </entry>
   
