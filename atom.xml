@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-06-09T06:46:04.177Z</updated>
+  <updated>2021-06-15T07:47:16.307Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,15 +17,49 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打卡0072</title>
+    <link href="https://codermae.github.io/2021/06/13/%E6%89%93%E5%8D%A10072/"/>
+    <id>https://codermae.github.io/2021/06/13/%E6%89%93%E5%8D%A10072/</id>
+    <published>2021-06-13T05:07:15.000Z</published>
+    <updated>2021-06-15T07:47:16.307Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#50b7c1&gt;只要内心不乱，外界就很难改变你什么。记住，不要艳羡他人，不要输掉自己。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;2-let-和-const-命令&quot;&gt;&lt;a href=&quot;#2-let-和-const-命令&quot; class=&quot;headerlink&quot; title=&quot;2. let 和 const 命令&quot;&gt;&lt;/a&gt;2. let 和 const 命令&lt;/h3&gt;&lt;h4 id=&quot;2-1-let-命令&quot;&gt;&lt;a href=&quot;#2-1-let-命令&quot; class=&quot;headerlink&quot; title=&quot;2.1 let 命令&quot;&gt;&lt;/a&gt;2.1 let 命令&lt;/h4&gt;&lt;h5 id=&quot;2-1-1-基本用法&quot;&gt;&lt;a href=&quot;#2-1-1-基本用法&quot; class=&quot;headerlink&quot; title=&quot;2.1.1 基本用法&quot;&gt;&lt;/a&gt;2.1.1 基本用法&lt;/h5&gt;&lt;p&gt;ES6 新增了&lt;code&gt;let&lt;/code&gt;命令，用来声明变量。它的用法类似于&lt;code&gt;var&lt;/code&gt;，但是所声明的变量，只在&lt;code&gt;let&lt;/code&gt;命令所在的代码块内有效。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; b = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a &lt;span class=&quot;comment&quot;&gt;// ReferenceError: a is not defined.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;b &lt;span class=&quot;comment&quot;&gt;// 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码在代码块之中，分别用&lt;code&gt;let&lt;/code&gt;和&lt;code&gt;var&lt;/code&gt;声明了两个变量。然后在代码块之外调用这两个变量，结果&lt;code&gt;let&lt;/code&gt;声明的变量报错，&lt;code&gt;var&lt;/code&gt;声明的变量返回了正确的值。这表明，&lt;code&gt;let&lt;/code&gt;声明的变量只在它所在的代码块有效。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;for&lt;/code&gt;循环的计数器，就很合适使用&lt;code&gt;let&lt;/code&gt;命令。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 let 和 const 命令" scheme="https://codermae.github.io/tags/JS-ES6-let-%E5%92%8C-const-%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>打卡0071</title>
     <link href="https://codermae.github.io/2021/06/09/%E6%89%93%E5%8D%A10071/"/>
     <id>https://codermae.github.io/2021/06/09/%E6%89%93%E5%8D%A10071/</id>
     <published>2021-06-09T06:46:04.000Z</published>
-    <updated>2021-06-09T06:46:04.177Z</updated>
+    <updated>2021-06-15T07:47:20.617Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#ffc20e&gt;生活如此美好，忧伤总会逃掉，既然阳光照耀，就报之以微笑。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;1-ECMAScript-6-简介&quot;&gt;&lt;a href=&quot;#1-ECMAScript-6-简介&quot; class=&quot;headerlink&quot; title=&quot;1. ECMAScript 6 简介&quot;&gt;&lt;/a&gt;1. ECMAScript 6 简介&lt;/h3&gt;&lt;p&gt;ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。&lt;/p&gt;
+&lt;h4 id=&quot;1-1-ECMAScript-和-JavaScript-的关系&quot;&gt;&lt;a href=&quot;#1-1-ECMAScript-和-JavaScript-的关系&quot; class=&quot;headerlink&quot; title=&quot;1.1 ECMAScript 和 JavaScript 的关系&quot;&gt;&lt;/a&gt;1.1 ECMAScript 和 JavaScript 的关系&lt;/h4&gt;&lt;p&gt;一个常见的问题是，ECMAScript 和 JavaScript 到底是什么关系？&lt;/p&gt;
+&lt;p&gt;要讲清楚这个问题，需要回顾历史。1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。&lt;/p&gt;
+&lt;p&gt;该标准从一开始就是针对 JavaScript 语言制定的，但是之所以不叫 JavaScript，有两个原因。一是商标，Java 是 Sun 公司的商标，根据授权协议，只有 Netscape 公司可以合法地使用 JavaScript 这个名字，且 JavaScript 本身也已经被 Netscape 公司注册为商标。二是想体现这门语言的制定者是 ECMA，不是 Netscape，这样有利于保证这门语言的开放性和中立性。&lt;/p&gt;
+&lt;p&gt;因此，ECMAScript 和 JavaScript 的关系是，前者是后者的规格，后者是前者的一种实现（另外的 ECMAScript 方言还有 JScript 和 ActionScript）。日常场合，这两个词是可以互换的。&lt;/p&gt;</summary>
     
     
     
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
     
+    
+    <category term="JS-ES6 ECMAScript 6 简介" scheme="https://codermae.github.io/tags/JS-ES6-ECMAScript-6-%E7%AE%80%E4%BB%8B/"/>
     
   </entry>
   
@@ -504,31 +538,6 @@
     
     
     <category term="JS 事件-其他常见事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E5%85%B6%E4%BB%96%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0052</title>
-    <link href="https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10052/"/>
-    <id>https://codermae.github.io/2021/05/29/%E6%89%93%E5%8D%A10052/</id>
-    <published>2021-05-29T05:08:24.000Z</published>
-    <updated>2021-05-29T05:48:27.034Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#f47920&gt;劝君更尽一杯酒，西出阳关无故人。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;9-拖拉事件&quot;&gt;&lt;a href=&quot;#9-拖拉事件&quot; class=&quot;headerlink&quot; title=&quot;9. 拖拉事件&quot;&gt;&lt;/a&gt;9. 拖拉事件&lt;/h3&gt;&lt;h4 id=&quot;9-1-拖拉事件的种类&quot;&gt;&lt;a href=&quot;#9-1-拖拉事件的种类&quot; class=&quot;headerlink&quot; title=&quot;9.1 拖拉事件的种类&quot;&gt;&lt;/a&gt;9.1 拖拉事件的种类&lt;/h4&gt;&lt;p&gt;拖拉（drag）指的是，用户在某个对象上按下鼠标键不放，拖动它到另一个位置，然后释放鼠标键，将该对象放在那里。&lt;/p&gt;
-&lt;p&gt;拖拉的对象有好几种，包括元素节点、图片、链接、选中的文字等等。在网页中，除了元素节点默认不可以拖拉，其他（图片、链接、选中的文字）都可以直接拖拉。为了让元素节点可拖拉，可以将该节点的&lt;code&gt;draggable&lt;/code&gt;属性设为&lt;code&gt;true&lt;/code&gt;。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;div draggable=&lt;span class=&quot;string&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  此区域可拖拉&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码的&lt;code&gt;div&lt;/code&gt;区块，在网页中可以直接用鼠标拖动。松开鼠标键时，拖动效果就会消失，该区块依然在原来的位置。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;draggable&lt;/code&gt;属性可用于任何元素节点，但是图片（&lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;）和链接（&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;）不加这个属性，就可以拖拉。对于它们，用到这个属性的时候，往往是将其设为&lt;code&gt;false&lt;/code&gt;，防止拖拉这两种元素。&lt;/p&gt;
-&lt;p&gt;注意，一旦某个元素节点的&lt;code&gt;draggable&lt;/code&gt;属性设为&lt;code&gt;true&lt;/code&gt;，就无法再用鼠标选中该节点内部的文字或子节点了。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 事件-拖拉事件" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-%E6%8B%96%E6%8B%89%E4%BA%8B%E4%BB%B6/"/>
     
   </entry>
   
