@@ -159,6 +159,69 @@
     
     
     <article
+  id="post-打卡0033"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/22/%E6%89%93%E5%8D%A10033/"
+    >打卡0033</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/22/%E6%89%93%E5%8D%A10033/" class="article-date">
+  <time datetime="2021-05-22T00:36:17.000Z" itemprop="datePublished">2021-05-22</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#ef5b9c>你相信时间会抚平一切，可时过境迁，你已不复醒</font></p>
+<h2 id="JS异步操作"><a href="#JS异步操作" class="headerlink" title="JS异步操作"></a>JS异步操作</h2><h3 id="3-Promise对象"><a href="#3-Promise对象" class="headerlink" title="3. Promise对象"></a>3. Promise对象</h3><h4 id="3-1-概述"><a href="#3-1-概述" class="headerlink" title="3.1 概述"></a>3.1 概述</h4><p>Promise 对象是 JavaScript 的异步操作解决方案，为异步操作提供统一接口。它起到代理作用（proxy），充当异步操作与回调函数之间的中介，使得异步操作具备同步操作的接口。Promise 可以让异步操作写起来，就像在写同步操作的流程，而不必一层层地嵌套回调函数。</p>
+<p>注意，本章只是 Promise 对象的简单介绍。为了避免与后续教程的重复，更完整的介绍请看《ES6 标准入门》的《Promise 对象》一章。</p>
+<p>首先，Promise 是一个对象，也是一个构造函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 异步代码...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(f1);</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>Promise</code>构造函数接受一个回调函数<code>f1</code>作为参数，<code>f1</code>里面是异步操作的代码。然后，返回的<code>p1</code>就是一个 Promise 实例。</p>
+<p>Promise 的设计思想是，所有异步任务都返回一个 Promise 实例。Promise 实例有一个<code>then</code>方法，用来指定下一步的回调函数。</p> 
+      <a class="article-more-link" href="/2021/05/22/%E6%89%93%E5%8D%A10033/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C-Promise%E5%AF%B9%E8%B1%A1/" rel="tag">JS异步操作-Promise对象</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0032"
   class="article article-type-post"
   itemscope
@@ -720,69 +783,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-RegExp%E5%AF%B9%E8%B1%A1/" rel="tag">JS标准库-RegExp对象</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0023"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/15/%E6%89%93%E5%8D%A10023/"
-    >打卡0023</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/15/%E6%89%93%E5%8D%A10023/" class="article-date">
-  <time datetime="2021-05-15T05:01:26.000Z" itemprop="datePublished">2021-05-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#999d9c>生命好在无意义，才容得下各自赋予意义。假如生命是有意义的，这个意义却不合我的志趣，那才尴尬狼狈。</font></p>
-<h2 id="JS标准库"><a href="#JS标准库" class="headerlink" title="JS标准库"></a>JS标准库</h2><h3 id="9-Date对象"><a href="#9-Date对象" class="headerlink" title="9. Date对象"></a>9. Date对象</h3><p><code>Date</code>对象是 JavaScript 原生的时间库。它以国际标准时间（UTC）1970年1月1日00:00:00作为时间的零点，可以表示的时间范围是前后各1亿天（单位为毫秒）</p>
-<h4 id="9-1-普通函数的用法"><a href="#9-1-普通函数的用法" class="headerlink" title="9.1 普通函数的用法"></a>9.1 普通函数的用法</h4><p><code>Date</code>对象可以作为普通函数直接调用，返回一个代表当前时间的字符串。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Date</span>()</span><br><span class="line"><span class="comment">// &quot;Tue Dec 01 2015 09:34:43 GMT+0800 (CST)&quot;</span></span><br></pre></td></tr></table></figure>
-<p>注意，即使带有参数，<code>Date</code>作为普通函数使用时，返回的还是当前时间。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Date</span>(<span class="number">2000</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"><span class="comment">// &quot;Tue Dec 01 2015 09:34:43 GMT+0800 (CST)&quot;</span></span><br></pre></td></tr></table></figure>
-<p>上面代码说明，无论有没有参数，直接调用<code>Date</code>总是返回当前时间</p> 
-      <a class="article-more-link" href="/2021/05/15/%E6%89%93%E5%8D%A10023/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Date%E5%AF%B9%E8%B1%A1/" rel="tag">JS标准库-Date对象</a></li></ul>
 
     </footer>
   </div>
