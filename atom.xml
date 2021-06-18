@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-06-16T07:59:05.922Z</updated>
+  <updated>2021-06-18T08:05:17.002Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0074</title>
+    <link href="https://codermae.github.io/2021/06/16/%E6%89%93%E5%8D%A10074/"/>
+    <id>https://codermae.github.io/2021/06/16/%E6%89%93%E5%8D%A10074/</id>
+    <published>2021-06-16T08:00:55.000Z</published>
+    <updated>2021-06-18T08:05:17.002Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#ae5039&gt;所见皆为美好，所行不负年少。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;4-字符串的扩展&quot;&gt;&lt;a href=&quot;#4-字符串的扩展&quot; class=&quot;headerlink&quot; title=&quot;4. 字符串的扩展&quot;&gt;&lt;/a&gt;4. 字符串的扩展&lt;/h3&gt;&lt;p&gt;本章介绍 ES6 对字符串的改造和增强，下一章介绍字符串对象的新增方法。&lt;/p&gt;
+&lt;h4 id=&quot;4-1-字符的-Unicode-表示法&quot;&gt;&lt;a href=&quot;#4-1-字符的-Unicode-表示法&quot; class=&quot;headerlink&quot; title=&quot;4.1 字符的 Unicode 表示法&quot;&gt;&lt;/a&gt;4.1 字符的 Unicode 表示法&lt;/h4&gt;&lt;p&gt;ES6 加强了对 Unicode 的支持，允许采用&lt;code&gt;\uxxxx&lt;/code&gt;形式表示一个字符，其中&lt;code&gt;xxxx&lt;/code&gt;表示字符的 Unicode 码点。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&amp;quot;\u0061&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;a&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;但是，这种表示法只限于码点在&lt;code&gt;\u0000&lt;/code&gt;~`\uFFFF`之间的字符。超出这个范围的字符，必须用两个双字节的形式表示。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&amp;quot;\uD842\uDFB7&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;𠮷&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&amp;quot;\u20BB7&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot; 7&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码表示，如果直接在&lt;code&gt;\u&lt;/code&gt;后面跟上超过&lt;code&gt;0xFFFF&lt;/code&gt;的数值（比如&lt;code&gt;\u20BB7&lt;/code&gt;），JavaScript 会理解成&lt;code&gt;\u20BB+7&lt;/code&gt;。由于&lt;code&gt;\u20BB&lt;/code&gt;是一个不可打印字符，所以只会显示一个空格，后面跟着一个&lt;code&gt;7&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;ES6 对这一点做出了改进，只要将码点放入大括号，就能正确解读该字符。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 字符串的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%89%A9%E5%B1%95/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0073</title>
@@ -513,32 +539,6 @@
     
     
     <category term="JS 浏览器模型-浏览器环境概述" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83%E6%A6%82%E8%BF%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0054</title>
-    <link href="https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10054/"/>
-    <id>https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10054/</id>
-    <published>2021-05-30T05:39:22.000Z</published>
-    <updated>2021-05-30T08:39:35.237Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#65c294&gt;生活就是这样，别人只看结果，自我独撑过程。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-事件&quot;&gt;&lt;a href=&quot;#JS-事件&quot; class=&quot;headerlink&quot; title=&quot;JS 事件&quot;&gt;&lt;/a&gt;JS 事件&lt;/h2&gt;&lt;h3 id=&quot;11-GlobalEventHandlers-接口&quot;&gt;&lt;a href=&quot;#11-GlobalEventHandlers-接口&quot; class=&quot;headerlink&quot; title=&quot;11. GlobalEventHandlers 接口&quot;&gt;&lt;/a&gt;11. GlobalEventHandlers 接口&lt;/h3&gt;&lt;p&gt;指定事件的回调函数，推荐使用的方法是元素的&lt;code&gt;addEventListener&lt;/code&gt;方法。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;div.addEventListener(&lt;span class=&quot;string&quot;&gt;&amp;#x27;click&amp;#x27;&lt;/span&gt;, clickHandler, &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;除了之外，还有一种方法可以直接指定事件的回调函数。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;div.onclick = clickHandler;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;这个接口是由&lt;code&gt;GlobalEventHandlers&lt;/code&gt;接口提供的。它的优点是使用比较方便，缺点是只能为每个事件指定一个回调函数，并且无法指定事件触发的阶段（捕获阶段还是冒泡阶段）。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;HTMLElement&lt;/code&gt;、&lt;code&gt;Document&lt;/code&gt;和&lt;code&gt;Window&lt;/code&gt;都继承了这个接口，也就是说，各种 HTML 元素、&lt;code&gt;document&lt;/code&gt;对象、&lt;code&gt;window&lt;/code&gt;对象上面都可以使用&lt;code&gt;GlobalEventHandlers&lt;/code&gt;接口提供的属性。下面就列出这个接口提供的主要的事件属性。&lt;/p&gt;
-&lt;h4 id=&quot;11-1-GlobalEventHandlers-onabort&quot;&gt;&lt;a href=&quot;#11-1-GlobalEventHandlers-onabort&quot; class=&quot;headerlink&quot; title=&quot;11.1 GlobalEventHandlers.onabort&quot;&gt;&lt;/a&gt;11.1 GlobalEventHandlers.onabort&lt;/h4&gt;&lt;p&gt; 某个对象的&lt;code&gt;abort&lt;/code&gt;事件（停止加载）发生时，就会调用&lt;code&gt;onabort&lt;/code&gt;属性指定的回调函数。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 事件-GlobalEventHandlers 接口" scheme="https://codermae.github.io/tags/JS-%E4%BA%8B%E4%BB%B6-GlobalEventHandlers-%E6%8E%A5%E5%8F%A3/"/>
     
   </entry>
   
