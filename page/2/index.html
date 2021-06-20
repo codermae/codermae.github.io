@@ -159,6 +159,73 @@
     
     
     <article
+  id="post-打卡0065"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/03/%E6%89%93%E5%8D%A10065/"
+    >打卡0065</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/03/%E6%89%93%E5%8D%A10065/" class="article-date">
+  <time datetime="2021-06-03T01:03:16.000Z" itemprop="datePublished">2021-06-03</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#afdfe4>有人弃棋，有人做泥荷做清溪，有人成为风雨里的一行诗句。</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="11-ArrayBuffer-对象，Blob-对象"><a href="#11-ArrayBuffer-对象，Blob-对象" class="headerlink" title="11. ArrayBuffer 对象，Blob 对象"></a>11. ArrayBuffer 对象，Blob 对象</h3><h4 id="11-1-ArrayBuffer-对象"><a href="#11-1-ArrayBuffer-对象" class="headerlink" title="11.1 ArrayBuffer 对象"></a>11.1 ArrayBuffer 对象</h4><p>ArrayBuffer 对象表示一段二进制数据，用来模拟内存里面的数据。通过这个对象，JavaScript 可以读写二进制数据。这个对象可以看作内存数据的表达。</p>
+<p>这个对象是 ES6 才写入标准的，普通的网页编程用不到它，为了教程体系的完整，下面只提供一个简略的介绍，详细介绍请看《ES6 标准入门》里面的章节。</p>
+<p>浏览器原生提供<code>ArrayBuffer()</code> 构造函数，用来生成实例。它接受一个整数作为参数，表示这段二进制数据占用多少个字节。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> buffer = <span class="keyword">new</span> <span class="built_in">ArrayBuffer</span>(<span class="number">8</span>);</span><br></pre></td></tr></table></figure>
+<p>上面代码中，实例对象<code>buffer</code>占用8个字节。</p>
+<p>ArrayBuffer 对象有实例属性<code>byteLength</code>，表示当前实例占用的内存长度（单位字节）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> buffer = <span class="keyword">new</span> <span class="built_in">ArrayBuffer</span>(<span class="number">8</span>);</span><br><span class="line">buffer.byteLength <span class="comment">// 8</span></span><br></pre></td></tr></table></figure>
+<p>ArrayBuffer 对象有实例方法<code>slice()</code>，用来复制一部分内存。它接受两个整数参数，分别表示复制的开始位置（从0开始）和结束位置（复制时不包括结束位置），如果省略第二个参数，则表示一直复制到结束。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> buf1 = <span class="keyword">new</span> <span class="built_in">ArrayBuffer</span>(<span class="number">8</span>);</span><br><span class="line"><span class="keyword">var</span> buf2 = buf1.slice(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+<p>上面代码表示复制原来的实例。</p> 
+      <a class="article-more-link" href="/2021/06/03/%E6%89%93%E5%8D%A10065/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-ArrayBuffer-%E5%AF%B9%E8%B1%A1%EF%BC%8CBlob-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 浏览器模型-ArrayBuffer 对象，Blob 对象</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0064"
   class="article article-type-post"
   itemscope
@@ -750,72 +817,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-window-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 浏览器模型-window 对象</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0055"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/30/%E6%89%93%E5%8D%A10055/"
-    >打卡0055</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/30/%E6%89%93%E5%8D%A10055/" class="article-date">
-  <time datetime="2021-05-30T05:53:33.000Z" itemprop="datePublished">2021-05-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#7a1723>我与春风皆过客，你携秋水揽星河。</font></p>
-<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="1-浏览器环境概述"><a href="#1-浏览器环境概述" class="headerlink" title="1. 浏览器环境概述"></a>1. 浏览器环境概述</h3><p>JavaScript 是浏览器的内置脚本语言。也就是说，浏览器内置了 JavaScript 引擎，并且提供各种接口，让 JavaScript 脚本可以控制浏览器的各种功能。一旦网页内嵌了 JavaScript 脚本，浏览器加载网页，就会去执行脚本，从而达到操作浏览器的目的，实现网页的各种动态效果。</p>
-<p>本章开始介绍浏览器提供的各种 JavaScript 接口。首先，介绍 JavaScript 代码嵌入网页的方法。</p>
-<h4 id="1-1-代码嵌入网页的方法"><a href="#1-1-代码嵌入网页的方法" class="headerlink" title="1.1 代码嵌入网页的方法"></a>1.1 代码嵌入网页的方法</h4><p>网页中嵌入 JavaScript 代码，主要有四种方法。</p>
-<ul>
-<li><code>&lt;script&gt;</code>元素直接嵌入代码。</li>
-<li><code>&lt;script&gt;</code>标签加载外部脚本</li>
-<li>事件属性</li>
-<li>URL 协议</li>
-</ul> 
-      <a class="article-more-link" href="/2021/05/30/%E6%89%93%E5%8D%A10055/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83%E6%A6%82%E8%BF%B0/" rel="tag">JS 浏览器模型-浏览器环境概述</a></li></ul>
 
     </footer>
   </div>

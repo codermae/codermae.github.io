@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-06-18T08:05:17.002Z</updated>
+  <updated>2021-06-20T07:33:16.983Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0075</title>
+    <link href="https://codermae.github.io/2021/06/18/%E6%89%93%E5%8D%A10075/"/>
+    <id>https://codermae.github.io/2021/06/18/%E6%89%93%E5%8D%A10075/</id>
+    <published>2021-06-18T08:06:21.000Z</published>
+    <updated>2021-06-20T07:33:16.983Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#ef5b9c&gt;世界上最重的木头会浮出水面吗？&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;5-字符串的新增方法&quot;&gt;&lt;a href=&quot;#5-字符串的新增方法&quot; class=&quot;headerlink&quot; title=&quot;5. 字符串的新增方法&quot;&gt;&lt;/a&gt;5. 字符串的新增方法&lt;/h3&gt;&lt;h4 id=&quot;5-1-String-fromCodePoint&quot;&gt;&lt;a href=&quot;#5-1-String-fromCodePoint&quot; class=&quot;headerlink&quot; title=&quot;5.1 String.fromCodePoint()&quot;&gt;&lt;/a&gt;5.1 String.fromCodePoint()&lt;/h4&gt;&lt;p&gt;ES5 提供&lt;code&gt;String.fromCharCode()&lt;/code&gt;方法，用于从 Unicode 码点返回对应字符，但是这个方法不能识别码点大于&lt;code&gt;0xFFFF&lt;/code&gt;的字符。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;String&lt;/span&gt;.fromCharCode(&lt;span class=&quot;number&quot;&gt;0x20BB7&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;ஷ&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，&lt;code&gt;String.fromCharCode()&lt;/code&gt;不能识别大于&lt;code&gt;0xFFFF&lt;/code&gt;的码点，所以&lt;code&gt;0x20BB7&lt;/code&gt;就发生了溢出，最高位&lt;code&gt;2&lt;/code&gt;被舍弃了，最后返回码点&lt;code&gt;U+0BB7&lt;/code&gt;对应的字符，而不是码点&lt;code&gt;U+20BB7&lt;/code&gt;对应的字符。&lt;/p&gt;
+&lt;p&gt;ES6 提供了&lt;code&gt;String.fromCodePoint()&lt;/code&gt;方法，可以识别大于&lt;code&gt;0xFFFF&lt;/code&gt;的字符，弥补了&lt;code&gt;String.fromCharCode()&lt;/code&gt;方法的不足。在作用上，正好与下面的&lt;code&gt;codePointAt()&lt;/code&gt;方法相反。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;String&lt;/span&gt;.fromCodePoint(&lt;span class=&quot;number&quot;&gt;0x20BB7&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;𠮷&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;String&lt;/span&gt;.fromCodePoint(&lt;span class=&quot;number&quot;&gt;0x78&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0x1f680&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0x79&lt;/span&gt;) === &lt;span class=&quot;string&quot;&gt;&amp;#x27;x\uD83D\uDE80y&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，如果&lt;code&gt;String.fromCodePoint&lt;/code&gt;方法有多个参数，则它们会被合并成一个字符串返回。&lt;/p&gt;
+&lt;p&gt;注意，&lt;code&gt;fromCodePoint&lt;/code&gt;方法定义在&lt;code&gt;String&lt;/code&gt;对象上，而&lt;code&gt;codePointAt&lt;/code&gt;方法定义在字符串的实例对象上。</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 字符串的新增方法" scheme="https://codermae.github.io/tags/JS-ES6-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%96%B0%E5%A2%9E%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0074</title>
@@ -511,34 +537,6 @@
     
     
     <category term="JS 浏览器模型-window 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-window-%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0055</title>
-    <link href="https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10055/"/>
-    <id>https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10055/</id>
-    <published>2021-05-30T05:53:33.000Z</published>
-    <updated>2021-05-30T08:39:48.476Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#7a1723&gt;我与春风皆过客，你携秋水揽星河。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;1-浏览器环境概述&quot;&gt;&lt;a href=&quot;#1-浏览器环境概述&quot; class=&quot;headerlink&quot; title=&quot;1. 浏览器环境概述&quot;&gt;&lt;/a&gt;1. 浏览器环境概述&lt;/h3&gt;&lt;p&gt;JavaScript 是浏览器的内置脚本语言。也就是说，浏览器内置了 JavaScript 引擎，并且提供各种接口，让 JavaScript 脚本可以控制浏览器的各种功能。一旦网页内嵌了 JavaScript 脚本，浏览器加载网页，就会去执行脚本，从而达到操作浏览器的目的，实现网页的各种动态效果。&lt;/p&gt;
-&lt;p&gt;本章开始介绍浏览器提供的各种 JavaScript 接口。首先，介绍 JavaScript 代码嵌入网页的方法。&lt;/p&gt;
-&lt;h4 id=&quot;1-1-代码嵌入网页的方法&quot;&gt;&lt;a href=&quot;#1-1-代码嵌入网页的方法&quot; class=&quot;headerlink&quot; title=&quot;1.1 代码嵌入网页的方法&quot;&gt;&lt;/a&gt;1.1 代码嵌入网页的方法&lt;/h4&gt;&lt;p&gt;网页中嵌入 JavaScript 代码，主要有四种方法。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;元素直接嵌入代码。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;标签加载外部脚本&lt;/li&gt;
-&lt;li&gt;事件属性&lt;/li&gt;
-&lt;li&gt;URL 协议&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 浏览器模型-浏览器环境概述" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83%E6%A6%82%E8%BF%B0/"/>
     
   </entry>
   
