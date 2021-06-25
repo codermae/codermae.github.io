@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-06-20T07:33:16.983Z</updated>
+  <updated>2021-06-25T02:19:29.379Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0076</title>
+    <link href="https://codermae.github.io/2021/06/20/%E6%89%93%E5%8D%A10076/"/>
+    <id>https://codermae.github.io/2021/06/20/%E6%89%93%E5%8D%A10076/</id>
+    <published>2021-06-20T07:34:26.000Z</published>
+    <updated>2021-06-25T02:19:29.379Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#f58220&gt;但因热爱，愿迎万难&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;6-正则的扩展&quot;&gt;&lt;a href=&quot;#6-正则的扩展&quot; class=&quot;headerlink&quot; title=&quot;6.正则的扩展&quot;&gt;&lt;/a&gt;6.正则的扩展&lt;/h3&gt;&lt;h4 id=&quot;6-1-RegExp-构造函数&quot;&gt;&lt;a href=&quot;#6-1-RegExp-构造函数&quot; class=&quot;headerlink&quot; title=&quot;6.1 RegExp 构造函数&quot;&gt;&lt;/a&gt;6.1 RegExp 构造函数&lt;/h4&gt;&lt;p&gt;在 ES5 中，&lt;code&gt;RegExp&lt;/code&gt;构造函数的参数有两种情况。&lt;/p&gt;
+&lt;p&gt;第一种情况是，参数是字符串，这时第二个参数表示正则表达式的修饰符（flag）。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;xyz&amp;#x27;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;i&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 等价于&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;regexp&quot;&gt;/xyz/i&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;第二种情况是，参数是一个正则表示式，这时会返回一个原有正则表达式的拷贝。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;regexp&quot;&gt;/xyz/i&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 等价于&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;regexp&quot;&gt;/xyz/i&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;但是，ES5 不允许此时使用第二个参数添加修饰符，否则会报错。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;regexp&quot;&gt;/xyz/&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;i&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Uncaught TypeError: Cannot supply flags when constructing one RegExp from another&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;ES6 改变了这种行为。如果&lt;code&gt;RegExp&lt;/code&gt;构造函数第一个参数是一个正则对象，那么可以使用第二个参数指定修饰符。而且，返回的正则表达式会忽略原有的正则表达式的修饰符，只使用新指定的修饰符。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;regexp&quot;&gt;/abc/ig&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;i&amp;#x27;&lt;/span&gt;).flags&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;i&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，原有正则对象的修饰符是&lt;code&gt;ig&lt;/code&gt;，它会被第二个参数&lt;code&gt;i&lt;/code&gt;覆盖。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 正则的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E6%AD%A3%E5%88%99%E7%9A%84%E6%89%A9%E5%B1%95/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0075</title>
@@ -514,29 +543,6 @@
     
     
     <category term="JS 浏览器模型-Navigator 对象，Screen 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Navigator-%E5%AF%B9%E8%B1%A1%EF%BC%8CScreen-%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0056</title>
-    <link href="https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10056/"/>
-    <id>https://codermae.github.io/2021/05/30/%E6%89%93%E5%8D%A10056/</id>
-    <published>2021-05-30T06:39:04.000Z</published>
-    <updated>2021-05-30T08:39:56.392Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#c77eb5&gt;最好的时光在路上，一路向阳。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;2-window-对象&quot;&gt;&lt;a href=&quot;#2-window-对象&quot; class=&quot;headerlink&quot; title=&quot;2. window 对象&quot;&gt;&lt;/a&gt;2. window 对象&lt;/h3&gt;&lt;h4 id=&quot;2-1-概述&quot;&gt;&lt;a href=&quot;#2-1-概述&quot; class=&quot;headerlink&quot; title=&quot;2.1 概述&quot;&gt;&lt;/a&gt;2.1 概述&lt;/h4&gt;&lt;p&gt;浏览器里面，&lt;code&gt;window&lt;/code&gt;对象（注意，&lt;code&gt;w&lt;/code&gt;为小写）指当前的浏览器窗口。它也是当前页面的顶层对象，即最高一层的对象，所有其他对象都是它的下属。一个变量如果未声明，那么默认就是顶层对象的属性。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;a = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.a &lt;span class=&quot;comment&quot;&gt;// 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，&lt;code&gt;a&lt;/code&gt;是一个没有声明就直接赋值的变量，它自动成为顶层对象的属性。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;window&lt;/code&gt;有自己的实体含义，其实不适合当作最高一层的顶层对象，这是一个语言的设计失误。最早，设计这门语言的时候，原始设想是语言内置的对象越少越好，这样可以提高浏览器的性能。因此，语言设计者 Brendan Eich 就把&lt;code&gt;window&lt;/code&gt;对象当作顶层对象，所有未声明就赋值的变量都自动变成&lt;code&gt;window&lt;/code&gt;对象的属性。这种设计使得编译阶段无法检测出未声明变量，但到了今天已经没有办法纠正了。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 浏览器模型-window 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-window-%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
