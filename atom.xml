@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-06-25T02:19:29.379Z</updated>
+  <updated>2021-06-26T07:40:44.338Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0077</title>
+    <link href="https://codermae.github.io/2021/06/25/%E6%89%93%E5%8D%A10077/"/>
+    <id>https://codermae.github.io/2021/06/25/%E6%89%93%E5%8D%A10077/</id>
+    <published>2021-06-25T02:21:45.000Z</published>
+    <updated>2021-06-26T07:40:44.338Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#78cdd1&gt;hi,我的剑已出鞘，想和你过过招。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;7-数值的扩展&quot;&gt;&lt;a href=&quot;#7-数值的扩展&quot; class=&quot;headerlink&quot; title=&quot;7.数值的扩展&quot;&gt;&lt;/a&gt;7.数值的扩展&lt;/h3&gt;&lt;h4 id=&quot;7-1-二进制和八进制表示法&quot;&gt;&lt;a href=&quot;#7-1-二进制和八进制表示法&quot; class=&quot;headerlink&quot; title=&quot;7.1 二进制和八进制表示法&quot;&gt;&lt;/a&gt;7.1 二进制和八进制表示法&lt;/h4&gt;&lt;p&gt;ES6 提供了二进制和八进制数值的新的写法，分别用前缀&lt;code&gt;0b&lt;/code&gt;（或&lt;code&gt;0B&lt;/code&gt;）和&lt;code&gt;0o&lt;/code&gt;（或&lt;code&gt;0O&lt;/code&gt;）表示。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0b111110111&lt;/span&gt; === &lt;span class=&quot;number&quot;&gt;503&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0o767&lt;/span&gt; === &lt;span class=&quot;number&quot;&gt;503&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;从 ES5 开始，在严格模式之中，八进制就不再允许使用前缀&lt;code&gt;0&lt;/code&gt;表示，ES6 进一步明确，要使用前缀&lt;code&gt;0o&lt;/code&gt;表示。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 非严格模式&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;0o11&lt;/span&gt; === &lt;span class=&quot;number&quot;&gt;011&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)() &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 严格模式&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;  &amp;#x27;use strict&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;0o11&lt;/span&gt; === &lt;span class=&quot;number&quot;&gt;011&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)() &lt;span class=&quot;comment&quot;&gt;// Uncaught SyntaxError: Octal literals are not allowed in strict mode.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果要将&lt;code&gt;0b&lt;/code&gt;和&lt;code&gt;0o&lt;/code&gt;前缀的字符串数值转为十进制，要使用&lt;code&gt;Number&lt;/code&gt;方法。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Number&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;0b111&amp;#x27;&lt;/span&gt;)  &lt;span class=&quot;comment&quot;&gt;// 7&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Number&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;0o10&amp;#x27;&lt;/span&gt;)  &lt;span class=&quot;comment&quot;&gt;// 8&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 数值的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E6%95%B0%E5%80%BC%E7%9A%84%E6%89%A9%E5%B1%95/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0076</title>
@@ -517,32 +542,6 @@
     
     
     <category term="JS 浏览器模型-Cookie" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Cookie/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0057</title>
-    <link href="https://codermae.github.io/2021/05/31/%E6%89%93%E5%8D%A10057/"/>
-    <id>https://codermae.github.io/2021/05/31/%E6%89%93%E5%8D%A10057/</id>
-    <published>2021-05-31T00:59:48.000Z</published>
-    <updated>2021-05-31T02:12:11.178Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#a3cf62&gt;跟这个世界交手的许多年来，你是否，光彩依旧，兴趣盎然。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;3-Navigator-对象，Screen-对象&quot;&gt;&lt;a href=&quot;#3-Navigator-对象，Screen-对象&quot; class=&quot;headerlink&quot; title=&quot;3. Navigator 对象，Screen 对象&quot;&gt;&lt;/a&gt;3. Navigator 对象，Screen 对象&lt;/h3&gt;&lt;p&gt;&lt;code&gt;window.navigator&lt;/code&gt;属性指向一个包含浏览器和系统信息的 Navigator 对象。脚本通过这个属性了解用户的环境信息。&lt;/p&gt;
-&lt;h4 id=&quot;3-1-Navigator-对象的属性&quot;&gt;&lt;a href=&quot;#3-1-Navigator-对象的属性&quot; class=&quot;headerlink&quot; title=&quot;3.1 Navigator 对象的属性&quot;&gt;&lt;/a&gt;3.1 Navigator 对象的属性&lt;/h4&gt;&lt;h5 id=&quot;3-1-1-Navigator-userAgent&quot;&gt;&lt;a href=&quot;#3-1-1-Navigator-userAgent&quot; class=&quot;headerlink&quot; title=&quot;3.1.1 Navigator.userAgent&quot;&gt;&lt;/a&gt;3.1.1 Navigator.userAgent&lt;/h5&gt;&lt;p&gt;&lt;code&gt;navigator.userAgent&lt;/code&gt;属性返回浏览器的 User Agent 字符串，表示浏览器的厂商和版本信息。&lt;/p&gt;
-&lt;p&gt;下面是 Chrome 浏览器的&lt;code&gt;userAgent&lt;/code&gt;。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;navigator.userAgent&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;通过&lt;code&gt;userAgent&lt;/code&gt;属性识别浏览器，不是一个好办法。因为必须考虑所有的情况（不同的浏览器，不同的版本），非常麻烦，而且用户可以改变这个字符串。这个字符串的格式并无统一规定，也无法保证未来的适用性，各种上网设备层出不穷，难以穷尽。所以，现在一般不再通过它识别浏览器了，而是使用“功能识别”方法，即逐一测试当前浏览器是否支持要用到的 JavaScript 功能。&lt;/p&gt;
-&lt;p&gt;不过，通过&lt;code&gt;userAgent&lt;/code&gt;可以大致准确地识别手机浏览器，方法就是测试是否包含&lt;code&gt;mobi&lt;/code&gt;字符串。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; ua = navigator.userAgent.toLowerCase();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;regexp&quot;&gt;/mobi/i&lt;/span&gt;.test(ua)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// 手机浏览器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// 非手机浏览器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 浏览器模型-Navigator 对象，Screen 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Navigator-%E5%AF%B9%E8%B1%A1%EF%BC%8CScreen-%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   

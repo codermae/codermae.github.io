@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
+       
+      <meta name="keywords" content="blog" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>打卡0077 |  maeBlog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-打卡0077"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  打卡0077
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/25/%E6%89%93%E5%8D%A10077/" class="article-date">
+  <time datetime="2021-06-25T02:21:45.000Z" itemprop="datePublished">2021-06-25</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">5.8k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">25 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#78cdd1>hi,我的剑已出鞘，想和你过过招。</font></p>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="7-数值的扩展"><a href="#7-数值的扩展" class="headerlink" title="7.数值的扩展"></a>7.数值的扩展</h3><h4 id="7-1-二进制和八进制表示法"><a href="#7-1-二进制和八进制表示法" class="headerlink" title="7.1 二进制和八进制表示法"></a>7.1 二进制和八进制表示法</h4><p>ES6 提供了二进制和八进制数值的新的写法，分别用前缀<code>0b</code>（或<code>0B</code>）和<code>0o</code>（或<code>0O</code>）表示。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0b111110111</span> === <span class="number">503</span> <span class="comment">// true</span></span><br><span class="line"><span class="number">0o767</span> === <span class="number">503</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>从 ES5 开始，在严格模式之中，八进制就不再允许使用前缀<code>0</code>表示，ES6 进一步明确，要使用前缀<code>0o</code>表示。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 非严格模式</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">0o11</span> === <span class="number">011</span>);</span><br><span class="line">&#125;)() <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 严格模式</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="meta">  &#x27;use strict&#x27;</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">0o11</span> === <span class="number">011</span>);</span><br><span class="line">&#125;)() <span class="comment">// Uncaught SyntaxError: Octal literals are not allowed in strict mode.</span></span><br></pre></td></tr></table></figure>
+<p>如果要将<code>0b</code>和<code>0o</code>前缀的字符串数值转为十进制，要使用<code>Number</code>方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>(<span class="string">&#x27;0b111&#x27;</span>)  <span class="comment">// 7</span></span><br><span class="line"><span class="built_in">Number</span>(<span class="string">&#x27;0o10&#x27;</span>)  <span class="comment">// 8</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h4 id="7-2-Number-isFinite-Number-isNaN"><a href="#7-2-Number-isFinite-Number-isNaN" class="headerlink" title="7.2 Number.isFinite(), Number.isNaN()"></a>7.2 Number.isFinite(), Number.isNaN()</h4><p>ES6 在<code>Number</code>对象上，新提供了<code>Number.isFinite()</code>和<code>Number.isNaN()</code>两个方法。</p>
+<p><code>Number.isFinite()</code>用来检查一个数值是否为有限的（finite），即不是<code>Infinity</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isFinite(<span class="number">15</span>); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isFinite(<span class="number">0.8</span>); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isFinite(<span class="literal">NaN</span>); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isFinite(<span class="literal">Infinity</span>); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isFinite(-<span class="literal">Infinity</span>); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isFinite(<span class="string">&#x27;foo&#x27;</span>); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isFinite(<span class="string">&#x27;15&#x27;</span>); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isFinite(<span class="literal">true</span>); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>注意，如果参数类型不是数值，<code>Number.isFinite</code>一律返回<code>false</code>。</p>
+<p><code>Number.isNaN()</code>用来检查一个值是否为<code>NaN</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isNaN(<span class="literal">NaN</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isNaN(<span class="number">15</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isNaN(<span class="string">&#x27;15&#x27;</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isNaN(<span class="literal">true</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isNaN(<span class="number">9</span>/<span class="literal">NaN</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isNaN(<span class="string">&#x27;true&#x27;</span> / <span class="number">0</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isNaN(<span class="string">&#x27;true&#x27;</span> / <span class="string">&#x27;true&#x27;</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>如果参数类型不是<code>NaN</code>，<code>Number.isNaN</code>一律返回<code>false</code>。</p>
+<p>它们与传统的全局方法<code>isFinite()</code>和<code>isNaN()</code>的区别在于，传统方法先调用<code>Number()</code>将非数值的值转为数值，再进行判断，而这两个新方法只对数值有效，<code>Number.isFinite()</code>对于非数值一律返回<code>false</code>,<code>Number.isNaN()</code>只有对于<code>NaN</code>才返回<code>true</code>，非<code>NaN</code>一律返回<code>false</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">isFinite</span>(<span class="number">25</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">isFinite</span>(<span class="string">&quot;25&quot;</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isFinite(<span class="number">25</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isFinite(<span class="string">&quot;25&quot;</span>) <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="literal">NaN</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="string">&quot;NaN&quot;</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isNaN(<span class="literal">NaN</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isNaN(<span class="string">&quot;NaN&quot;</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isNaN(<span class="number">1</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<h4 id="7-3-Number-parseInt-Number-parseFloat"><a href="#7-3-Number-parseInt-Number-parseFloat" class="headerlink" title="7.3 Number.parseInt(), Number.parseFloat()"></a>7.3 Number.parseInt(), Number.parseFloat()</h4><p>ES6 将全局方法<code>parseInt()</code>和<code>parseFloat()</code>，移植到<code>Number</code>对象上面，行为完全保持不变。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5的写法</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;12.34&#x27;</span>) <span class="comment">// 12</span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">&#x27;123.45#&#x27;</span>) <span class="comment">// 123.45</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6的写法</span></span><br><span class="line"><span class="built_in">Number</span>.parseInt(<span class="string">&#x27;12.34&#x27;</span>) <span class="comment">// 12</span></span><br><span class="line"><span class="built_in">Number</span>.parseFloat(<span class="string">&#x27;123.45#&#x27;</span>) <span class="comment">// 123.45</span></span><br></pre></td></tr></table></figure>
+<p>这样做的目的，是逐步减少全局性方法，使得语言逐步模块化。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.parseInt === <span class="built_in">parseInt</span> <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.parseFloat === <span class="built_in">parseFloat</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h4 id="7-4-Number-isInteger"><a href="#7-4-Number-isInteger" class="headerlink" title="7.4 Number.isInteger()"></a>7.4 Number.isInteger()</h4><p><code>Number.isInteger()</code>用来判断一个数值是否为整数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isInteger(<span class="number">25</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isInteger(<span class="number">25.1</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>JavaScript 内部，整数和浮点数采用的是同样的储存方法，所以 25 和 25.0 被视为同一个值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isInteger(<span class="number">25</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isInteger(<span class="number">25.0</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>如果参数不是数值，<code>Number.isInteger</code>返回<code>false</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isInteger() <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isInteger(<span class="literal">null</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isInteger(<span class="string">&#x27;15&#x27;</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isInteger(<span class="literal">true</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>注意，由于 JavaScript 采用 IEEE 754 标准，数值存储为64位双精度格式，数值精度最多可以达到 53 个二进制位（1 个隐藏位与 52 个有效位）。如果数值的精度超过这个限度，第54位及后面的位就会被丢弃，这种情况下，<code>Number.isInteger</code>可能会误判。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isInteger(<span class="number">3.0000000000000002</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>Number.isInteger</code>的参数明明不是整数，但是会返回<code>true</code>。原因就是这个小数的精度达到了小数点后16个十进制位，转成二进制位超过了53个二进制位，导致最后的那个<code>2</code>被丢弃了。</p>
+<p>类似的情况还有，如果一个数值的绝对值小于<code>Number.MIN_VALUE</code>（5E-324），即小于 JavaScript 能够分辨的最小值，会被自动转为 0。这时，<code>Number.isInteger</code>也会误判。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isInteger(<span class="number">5E-324</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isInteger(<span class="number">5E-325</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>5E-325</code>由于值太小，会被自动转为0，因此返回<code>true</code>。</p>
+<p>总之，如果对数据精度的要求较高，不建议使用<code>Number.isInteger()</code>判断一个数值是否为整数。</p>
+<h4 id="7-5-Number-EPSILON"><a href="#7-5-Number-EPSILON" class="headerlink" title="7.5 Number.EPSILON"></a>7.5 Number.EPSILON</h4><p>ES6 在<code>Number</code>对象上面，新增一个极小的常量<code>Number.EPSILON</code>。根据规格，它表示 1 与大于 1 的最小浮点数之间的差。</p>
+<p>对于 64 位浮点数来说，大于 1 的最小浮点数相当于二进制的<code>1.00..001</code>，小数点后面有连续 51 个零。这个值减去 1 之后，就等于 2 的 -52 次方。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.EPSILON === <span class="built_in">Math</span>.pow(<span class="number">2</span>, -<span class="number">52</span>)</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.EPSILON</span><br><span class="line"><span class="comment">// 2.220446049250313e-16</span></span><br><span class="line"><span class="built_in">Number</span>.EPSILON.toFixed(<span class="number">20</span>)</span><br><span class="line"><span class="comment">// &quot;0.00000000000000022204&quot;</span></span><br></pre></td></tr></table></figure>
+<p><code>Number.EPSILON</code>实际上是 JavaScript 能够表示的最小精度。误差如果小于这个值，就可以认为已经没有意义了，即不存在误差了。</p>
+<p>引入一个这么小的量的目的，在于为浮点数计算，设置一个误差范围。我们知道浮点数计算是不精确的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0.1</span> + <span class="number">0.2</span></span><br><span class="line"><span class="comment">// 0.30000000000000004</span></span><br><span class="line"></span><br><span class="line"><span class="number">0.1</span> + <span class="number">0.2</span> - <span class="number">0.3</span></span><br><span class="line"><span class="comment">// 5.551115123125783e-17</span></span><br><span class="line"></span><br><span class="line"><span class="number">5.551115123125783e-17</span>.toFixed(<span class="number">20</span>)</span><br><span class="line"><span class="comment">// &#x27;0.00000000000000005551&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码解释了，为什么比较<code>0.1 + 0.2</code>与<code>0.3</code>得到的结果是<code>false</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0.1</span> + <span class="number">0.2</span> === <span class="number">0.3</span> <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p><code>Number.EPSILON</code>可以用来设置“能够接受的误差范围”。比如，误差范围设为 2 的-50 次方（即<code>Number.EPSILON * Math.pow(2, 2)</code>），即如果两个浮点数的差小于这个值，我们就认为这两个浮点数相等。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5.551115123125783e-17</span> &lt; <span class="built_in">Number</span>.EPSILON * <span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line"><span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>因此，<code>Number.EPSILON</code>的实质是一个可以接受的最小误差范围。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">withinErrorMargin</span> (<span class="params">left, right</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.abs(left - right) &lt; <span class="built_in">Number</span>.EPSILON * <span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="number">0.1</span> + <span class="number">0.2</span> === <span class="number">0.3</span> <span class="comment">// false</span></span><br><span class="line">withinErrorMargin(<span class="number">0.1</span> + <span class="number">0.2</span>, <span class="number">0.3</span>) <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="number">1.1</span> + <span class="number">1.3</span> === <span class="number">2.4</span> <span class="comment">// false</span></span><br><span class="line">withinErrorMargin(<span class="number">1.1</span> + <span class="number">1.3</span>, <span class="number">2.4</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>上面的代码为浮点数运算，部署了一个误差检查函数。</p>
+<h4 id="7-6-安全整数和-Number-isSafeInteger"><a href="#7-6-安全整数和-Number-isSafeInteger" class="headerlink" title="7.6 安全整数和 Number.isSafeInteger()"></a>7.6 安全整数和 Number.isSafeInteger()</h4><p>JavaScript 能够准确表示的整数范围在<code>-2^53</code>到<code>2^53</code>之间（不含两个端点），超过这个范围，无法精确表示这个值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">53</span>) <span class="comment">// 9007199254740992</span></span><br><span class="line"></span><br><span class="line"><span class="number">9007199254740992</span>  <span class="comment">// 9007199254740992</span></span><br><span class="line"><span class="number">9007199254740993</span>  <span class="comment">// 9007199254740992</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">53</span>) === <span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">53</span>) + <span class="number">1</span></span><br><span class="line"><span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，超出 2 的 53 次方之后，一个数就不精确了。</p>
+<p>ES6 引入了<code>Number.MAX_SAFE_INTEGER</code>和<code>Number.MIN_SAFE_INTEGER</code>这两个常量，用来表示这个范围的上下限。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.MAX_SAFE_INTEGER === <span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">53</span>) - <span class="number">1</span></span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.MAX_SAFE_INTEGER === <span class="number">9007199254740991</span></span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Number</span>.MIN_SAFE_INTEGER === -<span class="built_in">Number</span>.MAX_SAFE_INTEGER</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.MIN_SAFE_INTEGER === -<span class="number">9007199254740991</span></span><br><span class="line"><span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，可以看到 JavaScript 能够精确表示的极限。</p>
+<p><code>Number.isSafeInteger()</code>则是用来判断一个整数是否落在这个范围之内。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="string">&#x27;a&#x27;</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="literal">null</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="literal">NaN</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="literal">Infinity</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(-<span class="literal">Infinity</span>) <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="number">3</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="number">1.2</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="number">9007199254740990</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="number">9007199254740992</span>) <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="built_in">Number</span>.MIN_SAFE_INTEGER - <span class="number">1</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="built_in">Number</span>.MIN_SAFE_INTEGER) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="built_in">Number</span>.MAX_SAFE_INTEGER) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="built_in">Number</span>.MAX_SAFE_INTEGER + <span class="number">1</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>这个函数的实现很简单，就是跟安全整数的两个边界值比较一下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isSafeInteger = <span class="function"><span class="keyword">function</span> (<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (<span class="keyword">typeof</span> n === <span class="string">&#x27;number&#x27;</span> &amp;&amp;</span><br><span class="line">    <span class="built_in">Math</span>.round(n) === n &amp;&amp;</span><br><span class="line">    <span class="built_in">Number</span>.MIN_SAFE_INTEGER &lt;= n &amp;&amp;</span><br><span class="line">    n &lt;= <span class="built_in">Number</span>.MAX_SAFE_INTEGER);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实际使用这个函数时，需要注意。验证运算结果是否落在安全整数的范围内，不要只验证运算结果，而要同时验证参与运算的每个值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="number">9007199254740993</span>)</span><br><span class="line"><span class="comment">// false</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="number">990</span>)</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="number">9007199254740993</span> - <span class="number">990</span>)</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"><span class="number">9007199254740993</span> - <span class="number">990</span></span><br><span class="line"><span class="comment">// 返回结果 9007199254740002</span></span><br><span class="line"><span class="comment">// 正确答案应该是 9007199254740003</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>9007199254740993</code>不是一个安全整数，但是<code>Number.isSafeInteger</code>会返回结果，显示计算结果是安全的。这是因为，这个数超出了精度范围，导致在计算机内部，以<code>9007199254740992</code>的形式储存。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">9007199254740993</span> === <span class="number">9007199254740992</span></span><br><span class="line"><span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>所以，如果只验证运算结果是否为安全整数，很可能得到错误结果。下面的函数可以同时验证两个运算数和运算结果。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">trusty</span> (<span class="params">left, right, result</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (</span><br><span class="line">    <span class="built_in">Number</span>.isSafeInteger(left) &amp;&amp;</span><br><span class="line">    <span class="built_in">Number</span>.isSafeInteger(right) &amp;&amp;</span><br><span class="line">    <span class="built_in">Number</span>.isSafeInteger(result)</span><br><span class="line">  ) &#123;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">RangeError</span>(<span class="string">&#x27;Operation cannot be trusted!&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">trusty(<span class="number">9007199254740993</span>, <span class="number">990</span>, <span class="number">9007199254740993</span> - <span class="number">990</span>)</span><br><span class="line"><span class="comment">// RangeError: Operation cannot be trusted!</span></span><br><span class="line"></span><br><span class="line">trusty(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<h4 id="7-7-Math-对象的扩展"><a href="#7-7-Math-对象的扩展" class="headerlink" title="7.7 Math 对象的扩展"></a>7.7 Math 对象的扩展</h4><p>ES6 在 Math 对象上新增了 17 个与数学相关的方法。所有这些方法都是静态方法，只能在 Math 对象上调用。</p>
+<h5 id="7-7-1-Math-trunc"><a href="#7-7-1-Math-trunc" class="headerlink" title="7.7.1 Math.trunc()"></a>7.7.1 Math.trunc()</h5><p><code>Math.trunc</code>方法用于去除一个数的小数部分，返回整数部分。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.trunc(<span class="number">4.1</span>) <span class="comment">// 4</span></span><br><span class="line"><span class="built_in">Math</span>.trunc(<span class="number">4.9</span>) <span class="comment">// 4</span></span><br><span class="line"><span class="built_in">Math</span>.trunc(-<span class="number">4.1</span>) <span class="comment">// -4</span></span><br><span class="line"><span class="built_in">Math</span>.trunc(-<span class="number">4.9</span>) <span class="comment">// -4</span></span><br><span class="line"><span class="built_in">Math</span>.trunc(-<span class="number">0.1234</span>) <span class="comment">// -0</span></span><br></pre></td></tr></table></figure>
+<p>对于非数值，<code>Math.trunc</code>内部使用<code>Number</code>方法将其先转为数值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.trunc(<span class="string">&#x27;123.456&#x27;</span>) <span class="comment">// 123</span></span><br><span class="line"><span class="built_in">Math</span>.trunc(<span class="literal">true</span>) <span class="comment">//1</span></span><br><span class="line"><span class="built_in">Math</span>.trunc(<span class="literal">false</span>) <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.trunc(<span class="literal">null</span>) <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+<p>对于空值和无法截取整数的值，返回<code>NaN</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.trunc(<span class="literal">NaN</span>);      <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Math</span>.trunc(<span class="string">&#x27;foo&#x27;</span>);    <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Math</span>.trunc();         <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Math</span>.trunc(<span class="literal">undefined</span>) <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>对于没有部署这个方法的环境，可以用下面的代码模拟。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.trunc = <span class="built_in">Math</span>.trunc || <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x &lt; <span class="number">0</span> ? <span class="built_in">Math</span>.ceil(x) : <span class="built_in">Math</span>.floor(x);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h5 id="7-7-2-Math-sign"><a href="#7-7-2-Math-sign" class="headerlink" title="7.7.2 Math.sign()"></a>7.7.2 Math.sign()</h5><p><code>Math.sign</code>方法用来判断一个数到底是正数、负数、还是零。对于非数值，会先将其转换为数值。</p>
+<p>它会返回五种值。</p>
+<ul>
+<li>参数为正数，返回<code>+1</code>；</li>
+<li>参数为负数，返回<code>-1</code>；</li>
+<li>参数为 0，返回<code>0</code>；</li>
+<li>参数为-0，返回<code>-0</code>;</li>
+<li>其他值，返回<code>NaN</code>。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.sign(-<span class="number">5</span>) <span class="comment">// -1</span></span><br><span class="line"><span class="built_in">Math</span>.sign(<span class="number">5</span>) <span class="comment">// +1</span></span><br><span class="line"><span class="built_in">Math</span>.sign(<span class="number">0</span>) <span class="comment">// +0</span></span><br><span class="line"><span class="built_in">Math</span>.sign(-<span class="number">0</span>) <span class="comment">// -0</span></span><br><span class="line"><span class="built_in">Math</span>.sign(<span class="literal">NaN</span>) <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>如果参数是非数值，会自动转为数值。对于那些无法转为数值的值，会返回<code>NaN</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.sign(<span class="string">&#x27;&#x27;</span>)  <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.sign(<span class="literal">true</span>)  <span class="comment">// +1</span></span><br><span class="line"><span class="built_in">Math</span>.sign(<span class="literal">false</span>)  <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.sign(<span class="literal">null</span>)  <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.sign(<span class="string">&#x27;9&#x27;</span>)  <span class="comment">// +1</span></span><br><span class="line"><span class="built_in">Math</span>.sign(<span class="string">&#x27;foo&#x27;</span>)  <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Math</span>.sign()  <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Math</span>.sign(<span class="literal">undefined</span>)  <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>对于没有部署这个方法的环境，可以用下面的代码模拟。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.sign = <span class="built_in">Math</span>.sign || <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  x = +x; <span class="comment">// convert to a number</span></span><br><span class="line">  <span class="keyword">if</span> (x === <span class="number">0</span> || <span class="built_in">isNaN</span>(x)) &#123;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> x &gt; <span class="number">0</span> ? <span class="number">1</span> : -<span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h5 id="7-7-3-Math-cbrt"><a href="#7-7-3-Math-cbrt" class="headerlink" title="7.7.3 Math.cbrt()"></a>7.7.3 Math.cbrt()</h5><p><code>Math.cbrt()</code>方法用于计算一个数的立方根。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.cbrt(-<span class="number">1</span>) <span class="comment">// -1</span></span><br><span class="line"><span class="built_in">Math</span>.cbrt(<span class="number">0</span>)  <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.cbrt(<span class="number">1</span>)  <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">Math</span>.cbrt(<span class="number">2</span>)  <span class="comment">// 1.2599210498948732</span></span><br></pre></td></tr></table></figure>
+<p>对于非数值，<code>Math.cbrt()</code>方法内部也是先使用<code>Number()</code>方法将其转为数值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.cbrt(<span class="string">&#x27;8&#x27;</span>) <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">Math</span>.cbrt(<span class="string">&#x27;hello&#x27;</span>) <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>对于没有部署这个方法的环境，可以用下面的代码模拟。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.cbrt = <span class="built_in">Math</span>.cbrt || <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> y = <span class="built_in">Math</span>.pow(<span class="built_in">Math</span>.abs(x), <span class="number">1</span>/<span class="number">3</span>);</span><br><span class="line">  <span class="keyword">return</span> x &lt; <span class="number">0</span> ? -y : y;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h5 id="7-7-4-Math-clz32"><a href="#7-7-4-Math-clz32" class="headerlink" title="7.7.4 Math.clz32()"></a>7.7.4 Math.clz32()</h5><p><code>Math.clz32()</code>方法将参数转为 32 位无符号整数的形式，然后返回这个 32 位值里面有多少个前导 0。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.clz32(<span class="number">0</span>) <span class="comment">// 32</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="number">1</span>) <span class="comment">// 31</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="number">1000</span>) <span class="comment">// 22</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="number">0b01000000000000000000000000000000</span>) <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="number">0b00100000000000000000000000000000</span>) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，0 的二进制形式全为 0，所以有 32 个前导 0；1 的二进制形式是<code>0b1</code>，只占 1 位，所以 32 位之中有 31 个前导 0；1000 的二进制形式是<code>0b1111101000</code>，一共有 10 位，所以 32 位之中有 22 个前导 0。</p>
+<p><code>clz32</code>这个函数名就来自”count leading zero bits in 32-bit binary representation of a number“（计算一个数的 32 位二进制形式的前导 0 的个数）的缩写。</p>
+<p>左移运算符（<code>&lt;&lt;</code>）与<code>Math.clz32</code>方法直接相关。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.clz32(<span class="number">0</span>) <span class="comment">// 32</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="number">1</span>) <span class="comment">// 31</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="number">1</span> &lt;&lt; <span class="number">1</span>) <span class="comment">// 30</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="number">1</span> &lt;&lt; <span class="number">2</span>) <span class="comment">// 29</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="number">1</span> &lt;&lt; <span class="number">29</span>) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>对于小数，<code>Math.clz32</code>方法只考虑整数部分。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.clz32(<span class="number">3.2</span>) <span class="comment">// 30</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="number">3.9</span>) <span class="comment">// 30</span></span><br></pre></td></tr></table></figure>
+<p>对于空值或其他类型的值，<code>Math.clz32</code>方法会将它们先转为数值，然后再计算。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.clz32() <span class="comment">// 32</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="literal">NaN</span>) <span class="comment">// 32</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="literal">Infinity</span>) <span class="comment">// 32</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="literal">null</span>) <span class="comment">// 32</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="string">&#x27;foo&#x27;</span>) <span class="comment">// 32</span></span><br><span class="line"><span class="built_in">Math</span>.clz32([]) <span class="comment">// 32</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(&#123;&#125;) <span class="comment">// 32</span></span><br><span class="line"><span class="built_in">Math</span>.clz32(<span class="literal">true</span>) <span class="comment">// 31</span></span><br></pre></td></tr></table></figure>
+<h5 id="7-7-5-Math-imul"><a href="#7-7-5-Math-imul" class="headerlink" title="7.7.5 Math.imul()"></a>7.7.5 Math.imul()</h5><p><code>Math.imul</code>方法返回两个数以 32 位带符号整数形式相乘的结果，返回的也是一个 32 位的带符号整数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.imul(<span class="number">2</span>, <span class="number">4</span>)   <span class="comment">// 8</span></span><br><span class="line"><span class="built_in">Math</span>.imul(-<span class="number">1</span>, <span class="number">8</span>)  <span class="comment">// -8</span></span><br><span class="line"><span class="built_in">Math</span>.imul(-<span class="number">2</span>, -<span class="number">2</span>) <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+<p>如果只考虑最后 32 位，大多数情况下，<code>Math.imul(a, b)</code>与<code>a * b</code>的结果是相同的，即该方法等同于<code>(a * b)|0</code>的效果（超过 32 位的部分溢出）。之所以需要部署这个方法，是因为 JavaScript 有精度限制，超过 2 的 53 次方的值无法精确表示。这就是说，对于那些很大的数的乘法，低位数值往往都是不精确的，<code>Math.imul</code>方法可以返回正确的低位数值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">0x7fffffff</span> * <span class="number">0x7fffffff</span>)|<span class="number">0</span> <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+<p>上面这个乘法算式，返回结果为 0。但是由于这两个二进制数的最低位都是 1，所以这个结果肯定是不正确的，因为根据二进制乘法，计算结果的二进制最低位应该也是 1。这个错误就是因为它们的乘积超过了 2 的 53 次方，JavaScript 无法保存额外的精度，就把低位的值都变成了 0。<code>Math.imul</code>方法可以返回正确的值 1。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.imul(<span class="number">0x7fffffff</span>, <span class="number">0x7fffffff</span>) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<h5 id="7-7-6-Math-fround"><a href="#7-7-6-Math-fround" class="headerlink" title="7.7.6 Math.fround()"></a>7.7.6 Math.fround()</h5><p><code>Math.fround</code>方法返回一个数的32位单精度浮点数形式。</p>
+<p>对于32位单精度格式来说，数值精度是24个二进制位（1 位隐藏位与 23 位有效位），所以对于 -224 至 224 之间的整数（不含两个端点），返回结果与参数本身一致。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.fround(<span class="number">0</span>)   <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.fround(<span class="number">1</span>)   <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">Math</span>.fround(<span class="number">2</span> ** <span class="number">24</span> - <span class="number">1</span>)   <span class="comment">// 16777215</span></span><br></pre></td></tr></table></figure>
+<p>如果参数的绝对值大于 224，返回的结果便开始丢失精度。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.fround(<span class="number">2</span> ** <span class="number">24</span>)       <span class="comment">// 16777216</span></span><br><span class="line"><span class="built_in">Math</span>.fround(<span class="number">2</span> ** <span class="number">24</span> + <span class="number">1</span>)   <span class="comment">// 16777216</span></span><br></pre></td></tr></table></figure>
+<p><code>Math.fround</code>方法的主要作用，是将64位双精度浮点数转为32位单精度浮点数。如果小数的精度超过24个二进制位，返回值就会不同于原值，否则返回值不变（即与64位双精度值一致）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 未丢失有效精度</span></span><br><span class="line"><span class="built_in">Math</span>.fround(<span class="number">1.125</span>) <span class="comment">// 1.125</span></span><br><span class="line"><span class="built_in">Math</span>.fround(<span class="number">7.25</span>)  <span class="comment">// 7.25</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 丢失精度</span></span><br><span class="line"><span class="built_in">Math</span>.fround(<span class="number">0.3</span>)   <span class="comment">// 0.30000001192092896</span></span><br><span class="line"><span class="built_in">Math</span>.fround(<span class="number">0.7</span>)   <span class="comment">// 0.699999988079071</span></span><br><span class="line"><span class="built_in">Math</span>.fround(<span class="number">1.0000000123</span>) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>对于 <code>NaN</code> 和 <code>Infinity</code>，此方法返回原值。对于其它类型的非数值，<code>Math.fround</code> 方法会先将其转为数值，再返回单精度浮点数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.fround(<span class="literal">NaN</span>)      <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Math</span>.fround(<span class="literal">Infinity</span>) <span class="comment">// Infinity</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Math</span>.fround(<span class="string">&#x27;5&#x27;</span>)      <span class="comment">// 5</span></span><br><span class="line"><span class="built_in">Math</span>.fround(<span class="literal">true</span>)     <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">Math</span>.fround(<span class="literal">null</span>)     <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.fround([])       <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.fround(&#123;&#125;)       <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>对于没有部署这个方法的环境，可以用下面的代码模拟。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.fround = <span class="built_in">Math</span>.fround || <span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Float32Array</span>([x])[<span class="number">0</span>];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h5 id="7-7-7-Math-hypot"><a href="#7-7-7-Math-hypot" class="headerlink" title="7.7.7 Math.hypot()"></a>7.7.7 Math.hypot()</h5><p><code>Math.hypot</code>方法返回所有参数的平方和的平方根。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.hypot(<span class="number">3</span>, <span class="number">4</span>);        <span class="comment">// 5</span></span><br><span class="line"><span class="built_in">Math</span>.hypot(<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);     <span class="comment">// 7.0710678118654755</span></span><br><span class="line"><span class="built_in">Math</span>.hypot();            <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.hypot(<span class="literal">NaN</span>);         <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Math</span>.hypot(<span class="number">3</span>, <span class="number">4</span>, <span class="string">&#x27;foo&#x27;</span>); <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Math</span>.hypot(<span class="number">3</span>, <span class="number">4</span>, <span class="string">&#x27;5&#x27;</span>);   <span class="comment">// 7.0710678118654755</span></span><br><span class="line"><span class="built_in">Math</span>.hypot(-<span class="number">3</span>);          <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，3 的平方加上 4 的平方，等于 5 的平方。</p>
+<p>如果参数不是数值，<code>Math.hypot</code>方法会将其转为数值。只要有一个参数无法转为数值，就会返回 <code>NaN</code>。</p>
+<h5 id="7-7-8-对数方法"><a href="#7-7-8-对数方法" class="headerlink" title="7.7.8 对数方法"></a>7.7.8 对数方法</h5><p>ES6 新增了 4 个对数相关方法。</p>
+<h6 id="（1）-Math-expm1"><a href="#（1）-Math-expm1" class="headerlink" title="（1） Math.expm1()"></a>（1） Math.expm1()</h6><p><code>Math.expm1(x)</code>返回 ex - 1，即<code>Math.exp(x) - 1</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.expm1(-<span class="number">1</span>) <span class="comment">// -0.6321205588285577</span></span><br><span class="line"><span class="built_in">Math</span>.expm1(<span class="number">0</span>)  <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.expm1(<span class="number">1</span>)  <span class="comment">// 1.718281828459045</span></span><br></pre></td></tr></table></figure>
+<p>对于没有部署这个方法的环境，可以用下面的代码模拟。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.expm1 = <span class="built_in">Math</span>.expm1 || <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.exp(x) - <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h6 id="（2）Math-log1p"><a href="#（2）Math-log1p" class="headerlink" title="（2）Math.log1p()"></a>（2）Math.log1p()</h6><p><code>Math.log1p(x)</code>方法返回<code>1 + x</code>的自然对数，即<code>Math.log(1 + x)</code>。如果<code>x</code>小于<code>-1</code>，返回<code>NaN</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.log1p(<span class="number">1</span>)  <span class="comment">// 0.6931471805599453</span></span><br><span class="line"><span class="built_in">Math</span>.log1p(<span class="number">0</span>)  <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.log1p(-<span class="number">1</span>) <span class="comment">// -Infinity</span></span><br><span class="line"><span class="built_in">Math</span>.log1p(-<span class="number">2</span>) <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>对于没有部署这个方法的环境，可以用下面的代码模拟。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.log1p = <span class="built_in">Math</span>.log1p || <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.log(<span class="number">1</span> + x);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h6 id="（3）Math-log10"><a href="#（3）Math-log10" class="headerlink" title="（3）Math.log10()"></a>（3）Math.log10()</h6><p><code>Math.log10(x)</code>返回以 10 为底的<code>x</code>的对数。如果<code>x</code>小于 0，则返回 <code>NaN</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.log10(<span class="number">2</span>)      <span class="comment">// 0.3010299956639812</span></span><br><span class="line"><span class="built_in">Math</span>.log10(<span class="number">1</span>)      <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.log10(<span class="number">0</span>)      <span class="comment">// -Infinity</span></span><br><span class="line"><span class="built_in">Math</span>.log10(-<span class="number">2</span>)     <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Math</span>.log10(<span class="number">100000</span>) <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
+<p>对于没有部署这个方法的环境，可以用下面的代码模拟。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.log10 = <span class="built_in">Math</span>.log10 || <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.log(x) / <span class="built_in">Math</span>.LN10;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h6 id="（4）Math-log2"><a href="#（4）Math-log2" class="headerlink" title="（4）Math.log2()"></a>（4）Math.log2()</h6><p><code>Math.log2(x)</code>返回以 2 为底的<code>x</code>的对数。如果<code>x</code>小于 0，则返回 <code>NaN</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.log2(<span class="number">3</span>)       <span class="comment">// 1.584962500721156</span></span><br><span class="line"><span class="built_in">Math</span>.log2(<span class="number">2</span>)       <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">Math</span>.log2(<span class="number">1</span>)       <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.log2(<span class="number">0</span>)       <span class="comment">// -Infinity</span></span><br><span class="line"><span class="built_in">Math</span>.log2(-<span class="number">2</span>)      <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Math</span>.log2(<span class="number">1024</span>)    <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">Math</span>.log2(<span class="number">1</span> &lt;&lt; <span class="number">29</span>) <span class="comment">// 29</span></span><br></pre></td></tr></table></figure>
+<p>对于没有部署这个方法的环境，可以用下面的代码模拟。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.log2 = <span class="built_in">Math</span>.log2 || <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.log(x) / <span class="built_in">Math</span>.LN2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h5 id="7-7-9-双曲函数方法"><a href="#7-7-9-双曲函数方法" class="headerlink" title="7.7.9 双曲函数方法"></a>7.7.9 双曲函数方法</h5><p>ES6 新增了 6 个双曲函数方法。</p>
+<ul>
+<li><code>Math.sinh(x)</code> 返回<code>x</code>的双曲正弦（hyperbolic sine）</li>
+<li><code>Math.cosh(x)</code> 返回<code>x</code>的双曲余弦（hyperbolic cosine）</li>
+<li><code>Math.tanh(x)</code> 返回<code>x</code>的双曲正切（hyperbolic tangent）</li>
+<li><code>Math.asinh(x)</code> 返回<code>x</code>的反双曲正弦（inverse hyperbolic sine）</li>
+<li><code>Math.acosh(x)</code> 返回<code>x</code>的反双曲余弦（inverse hyperbolic cosine）</li>
+<li><code>Math.atanh(x)</code> 返回<code>x</code>的反双曲正切（inverse hyperbolic tangent）</li>
+</ul>
+<h4 id="7-8-指数运算符"><a href="#7-8-指数运算符" class="headerlink" title="7.8 指数运算符"></a>7.8 指数运算符</h4><p>ES2016 新增了一个指数运算符（<code>**</code>）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span> ** <span class="number">2</span> <span class="comment">// 4</span></span><br><span class="line"><span class="number">2</span> ** <span class="number">3</span> <span class="comment">// 8</span></span><br></pre></td></tr></table></figure>
+<p>这个运算符的一个特点是右结合，而不是常见的左结合。多个指数运算符连用时，是从最右边开始计算的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 相当于 2 ** (3 ** 2)</span></span><br><span class="line"><span class="number">2</span> ** <span class="number">3</span> ** <span class="number">2</span></span><br><span class="line"><span class="comment">// 512</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，首先计算的是第二个指数运算符，而不是第一个。</p>
+<p>指数运算符可以与等号结合，形成一个新的赋值运算符（<code>**=</code>）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1.5</span>;</span><br><span class="line">a **= <span class="number">2</span>;</span><br><span class="line"><span class="comment">// 等同于 a = a * a;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">4</span>;</span><br><span class="line">b **= <span class="number">3</span>;</span><br><span class="line"><span class="comment">// 等同于 b = b * b * b;</span></span><br></pre></td></tr></table></figure>
+<h4 id="7-9-BigInt-数据类型"><a href="#7-9-BigInt-数据类型" class="headerlink" title="7.9 BigInt 数据类型"></a>7.9 BigInt 数据类型</h4><h5 id="7-9-1-简介"><a href="#7-9-1-简介" class="headerlink" title="7.9.1 简介"></a>7.9.1 简介</h5><p>JavaScript 所有数字都保存成 64 位浮点数，这给数值的表示带来了两大限制。一是数值的精度只能到 53 个二进制位（相当于 16 个十进制位），大于这个范围的整数，JavaScript 是无法精确表示的，这使得 JavaScript 不适合进行科学和金融方面的精确计算。二是大于或等于2的1024次方的数值，JavaScript 无法表示，会返回<code>Infinity</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 超过 53 个二进制位的数值，无法保持精度</span></span><br><span class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">53</span>) === <span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">53</span>) + <span class="number">1</span> <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 超过 2 的 1024 次方的数值，无法表示</span></span><br><span class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">1024</span>) <span class="comment">// Infinity</span></span><br></pre></td></tr></table></figure>
+<p>ES2020 引入了一种新的数据类型 BigInt（大整数），来解决这个问题，这是 ECMAScript 的第八种数据类型。BigInt 只用来表示整数，没有位数的限制，任何位数的整数都可以精确表示。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="number">2172141653n</span>;</span><br><span class="line"><span class="keyword">const</span> b = <span class="number">15346349309n</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// BigInt 可以保持精度</span></span><br><span class="line">a * b <span class="comment">// 33334444555566667777n</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 普通整数无法保持精度</span></span><br><span class="line"><span class="built_in">Number</span>(a) * <span class="built_in">Number</span>(b) <span class="comment">// 33334444555566670000</span></span><br></pre></td></tr></table></figure>
+<p>为了与 Number 类型区别，BigInt 类型的数据必须添加后缀<code>n</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1234</span> <span class="comment">// 普通整数</span></span><br><span class="line"><span class="number">1234n</span> <span class="comment">// BigInt</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// BigInt 的运算</span></span><br><span class="line"><span class="number">1n</span> + <span class="number">2n</span> <span class="comment">// 3n</span></span><br></pre></td></tr></table></figure>
+<p>BigInt 同样可以使用各种进制表示，都要加上后缀<code>n</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0b1101n</span> <span class="comment">// 二进制</span></span><br><span class="line"><span class="number">0o777n</span> <span class="comment">// 八进制</span></span><br><span class="line"><span class="number">0xFFn</span> <span class="comment">// 十六进制</span></span><br></pre></td></tr></table></figure>
+<p>BigInt 与普通整数是两种值，它们之间并不相等。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">42n</span> === <span class="number">42</span> <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p><code>typeof</code>运算符对于 BigInt 类型的数据返回<code>bigint</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="number">123n</span> <span class="comment">// &#x27;bigint&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>BigInt 可以使用负号（<code>-</code>），但是不能使用正号（<code>+</code>），因为会与 asm.js 冲突。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-<span class="number">42n</span> <span class="comment">// 正确</span></span><br><span class="line">+<span class="number">42n</span> <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+<p>JavaScript 以前不能计算70的阶乘（即<code>70!</code>），因为超出了可以表示的精度。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= <span class="number">70</span>; i++) &#123;</span><br><span class="line">  p *= i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(p); <span class="comment">// 1.197857166996989e+100</span></span><br></pre></td></tr></table></figure>
+<p>现在支持大整数了，就可以算了，浏览器的开发者工具运行下面代码，就OK。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="number">1n</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1n</span>; i &lt;= <span class="number">70n</span>; i++) &#123;</span><br><span class="line">  p *= i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(p); <span class="comment">// 11978571...00000000n</span></span><br></pre></td></tr></table></figure>
+<h5 id="7-9-2-BigInt-对象"><a href="#7-9-2-BigInt-对象" class="headerlink" title="7.9.2 BigInt 对象"></a>7.9.2 BigInt 对象</h5><p>JavaScript 原生提供<code>BigInt</code>对象，可以用作构造函数生成 BigInt 类型的数值。转换规则基本与<code>Number()</code>一致，将其他类型的值转为 BigInt。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">BigInt</span>(<span class="number">123</span>) <span class="comment">// 123n</span></span><br><span class="line"><span class="built_in">BigInt</span>(<span class="string">&#x27;123&#x27;</span>) <span class="comment">// 123n</span></span><br><span class="line"><span class="built_in">BigInt</span>(<span class="literal">false</span>) <span class="comment">// 0n</span></span><br><span class="line"><span class="built_in">BigInt</span>(<span class="literal">true</span>) <span class="comment">// 1n</span></span><br></pre></td></tr></table></figure>
+<p><code>BigInt()</code>构造函数必须有参数，而且参数必须可以正常转为数值，下面的用法都会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">BigInt</span>() <span class="comment">// TypeError</span></span><br><span class="line"><span class="built_in">BigInt</span>(<span class="literal">undefined</span>) <span class="comment">//TypeError</span></span><br><span class="line"><span class="built_in">BigInt</span>(<span class="literal">null</span>) <span class="comment">// TypeError</span></span><br><span class="line"><span class="built_in">BigInt</span>(<span class="string">&#x27;123n&#x27;</span>) <span class="comment">// SyntaxError</span></span><br><span class="line"><span class="built_in">BigInt</span>(<span class="string">&#x27;abc&#x27;</span>) <span class="comment">// SyntaxError</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，尤其值得注意字符串<code>123n</code>无法解析成 Number 类型，所以会报错。</p>
+<p>参数如果是小数，也会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">BigInt</span>(<span class="number">1.5</span>) <span class="comment">// RangeError</span></span><br><span class="line"><span class="built_in">BigInt</span>(<span class="string">&#x27;1.5&#x27;</span>) <span class="comment">// SyntaxError</span></span><br></pre></td></tr></table></figure>
+<p>BigInt 对象继承了 Object 对象的两个实例方法。</p>
+<ul>
+<li><code>BigInt.prototype.toString()</code></li>
+<li><code>BigInt.prototype.valueOf()</code></li>
+</ul>
+<p>它还继承了 Number 对象的一个实例方法。</p>
+<ul>
+<li><code>BigInt.prototype.toLocaleString()</code></li>
+</ul>
+<p>此外，还提供了三个静态方法。</p>
+<ul>
+<li><code>BigInt.asUintN(width, BigInt)</code>： 给定的 BigInt 转为 0 到 2width - 1 之间对应的值。</li>
+<li><code>BigInt.asIntN(width, BigInt)</code>：给定的 BigInt 转为 -2width - 1 到 2width - 1 - 1 之间对应的值。</li>
+<li><code>BigInt.parseInt(string[, radix])</code>：近似于<code>Number.parseInt()</code>，将一个字符串转换成指定进制的 BigInt。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> max = <span class="number">2n</span> ** (<span class="number">64n</span> - <span class="number">1n</span>) - <span class="number">1n</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">BigInt</span>.asIntN(<span class="number">64</span>, max)</span><br><span class="line"><span class="comment">// 9223372036854775807n</span></span><br><span class="line"><span class="built_in">BigInt</span>.asIntN(<span class="number">64</span>, max + <span class="number">1n</span>)</span><br><span class="line"><span class="comment">// -9223372036854775808n</span></span><br><span class="line"><span class="built_in">BigInt</span>.asUintN(<span class="number">64</span>, max + <span class="number">1n</span>)</span><br><span class="line"><span class="comment">// 9223372036854775808n</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>max</code>是64位带符号的 BigInt 所能表示的最大值。如果对这个值加<code>1n</code>，<code>BigInt.asIntN()</code>将会返回一个负值，因为这时新增的一位将被解释为符号位。而<code>BigInt.asUintN()</code>方法由于不存在符号位，所以可以正确返回结果。</p>
+<p>如果<code>BigInt.asIntN()</code>和<code>BigInt.asUintN()</code>指定的位数，小于数值本身的位数，那么头部的位将被舍弃。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> max = <span class="number">2n</span> ** (<span class="number">64n</span> - <span class="number">1n</span>) - <span class="number">1n</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">BigInt</span>.asIntN(<span class="number">32</span>, max) <span class="comment">// -1n</span></span><br><span class="line"><span class="built_in">BigInt</span>.asUintN(<span class="number">32</span>, max) <span class="comment">// 4294967295n</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>max</code>是一个64位的 BigInt，如果转为32位，前面的32位都会被舍弃。</p>
+<p>下面是<code>BigInt.parseInt()</code>的例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Number.parseInt() 与 BigInt.parseInt() 的对比</span></span><br><span class="line"><span class="built_in">Number</span>.parseInt(<span class="string">&#x27;9007199254740993&#x27;</span>, <span class="number">10</span>)</span><br><span class="line"><span class="comment">// 9007199254740992</span></span><br><span class="line"><span class="built_in">BigInt</span>.parseInt(<span class="string">&#x27;9007199254740993&#x27;</span>, <span class="number">10</span>)</span><br><span class="line"><span class="comment">// 9007199254740993n</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，由于有效数字超出了最大限度，<code>Number.parseInt</code>方法返回的结果是不精确的，而<code>BigInt.parseInt</code>方法正确返回了对应的 BigInt。</p>
+<p>对于二进制数组，BigInt 新增了两个类型<code>BigUint64Array</code>和<code>BigInt64Array</code>，这两种数据类型返回的都是64位 BigInt。<code>DataView</code>对象的实例方法<code>DataView.prototype.getBigInt64()</code>和<code>DataView.prototype.getBigUint64()</code>，返回的也是 BigInt。</p>
+<h5 id="7-9-3-转换规则"><a href="#7-9-3-转换规则" class="headerlink" title="7.9.3 转换规则"></a>7.9.3 转换规则</h5><p>可以使用<code>Boolean()</code>、<code>Number()</code>和<code>String()</code>这三个方法，将 BigInt 可以转为布尔值、数值和字符串类型。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Boolean</span>(<span class="number">0n</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Boolean</span>(<span class="number">1n</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Number</span>(<span class="number">1n</span>)  <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">String</span>(<span class="number">1n</span>)  <span class="comment">// &quot;1&quot;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，注意最后一个例子，转为字符串时后缀<code>n</code>会消失。</p>
+<p>另外，取反运算符（<code>!</code>）也可以将 BigInt 转为布尔值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">!<span class="number">0n</span> <span class="comment">// true</span></span><br><span class="line">!<span class="number">1n</span> <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<h5 id="7-9-4-数学运算"><a href="#7-9-4-数学运算" class="headerlink" title="7.9.4 数学运算"></a>7.9.4 数学运算</h5><p>数学运算方面，BigInt 类型的<code>+</code>、<code>-</code>、<code>*</code>和<code>**</code>这四个二元运算符，与 Number 类型的行为一致。除法运算<code>/</code>会舍去小数部分，返回一个整数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">9n</span> / <span class="number">5n</span></span><br><span class="line"><span class="comment">// 1n</span></span><br></pre></td></tr></table></figure>
+<p>几乎所有的数值运算符都可以用在 BigInt，但是有两个例外。</p>
+<ul>
+<li>不带符号的右移位运算符<code>&gt;&gt;&gt;</code></li>
+<li>一元的求正运算符<code>+</code></li>
+</ul>
+<p>上面两个运算符用在 BigInt 会报错。前者是因为<code>&gt;&gt;&gt;</code>运算符是不带符号的，但是 BigInt 总是带有符号的，导致该运算无意义，完全等同于右移运算符<code>&gt;&gt;</code>。后者是因为一元运算符<code>+</code>在 asm.js 里面总是返回 Number 类型，为了不破坏 asm.js 就规定<code>+1n</code>会报错。</p>
+<p>BigInt 不能与普通数值进行混合运算。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1n</span> + <span class="number">1.3</span> <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+<p>上面代码报错是因为无论返回的是 BigInt 或 Number，都会导致丢失精度信息。比如<code>(2n**53n + 1n) + 0.5</code>这个表达式，如果返回 BigInt 类型，<code>0.5</code>这个小数部分会丢失；如果返回 Number 类型，有效精度只能保持 53 位，导致精度下降。</p>
+<p>同样的原因，如果一个标准库函数的参数预期是 Number 类型，但是得到的是一个 BigInt，就会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 错误的写法</span></span><br><span class="line"><span class="built_in">Math</span>.sqrt(<span class="number">4n</span>) <span class="comment">// 报错</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 正确的写法</span></span><br><span class="line"><span class="built_in">Math</span>.sqrt(<span class="built_in">Number</span>(<span class="number">4n</span>)) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>Math.sqrt</code>的参数预期是 Number 类型，如果是 BigInt 就会报错，必须先用<code>Number</code>方法转一下类型，才能进行计算。</p>
+<p>asm.js 里面，<code>|0</code>跟在一个数值的后面会返回一个32位整数。根据不能与 Number 类型混合运算的规则，BigInt 如果与<code>|0</code>进行运算会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1n</span> | <span class="number">0</span> <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+<h5 id="7-9-5-其他运算"><a href="#7-9-5-其他运算" class="headerlink" title="7.9.5 其他运算"></a>7.9.5 其他运算</h5><p>BigInt 对应的布尔值，与 Number 类型一致，即<code>0n</code>会转为<code>false</code>，其他值转为<code>true</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">0n</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;if&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;else&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// else</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>0n</code>对应<code>false</code>，所以会进入<code>else</code>子句。</p>
+<p>比较运算符（比如<code>&gt;</code>）和相等运算符（<code>==</code>）允许 BigInt 与其他类型的值混合计算，因为这样做不会损失精度。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0n</span> &lt; <span class="number">1</span> <span class="comment">// true</span></span><br><span class="line"><span class="number">0n</span> &lt; <span class="literal">true</span> <span class="comment">// true</span></span><br><span class="line"><span class="number">0n</span> == <span class="number">0</span> <span class="comment">// true</span></span><br><span class="line"><span class="number">0n</span> == <span class="literal">false</span> <span class="comment">// true</span></span><br><span class="line"><span class="number">0n</span> === <span class="number">0</span> <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>BigInt 与字符串混合运算时，会先转为字符串，再进行运算。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;</span> + <span class="number">123n</span> <span class="comment">// &quot;123&quot;</span></span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/06/25/%E6%89%93%E5%8D%A10077/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-%E6%95%B0%E5%80%BC%E7%9A%84%E6%89%A9%E5%B1%95/" rel="tag">JS-ES6 数值的扩展</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2021/06/20/%E6%89%93%E5%8D%A10076/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">打卡0076</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
+    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Ye Ma
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        <!-- 
+         -->
+        
+        
+        Powered by Hexo
+        <span class="division">|</span>
+        Theme - Ayer
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="maeBlog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/travel/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about/2021">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/gHZjdQRcOL1WxSP.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/pZNYuI4QFnfwb7l.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>
