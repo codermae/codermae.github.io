@@ -159,6 +159,69 @@
     
     
     <article
+  id="post-打卡0078"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/26/%E6%89%93%E5%8D%A10078/"
+    >打卡0078</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/26/%E6%89%93%E5%8D%A10078/" class="article-date">
+  <time datetime="2021-06-26T07:46:00.000Z" itemprop="datePublished">2021-06-26</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#33a3dc>为了理想的实现，航行的孤独在所难免。</font></p>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="8-函数的扩展"><a href="#8-函数的扩展" class="headerlink" title="8. 函数的扩展"></a>8. 函数的扩展</h3><h4 id="8-1-函数参数的默认值"><a href="#8-1-函数参数的默认值" class="headerlink" title="8.1 函数参数的默认值"></a>8.1 函数参数的默认值</h4><h5 id="8-1-1-基本用法"><a href="#8-1-1-基本用法" class="headerlink" title="8.1.1 基本用法"></a>8.1.1 基本用法</h5><p>ES6 之前，不能直接为函数的参数指定默认值，只能采用变通的方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  y = y || <span class="string">&#x27;World&#x27;</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(x, y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">log(<span class="string">&#x27;Hello&#x27;</span>) <span class="comment">// Hello World</span></span><br><span class="line">log(<span class="string">&#x27;Hello&#x27;</span>, <span class="string">&#x27;China&#x27;</span>) <span class="comment">// Hello China</span></span><br><span class="line">log(<span class="string">&#x27;Hello&#x27;</span>, <span class="string">&#x27;&#x27;</span>) <span class="comment">// Hello World</span></span><br></pre></td></tr></table></figure>
+<p>上面代码检查函数<code>log</code>的参数<code>y</code>有没有赋值，如果没有，则指定默认值为<code>World</code>。这种写法的缺点在于，如果参数<code>y</code>赋值了，但是对应的布尔值为<code>false</code>，则该赋值不起作用。就像上面代码的最后一行，参数<code>y</code>等于空字符，结果被改为默认值。</p>
+<p>为了避免这个问题，通常需要先判断一下参数<code>y</code>是否被赋值，如果没有，再等于默认值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> y === <span class="string">&#x27;undefined&#x27;</span>) &#123;</span><br><span class="line">  y = <span class="string">&#x27;World&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ES6 允许为函数的参数设置默认值，即直接写在参数定义的后面。</p> 
+      <a class="article-more-link" href="/2021/06/26/%E6%89%93%E5%8D%A10078/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A9%E5%B1%95/" rel="tag">JS-ES6 函数的扩展</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0077"
   class="article article-type-post"
   itemscope
@@ -190,7 +253,7 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p><font color=#78cdd1>hi,我的剑已出鞘，想和你过过招。</font></p>
+  <p><font color=#78cdd1>有时间就出去走走，能走多远就走多远。</font></p>
 <h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="7-数值的扩展"><a href="#7-数值的扩展" class="headerlink" title="7.数值的扩展"></a>7.数值的扩展</h3><h4 id="7-1-二进制和八进制表示法"><a href="#7-1-二进制和八进制表示法" class="headerlink" title="7.1 二进制和八进制表示法"></a>7.1 二进制和八进制表示法</h4><p>ES6 提供了二进制和八进制数值的新的写法，分别用前缀<code>0b</code>（或<code>0B</code>）和<code>0o</code>（或<code>0O</code>）表示。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0b111110111</span> === <span class="number">503</span> <span class="comment">// true</span></span><br><span class="line"><span class="number">0o767</span> === <span class="number">503</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 <p>从 ES5 开始，在严格模式之中，八进制就不再允许使用前缀<code>0</code>表示，ES6 进一步明确，要使用前缀<code>0o</code>表示。</p>
@@ -714,63 +777,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-IndexedDB-API/" rel="tag">JS 浏览器模型-IndexedDB API</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0068"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/06/04/%E6%89%93%E5%8D%A10068/"
-    >打卡0068</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/06/04/%E6%89%93%E5%8D%A10068/" class="article-date">
-  <time datetime="2021-06-04T01:08:16.000Z" itemprop="datePublished">2021-06-04</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%80%BB%E7%BB%93/">总结</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#faa755>要保持希望在每天清晨太阳升起。</font><br>菜鸟一个，一直没搞明白Vue和Node项目环境的搭建，处在雾里，昨晚终于卷完了，记录一下。<br>如果有人能看到，欢迎留言！</p> 
-      <a class="article-more-link" href="/2021/06/04/%E6%89%93%E5%8D%A10068/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-Node-Express-postgresql/" rel="tag">Vue+Node+Express+postgresql</a></li></ul>
 
     </footer>
   </div>

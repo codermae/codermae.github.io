@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-06-26T07:40:44.338Z</updated>
+  <updated>2021-06-27T07:15:44.772Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,14 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打卡0078</title>
+    <link href="https://codermae.github.io/2021/06/26/%E6%89%93%E5%8D%A10078/"/>
+    <id>https://codermae.github.io/2021/06/26/%E6%89%93%E5%8D%A10078/</id>
+    <published>2021-06-26T07:46:00.000Z</published>
+    <updated>2021-06-27T07:15:44.772Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#33a3dc&gt;为了理想的实现，航行的孤独在所难免。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;8-函数的扩展&quot;&gt;&lt;a href=&quot;#8-函数的扩展&quot; class=&quot;headerlink&quot; title=&quot;8. 函数的扩展&quot;&gt;&lt;/a&gt;8. 函数的扩展&lt;/h3&gt;&lt;h4 id=&quot;8-1-函数参数的默认值&quot;&gt;&lt;a href=&quot;#8-1-函数参数的默认值&quot; class=&quot;headerlink&quot; title=&quot;8.1 函数参数的默认值&quot;&gt;&lt;/a&gt;8.1 函数参数的默认值&lt;/h4&gt;&lt;h5 id=&quot;8-1-1-基本用法&quot;&gt;&lt;a href=&quot;#8-1-1-基本用法&quot; class=&quot;headerlink&quot; title=&quot;8.1.1 基本用法&quot;&gt;&lt;/a&gt;8.1.1 基本用法&lt;/h5&gt;&lt;p&gt;ES6 之前，不能直接为函数的参数指定默认值，只能采用变通的方法。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;log&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;x, y&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  y = y || &lt;span class=&quot;string&quot;&gt;&amp;#x27;World&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(x, y);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;log(&lt;span class=&quot;string&quot;&gt;&amp;#x27;Hello&amp;#x27;&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// Hello World&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;log(&lt;span class=&quot;string&quot;&gt;&amp;#x27;Hello&amp;#x27;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;China&amp;#x27;&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// Hello China&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;log(&lt;span class=&quot;string&quot;&gt;&amp;#x27;Hello&amp;#x27;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;&amp;#x27;&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// Hello World&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码检查函数&lt;code&gt;log&lt;/code&gt;的参数&lt;code&gt;y&lt;/code&gt;有没有赋值，如果没有，则指定默认值为&lt;code&gt;World&lt;/code&gt;。这种写法的缺点在于，如果参数&lt;code&gt;y&lt;/code&gt;赋值了，但是对应的布尔值为&lt;code&gt;false&lt;/code&gt;，则该赋值不起作用。就像上面代码的最后一行，参数&lt;code&gt;y&lt;/code&gt;等于空字符，结果被改为默认值。&lt;/p&gt;
+&lt;p&gt;为了避免这个问题，通常需要先判断一下参数&lt;code&gt;y&lt;/code&gt;是否被赋值，如果没有，再等于默认值。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; y === &lt;span class=&quot;string&quot;&gt;&amp;#x27;undefined&amp;#x27;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  y = &lt;span class=&quot;string&quot;&gt;&amp;#x27;World&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;ES6 允许为函数的参数设置默认值，即直接写在参数定义的后面。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 函数的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A9%E5%B1%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>打卡0077</title>
     <link href="https://codermae.github.io/2021/06/25/%E6%89%93%E5%8D%A10077/"/>
     <id>https://codermae.github.io/2021/06/25/%E6%89%93%E5%8D%A10077/</id>
     <published>2021-06-25T02:21:45.000Z</published>
-    <updated>2021-06-26T07:40:44.338Z</updated>
+    <updated>2021-06-27T07:16:47.927Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;font color=#78cdd1&gt;hi,我的剑已出鞘，想和你过过招。&lt;/font&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;font color=#78cdd1&gt;有时间就出去走走，能走多远就走多远。&lt;/font&gt;&lt;/p&gt;
 &lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;7-数值的扩展&quot;&gt;&lt;a href=&quot;#7-数值的扩展&quot; class=&quot;headerlink&quot; title=&quot;7.数值的扩展&quot;&gt;&lt;/a&gt;7.数值的扩展&lt;/h3&gt;&lt;h4 id=&quot;7-1-二进制和八进制表示法&quot;&gt;&lt;a href=&quot;#7-1-二进制和八进制表示法&quot; class=&quot;headerlink&quot; title=&quot;7.1 二进制和八进制表示法&quot;&gt;&lt;/a&gt;7.1 二进制和八进制表示法&lt;/h4&gt;&lt;p&gt;ES6 提供了二进制和八进制数值的新的写法，分别用前缀&lt;code&gt;0b&lt;/code&gt;（或&lt;code&gt;0B&lt;/code&gt;）和&lt;code&gt;0o&lt;/code&gt;（或&lt;code&gt;0O&lt;/code&gt;）表示。&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0b111110111&lt;/span&gt; === &lt;span class=&quot;number&quot;&gt;503&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0o767&lt;/span&gt; === &lt;span class=&quot;number&quot;&gt;503&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;从 ES5 开始，在严格模式之中，八进制就不再允许使用前缀&lt;code&gt;0&lt;/code&gt;表示，ES6 进一步明确，要使用前缀&lt;code&gt;0o&lt;/code&gt;表示。&lt;/p&gt;
@@ -507,41 +532,6 @@
     
     
     <category term="JS 浏览器模型-XMLHttpRequest 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-XMLHttpRequest-%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0058</title>
-    <link href="https://codermae.github.io/2021/05/31/%E6%89%93%E5%8D%A10058/"/>
-    <id>https://codermae.github.io/2021/05/31/%E6%89%93%E5%8D%A10058/</id>
-    <published>2021-05-31T01:26:09.000Z</published>
-    <updated>2021-05-31T02:12:17.822Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#6a6da9&gt;“我拥向宇宙吹来的风 与夏夜相逢 是八月盛景 是清寂长生”&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;4-Cookie&quot;&gt;&lt;a href=&quot;#4-Cookie&quot; class=&quot;headerlink&quot; title=&quot;4. Cookie&quot;&gt;&lt;/a&gt;4. Cookie&lt;/h3&gt;&lt;h4 id=&quot;4-1-概述&quot;&gt;&lt;a href=&quot;#4-1-概述&quot; class=&quot;headerlink&quot; title=&quot;4.1 概述&quot;&gt;&lt;/a&gt;4.1 概述&lt;/h4&gt;&lt;p&gt;Cookie 是服务器保存在浏览器的一小段文本信息，一般大小不能超过4KB。浏览器每次向服务器发出请求，就会自动附上这段信息。&lt;/p&gt;
-&lt;p&gt;Cookie 主要保存状态信息，以下是一些主要用途。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;对话（session）管理：保存登录、购物车等需要记录的信息。&lt;/li&gt;
-&lt;li&gt;个性化信息：保存用户的偏好，比如网页的字体大小、背景色等等。&lt;/li&gt;
-&lt;li&gt;追踪用户：记录和分析用户行为。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Cookie 不是一种理想的客户端储存机制。它的容量很小（4KB），缺乏数据操作接口，而且会影响性能。客户端储存应该使用 Web storage API 和 IndexedDB。只有那些每次请求都需要让服务器知道的信息，才应该放在 Cookie 里面。&lt;/p&gt;
-&lt;p&gt;每个 Cookie 都有以下几方面的元数据。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Cookie 的名字&lt;/li&gt;
-&lt;li&gt;Cookie 的值（真正的数据写在这里面）&lt;/li&gt;
-&lt;li&gt;到期时间（超过这个时间会失效）&lt;/li&gt;
-&lt;li&gt;所属域名（默认为当前域名）&lt;/li&gt;
-&lt;li&gt;生效的路径（默认为当前网址）&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 浏览器模型-Cookie" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Cookie/"/>
     
   </entry>
   
