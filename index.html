@@ -159,6 +159,69 @@
     
     
     <article
+  id="post-打卡0079"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/27/%E6%89%93%E5%8D%A10079/"
+    >打卡0079</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/27/%E6%89%93%E5%8D%A10079/" class="article-date">
+  <time datetime="2021-06-27T07:17:54.000Z" itemprop="datePublished">2021-06-27</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#faa755>有三分钟热度，就有三分钟收获。</font></p>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="9-数组的扩展"><a href="#9-数组的扩展" class="headerlink" title="9. 数组的扩展"></a>9. 数组的扩展</h3><h4 id="9-1-扩展运算符"><a href="#9-1-扩展运算符" class="headerlink" title="9.1 扩展运算符"></a>9.1 扩展运算符</h4><h5 id="9-1-1-含义"><a href="#9-1-1-含义" class="headerlink" title="9.1.1 含义"></a>9.1.1 含义</h5><p>扩展运算符（spread）是三个点（<code>...</code>）。它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(...[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"><span class="comment">// 1 2 3</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span>, ...[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="number">5</span>)</span><br><span class="line"><span class="comment">// 1 2 3 4 5</span></span><br><span class="line"></span><br><span class="line">[...document.querySelectorAll(<span class="string">&#x27;div&#x27;</span>)]</span><br><span class="line"><span class="comment">// [&lt;div&gt;, &lt;div&gt;, &lt;div&gt;]</span></span><br></pre></td></tr></table></figure>
+<p>该运算符主要用于函数调用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">push</span>(<span class="params">array, ...items</span>) </span>&#123;</span><br><span class="line">  array.push(...items);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> numbers = [<span class="number">4</span>, <span class="number">38</span>];</span><br><span class="line">add(...numbers) <span class="comment">// 42</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>array.push(...items)</code>和<code>add(...numbers)</code>这两行，都是函数的调用，它们都使用了扩展运算符。该运算符将一个数组，变为参数序列。</p>
+<p>扩展运算符与正常的函数参数可以结合使用，非常灵活。</p> 
+      <a class="article-more-link" href="/2021/06/27/%E6%89%93%E5%8D%A10079/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-%E6%95%B0%E7%BB%84%E7%9A%84%E6%89%A9%E5%B1%95/" rel="tag">JS-ES6 数组的扩展</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0078"
   class="article article-type-post"
   itemscope
@@ -717,66 +780,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Web-Worker/" rel="tag">JS 浏览器模型-Web Worker</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0069"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/06/05/%E6%89%93%E5%8D%A10069/"
-    >打卡0069</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/06/05/%E6%89%93%E5%8D%A10069/" class="article-date">
-  <time datetime="2021-06-05T04:42:43.000Z" itemprop="datePublished">2021-06-05</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#412f1f>当你觉得孤独无助时，想一想还有十几亿细胞只为了你一个人而活。</font></p>
-<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="14-IndexedDB-API"><a href="#14-IndexedDB-API" class="headerlink" title="14. IndexedDB API"></a>14. IndexedDB API</h3><h4 id="14-1-概述"><a href="#14-1-概述" class="headerlink" title="14.1 概述"></a>14.1 概述</h4><p>随着浏览器的功能不断增强，越来越多的网站开始考虑，将大量数据储存在客户端，这样可以减少从服务器获取数据，直接从本地获取数据。</p>
-<p>现有的浏览器数据储存方案，都不适合储存大量数据：Cookie 的大小不超过 4KB，且每次请求都会发送回服务器；LocalStorage 在 2.5MB 到 10MB 之间（各家浏览器不同），而且不提供搜索功能，不能建立自定义的索引。所以，需要一种新的解决方案，这就是 IndexedDB 诞生的背景。</p>
-<p>通俗地说，IndexedDB 就是浏览器提供的本地数据库，它可以被网页脚本创建和操作。IndexedDB 允许储存大量数据，提供查找接口，还能建立索引。这些都是 LocalStorage 所不具备的。就数据库类型而言，IndexedDB 不属于关系型数据库（不支持 SQL 查询语句），更接近 NoSQL 数据库。</p> 
-      <a class="article-more-link" href="/2021/06/05/%E6%89%93%E5%8D%A10069/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-IndexedDB-API/" rel="tag">JS 浏览器模型-IndexedDB API</a></li></ul>
 
     </footer>
   </div>
