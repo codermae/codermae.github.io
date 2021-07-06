@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-06-28T02:41:11.461Z</updated>
+  <updated>2021-07-06T07:22:58.007Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0081</title>
+    <link href="https://codermae.github.io/2021/07/05/%E6%89%93%E5%8D%A10081/"/>
+    <id>https://codermae.github.io/2021/07/05/%E6%89%93%E5%8D%A10081/</id>
+    <published>2021-07-05T01:24:41.000Z</published>
+    <updated>2021-07-06T07:22:58.007Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;font color=#7bbfea&gt;不积跬步，无以至千里；不积小流，无以成江海。&lt;/font&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;当我使用其它网站上爬取下来的的图片链接时，加载403&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="积累" scheme="https://codermae.github.io/categories/%E7%A7%AF%E7%B4%AF/"/>
+    
+    
+    <category term="PHP" scheme="https://codermae.github.io/tags/PHP/"/>
+    
+    <category term="HTML" scheme="https://codermae.github.io/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0080</title>
+    <link href="https://codermae.github.io/2021/06/28/%E6%89%93%E5%8D%A10080/"/>
+    <id>https://codermae.github.io/2021/06/28/%E6%89%93%E5%8D%A10080/</id>
+    <published>2021-06-28T02:42:34.000Z</published>
+    <updated>2021-07-06T07:22:26.466Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#fedcbd&gt;旅途匆忙，人生漫长。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;9-对象的扩展&quot;&gt;&lt;a href=&quot;#9-对象的扩展&quot; class=&quot;headerlink&quot; title=&quot;9.对象的扩展&quot;&gt;&lt;/a&gt;9.对象的扩展&lt;/h3&gt;&lt;p&gt;对象（object）是 JavaScript 最重要的数据结构。ES6 对它进行了重大升级，本章介绍数据结构本身的改变，下一章介绍Object对象的新增方法。&lt;/p&gt;
+&lt;h4 id=&quot;9-1-属性的简洁表示法&quot;&gt;&lt;a href=&quot;#9-1-属性的简洁表示法&quot; class=&quot;headerlink&quot; title=&quot;9.1 属性的简洁表示法&quot;&gt;&lt;/a&gt;9.1 属性的简洁表示法&lt;/h4&gt;&lt;p&gt;ES6 允许在大括号里面，直接写入变量和函数，作为对象的属性和方法。这样的书写更加简洁。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; foo = &lt;span class=&quot;string&quot;&gt;&amp;#x27;bar&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; baz = &amp;#123;foo&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;baz &lt;span class=&quot;comment&quot;&gt;// &amp;#123;foo: &amp;quot;bar&amp;quot;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 等同于&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; baz = &amp;#123;&lt;span class=&quot;attr&quot;&gt;foo&lt;/span&gt;: foo&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，变量&lt;code&gt;foo&lt;/code&gt;直接写在大括号里面。这时，属性名就是变量名, 属性值就是变量值。下面是另一个例子。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;f&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;x, y&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123;x, y&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 等同于&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;f&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;x, y&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123;&lt;span class=&quot;attr&quot;&gt;x&lt;/span&gt;: x, &lt;span class=&quot;attr&quot;&gt;y&lt;/span&gt;: y&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;f(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// Object &amp;#123;x: 1, y: 2&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;除了属性简写，方法也可以简写。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 对象的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%89%A9%E5%B1%95/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0079</title>
@@ -452,80 +507,6 @@
     
     
     <category term="JS 浏览器模型-Storage 接口" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Storage-%E6%8E%A5%E5%8F%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0061</title>
-    <link href="https://codermae.github.io/2021/06/02/%E6%89%93%E5%8D%A10061/"/>
-    <id>https://codermae.github.io/2021/06/02/%E6%89%93%E5%8D%A10061/</id>
-    <published>2021-06-02T01:04:28.000Z</published>
-    <updated>2021-06-02T02:32:32.396Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#2f271d&gt;修炼匠心，在重复的岁月里，对得起每一寸光阴。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;7-CORS-通信&quot;&gt;&lt;a href=&quot;#7-CORS-通信&quot; class=&quot;headerlink&quot; title=&quot;7. CORS 通信&quot;&gt;&lt;/a&gt;7. CORS 通信&lt;/h3&gt;&lt;p&gt;CORS 是一个 W3C 标准，全称是“跨域资源共享”（Cross-origin resource sharing）。它允许浏览器向跨域的服务器，发出&lt;code&gt;XMLHttpRequest&lt;/code&gt;请求，从而克服了 AJAX 只能同源使用的限制。&lt;/p&gt;
-&lt;h4 id=&quot;7-1-简介&quot;&gt;&lt;a href=&quot;#7-1-简介&quot; class=&quot;headerlink&quot; title=&quot;7.1 简介&quot;&gt;&lt;/a&gt;7.1 简介&lt;/h4&gt;&lt;p&gt;CORS 需要浏览器和服务器同时支持。目前，所有浏览器都支持该功能。&lt;/p&gt;
-&lt;p&gt;整个 CORS 通信过程，都是浏览器自动完成，不需要用户参与。对于开发者来说，CORS 通信与普通的 AJAX 通信没有差别，代码完全一样。浏览器一旦发现 AJAX 请求跨域，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感知。因此，实现 CORS 通信的关键是服务器。只要服务器实现了 CORS 接口，就可以跨域通信。&lt;/p&gt;
-&lt;h4 id=&quot;7-2-两种请求&quot;&gt;&lt;a href=&quot;#7-2-两种请求&quot; class=&quot;headerlink&quot; title=&quot;7.2 两种请求&quot;&gt;&lt;/a&gt;7.2 两种请求&lt;/h4&gt;&lt;p&gt;CORS 请求分成两类：简单请求（simple request）和非简单请求（not-so-simple request）。&lt;/p&gt;
-&lt;p&gt;只要同时满足以下两大条件，就属于简单请求。&lt;/p&gt;
-&lt;p&gt;（1）请求方法是以下三种方法之一。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;HEAD&lt;/li&gt;
-&lt;li&gt;GET&lt;/li&gt;
-&lt;li&gt;POST&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;（2）HTTP 的头信息不超出以下几种字段。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Accept&lt;/li&gt;
-&lt;li&gt;Accept-Language&lt;/li&gt;
-&lt;li&gt;Content-Language&lt;/li&gt;
-&lt;li&gt;Last-Event-ID&lt;/li&gt;
-&lt;li&gt;Content-Type：只限于三个值&lt;code&gt;application/x-www-form-urlencoded&lt;/code&gt;、&lt;code&gt;multipart/form-data&lt;/code&gt;、&lt;code&gt;text/plain&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 浏览器模型-CORS 通信" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-CORS-%E9%80%9A%E4%BF%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0060</title>
-    <link href="https://codermae.github.io/2021/06/01/%E6%89%93%E5%8D%A10060/"/>
-    <id>https://codermae.github.io/2021/06/01/%E6%89%93%E5%8D%A10060/</id>
-    <published>2021-06-01T02:19:57.000Z</published>
-    <updated>2021-06-01T03:04:13.186Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#009ad6&gt;每个人的一生都是上帝手写的童话。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;6-同源限制&quot;&gt;&lt;a href=&quot;#6-同源限制&quot; class=&quot;headerlink&quot; title=&quot;6.同源限制&quot;&gt;&lt;/a&gt;6.同源限制&lt;/h3&gt;&lt;p&gt;浏览器安全的基石是“同源政策”（&lt;a href=&quot;https://en.wikipedia.org/wiki/Same-origin_policy&quot;&gt;same-origin policy&lt;/a&gt; ）。很多开发者都知道这一点，但了解得不全面。&lt;/p&gt;
-&lt;h4 id=&quot;6-1-概述&quot;&gt;&lt;a href=&quot;#6-1-概述&quot; class=&quot;headerlink&quot; title=&quot;6.1 概述&quot;&gt;&lt;/a&gt;6.1 概述&lt;/h4&gt;&lt;h5 id=&quot;6-1-1-含义&quot;&gt;&lt;a href=&quot;#6-1-1-含义&quot; class=&quot;headerlink&quot; title=&quot;6.1.1 含义&quot;&gt;&lt;/a&gt;6.1.1 含义&lt;/h5&gt;&lt;p&gt;1995年，同源政策由 Netscape 公司引入浏览器。目前，所有浏览器都实行这个政策。&lt;/p&gt;
-&lt;p&gt;最初，它的含义是指，A 网页设置的 Cookie，B 网页不能打开，除非这两个网页“同源”。所谓“同源”指的是“三个相同”。&lt;br&gt;`&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;协议相同&lt;/li&gt;
-&lt;li&gt;域名相同&lt;/li&gt;
-&lt;li&gt;端口相同（这点可以忽略，详见下文）&lt;br&gt;`&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;举例来说，&lt;code&gt;http://www.example.com/dir/page.html&lt;/code&gt;这个网址，协议是&lt;code&gt;http://&lt;/code&gt;，域名是&lt;code&gt;www.example.com&lt;/code&gt;，端口是&lt;code&gt;80&lt;/code&gt;（默认端口可以省略），它的同源情况如下。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;http://www.example.com/dir2/other.html&lt;/code&gt;：同源&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;http://example.com/dir/other.html&lt;/code&gt;：不同源（域名不同）&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;http://v2.www.example.com/dir/other.html&lt;/code&gt;：不同源（域名不同）&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;http://www.example.com:81/dir/other.html&lt;/code&gt;：不同源（端口不同）&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;https://www.example.com/dir/page.html&lt;/code&gt;：不同源（协议不同）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;注意，标准规定端口不同的网址不是同源（比如&lt;code&gt;8000&lt;/code&gt;端口和&lt;code&gt;8001&lt;/code&gt;端口不是同源），但是浏览器没有遵守这条规定。实际上，同一个网域的不同端口，是可以互相读取 Cookie 的。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 浏览器模型-同源限制" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-%E5%90%8C%E6%BA%90%E9%99%90%E5%88%B6/"/>
     
   </entry>
   
