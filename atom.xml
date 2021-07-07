@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-07-06T07:22:58.007Z</updated>
+  <updated>2021-07-07T02:39:47.478Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0082</title>
+    <link href="https://codermae.github.io/2021/07/07/%E6%89%93%E5%8D%A10082/"/>
+    <id>https://codermae.github.io/2021/07/07/%E6%89%93%E5%8D%A10082/</id>
+    <published>2021-07-07T01:07:59.000Z</published>
+    <updated>2021-07-07T02:39:47.478Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#ef5b9c&gt;当一个人放弃追问，衰老这就开始了。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;10-对象的新增方法&quot;&gt;&lt;a href=&quot;#10-对象的新增方法&quot; class=&quot;headerlink&quot; title=&quot;10.对象的新增方法&quot;&gt;&lt;/a&gt;10.对象的新增方法&lt;/h3&gt;&lt;h4 id=&quot;10-1-Object-is&quot;&gt;&lt;a href=&quot;#10-1-Object-is&quot; class=&quot;headerlink&quot; title=&quot;10.1 Object.is()&quot;&gt;&lt;/a&gt;10.1 Object.is()&lt;/h4&gt;&lt;p&gt;ES5 比较两个值是否相等，只有两个运算符：相等运算符（&lt;code&gt;==&lt;/code&gt;）和严格相等运算符（&lt;code&gt;===&lt;/code&gt;）。它们都有缺点，前者会自动转换数据类型，后者的&lt;code&gt;NaN&lt;/code&gt;不等于自身，以及&lt;code&gt;+0&lt;/code&gt;等于&lt;code&gt;-0&lt;/code&gt;。JavaScript 缺乏一种运算，在所有环境中，只要两个值是一样的，它们就应该相等。&lt;/p&gt;
+&lt;p&gt;ES6 提出“Same-value equality”（同值相等）算法，用来解决这个问题。&lt;code&gt;Object.is&lt;/code&gt;就是部署这个算法的新方法。它用来比较两个值是否严格相等，与严格比较运算符（&lt;code&gt;===&lt;/code&gt;）的行为基本一致。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.is(&lt;span class=&quot;string&quot;&gt;&amp;#x27;foo&amp;#x27;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;foo&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.is(&amp;#123;&amp;#125;, &amp;#123;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;不同之处只有两个：一是&lt;code&gt;+0&lt;/code&gt;不等于&lt;code&gt;-0&lt;/code&gt;，二是&lt;code&gt;NaN&lt;/code&gt;等于自身。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; === -&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;literal&quot;&gt;NaN&lt;/span&gt; === &lt;span class=&quot;literal&quot;&gt;NaN&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.is(+&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, -&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.is(&lt;span class=&quot;literal&quot;&gt;NaN&lt;/span&gt;, &lt;span class=&quot;literal&quot;&gt;NaN&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 对象的新增方法" scheme="https://codermae.github.io/tags/JS-ES6-%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B0%E5%A2%9E%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0081</title>
@@ -484,29 +508,6 @@
     
     
     <category term="JS 浏览器模型-History 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-History-%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0062</title>
-    <link href="https://codermae.github.io/2021/06/02/%E6%89%93%E5%8D%A10062/"/>
-    <id>https://codermae.github.io/2021/06/02/%E6%89%93%E5%8D%A10062/</id>
-    <published>2021-06-02T01:45:51.000Z</published>
-    <updated>2021-06-02T02:32:41.678Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#525f42&gt;无论到了什么年龄，眼里都要有清澈的光芒，看过黑白之后，心中还有彩色留存。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;8-Storage-接口&quot;&gt;&lt;a href=&quot;#8-Storage-接口&quot; class=&quot;headerlink&quot; title=&quot;8.Storage 接口&quot;&gt;&lt;/a&gt;8.Storage 接口&lt;/h3&gt;&lt;h4 id=&quot;8-1-概述&quot;&gt;&lt;a href=&quot;#8-1-概述&quot; class=&quot;headerlink&quot; title=&quot;8.1 概述&quot;&gt;&lt;/a&gt;8.1 概述&lt;/h4&gt;&lt;p&gt;Storage 接口用于脚本在浏览器保存数据。两个对象部署了这个接口：&lt;code&gt;window.sessionStorage&lt;/code&gt;和&lt;code&gt;window.localStorage&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sessionStorage&lt;/code&gt;保存的数据用于浏览器的一次会话（session），当会话结束（通常是窗口关闭），数据被清空；&lt;code&gt;localStorage&lt;/code&gt;保存的数据长期存在，下一次访问该网站的时候，网页可以直接读取以前保存的数据。除了保存期限的长短不同，这两个对象的其他方面都一致。&lt;/p&gt;
-&lt;p&gt;保存的数据都以“键值对”的形式存在。也就是说，每一项数据都有一个键名和对应的值。所有的数据都是以文本格式保存。&lt;/p&gt;
-&lt;p&gt;这个接口很像 Cookie 的强化版，能够使用大得多的存储空间。目前，每个域名的存储上限视浏览器而定，Chrome 是 2.5MB，Firefox 和 Opera 是 5MB，IE 是 10MB。其中，Firefox 的存储空间由一级域名决定，而其他浏览器没有这个限制。也就是说，Firefox 中，&lt;code&gt;a.example.com&lt;/code&gt;和&lt;code&gt;b.example.com&lt;/code&gt;共享 5MB 的存储空间。另外，与 Cookie 一样，它们也受同域限制。某个网页存入的数据，只有同域下的网页才能读取，如果跨域操作会报错。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 浏览器模型-Storage 接口" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Storage-%E6%8E%A5%E5%8F%A3/"/>
     
   </entry>
   
