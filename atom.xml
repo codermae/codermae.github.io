@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-07-07T02:39:47.478Z</updated>
+  <updated>2021-07-07T08:24:18.890Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打卡0083</title>
+    <link href="https://codermae.github.io/2021/07/07/%E6%89%93%E5%8D%A10083/"/>
+    <id>https://codermae.github.io/2021/07/07/%E6%89%93%E5%8D%A10083/</id>
+    <published>2021-07-07T02:42:21.000Z</published>
+    <updated>2021-07-07T08:24:18.890Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#6f599c&gt;人间的面，见一面少一面。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;11-Symbol&quot;&gt;&lt;a href=&quot;#11-Symbol&quot; class=&quot;headerlink&quot; title=&quot;11. Symbol&quot;&gt;&lt;/a&gt;11. Symbol&lt;/h3&gt;&lt;h4 id=&quot;11-1-概述&quot;&gt;&lt;a href=&quot;#11-1-概述&quot; class=&quot;headerlink&quot; title=&quot;11.1 概述&quot;&gt;&lt;/a&gt;11.1 概述&lt;/h4&gt;&lt;p&gt;ES5 的对象属性名都是字符串，这容易造成属性名的冲突。比如，你使用了一个他人提供的对象，但又想为这个对象添加新的方法（mixin 模式），新方法的名字就有可能与现有方法产生冲突。如果有一种机制，保证每个属性的名字都是独一无二的就好了，这样就从根本上防止属性名的冲突。这就是 ES6 引入&lt;code&gt;Symbol&lt;/code&gt;的原因。&lt;/p&gt;
+&lt;p&gt;ES6 引入了一种新的原始数据类型&lt;code&gt;Symbol&lt;/code&gt;，表示独一无二的值。它是 JavaScript 语言的第七种数据类型，前六种是：&lt;code&gt;undefined&lt;/code&gt;、&lt;code&gt;null&lt;/code&gt;、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。&lt;/p&gt;
+&lt;p&gt;Symbol 值通过&lt;code&gt;Symbol&lt;/code&gt;函数生成。这就是说，对象的属性名现在可以有两种类型，一种是原来就有的字符串，另一种就是新增的 Symbol 类型。凡是属性名属于 Symbol 类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; s = &lt;span class=&quot;built_in&quot;&gt;Symbol&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; s&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;symbol&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，变量&lt;code&gt;s&lt;/code&gt;就是一个独一无二的值。&lt;code&gt;typeof&lt;/code&gt;运算符的结果，表明变量&lt;code&gt;s&lt;/code&gt;是 Symbol 数据类型，而不是字符串之类的其他类型。&lt;/p&gt;
+&lt;p&gt;注意，&lt;code&gt;Symbol&lt;/code&gt;函数前不能使用&lt;code&gt;new&lt;/code&gt;命令，否则会报错。这是因为生成的 Symbol 是一个原始类型的值，不是对象。也就是说，由于 Symbol 值不是对象，所以不能添加属性。基本上，它是一种类似于字符串的数据类型。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 Symbol" scheme="https://codermae.github.io/tags/JS-ES6-Symbol/"/>
+    
+  </entry>
+  
+  <entry>
     <title>打卡0082</title>
-    <link href="https://codermae.github.io/2021/07/07/%E6%89%93%E5%8D%A10082/"/>
-    <id>https://codermae.github.io/2021/07/07/%E6%89%93%E5%8D%A10082/</id>
-    <published>2021-07-07T01:07:59.000Z</published>
-    <updated>2021-07-07T02:39:47.478Z</updated>
+    <link href="https://codermae.github.io/2021/07/05/%E6%89%93%E5%8D%A10082/"/>
+    <id>https://codermae.github.io/2021/07/05/%E6%89%93%E5%8D%A10082/</id>
+    <published>2021-07-05T01:07:59.000Z</published>
+    <updated>2021-07-07T08:24:20.180Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#ef5b9c&gt;当一个人放弃追问，衰老这就开始了。&lt;/font&gt;&lt;/p&gt;
@@ -42,10 +67,10 @@
   
   <entry>
     <title>打卡0081</title>
-    <link href="https://codermae.github.io/2021/07/05/%E6%89%93%E5%8D%A10081/"/>
-    <id>https://codermae.github.io/2021/07/05/%E6%89%93%E5%8D%A10081/</id>
-    <published>2021-07-05T01:24:41.000Z</published>
-    <updated>2021-07-06T07:22:58.007Z</updated>
+    <link href="https://codermae.github.io/2021/07/03/%E6%89%93%E5%8D%A10081/"/>
+    <id>https://codermae.github.io/2021/07/03/%E6%89%93%E5%8D%A10081/</id>
+    <published>2021-07-03T01:24:41.000Z</published>
+    <updated>2021-07-07T08:24:21.242Z</updated>
     
     
       
@@ -483,31 +508,6 @@
     
     
     <category term="JS 浏览器模型-Location对象，URL对象，URLSearchParams对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Location%E5%AF%B9%E8%B1%A1%EF%BC%8CURL%E5%AF%B9%E8%B1%A1%EF%BC%8CURLSearchParams%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0063</title>
-    <link href="https://codermae.github.io/2021/06/02/%E6%89%93%E5%8D%A10063/"/>
-    <id>https://codermae.github.io/2021/06/02/%E6%89%93%E5%8D%A10063/</id>
-    <published>2021-06-02T02:01:32.000Z</published>
-    <updated>2021-06-02T02:32:50.472Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#2585a6&gt;独行的人总会遇到有趣的人&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;9-History-对象&quot;&gt;&lt;a href=&quot;#9-History-对象&quot; class=&quot;headerlink&quot; title=&quot;9.History 对象&quot;&gt;&lt;/a&gt;9.History 对象&lt;/h3&gt;&lt;h4 id=&quot;9-1-概述&quot;&gt;&lt;a href=&quot;#9-1-概述&quot; class=&quot;headerlink&quot; title=&quot;9.1 概述&quot;&gt;&lt;/a&gt;9.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;window.history&lt;/code&gt;属性指向 History 对象，它表示当前窗口的浏览历史。&lt;/p&gt;
-&lt;p&gt;History 对象保存了当前窗口访问过的所有页面网址。下面代码表示当前窗口一共访问过3个网址。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.history.length &lt;span class=&quot;comment&quot;&gt;// 3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;由于安全原因，浏览器不允许脚本读取这些地址，但是允许在地址之间导航。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 后退到前一个网址&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;history.back()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 等同于&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;history.go(-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;浏览器工具栏的“前进”和“后退”按钮，其实就是对 History 对象进行操作。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 浏览器模型-History 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-History-%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
