@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-07-07T08:24:18.890Z</updated>
+  <updated>2021-07-08T01:51:15.734Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0085</title>
+    <link href="https://codermae.github.io/2021/07/08/%E6%89%93%E5%8D%A10085/"/>
+    <id>https://codermae.github.io/2021/07/08/%E6%89%93%E5%8D%A10085/</id>
+    <published>2021-07-08T01:26:19.000Z</published>
+    <updated>2021-07-08T01:51:15.734Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#c99979&gt;一想二干三成功，一等二看三落空。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;12-Set-和-Map-数据结构&quot;&gt;&lt;a href=&quot;#12-Set-和-Map-数据结构&quot; class=&quot;headerlink&quot; title=&quot;12.Set 和 Map 数据结构&quot;&gt;&lt;/a&gt;12.Set 和 Map 数据结构&lt;/h3&gt;&lt;h4 id=&quot;12-1-Set&quot;&gt;&lt;a href=&quot;#12-1-Set&quot; class=&quot;headerlink&quot; title=&quot;12.1 Set&quot;&gt;&lt;/a&gt;12.1 Set&lt;/h4&gt;&lt;h5 id=&quot;12-1-1-基本用法&quot;&gt;&lt;a href=&quot;#12-1-1-基本用法&quot; class=&quot;headerlink&quot; title=&quot;12.1.1 基本用法&quot;&gt;&lt;/a&gt;12.1.1 基本用法&lt;/h5&gt;&lt;p&gt;ES6 提供了新的数据结构 Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Set&lt;/code&gt;本身是一个构造函数，用来生成 Set 数据结构。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; s = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Set&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;].forEach(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;x&lt;/span&gt; =&amp;gt;&lt;/span&gt; s.add(x));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;of&lt;/span&gt; s) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 2 3 5 4&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码通过&lt;code&gt;add()&lt;/code&gt;方法向 Set 结构加入成员，结果表明 Set 结构不会添加重复的值。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Set&lt;/code&gt;函数可以接受一个数组（或者具有 iterable 接口的其他数据结构）作为参数，用来初始化。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 Set 和 Map 数据结构" scheme="https://codermae.github.io/tags/JS-ES6-Set-%E5%92%8C-Map-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0083</title>
@@ -485,29 +509,6 @@
     
     
     <category term="JS 浏览器模型-ArrayBuffer 对象，Blob 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-ArrayBuffer-%E5%AF%B9%E8%B1%A1%EF%BC%8CBlob-%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0064</title>
-    <link href="https://codermae.github.io/2021/06/02/%E6%89%93%E5%8D%A10064/"/>
-    <id>https://codermae.github.io/2021/06/02/%E6%89%93%E5%8D%A10064/</id>
-    <published>2021-06-02T02:33:40.000Z</published>
-    <updated>2021-06-02T03:31:14.971Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#84bf96&gt;It’s raining all the time, but we won’t stop.&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;10-Location对象，URL对象，URLSearchParams对象&quot;&gt;&lt;a href=&quot;#10-Location对象，URL对象，URLSearchParams对象&quot; class=&quot;headerlink&quot; title=&quot;10. Location对象，URL对象，URLSearchParams对象&quot;&gt;&lt;/a&gt;10. Location对象，URL对象，URLSearchParams对象&lt;/h3&gt;&lt;p&gt;URL 是互联网的基础设施之一。浏览器提供了一些原生对象，用来管理 URL。&lt;/p&gt;
-&lt;h4 id=&quot;10-1-Location-对象&quot;&gt;&lt;a href=&quot;#10-1-Location-对象&quot; class=&quot;headerlink&quot; title=&quot;10.1 Location 对象&quot;&gt;&lt;/a&gt;10.1 Location 对象&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Location&lt;/code&gt;对象是浏览器提供的原生对象，提供 URL 相关的信息和操作方法。通过&lt;code&gt;window.location&lt;/code&gt;和&lt;code&gt;document.location&lt;/code&gt;属性，可以拿到这个对象。&lt;/p&gt;
-&lt;h5 id=&quot;10-1-1-属性&quot;&gt;&lt;a href=&quot;#10-1-1-属性&quot; class=&quot;headerlink&quot; title=&quot;10.1.1 属性&quot;&gt;&lt;/a&gt;10.1.1 属性&lt;/h5&gt;&lt;p&gt;&lt;code&gt;Location&lt;/code&gt;对象提供以下属性。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Location.href&lt;/code&gt;:整个 URL。&lt;br&gt;&lt;code&gt;Location.protocol&lt;/code&gt;:当前 URL 的协议，包括冒号（&lt;code&gt;:&lt;/code&gt;）。&lt;br&gt;&lt;code&gt;Location.host&lt;/code&gt;:主机。如果端口不是协议默认的&lt;code&gt;80&lt;/code&gt;和&lt;code&gt;433&lt;/code&gt;，则还会包括冒号（&lt;code&gt;:&lt;/code&gt;）和端口。&lt;br&gt;&lt;code&gt;Location.hostname&lt;/code&gt;:主机名，不包括端口。&lt;br&gt;&lt;code&gt;Location.port&lt;/code&gt;:端口号。&lt;br&gt;&lt;code&gt;Location.pathname&lt;/code&gt;:URL 的路径部分，从根路径/开始。&lt;br&gt;&lt;code&gt;Location.search&lt;/code&gt;:查询字符串部分，从问号&lt;code&gt;?&lt;/code&gt;开始。&lt;br&gt;&lt;code&gt;Location.hash&lt;/code&gt;:片段字符串部分，从&lt;code&gt;#&lt;/code&gt;开始。&lt;br&gt;&lt;code&gt;Location.username&lt;/code&gt;:域名前面的用户名。&lt;br&gt;&lt;code&gt;Location.password&lt;/code&gt;:域名前面的密码。&lt;br&gt;&lt;code&gt;Location.origin&lt;/code&gt;:URL 的协议、主机名和端口。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 浏览器模型-Location对象，URL对象，URLSearchParams对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Location%E5%AF%B9%E8%B1%A1%EF%BC%8CURL%E5%AF%B9%E8%B1%A1%EF%BC%8CURLSearchParams%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
