@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-07-08T01:51:15.734Z</updated>
+  <updated>2021-08-19T08:31:22.244Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0087</title>
+    <link href="https://codermae.github.io/2021/08/19/%E6%89%93%E5%8D%A10087/"/>
+    <id>https://codermae.github.io/2021/08/19/%E6%89%93%E5%8D%A10087/</id>
+    <published>2021-08-19T08:31:22.000Z</published>
+    <updated>2021-08-19T08:31:22.244Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0086</title>
+    <link href="https://codermae.github.io/2021/07/09/%E6%89%93%E5%8D%A10086/"/>
+    <id>https://codermae.github.io/2021/07/09/%E6%89%93%E5%8D%A10086/</id>
+    <published>2021-07-09T01:54:36.000Z</published>
+    <updated>2021-08-19T08:30:42.750Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#6950a1&gt;每个人都会累，没人能为你承担所有的伤悲，人总有那么一段时间要学会自己长大。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;13-Proxy&quot;&gt;&lt;a href=&quot;#13-Proxy&quot; class=&quot;headerlink&quot; title=&quot;13. Proxy&quot;&gt;&lt;/a&gt;13. Proxy&lt;/h3&gt;&lt;h4 id=&quot;13-1-概述&quot;&gt;&lt;a href=&quot;#13-1-概述&quot; class=&quot;headerlink&quot; title=&quot;13.1 概述&quot;&gt;&lt;/a&gt;13.1 概述&lt;/h4&gt;&lt;p&gt;Proxy 用于修改某些操作的默认行为，等同于在语言层面做出修改，所以属于一种“元编程”（meta programming），即对编程语言进行编程。&lt;/p&gt;
+&lt;p&gt;Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。Proxy 这个词的原意是代理，用在这里表示由它来“代理”某些操作，可以译为“代理器”。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; obj = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Proxy&lt;/span&gt;(&amp;#123;&amp;#125;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  get: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;target, propKey, receiver&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;`getting &lt;span class=&quot;subst&quot;&gt;$&amp;#123;propKey&amp;#125;&lt;/span&gt;!`&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Reflect&lt;/span&gt;.get(target, propKey, receiver);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  set: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;target, propKey, value, receiver&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;`setting &lt;span class=&quot;subst&quot;&gt;$&amp;#123;propKey&amp;#125;&lt;/span&gt;!`&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Reflect&lt;/span&gt;.set(target, propKey, value, receiver);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码对一个空对象架设了一层拦截，重定义了属性的读取（&lt;code&gt;get&lt;/code&gt;）和设置（&lt;code&gt;set&lt;/code&gt;）行为。这里暂时先不解释具体的语法，只看运行结果。对设置了拦截行为的对象&lt;code&gt;obj&lt;/code&gt;，去读写它的属性，就会得到下面的结果。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 Proxy" scheme="https://codermae.github.io/tags/JS-ES6-Proxy/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0085</title>
@@ -457,58 +493,6 @@
     
     
     <category term="JS 浏览器模型-表单，FormData 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-%E8%A1%A8%E5%8D%95%EF%BC%8CFormData-%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0066</title>
-    <link href="https://codermae.github.io/2021/06/03/%E6%89%93%E5%8D%A10066/"/>
-    <id>https://codermae.github.io/2021/06/03/%E6%89%93%E5%8D%A10066/</id>
-    <published>2021-06-03T01:27:38.000Z</published>
-    <updated>2021-06-03T02:40:03.013Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#c1a173&gt;存储阳光，必有远芳；心中有暖，又何惧人生荒凉。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;12-File-对象，FileList-对象，FileReader-对象&quot;&gt;&lt;a href=&quot;#12-File-对象，FileList-对象，FileReader-对象&quot; class=&quot;headerlink&quot; title=&quot;12. File 对象，FileList 对象，FileReader 对象&quot;&gt;&lt;/a&gt;12. File 对象，FileList 对象，FileReader 对象&lt;/h3&gt;&lt;h4 id=&quot;12-1-File-对象&quot;&gt;&lt;a href=&quot;#12-1-File-对象&quot; class=&quot;headerlink&quot; title=&quot;12.1 File 对象&quot;&gt;&lt;/a&gt;12.1 File 对象&lt;/h4&gt;&lt;p&gt;File 对象代表一个文件，用来读写文件信息。它继承了 Blob 对象，或者说是一种特殊的 Blob 对象，所有可以使用 Blob 对象的场合都可以使用它。&lt;/p&gt;
-&lt;p&gt;最常见的使用场合是表单的文件上传控件（&lt;code&gt;&amp;lt;input type=&amp;quot;file&amp;quot;&amp;gt;&lt;/code&gt;），用户选中文件以后，浏览器就会生成一个数组，里面是每一个用户选中的文件，它们都是 File 实例对象。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// HTML 代码如下&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;lt;input id=&amp;quot;fileItem&amp;quot; type=&amp;quot;file&amp;quot;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; file = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementById(&lt;span class=&quot;string&quot;&gt;&amp;#x27;fileItem&amp;#x27;&lt;/span&gt;).files[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;file &lt;span class=&quot;keyword&quot;&gt;instanceof&lt;/span&gt; File &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，&lt;code&gt;file&lt;/code&gt;是用户选中的第一个文件，它是 File 的实例。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 浏览器模型-File 对象，FileList 对象，FileReader 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-File-%E5%AF%B9%E8%B1%A1%EF%BC%8CFileList-%E5%AF%B9%E8%B1%A1%EF%BC%8CFileReader-%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0065</title>
-    <link href="https://codermae.github.io/2021/06/03/%E6%89%93%E5%8D%A10065/"/>
-    <id>https://codermae.github.io/2021/06/03/%E6%89%93%E5%8D%A10065/</id>
-    <published>2021-06-03T01:03:16.000Z</published>
-    <updated>2021-06-03T02:39:30.158Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#afdfe4&gt;有人弃棋，有人做泥荷做清溪，有人成为风雨里的一行诗句。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;11-ArrayBuffer-对象，Blob-对象&quot;&gt;&lt;a href=&quot;#11-ArrayBuffer-对象，Blob-对象&quot; class=&quot;headerlink&quot; title=&quot;11. ArrayBuffer 对象，Blob 对象&quot;&gt;&lt;/a&gt;11. ArrayBuffer 对象，Blob 对象&lt;/h3&gt;&lt;h4 id=&quot;11-1-ArrayBuffer-对象&quot;&gt;&lt;a href=&quot;#11-1-ArrayBuffer-对象&quot; class=&quot;headerlink&quot; title=&quot;11.1 ArrayBuffer 对象&quot;&gt;&lt;/a&gt;11.1 ArrayBuffer 对象&lt;/h4&gt;&lt;p&gt;ArrayBuffer 对象表示一段二进制数据，用来模拟内存里面的数据。通过这个对象，JavaScript 可以读写二进制数据。这个对象可以看作内存数据的表达。&lt;/p&gt;
-&lt;p&gt;这个对象是 ES6 才写入标准的，普通的网页编程用不到它，为了教程体系的完整，下面只提供一个简略的介绍，详细介绍请看《ES6 标准入门》里面的章节。&lt;/p&gt;
-&lt;p&gt;浏览器原生提供&lt;code&gt;ArrayBuffer()&lt;/code&gt; 构造函数，用来生成实例。它接受一个整数作为参数，表示这段二进制数据占用多少个字节。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; buffer = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;ArrayBuffer&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，实例对象&lt;code&gt;buffer&lt;/code&gt;占用8个字节。&lt;/p&gt;
-&lt;p&gt;ArrayBuffer 对象有实例属性&lt;code&gt;byteLength&lt;/code&gt;，表示当前实例占用的内存长度（单位字节）。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; buffer = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;ArrayBuffer&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;buffer.byteLength &lt;span class=&quot;comment&quot;&gt;// 8&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;ArrayBuffer 对象有实例方法&lt;code&gt;slice()&lt;/code&gt;，用来复制一部分内存。它接受两个整数参数，分别表示复制的开始位置（从0开始）和结束位置（复制时不包括结束位置），如果省略第二个参数，则表示一直复制到结束。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; buf1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;ArrayBuffer&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; buf2 = buf1.slice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码表示复制原来的实例。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 浏览器模型-ArrayBuffer 对象，Blob 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-ArrayBuffer-%E5%AF%B9%E8%B1%A1%EF%BC%8CBlob-%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
