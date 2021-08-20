@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-08-19T08:31:22.244Z</updated>
+  <updated>2021-08-20T11:06:11.510Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -20,12 +20,22 @@
     <title>打卡0087</title>
     <link href="https://codermae.github.io/2021/08/19/%E6%89%93%E5%8D%A10087/"/>
     <id>https://codermae.github.io/2021/08/19/%E6%89%93%E5%8D%A10087/</id>
-    <published>2021-08-19T08:31:22.000Z</published>
-    <updated>2021-08-19T08:31:22.244Z</updated>
+    <published>2021-08-19T09:54:36.000Z</published>
+    <updated>2021-08-20T11:06:11.510Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#f05b72&gt;不开心时，做个深呼吸，不过是糟糕的一天而已，又不是糟糕一辈子。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;14-Reflect&quot;&gt;&lt;a href=&quot;#14-Reflect&quot; class=&quot;headerlink&quot; title=&quot;14. Reflect&quot;&gt;&lt;/a&gt;14. Reflect&lt;/h3&gt;&lt;h4 id=&quot;14-1-概述&quot;&gt;&lt;a href=&quot;#14-1-概述&quot; class=&quot;headerlink&quot; title=&quot;14.1 概述&quot;&gt;&lt;/a&gt;14.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Reflect&lt;/code&gt;对象与&lt;code&gt;Proxy&lt;/code&gt;对象一样，也是 ES6 为了操作对象而提供的新 API。&lt;code&gt;Reflect&lt;/code&gt;对象的设计目的有这样几个。&lt;/p&gt;
+&lt;p&gt;（1） 将&lt;code&gt;Object&lt;/code&gt;对象的一些明显属于语言内部的方法（比如&lt;code&gt;Object.defineProperty&lt;/code&gt;），放到&lt;code&gt;Reflect&lt;/code&gt;对象上。现阶段，某些方法同时在&lt;code&gt;Object&lt;/code&gt;和&lt;code&gt;Reflect&lt;/code&gt;对象上部署，未来的新方法将只部署在&lt;code&gt;Reflect&lt;/code&gt;对象上。也就是说，从&lt;code&gt;Reflect&lt;/code&gt;对象上可以拿到语言内部的方法。&lt;/p&gt;
+&lt;p&gt;（2） 修改某些&lt;code&gt;Object&lt;/code&gt;方法的返回结果，让其变得更合理。比如，&lt;code&gt;Object.defineProperty(obj, name, desc)&lt;/code&gt;在无法定义属性时，会抛出一个错误，而&lt;code&gt;Reflect.defineProperty(obj, name, desc)&lt;/code&gt;则会返回&lt;code&gt;false&lt;/code&gt;。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 老写法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.defineProperty(target, property, attributes);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// success&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; (e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// failure&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 新写法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;built_in&quot;&gt;Reflect&lt;/span&gt;.defineProperty(target, property, attributes)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// success&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// failure&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
     
+    
+    <category term="JS-ES6 Reflect" scheme="https://codermae.github.io/tags/JS-ES6-Reflect/"/>
     
   </entry>
   
