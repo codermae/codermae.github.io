@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-08-20T11:06:11.510Z</updated>
+  <updated>2021-08-23T14:09:49.013Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0088</title>
+    <link href="https://codermae.github.io/2021/08/21/%E6%89%93%E5%8D%A10088/"/>
+    <id>https://codermae.github.io/2021/08/21/%E6%89%93%E5%8D%A10088/</id>
+    <published>2021-08-21T06:50:43.000Z</published>
+    <updated>2021-08-23T14:09:49.013Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#50b7c1&gt;世界可以无聊，但你要有趣，生活可能不如意，但你要过得有诗意。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;15-Promise-对象&quot;&gt;&lt;a href=&quot;#15-Promise-对象&quot; class=&quot;headerlink&quot; title=&quot;15. Promise 对象&quot;&gt;&lt;/a&gt;15. Promise 对象&lt;/h3&gt;&lt;h4 id=&quot;15-1-Promise-的含义&quot;&gt;&lt;a href=&quot;#15-1-Promise-的含义&quot; class=&quot;headerlink&quot; title=&quot;15.1 Promise 的含义&quot;&gt;&lt;/a&gt;15.1 Promise 的含义&lt;/h4&gt;&lt;p&gt;Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了&lt;code&gt;Promise&lt;/code&gt;对象。&lt;/p&gt;
+&lt;p&gt;所谓&lt;code&gt;Promise&lt;/code&gt;，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。从语法上说，Promise 是一个对象，从它可以获取异步操作的消息。Promise 提供统一的 API，各种异步操作都可以用同样的方法进行处理。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Promise&lt;/code&gt;对象有以下两个特点。&lt;/p&gt;
+&lt;p&gt;（1）对象的状态不受外界影响。&lt;code&gt;Promise&lt;/code&gt;对象代表一个异步操作，有三种状态：&lt;code&gt;pending&lt;/code&gt;（进行中）、&lt;code&gt;fulfilled&lt;/code&gt;（已成功）和&lt;code&gt;rejected&lt;/code&gt;（已失败）。只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。这也是&lt;code&gt;Promise&lt;/code&gt;这个名字的由来，它的英语意思就是“承诺”，表示其他手段无法改变。&lt;/p&gt;
+&lt;p&gt;（2）一旦状态改变，就不会再变，任何时候都可以得到这个结果。&lt;code&gt;Promise&lt;/code&gt;对象的状态改变，只有两种可能：从&lt;code&gt;pending&lt;/code&gt;变为&lt;code&gt;fulfilled&lt;/code&gt;和从&lt;code&gt;pending&lt;/code&gt;变为&lt;code&gt;rejected&lt;/code&gt;。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果，这时就称为 resolved（已定型）。如果改变已经发生了，你再对&lt;code&gt;Promise&lt;/code&gt;对象添加回调函数，也会立即得到这个结果。这与事件（Event）完全不同，事件的特点是，如果你错过了它，再去监听，是得不到结果的。&lt;/p&gt;
+&lt;p&gt;注意，为了行文方便，本章后面的&lt;code&gt;resolved&lt;/code&gt;统一只指&lt;code&gt;fulfilled&lt;/code&gt;状态，不包含&lt;code&gt;rejected&lt;/code&gt;状态。&lt;/p&gt;
+&lt;p&gt;有了&lt;code&gt;Promise&lt;/code&gt;对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。此外，&lt;code&gt;Promise&lt;/code&gt;对象提供统一的接口，使得控制异步操作更加容易。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Promise&lt;/code&gt;也有一些缺点。首先，无法取消&lt;code&gt;Promise&lt;/code&gt;，一旦新建它就会立即执行，无法中途取消。其次，如果不设置回调函数，&lt;code&gt;Promise&lt;/code&gt;内部抛出的错误，不会反应到外部。第三，当处于&lt;code&gt;pending&lt;/code&gt;状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。&lt;/p&gt;
+&lt;p&gt;如果某些事件不断地反复发生，一般来说，使用 Stream 模式是比部署&lt;code&gt;Promise&lt;/code&gt;更好的选择。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 Promise" scheme="https://codermae.github.io/tags/JS-ES6-Promise/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0087</title>
@@ -480,29 +508,6 @@
     
     
     <category term="Vue+Node+Express+postgresql" scheme="https://codermae.github.io/tags/Vue-Node-Express-postgresql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0067</title>
-    <link href="https://codermae.github.io/2021/06/03/%E6%89%93%E5%8D%A10067/"/>
-    <id>https://codermae.github.io/2021/06/03/%E6%89%93%E5%8D%A10067/</id>
-    <published>2021-06-03T01:50:16.000Z</published>
-    <updated>2021-06-03T02:40:20.818Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#733a31&gt;不要轻易向别人诉苦，因为有很多人并不关心，还有很多人听到后会很高兴。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;13-表单，FormData-对象&quot;&gt;&lt;a href=&quot;#13-表单，FormData-对象&quot; class=&quot;headerlink&quot; title=&quot;13. 表单，FormData 对象&quot;&gt;&lt;/a&gt;13. 表单，FormData 对象&lt;/h3&gt;&lt;h4 id=&quot;13-1-表单概述&quot;&gt;&lt;a href=&quot;#13-1-表单概述&quot; class=&quot;headerlink&quot; title=&quot;13.1 表单概述&quot;&gt;&lt;/a&gt;13.1 表单概述&lt;/h4&gt;&lt;p&gt;表单（&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;）用来收集用户提交的数据，发送到服务器。比如，用户提交用户名和密码，让服务器验证，就要通过表单。表单提供多种控件，让开发者使用，具体的控件种类和用法请参考 HTML 语言的教程。本章主要介绍 JavaScript 与表单的交互。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;form action=&lt;span class=&quot;string&quot;&gt;&amp;quot;/handling-page&amp;quot;&lt;/span&gt; method=&lt;span class=&quot;string&quot;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;label &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&amp;gt;用户名：&amp;lt;/label&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;input type=&lt;span class=&quot;string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt; id=&lt;span class=&quot;string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt; name=&lt;span class=&quot;string&quot;&gt;&amp;quot;user_name&amp;quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;label &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&amp;quot;passwd&amp;quot;&lt;/span&gt;&amp;gt;密码：&amp;lt;/label&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;input type=&lt;span class=&quot;string&quot;&gt;&amp;quot;password&amp;quot;&lt;/span&gt; id=&lt;span class=&quot;string&quot;&gt;&amp;quot;passwd&amp;quot;&lt;/span&gt; name=&lt;span class=&quot;string&quot;&gt;&amp;quot;user_passwd&amp;quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;input type=&lt;span class=&quot;string&quot;&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; id=&lt;span class=&quot;string&quot;&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; name=&lt;span class=&quot;string&quot;&gt;&amp;quot;submit_button&amp;quot;&lt;/span&gt; value=&lt;span class=&quot;string&quot;&gt;&amp;quot;提交&amp;quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码就是一个简单的表单，包含三个控件：用户名输入框、密码输入框和提交按钮。&lt;/p&gt;
-&lt;p&gt;用户点击“提交”按钮，每一个控件都会生成一个键值对，键名是控件的&lt;code&gt;name&lt;/code&gt;属性，键值是控件的&lt;code&gt;value&lt;/code&gt;属性，键名和键值之间由等号连接。比如，用户名输入框的&lt;code&gt;name&lt;/code&gt;属性是&lt;code&gt;user_name&lt;/code&gt;，&lt;code&gt;value&lt;/code&gt;属性是用户输入的值，假定是“张三”，提交到服务器的时候，就会生成一个键值对&lt;code&gt;user_name=张三&lt;/code&gt;。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 浏览器模型-表单，FormData 对象" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-%E8%A1%A8%E5%8D%95%EF%BC%8CFormData-%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
