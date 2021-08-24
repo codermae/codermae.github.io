@@ -159,6 +159,79 @@
     
     
     <article
+  id="post-打卡0058"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/31/%E6%89%93%E5%8D%A10058/"
+    >打卡0058</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/31/%E6%89%93%E5%8D%A10058/" class="article-date">
+  <time datetime="2021-05-31T01:26:09.000Z" itemprop="datePublished">2021-05-31</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#6a6da9>“我拥向宇宙吹来的风 与夏夜相逢 是八月盛景 是清寂长生”</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="4-Cookie"><a href="#4-Cookie" class="headerlink" title="4. Cookie"></a>4. Cookie</h3><h4 id="4-1-概述"><a href="#4-1-概述" class="headerlink" title="4.1 概述"></a>4.1 概述</h4><p>Cookie 是服务器保存在浏览器的一小段文本信息，一般大小不能超过4KB。浏览器每次向服务器发出请求，就会自动附上这段信息。</p>
+<p>Cookie 主要保存状态信息，以下是一些主要用途。</p>
+<ul>
+<li>对话（session）管理：保存登录、购物车等需要记录的信息。</li>
+<li>个性化信息：保存用户的偏好，比如网页的字体大小、背景色等等。</li>
+<li>追踪用户：记录和分析用户行为。</li>
+</ul>
+<p>Cookie 不是一种理想的客户端储存机制。它的容量很小（4KB），缺乏数据操作接口，而且会影响性能。客户端储存应该使用 Web storage API 和 IndexedDB。只有那些每次请求都需要让服务器知道的信息，才应该放在 Cookie 里面。</p>
+<p>每个 Cookie 都有以下几方面的元数据。</p>
+<ul>
+<li>Cookie 的名字</li>
+<li>Cookie 的值（真正的数据写在这里面）</li>
+<li>到期时间（超过这个时间会失效）</li>
+<li>所属域名（默认为当前域名）</li>
+<li>生效的路径（默认为当前网址）</li>
+</ul> 
+      <a class="article-more-link" href="/2021/05/31/%E6%89%93%E5%8D%A10058/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Cookie/" rel="tag">JS 浏览器模型-Cookie</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0057"
   class="article article-type-post"
   itemscope
@@ -723,78 +796,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%BF%9B%E5%BA%A6%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-进度事件</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0048"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/29/%E6%89%93%E5%8D%A10048/"
-    >打卡0048</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/29/%E6%89%93%E5%8D%A10048/" class="article-date">
-  <time datetime="2021-05-29T03:58:59.000Z" itemprop="datePublished">2021-05-29</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#ef5b9c>在自称善意的之时，即存恶意。</font></p>
-<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="5-键盘事件"><a href="#5-键盘事件" class="headerlink" title="5. 键盘事件"></a>5. 键盘事件</h3><h4 id="5-1-键盘事件的种类"><a href="#5-1-键盘事件的种类" class="headerlink" title="5.1 键盘事件的种类"></a>5.1 键盘事件的种类</h4><p>键盘事件由用户击打键盘触发，主要有<code>keydown</code>、<code>keypress</code>、<code>keyup</code>三个事件，它们都继承了<code>KeyboardEvent</code>接口。</p>
-<ul>
-<li><code>keydown</code>：按下键盘时触发。</li>
-<li><code>keypress</code>：按下有值的键时触发，即按下 Ctrl、Alt、Shift、Meta 这样无值的键，这个事件不会触发。对于有值的键，按下时先触发keydown事件，再触发这个事件。</li>
-<li><code>keyup</code>：松开键盘时触发该事件。</li>
-</ul>
-<p>如果用户一直按键不松开，就会连续触发键盘事件，触发的顺序如下。</p>
-<ol>
-<li>keydown</li>
-<li>keypress</li>
-<li>keydown</li>
-<li>keypress</li>
-<li>…（重复以上过程）</li>
-<li>keyup</li>
-</ol> 
-      <a class="article-more-link" href="/2021/05/29/%E6%89%93%E5%8D%A10048/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-键盘事件</a></li></ul>
 
     </footer>
   </div>

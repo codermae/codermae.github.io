@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-08-23T14:09:49.013Z</updated>
+  <updated>2021-08-24T10:58:39.618Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0089</title>
+    <link href="https://codermae.github.io/2021/08/24/%E6%89%93%E5%8D%A10089/"/>
+    <id>https://codermae.github.io/2021/08/24/%E6%89%93%E5%8D%A10089/</id>
+    <published>2021-08-24T08:59:18.000Z</published>
+    <updated>2021-08-24T10:58:39.618Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#d5c59f&gt;收拾起心情，继续走吧，错过花，你将收获雨，错过这一个，你才会遇到下一个。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;16-Iterator-和-for…of-循环&quot;&gt;&lt;a href=&quot;#16-Iterator-和-for…of-循环&quot; class=&quot;headerlink&quot; title=&quot;16. Iterator 和 for…of 循环&quot;&gt;&lt;/a&gt;16. Iterator 和 for…of 循环&lt;/h3&gt;&lt;h4 id=&quot;16-1-Iterator（遍历器）的概念&quot;&gt;&lt;a href=&quot;#16-1-Iterator（遍历器）的概念&quot; class=&quot;headerlink&quot; title=&quot;16.1 Iterator（遍历器）的概念&quot;&gt;&lt;/a&gt;16.1 Iterator（遍历器）的概念&lt;/h4&gt;&lt;p&gt;JavaScript 原有的表示“集合”的数据结构，主要是数组（&lt;code&gt;Array&lt;/code&gt;）和对象（&lt;code&gt;Object&lt;/code&gt;），ES6 又添加了&lt;code&gt;Map&lt;/code&gt;和&lt;code&gt;Set&lt;/code&gt;。这样就有了四种数据集合，用户还可以组合使用它们，定义自己的数据结构，比如数组的成员是Map，Map的成员是对象。这样就需要一种统一的接口机制，来处理所有不同的数据结构。&lt;/p&gt;
+&lt;p&gt;遍历器（Iterator）就是这样一种机制。它是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构只要部署 Iterator 接口，就可以完成遍历操作（即依次处理该数据结构的所有成员）。&lt;/p&gt;
+&lt;p&gt;Iterator 的作用有三个：一是为各种数据结构，提供一个统一的、简便的访问接口；二是使得数据结构的成员能够按某种次序排列；三是 ES6 创造了一种新的遍历命令&lt;code&gt;for...of&lt;/code&gt;循环，Iterator 接口主要供&lt;code&gt;for...of&lt;/code&gt;消费。&lt;/p&gt;
+&lt;p&gt;Iterator 的遍历过程是这样的。&lt;/p&gt;
+&lt;p&gt;（1）创建一个指针对象，指向当前数据结构的起始位置。也就是说，遍历器对象本质上，就是一个指针对象。&lt;/p&gt;
+&lt;p&gt;（2）第一次调用指针对象的&lt;code&gt;next&lt;/code&gt;方法，可以将指针指向数据结构的第一个成员。&lt;/p&gt;
+&lt;p&gt;（3）第二次调用指针对象的&lt;code&gt;next&lt;/code&gt;方法，指针就指向数据结构的第二个成员。&lt;/p&gt;
+&lt;p&gt;（4）不断调用指针对象的&lt;code&gt;next&lt;/code&gt;方法，直到它指向数据结构的结束位置。&lt;/p&gt;
+&lt;p&gt;每一次调用&lt;code&gt;next&lt;/code&gt;方法，都会返回数据结构的当前成员的信息。具体来说，就是返回一个包含&lt;code&gt;value&lt;/code&gt;和&lt;code&gt;done&lt;/code&gt;两个属性的对象。其中，&lt;code&gt;value&lt;/code&gt;属性是当前成员的值，&lt;code&gt;done&lt;/code&gt;属性是一个布尔值，表示遍历是否结束。&lt;/p&gt;
+&lt;p&gt;下面是一个模拟&lt;code&gt;next&lt;/code&gt;方法返回值的例子。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 Iterator 和 for...of 循环" scheme="https://codermae.github.io/tags/JS-ES6-Iterator-%E5%92%8C-for-of-%E5%BE%AA%E7%8E%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0088</title>
@@ -489,25 +518,6 @@
     
     
     <category term="JS 浏览器模型-IndexedDB API" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-IndexedDB-API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0068</title>
-    <link href="https://codermae.github.io/2021/06/04/%E6%89%93%E5%8D%A10068/"/>
-    <id>https://codermae.github.io/2021/06/04/%E6%89%93%E5%8D%A10068/</id>
-    <published>2021-06-04T01:08:16.000Z</published>
-    <updated>2021-06-09T07:30:43.366Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#faa755&gt;要保持希望在每天清晨太阳升起。&lt;/font&gt;&lt;br&gt;菜鸟一个，一直没搞明白Vue和Node项目环境的搭建，处在雾里，昨晚终于卷完了，记录一下。&lt;br&gt;如果有人能看到，欢迎留言！&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="总结" scheme="https://codermae.github.io/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-    <category term="Vue+Node+Express+postgresql" scheme="https://codermae.github.io/tags/Vue-Node-Express-postgresql/"/>
     
   </entry>
   
