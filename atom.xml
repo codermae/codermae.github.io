@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-08-26T10:49:01.961Z</updated>
+  <updated>2021-08-27T08:39:10.002Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0091</title>
+    <link href="https://codermae.github.io/2021/08/27/%E6%89%93%E5%8D%A10091/"/>
+    <id>https://codermae.github.io/2021/08/27/%E6%89%93%E5%8D%A10091/</id>
+    <published>2021-08-27T07:24:18.000Z</published>
+    <updated>2021-08-27T08:39:10.002Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#2468a2&gt;生命，就是一场不留余地的盛放。心安，便是活着的最美好状态。平淡是生活的主线，精彩是人生的点缀。且安静，且放低，且自在，不张扬，也不颓废，这就是生活&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;18-Generator-函数的异步应用&quot;&gt;&lt;a href=&quot;#18-Generator-函数的异步应用&quot; class=&quot;headerlink&quot; title=&quot;18. Generator 函数的异步应用&quot;&gt;&lt;/a&gt;18. Generator 函数的异步应用&lt;/h3&gt;&lt;p&gt;异步编程对 JavaScript 语言太重要。JavaScript 语言的执行环境是“单线程”的，如果没有异步编程，根本没法用，非卡死不可。本章主要介绍 Generator 函数如何完成异步操作。&lt;/p&gt;
+&lt;h4 id=&quot;18-1-传统方法&quot;&gt;&lt;a href=&quot;#18-1-传统方法&quot; class=&quot;headerlink&quot; title=&quot;18.1 传统方法&quot;&gt;&lt;/a&gt;18.1 传统方法&lt;/h4&gt;&lt;p&gt;ES6 诞生以前，异步编程的方法，大概有下面四种。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;回调函数&lt;/li&gt;
+&lt;li&gt;事件监听&lt;/li&gt;
+&lt;li&gt;发布/订阅&lt;/li&gt;
+&lt;li&gt;Promise 对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Generator 函数将 JavaScript 异步编程带入了一个全新的阶段。&lt;/p&gt;
+&lt;h4 id=&quot;18-2-基本概念&quot;&gt;&lt;a href=&quot;#18-2-基本概念&quot; class=&quot;headerlink&quot; title=&quot;18.2 基本概念&quot;&gt;&lt;/a&gt;18.2 基本概念&lt;/h4&gt;&lt;h5 id=&quot;18-2-1-异步&quot;&gt;&lt;a href=&quot;#18-2-1-异步&quot; class=&quot;headerlink&quot; title=&quot;18.2.1 异步&quot;&gt;&lt;/a&gt;18.2.1 异步&lt;/h5&gt;&lt;p&gt;所谓”异步”，简单说就是一个任务不是连续完成的，可以理解成该任务被人为分成两段，先执行第一段，然后转而执行其他任务，等做好了准备，再回过头执行第二段。&lt;/p&gt;
+&lt;p&gt;比如，有一个任务是读取文件进行处理，任务的第一段是向操作系统发出请求，要求读取文件。然后，程序执行其他任务，等到操作系统返回文件，再接着执行任务的第二段（处理文件）。这种不连续的执行，就叫做异步。&lt;/p&gt;
+&lt;p&gt;相应地，连续的执行就叫做同步。由于是连续执行，不能插入其他任务，所以操作系统从硬盘读取文件的这段时间，程序只能干等着。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 Generator 函数的异步应用" scheme="https://codermae.github.io/tags/JS-ES6-Generator-%E5%87%BD%E6%95%B0%E7%9A%84%E5%BC%82%E6%AD%A5%E5%BA%94%E7%94%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0090</title>
@@ -498,29 +529,6 @@
     
     
     <category term="JS-ES6 ECMAScript 6 简介" scheme="https://codermae.github.io/tags/JS-ES6-ECMAScript-6-%E7%AE%80%E4%BB%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0070</title>
-    <link href="https://codermae.github.io/2021/06/05/%E6%89%93%E5%8D%A10070/"/>
-    <id>https://codermae.github.io/2021/06/05/%E6%89%93%E5%8D%A10070/</id>
-    <published>2021-06-05T06:23:56.000Z</published>
-    <updated>2021-06-05T06:45:18.135Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#007d65&gt;愿你执迷不悟时有人陪你颠沛流离，愿你幡然醒悟时物是人是。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;JS-浏览器模型&quot;&gt;&lt;a href=&quot;#JS-浏览器模型&quot; class=&quot;headerlink&quot; title=&quot;JS 浏览器模型&quot;&gt;&lt;/a&gt;JS 浏览器模型&lt;/h2&gt;&lt;h3 id=&quot;15-Web-Worker&quot;&gt;&lt;a href=&quot;#15-Web-Worker&quot; class=&quot;headerlink&quot; title=&quot;15. Web Worker&quot;&gt;&lt;/a&gt;15. Web Worker&lt;/h3&gt;&lt;h4 id=&quot;15-1-概述&quot;&gt;&lt;a href=&quot;#15-1-概述&quot; class=&quot;headerlink&quot; title=&quot;15.1 概述&quot;&gt;&lt;/a&gt;15.1 概述&lt;/h4&gt;&lt;p&gt;JavaScript 语言采用的是单线程模型，也就是说，所有任务只能在一个线程上完成，一次只能做一件事。前面的任务没做完，后面的任务只能等着。随着电脑计算能力的增强，尤其是多核 CPU 的出现，单线程带来很大的不便，无法充分发挥计算机的计算能力。&lt;/p&gt;
-&lt;p&gt;Web Worker 的作用，就是为 JavaScript 创造多线程环境，允许主线程创建 Worker 线程，将一些任务分配给后者运行。在主线程运行的同时，Worker 线程在后台运行，两者互不干扰。等到 Worker 线程完成计算任务，再把结果返回给主线程。这样的好处是，一些计算密集型或高延迟的任务可以交由 Worker 线程执行，主线程（通常负责 UI 交互）能够保持流畅，不会被阻塞或拖慢。&lt;/p&gt;
-&lt;p&gt;Worker 线程一旦新建成功，就会始终运行，不会被主线程上的活动（比如用户点击按钮、提交表单）打断。这样有利于随时响应主线程的通信。但是，这也造成了 Worker 比较耗费资源，不应该过度使用，而且一旦使用完毕，就应该关闭。&lt;/p&gt;
-&lt;p&gt;Web Worker 有以下几个使用注意点。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS" scheme="https://codermae.github.io/categories/JS/"/>
-    
-    
-    <category term="JS 浏览器模型-Web Worker" scheme="https://codermae.github.io/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Web-Worker/"/>
     
   </entry>
   

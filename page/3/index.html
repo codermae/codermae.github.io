@@ -159,6 +159,67 @@
     
     
     <article
+  id="post-打卡0070"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/05/%E6%89%93%E5%8D%A10070/"
+    >打卡0070</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/05/%E6%89%93%E5%8D%A10070/" class="article-date">
+  <time datetime="2021-06-05T06:23:56.000Z" itemprop="datePublished">2021-06-05</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#007d65>愿你执迷不悟时有人陪你颠沛流离，愿你幡然醒悟时物是人是。</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="15-Web-Worker"><a href="#15-Web-Worker" class="headerlink" title="15. Web Worker"></a>15. Web Worker</h3><h4 id="15-1-概述"><a href="#15-1-概述" class="headerlink" title="15.1 概述"></a>15.1 概述</h4><p>JavaScript 语言采用的是单线程模型，也就是说，所有任务只能在一个线程上完成，一次只能做一件事。前面的任务没做完，后面的任务只能等着。随着电脑计算能力的增强，尤其是多核 CPU 的出现，单线程带来很大的不便，无法充分发挥计算机的计算能力。</p>
+<p>Web Worker 的作用，就是为 JavaScript 创造多线程环境，允许主线程创建 Worker 线程，将一些任务分配给后者运行。在主线程运行的同时，Worker 线程在后台运行，两者互不干扰。等到 Worker 线程完成计算任务，再把结果返回给主线程。这样的好处是，一些计算密集型或高延迟的任务可以交由 Worker 线程执行，主线程（通常负责 UI 交互）能够保持流畅，不会被阻塞或拖慢。</p>
+<p>Worker 线程一旦新建成功，就会始终运行，不会被主线程上的活动（比如用户点击按钮、提交表单）打断。这样有利于随时响应主线程的通信。但是，这也造成了 Worker 比较耗费资源，不应该过度使用，而且一旦使用完毕，就应该关闭。</p>
+<p>Web Worker 有以下几个使用注意点。</p> 
+      <a class="article-more-link" href="/2021/06/05/%E6%89%93%E5%8D%A10070/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Web-Worker/" rel="tag">JS 浏览器模型-Web Worker</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0069"
   class="article article-type-post"
   itemscope
@@ -725,87 +786,13 @@
 </article>
 
     
-    <article
-  id="post-打卡0060"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/06/01/%E6%89%93%E5%8D%A10060/"
-    >打卡0060</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/06/01/%E6%89%93%E5%8D%A10060/" class="article-date">
-  <time datetime="2021-06-01T02:19:57.000Z" itemprop="datePublished">2021-06-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#009ad6>每个人的一生都是上帝手写的童话。</font></p>
-<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="6-同源限制"><a href="#6-同源限制" class="headerlink" title="6.同源限制"></a>6.同源限制</h3><p>浏览器安全的基石是“同源政策”（<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Same-origin_policy">same-origin policy</a> ）。很多开发者都知道这一点，但了解得不全面。</p>
-<h4 id="6-1-概述"><a href="#6-1-概述" class="headerlink" title="6.1 概述"></a>6.1 概述</h4><h5 id="6-1-1-含义"><a href="#6-1-1-含义" class="headerlink" title="6.1.1 含义"></a>6.1.1 含义</h5><p>1995年，同源政策由 Netscape 公司引入浏览器。目前，所有浏览器都实行这个政策。</p>
-<p>最初，它的含义是指，A 网页设置的 Cookie，B 网页不能打开，除非这两个网页“同源”。所谓“同源”指的是“三个相同”。<br>`</p>
-<ul>
-<li>协议相同</li>
-<li>域名相同</li>
-<li>端口相同（这点可以忽略，详见下文）<br>`</li>
-</ul>
-<p>举例来说，<code>http://www.example.com/dir/page.html</code>这个网址，协议是<code>http://</code>，域名是<code>www.example.com</code>，端口是<code>80</code>（默认端口可以省略），它的同源情况如下。</p>
-<ul>
-<li><code>http://www.example.com/dir2/other.html</code>：同源</li>
-<li><code>http://example.com/dir/other.html</code>：不同源（域名不同）</li>
-<li><code>http://v2.www.example.com/dir/other.html</code>：不同源（域名不同）</li>
-<li><code>http://www.example.com:81/dir/other.html</code>：不同源（端口不同）</li>
-<li><code>https://www.example.com/dir/page.html</code>：不同源（协议不同）</li>
-</ul>
-<p>注意，标准规定端口不同的网址不是同源（比如<code>8000</code>端口和<code>8001</code>端口不是同源），但是浏览器没有遵守这条规定。实际上，同一个网域的不同端口，是可以互相读取 Cookie 的。</p> 
-      <a class="article-more-link" href="/2021/06/01/%E6%89%93%E5%8D%A10060/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-%E5%90%8C%E6%BA%90%E9%99%90%E5%88%B6/" rel="tag">JS 浏览器模型-同源限制</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
   </nav>
   
 </section>
