@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-08-27T08:39:10.002Z</updated>
+  <updated>2021-08-31T11:36:23.059Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,14 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打卡0092</title>
+    <link href="https://codermae.github.io/2021/08/29/%E6%89%93%E5%8D%A10092/"/>
+    <id>https://codermae.github.io/2021/08/29/%E6%89%93%E5%8D%A10092/</id>
+    <published>2021-08-29T04:43:41.000Z</published>
+    <updated>2021-08-31T11:36:23.059Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#dea32c&gt;不害怕改变，才是给自己最好的安全感。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;19-async-函数&quot;&gt;&lt;a href=&quot;#19-async-函数&quot; class=&quot;headerlink&quot; title=&quot;19. async 函数&quot;&gt;&lt;/a&gt;19. async 函数&lt;/h3&gt;&lt;h4 id=&quot;19-1-含义&quot;&gt;&lt;a href=&quot;#19-1-含义&quot; class=&quot;headerlink&quot; title=&quot;19.1 含义&quot;&gt;&lt;/a&gt;19.1 含义&lt;/h4&gt;&lt;p&gt;ES2017 标准引入了 async 函数，使得异步操作变得更加方便。&lt;/p&gt;
+&lt;p&gt;async 函数是什么？一句话，它就是 Generator 函数的语法糖。&lt;/p&gt;
+&lt;p&gt;前文有一个 Generator 函数，依次读取两个文件。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; fs = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;fs&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; readFile = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;fileName&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Promise&lt;/span&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;resolve, reject&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    fs.readFile(fileName, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;error, data&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (error) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; reject(error);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      resolve(data);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; gen = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;* (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; f1 = &lt;span class=&quot;keyword&quot;&gt;yield&lt;/span&gt; readFile(&lt;span class=&quot;string&quot;&gt;&amp;#x27;/etc/fstab&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; f2 = &lt;span class=&quot;keyword&quot;&gt;yield&lt;/span&gt; readFile(&lt;span class=&quot;string&quot;&gt;&amp;#x27;/etc/shells&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(f1.toString());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(f2.toString());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码的函数&lt;code&gt;gen&lt;/code&gt;可以写成&lt;code&gt;async&lt;/code&gt;函数，就是下面这样。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; asyncReadFile = &lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; f1 = &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; readFile(&lt;span class=&quot;string&quot;&gt;&amp;#x27;/etc/fstab&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; f2 = &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; readFile(&lt;span class=&quot;string&quot;&gt;&amp;#x27;/etc/shells&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(f1.toString());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(f2.toString());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;一比较就会发现，&lt;code&gt;async&lt;/code&gt;函数就是将 Generator 函数的星号（&lt;code&gt;*&lt;/code&gt;）替换成&lt;code&gt;async&lt;/code&gt;，将&lt;code&gt;yield&lt;/code&gt;替换成&lt;code&gt;await&lt;/code&gt;，仅此而已。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="JS-ES6 async 函数" scheme="https://codermae.github.io/tags/JS-ES6-async-%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>打卡0091</title>
     <link href="https://codermae.github.io/2021/08/27/%E6%89%93%E5%8D%A10091/"/>
     <id>https://codermae.github.io/2021/08/27/%E6%89%93%E5%8D%A10091/</id>
     <published>2021-08-27T07:24:18.000Z</published>
-    <updated>2021-08-27T08:39:10.002Z</updated>
+    <updated>2021-08-29T04:45:17.145Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;font color=#2468a2&gt;生命，就是一场不留余地的盛放。心安，便是活着的最美好状态。平淡是生活的主线，精彩是人生的点缀。且安静，且放低，且自在，不张扬，也不颓废，这就是生活&lt;/font&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;font color=#2468a2&gt;生命，就是一场不留余地的盛放。心安，便是活着的最美好状态。平淡是生活的主线，精彩是人生的点缀。且安静，且放低，且自在，不张扬，也不颓废，这就是生活。&lt;/font&gt;&lt;/p&gt;
 &lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;18-Generator-函数的异步应用&quot;&gt;&lt;a href=&quot;#18-Generator-函数的异步应用&quot; class=&quot;headerlink&quot; title=&quot;18. Generator 函数的异步应用&quot;&gt;&lt;/a&gt;18. Generator 函数的异步应用&lt;/h3&gt;&lt;p&gt;异步编程对 JavaScript 语言太重要。JavaScript 语言的执行环境是“单线程”的，如果没有异步编程，根本没法用，非卡死不可。本章主要介绍 Generator 函数如何完成异步操作。&lt;/p&gt;
 &lt;h4 id=&quot;18-1-传统方法&quot;&gt;&lt;a href=&quot;#18-1-传统方法&quot; class=&quot;headerlink&quot; title=&quot;18.1 传统方法&quot;&gt;&lt;/a&gt;18.1 传统方法&lt;/h4&gt;&lt;p&gt;ES6 诞生以前，异步编程的方法，大概有下面四种。&lt;/p&gt;
 &lt;ul&gt;
@@ -505,30 +531,6 @@
     
     
     <category term="JS-ES6 let 和 const 命令" scheme="https://codermae.github.io/tags/JS-ES6-let-%E5%92%8C-const-%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0071</title>
-    <link href="https://codermae.github.io/2021/06/09/%E6%89%93%E5%8D%A10071/"/>
-    <id>https://codermae.github.io/2021/06/09/%E6%89%93%E5%8D%A10071/</id>
-    <published>2021-06-09T06:46:04.000Z</published>
-    <updated>2021-06-15T07:47:20.617Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#ffc20e&gt;生活如此美好，忧伤总会逃掉，既然阳光照耀，就报之以微笑。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;1-ECMAScript-6-简介&quot;&gt;&lt;a href=&quot;#1-ECMAScript-6-简介&quot; class=&quot;headerlink&quot; title=&quot;1. ECMAScript 6 简介&quot;&gt;&lt;/a&gt;1. ECMAScript 6 简介&lt;/h3&gt;&lt;p&gt;ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。&lt;/p&gt;
-&lt;h4 id=&quot;1-1-ECMAScript-和-JavaScript-的关系&quot;&gt;&lt;a href=&quot;#1-1-ECMAScript-和-JavaScript-的关系&quot; class=&quot;headerlink&quot; title=&quot;1.1 ECMAScript 和 JavaScript 的关系&quot;&gt;&lt;/a&gt;1.1 ECMAScript 和 JavaScript 的关系&lt;/h4&gt;&lt;p&gt;一个常见的问题是，ECMAScript 和 JavaScript 到底是什么关系？&lt;/p&gt;
-&lt;p&gt;要讲清楚这个问题，需要回顾历史。1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。&lt;/p&gt;
-&lt;p&gt;该标准从一开始就是针对 JavaScript 语言制定的，但是之所以不叫 JavaScript，有两个原因。一是商标，Java 是 Sun 公司的商标，根据授权协议，只有 Netscape 公司可以合法地使用 JavaScript 这个名字，且 JavaScript 本身也已经被 Netscape 公司注册为商标。二是想体现这门语言的制定者是 ECMA，不是 Netscape，这样有利于保证这门语言的开放性和中立性。&lt;/p&gt;
-&lt;p&gt;因此，ECMAScript 和 JavaScript 的关系是，前者是后者的规格，后者是前者的一种实现（另外的 ECMAScript 方言还有 JScript 和 ActionScript）。日常场合，这两个词是可以互换的。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 ECMAScript 6 简介" scheme="https://codermae.github.io/tags/JS-ES6-ECMAScript-6-%E7%AE%80%E4%BB%8B/"/>
     
   </entry>
   
