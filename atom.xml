@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-09-13T07:13:43.234Z</updated>
+  <updated>2021-09-15T13:15:12.039Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>专业踩坑</title>
+    <link href="https://codermae.github.io/2021/09/15/%E4%B8%93%E4%B8%9A%E8%B8%A9%E5%9D%91/"/>
+    <id>https://codermae.github.io/2021/09/15/%E4%B8%93%E4%B8%9A%E8%B8%A9%E5%9D%91/</id>
+    <published>2021-09-15T13:07:46.000Z</published>
+    <updated>2021-09-15T13:15:12.039Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;踩坑记录&quot;&gt;&lt;a href=&quot;#踩坑记录&quot; class=&quot;headerlink&quot; title=&quot;踩坑记录&quot;&gt;&lt;/a&gt;踩坑记录&lt;/h2&gt;&lt;h4 id=&quot;2021-09-15&quot;&gt;&lt;a href=&quot;#2021-09-15&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="踩坑" scheme="https://codermae.github.io/categories/%E8%B8%A9%E5%9D%91/"/>
+    
+    
+    <category term="踩坑" scheme="https://codermae.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+  </entry>
   
   <entry>
     <title>Chart文件说明</title>
@@ -497,32 +522,6 @@
     
     
     <category term="JS-ES6 字符串的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%89%A9%E5%B1%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0073</title>
-    <link href="https://codermae.github.io/2021/06/15/%E6%89%93%E5%8D%A10073/"/>
-    <id>https://codermae.github.io/2021/06/15/%E6%89%93%E5%8D%A10073/</id>
-    <published>2021-06-15T07:48:25.000Z</published>
-    <updated>2021-06-16T07:59:05.922Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#afb4db&gt;乐观和爱才是生活的解药。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;3-变量的解构赋值&quot;&gt;&lt;a href=&quot;#3-变量的解构赋值&quot; class=&quot;headerlink&quot; title=&quot;3.变量的解构赋值&quot;&gt;&lt;/a&gt;3.变量的解构赋值&lt;/h3&gt;&lt;h4 id=&quot;3-1-数组的解构赋值&quot;&gt;&lt;a href=&quot;#3-1-数组的解构赋值&quot; class=&quot;headerlink&quot; title=&quot;3.1 数组的解构赋值&quot;&gt;&lt;/a&gt;3.1 数组的解构赋值&lt;/h4&gt;&lt;h5 id=&quot;3-1-1-基本用法&quot;&gt;&lt;a href=&quot;#3-1-1-基本用法&quot; class=&quot;headerlink&quot; title=&quot;3.1.1 基本用法&quot;&gt;&lt;/a&gt;3.1.1 基本用法&lt;/h5&gt;&lt;p&gt;ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。&lt;/p&gt;
-&lt;p&gt;以前，为变量赋值，只能直接指定值。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; b = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; c = &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;ES6 允许写成下面这样。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; [a, b, c] = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码表示，可以从数组中提取值，按照对应位置，对变量赋值。&lt;/p&gt;
-&lt;p&gt;本质上，这种写法属于“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。下面是一些使用嵌套数组进行解构的例子。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 变量的解构赋值" scheme="https://codermae.github.io/tags/JS-ES6-%E5%8F%98%E9%87%8F%E7%9A%84%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
     
   </entry>
   

@@ -159,6 +159,69 @@
     
     
     <article
+  id="post-打卡0083"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/07/07/%E6%89%93%E5%8D%A10083/"
+    >打卡0083</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/07/07/%E6%89%93%E5%8D%A10083/" class="article-date">
+  <time datetime="2021-07-07T02:42:21.000Z" itemprop="datePublished">2021-07-07</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#6f599c>人间的面，见一面少一面。</font></p>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="11-Symbol"><a href="#11-Symbol" class="headerlink" title="11. Symbol"></a>11. Symbol</h3><h4 id="11-1-概述"><a href="#11-1-概述" class="headerlink" title="11.1 概述"></a>11.1 概述</h4><p>ES5 的对象属性名都是字符串，这容易造成属性名的冲突。比如，你使用了一个他人提供的对象，但又想为这个对象添加新的方法（mixin 模式），新方法的名字就有可能与现有方法产生冲突。如果有一种机制，保证每个属性的名字都是独一无二的就好了，这样就从根本上防止属性名的冲突。这就是 ES6 引入<code>Symbol</code>的原因。</p>
+<p>ES6 引入了一种新的原始数据类型<code>Symbol</code>，表示独一无二的值。它是 JavaScript 语言的第七种数据类型，前六种是：<code>undefined</code>、<code>null</code>、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。</p>
+<p>Symbol 值通过<code>Symbol</code>函数生成。这就是说，对象的属性名现在可以有两种类型，一种是原来就有的字符串，另一种就是新增的 Symbol 类型。凡是属性名属于 Symbol 类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="built_in">Symbol</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> s</span><br><span class="line"><span class="comment">// &quot;symbol&quot;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，变量<code>s</code>就是一个独一无二的值。<code>typeof</code>运算符的结果，表明变量<code>s</code>是 Symbol 数据类型，而不是字符串之类的其他类型。</p>
+<p>注意，<code>Symbol</code>函数前不能使用<code>new</code>命令，否则会报错。这是因为生成的 Symbol 是一个原始类型的值，不是对象。也就是说，由于 Symbol 值不是对象，所以不能添加属性。基本上，它是一种类似于字符串的数据类型。</p> 
+      <a class="article-more-link" href="/2021/07/07/%E6%89%93%E5%8D%A10083/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-Symbol/" rel="tag">JS-ES6 Symbol</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0082"
   class="article article-type-post"
   itemscope
@@ -717,70 +780,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%89%A9%E5%B1%95/" rel="tag">JS-ES6 字符串的扩展</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0073"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/06/15/%E6%89%93%E5%8D%A10073/"
-    >打卡0073</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/06/15/%E6%89%93%E5%8D%A10073/" class="article-date">
-  <time datetime="2021-06-15T07:48:25.000Z" itemprop="datePublished">2021-06-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#afb4db>乐观和爱才是生活的解药。</font></p>
-<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="3-变量的解构赋值"><a href="#3-变量的解构赋值" class="headerlink" title="3.变量的解构赋值"></a>3.变量的解构赋值</h3><h4 id="3-1-数组的解构赋值"><a href="#3-1-数组的解构赋值" class="headerlink" title="3.1 数组的解构赋值"></a>3.1 数组的解构赋值</h4><h5 id="3-1-1-基本用法"><a href="#3-1-1-基本用法" class="headerlink" title="3.1.1 基本用法"></a>3.1.1 基本用法</h5><p>ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。</p>
-<p>以前，为变量赋值，只能直接指定值。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">let</span> c = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
-<p>ES6 允许写成下面这样。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br></pre></td></tr></table></figure>
-<p>上面代码表示，可以从数组中提取值，按照对应位置，对变量赋值。</p>
-<p>本质上，这种写法属于“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。下面是一些使用嵌套数组进行解构的例子。</p> 
-      <a class="article-more-link" href="/2021/06/15/%E6%89%93%E5%8D%A10073/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-%E5%8F%98%E9%87%8F%E7%9A%84%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/" rel="tag">JS-ES6 变量的解构赋值</a></li></ul>
 
     </footer>
   </div>
