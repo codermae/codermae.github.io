@@ -190,9 +190,8 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2><h4 id="2021-09-15"><a href="#2021-09-15" class="headerlink" title="2021/09/15/"></a>2021/09/15/</h4><h5 id="koa-body"><a href="#koa-body" class="headerlink" title="koa-body:"></a>koa-body:</h5><pre><code>post请求失败提示跨域问题，原因是请求数据太大，需要更改`formiable:&#123;jsonLimit:&#39;valueMB&#39;&#125;`入坑半天┭┮﹏┭┮
-post请求，上传文件失败提示跨域问题，原因是好多文档都说`ctx.request.body.files`|`ctx.request.files.file`这样拿文件，结果我的竟然是这样`ctx.request.files.upload`，又入坑半天┭┮﹏┭┮
-</code></pre>
+  <h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2><h3 id="2021-09-15"><a href="#2021-09-15" class="headerlink" title="2021/09/15/"></a>2021/09/15/</h3><h4 id="koa-body"><a href="#koa-body" class="headerlink" title="koa-body:"></a>koa-body:</h4><p>post请求失败提示跨域问题，原因是请求数据太大，需要更改<code>formiable:&#123;jsonLimit:&#39;valueMB&#39;&#125;</code>入坑半天┭┮﹏┭┮</p>
+<p>post请求，上传文件失败提示跨域问题，原因是好多文档都说<code>ctx.request.body.files</code> | <code>ctx.request.files.file</code>这样拿文件，结果我的竟然是这样<code>ctx.request.files.upload</code>，又入坑半天┭┮﹏┭┮</p>
  
       <!-- reward -->
       
