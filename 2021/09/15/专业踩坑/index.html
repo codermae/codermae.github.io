@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">99</span>
+            <span class="post-count">301</span>
         </span>
     </span>
 
@@ -102,8 +102,13 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2><h3 id="2021-09-15"><a href="#2021-09-15" class="headerlink" title="2021/09/15/"></a>2021/09/15/</h3><h4 id="koa-body"><a href="#koa-body" class="headerlink" title="koa-body:"></a>koa-body:</h4><p>post请求失败提示跨域问题，原因是请求数据太大，需要更改<code>formiable:&#123;jsonLimit:&#39;valueMB&#39;&#125;</code>入坑半天┭┮﹏┭┮</p>
+  <h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2><span id="more"></span>
+<h3 id="2021-09-15"><a href="#2021-09-15" class="headerlink" title="2021/09/15/"></a>2021/09/15/</h3><h4 id="koa-body"><a href="#koa-body" class="headerlink" title="koa-body:"></a>koa-body:</h4><p>post请求失败提示跨域问题，原因是请求数据太大，需要更改<code>formiable:&#123;jsonLimit:&#39;valueMB&#39;&#125;</code>入坑半天┭┮﹏┭┮</p>
 <p>post请求，上传文件失败提示跨域问题，原因是好多文档都说<code>ctx.request.body.files</code> | <code>ctx.request.files.file</code>这样拿文件，结果我的竟然是这样<code>ctx.request.files.upload</code>，又入坑半天┭┮﹏┭┮</p>
+<p>post请求成功，前端返回404，由于嵌套了async,所以下面这样写或者将<code>ctx.body</code>写在内部的<code>async()&#123;&#125;</code>中是不能返回前端数据的<br><code>async()&#123;     async()&#123;         await()     &#125;   ctx.responsse.body = &#123;&#125; &#125;</code><br>改正后：<br><code>async()&#123;     ctx.responsse.body = &#123;&#125;     async()&#123;         await()     &#125; &#125;</code></p>
+<h4 id="mongoose-Model"><a href="#mongoose-Model" class="headerlink" title="mongoose.Model"></a>mongoose.Model</h4><p>数据集合要带s，<code>module.exports = mongoose.model(&#39;chart&#39;, userSchema);</code>否则获取不到，只能添加第三个参数<code>module.exports = mongoose.model(&#39;totalData&#39;, connectSchema,&#39;totalData&#39;);</code></p>
+<h4 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h4><p>由于相对时区导致数据导入后时间减少一天    </p>
+<p>数据为字符类型，时间类型数据随机排序，问题定位：数组对象排序<br><code>result.rows.sort((a,b) =&gt; &#123;       let t1 = new Date(Date.parse(a._id.replace(/-/g,&quot;/&quot;)))       let t2 = new Date(Date.parse(b._id.replace(/-/g,&quot;/&quot;)))       return t1.getTime()-t2.getTime()   &#125;)</code></p>
  
       <!-- reward -->
       
@@ -117,18 +122,6 @@
     
 
     <!-- copyright -->
-    
-    <div class="declare">
-      <ul class="post-copyright">
-        <li>
-          <i class="ri-copyright-line"></i>
-          <strong>Copyright： </strong>
-          
-          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
-          
-        </li>
-      </ul>
-    </div>
     
     <footer class="article-footer">
        
@@ -186,6 +179,15 @@
 
    
   <nav class="article-nav">
+    
+      <a href="/2021/09/22/%E6%89%93%E5%8D%A10093/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            打卡0093
+          
+        </div>
+      </a>
     
     
       <a href="/2021/09/10/Chart%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/" class="article-nav-link">

@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-09-15T14:18:40.726Z</updated>
+  <updated>2021-09-22T03:34:28.958Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,20 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打卡0093</title>
+    <link href="https://codermae.github.io/2021/09/22/%E6%89%93%E5%8D%A10093/"/>
+    <id>https://codermae.github.io/2021/09/22/%E6%89%93%E5%8D%A10093/</id>
+    <published>2021-09-22T02:08:34.000Z</published>
+    <updated>2021-09-22T03:34:28.958Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#6a6da9&gt;你所厌烦的普通，也许是他生命中最珍贵的平凡。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;20-Class-的基本语法&quot;&gt;&lt;a href=&quot;#20-Class-的基本语法&quot; class=&quot;headerlink&quot; title=&quot;20. Class 的基本语法&quot;&gt;&lt;/a&gt;20. Class 的基本语法&lt;/h3&gt;&lt;h4 id=&quot;20-1-简介&quot;&gt;&lt;a href=&quot;#20-1-简介&quot; class=&quot;headerlink&quot; title=&quot;20.1 简介&quot;&gt;&lt;/a&gt;20.1 简介&lt;/h4&gt;&lt;h5 id=&quot;20-1-1-类的由来&quot;&gt;&lt;a href=&quot;#20-1-1-类的由来&quot; class=&quot;headerlink&quot; title=&quot;20.1.1 类的由来&quot;&gt;&lt;/a&gt;20.1.1 类的由来&lt;/h5&gt;&lt;p&gt;JavaScript 语言中，生成实例对象的传统方法是通过构造函数。下面是一个例子。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Point&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;x, y&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.x = x;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.y = y;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Point.prototype.toString = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;#x27;(&amp;#x27;&lt;/span&gt; + &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.x + &lt;span class=&quot;string&quot;&gt;&amp;#x27;, &amp;#x27;&lt;/span&gt; + &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.y + &lt;span class=&quot;string&quot;&gt;&amp;#x27;)&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; p = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Point(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面这种写法跟传统的面向对象语言（比如 C++ 和 Java）差异很大，很容易让新学习这门语言的程序员感到困惑。&lt;/p&gt;
+&lt;p&gt;ES6 提供了更接近传统语言的写法，引入了 Class（类）这个概念，作为对象的模板。通过&lt;code&gt;class&lt;/code&gt;关键字，可以定义类。&lt;/p&gt;
+&lt;p&gt;基本上，ES6 的&lt;code&gt;class&lt;/code&gt;可以看作只是一个语法糖，它的绝大部分功能，ES5 都可以做到，新的&lt;code&gt;class&lt;/code&gt;写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。上面的代码用 ES6 的&lt;code&gt;class&lt;/code&gt;改写，就是下面这样。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Point&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;constructor&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;x, y&lt;/span&gt;)&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.x = x;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.y = y;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;toString&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;#x27;(&amp;#x27;&lt;/span&gt; + &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.x + &lt;span class=&quot;string&quot;&gt;&amp;#x27;, &amp;#x27;&lt;/span&gt; + &lt;span class=&quot;built_in&quot;&gt;this&lt;/span&gt;.y + &lt;span class=&quot;string&quot;&gt;&amp;#x27;)&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="Class 的基本语法" scheme="https://codermae.github.io/tags/Class-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>专业踩坑</title>
     <link href="https://codermae.github.io/2021/09/15/%E4%B8%93%E4%B8%9A%E8%B8%A9%E5%9D%91/"/>
     <id>https://codermae.github.io/2021/09/15/%E4%B8%93%E4%B8%9A%E8%B8%A9%E5%9D%91/</id>
     <published>2021-09-15T13:07:46.000Z</published>
-    <updated>2021-09-15T14:18:40.726Z</updated>
+    <updated>2021-09-22T01:56:42.130Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;踩坑记录&quot;&gt;&lt;a href=&quot;#踩坑记录&quot; class=&quot;headerlink&quot; title=&quot;踩坑记录&quot;&gt;&lt;/a&gt;踩坑记录&lt;/h2&gt;&lt;h3 id=&quot;2021-09-15&quot;&gt;&lt;a href=&quot;#2021-09-15&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;踩坑记录&quot;&gt;&lt;a href=&quot;#踩坑记录&quot; class=&quot;headerlink&quot; title=&quot;踩坑记录&quot;&gt;&lt;/a&gt;踩坑记录&lt;/h2&gt;</summary>
     
     
     
@@ -496,32 +515,6 @@
     
     
     <category term="JS-ES6 字符串的新增方法" scheme="https://codermae.github.io/tags/JS-ES6-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%96%B0%E5%A2%9E%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0074</title>
-    <link href="https://codermae.github.io/2021/06/16/%E6%89%93%E5%8D%A10074/"/>
-    <id>https://codermae.github.io/2021/06/16/%E6%89%93%E5%8D%A10074/</id>
-    <published>2021-06-16T08:00:55.000Z</published>
-    <updated>2021-06-18T08:05:17.002Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#ae5039&gt;所见皆为美好，所行不负年少。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;4-字符串的扩展&quot;&gt;&lt;a href=&quot;#4-字符串的扩展&quot; class=&quot;headerlink&quot; title=&quot;4. 字符串的扩展&quot;&gt;&lt;/a&gt;4. 字符串的扩展&lt;/h3&gt;&lt;p&gt;本章介绍 ES6 对字符串的改造和增强，下一章介绍字符串对象的新增方法。&lt;/p&gt;
-&lt;h4 id=&quot;4-1-字符的-Unicode-表示法&quot;&gt;&lt;a href=&quot;#4-1-字符的-Unicode-表示法&quot; class=&quot;headerlink&quot; title=&quot;4.1 字符的 Unicode 表示法&quot;&gt;&lt;/a&gt;4.1 字符的 Unicode 表示法&lt;/h4&gt;&lt;p&gt;ES6 加强了对 Unicode 的支持，允许采用&lt;code&gt;\uxxxx&lt;/code&gt;形式表示一个字符，其中&lt;code&gt;xxxx&lt;/code&gt;表示字符的 Unicode 码点。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&amp;quot;\u0061&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;a&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;但是，这种表示法只限于码点在&lt;code&gt;\u0000&lt;/code&gt;~`\uFFFF`之间的字符。超出这个范围的字符，必须用两个双字节的形式表示。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&amp;quot;\uD842\uDFB7&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;𠮷&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&amp;quot;\u20BB7&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot; 7&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码表示，如果直接在&lt;code&gt;\u&lt;/code&gt;后面跟上超过&lt;code&gt;0xFFFF&lt;/code&gt;的数值（比如&lt;code&gt;\u20BB7&lt;/code&gt;），JavaScript 会理解成&lt;code&gt;\u20BB+7&lt;/code&gt;。由于&lt;code&gt;\u20BB&lt;/code&gt;是一个不可打印字符，所以只会显示一个空格，后面跟着一个&lt;code&gt;7&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;ES6 对这一点做出了改进，只要将码点放入大括号，就能正确解读该字符。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 字符串的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%89%A9%E5%B1%95/"/>
     
   </entry>
   
