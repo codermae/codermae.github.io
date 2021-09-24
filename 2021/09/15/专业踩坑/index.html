@@ -78,7 +78,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">301</span>
+            <span class="post-count">305</span>
         </span>
     </span>
 
@@ -109,6 +109,7 @@
 <h4 id="mongoose-Model"><a href="#mongoose-Model" class="headerlink" title="mongoose.Model"></a>mongoose.Model</h4><p>数据集合要带s，<code>module.exports = mongoose.model(&#39;chart&#39;, userSchema);</code>否则获取不到，只能添加第三个参数<code>module.exports = mongoose.model(&#39;totalData&#39;, connectSchema,&#39;totalData&#39;);</code></p>
 <h4 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h4><p>由于相对时区导致数据导入后时间减少一天    </p>
 <p>数据为字符类型，时间类型数据随机排序，问题定位：数组对象排序<br><code>result.rows.sort((a,b) =&gt; &#123;       let t1 = new Date(Date.parse(a._id.replace(/-/g,&quot;/&quot;)))       let t2 = new Date(Date.parse(b._id.replace(/-/g,&quot;/&quot;)))       return t1.getTime()-t2.getTime()   &#125;)</code></p>
+<h4 id="v-chart"><a href="#v-chart" class="headerlink" title="v-chart"></a>v-chart</h4><p>extend设置</p>
  
       <!-- reward -->
       
