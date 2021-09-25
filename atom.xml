@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-09-24T02:41:27.938Z</updated>
+  <updated>2021-09-25T02:19:52.635Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0095</title>
+    <link href="https://codermae.github.io/2021/09/25/%E6%89%93%E5%8D%A10095/"/>
+    <id>https://codermae.github.io/2021/09/25/%E6%89%93%E5%8D%A10095/</id>
+    <published>2021-09-25T00:50:34.000Z</published>
+    <updated>2021-09-25T02:19:52.635Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#121a2a&gt;勤奋的人总是按时起床，乐观的人总是那么阳光，努力的人总能超越梦想，正能量的人总是自带光芒。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;22-Module-的语法&quot;&gt;&lt;a href=&quot;#22-Module-的语法&quot; class=&quot;headerlink&quot; title=&quot;22. Module 的语法&quot;&gt;&lt;/a&gt;22. Module 的语法&lt;/h3&gt;&lt;h4 id=&quot;22-1-概述&quot;&gt;&lt;a href=&quot;#22-1-概述&quot; class=&quot;headerlink&quot; title=&quot;22.1 概述&quot;&gt;&lt;/a&gt;22.1 概述&lt;/h4&gt;&lt;p&gt;历史上，JavaScript 一直没有模块（module）体系，无法将一个大程序拆分成互相依赖的小文件，再用简单的方法拼装起来。其他语言都有这项功能，比如 Ruby 的require、Python 的import，甚至就连 CSS 都有@import，但是 JavaScript 任何这方面的支持都没有，这对开发大型的、复杂的项目形成了巨大障碍。&lt;/p&gt;
+&lt;p&gt;在 ES6 之前，社区制定了一些模块加载方案，最主要的有 CommonJS 和 AMD 两种。前者用于服务器，后者用于浏览器。ES6 在语言标准的层面上，实现了模块功能，而且实现得相当简单，完全可以取代 CommonJS 和 AMD 规范，成为浏览器和服务器通用的模块解决方案。&lt;/p&gt;
+&lt;p&gt;ES6 模块的设计思想是尽量的静态化，使得编译时就能确定模块的依赖关系，以及输入和输出的变量。CommonJS 和 AMD 模块，都只能在运行时确定这些东西。比如，CommonJS 模块就是对象，输入时必须查找对象属性。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// CommonJS模块&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; &amp;#123; stat, exists, readfile &amp;#125; = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;fs&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 等同于&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; _fs = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;fs&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; stat = _fs.stat;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; exists = _fs.exists;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; readfile = _fs.readfile;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码的实质是整体加载&lt;code&gt;fs&lt;/code&gt;模块（即加载&lt;code&gt;fs&lt;/code&gt;的所有方法），生成一个对象（&lt;code&gt;_fs&lt;/code&gt;），然后再从这个对象上面读取 3 个方法。这种加载称为“运行时加载”，因为只有运行时才能得到这个对象，导致完全没办法在编译时做“静态优化”。&lt;/p&gt;
+&lt;p&gt;ES6 模块不是对象，而是通过&lt;code&gt;export&lt;/code&gt;命令显式指定输出的代码，再通过&lt;code&gt;import&lt;/code&gt;命令输入。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="Module 的语法" scheme="https://codermae.github.io/tags/Module-%E7%9A%84%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0094</title>
@@ -485,35 +510,6 @@
     
     
     <category term="JS-ES6 数值的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E6%95%B0%E5%80%BC%E7%9A%84%E6%89%A9%E5%B1%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0076</title>
-    <link href="https://codermae.github.io/2021/06/20/%E6%89%93%E5%8D%A10076/"/>
-    <id>https://codermae.github.io/2021/06/20/%E6%89%93%E5%8D%A10076/</id>
-    <published>2021-06-20T07:34:26.000Z</published>
-    <updated>2021-06-25T02:19:29.379Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#f58220&gt;但因热爱，愿迎万难&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;6-正则的扩展&quot;&gt;&lt;a href=&quot;#6-正则的扩展&quot; class=&quot;headerlink&quot; title=&quot;6.正则的扩展&quot;&gt;&lt;/a&gt;6.正则的扩展&lt;/h3&gt;&lt;h4 id=&quot;6-1-RegExp-构造函数&quot;&gt;&lt;a href=&quot;#6-1-RegExp-构造函数&quot; class=&quot;headerlink&quot; title=&quot;6.1 RegExp 构造函数&quot;&gt;&lt;/a&gt;6.1 RegExp 构造函数&lt;/h4&gt;&lt;p&gt;在 ES5 中，&lt;code&gt;RegExp&lt;/code&gt;构造函数的参数有两种情况。&lt;/p&gt;
-&lt;p&gt;第一种情况是，参数是字符串，这时第二个参数表示正则表达式的修饰符（flag）。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;xyz&amp;#x27;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;i&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 等价于&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;regexp&quot;&gt;/xyz/i&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;第二种情况是，参数是一个正则表示式，这时会返回一个原有正则表达式的拷贝。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;regexp&quot;&gt;/xyz/i&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 等价于&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;regexp&quot;&gt;/xyz/i&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;但是，ES5 不允许此时使用第二个参数添加修饰符，否则会报错。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; regex = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;regexp&quot;&gt;/xyz/&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;i&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Uncaught TypeError: Cannot supply flags when constructing one RegExp from another&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;ES6 改变了这种行为。如果&lt;code&gt;RegExp&lt;/code&gt;构造函数第一个参数是一个正则对象，那么可以使用第二个参数指定修饰符。而且，返回的正则表达式会忽略原有的正则表达式的修饰符，只使用新指定的修饰符。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;regexp&quot;&gt;/abc/ig&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;i&amp;#x27;&lt;/span&gt;).flags&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;i&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，原有正则对象的修饰符是&lt;code&gt;ig&lt;/code&gt;，它会被第二个参数&lt;code&gt;i&lt;/code&gt;覆盖。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 正则的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E6%AD%A3%E5%88%99%E7%9A%84%E6%89%A9%E5%B1%95/"/>
     
   </entry>
   

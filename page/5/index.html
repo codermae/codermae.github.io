@@ -159,6 +159,67 @@
     
     
     <article
+  id="post-打卡0056"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/30/%E6%89%93%E5%8D%A10056/"
+    >打卡0056</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/30/%E6%89%93%E5%8D%A10056/" class="article-date">
+  <time datetime="2021-05-30T06:39:04.000Z" itemprop="datePublished">2021-05-30</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#c77eb5>最好的时光在路上，一路向阳。</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="2-window-对象"><a href="#2-window-对象" class="headerlink" title="2. window 对象"></a>2. window 对象</h3><h4 id="2-1-概述"><a href="#2-1-概述" class="headerlink" title="2.1 概述"></a>2.1 概述</h4><p>浏览器里面，<code>window</code>对象（注意，<code>w</code>为小写）指当前的浏览器窗口。它也是当前页面的顶层对象，即最高一层的对象，所有其他对象都是它的下属。一个变量如果未声明，那么默认就是顶层对象的属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">window</span>.a <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>a</code>是一个没有声明就直接赋值的变量，它自动成为顶层对象的属性。</p>
+<p><code>window</code>有自己的实体含义，其实不适合当作最高一层的顶层对象，这是一个语言的设计失误。最早，设计这门语言的时候，原始设想是语言内置的对象越少越好，这样可以提高浏览器的性能。因此，语言设计者 Brendan Eich 就把<code>window</code>对象当作顶层对象，所有未声明就赋值的变量都自动变成<code>window</code>对象的属性。这种设计使得编译阶段无法检测出未声明变量，但到了今天已经没有办法纠正了。</p> 
+      <a class="article-more-link" href="/2021/05/30/%E6%89%93%E5%8D%A10056/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-window-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 浏览器模型-window 对象</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0055"
   class="article article-type-post"
   itemscope
@@ -741,73 +802,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-鼠标事件</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0046"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/28/%E6%89%93%E5%8D%A10046/"
-    >打卡0046</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/28/%E6%89%93%E5%8D%A10046/" class="article-date">
-  <time datetime="2021-05-28T01:04:21.000Z" itemprop="datePublished">2021-05-28</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#90d7ec>一个人做再大的承诺，都不及踏踏实实、认认真真做事更让人放心。</font></p>
-<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="3-Event-对象"><a href="#3-Event-对象" class="headerlink" title="3. Event 对象"></a>3. Event 对象</h3><h4 id="3-1-概述"><a href="#3-1-概述" class="headerlink" title="3.1 概述"></a>3.1 概述</h4><p>事件发生以后，会产生一个事件对象，作为参数传给监听函数。浏览器原生提供一个<code>Event</code>对象，所有的事件都是这个对象的实例，或者说继承了<code>Event.prototype</code>对象。</p>
-<p><code>Event</code>对象本身就是一个构造函数，可以用来生成新的实例。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">event = <span class="keyword">new</span> Event(type, options);</span><br></pre></td></tr></table></figure>
-<p><code>Event</code>构造函数接受两个参数。第一个参数<code>type</code>是字符串，表示事件的名称；第二个参数<code>options</code>是一个对象，表示事件对象的配置。该对象主要有下面两个属性。</p>
-<ul>
-<li><code>bubbles</code>：布尔值，可选，默认为<code>false</code>，表示事件对象是否冒泡。</li>
-<li><code>cancelable</code>：布尔值，可选，默认为<code>false</code>，表示事件是否可以被取消，即能否用<code>Event.preventDefault()</code>取消这个事件。一旦事件被取消，就好像从来没有发生过，不会触发浏览器对该事件的默认行为。</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ev = <span class="keyword">new</span> Event(</span><br><span class="line">  <span class="string">&#x27;look&#x27;</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">&#x27;bubbles&#x27;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">&#x27;cancelable&#x27;</span>: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"><span class="built_in">document</span>.dispatchEvent(ev);</span><br></pre></td></tr></table></figure>
-<p>上面代码新建一个<code>look</code>事件实例，然后使用<code>dispatchEvent</code>方法触发该事件。</p> 
-      <a class="article-more-link" href="/2021/05/28/%E6%89%93%E5%8D%A10046/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-Event-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 事件-Event 对象</a></li></ul>
 
     </footer>
   </div>

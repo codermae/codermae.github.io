@@ -159,6 +159,67 @@
     
     
     <article
+  id="post-打卡0087"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/08/19/%E6%89%93%E5%8D%A10087/"
+    >打卡0087</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/08/19/%E6%89%93%E5%8D%A10087/" class="article-date">
+  <time datetime="2021-08-19T09:54:36.000Z" itemprop="datePublished">2021-08-19</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#f05b72>不开心时，做个深呼吸，不过是糟糕的一天而已，又不是糟糕一辈子。</font></p>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="14-Reflect"><a href="#14-Reflect" class="headerlink" title="14. Reflect"></a>14. Reflect</h3><h4 id="14-1-概述"><a href="#14-1-概述" class="headerlink" title="14.1 概述"></a>14.1 概述</h4><p><code>Reflect</code>对象与<code>Proxy</code>对象一样，也是 ES6 为了操作对象而提供的新 API。<code>Reflect</code>对象的设计目的有这样几个。</p>
+<p>（1） 将<code>Object</code>对象的一些明显属于语言内部的方法（比如<code>Object.defineProperty</code>），放到<code>Reflect</code>对象上。现阶段，某些方法同时在<code>Object</code>和<code>Reflect</code>对象上部署，未来的新方法将只部署在<code>Reflect</code>对象上。也就是说，从<code>Reflect</code>对象上可以拿到语言内部的方法。</p>
+<p>（2） 修改某些<code>Object</code>方法的返回结果，让其变得更合理。比如，<code>Object.defineProperty(obj, name, desc)</code>在无法定义属性时，会抛出一个错误，而<code>Reflect.defineProperty(obj, name, desc)</code>则会返回<code>false</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 老写法</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="built_in">Object</span>.defineProperty(target, property, attributes);</span><br><span class="line">  <span class="comment">// success</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">  <span class="comment">// failure</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 新写法</span></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">Reflect</span>.defineProperty(target, property, attributes)) &#123;</span><br><span class="line">  <span class="comment">// success</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// failure</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
+      <a class="article-more-link" href="/2021/08/19/%E6%89%93%E5%8D%A10087/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-Reflect/" rel="tag">JS-ES6 Reflect</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0086"
   class="article article-type-post"
   itemscope
@@ -708,73 +769,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-%E6%95%B0%E5%80%BC%E7%9A%84%E6%89%A9%E5%B1%95/" rel="tag">JS-ES6 数值的扩展</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0076"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/06/20/%E6%89%93%E5%8D%A10076/"
-    >打卡0076</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/06/20/%E6%89%93%E5%8D%A10076/" class="article-date">
-  <time datetime="2021-06-20T07:34:26.000Z" itemprop="datePublished">2021-06-20</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#f58220>但因热爱，愿迎万难</font></p>
-<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="6-正则的扩展"><a href="#6-正则的扩展" class="headerlink" title="6.正则的扩展"></a>6.正则的扩展</h3><h4 id="6-1-RegExp-构造函数"><a href="#6-1-RegExp-构造函数" class="headerlink" title="6.1 RegExp 构造函数"></a>6.1 RegExp 构造函数</h4><p>在 ES5 中，<code>RegExp</code>构造函数的参数有两种情况。</p>
-<p>第一种情况是，参数是字符串，这时第二个参数表示正则表达式的修饰符（flag）。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">&#x27;xyz&#x27;</span>, <span class="string">&#x27;i&#x27;</span>);</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="keyword">var</span> regex = <span class="regexp">/xyz/i</span>;</span><br></pre></td></tr></table></figure>
-<p>第二种情况是，参数是一个正则表示式，这时会返回一个原有正则表达式的拷贝。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="regexp">/xyz/i</span>);</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="keyword">var</span> regex = <span class="regexp">/xyz/i</span>;</span><br></pre></td></tr></table></figure>
-<p>但是，ES5 不允许此时使用第二个参数添加修饰符，否则会报错。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="regexp">/xyz/</span>, <span class="string">&#x27;i&#x27;</span>);</span><br><span class="line"><span class="comment">// Uncaught TypeError: Cannot supply flags when constructing one RegExp from another</span></span><br></pre></td></tr></table></figure>
-<p>ES6 改变了这种行为。如果<code>RegExp</code>构造函数第一个参数是一个正则对象，那么可以使用第二个参数指定修饰符。而且，返回的正则表达式会忽略原有的正则表达式的修饰符，只使用新指定的修饰符。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="regexp">/abc/ig</span>, <span class="string">&#x27;i&#x27;</span>).flags</span><br><span class="line"><span class="comment">// &quot;i&quot;</span></span><br></pre></td></tr></table></figure>
-<p>上面代码中，原有正则对象的修饰符是<code>ig</code>，它会被第二个参数<code>i</code>覆盖。</p> 
-      <a class="article-more-link" href="/2021/06/20/%E6%89%93%E5%8D%A10076/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-%E6%AD%A3%E5%88%99%E7%9A%84%E6%89%A9%E5%B1%95/" rel="tag">JS-ES6 正则的扩展</a></li></ul>
 
     </footer>
   </div>
