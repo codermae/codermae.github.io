@@ -119,21 +119,62 @@
   </entry>
   
   <entry>
-    <title>专业踩坑</title>
-    <link href="https://codermae.github.io/2021/09/15/%E4%B8%93%E4%B8%9A%E8%B8%A9%E5%9D%91/"/>
-    <id>https://codermae.github.io/2021/09/15/%E4%B8%93%E4%B8%9A%E8%B8%A9%E5%9D%91/</id>
-    <published>2021-09-15T13:07:46.000Z</published>
-    <updated>2021-09-22T12:09:22.336Z</updated>
+    <title>踩坑JavaScript</title>
+    <link href="https://codermae.github.io/2021/09/16/%E8%B8%A9%E5%9D%91JavaScript/"/>
+    <id>https://codermae.github.io/2021/09/16/%E8%B8%A9%E5%9D%91JavaScript/</id>
+    <published>2021-09-16T12:33:23.000Z</published>
+    <updated>2021-09-26T12:44:44.774Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;踩坑记录&quot;&gt;&lt;a href=&quot;#踩坑记录&quot; class=&quot;headerlink&quot; title=&quot;踩坑记录&quot;&gt;&lt;/a&gt;踩坑记录&lt;/h2&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;font color=#ffc20e&gt;人生当自勉，学习需坚持。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;踩坑记录&quot;&gt;&lt;a href=&quot;#踩坑记录&quot; class=&quot;headerlink&quot; title=&quot;踩坑记录&quot;&gt;&lt;/a&gt;踩坑记录&lt;/h2&gt;</summary>
     
     
     
     <category term="踩坑" scheme="https://codermae.github.io/categories/%E8%B8%A9%E5%9D%91/"/>
     
     
-    <category term="踩坑" scheme="https://codermae.github.io/tags/%E8%B8%A9%E5%9D%91/"/>
+    <category term="踩坑JavaScript" scheme="https://codermae.github.io/tags/%E8%B8%A9%E5%9D%91JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>踩坑Koa</title>
+    <link href="https://codermae.github.io/2021/09/15/%E8%B8%A9%E5%9D%91Koa/"/>
+    <id>https://codermae.github.io/2021/09/15/%E8%B8%A9%E5%9D%91Koa/</id>
+    <published>2021-09-15T13:07:46.000Z</published>
+    <updated>2021-09-26T12:44:47.993Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#ffc20e&gt;人生当自勉，学习需坚持。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;踩坑记录&quot;&gt;&lt;a href=&quot;#踩坑记录&quot; class=&quot;headerlink&quot; title=&quot;踩坑记录&quot;&gt;&lt;/a&gt;踩坑记录&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="踩坑" scheme="https://codermae.github.io/categories/%E8%B8%A9%E5%9D%91/"/>
+    
+    
+    <category term="踩坑Koa" scheme="https://codermae.github.io/tags/%E8%B8%A9%E5%9D%91Koa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>踩坑MongoDB</title>
+    <link href="https://codermae.github.io/2021/09/15/%E8%B8%A9%E5%9D%91MongoDB/"/>
+    <id>https://codermae.github.io/2021/09/15/%E8%B8%A9%E5%9D%91MongoDB/</id>
+    <published>2021-09-15T12:32:52.000Z</published>
+    <updated>2021-09-26T12:44:38.747Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#ffc20e&gt;人生当自勉，学习需坚持。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;踩坑记录&quot;&gt;&lt;a href=&quot;#踩坑记录&quot; class=&quot;headerlink&quot; title=&quot;踩坑记录&quot;&gt;&lt;/a&gt;踩坑记录&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="踩坑" scheme="https://codermae.github.io/categories/%E8%B8%A9%E5%9D%91/"/>
+    
+    
+    <category term="踩坑MongoDB" scheme="https://codermae.github.io/tags/%E8%B8%A9%E5%9D%91MongoDB/"/>
     
   </entry>
   
@@ -463,56 +504,6 @@
     
     
     <category term="JS-ES6 对象的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%89%A9%E5%B1%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0079</title>
-    <link href="https://codermae.github.io/2021/06/27/%E6%89%93%E5%8D%A10079/"/>
-    <id>https://codermae.github.io/2021/06/27/%E6%89%93%E5%8D%A10079/</id>
-    <published>2021-06-27T07:17:54.000Z</published>
-    <updated>2021-06-28T02:41:11.461Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#faa755&gt;有三分钟热度，就有三分钟收获。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;9-数组的扩展&quot;&gt;&lt;a href=&quot;#9-数组的扩展&quot; class=&quot;headerlink&quot; title=&quot;9. 数组的扩展&quot;&gt;&lt;/a&gt;9. 数组的扩展&lt;/h3&gt;&lt;h4 id=&quot;9-1-扩展运算符&quot;&gt;&lt;a href=&quot;#9-1-扩展运算符&quot; class=&quot;headerlink&quot; title=&quot;9.1 扩展运算符&quot;&gt;&lt;/a&gt;9.1 扩展运算符&lt;/h4&gt;&lt;h5 id=&quot;9-1-1-含义&quot;&gt;&lt;a href=&quot;#9-1-1-含义&quot; class=&quot;headerlink&quot; title=&quot;9.1.1 含义&quot;&gt;&lt;/a&gt;9.1.1 含义&lt;/h5&gt;&lt;p&gt;扩展运算符（spread）是三个点（&lt;code&gt;...&lt;/code&gt;）。它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(...[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 1 2 3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, ...[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;], &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 1 2 3 4 5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[...document.querySelectorAll(&lt;span class=&quot;string&quot;&gt;&amp;#x27;div&amp;#x27;&lt;/span&gt;)]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// [&amp;lt;div&amp;gt;, &amp;lt;div&amp;gt;, &amp;lt;div&amp;gt;]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;该运算符主要用于函数调用。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;push&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;array, ...items&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  array.push(...items);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;add&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;x, y&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; x + y;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; numbers = [&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;38&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;add(...numbers) &lt;span class=&quot;comment&quot;&gt;// 42&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，&lt;code&gt;array.push(...items)&lt;/code&gt;和&lt;code&gt;add(...numbers)&lt;/code&gt;这两行，都是函数的调用，它们都使用了扩展运算符。该运算符将一个数组，变为参数序列。&lt;/p&gt;
-&lt;p&gt;扩展运算符与正常的函数参数可以结合使用，非常灵活。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 数组的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E6%95%B0%E7%BB%84%E7%9A%84%E6%89%A9%E5%B1%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0078</title>
-    <link href="https://codermae.github.io/2021/06/26/%E6%89%93%E5%8D%A10078/"/>
-    <id>https://codermae.github.io/2021/06/26/%E6%89%93%E5%8D%A10078/</id>
-    <published>2021-06-26T07:46:00.000Z</published>
-    <updated>2021-06-27T07:15:44.772Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#33a3dc&gt;为了理想的实现，航行的孤独在所难免。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;8-函数的扩展&quot;&gt;&lt;a href=&quot;#8-函数的扩展&quot; class=&quot;headerlink&quot; title=&quot;8. 函数的扩展&quot;&gt;&lt;/a&gt;8. 函数的扩展&lt;/h3&gt;&lt;h4 id=&quot;8-1-函数参数的默认值&quot;&gt;&lt;a href=&quot;#8-1-函数参数的默认值&quot; class=&quot;headerlink&quot; title=&quot;8.1 函数参数的默认值&quot;&gt;&lt;/a&gt;8.1 函数参数的默认值&lt;/h4&gt;&lt;h5 id=&quot;8-1-1-基本用法&quot;&gt;&lt;a href=&quot;#8-1-1-基本用法&quot; class=&quot;headerlink&quot; title=&quot;8.1.1 基本用法&quot;&gt;&lt;/a&gt;8.1.1 基本用法&lt;/h5&gt;&lt;p&gt;ES6 之前，不能直接为函数的参数指定默认值，只能采用变通的方法。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;log&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;x, y&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  y = y || &lt;span class=&quot;string&quot;&gt;&amp;#x27;World&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(x, y);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;log(&lt;span class=&quot;string&quot;&gt;&amp;#x27;Hello&amp;#x27;&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// Hello World&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;log(&lt;span class=&quot;string&quot;&gt;&amp;#x27;Hello&amp;#x27;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;China&amp;#x27;&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// Hello China&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;log(&lt;span class=&quot;string&quot;&gt;&amp;#x27;Hello&amp;#x27;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;&amp;#x27;&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// Hello World&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码检查函数&lt;code&gt;log&lt;/code&gt;的参数&lt;code&gt;y&lt;/code&gt;有没有赋值，如果没有，则指定默认值为&lt;code&gt;World&lt;/code&gt;。这种写法的缺点在于，如果参数&lt;code&gt;y&lt;/code&gt;赋值了，但是对应的布尔值为&lt;code&gt;false&lt;/code&gt;，则该赋值不起作用。就像上面代码的最后一行，参数&lt;code&gt;y&lt;/code&gt;等于空字符，结果被改为默认值。&lt;/p&gt;
-&lt;p&gt;为了避免这个问题，通常需要先判断一下参数&lt;code&gt;y&lt;/code&gt;是否被赋值，如果没有，再等于默认值。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; y === &lt;span class=&quot;string&quot;&gt;&amp;#x27;undefined&amp;#x27;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  y = &lt;span class=&quot;string&quot;&gt;&amp;#x27;World&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;ES6 允许为函数的参数设置默认值，即直接写在参数定义的后面。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 函数的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A9%E5%B1%95/"/>
     
   </entry>
   

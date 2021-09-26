@@ -14,7 +14,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>专业踩坑 |  maeBlog</title>
+      <title>Tag: 踩坑MongoDB |  maeBlog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -46,211 +46,72 @@
       
     <main class="content on">
       <section class="outer">
-  <article
-  id="post-专业踩坑"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
+  
+  <ul class="ads">
     
-    <header class="article-header">
+        <li>
+            <a href="">
+                <img src="" width="" alt="">
+            </a>
+        </li>
+    
+        <li>
+            <a href="">
+                <img src="" width="" alt="">
+            </a>
+        </li>
+    
+</ul>
+  
+  
+  <article class="articles">
+    
+    
+    <h1 class="page-type-title">#&nbsp踩坑MongoDB</h1>
+    
+    
+  
+  
+  
+  
+  
+  
+  <div class="archives-wrap">
+    <div class="archive-year-wrap">
+      <a href="/archives/2021" class="archive-year">2021</a>
+    </div>
+    <div class="archives">
+      
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2021/09/15/%E8%B8%A9%E5%9D%91MongoDB/" class="archive-article-date">
+  <time datetime="2021-09-15T12:32:52.000Z" itemprop="datePublished">09/15</time>
+</a>
        
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  专业踩坑
-</h1>
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/2021/09/15/%E8%B8%A9%E5%9D%91MongoDB/"
+    >踩坑MongoDB</a> 
+</h2>
  
 
-      
     </header>
-     
-    <div class="article-meta">
-      <a href="/2021/09/15/%E4%B8%93%E4%B8%9A%E8%B8%A9%E5%9D%91/" class="article-date">
-  <time datetime="2021-09-15T13:07:46.000Z" itemprop="datePublished">2021-09-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%B8%A9%E5%9D%91/">踩坑</a>
+    
+    
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B8%A9%E5%9D%91MongoDB/" rel="tag">踩坑MongoDB</a></li></ul>
+
+    
   </div>
-  
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">305</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
-        </span>
-    </span>
-</div>
- 
-    </div>
-      
-    <div class="tocbot"></div>
-
-
-
-
-  
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2><span id="more"></span>
-<h3 id="2021-09-15"><a href="#2021-09-15" class="headerlink" title="2021/09/15/"></a>2021/09/15/</h3><h4 id="koa-body"><a href="#koa-body" class="headerlink" title="koa-body:"></a>koa-body:</h4><p>post请求失败提示跨域问题，原因是请求数据太大，需要更改<code>formiable:&#123;jsonLimit:&#39;valueMB&#39;&#125;</code>入坑半天┭┮﹏┭┮</p>
-<p>post请求，上传文件失败提示跨域问题，原因是好多文档都说<code>ctx.request.body.files</code> | <code>ctx.request.files.file</code>这样拿文件，结果我的竟然是这样<code>ctx.request.files.upload</code>，又入坑半天┭┮﹏┭┮</p>
-<p>post请求成功，前端返回404，由于嵌套了async,所以下面这样写或者将<code>ctx.body</code>写在内部的<code>async()&#123;&#125;</code>中是不能返回前端数据的<br><code>async()&#123;     async()&#123;         await()     &#125;   ctx.responsse.body = &#123;&#125; &#125;</code><br>改正后：<br><code>async()&#123;     ctx.responsse.body = &#123;&#125;     async()&#123;         await()     &#125; &#125;</code></p>
-<h4 id="mongoose-Model"><a href="#mongoose-Model" class="headerlink" title="mongoose.Model"></a>mongoose.Model</h4><p>数据集合要带s，<code>module.exports = mongoose.model(&#39;chart&#39;, userSchema);</code>否则获取不到，只能添加第三个参数<code>module.exports = mongoose.model(&#39;totalData&#39;, connectSchema,&#39;totalData&#39;);</code></p>
-<h4 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h4><p>由于相对时区导致数据导入后时间减少一天    </p>
-<p>数据为字符类型，时间类型数据随机排序，问题定位：数组对象排序<br><code>result.rows.sort((a,b) =&gt; &#123;       let t1 = new Date(Date.parse(a._id.replace(/-/g,&quot;/&quot;)))       let t2 = new Date(Date.parse(b._id.replace(/-/g,&quot;/&quot;)))       return t1.getTime()-t2.getTime()   &#125;)</code></p>
-<h4 id="v-chart"><a href="#v-chart" class="headerlink" title="v-chart"></a>v-chart</h4><p>extend设置</p>
- 
-      <!-- reward -->
-      
-      <div id="reword-out">
-        <div id="reward-btn">
-          Donate
-        </div>
-      </div>
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-<div class="share-btn">
-      <span class="share-sns share-outer">
-        <i class="ri-share-forward-line"></i>
-        分享
-      </span>
-      <div class="share-wrap">
-        <i class="arrow"></i>
-        <div class="share-icons">
-          
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="ri-weibo-fill"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="ri-wechat-fill"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="ri-qq-fill"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="ri-douban-line"></i>
-          </a>
-          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a> -->
-          
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="ri-facebook-circle-fill"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="ri-twitter-fill"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="ri-google-fill"></i>
-          </a>
-        </div>
-      </div>
-</div>
-
-<div class="wx-share-modal">
-    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/09/15/%E4%B8%93%E4%B8%9A%E8%B8%A9%E5%9D%91/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B8%A9%E5%9D%91/" rel="tag">踩坑</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-  <nav class="article-nav">
-    
-      <a href="/2021/09/22/%E6%89%93%E5%8D%A10093/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            打卡0093
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2021/09/10/Chart%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Chart文件说明</div>
-      </a>
-    
-  </nav>
-
-   
-<!-- valine评论 -->
-<div id="vcomments-box">
-  <div id="vcomments"></div>
-</div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
-<script>
-  new Valine({
-    el: "#vcomments",
-    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
-    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
-    path: window.location.pathname,
-    avatar: "monsterid",
-    placeholder: "给我的文章加点评论吧~",
-    recordIP: true,
-  });
-  const infoEle = document.querySelector("#vcomments .info");
-  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
-    infoEle.childNodes.forEach(function (item) {
-      item.parentNode.removeChild(item);
-    });
-  }
-</script>
-<style>
-  #vcomments-box {
-    padding: 5px 30px;
-  }
-
-  @media screen and (max-width: 800px) {
-    #vcomments-box {
-      padding: 5px 0px;
-    }
-  }
-
-  #vcomments-box #vcomments {
-    background-color: #fff;
-  }
-
-  .v .vlist .vcard .vh {
-    padding-right: 20px;
-  }
-
-  .v .vlist .vcard {
-    padding-left: 10px;
-  }
-</style>
-
- 
-   
-     
 </article>
+      
+      
+    </div>
+  </div>
+  
+  
 
+  
 </section>
       <footer class="footer">
   <div class="outer">
@@ -405,22 +266,6 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
- 
-<script src="/js/tocbot.min.js"></script>
-
-<script>
-  tocbot.init({
-    tocSelector: ".tocbot",
-    contentSelector: ".article-entry",
-    headingSelector: "h1, h2, h3, h4, h5, h6",
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: "main",
-    positionFixedSelector: ".tocbot",
-    positionFixedClass: "is-position-fixed",
-    fixedSidebarOffset: "auto",
-  });
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
 <link
