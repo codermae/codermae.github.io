@@ -159,6 +159,70 @@
     
     
     <article
+  id="post-打卡0057"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/31/%E6%89%93%E5%8D%A10057/"
+    >打卡0057</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/31/%E6%89%93%E5%8D%A10057/" class="article-date">
+  <time datetime="2021-05-31T00:59:48.000Z" itemprop="datePublished">2021-05-31</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#a3cf62>跟这个世界交手的许多年来，你是否，光彩依旧，兴趣盎然。</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="3-Navigator-对象，Screen-对象"><a href="#3-Navigator-对象，Screen-对象" class="headerlink" title="3. Navigator 对象，Screen 对象"></a>3. Navigator 对象，Screen 对象</h3><p><code>window.navigator</code>属性指向一个包含浏览器和系统信息的 Navigator 对象。脚本通过这个属性了解用户的环境信息。</p>
+<h4 id="3-1-Navigator-对象的属性"><a href="#3-1-Navigator-对象的属性" class="headerlink" title="3.1 Navigator 对象的属性"></a>3.1 Navigator 对象的属性</h4><h5 id="3-1-1-Navigator-userAgent"><a href="#3-1-1-Navigator-userAgent" class="headerlink" title="3.1.1 Navigator.userAgent"></a>3.1.1 Navigator.userAgent</h5><p><code>navigator.userAgent</code>属性返回浏览器的 User Agent 字符串，表示浏览器的厂商和版本信息。</p>
+<p>下面是 Chrome 浏览器的<code>userAgent</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">navigator.userAgent</span><br><span class="line"><span class="comment">// &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36&quot;</span></span><br></pre></td></tr></table></figure>
+<p>通过<code>userAgent</code>属性识别浏览器，不是一个好办法。因为必须考虑所有的情况（不同的浏览器，不同的版本），非常麻烦，而且用户可以改变这个字符串。这个字符串的格式并无统一规定，也无法保证未来的适用性，各种上网设备层出不穷，难以穷尽。所以，现在一般不再通过它识别浏览器了，而是使用“功能识别”方法，即逐一测试当前浏览器是否支持要用到的 JavaScript 功能。</p>
+<p>不过，通过<code>userAgent</code>可以大致准确地识别手机浏览器，方法就是测试是否包含<code>mobi</code>字符串。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ua = navigator.userAgent.toLowerCase();</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="regexp">/mobi/i</span>.test(ua)) &#123;</span><br><span class="line">  <span class="comment">// 手机浏览器</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// 非手机浏览器</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
+      <a class="article-more-link" href="/2021/05/31/%E6%89%93%E5%8D%A10057/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Navigator-%E5%AF%B9%E8%B1%A1%EF%BC%8CScreen-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 浏览器模型-Navigator 对象，Screen 对象</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0056"
   class="article article-type-post"
   itemscope
@@ -731,77 +795,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-键盘事件</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0047"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/28/%E6%89%93%E5%8D%A10047/"
-    >打卡0047</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/28/%E6%89%93%E5%8D%A10047/" class="article-date">
-  <time datetime="2021-05-28T02:04:34.000Z" itemprop="datePublished">2021-05-28</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#ffc20e> “Let there be light.”</font></p>
-<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="4-鼠标事件"><a href="#4-鼠标事件" class="headerlink" title="4. 鼠标事件"></a>4. 鼠标事件</h3><h4 id="4-1-鼠标事件的种类"><a href="#4-1-鼠标事件的种类" class="headerlink" title="4.1 鼠标事件的种类"></a>4.1 鼠标事件的种类</h4><p>鼠标事件指与鼠标相关的事件，继承了<code>MouseEvent</code>接口。具体的事件主要有以下一些。</p>
-<ul>
-<li><code>click</code>:按下鼠标（通常是按下主按钮）时触发。</li>
-<li><code>dblclick</code>:在同一个元素上双击鼠标时触发。</li>
-<li><code>mousedown</code>:按下鼠标键时触发。</li>
-<li><code>mouseup</code>:释放按下的鼠标键时触发。</li>
-<li><code>mousemove</code>:当鼠标在一个节点内部移动时触发。当鼠标持续移动时，该事件会连续触发。为了避免性能问题，建议对该事件的监听函数做一些限定，比如限定一段时间内只能运行一次。</li>
-<li><code>mouseenter</code>:鼠标进入一个节点时触发，进入子节点不会触发这个事件（详见后文）。</li>
-<li><code>mouseover</code>:鼠标进入一个节点时触发，进入子节点会再一次触发这个事件（详见后文）。</li>
-<li><code>mouseout</code>:鼠标离开一个节点时触发，离开父节点也会触发这个事件（详见后文）。</li>
-<li><code>mouseleave</code>:鼠标离开一个节点时触发，离开父节点不会触发这个事件（详见后文）。</li>
-<li><code>contextmenu</code>:按下鼠标右键时（上下文菜单出现前）触发，或者按下“上下文菜单键”时触发。</li>
-<li><code>wheel</code>:滚动鼠标的滚轮时触发，该事件继承的是<code>WheelEvent</code>接口。</li>
-</ul> 
-      <a class="article-more-link" href="/2021/05/28/%E6%89%93%E5%8D%A10047/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-鼠标事件</a></li></ul>
 
     </footer>
   </div>

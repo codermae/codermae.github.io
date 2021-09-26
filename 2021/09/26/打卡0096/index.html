@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
+       
+      <meta name="keywords" content="blog" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>打卡0096 |  maeBlog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-打卡0096"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  打卡0096
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/09/26/%E6%89%93%E5%8D%A10096/" class="article-date">
+  <time datetime="2021-09-26T06:35:40.000Z" itemprop="datePublished">2021-09-26</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">7k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">29 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#90d7ec>愿你我既可以朝九晚五、又可以浪迹天涯</font></p>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="25-Module-的加载实现"><a href="#25-Module-的加载实现" class="headerlink" title="25. Module 的加载实现"></a>25. Module 的加载实现</h3><h4 id="25-1-浏览器加载"><a href="#25-1-浏览器加载" class="headerlink" title="25.1 浏览器加载"></a>25.1 浏览器加载</h4><h5 id="25-1-1-传统方法"><a href="#25-1-1-传统方法" class="headerlink" title="25.1.1 传统方法"></a>25.1.1 传统方法</h5><p>HTML 网页中，浏览器通过<code>&lt;script&gt;</code>标签加载 JavaScript 脚本。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 页面内嵌的脚本 --&gt;</span><br><span class="line">&lt;script type=<span class="string">&quot;application/javascript&quot;</span>&gt;</span><br><span class="line">  <span class="comment">// module code</span></span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 外部脚本 --&gt;</span><br><span class="line">&lt;script type=<span class="string">&quot;application/javascript&quot;</span> src=<span class="string">&quot;path/to/myModule.js&quot;</span>&gt;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，由于浏览器脚本的默认语言是 JavaScript，因此<code>type=&quot;application/javascript&quot;</code>可以省略。</p>
+<p>默认情况下，浏览器是同步加载 JavaScript 脚本，即渲染引擎遇到<code>&lt;script&gt;</code>标签就会停下来，等到执行完脚本，再继续向下渲染。如果是外部脚本，还必须加入脚本下载的时间。</p>
+<p>如果脚本体积很大，下载和执行的时间就会很长，因此造成浏览器堵塞，用户会感觉到浏览器“卡死”了，没有任何响应。这显然是很不好的体验，所以浏览器允许脚本异步加载，下面就是两种异步加载的语法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;path/to/myModule.js&quot;</span> defer&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;path/to/myModule.js&quot;</span> <span class="keyword">async</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>&lt;script&gt;</code>标签打开<code>defer</code>或<code>async</code>属性，脚本就会异步加载。渲染引擎遇到这一行命令，就会开始下载外部脚本，但不会等它下载和执行，而是直接执行后面的命令。</p>
+<p><code>defer</code>与<code>async</code>的区别是：<code>defer</code>要等到整个页面在内存中正常渲染结束（DOM 结构完全生成，以及其他脚本执行完成），才会执行；<code>async</code>一旦下载完，渲染引擎就会中断渲染，执行这个脚本以后，再继续渲染。一句话，<code>defer</code>是“渲染完再执行”，<code>async</code>是“下载完就执行”。另外，如果有多个<code>defer</code>脚本，会按照它们在页面出现的顺序加载，而多个<code>async</code>脚本是不能保证加载顺序的。</p>
+<span id="more"></span>
+<h5 id="25-1-2-加载规则"><a href="#25-1-2-加载规则" class="headerlink" title="25.1.2 加载规则"></a>25.1.2 加载规则</h5><p>浏览器加载 ES6 模块，也使用<code>&lt;script&gt;</code>标签，但是要加入<code>type=&quot;module&quot;</code>属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;module&quot;</span> src=<span class="string">&quot;./foo.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>上面代码在网页中插入一个模块<code>foo.js</code>，由于<code>type</code>属性设为<code>module</code>，所以浏览器知道这是一个 ES6 模块。</p>
+<p>浏览器对于带有<code>type=&quot;module&quot;</code>的<code>&lt;script&gt;</code>，都是异步加载，不会造成堵塞浏览器，即等到整个页面渲染完，再执行模块脚本，等同于打开了<code>&lt;script&gt;</code>标签的<code>defer</code>属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;module&quot;</span> src=<span class="string">&quot;./foo.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;!-- 等同于 --&gt;</span><br><span class="line">&lt;script type=<span class="string">&quot;module&quot;</span> src=<span class="string">&quot;./foo.js&quot;</span> defer&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>如果网页有多个<code>&lt;script type=&quot;module&quot;&gt;</code>，它们会按照在页面出现的顺序依次执行。</p>
+<p><code>&lt;script&gt;</code>标签的<code>async</code>属性也可以打开，这时只要加载完成，渲染引擎就会中断渲染立即执行。执行完成后，再恢复渲染。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;module&quot;</span> src=<span class="string">&quot;./foo.js&quot;</span> <span class="keyword">async</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>一旦使用了<code>async</code>属性，<code>&lt;script type=&quot;module&quot;&gt;</code>就不会按照在页面出现的顺序执行，而是只要该模块加载完成，就执行该模块。</p>
+<p>ES6 模块也允许内嵌在网页中，语法行为与加载外部脚本完全一致。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;module&quot;</span>&gt;</span><br><span class="line">  <span class="keyword">import</span> utils <span class="keyword">from</span> <span class="string">&quot;./utils.js&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// other code</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>举例来说，jQuery 就支持模块加载。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;module&quot;</span>&gt;</span><br><span class="line">  <span class="keyword">import</span> $ <span class="keyword">from</span> <span class="string">&quot;./jquery/src/jquery.js&quot;</span>;</span><br><span class="line">  $(<span class="string">&#x27;#message&#x27;</span>).text(<span class="string">&#x27;Hi from jQuery!&#x27;</span>);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>对于外部的模块脚本（上例是<code>foo.js</code>），有几点需要注意。</p>
+<ul>
+<li>代码是在模块作用域之中运行，而不是在全局作用域运行。模块内部的顶层变量，外部不可见。</li>
+<li>模块脚本自动采用严格模式，不管有没有声明<code>use strict</code>。</li>
+<li>模块之中，可以使用<code>import</code>命令加载其他模块（<code>.js</code>后缀不可省略，需要提供绝对 URL 或相对 URL），也可以使用<code>export</code>命令输出对外接口。</li>
+<li>模块之中，顶层的<code>this</code>关键字返回<code>undefined</code>，而不是指向<code>window</code>。也就是说，在模块顶层使用<code>this</code>关键字，是无意义的。</li>
+<li>同一个模块如果加载多次，将只执行一次。</li>
+</ul>
+<p>下面是一个示例模块。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> utils <span class="keyword">from</span> <span class="string">&#x27;https://example.com/js/utils.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> x = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(x === <span class="built_in">window</span>.x); <span class="comment">//false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">this</span> === <span class="literal">undefined</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>利用顶层的<code>this</code>等于<code>undefined</code>这个语法点，可以侦测当前代码是否在 ES6 模块之中。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> isNotModuleScript = <span class="built_in">this</span> !== <span class="literal">undefined</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="25-2-ES6-模块与-CommonJS-模块的差异"><a href="#25-2-ES6-模块与-CommonJS-模块的差异" class="headerlink" title="25.2 ES6 模块与 CommonJS 模块的差异"></a>25.2 ES6 模块与 CommonJS 模块的差异</h4><p>讨论 Node.js 加载 ES6 模块之前，必须了解 ES6 模块与 CommonJS 模块完全不同。</p>
+<p>它们有三个重大差异。</p>
+<ul>
+<li>CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。</li>
+<li>CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。</li>
+<li>CommonJS 模块的<code>require()</code>是同步加载模块，ES6 模块的<code>import</code>命令是异步加载，有一个独立的模块依赖的解析阶段。</li>
+</ul>
+<p>第二个差异是因为 CommonJS 加载的是一个对象（即<code>module.exports</code>属性），该对象只有在脚本运行完才会生成。而 ES6 模块不是对象，它的对外接口只是一种静态定义，在代码静态解析阶段就会生成。</p>
+<p>下面重点解释第一个差异。</p>
+<p>CommonJS 模块输出的是值的拷贝，也就是说，一旦输出一个值，模块内部的变化就影响不到这个值。请看下面这个模块文件<code>lib.js</code>的例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lib.js</span></span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">3</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">incCounter</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  counter++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  counter: counter,</span><br><span class="line">  incCounter: incCounter,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>上面代码输出内部变量<code>counter</code>和改写这个变量的内部方法<code>incCounter</code>。然后，在<code>main.js</code>里面加载这个模块。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">var</span> mod = <span class="built_in">require</span>(<span class="string">&#x27;./lib&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(mod.counter);  <span class="comment">// 3</span></span><br><span class="line">mod.incCounter();</span><br><span class="line"><span class="built_in">console</span>.log(mod.counter); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<p>上面代码说明，<code>lib.js</code>模块加载以后，它的内部变化就影响不到输出的<code>mod.counter</code>了。这是因为<code>mod.counter</code>是一个原始类型的值，会被缓存。除非写成一个函数，才能得到内部变动后的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lib.js</span></span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">3</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">incCounter</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  counter++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="keyword">get</span> <span class="title">counter</span>() &#123;</span><br><span class="line">    <span class="keyword">return</span> counter</span><br><span class="line">  &#125;,</span><br><span class="line">  incCounter: incCounter,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，输出的<code>counter</code>属性实际上是一个取值器函数。现在再执行<code>main.js</code>，就可以正确读取内部变量<code>counter</code>的变动了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ node main.js</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+<p>ES6 模块的运行机制与 CommonJS 不一样。JS 引擎对脚本静态分析的时候，遇到模块加载命令<code>import</code>，就会生成一个只读引用。等到脚本真正执行时，再根据这个只读引用，到被加载的那个模块里面去取值。换句话说，ES6 的<code>import</code>有点像 Unix 系统的“符号连接”，原始值变了，<code>import</code>加载的值也会跟着变。因此，ES6 模块是动态引用，并且不会缓存值，模块里面的变量绑定其所在的模块。</p>
+<p>还是举上面的例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lib.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> counter = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">incCounter</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  counter++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; counter, incCounter &#125; <span class="keyword">from</span> <span class="string">&#x27;./lib&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(counter); <span class="comment">// 3</span></span><br><span class="line">incCounter();</span><br><span class="line"><span class="built_in">console</span>.log(counter); <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+<p>上面代码说明，ES6 模块输入的变量<code>counter</code>是活的，完全反应其所在模块<code>lib.js</code>内部的变化。</p>
+<p>再举一个出现在<code>export</code>一节中的例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// m1.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">var</span> foo = <span class="string">&#x27;bar&#x27;</span>;</span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> foo = <span class="string">&#x27;baz&#x27;</span>, <span class="number">500</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// m2.js</span></span><br><span class="line"><span class="keyword">import</span> &#123;foo&#125; <span class="keyword">from</span> <span class="string">&#x27;./m1.js&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(foo);</span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(foo), <span class="number">500</span>);</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>m1.js</code>的变量<code>foo</code>，在刚加载时等于<code>bar</code>，过了 500 毫秒，又变为等于<code>baz</code>。</p>
+<p>让我们看看，<code>m2.js</code>能否正确读取这个变化。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ babel-node m2.js</span><br><span class="line"></span><br><span class="line">bar</span><br><span class="line">baz</span><br></pre></td></tr></table></figure>
+<p>上面代码表明，ES6 模块不会缓存运行结果，而是动态地去被加载的模块取值，并且变量总是绑定其所在的模块。</p>
+<p>由于 ES6 输入的模块变量，只是一个“符号连接”，所以这个变量是只读的，对它进行重新赋值会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lib.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; obj &#125; <span class="keyword">from</span> <span class="string">&#x27;./lib&#x27;</span>;</span><br><span class="line"></span><br><span class="line">obj.prop = <span class="number">123</span>; <span class="comment">// OK</span></span><br><span class="line">obj = &#123;&#125;; <span class="comment">// TypeError</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>main.js</code>从<code>lib.js</code>输入变量<code>obj</code>，可以对<code>obj</code>添加属性，但是重新赋值就会报错。因为变量<code>obj</code>指向的地址是只读的，不能重新赋值，这就好比<code>main.js</code>创造了一个名为<code>obj</code>的<code>const</code>变量。</p>
+<p>最后，<code>export</code>通过接口，输出的是同一个值。不同的脚本加载这个接口，得到的都是同样的实例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mod.js</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">C</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.sum = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">this</span>.add = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.sum += <span class="number">1</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="built_in">this</span>.show = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.sum);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> c = <span class="keyword">new</span> C();</span><br></pre></td></tr></table></figure>
+<p>上面的脚本<code>mod.js</code>，输出的是一个<code>C</code>的实例。不同的脚本加载这个模块，得到的都是同一个实例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// x.js</span></span><br><span class="line"><span class="keyword">import</span> &#123;c&#125; <span class="keyword">from</span> <span class="string">&#x27;./mod&#x27;</span>;</span><br><span class="line">c.add();</span><br><span class="line"></span><br><span class="line"><span class="comment">// y.js</span></span><br><span class="line"><span class="keyword">import</span> &#123;c&#125; <span class="keyword">from</span> <span class="string">&#x27;./mod&#x27;</span>;</span><br><span class="line">c.show();</span><br><span class="line"></span><br><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./x&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./y&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>现在执行<code>main.js</code>，输出的是<code>1</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ babel-node main.js</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>这就证明了<code>x.js</code>和<code>y.js</code>加载的都是<code>C</code>的同一个实例。</p>
+<h4 id="25-3-Node-js-的模块加载方法"><a href="#25-3-Node-js-的模块加载方法" class="headerlink" title="25.3 Node.js 的模块加载方法"></a>25.3 Node.js 的模块加载方法</h4><h5 id="25-3-1-概述"><a href="#25-3-1-概述" class="headerlink" title="25.3.1 概述"></a>25.3.1 概述</h5><p>JavaScript 现在有两种模块。一种是 ES6 模块，简称 ESM；另一种是 CommonJS 模块，简称 CJS。</p>
+<p>CommonJS 模块是 Node.js 专用的，与 ES6 模块不兼容。语法上面，两者最明显的差异是，CommonJS 模块使用<code>require()</code>和<code>module.exports</code>，ES6 模块使用<code>import</code>和<code>export</code>。</p>
+<p>它们采用不同的加载方案。从 Node.js v13.2 版本开始，Node.js 已经默认打开了 ES6 模块支持。</p>
+<p>Node.js 要求 ES6 模块采用<code>.mjs</code>后缀文件名。也就是说，只要脚本文件里面使用<code>import</code>或者<code>export</code>命令，那么就必须采用<code>.mjs</code>后缀名。Node.js 遇到<code>.mjs</code>文件，就认为它是 ES6 模块，默认启用严格模式，不必在每个模块文件顶部指定<code>&quot;use strict&quot;</code>。</p>
+<p>如果不希望将后缀名改成<code>.mjs</code>，可以在项目的<code>package.json</code>文件中，指定<code>type</code>字段为<code>module</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   <span class="string">&quot;type&quot;</span>: <span class="string">&quot;module&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一旦设置了以后，该目录里面的 JS 脚本，就被解释用 ES6 模块。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 解释成 ES6 模块</span><br><span class="line">$ node my-app.js</span><br></pre></td></tr></table></figure>
+<p>如果这时还要使用 CommonJS 模块，那么需要将 CommonJS 脚本的后缀名都改成<code>.cjs</code>。如果没有<code>type</code>字段，或者<code>type</code>字段为<code>commonjs</code>，则<code>.js</code>脚本会被解释成 CommonJS 模块。</p>
+<p>总结为一句话：<code>.mjs</code>文件总是以 ES6 模块加载，<code>.cjs</code>文件总是以 CommonJS 模块加载，<code>.js</code>文件的加载取决于<code>package.json</code>里面<code>type</code>字段的设置。</p>
+<p>注意，ES6 模块与 CommonJS 模块尽量不要混用。<code>require</code>命令不能加载<code>.mjs</code>文件，会报错，只有<code>import</code>命令才可以加载<code>.mjs</code>文件。反过来，<code>.mjs</code>文件里面也不能使用<code>require</code>命令，必须使用<code>import</code>。</p>
+<h5 id="25-3-2-package-json-的-main-字段"><a href="#25-3-2-package-json-的-main-字段" class="headerlink" title="25.3.2 package.json 的 main 字段"></a>25.3.2 package.json 的 main 字段</h5><p><code>package.json</code>文件有两个字段可以指定模块的入口文件：<code>main</code>和<code>exports</code>。比较简单的模块，可以只使用<code>main</code>字段，指定模块加载的入口文件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ./node_modules/es-module-package/package.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;type&quot;</span>: <span class="string">&quot;module&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;./src/index.js&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码指定项目的入口脚本为<code>./src/index.js</code>，它的格式为 ES6 模块。如果没有<code>type</code>字段，<code>index.js</code>就会被解释为 CommonJS 模块。</p>
+<p>然后，<code>import</code>命令就可以加载这个模块。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ./my-app.mjs</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; something &#125; <span class="keyword">from</span> <span class="string">&#x27;es-module-package&#x27;</span>;</span><br><span class="line"><span class="comment">// 实际加载的是 ./node_modules/es-module-package/src/index.js</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，运行该脚本以后，Node.js 就会到<code>./node_modules</code>目录下面，寻找<code>es-module-package</code>模块，然后根据该模块<code>package.json</code>的<code>main</code>字段去执行入口文件。</p>
+<p>这时，如果用 CommonJS 模块的<code>require()</code>命令去加载<code>es-module-package</code>模块会报错，因为 CommonJS 模块不能处理<code>export</code>命令。</p>
+<h5 id="25-3-3-package-json-的-exports-字段"><a href="#25-3-3-package-json-的-exports-字段" class="headerlink" title="25.3.3 package.json 的 exports 字段"></a>25.3.3 package.json 的 exports 字段</h5><p><code>exports</code>字段的优先级高于<code>main</code>字段。它有多种用法。</p>
+<p>（1）子目录别名</p>
+<p><code>package.json</code>文件的<code>exports</code>字段可以指定脚本或子目录的别名。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ./node_modules/es-module-package/package.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;exports&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;./submodule&quot;</span>: <span class="string">&quot;./src/submodule.js&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的代码指定<code>src/submodule.js</code>别名为<code>submodule</code>，然后就可以从别名加载这个文件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> submodule <span class="keyword">from</span> <span class="string">&#x27;es-module-package/submodule&#x27;</span>;</span><br><span class="line"><span class="comment">// 加载 ./node_modules/es-module-package/src/submodule.js</span></span><br></pre></td></tr></table></figure>
+<p>下面是子目录别名的例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ./node_modules/es-module-package/package.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;exports&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;./features/&quot;</span>: <span class="string">&quot;./src/features/&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> feature <span class="keyword">from</span> <span class="string">&#x27;es-module-package/features/x.js&#x27;</span>;</span><br><span class="line"><span class="comment">// 加载 ./node_modules/es-module-package/src/features/x.js</span></span><br></pre></td></tr></table></figure>
+<p>如果没有指定别名，就不能用“模块+脚本名”这种形式加载脚本。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 报错</span></span><br><span class="line"><span class="keyword">import</span> submodule <span class="keyword">from</span> <span class="string">&#x27;es-module-package/private-module.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不报错</span></span><br><span class="line"><span class="keyword">import</span> submodule <span class="keyword">from</span> <span class="string">&#x27;./node_modules/es-module-package/private-module.js&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>（2）main 的别名</p>
+<p><code>exports</code>字段的别名如果是.，就代表模块的主入口，优先级高于<code>main</code>字段，并且可以直接简写成<code>exports</code>字段的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;exports&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;.&quot;</span>: <span class="string">&quot;./main.js&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;exports&quot;</span>: <span class="string">&quot;./main.js&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>由于<code>exports</code>字段只有支持 ES6 的 Node.js 才认识，所以可以用来兼容旧版本的 Node.js。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;./main-legacy.cjs&quot;</span>,</span><br><span class="line">  <span class="string">&quot;exports&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;.&quot;</span>: <span class="string">&quot;./main-modern.cjs&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，老版本的 Node.js （不支持 ES6 模块）的入口文件是<code>main-legacy.cjs</code>，新版本的 Node.js 的入口文件是<code>main-modern.cjs</code>。</p>
+<p>（3）条件加载</p>
+<p>利用<code>.</code>这个别名，可以为 ES6 模块和 CommonJS 指定不同的入口。目前，这个功能需要在 Node.js 运行的时候，打开<code>--experimental-conditional-exports</code>标志。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;type&quot;</span>: <span class="string">&quot;module&quot;</span>,</span><br><span class="line">  <span class="string">&quot;exports&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;.&quot;</span>: &#123;</span><br><span class="line">      <span class="string">&quot;require&quot;</span>: <span class="string">&quot;./main.cjs&quot;</span>,</span><br><span class="line">      <span class="string">&quot;default&quot;</span>: <span class="string">&quot;./main.js&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，别名<code>.</code>的<code>require</code>条件指定<code>require()</code>命令的入口文件（即 CommonJS 的入口），<code>default</code>条件指定其他情况的入口（即 ES6 的入口）。</p>
+<p>上面的写法可以简写如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;exports&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;require&quot;</span>: <span class="string">&quot;./main.cjs&quot;</span>,</span><br><span class="line">    <span class="string">&quot;default&quot;</span>: <span class="string">&quot;./main.js&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意，如果同时还有其他别名，就不能采用简写，否则或报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// 报错</span></span><br><span class="line">  <span class="string">&quot;exports&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;./feature&quot;</span>: <span class="string">&quot;./lib/feature.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;require&quot;</span>: <span class="string">&quot;./main.cjs&quot;</span>,</span><br><span class="line">    <span class="string">&quot;default&quot;</span>: <span class="string">&quot;./main.js&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="25-3-4-CommonJS-模块加载-ES6-模块"><a href="#25-3-4-CommonJS-模块加载-ES6-模块" class="headerlink" title="25.3.4 CommonJS 模块加载 ES6 模块"></a>25.3.4 CommonJS 模块加载 ES6 模块</h5><p>CommonJS 的<code>require()</code>命令不能加载 ES6 模块，会报错，只能使用<code>import()</code>这个方法加载。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> <span class="keyword">import</span>(<span class="string">&#x27;./my-app.mjs&#x27;</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<p>上面代码可以在 CommonJS 模块中运行。</p>
+<p><code>require()</code>不支持 ES6 模块的一个原因是，它是同步加载，而 ES6 模块内部可以使用顶层<code>await</code>命令，导致无法被同步加载。</p>
+<h5 id="25-3-5-ES6-模块加载-CommonJS-模块"><a href="#25-3-5-ES6-模块加载-CommonJS-模块" class="headerlink" title="25.3.5 ES6 模块加载 CommonJS 模块"></a>25.3.5 ES6 模块加载 CommonJS 模块</h5><p>ES6 模块的<code>import</code>命令可以加载 CommonJS 模块，但是只能整体加载，不能只加载单一的输出项。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正确</span></span><br><span class="line"><span class="keyword">import</span> packageMain <span class="keyword">from</span> <span class="string">&#x27;commonjs-package&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 报错</span></span><br><span class="line"><span class="keyword">import</span> &#123; method &#125; <span class="keyword">from</span> <span class="string">&#x27;commonjs-package&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>这是因为 ES6 模块需要支持静态代码分析，而 CommonJS 模块的输出接口是<code>module.exports</code>，是一个对象，无法被静态分析，所以只能整体加载。</p>
+<p>加载单一的输出项，可以写成下面这样。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> packageMain <span class="keyword">from</span> <span class="string">&#x27;commonjs-package&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> &#123; method &#125; = packageMain;</span><br></pre></td></tr></table></figure>
+<p>还有一种变通的加载方法，就是使用 Node.js 内置的<code>module.createRequire()</code>方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cjs.cjs</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="string">&#x27;cjs&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// esm.mjs</span></span><br><span class="line"><span class="keyword">import</span> &#123; createRequire &#125; <span class="keyword">from</span> <span class="string">&#x27;module&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">require</span> = createRequire(<span class="keyword">import</span>.meta.url);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> cjs = <span class="built_in">require</span>(<span class="string">&#x27;./cjs.cjs&#x27;</span>);</span><br><span class="line">cjs === <span class="string">&#x27;cjs&#x27;</span>; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，ES6 模块通过<code>module.createRequire()</code>方法可以加载 CommonJS 模块。但是，这种写法等于将 ES6 和 CommonJS 混在一起了，所以不建议使用。</p>
+<h5 id="25-3-6-同时支持两种格式的模块"><a href="#25-3-6-同时支持两种格式的模块" class="headerlink" title="25.3.6 同时支持两种格式的模块"></a>25.3.6 同时支持两种格式的模块</h5><p>一个模块同时要支持 CommonJS 和 ES6 两种格式，也很容易。</p>
+<p>如果原始模块是 ES6 格式，那么需要给出一个整体输出接口，比如<code>export default obj</code>，使得 CommonJS 可以用<code>import()</code>进行加载。</p>
+<p>如果原始模块是 CommonJS 格式，那么可以加一个包装层。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cjsModule <span class="keyword">from</span> <span class="string">&#x27;../index.js&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> foo = cjsModule.foo;</span><br></pre></td></tr></table></figure>
+<p>上面代码先整体输入 CommonJS 模块，然后再根据需要输出具名接口。</p>
+<p>你可以把这个文件的后缀名改为<code>.mjs</code>，或者将它放在一个子目录，再在这个子目录里面放一个单独的<code>package.json</code>文件，指明<code>&#123; type: &quot;module&quot; &#125;</code>。</p>
+<p>另一种做法是在<code>package.json</code>文件的<code>exports</code>字段，指明两种格式模块各自的加载入口。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;exports&quot;</span>：&#123;</span><br><span class="line">  <span class="string">&quot;require&quot;</span>: <span class="string">&quot;./index.js&quot;</span>，</span><br><span class="line">  <span class="string">&quot;import&quot;</span>: <span class="string">&quot;./esm/wrapper.js&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码指定<code>require()</code>和<code>import</code>，加载该模块会自动切换到不一样的入口文件。</p>
+<h5 id="25-3-7-Node-js-的内置模块"><a href="#25-3-7-Node-js-的内置模块" class="headerlink" title="25.3.7 Node.js 的内置模块"></a>25.3.7 Node.js 的内置模块</h5><p>Node.js 的内置模块可以整体加载，也可以加载指定的输出项。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 整体加载</span></span><br><span class="line"><span class="keyword">import</span> EventEmitter <span class="keyword">from</span> <span class="string">&#x27;events&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> e = <span class="keyword">new</span> EventEmitter();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加载指定的输出项</span></span><br><span class="line"><span class="keyword">import</span> &#123; readFile &#125; <span class="keyword">from</span> <span class="string">&#x27;fs&#x27;</span>;</span><br><span class="line">readFile(<span class="string">&#x27;./foo.txt&#x27;</span>, <span class="function">(<span class="params">err, source</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="built_in">console</span>.error(err);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(source);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h5 id="25-3-8-加载路径"><a href="#25-3-8-加载路径" class="headerlink" title="25.3.8 加载路径"></a>25.3.8 加载路径</h5><p>ES6 模块的加载路径必须给出脚本的完整路径，不能省略脚本的后缀名。<code>import</code>命令和<code>package.json</code>文件的<code>main</code>字段如果省略脚本的后缀名，会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES6 模块中将报错</span></span><br><span class="line"><span class="keyword">import</span> &#123; something &#125; <span class="keyword">from</span> <span class="string">&#x27;./index&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>为了与浏览器的<code>import</code>加载规则相同，Node.js 的<code>.mjs</code>文件支持 URL 路径。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./foo.mjs?query=1&#x27;</span>; <span class="comment">// 加载 ./foo 传入参数 ?query=1</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，脚本路径带有参数?query=1，Node 会按 URL 规则解读。同一个脚本只要参数不同，就会被加载多次，并且保存成不同的缓存。由于这个原因，只要文件名中含有:、%、#、?等特殊字符，最好对这些字符进行转义。</p>
+<p>目前，Node.js 的<code>import</code>命令只支持加载本地模块（<code>file:</code>协议）和<code>data:</code>协议，不支持加载远程模块。另外，脚本路径只支持相对路径，不支持绝对路径（即以<code>/</code>或<code>//</code>开头的路径）。</p>
+<h5 id="25-3-9-内部变量"><a href="#25-3-9-内部变量" class="headerlink" title="25.3.9 内部变量"></a>25.3.9 内部变量</h5><p>ES6 模块应该是通用的，同一个模块不用修改，就可以用在浏览器环境和服务器环境。为了达到这个目标，Node.js 规定 ES6 模块之中不能使用 CommonJS 模块的特有的一些内部变量。</p>
+<p>首先，就是<code>this</code>关键字。ES6 模块之中，顶层的<code>this</code>指向<code>undefined</code>；CommonJS 模块的顶层<code>this</code>指向当前模块，这是两者的一个重大差异。</p>
+<p>其次，以下这些顶层变量在 ES6 模块之中都是不存在的。</p>
+<ul>
+<li><code>arguments</code></li>
+<li><code>require</code></li>
+<li><code>module</code></li>
+<li><code>exports</code></li>
+<li><code>__filename</code></li>
+<li><code>__dirname</code></li>
+</ul>
+<h4 id="25-4-循环加载"><a href="#25-4-循环加载" class="headerlink" title="25.4 循环加载"></a>25.4 循环加载</h4><p>“循环加载”（circular dependency）指的是，<code>a</code>脚本的执行依赖<code>b</code>脚本，而<code>b</code>脚本的执行又依赖<code>a</code>脚本。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a.js</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="built_in">require</span>(<span class="string">&#x27;b&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// b.js</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">&#x27;a&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>通常，“循环加载”表示存在强耦合，如果处理不好，还可能导致递归加载，使得程序无法执行，因此应该避免出现。</p>
+<p>但是实际上，这是很难避免的，尤其是依赖关系复杂的大项目，很容易出现<code>a</code>依赖<code>b</code>，<code>b</code>依赖<code>c</code>，<code>c</code>又依赖<code>a</code>这样的情况。这意味着，模块加载机制必须考虑“循环加载”的情况。</p>
+<p>对于 JavaScript 语言来说，目前最常见的两种模块格式 CommonJS 和 ES6，处理“循环加载”的方法是不一样的，返回的结果也不一样。</p>
+<h5 id="25-4-1-CommonJS-模块的加载原理"><a href="#25-4-1-CommonJS-模块的加载原理" class="headerlink" title="25.4.1 CommonJS 模块的加载原理"></a>25.4.1 CommonJS 模块的加载原理</h5><p>介绍 ES6 如何处理“循环加载”之前，先介绍目前最流行的 CommonJS 模块格式的加载原理。</p>
+<p>CommonJS 的一个模块，就是一个脚本文件。<code>require</code>命令第一次加载该脚本，就会执行整个脚本，然后在内存生成一个对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  id: <span class="string">&#x27;...&#x27;</span>,</span><br><span class="line">  <span class="built_in">exports</span>: &#123; ... &#125;,</span><br><span class="line">  loaded: <span class="literal">true</span>,</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码就是 Node 内部加载模块后生成的一个对象。该对象的<code>id</code>属性是模块名，<code>exports</code>属性是模块输出的各个接口，<code>loaded</code>属性是一个布尔值，表示该模块的脚本是否执行完毕。其他还有很多属性，这里都省略了。</p>
+<p>以后需要用到这个模块的时候，就会到<code>exports</code>属性上面取值。即使再次执行<code>require</code>命令，也不会再次执行该模块，而是到缓存之中取值。也就是说，CommonJS 模块无论加载多少次，都只会在第一次加载时运行一次，以后再加载，就返回第一次运行的结果，除非手动清除系统缓存。</p>
+<h5 id="25-4-2-CommonJS-模块的循环加载"><a href="#25-4-2-CommonJS-模块的循环加载" class="headerlink" title="25.4.2 CommonJS 模块的循环加载"></a>25.4.2 CommonJS 模块的循环加载</h5><p>CommonJS 模块的重要特性是加载时执行，即脚本代码在<code>require</code>的时候，就会全部执行。一旦出现某个模块被”循环加载”，就只输出已经执行的部分，还未执行的部分不会输出。</p>
+<p>让我们来看，Node 官方文档里面的例子。脚本文件<code>a.js</code>代码如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.done = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="built_in">require</span>(<span class="string">&#x27;./b.js&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;在 a.js 之中，b.done = %j&#x27;</span>, b.done);</span><br><span class="line"><span class="built_in">exports</span>.done = <span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;a.js 执行完毕&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>上面代码之中，<code>a.js</code>脚本先输出一个<code>done</code>变量，然后加载另一个脚本文件<code>b.js</code>。注意，此时<code>a.js</code>代码就停在这里，等待<code>b.js</code>执行完毕，再往下执行。</p>
+<p>再看<code>b.js</code>的代码。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.done = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">&#x27;./a.js&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;在 b.js 之中，a.done = %j&#x27;</span>, a.done);</span><br><span class="line"><span class="built_in">exports</span>.done = <span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;b.js 执行完毕&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>上面代码之中，<code>b.js</code>执行到第二行，就会去加载<code>a.js</code>，这时，就发生了“循环加载”。系统会去<code>a.js</code>模块对应对象的<code>exports</code>属性取值，可是因为<code>a.js</code>还没有执行完，从<code>exports</code>属性只能取回已经执行的部分，而不是最后的值。</p>
+<p><code>a.js</code>已经执行的部分，只有一行。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.done = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<p>因此，对于<code>b.js</code>来说，它从<code>a.js</code>只输入一个变量<code>done</code>，值为<code>false</code>。</p>
+<p>然后，<code>b.js</code>接着往下执行，等到全部执行完毕，再把执行权交还给<code>a.js</code>。于是，<code>a.js</code>接着往下执行，直到执行完毕。我们写一个脚本<code>main.js</code>，验证这个过程。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">&#x27;./a.js&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> b = <span class="built_in">require</span>(<span class="string">&#x27;./b.js&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;在 main.js 之中, a.done=%j, b.done=%j&#x27;</span>, a.done, b.done);</span><br></pre></td></tr></table></figure>
+<p>执行<code>main.js</code>，运行结果如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ node main.js</span><br><span class="line"></span><br><span class="line">在 b.js 之中，a.done = <span class="literal">false</span></span><br><span class="line">b.js 执行完毕</span><br><span class="line">在 a.js 之中，b.done = <span class="literal">true</span></span><br><span class="line">a.js 执行完毕</span><br><span class="line">在 main.js 之中, a.done=<span class="literal">true</span>, b.done=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>上面的代码证明了两件事。一是，在<code>b.js</code>之中，<code>a.js</code>没有执行完毕，只执行了第一行。二是，<code>main.js</code>执行到第二行时，不会再次执行<code>b.js</code>，而是输出缓存的<code>b.js</code>的执行结果，即它的第四行。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.done = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<p>总之，CommonJS 输入的是被输出值的拷贝，不是引用。</p>
+<p>另外，由于 CommonJS 模块遇到循环加载时，返回的是当前已经执行的部分的值，而不是代码全部执行后的值，两者可能会有差异。所以，输入变量的时候，必须非常小心。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">&#x27;a&#x27;</span>); <span class="comment">// 安全的写法</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="built_in">require</span>(<span class="string">&#x27;a&#x27;</span>).foo; <span class="comment">// 危险的写法</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.good = <span class="function"><span class="keyword">function</span> (<span class="params">arg</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a.foo(<span class="string">&#x27;good&#x27;</span>, arg); <span class="comment">// 使用的是 a.foo 的最新值</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.bad = <span class="function"><span class="keyword">function</span> (<span class="params">arg</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> foo(<span class="string">&#x27;bad&#x27;</span>, arg); <span class="comment">// 使用的是一个部分加载时的值</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，如果发生循环加载，<code>require(&#39;a&#39;).foo</code>的值很可能后面会被改写，改用<code>require(&#39;a&#39;)</code>会更保险一点。</p>
+<h5 id="25-4-3-ES6-模块的循环加载"><a href="#25-4-3-ES6-模块的循环加载" class="headerlink" title="25.4.3 ES6 模块的循环加载"></a>25.4.3 ES6 模块的循环加载</h5><p>ES6 处理“循环加载”与 CommonJS 有本质的不同。ES6 模块是动态引用，如果使用<code>import</code>从一个模块加载变量（即<code>import foo from &#39;foo&#39;</code>），那些变量不会被缓存，而是成为一个指向被加载模块的引用，需要开发者自己保证，真正取值的时候能够取到值。</p>
+<p>请看下面这个例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a.mjs</span></span><br><span class="line"><span class="keyword">import</span> &#123;bar&#125; <span class="keyword">from</span> <span class="string">&#x27;./b&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;a.mjs&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(bar);</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> foo = <span class="string">&#x27;foo&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// b.mjs</span></span><br><span class="line"><span class="keyword">import</span> &#123;foo&#125; <span class="keyword">from</span> <span class="string">&#x27;./a&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;b.mjs&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(foo);</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> bar = <span class="string">&#x27;bar&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>a.mjs</code>加载<code>b.mjs</code>，<code>b.mjs</code>又加载<code>a.mjs</code>，构成循环加载。执行<code>a.mjs</code>，结果如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ node --experimental-modules a.mjs</span><br><span class="line">b.mjs</span><br><span class="line"><span class="built_in">ReferenceError</span>: foo is not defined</span><br></pre></td></tr></table></figure>
+<p>上面代码中，执行<code>a.mjs</code>以后会报错，<code>foo</code>变量未定义，这是为什么？</p>
+<p>让我们一行行来看，ES6 循环加载是怎么处理的。首先，执行<code>a.mjs</code>以后，引擎发现它加载了<code>b.mjs</code>，因此会优先执行<code>b.mjs</code>，然后再执行<code>a.mjs</code>。接着，执行<code>b.mjs</code>的时候，已知它从<code>a.mjs</code>输入了<code>foo</code>接口，这时不会去执行<code>a.mjs</code>，而是认为这个接口已经存在了，继续往下执行。执行到第三行<code>console.log(foo)</code>的时候，才发现这个接口根本没定义，因此报错。</p>
+<p>解决这个问题的方法，就是让<code>b.mjs</code>运行的时候，<code>foo</code>已经有定义了。这可以通过将<code>foo</code>写成函数来解决。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a.mjs</span></span><br><span class="line"><span class="keyword">import</span> &#123;bar&#125; <span class="keyword">from</span> <span class="string">&#x27;./b&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;a.mjs&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(bar());</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="string">&#x27;foo&#x27;</span> &#125;</span><br><span class="line"><span class="keyword">export</span> &#123;foo&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// b.mjs</span></span><br><span class="line"><span class="keyword">import</span> &#123;foo&#125; <span class="keyword">from</span> <span class="string">&#x27;./a&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;b.mjs&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(foo());</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="string">&#x27;bar&#x27;</span> &#125;</span><br><span class="line"><span class="keyword">export</span> &#123;bar&#125;;</span><br></pre></td></tr></table></figure>
+<p>这时再执行<code>a.mjs</code>就可以得到预期结果。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ node --experimental-modules a.mjs</span><br><span class="line">b.mjs</span><br><span class="line">foo</span><br><span class="line">a.mjs</span><br><span class="line">bar</span><br></pre></td></tr></table></figure>
+<p>这是因为函数具有提升作用，在执行<code>import &#123;bar&#125; from &#39;./b&#39;</code>时，函数<code>foo</code>就已经有定义了，所以<code>b.mjs</code>加载的时候不会报错。这也意味着，如果把函数<code>foo</code>改写成函数表达式，也会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a.mjs</span></span><br><span class="line"><span class="keyword">import</span> &#123;bar&#125; <span class="keyword">from</span> <span class="string">&#x27;./b&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;a.mjs&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(bar());</span><br><span class="line"><span class="keyword">const</span> foo = <span class="function">() =&gt;</span> <span class="string">&#x27;foo&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> &#123;foo&#125;;</span><br></pre></td></tr></table></figure>
+<p>上面代码的第四行，改成了函数表达式，就不具有提升作用，执行就会报错。</p>
+<p>我们再来看 ES6 模块加载器SystemJS给出的一个例子。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// even.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; odd &#125; <span class="keyword">from</span> <span class="string">&#x27;./odd&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">var</span> counter = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">even</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  counter++;</span><br><span class="line">  <span class="keyword">return</span> n === <span class="number">0</span> || odd(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// odd.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; even &#125; <span class="keyword">from</span> <span class="string">&#x27;./even&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">odd</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> n !== <span class="number">0</span> &amp;&amp; even(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>even.js</code>里面的函数<code>even</code>有一个参数<code>n</code>，只要不等于 0，就会减去 1，传入加载的<code>odd()</code>。<code>odd.js</code>也会做类似操作。</p>
+<p>运行上面这段代码，结果如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ babel-node</span><br><span class="line">&gt; <span class="keyword">import</span> * <span class="keyword">as</span> m <span class="keyword">from</span> <span class="string">&#x27;./even.js&#x27;</span>;</span><br><span class="line">&gt; m.even(<span class="number">10</span>);</span><br><span class="line"><span class="literal">true</span></span><br><span class="line">&gt; m.counter</span><br><span class="line"><span class="number">6</span></span><br><span class="line">&gt; m.even(<span class="number">20</span>)</span><br><span class="line"><span class="literal">true</span></span><br><span class="line">&gt; m.counter</span><br><span class="line"><span class="number">17</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，参数<code>n</code>从 10 变为 0 的过程中，<code>even()</code>一共会执行 6 次，所以变量<code>counter</code>等于 6。第二次调用<code>even()</code>时，参数<code>n</code>从 20 变为 0，<code>even()</code>一共会执行 11 次，加上前面的 6 次，所以变量<code>counter</code>等于 17。</p>
+<p>这个例子要是改写成 CommonJS，就根本无法执行，会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// even.js</span></span><br><span class="line"><span class="keyword">var</span> odd = <span class="built_in">require</span>(<span class="string">&#x27;./odd&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">exports</span>.counter = counter;</span><br><span class="line"><span class="built_in">exports</span>.even = <span class="function"><span class="keyword">function</span> (<span class="params">n</span>) </span>&#123;</span><br><span class="line">  counter++;</span><br><span class="line">  <span class="keyword">return</span> n == <span class="number">0</span> || odd(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// odd.js</span></span><br><span class="line"><span class="keyword">var</span> even = <span class="built_in">require</span>(<span class="string">&#x27;./even&#x27;</span>).even;</span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> n != <span class="number">0</span> &amp;&amp; even(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>even.js</code>加载<code>odd.js</code>，而<code>odd.js</code>又去加载<code>even.js</code>，形成“循环加载”。这时，执行引擎就会输出<code>even.js</code>已经执行的部分（不存在任何结果），所以在<code>odd.js</code>之中，变量<code>even</code>等于<code>undefined</code>，等到后面调用<code>even(n - 1)</code>就会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ node</span><br><span class="line">&gt; <span class="keyword">var</span> m = <span class="built_in">require</span>(<span class="string">&#x27;./even&#x27;</span>);</span><br><span class="line">&gt; m.even(<span class="number">10</span>)</span><br><span class="line"><span class="built_in">TypeError</span>: even is not a <span class="function"><span class="keyword">function</span></span></span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/09/26/%E6%89%93%E5%8D%A10096/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Module-%E7%9A%84%E5%8A%A0%E8%BD%BD%E5%AE%9E%E7%8E%B0/" rel="tag">Module 的加载实现</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2021/09/25/%E6%89%93%E5%8D%A10095/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">打卡0095</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
+    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Ye Ma
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        <!-- 
+         -->
+        
+        
+        Powered by Hexo
+        <span class="division">|</span>
+        Theme - Ayer
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="maeBlog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/Travel/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about/2021">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/gHZjdQRcOL1WxSP.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/pZNYuI4QFnfwb7l.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>
