@@ -159,6 +159,71 @@
     
     
     <article
+  id="post-打卡0051"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/29/%E6%89%93%E5%8D%A10051/"
+    >打卡0051</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/29/%E6%89%93%E5%8D%A10051/" class="article-date">
+  <time datetime="2021-05-29T04:45:38.000Z" itemprop="datePublished">2021-05-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#444693>今夜不知何处宿，平沙万里绝人烟。</font></p>
+<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="8-触摸事件"><a href="#8-触摸事件" class="headerlink" title="8. 触摸事件"></a>8. 触摸事件</h3><h4 id="8-1-触摸操作概述"><a href="#8-1-触摸操作概述" class="headerlink" title="8.1 触摸操作概述"></a>8.1 触摸操作概述</h4><p>浏览器的触摸 API 由三个部分组成。</p>
+<ul>
+<li>Touch：一个触摸点</li>
+<li>TouchList：多个触摸点的集合</li>
+<li>TouchEvent：触摸引发的事件实例</li>
+</ul>
+<p><code>Touch</code>接口的实例对象用来表示触摸点（一根手指或者一根触摸笔），包括位置、大小、形状、压力、目标元素等属性。有时，触摸动作由多个触摸点（多根手指）组成，多个触摸点的集合由<code>TouchList</code>接口的实例对象表示。<code>TouchEvent</code>接口的实例对象代表由触摸引发的事件，只有触摸屏才会引发这一类事件。</p>
+<p>很多时候，触摸事件和鼠标事件同时触发，即使这个时候并没有用到鼠标。这是为了让那些只定义鼠标事件、没有定义触摸事件的代码，在触摸屏的情况下仍然能用。如果想避免这种情况，可以用<code>event.preventDefault</code>方法阻止发出鼠标事件。</p> 
+      <a class="article-more-link" href="/2021/05/29/%E6%89%93%E5%8D%A10051/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-触摸事件</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0050"
   class="article article-type-post"
   itemscope
@@ -744,68 +809,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-DOM-CSS-%E6%93%8D%E4%BD%9C/" rel="tag">JS DOM-CSS 操作</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0041"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/26/%E6%89%93%E5%8D%A10041/"
-    >打卡0041</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/26/%E6%89%93%E5%8D%A10041/" class="article-date">
-  <time datetime="2021-05-26T00:48:38.000Z" itemprop="datePublished">2021-05-26</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#cde6c7>生活可以迷茫，但不应虚度。</font></p>
-<h2 id="JS-DOM"><a href="#JS-DOM" class="headerlink" title="JS DOM"></a>JS DOM</h2><h3 id="8-Text-节点和-DocumentFragment-节点"><a href="#8-Text-节点和-DocumentFragment-节点" class="headerlink" title="8. Text 节点和 DocumentFragment 节点"></a>8. Text 节点和 DocumentFragment 节点</h3><h4 id="8-1-Text-节点的概念"><a href="#8-1-Text-节点的概念" class="headerlink" title="8.1 Text 节点的概念"></a>8.1 Text 节点的概念</h4><p>文本节点（<code>Text</code>）代表元素节点（<code>Element</code>）和属性节点（<code>Attribute</code>）的文本内容。如果一个节点只包含一段文本，那么它就有一个文本子节点，代表该节点的文本内容。</p>
-<p>通常我们使用父节点的<code>firstChild</code>、<code>nextSibling</code>等属性获取文本节点，或者使用<code>Document</code>节点的<code>createTextNode</code>方法创造一个文本节点。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取文本节点</span></span><br><span class="line"><span class="keyword">var</span> textNode = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;p&#x27;</span>).firstChild;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创造文本节点</span></span><br><span class="line"><span class="keyword">var</span> textNode = <span class="built_in">document</span>.createTextNode(<span class="string">&#x27;Hi&#x27;</span>);</span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">&#x27;div&#x27;</span>).appendChild(textNode);</span><br></pre></td></tr></table></figure>
-<p>浏览器原生提供一个<code>Text</code>构造函数。它返回一个文本节点实例。它的参数就是该文本节点的文本内容。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 空字符串</span></span><br><span class="line"><span class="keyword">var</span> text1 = <span class="keyword">new</span> Text();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 非空字符串</span></span><br><span class="line"><span class="keyword">var</span> text2 = <span class="keyword">new</span> Text(<span class="string">&#x27;This is a text node&#x27;</span>);</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/05/26/%E6%89%93%E5%8D%A10041/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-DOM-Text-%E8%8A%82%E7%82%B9%E5%92%8C-DocumentFragment-%E8%8A%82%E7%82%B9/" rel="tag">JS DOM-Text 节点和 DocumentFragment 节点</a></li></ul>
 
     </footer>
   </div>
