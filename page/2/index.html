@@ -159,7 +159,7 @@
     
     
     <article
-  id="post-打卡0092"
+  id="post-打卡0091"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -170,8 +170,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2021/08/29/%E6%89%93%E5%8D%A10092/"
-    >打卡0092</a> 
+  <a class="article-title" href="/2021/08/29/%E6%89%93%E5%8D%A10091/"
+    >打卡0091</a> 
 </h2>
  
 
@@ -179,7 +179,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/08/29/%E6%89%93%E5%8D%A10092/" class="article-date">
+      <a href="/2021/08/29/%E6%89%93%E5%8D%A10091/" class="article-date">
   <time datetime="2021-08-29T04:43:41.000Z" itemprop="datePublished">2021-08-29</time>
 </a> 
   <div class="article-category">
@@ -198,7 +198,7 @@
 <p>上面代码的函数<code>gen</code>可以写成<code>async</code>函数，就是下面这样。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> asyncReadFile = <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> f1 = <span class="keyword">await</span> readFile(<span class="string">&#x27;/etc/fstab&#x27;</span>);</span><br><span class="line">  <span class="keyword">const</span> f2 = <span class="keyword">await</span> readFile(<span class="string">&#x27;/etc/shells&#x27;</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(f1.toString());</span><br><span class="line">  <span class="built_in">console</span>.log(f2.toString());</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>一比较就会发现，<code>async</code>函数就是将 Generator 函数的星号（<code>*</code>）替换成<code>async</code>，将<code>yield</code>替换成<code>await</code>，仅此而已。</p> 
-      <a class="article-more-link" href="/2021/08/29/%E6%89%93%E5%8D%A10092/"
+      <a class="article-more-link" href="/2021/08/29/%E6%89%93%E5%8D%A10091/"
         >阅读更多...</a
       >
        
@@ -223,7 +223,7 @@
 
     
     <article
-  id="post-打卡0091"
+  id="post-打卡0090"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -234,8 +234,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2021/08/27/%E6%89%93%E5%8D%A10091/"
-    >打卡0091</a> 
+  <a class="article-title" href="/2021/08/27/%E6%89%93%E5%8D%A10090/"
+    >打卡0090</a> 
 </h2>
  
 
@@ -243,7 +243,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/08/27/%E6%89%93%E5%8D%A10091/" class="article-date">
+      <a href="/2021/08/27/%E6%89%93%E5%8D%A10090/" class="article-date">
   <time datetime="2021-08-27T07:24:18.000Z" itemprop="datePublished">2021-08-27</time>
 </a> 
   <div class="article-category">
@@ -267,7 +267,7 @@
 <h4 id="20-2-基本概念"><a href="#20-2-基本概念" class="headerlink" title="20.2 基本概念"></a>20.2 基本概念</h4><h5 id="20-2-1-异步"><a href="#20-2-1-异步" class="headerlink" title="20.2.1 异步"></a>20.2.1 异步</h5><p>所谓”异步”，简单说就是一个任务不是连续完成的，可以理解成该任务被人为分成两段，先执行第一段，然后转而执行其他任务，等做好了准备，再回过头执行第二段。</p>
 <p>比如，有一个任务是读取文件进行处理，任务的第一段是向操作系统发出请求，要求读取文件。然后，程序执行其他任务，等到操作系统返回文件，再接着执行任务的第二段（处理文件）。这种不连续的执行，就叫做异步。</p>
 <p>相应地，连续的执行就叫做同步。由于是连续执行，不能插入其他任务，所以操作系统从硬盘读取文件的这段时间，程序只能干等着。</p> 
-      <a class="article-more-link" href="/2021/08/27/%E6%89%93%E5%8D%A10091/"
+      <a class="article-more-link" href="/2021/08/27/%E6%89%93%E5%8D%A10090/"
         >阅读更多...</a
       >
        
@@ -292,7 +292,7 @@
 
     
     <article
-  id="post-打卡0090"
+  id="post-打卡0089"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -303,8 +303,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2021/08/24/%E6%89%93%E5%8D%A10090/"
-    >打卡0090</a> 
+  <a class="article-title" href="/2021/08/24/%E6%89%93%E5%8D%A10089/"
+    >打卡0089</a> 
 </h2>
  
 
@@ -312,7 +312,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/08/24/%E6%89%93%E5%8D%A10090/" class="article-date">
+      <a href="/2021/08/24/%E6%89%93%E5%8D%A10089/" class="article-date">
   <time datetime="2021-08-24T08:59:18.000Z" itemprop="datePublished">2021-08-24</time>
 </a> 
   <div class="article-category">
@@ -334,7 +334,7 @@
 <p>（4）不断调用指针对象的<code>next</code>方法，直到它指向数据结构的结束位置。</p>
 <p>每一次调用<code>next</code>方法，都会返回数据结构的当前成员的信息。具体来说，就是返回一个包含<code>value</code>和<code>done</code>两个属性的对象。其中，<code>value</code>属性是当前成员的值，<code>done</code>属性是一个布尔值，表示遍历是否结束。</p>
 <p>下面是一个模拟<code>next</code>方法返回值的例子。</p> 
-      <a class="article-more-link" href="/2021/08/24/%E6%89%93%E5%8D%A10090/"
+      <a class="article-more-link" href="/2021/08/24/%E6%89%93%E5%8D%A10089/"
         >阅读更多...</a
       >
        
@@ -359,7 +359,7 @@
 
     
     <article
-  id="post-打卡0089"
+  id="post-打卡0088"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -370,8 +370,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2021/08/21/%E6%89%93%E5%8D%A10089/"
-    >打卡0089</a> 
+  <a class="article-title" href="/2021/08/21/%E6%89%93%E5%8D%A10088/"
+    >打卡0088</a> 
 </h2>
  
 
@@ -379,7 +379,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/08/21/%E6%89%93%E5%8D%A10089/" class="article-date">
+      <a href="/2021/08/21/%E6%89%93%E5%8D%A10088/" class="article-date">
   <time datetime="2021-08-21T06:50:43.000Z" itemprop="datePublished">2021-08-21</time>
 </a> 
   <div class="article-category">
@@ -400,7 +400,7 @@
 <p>有了<code>Promise</code>对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。此外，<code>Promise</code>对象提供统一的接口，使得控制异步操作更加容易。</p>
 <p><code>Promise</code>也有一些缺点。首先，无法取消<code>Promise</code>，一旦新建它就会立即执行，无法中途取消。其次，如果不设置回调函数，<code>Promise</code>内部抛出的错误，不会反应到外部。第三，当处于<code>pending</code>状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。</p>
 <p>如果某些事件不断地反复发生，一般来说，使用 Stream 模式是比部署<code>Promise</code>更好的选择。</p> 
-      <a class="article-more-link" href="/2021/08/21/%E6%89%93%E5%8D%A10089/"
+      <a class="article-more-link" href="/2021/08/21/%E6%89%93%E5%8D%A10088/"
         >阅读更多...</a
       >
        
@@ -425,7 +425,7 @@
 
     
     <article
-  id="post-打卡0088"
+  id="post-打卡0087"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -436,8 +436,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2021/08/19/%E6%89%93%E5%8D%A10088/"
-    >打卡0088</a> 
+  <a class="article-title" href="/2021/08/19/%E6%89%93%E5%8D%A10087/"
+    >打卡0087</a> 
 </h2>
  
 
@@ -445,7 +445,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/08/19/%E6%89%93%E5%8D%A10088/" class="article-date">
+      <a href="/2021/08/19/%E6%89%93%E5%8D%A10087/" class="article-date">
   <time datetime="2021-08-19T09:54:36.000Z" itemprop="datePublished">2021-08-19</time>
 </a> 
   <div class="article-category">
@@ -461,7 +461,7 @@
 <p>（1） 将<code>Object</code>对象的一些明显属于语言内部的方法（比如<code>Object.defineProperty</code>），放到<code>Reflect</code>对象上。现阶段，某些方法同时在<code>Object</code>和<code>Reflect</code>对象上部署，未来的新方法将只部署在<code>Reflect</code>对象上。也就是说，从<code>Reflect</code>对象上可以拿到语言内部的方法。</p>
 <p>（2） 修改某些<code>Object</code>方法的返回结果，让其变得更合理。比如，<code>Object.defineProperty(obj, name, desc)</code>在无法定义属性时，会抛出一个错误，而<code>Reflect.defineProperty(obj, name, desc)</code>则会返回<code>false</code>。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 老写法</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="built_in">Object</span>.defineProperty(target, property, attributes);</span><br><span class="line">  <span class="comment">// success</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">  <span class="comment">// failure</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 新写法</span></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">Reflect</span>.defineProperty(target, property, attributes)) &#123;</span><br><span class="line">  <span class="comment">// success</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// failure</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/08/19/%E6%89%93%E5%8D%A10088/"
+      <a class="article-more-link" href="/2021/08/19/%E6%89%93%E5%8D%A10087/"
         >阅读更多...</a
       >
        
@@ -486,7 +486,7 @@
 
     
     <article
-  id="post-打卡0087"
+  id="post-打卡0086"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -497,8 +497,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2021/07/09/%E6%89%93%E5%8D%A10087/"
-    >打卡0087</a> 
+  <a class="article-title" href="/2021/07/09/%E6%89%93%E5%8D%A10086/"
+    >打卡0086</a> 
 </h2>
  
 
@@ -506,7 +506,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/07/09/%E6%89%93%E5%8D%A10087/" class="article-date">
+      <a href="/2021/07/09/%E6%89%93%E5%8D%A10086/" class="article-date">
   <time datetime="2021-07-09T01:54:36.000Z" itemprop="datePublished">2021-07-09</time>
 </a> 
   <div class="article-category">
@@ -522,7 +522,7 @@
 <p>Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。Proxy 这个词的原意是代理，用在这里表示由它来“代理”某些操作，可以译为“代理器”。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Proxy</span>(&#123;&#125;, &#123;</span><br><span class="line">  get: <span class="function"><span class="keyword">function</span> (<span class="params">target, propKey, receiver</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`getting <span class="subst">$&#123;propKey&#125;</span>!`</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Reflect</span>.get(target, propKey, receiver);</span><br><span class="line">  &#125;,</span><br><span class="line">  set: <span class="function"><span class="keyword">function</span> (<span class="params">target, propKey, value, receiver</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`setting <span class="subst">$&#123;propKey&#125;</span>!`</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Reflect</span>.set(target, propKey, value, receiver);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>上面代码对一个空对象架设了一层拦截，重定义了属性的读取（<code>get</code>）和设置（<code>set</code>）行为。这里暂时先不解释具体的语法，只看运行结果。对设置了拦截行为的对象<code>obj</code>，去读写它的属性，就会得到下面的结果。</p> 
-      <a class="article-more-link" href="/2021/07/09/%E6%89%93%E5%8D%A10087/"
+      <a class="article-more-link" href="/2021/07/09/%E6%89%93%E5%8D%A10086/"
         >阅读更多...</a
       >
        
@@ -547,7 +547,7 @@
 
     
     <article
-  id="post-打卡0086"
+  id="post-打卡0085"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -558,8 +558,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2021/07/08/%E6%89%93%E5%8D%A10086/"
-    >打卡0086</a> 
+  <a class="article-title" href="/2021/07/08/%E6%89%93%E5%8D%A10085/"
+    >打卡0085</a> 
 </h2>
  
 
@@ -567,7 +567,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/07/08/%E6%89%93%E5%8D%A10086/" class="article-date">
+      <a href="/2021/07/08/%E6%89%93%E5%8D%A10085/" class="article-date">
   <time datetime="2021-07-08T01:26:19.000Z" itemprop="datePublished">2021-07-08</time>
 </a> 
   <div class="article-category">
@@ -584,7 +584,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> s = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line"></span><br><span class="line">[<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">2</span>].forEach(<span class="function"><span class="params">x</span> =&gt;</span> s.add(x));</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> s) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 2 3 5 4</span></span><br></pre></td></tr></table></figure>
 <p>上面代码通过<code>add()</code>方法向 Set 结构加入成员，结果表明 Set 结构不会添加重复的值。</p>
 <p><code>Set</code>函数可以接受一个数组（或者具有 iterable 接口的其他数据结构）作为参数，用来初始化。</p> 
-      <a class="article-more-link" href="/2021/07/08/%E6%89%93%E5%8D%A10086/"
+      <a class="article-more-link" href="/2021/07/08/%E6%89%93%E5%8D%A10085/"
         >阅读更多...</a
       >
        
@@ -609,7 +609,7 @@
 
     
     <article
-  id="post-打卡0085"
+  id="post-打卡0083"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -620,8 +620,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2021/07/07/%E6%89%93%E5%8D%A10085/"
-    >打卡0085</a> 
+  <a class="article-title" href="/2021/07/07/%E6%89%93%E5%8D%A10083/"
+    >打卡0083</a> 
 </h2>
  
 
@@ -629,7 +629,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/07/07/%E6%89%93%E5%8D%A10085/" class="article-date">
+      <a href="/2021/07/07/%E6%89%93%E5%8D%A10083/" class="article-date">
   <time datetime="2021-07-07T02:42:21.000Z" itemprop="datePublished">2021-07-07</time>
 </a> 
   <div class="article-category">
@@ -647,7 +647,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="built_in">Symbol</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> s</span><br><span class="line"><span class="comment">// &quot;symbol&quot;</span></span><br></pre></td></tr></table></figure>
 <p>上面代码中，变量<code>s</code>就是一个独一无二的值。<code>typeof</code>运算符的结果，表明变量<code>s</code>是 Symbol 数据类型，而不是字符串之类的其他类型。</p>
 <p>注意，<code>Symbol</code>函数前不能使用<code>new</code>命令，否则会报错。这是因为生成的 Symbol 是一个原始类型的值，不是对象。也就是说，由于 Symbol 值不是对象，所以不能添加属性。基本上，它是一种类似于字符串的数据类型。</p> 
-      <a class="article-more-link" href="/2021/07/07/%E6%89%93%E5%8D%A10085/"
+      <a class="article-more-link" href="/2021/07/07/%E6%89%93%E5%8D%A10083/"
         >阅读更多...</a
       >
        
@@ -672,7 +672,7 @@
 
     
     <article
-  id="post-打卡0083"
+  id="post-打卡0082"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -683,8 +683,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2021/07/06/%E6%89%93%E5%8D%A10083/"
-    >打卡0083</a> 
+  <a class="article-title" href="/2021/07/06/%E6%89%93%E5%8D%A10082/"
+    >打卡0082</a> 
 </h2>
  
 
@@ -692,7 +692,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/07/06/%E6%89%93%E5%8D%A10083/" class="article-date">
+      <a href="/2021/07/06/%E6%89%93%E5%8D%A10082/" class="article-date">
   <time datetime="2021-07-06T01:32:21.000Z" itemprop="datePublished">2021-07-06</time>
 </a> 
   <div class="article-category">
@@ -711,7 +711,7 @@
 <p>上面代码中，首先计算的是第二个指数运算符，而不是第一个。</p>
 <p>指数运算符可以与等号结合，形成一个新的赋值运算符（<code>**=</code>）。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1.5</span>;</span><br><span class="line">a **= <span class="number">2</span>;</span><br><span class="line"><span class="comment">// 等同于 a = a * a;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">4</span>;</span><br><span class="line">b **= <span class="number">3</span>;</span><br><span class="line"><span class="comment">// 等同于 b = b * b * b;</span></span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/07/06/%E6%89%93%E5%8D%A10083/"
+      <a class="article-more-link" href="/2021/07/06/%E6%89%93%E5%8D%A10082/"
         >阅读更多...</a
       >
        
@@ -736,7 +736,7 @@
 
     
     <article
-  id="post-打卡0082"
+  id="post-打卡0081"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -747,8 +747,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2021/07/05/%E6%89%93%E5%8D%A10082/"
-    >打卡0082</a> 
+  <a class="article-title" href="/2021/07/05/%E6%89%93%E5%8D%A10081/"
+    >打卡0081</a> 
 </h2>
  
 
@@ -756,8 +756,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/07/05/%E6%89%93%E5%8D%A10082/" class="article-date">
-  <time datetime="2021-07-05T01:07:59.000Z" itemprop="datePublished">2021-07-05</time>
+      <a href="/2021/07/05/%E6%89%93%E5%8D%A10081/" class="article-date">
+  <time datetime="2021-07-05T01:24:41.000Z" itemprop="datePublished">2021-07-05</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
@@ -767,13 +767,15 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p><font color=#ef5b9c>当一个人放弃追问，衰老这就开始了。</font></p>
-<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="11-对象的新增方法"><a href="#11-对象的新增方法" class="headerlink" title="11.对象的新增方法"></a>11.对象的新增方法</h3><h4 id="11-1-Object-is"><a href="#11-1-Object-is" class="headerlink" title="11.1 Object.is()"></a>11.1 Object.is()</h4><p>ES5 比较两个值是否相等，只有两个运算符：相等运算符（<code>==</code>）和严格相等运算符（<code>===</code>）。它们都有缺点，前者会自动转换数据类型，后者的<code>NaN</code>不等于自身，以及<code>+0</code>等于<code>-0</code>。JavaScript 缺乏一种运算，在所有环境中，只要两个值是一样的，它们就应该相等。</p>
+  <p><font color=#84bf96>当一个人放弃追问，衰老这就开始了。</font></p>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="11-对象的新增方法"><a href="#11-对象的新增方法" class="headerlink" title="11. 对象的新增方法"></a>11. 对象的新增方法</h3><h4 id="11-1-Object-is"><a href="#11-1-Object-is" class="headerlink" title="11.1 Object.is()"></a>11.1 Object.is()</h4><p>ES5 比较两个值是否相等，只有两个运算符：相等运算符（<code>==</code>）和严格相等运算符（<code>===</code>）。它们都有缺点，前者会自动转换数据类型，后者的<code>NaN</code>不等于自身，以及<code>+0</code>等于<code>-0</code>。JavaScript 缺乏一种运算，在所有环境中，只要两个值是一样的，它们就应该相等。</p>
 <p>ES6 提出“Same-value equality”（同值相等）算法，用来解决这个问题。<code>Object.is</code>就是部署这个算法的新方法。它用来比较两个值是否严格相等，与严格比较运算符（<code>===</code>）的行为基本一致。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.is(<span class="string">&#x27;foo&#x27;</span>, <span class="string">&#x27;foo&#x27;</span>)</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"><span class="built_in">Object</span>.is(&#123;&#125;, &#123;&#125;)</span><br><span class="line"><span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
 <p>不同之处只有两个：一是<code>+0</code>不等于<code>-0</code>，二是<code>NaN</code>等于自身。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+<span class="number">0</span> === -<span class="number">0</span> <span class="comment">//true</span></span><br><span class="line"><span class="literal">NaN</span> === <span class="literal">NaN</span> <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.is(+<span class="number">0</span>, -<span class="number">0</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Object</span>.is(<span class="literal">NaN</span>, <span class="literal">NaN</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/07/05/%E6%89%93%E5%8D%A10082/"
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+<span class="number">0</span> === -<span class="number">0</span> <span class="comment">//true</span></span><br><span class="line"><span class="literal">NaN</span> === <span class="literal">NaN</span> <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.is(+<span class="number">0</span>, -<span class="number">0</span>) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">Object</span>.is(<span class="literal">NaN</span>, <span class="literal">NaN</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>ES5 可以通过下面的代码，部署<code>Object.is</code>。</p> 
+      <a class="article-more-link" href="/2021/07/05/%E6%89%93%E5%8D%A10081/"
         >阅读更多...</a
       >
        
@@ -786,7 +788,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B0%E5%A2%9E%E6%96%B9%E6%B3%95/" rel="tag">JS-ES6 对象的新增方法</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B0%E5%A2%9E%E6%96%B9%E6%B3%95/" rel="tag">对象的新增方法</a></li></ul>
 
     </footer>
   </div>
