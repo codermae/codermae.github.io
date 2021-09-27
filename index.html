@@ -159,6 +159,71 @@
     
     
     <article
+  id="post-打卡0097"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/09/27/%E6%89%93%E5%8D%A10097/"
+    >打卡0097</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/09/27/%E6%89%93%E5%8D%A10097/" class="article-date">
+  <time datetime="2021-09-27T01:11:31.000Z" itemprop="datePublished">2021-09-27</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#df9464>没有什么比时间更有说服力了，因为时间无需通知我们就可以改变一切。</font></p>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="26-编程风格"><a href="#26-编程风格" class="headerlink" title="26. 编程风格"></a>26. 编程风格</h3><h4 id="26-1-块级作用域"><a href="#26-1-块级作用域" class="headerlink" title="26.1 块级作用域"></a>26.1 块级作用域</h4><p>（1）let 取代 var</p>
+<p>ES6 提出了两个新的声明变量的命令：<code>let</code>和<code>const</code>。其中，<code>let</code>完全可以取代<code>var</code>，因为两者语义相同，而且<code>let</code>没有副作用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> x = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码如果用<code>var</code>替代<code>let</code>，实际上就声明了两个全局变量，这显然不是本意。变量应该只在其声明的代码块内有效，<code>var</code>命令做不到这一点。</p>
+<p><code>var</code>命令存在变量提升效用，<code>let</code>命令没有这个问题。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(x); <span class="comment">// ReferenceError</span></span><br><span class="line">  <span class="keyword">let</span> x = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码如果使用<code>var</code>替代<code>let</code>，<code>console.log</code>那一行就不会报错，而是会输出<code>undefined</code>，因为变量声明提升到代码块的头部。这违反了变量先声明后使用的原则。</p>
+<p>所以，建议不再使用<code>var</code>命令，而是使用<code>let</code>命令取代。</p> 
+      <a class="article-more-link" href="/2021/09/27/%E6%89%93%E5%8D%A10097/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC/" rel="tag">编程风格</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0096"
   class="article article-type-post"
   itemscope
@@ -701,82 +766,13 @@
 </article>
 
     
-    <article
-  id="post-打卡0091"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/08/27/%E6%89%93%E5%8D%A10091/"
-    >打卡0091</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/08/27/%E6%89%93%E5%8D%A10091/" class="article-date">
-  <time datetime="2021-08-27T07:24:18.000Z" itemprop="datePublished">2021-08-27</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#2468a2>生命，就是一场不留余地的盛放。心安，便是活着的最美好状态。平淡是生活的主线，精彩是人生的点缀。且安静，且放低，且自在，不张扬，也不颓废，这就是生活。</font></p>
-<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="20-Generator-函数的异步应用"><a href="#20-Generator-函数的异步应用" class="headerlink" title="20. Generator 函数的异步应用"></a>20. Generator 函数的异步应用</h3><p>异步编程对 JavaScript 语言太重要。JavaScript 语言的执行环境是“单线程”的，如果没有异步编程，根本没法用，非卡死不可。本章主要介绍 Generator 函数如何完成异步操作。</p>
-<h4 id="20-1-传统方法"><a href="#20-1-传统方法" class="headerlink" title="20.1 传统方法"></a>20.1 传统方法</h4><p>ES6 诞生以前，异步编程的方法，大概有下面四种。</p>
-<ul>
-<li>回调函数</li>
-<li>事件监听</li>
-<li>发布/订阅</li>
-<li>Promise 对象</li>
-</ul>
-<p>Generator 函数将 JavaScript 异步编程带入了一个全新的阶段。</p>
-<h4 id="20-2-基本概念"><a href="#20-2-基本概念" class="headerlink" title="20.2 基本概念"></a>20.2 基本概念</h4><h5 id="20-2-1-异步"><a href="#20-2-1-异步" class="headerlink" title="20.2.1 异步"></a>20.2.1 异步</h5><p>所谓”异步”，简单说就是一个任务不是连续完成的，可以理解成该任务被人为分成两段，先执行第一段，然后转而执行其他任务，等做好了准备，再回过头执行第二段。</p>
-<p>比如，有一个任务是读取文件进行处理，任务的第一段是向操作系统发出请求，要求读取文件。然后，程序执行其他任务，等到操作系统返回文件，再接着执行任务的第二段（处理文件）。这种不连续的执行，就叫做异步。</p>
-<p>相应地，连续的执行就叫做同步。由于是连续执行，不能插入其他任务，所以操作系统从硬盘读取文件的这段时间，程序只能干等着。</p> 
-      <a class="article-more-link" href="/2021/08/27/%E6%89%93%E5%8D%A10091/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-Generator-%E5%87%BD%E6%95%B0%E7%9A%84%E5%BC%82%E6%AD%A5%E5%BA%94%E7%94%A8/" rel="tag">JS-ES6 Generator 函数的异步应用</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
   </nav>
   
 </section>

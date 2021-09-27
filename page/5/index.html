@@ -159,6 +159,80 @@
     
     
     <article
+  id="post-打卡0060"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/01/%E6%89%93%E5%8D%A10060/"
+    >打卡0060</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/01/%E6%89%93%E5%8D%A10060/" class="article-date">
+  <time datetime="2021-06-01T02:19:57.000Z" itemprop="datePublished">2021-06-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#009ad6>每个人的一生都是上帝手写的童话。</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="6-同源限制"><a href="#6-同源限制" class="headerlink" title="6.同源限制"></a>6.同源限制</h3><p>浏览器安全的基石是“同源政策”（<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Same-origin_policy">same-origin policy</a> ）。很多开发者都知道这一点，但了解得不全面。</p>
+<h4 id="6-1-概述"><a href="#6-1-概述" class="headerlink" title="6.1 概述"></a>6.1 概述</h4><h5 id="6-1-1-含义"><a href="#6-1-1-含义" class="headerlink" title="6.1.1 含义"></a>6.1.1 含义</h5><p>1995年，同源政策由 Netscape 公司引入浏览器。目前，所有浏览器都实行这个政策。</p>
+<p>最初，它的含义是指，A 网页设置的 Cookie，B 网页不能打开，除非这两个网页“同源”。所谓“同源”指的是“三个相同”。<br>`</p>
+<ul>
+<li>协议相同</li>
+<li>域名相同</li>
+<li>端口相同（这点可以忽略，详见下文）<br>`</li>
+</ul>
+<p>举例来说，<code>http://www.example.com/dir/page.html</code>这个网址，协议是<code>http://</code>，域名是<code>www.example.com</code>，端口是<code>80</code>（默认端口可以省略），它的同源情况如下。</p>
+<ul>
+<li><code>http://www.example.com/dir2/other.html</code>：同源</li>
+<li><code>http://example.com/dir/other.html</code>：不同源（域名不同）</li>
+<li><code>http://v2.www.example.com/dir/other.html</code>：不同源（域名不同）</li>
+<li><code>http://www.example.com:81/dir/other.html</code>：不同源（端口不同）</li>
+<li><code>https://www.example.com/dir/page.html</code>：不同源（协议不同）</li>
+</ul>
+<p>注意，标准规定端口不同的网址不是同源（比如<code>8000</code>端口和<code>8001</code>端口不是同源），但是浏览器没有遵守这条规定。实际上，同一个网域的不同端口，是可以互相读取 Cookie 的。</p> 
+      <a class="article-more-link" href="/2021/06/01/%E6%89%93%E5%8D%A10060/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-%E5%90%8C%E6%BA%90%E9%99%90%E5%88%B6/" rel="tag">JS 浏览器模型-同源限制</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0059"
   class="article article-type-post"
   itemscope
@@ -746,74 +820,13 @@
 </article>
 
     
-    <article
-  id="post-打卡0050"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/29/%E6%89%93%E5%8D%A10050/"
-    >打卡0050</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/29/%E6%89%93%E5%8D%A10050/" class="article-date">
-  <time datetime="2021-05-29T04:27:52.000Z" itemprop="datePublished">2021-05-29</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#817936>每个人都在自己的生命中频繁地抛弃着自己的过去。</font></p>
-<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="7-表单事件"><a href="#7-表单事件" class="headerlink" title="7. 表单事件"></a>7. 表单事件</h3><h4 id="7-1-表单事件的种类"><a href="#7-1-表单事件的种类" class="headerlink" title="7.1 表单事件的种类"></a>7.1 表单事件的种类</h4><h5 id="7-1-1-input-事件"><a href="#7-1-1-input-事件" class="headerlink" title="7.1.1 input 事件"></a>7.1.1 input 事件</h5><p><code>input</code>事件当<code>&lt;input&gt;</code>、<code>&lt;select&gt;</code>、<code>&lt;textarea&gt;</code>的值发生变化时触发。对于复选框（<code>&lt;input type=checkbox&gt;</code>）或单选框（<code>&lt;input type=radio&gt;</code>），用户改变选项时，也会触发这个事件。另外，对于打开<code>contenteditable</code>属性的元素，只要值发生变化，也会触发<code>input</code>事件。</p>
-<p><code>input</code>事件的一个特点，就是会连续触发，比如用户每按下一次按键，就会触发一次<code>input</code>事件。</p>
-<p><code>input</code>事件对象继承了<code>InputEvent</code>接口。</p>
-<p>该事件跟<code>change</code>事件很像，不同之处在于<code>input</code>事件在元素的值发生变化后立即发生，而<code>change</code>在元素失去焦点时发生，而内容此时可能已经变化多次。也就是说，如果有连续变化，<code>input</code>事件会触发多次，而<code>change</code>事件只在失去焦点时触发一次。</p> 
-      <a class="article-more-link" href="/2021/05/29/%E6%89%93%E5%8D%A10050/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%A1%A8%E5%8D%95%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-表单事件</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/4/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/4/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/6/">下一页</a>
   </nav>
   
 </section>
