@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-09-27T05:22:58.024Z</updated>
+  <updated>2021-09-28T01:59:03.791Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0098</title>
+    <link href="https://codermae.github.io/2021/09/28/%E6%89%93%E5%8D%A10098/"/>
+    <id>https://codermae.github.io/2021/09/28/%E6%89%93%E5%8D%A10098/</id>
+    <published>2021-09-28T01:17:34.000Z</published>
+    <updated>2021-09-28T01:59:03.791Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#616130&gt;无论将来会遇到谁，生活都是先从遇到自己开始的。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;28-异步遍历器&quot;&gt;&lt;a href=&quot;#28-异步遍历器&quot; class=&quot;headerlink&quot; title=&quot;28. 异步遍历器&quot;&gt;&lt;/a&gt;28. 异步遍历器&lt;/h3&gt;&lt;h4 id=&quot;28-1-同步遍历器的问题&quot;&gt;&lt;a href=&quot;#28-1-同步遍历器的问题&quot; class=&quot;headerlink&quot; title=&quot;28.1 同步遍历器的问题&quot;&gt;&lt;/a&gt;28.1 同步遍历器的问题&lt;/h4&gt;&lt;p&gt;《遍历器》一章说过，Iterator 接口是一种数据遍历的协议，只要调用遍历器对象的&lt;code&gt;next&lt;/code&gt;方法，就会得到一个对象，表示当前遍历指针所在的那个位置的信息。&lt;code&gt;next&lt;/code&gt;方法返回的对象的结构是&lt;code&gt;&amp;#123;value, done&amp;#125;&lt;/code&gt;，其中&lt;code&gt;value&lt;/code&gt;表示当前的数据的值，&lt;code&gt;done&lt;/code&gt;是一个布尔值，表示遍历是否结束。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;idMaker&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; index = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    next: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &amp;#123; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;: index++, done: &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt; &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; it = idMaker();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;it.next().value &lt;span class=&quot;comment&quot;&gt;// 0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;it.next().value &lt;span class=&quot;comment&quot;&gt;// 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;it.next().value &lt;span class=&quot;comment&quot;&gt;// 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// ...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，变量&lt;code&gt;it&lt;/code&gt;是一个遍历器（iterator）。每次调用&lt;code&gt;it.next()&lt;/code&gt;方法，就返回一个对象，表示当前遍历位置的信息。&lt;/p&gt;
+&lt;p&gt;这里隐含着一个规定，&lt;code&gt;it.next()&lt;/code&gt;方法必须是同步的，只要调用就必须立刻返回值。也就是说，一旦执行&lt;code&gt;it.next()&lt;/code&gt;方法，就必须同步地得到&lt;code&gt;value&lt;/code&gt;和&lt;code&gt;done&lt;/code&gt;这两个属性。如果遍历指针正好指向同步操作，当然没有问题，但对于异步操作，就不太合适了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="异步遍历器" scheme="https://codermae.github.io/tags/%E5%BC%82%E6%AD%A5%E9%81%8D%E5%8E%86%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0097</title>
@@ -480,32 +503,6 @@
     
     
     <category term="JS-ES6 运算符的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E6%89%A9%E5%B1%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0081</title>
-    <link href="https://codermae.github.io/2021/07/05/%E6%89%93%E5%8D%A10081/"/>
-    <id>https://codermae.github.io/2021/07/05/%E6%89%93%E5%8D%A10081/</id>
-    <published>2021-07-05T01:24:41.000Z</published>
-    <updated>2021-09-27T06:30:52.259Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#84bf96&gt;当一个人放弃追问，衰老这就开始了。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;11-对象的新增方法&quot;&gt;&lt;a href=&quot;#11-对象的新增方法&quot; class=&quot;headerlink&quot; title=&quot;11. 对象的新增方法&quot;&gt;&lt;/a&gt;11. 对象的新增方法&lt;/h3&gt;&lt;h4 id=&quot;11-1-Object-is&quot;&gt;&lt;a href=&quot;#11-1-Object-is&quot; class=&quot;headerlink&quot; title=&quot;11.1 Object.is()&quot;&gt;&lt;/a&gt;11.1 Object.is()&lt;/h4&gt;&lt;p&gt;ES5 比较两个值是否相等，只有两个运算符：相等运算符（&lt;code&gt;==&lt;/code&gt;）和严格相等运算符（&lt;code&gt;===&lt;/code&gt;）。它们都有缺点，前者会自动转换数据类型，后者的&lt;code&gt;NaN&lt;/code&gt;不等于自身，以及&lt;code&gt;+0&lt;/code&gt;等于&lt;code&gt;-0&lt;/code&gt;。JavaScript 缺乏一种运算，在所有环境中，只要两个值是一样的，它们就应该相等。&lt;/p&gt;
-&lt;p&gt;ES6 提出“Same-value equality”（同值相等）算法，用来解决这个问题。&lt;code&gt;Object.is&lt;/code&gt;就是部署这个算法的新方法。它用来比较两个值是否严格相等，与严格比较运算符（&lt;code&gt;===&lt;/code&gt;）的行为基本一致。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.is(&lt;span class=&quot;string&quot;&gt;&amp;#x27;foo&amp;#x27;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&amp;#x27;foo&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.is(&amp;#123;&amp;#125;, &amp;#123;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;不同之处只有两个：一是&lt;code&gt;+0&lt;/code&gt;不等于&lt;code&gt;-0&lt;/code&gt;，二是&lt;code&gt;NaN&lt;/code&gt;等于自身。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; === -&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;literal&quot;&gt;NaN&lt;/span&gt; === &lt;span class=&quot;literal&quot;&gt;NaN&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.is(+&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, -&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.is(&lt;span class=&quot;literal&quot;&gt;NaN&lt;/span&gt;, &lt;span class=&quot;literal&quot;&gt;NaN&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;ES5 可以通过下面的代码，部署&lt;code&gt;Object.is&lt;/code&gt;。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="对象的新增方法" scheme="https://codermae.github.io/tags/%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B0%E5%A2%9E%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   

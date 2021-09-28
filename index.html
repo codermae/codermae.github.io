@@ -159,6 +159,67 @@
     
     
     <article
+  id="post-打卡0098"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/09/28/%E6%89%93%E5%8D%A10098/"
+    >打卡0098</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/09/28/%E6%89%93%E5%8D%A10098/" class="article-date">
+  <time datetime="2021-09-28T01:17:34.000Z" itemprop="datePublished">2021-09-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#616130>无论将来会遇到谁，生活都是先从遇到自己开始的。</font></p>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="28-异步遍历器"><a href="#28-异步遍历器" class="headerlink" title="28. 异步遍历器"></a>28. 异步遍历器</h3><h4 id="28-1-同步遍历器的问题"><a href="#28-1-同步遍历器的问题" class="headerlink" title="28.1 同步遍历器的问题"></a>28.1 同步遍历器的问题</h4><p>《遍历器》一章说过，Iterator 接口是一种数据遍历的协议，只要调用遍历器对象的<code>next</code>方法，就会得到一个对象，表示当前遍历指针所在的那个位置的信息。<code>next</code>方法返回的对象的结构是<code>&#123;value, done&#125;</code>，其中<code>value</code>表示当前的数据的值，<code>done</code>是一个布尔值，表示遍历是否结束。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">idMaker</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> index = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    next: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> &#123; <span class="attr">value</span>: index++, done: <span class="literal">false</span> &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> it = idMaker();</span><br><span class="line"></span><br><span class="line">it.next().value <span class="comment">// 0</span></span><br><span class="line">it.next().value <span class="comment">// 1</span></span><br><span class="line">it.next().value <span class="comment">// 2</span></span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，变量<code>it</code>是一个遍历器（iterator）。每次调用<code>it.next()</code>方法，就返回一个对象，表示当前遍历位置的信息。</p>
+<p>这里隐含着一个规定，<code>it.next()</code>方法必须是同步的，只要调用就必须立刻返回值。也就是说，一旦执行<code>it.next()</code>方法，就必须同步地得到<code>value</code>和<code>done</code>这两个属性。如果遍历指针正好指向同步操作，当然没有问题，但对于异步操作，就不太合适了。</p> 
+      <a class="article-more-link" href="/2021/09/28/%E6%89%93%E5%8D%A10098/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%82%E6%AD%A5%E9%81%8D%E5%8E%86%E5%99%A8/" rel="tag">异步遍历器</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0097"
   class="article article-type-post"
   itemscope
@@ -708,57 +769,6 @@
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B8%A9%E5%9D%91MongoDB/" rel="tag">踩坑MongoDB</a></li></ul>
 
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-Chart文件说明"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/09/10/Chart%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/"
-    >Chart文件说明</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/09/10/Chart%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/" class="article-date">
-  <time datetime="2021-09-10T10:41:21.000Z" itemprop="datePublished">2021-09-10</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>all</p> 
-      <a class="article-more-link" href="/2021/09/10/Chart%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
     </footer>
   </div>
 
