@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-09-28T01:59:03.791Z</updated>
+  <updated>2021-09-28T07:20:32.516Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0099</title>
+    <link href="https://codermae.github.io/2021/09/29/%E6%89%93%E5%8D%A10099/"/>
+    <id>https://codermae.github.io/2021/09/29/%E6%89%93%E5%8D%A10099/</id>
+    <published>2021-09-29T02:01:00.000Z</published>
+    <updated>2021-09-28T07:20:32.516Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#d64f44&gt;暖风十里丽人天，花压鬓云偏。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;29-ArrayBuffer&quot;&gt;&lt;a href=&quot;#29-ArrayBuffer&quot; class=&quot;headerlink&quot; title=&quot;29. ArrayBuffer&quot;&gt;&lt;/a&gt;29. ArrayBuffer&lt;/h3&gt;&lt;p&gt;&lt;code&gt;ArrayBuffer&lt;/code&gt;对象、&lt;code&gt;TypedArray&lt;/code&gt;视图和&lt;code&gt;DataView&lt;/code&gt;视图是 JavaScript 操作二进制数据的一个接口。这些对象早就存在，属于独立的规格（2011 年 2 月发布），ES6 将它们纳入了 ECMAScript 规格，并且增加了新的方法。它们都是以数组的语法处理二进制数据，所以统称为二进制数组。&lt;/p&gt;
+&lt;p&gt;这个接口的原始设计目的，与 WebGL 项目有关。所谓 WebGL，就是指浏览器与显卡之间的通信接口，为了满足 JavaScript 与显卡之间大量的、实时的数据交换，它们之间的数据通信必须是二进制的，而不能是传统的文本格式。文本格式传递一个 32 位整数，两端的 JavaScript 脚本与显卡都要进行格式转化，将非常耗时。这时要是存在一种机制，可以像 C 语言那样，直接操作字节，将 4 个字节的 32 位整数，以二进制形式原封不动地送入显卡，脚本的性能就会大幅提升。&lt;/p&gt;
+&lt;p&gt;二进制数组就是在这种背景下诞生的。它很像 C 语言的数组，允许开发者以数组下标的形式，直接操作内存，大大增强了 JavaScript 处理二进制数据的能力，使得开发者有可能通过 JavaScript 与操作系统的原生接口进行二进制通信。&lt;/p&gt;
+&lt;p&gt;二进制数组由三类对象组成。&lt;/p&gt;
+&lt;p&gt;（1）&lt;code&gt;ArrayBuffer&lt;/code&gt;对象：代表内存之中的一段二进制数据，可以通过“视图”进行操作。“视图”部署了数组接口，这意味着，可以用数组的方法操作内存。&lt;/p&gt;
+&lt;p&gt;（2）&lt;code&gt;TypedArray&lt;/code&gt;视图：共包括 9 种类型的视图，比如&lt;code&gt;Uint8Array&lt;/code&gt;（无符号 8 位整数）数组视图, &lt;code&gt;Int16Array&lt;/code&gt;（16 位整数）数组视图,&lt;code&gt;Float32Array&lt;/code&gt;（32 位浮点数）数组视图等等。&lt;/p&gt;
+&lt;p&gt;（3）&lt;code&gt;DataView&lt;/code&gt;视图：可以自定义复合格式的视图，比如第一个字节是 Uint8（无符号 8 位整数）、第二、三个字节是 Int16（16 位整数）、第四个字节开始是 Float32（32 位浮点数）等等，此外还可以自定义字节序。&lt;/p&gt;
+&lt;p&gt;简单说，&lt;code&gt;ArrayBuffer&lt;/code&gt;对象代表原始的二进制数据，&lt;code&gt;TypedArray&lt;/code&gt;视图用来读写简单类型的二进制数据，&lt;code&gt;DataView&lt;/code&gt;视图用来读写复杂类型的二进制数据。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;TypedArray&lt;/code&gt;视图支持的数据类型一共有 9 种（&lt;code&gt;DataView&lt;/code&gt;视图支持除&lt;code&gt;Uint8C&lt;/code&gt;以外的其他 8 种）。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="ArrayBuffer" scheme="https://codermae.github.io/tags/ArrayBuffer/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0098</title>
@@ -477,32 +505,6 @@
     
     
     <category term="JS-ES6 Symbol" scheme="https://codermae.github.io/tags/JS-ES6-Symbol/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0082</title>
-    <link href="https://codermae.github.io/2021/07/06/%E6%89%93%E5%8D%A10082/"/>
-    <id>https://codermae.github.io/2021/07/06/%E6%89%93%E5%8D%A10082/</id>
-    <published>2021-07-06T01:32:21.000Z</published>
-    <updated>2021-09-27T05:21:41.619Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#918597&gt;没必要刻意遇见谁，也不急于遇见谁，更不勉强留住谁，一切顺其自然，最好的自己留给值得珍惜的人。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;12-运算符的扩展&quot;&gt;&lt;a href=&quot;#12-运算符的扩展&quot; class=&quot;headerlink&quot; title=&quot;12. 运算符的扩展&quot;&gt;&lt;/a&gt;12. 运算符的扩展&lt;/h3&gt;&lt;h4 id=&quot;12-1-指数运算符&quot;&gt;&lt;a href=&quot;#12-1-指数运算符&quot; class=&quot;headerlink&quot; title=&quot;12.1 指数运算符&quot;&gt;&lt;/a&gt;12.1 指数运算符&lt;/h4&gt;&lt;p&gt;ES2016 新增了一个指数运算符（&lt;code&gt;**&lt;/code&gt;）。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; ** &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// 4&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; ** &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// 8&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;这个运算符的一个特点是右结合，而不是常见的左结合。多个指数运算符连用时，是从最右边开始计算的。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 相当于 2 ** (3 ** 2)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; ** &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt; ** &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 512&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，首先计算的是第二个指数运算符，而不是第一个。&lt;/p&gt;
-&lt;p&gt;指数运算符可以与等号结合，形成一个新的赋值运算符（&lt;code&gt;**=&lt;/code&gt;）。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;1.5&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a **= &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 等同于 a = a * a;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; b = &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;b **= &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 等同于 b = b * b * b;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 运算符的扩展" scheme="https://codermae.github.io/tags/JS-ES6-%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E6%89%A9%E5%B1%95/"/>
     
   </entry>
   

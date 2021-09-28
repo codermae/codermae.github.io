@@ -159,6 +159,72 @@
     
     
     <article
+  id="post-打卡0043"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/26/%E6%89%93%E5%8D%A10043/"
+    >打卡0043</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/26/%E6%89%93%E5%8D%A10043/" class="article-date">
+  <time datetime="2021-05-26T02:08:37.000Z" itemprop="datePublished">2021-05-26</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#fedcbd>别让纠结怨怼，耽误了你对美好风景的体验。</font></p>
+<h2 id="JS-DOM"><a href="#JS-DOM" class="headerlink" title="JS DOM"></a>JS DOM</h2><h3 id="10-Mutation-Observer-API"><a href="#10-Mutation-Observer-API" class="headerlink" title="10. Mutation Observer API"></a>10. Mutation Observer API</h3><h4 id="10-1-概述"><a href="#10-1-概述" class="headerlink" title="10.1 概述"></a>10.1 概述</h4><p>Mutation Observer API 用来监视 DOM 变动。DOM 的任何变动，比如节点的增减、属性的变动、文本内容的变动，这个 API 都可以得到通知。</p>
+<p>概念上，它很接近事件，可以理解为 DOM 发生变动就会触发 Mutation Observer 事件。但是，它与事件有一个本质不同：事件是同步触发，也就是说，DOM 的变动立刻会触发相应的事件；Mutation Observer 则是异步触发，DOM 的变动并不会马上触发，而是要等到当前所有 DOM 操作都结束才触发。</p>
+<p>这样设计是为了应付 DOM 变动频繁的特点。举例来说，如果文档中连续插入1000个<code>&lt;p&gt;</code>元素，就会连续触发1000个插入事件，执行每个事件的回调函数，这很可能造成浏览器的卡顿；而 Mutation Observer 完全不同，只在1000个段落都插入结束后才会触发，而且只触发一次。</p>
+<p>Mutation Observer 有以下特点。</p>
+<ul>
+<li>它等待所有脚本任务完成后，才会运行（即异步触发方式）。</li>
+<li>它把 DOM 变动记录封装成一个数组进行处理，而不是一条条个别处理 DOM 变动。</li>
+<li>它既可以观察 DOM 的所有类型变动，也可以指定只观察某一类变动。</li>
+</ul> 
+      <a class="article-more-link" href="/2021/05/26/%E6%89%93%E5%8D%A10043/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-DOM-Mutation-Observer-API/" rel="tag">JS DOM-Mutation Observer API</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0042"
   class="article article-type-post"
   itemscope
@@ -735,69 +801,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-DOM-%E6%A6%82%E8%BF%B0/" rel="tag">JS DOM-概述</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0033"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/22/%E6%89%93%E5%8D%A10033/"
-    >打卡0033</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/22/%E6%89%93%E5%8D%A10033/" class="article-date">
-  <time datetime="2021-05-22T00:36:17.000Z" itemprop="datePublished">2021-05-22</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#ef5b9c>你相信时间会抚平一切，可时过境迁，你已不复醒</font></p>
-<h2 id="JS异步操作"><a href="#JS异步操作" class="headerlink" title="JS异步操作"></a>JS异步操作</h2><h3 id="3-Promise对象"><a href="#3-Promise对象" class="headerlink" title="3. Promise对象"></a>3. Promise对象</h3><h4 id="3-1-概述"><a href="#3-1-概述" class="headerlink" title="3.1 概述"></a>3.1 概述</h4><p>Promise 对象是 JavaScript 的异步操作解决方案，为异步操作提供统一接口。它起到代理作用（proxy），充当异步操作与回调函数之间的中介，使得异步操作具备同步操作的接口。Promise 可以让异步操作写起来，就像在写同步操作的流程，而不必一层层地嵌套回调函数。</p>
-<p>注意，本章只是 Promise 对象的简单介绍。为了避免与后续教程的重复，更完整的介绍请看《ES6 标准入门》的《Promise 对象》一章。</p>
-<p>首先，Promise 是一个对象，也是一个构造函数。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 异步代码...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(f1);</span><br></pre></td></tr></table></figure>
-<p>上面代码中，<code>Promise</code>构造函数接受一个回调函数<code>f1</code>作为参数，<code>f1</code>里面是异步操作的代码。然后，返回的<code>p1</code>就是一个 Promise 实例。</p>
-<p>Promise 的设计思想是，所有异步任务都返回一个 Promise 实例。Promise 实例有一个<code>then</code>方法，用来指定下一步的回调函数。</p> 
-      <a class="article-more-link" href="/2021/05/22/%E6%89%93%E5%8D%A10033/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C-Promise%E5%AF%B9%E8%B1%A1/" rel="tag">JS异步操作-Promise对象</a></li></ul>
 
     </footer>
   </div>
