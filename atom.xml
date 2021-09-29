@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-09-29T01:25:13.532Z</updated>
+  <updated>2021-09-29T03:35:26.812Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>正则表达式</title>
+    <link href="https://codermae.github.io/2021/09/30/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>https://codermae.github.io/2021/09/30/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
+    <published>2021-09-30T01:36:19.000Z</published>
+    <updated>2021-09-29T03:35:26.812Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;1-使用测试方法&quot;&gt;&lt;a href=&quot;#1-使用测试方法&quot; class=&quot;headerlink&quot; title=&quot;1. 使用测试方法&quot;&gt;&lt;/a&gt;1. 使用测试方法&lt;/h3&gt;&lt;p&gt;使用&lt;code&gt;.test()&lt;/code&gt; 方法，检测字符串 myString 是否符合正则表达式 myRegex 定义的规则。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; myString = &lt;span class=&quot;string&quot;&gt;&amp;quot;Hello, World!&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; myRegex = &lt;span class=&quot;regexp&quot;&gt;/Hello/&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; result = myRegex.test(myString); &lt;span class=&quot;comment&quot;&gt;// 修改这一行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="积累" scheme="https://codermae.github.io/categories/%E7%A7%AF%E7%B4%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://codermae.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0100</title>
@@ -483,30 +503,6 @@
     
     
     <category term="JS-ES6 Proxy" scheme="https://codermae.github.io/tags/JS-ES6-Proxy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0085</title>
-    <link href="https://codermae.github.io/2021/07/08/%E6%89%93%E5%8D%A10085/"/>
-    <id>https://codermae.github.io/2021/07/08/%E6%89%93%E5%8D%A10085/</id>
-    <published>2021-07-08T01:26:19.000Z</published>
-    <updated>2021-09-27T05:22:02.185Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#c99979&gt;一想二干三成功，一等二看三落空。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;14-Set-和-Map-数据结构&quot;&gt;&lt;a href=&quot;#14-Set-和-Map-数据结构&quot; class=&quot;headerlink&quot; title=&quot;14.Set 和 Map 数据结构&quot;&gt;&lt;/a&gt;14.Set 和 Map 数据结构&lt;/h3&gt;&lt;h4 id=&quot;14-1-Set&quot;&gt;&lt;a href=&quot;#14-1-Set&quot; class=&quot;headerlink&quot; title=&quot;14.1 Set&quot;&gt;&lt;/a&gt;14.1 Set&lt;/h4&gt;&lt;h5 id=&quot;14-1-1-基本用法&quot;&gt;&lt;a href=&quot;#14-1-1-基本用法&quot; class=&quot;headerlink&quot; title=&quot;14.1.1 基本用法&quot;&gt;&lt;/a&gt;14.1.1 基本用法&lt;/h5&gt;&lt;p&gt;ES6 提供了新的数据结构 Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Set&lt;/code&gt;本身是一个构造函数，用来生成 Set 数据结构。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; s = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Set&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;].forEach(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;x&lt;/span&gt; =&amp;gt;&lt;/span&gt; s.add(x));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;of&lt;/span&gt; s) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 2 3 5 4&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码通过&lt;code&gt;add()&lt;/code&gt;方法向 Set 结构加入成员，结果表明 Set 结构不会添加重复的值。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Set&lt;/code&gt;函数可以接受一个数组（或者具有 iterable 接口的其他数据结构）作为参数，用来初始化。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 Set 和 Map 数据结构" scheme="https://codermae.github.io/tags/JS-ES6-Set-%E5%92%8C-Map-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   

@@ -159,6 +159,64 @@
     
     
     <article
+  id="post-踩坑JavaScript"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/09/16/%E8%B8%A9%E5%9D%91JavaScript/"
+    >踩坑JavaScript</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/09/16/%E8%B8%A9%E5%9D%91JavaScript/" class="article-date">
+  <time datetime="2021-09-16T12:33:23.000Z" itemprop="datePublished">2021-09-16</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B8%A9%E5%9D%91/">踩坑</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#ffc20e>人生当自勉，学习需坚持。</font></p>
+<h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2> 
+      <a class="article-more-link" href="/2021/09/16/%E8%B8%A9%E5%9D%91JavaScript/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B8%A9%E5%9D%91JavaScript/" rel="tag">踩坑JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-踩坑Koa"
   class="article article-type-post"
   itemscope
@@ -703,68 +761,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-Proxy/" rel="tag">JS-ES6 Proxy</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0085"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/07/08/%E6%89%93%E5%8D%A10085/"
-    >打卡0085</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/07/08/%E6%89%93%E5%8D%A10085/" class="article-date">
-  <time datetime="2021-07-08T01:26:19.000Z" itemprop="datePublished">2021-07-08</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#c99979>一想二干三成功，一等二看三落空。</font></p>
-<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="14-Set-和-Map-数据结构"><a href="#14-Set-和-Map-数据结构" class="headerlink" title="14.Set 和 Map 数据结构"></a>14.Set 和 Map 数据结构</h3><h4 id="14-1-Set"><a href="#14-1-Set" class="headerlink" title="14.1 Set"></a>14.1 Set</h4><h5 id="14-1-1-基本用法"><a href="#14-1-1-基本用法" class="headerlink" title="14.1.1 基本用法"></a>14.1.1 基本用法</h5><p>ES6 提供了新的数据结构 Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。</p>
-<p><code>Set</code>本身是一个构造函数，用来生成 Set 数据结构。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> s = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line"></span><br><span class="line">[<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">2</span>].forEach(<span class="function"><span class="params">x</span> =&gt;</span> s.add(x));</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> s) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 2 3 5 4</span></span><br></pre></td></tr></table></figure>
-<p>上面代码通过<code>add()</code>方法向 Set 结构加入成员，结果表明 Set 结构不会添加重复的值。</p>
-<p><code>Set</code>函数可以接受一个数组（或者具有 iterable 接口的其他数据结构）作为参数，用来初始化。</p> 
-      <a class="article-more-link" href="/2021/07/08/%E6%89%93%E5%8D%A10085/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-Set-%E5%92%8C-Map-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">JS-ES6 Set 和 Map 数据结构</a></li></ul>
 
     </footer>
   </div>
