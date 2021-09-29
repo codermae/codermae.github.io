@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
+       
+      <meta name="keywords" content="blog" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>打卡0100 |  maeBlog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-打卡0100"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  打卡0100
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/09/30/%E6%89%93%E5%8D%A10100/" class="article-date">
+  <time datetime="2021-09-30T00:14:51.000Z" itemprop="datePublished">2021-09-30</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">4.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">17 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#426ab3>世界上总有一半人不理解另一半人的快乐。</font></p>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="30-最新提案"><a href="#30-最新提案" class="headerlink" title="30. 最新提案"></a>30. 最新提案</h3><p>本章介绍一些尚未进入标准、但很有希望的最新提案。</p>
+<h4 id="30-1-do-表达式"><a href="#30-1-do-表达式" class="headerlink" title="30.1 do 表达式"></a>30.1 do 表达式</h4><p>本质上，块级作用域是一个语句，将多个操作封装在一起，没有返回值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">let</span> t = f();</span><br><span class="line">  t = t * t + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，块级作用域将两个语句封装在一起。但是，在块级作用域以外，没有办法得到<code>t</code>的值，因为块级作用域不返回值，除非<code>t</code>是全局变量。</p>
+<p>现在有一个提案，使得块级作用域可以变为表达式，也就是说可以返回值，办法就是在块级作用域之前加上<code>do</code>，使它变为<code>do</code>表达式，然后就会返回内部最后执行的表达式的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="keyword">do</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> t = f();</span><br><span class="line">  t * t + <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，变量<code>x</code>会得到整个块级作用域的返回值（<code>t * t + 1</code>）。</p>
+<p><code>do</code>表达式的逻辑非常简单：封装的是什么，就会返回什么。</p>
+<span id="more"></span>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 等同于 &lt;表达式&gt;</span></span><br><span class="line"><span class="keyword">do</span> &#123; &lt;表达式&gt;; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于 &lt;语句&gt;</span></span><br><span class="line"><span class="keyword">do</span> &#123; &lt;语句&gt; &#125;</span><br></pre></td></tr></table></figure>
+<p><code>do</code>表达式的好处是可以封装多个语句，让程序更加模块化，就像乐高积木那样一块块拼装起来。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="keyword">do</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (foo()) &#123; f() &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (bar()) &#123; g() &#125;</span><br><span class="line">  <span class="keyword">else</span> &#123; h() &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>上面代码的本质，就是根据函数<code>foo</code>的执行结果，调用不同的函数，将返回结果赋给变量<code>x</code>。使用<code>do</code>表达式，就将这个操作的意图表达得非常简洁清晰。而且，<code>do</code>块级作用域提供了单独的作用域，内部操作可以与全局作用域隔绝。</p>
+<p>值得一提的是，<code>do</code>表达式在 JSX 语法中非常好用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> (</span><br><span class="line">  &lt;nav&gt;</span><br><span class="line">    &lt;Home /&gt;</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (loggedIn) &#123;</span><br><span class="line">          &lt;LogoutButton /&gt;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          &lt;LoginButton /&gt;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/nav&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>上面代码中，如果不用<code>do</code>表达式，就只能用三元判断运算符（<code>?:</code>）。那样的话，一旦判断逻辑复杂，代码就会变得很不易读。</p>
+<h4 id="30-2-throw-表达式"><a href="#30-2-throw-表达式" class="headerlink" title="30.2 throw 表达式"></a>30.2 throw 表达式</h4><p>JavaScript 语法规定<code>throw</code>是一个命令，用来抛出错误，不能用于表达式之中。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 报错</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>());</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>console.log</code>的参数必须是一个表达式，如果是一个<code>throw</code>语句就会报错。</p>
+<p>现在有一个提案，允许<code>throw</code>用于表达式。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 参数的默认值</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">save</span>(<span class="params">filename = <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">&quot;Argument required&quot;</span>)</span>) </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数的返回值</span></span><br><span class="line">lint(ast, &#123;</span><br><span class="line">  <span class="keyword">with</span>: <span class="function">() =&gt;</span> <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;avoid using &#x27;with&#x27; statements.&quot;</span>)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 条件表达式</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getEncoder</span>(<span class="params">encoding</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> encoder = encoding === <span class="string">&quot;utf8&quot;</span> ?</span><br><span class="line">    <span class="keyword">new</span> UTF8Encoder() :</span><br><span class="line">    encoding === <span class="string">&quot;utf16le&quot;</span> ?</span><br><span class="line">      <span class="keyword">new</span> UTF16Encoder(<span class="literal">false</span>) :</span><br><span class="line">      encoding === <span class="string">&quot;utf16be&quot;</span> ?</span><br><span class="line">        <span class="keyword">new</span> UTF16Encoder(<span class="literal">true</span>) :</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;Unsupported encoding&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 逻辑表达式</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Product</span> </span>&#123;</span><br><span class="line">  <span class="keyword">get</span> <span class="title">id</span>() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>._id;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">set</span> <span class="title">id</span>(<span class="params">value</span>) &#123;</span><br><span class="line">    <span class="built_in">this</span>._id = value || <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;Invalid value&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>throw</code>都出现在表达式里面。</p>
+<p>语法上，<code>throw</code>表达式里面的<code>throw</code>不再是一个命令，而是一个运算符。为了避免与<code>throw</code>命令混淆，规定<code>throw</code>出现在行首，一律解释为<code>throw</code>语句，而不是<code>throw</code>表达式。</p>
+<h4 id="30-3-函数的部分执行"><a href="#30-3-函数的部分执行" class="headerlink" title="30.3 函数的部分执行"></a>30.3 函数的部分执行</h4><h5 id="30-3-1-语法"><a href="#30-3-1-语法" class="headerlink" title="30.3.1 语法"></a>30.3.1 语法</h5><p>多参数的函数有时需要绑定其中的一个或多个参数，然后返回一个新函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123; <span class="keyword">return</span> x + y; &#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add7</span>(<span class="params">x</span>) </span>&#123; <span class="keyword">return</span> x + <span class="number">7</span>; &#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>add7</code>函数其实是<code>add</code>函数的一个特殊版本，通过将一个参数绑定为<code>7</code>，就可以从<code>add</code>得到<code>add7</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bind 方法</span></span><br><span class="line"><span class="keyword">const</span> add7 = add.bind(<span class="literal">null</span>, <span class="number">7</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 箭头函数</span></span><br><span class="line"><span class="keyword">const</span> add7 = <span class="function"><span class="params">x</span> =&gt;</span> add(x, <span class="number">7</span>);</span><br></pre></td></tr></table></figure>
+<p>上面两种写法都有些冗余。其中，<code>bind</code>方法的局限更加明显，它必须提供<code>this</code>，并且只能从前到后一个个绑定参数，无法只绑定非头部的参数。</p>
+<p>现在有一个提案，使得绑定参数并返回一个新函数更加容易。这叫做函数的部分执行（partial application）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> add = <span class="function">(<span class="params">x, y</span>) =&gt;</span> x + y;</span><br><span class="line"><span class="keyword">const</span> addOne = add(<span class="number">1</span>, ?);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> maxGreaterThanZero = <span class="built_in">Math</span>.max(<span class="number">0</span>, ...);</span><br></pre></td></tr></table></figure>
+<p>根据新提案，<code>?</code>是单个参数的占位符，<code>...</code>是多个参数的占位符。以下的形式都属于函数的部分执行。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">f(x, ?)</span><br><span class="line">f(x, ...)</span><br><span class="line">f(?, x)</span><br><span class="line">f(..., x)</span><br><span class="line">f(?, x, ?)</span><br><span class="line">f(..., x, ...)</span><br></pre></td></tr></table></figure>
+<p><code>?</code>和<code>...</code>只能出现在函数的调用之中，并且会返回一个新函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> g = f(?, <span class="number">1</span>, ...);</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">const</span> g = <span class="function">(<span class="params">x, ...y</span>) =&gt;</span> f(x, <span class="number">1</span>, ...y);</span><br></pre></td></tr></table></figure>
+<p>函数的部分执行，也可以用于对象的方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">  <span class="function"><span class="title">f</span>(<span class="params">x, y</span>)</span> &#123; <span class="keyword">return</span> x + y; &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> g = obj.f(?, <span class="number">3</span>);</span><br><span class="line">g(<span class="number">1</span>) <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+<h5 id="30-3-2-注意点"><a href="#30-3-2-注意点" class="headerlink" title="30.3.2 注意点"></a>30.3.2 注意点</h5><p>函数的部分执行有一些特别注意的地方。</p>
+<p>（1）函数的部分执行是基于原函数的。如果原函数发生变化，部分执行生成的新函数也会立即反映这种变化。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> f = <span class="function">(<span class="params">x, y</span>) =&gt;</span> x + y;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> g = f(?, <span class="number">3</span>);</span><br><span class="line">g(<span class="number">1</span>); <span class="comment">// 4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 替换函数 f</span></span><br><span class="line">f = <span class="function">(<span class="params">x, y</span>) =&gt;</span> x * y;</span><br><span class="line"></span><br><span class="line">g(<span class="number">1</span>); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，定义了函数的部分执行以后，更换原函数会立即影响到新函数。</p>
+<p>（2）如果预先提供的那个值是一个表达式，那么这个表达式并不会在定义时求值，而是在每次调用时求值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">const</span> f = <span class="function">(<span class="params">x, y</span>) =&gt;</span> x + y;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> g = f(?, a);</span><br><span class="line">g(<span class="number">1</span>); <span class="comment">// 4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 改变 a 的值</span></span><br><span class="line">a = <span class="number">10</span>;</span><br><span class="line">g(<span class="number">1</span>); <span class="comment">// 11</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，预先提供的参数是变量<code>a</code>，那么每次调用函数<code>g</code>的时候，才会对<code>a</code>进行求值。</p>
+<p>（3）如果新函数的参数多于占位符的数量，那么多余的参数将被忽略。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> f = <span class="function">(<span class="params">x, ...y</span>) =&gt;</span> [x, ...y];</span><br><span class="line"><span class="keyword">const</span> g = f(?, <span class="number">1</span>);</span><br><span class="line">g(<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>); <span class="comment">// [2, 1]</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，函数<code>g</code>只有一个占位符，也就意味着它只能接受一个参数，多余的参数都会被忽略。</p>
+<p>写成下面这样，多余的参数就没有问题。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> f = <span class="function">(<span class="params">x, ...y</span>) =&gt;</span> [x, ...y];</span><br><span class="line"><span class="keyword">const</span> g = f(?, <span class="number">1</span>, ...);</span><br><span class="line">g(<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>); <span class="comment">// [2, 1, 3, 4];</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>g</code>定义了两个<code>...</code>占位符，真正执行的时候，它们的值是一样的。</p>
+<h4 id="30-4-管道运算符"><a href="#30-4-管道运算符" class="headerlink" title="30.4 管道运算符"></a>30.4 管道运算符</h4><p>Unix 操作系统有一个管道机制（pipeline），可以把前一个操作的值传给后一个操作。这个机制非常有用，使得简单的操作可以组合成为复杂的操作。许多语言都有管道的实现，现在有一个提案，让 JavaScript 也拥有管道机制。</p>
+<p>JavaScript 的管道是一个运算符，写作<code>|&gt;</code>。它的左边是一个表达式，右边是一个函数。管道运算符把左边表达式的值，传入右边的函数进行求值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x |&gt; f</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line">f(x)</span><br></pre></td></tr></table></figure>
+<p>管道运算符最大的好处，就是可以把嵌套的函数，写成从左到右的链式表达式。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">doubleSay</span> (<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> str + <span class="string">&quot;, &quot;</span> + str;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">capitalize</span> (<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> str[<span class="number">0</span>].toUpperCase() + str.substring(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">exclaim</span> (<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> str + <span class="string">&#x27;!&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面是三个简单的函数。如果要嵌套执行，传统的写法和管道的写法分别如下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 传统的写法</span></span><br><span class="line">exclaim(capitalize(doubleSay(<span class="string">&#x27;hello&#x27;</span>)))</span><br><span class="line"><span class="comment">// &quot;Hello, hello!&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 管道的写法</span></span><br><span class="line"><span class="string">&#x27;hello&#x27;</span></span><br><span class="line">  |&gt; doubleSay</span><br><span class="line">  |&gt; capitalize</span><br><span class="line">  |&gt; exclaim</span><br><span class="line"><span class="comment">// &quot;Hello, hello!&quot;</span></span><br></pre></td></tr></table></figure>
+<p>管道运算符只能传递一个值，这意味着它右边的函数必须是一个单参数函数。如果是多参数函数，就必须进行柯里化，改成单参数的版本。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">double</span> (<span class="params">x</span>) </span>&#123; <span class="keyword">return</span> x + x; &#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span> (<span class="params">x, y</span>) </span>&#123; <span class="keyword">return</span> x + y; &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> person = &#123; <span class="attr">score</span>: <span class="number">25</span> &#125;;</span><br><span class="line">person.score</span><br><span class="line">  |&gt; double</span><br><span class="line">  |&gt; (<span class="function"><span class="params">_</span> =&gt;</span> add(<span class="number">7</span>, _))</span><br><span class="line"><span class="comment">// 57</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>add</code>函数需要两个参数。但是，管道运算符只能传入一个值，因此需要事先提供另一个参数，并将其改成单参数的箭头函数<code>_ =&gt; add(7, _)</code>。这个函数里面的下划线并没有特别的含义，可以用其他符号代替，使用下划线只是因为，它能够形象地表示这里是占位符。</p>
+<p>管道运算符对于<code>await</code>函数也适用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x |&gt; <span class="keyword">await</span> f</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">await</span> f(x)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> userAge = userId |&gt; <span class="keyword">await</span> fetchUserById |&gt; getAgeFromUser;</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">const</span> userAge = getAgeFromUser(<span class="keyword">await</span> fetchUserById(userId));</span><br></pre></td></tr></table></figure>
+<h4 id="30-5-Math-signbit"><a href="#30-5-Math-signbit" class="headerlink" title="30.5 Math.signbit()"></a>30.5 Math.signbit()</h4><p><code>Math.sign()</code>用来判断一个值的正负，但是如果参数是<code>-0</code>，它会返回<code>-0</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.sign(-<span class="number">0</span>) <span class="comment">// -0</span></span><br></pre></td></tr></table></figure>
+<p>这导致对于判断符号位的正负，<code>Math.sign()</code>不是很有用。JavaScript 内部使用 64 位浮点数（国际标准 IEEE 754）表示数值，IEEE 754 规定第一位是符号位，<code>0</code>表示正数，<code>1</code>表示负数。所以会有两种零，<code>+0</code>是符号位为<code>0</code>时的零值，<code>-0</code>是符号位为<code>1</code>时的零值。实际编程中，判断一个值是<code>+0</code>还是<code>-0</code>非常麻烦，因为它们是相等的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+<span class="number">0</span> === -<span class="number">0</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>目前，有一个提案，引入了Math.signbit()方法判断一个数的符号位是否设置了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.signbit(<span class="number">2</span>) <span class="comment">//false</span></span><br><span class="line"><span class="built_in">Math</span>.signbit(-<span class="number">2</span>) <span class="comment">//true</span></span><br><span class="line"><span class="built_in">Math</span>.signbit(<span class="number">0</span>) <span class="comment">//false</span></span><br><span class="line"><span class="built_in">Math</span>.signbit(-<span class="number">0</span>) <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<p>可以看到，该方法正确返回了-0的符号位是设置了的。</p>
+<p>该方法的算法如下。</p>
+<ul>
+<li>如果参数是<code>NaN</code>，返回<code>false</code></li>
+<li>如果参数是<code>-0</code>，返回<code>true</code></li>
+<li>如果参数是负值，返回<code>true</code></li>
+<li>其他情况返回<code>false</code></li>
+</ul>
+<h4 id="30-6-双冒号运算符"><a href="#30-6-双冒号运算符" class="headerlink" title="30.6 双冒号运算符"></a>30.6 双冒号运算符</h4><p>箭头函数可以绑定<code>this</code>对象，大大减少了显式绑定<code>this</code>对象的写法（<code>call</code>、<code>apply</code>、<code>bind</code>）。但是，箭头函数并不适用于所有场合，所以现在有一个提案，提出了“函数绑定”（function bind）运算符，用来取代<code>call</code>、<code>apply</code>、<code>bind</code>调用。</p>
+<p>函数绑定运算符是并排的两个冒号（<code>::</code>），双冒号左边是一个对象，右边是一个函数。该运算符会自动将左边的对象，作为上下文环境（即<code>this</code>对象），绑定到右边的函数上面。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">foo::bar;</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line">bar.bind(foo);</span><br><span class="line"></span><br><span class="line">foo::bar(...arguments);</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line">bar.apply(foo, <span class="built_in">arguments</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> hasOwnProperty = <span class="built_in">Object</span>.prototype.hasOwnProperty;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hasOwn</span>(<span class="params">obj, key</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> obj::hasOwnProperty(key);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果双冒号左边为空，右边是一个对象的方法，则等于将该方法绑定在该对象上面。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> method = obj::obj.foo;</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">var</span> method = ::obj.foo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> log = ::<span class="built_in">console</span>.log;</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">var</span> log = <span class="built_in">console</span>.log.bind(<span class="built_in">console</span>);</span><br></pre></td></tr></table></figure>
+<p>如果双冒号运算符的运算结果，还是一个对象，就可以采用链式写法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; map, takeWhile, forEach &#125; <span class="keyword">from</span> <span class="string">&quot;iterlib&quot;</span>;</span><br><span class="line"></span><br><span class="line">getPlayers()</span><br><span class="line">::map(<span class="function"><span class="params">x</span> =&gt;</span> x.character())</span><br><span class="line">::takeWhile(<span class="function"><span class="params">x</span> =&gt;</span> x.strength &gt; <span class="number">100</span>)</span><br><span class="line">::forEach(<span class="function"><span class="params">x</span> =&gt;</span> <span class="built_in">console</span>.log(x));</span><br></pre></td></tr></table></figure>
+<h4 id="30-7-Realm-API"><a href="#30-7-Realm-API" class="headerlink" title="30.7 Realm API"></a>30.7 Realm API</h4><p>Realm API 提供沙箱功能（sandbox），允许隔离代码，防止那些被隔离的代码拿到全局对象。</p>
+<p>以前，经常使用<code>&lt;iframe&gt;</code>作为沙箱。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> globalOne = <span class="built_in">window</span>;</span><br><span class="line"><span class="keyword">let</span> iframe = <span class="built_in">document</span>.createElement(<span class="string">&#x27;iframe&#x27;</span>);</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(iframe);</span><br><span class="line"><span class="keyword">const</span> globalTwo = iframe.contentWindow;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>&lt;iframe&gt;</code>的全局对象是独立的（<code>iframe.contentWindow</code>）。Realm API 可以取代这个功能。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> globalOne = <span class="built_in">window</span>;</span><br><span class="line"><span class="keyword">const</span> globalTwo = <span class="keyword">new</span> Realm().global;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>Realm API</code>单独提供了一个全局对象<code>new Realm().global</code>。</p>
+<p>Realm API 提供一个<code>Realm()</code>构造函数，用来生成一个 Realm 对象。该对象的<code>global</code>属性指向一个新的顶层对象，这个顶层对象跟原始的顶层对象类似。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> globalOne = <span class="built_in">window</span>;</span><br><span class="line"><span class="keyword">const</span> globalTwo = <span class="keyword">new</span> Realm().global;</span><br><span class="line"></span><br><span class="line">globalOne.evaluate(<span class="string">&#x27;1 + 2&#x27;</span>) <span class="comment">// 3</span></span><br><span class="line">globalTwo.evaluate(<span class="string">&#x27;1 + 2&#x27;</span>) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，Realm 生成的顶层对象的<code>evaluate()</code>方法，可以运行代码。</p>
+<p>下面的代码可以证明，Realm 顶层对象与原始顶层对象是两个对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a1 = globalOne.evaluate(<span class="string">&#x27;[1,2,3]&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> a2 = globalTwo.evaluate(<span class="string">&#x27;[1,2,3]&#x27;</span>);</span><br><span class="line">a1.prototype === a2.prototype; <span class="comment">// false</span></span><br><span class="line">a1 <span class="keyword">instanceof</span> globalTwo.Array; <span class="comment">// false</span></span><br><span class="line">a2 <span class="keyword">instanceof</span> globalOne.Array; <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，Realm 沙箱里面的数组的原型对象，跟原始环境里面的数组是不一样的。</p>
+<p>Realm 沙箱里面只能运行 ECMAScript 语法提供的 API，不能运行宿主环境提供的 API。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">globalTwo.evaluate(<span class="string">&#x27;console.log(1)&#x27;</span>)</span><br><span class="line"><span class="comment">// throw an error: console is undefined</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，Realm 沙箱里面没有<code>console</code>对象，导致报错。因为<code>console</code>不是语法标准，是宿主环境提供的。</p>
+<p>如果要解决这个问题，可以使用下面的代码。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">globalTwo.console = globalOne.console;</span><br></pre></td></tr></table></figure>
+<p><code>Realm()</code>构造函数可以接受一个参数对象，该参数对象的<code>intrinsics</code>属性可以指定 Realm 沙箱继承原始顶层对象的方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> r1 = <span class="keyword">new</span> Realm();</span><br><span class="line">r1.global === <span class="built_in">this</span>;</span><br><span class="line">r1.global.JSON === <span class="built_in">JSON</span>; <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> r2 = <span class="keyword">new</span> Realm(&#123; <span class="attr">intrinsics</span>: <span class="string">&#x27;inherit&#x27;</span> &#125;);</span><br><span class="line">r2.global === <span class="built_in">this</span>; <span class="comment">// false</span></span><br><span class="line">r2.global.JSON === <span class="built_in">JSON</span>; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，正常情况下，沙箱的<code>JSON</code>方法不同于原始的<code>JSON</code>对象。但是，<code>Realm()</code>构造函数接受<code>&#123; intrinsics: &#39;inherit&#39; &#125;</code>作为参数以后，就会继承原始顶层对象的方法。</p>
+<p>用户可以自己定义<code>Realm</code>的子类，用来定制自己的沙箱。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FakeWindow</span> <span class="keyword">extends</span> <span class="title">Realm</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">init</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">super</span>.init();</span><br><span class="line">    <span class="keyword">let</span> <span class="built_in">global</span> = <span class="built_in">this</span>.global;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">global</span>.document = <span class="keyword">new</span> FakeDocument(...);</span><br><span class="line">    <span class="built_in">global</span>.alert = <span class="keyword">new</span> <span class="built_in">Proxy</span>(fakeAlert, &#123; ... &#125;);</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>FakeWindow</code>模拟了一个假的顶层对象<code>window</code>。</p>
+<h4 id="30-8-命令"><a href="#30-8-命令" class="headerlink" title="30.8 #!命令"></a>30.8 <code>#!</code>命令</h4><p>Unix 的命令行脚本都支持<code>#!</code>命令，又称为 Shebang 或 Hashbang。这个命令放在脚本的第一行，用来指定脚本的执行器。</p>
+<p>比如 Bash 脚本的第一行。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br></pre></td></tr></table></figure>
+<p>Python 脚本的第一行。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python</span><br></pre></td></tr></table></figure>
+<p>现在有一个提案，为 JavaScript 脚本引入了<code>#!</code>命令，写在脚本文件或者模块文件的第一行。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 写在脚本文件第一行</span></span><br><span class="line"><span class="meta">#!/usr/bin/env node</span></span><br><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 写在模块文件第一行</span></span><br><span class="line"><span class="meta">#!/usr/bin/env node</span></span><br><span class="line"><span class="keyword">export</span> &#123;&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+<p>有了这一行以后，Unix 命令行就可以直接执行脚本。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 以前执行脚本的方式</span><br><span class="line">$ node hello.js</span><br><span class="line"></span><br><span class="line"># hashbang 的方式</span><br><span class="line">$ ./hello.js</span><br></pre></td></tr></table></figure>
+<p>对于 JavaScript 引擎来说，会把<code>#!</code>理解成注释，忽略掉这一行。</p>
+<h4 id="30-9-import-meta"><a href="#30-9-import-meta" class="headerlink" title="30.9 import.meta"></a>30.9 import.meta</h4><p>开发者使用一个模块时，有时需要知道模板本身的一些信息（比如模块的路径）。现在有一个提案，为 import 命令添加了一个元属性<code>import.meta</code>，返回当前模块的元信息。</p>
+<p><code>import.meta</code>只能在模块内部使用，如果在模块外部使用会报错。</p>
+<p>这个属性返回一个对象，该对象的各种属性就是当前运行的脚本的元信息。具体包含哪些属性，标准没有规定，由各个运行环境自行决定。一般来说，<code>import.meta</code>至少会有下面两个属性。</p>
+<p>（1）import.meta.url</p>
+<p><code>import.meta.url</code>返回当前模块的 URL 路径。举例来说，当前模块主文件的路径是<code>https://foo.com/main.js</code>，<code>import.meta.url</code>就返回这个路径。如果模块里面还有一个数据文件<code>data.txt</code>，那么就可以用下面的代码，获取这个数据文件的路径。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> URL(<span class="string">&#x27;data.txt&#x27;</span>, <span class="keyword">import</span>.meta.url)</span><br></pre></td></tr></table></figure>
+<p>注意，Node.js 环境中，<code>import.meta.url</code>返回的总是本地路径，即是<code>file:URL</code>协议的字符串，比如<code>file:///home/user/foo.js</code>。</p>
+<p>（2）import.meta.scriptElement</p>
+<p><code>import.meta.scriptElement</code>是浏览器特有的元属性，返回加载模块的那个<code>&lt;script&gt;</code>元素，相当于<code>document.currentScript</code>属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// HTML 代码为</span></span><br><span class="line"><span class="comment">// &lt;script type=&quot;module&quot; src=&quot;my-module.js&quot; data-foo=&quot;abc&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// my-module.js 内部执行下面的代码</span></span><br><span class="line"><span class="keyword">import</span>.meta.scriptElement.dataset.foo</span><br><span class="line"><span class="comment">// &quot;abc&quot;</span></span><br></pre></td></tr></table></figure>
+<h4 id="30-10-JSON-模块"><a href="#30-10-JSON-模块" class="headerlink" title="30.10 JSON 模块"></a>30.10 JSON 模块</h4><p>import 命令目前只能用于加载 ES 模块，现在有一个提案，允许加载 JSON 模块。</p>
+<p>假定有一个 JSON 模块文件<code>config.json</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;appName&quot;</span>: <span class="string">&quot;My App&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>目前，只能使用<code>fetch()</code>加载 JSON 模块。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> response = <span class="keyword">await</span> fetch(<span class="string">&#x27;./config.json&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> json = <span class="keyword">await</span> response.json();</span><br></pre></td></tr></table></figure>
+<p>import 命令能够直接加载 JSON 模块以后，就可以像下面这样写。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> configData <span class="keyword">from</span> <span class="string">&#x27;./config.json&#x27;</span> assert &#123; <span class="attr">type</span>: <span class="string">&quot;json&quot;</span> &#125;;</span><br><span class="line"><span class="built_in">console</span>.log(configData.appName);</span><br></pre></td></tr></table></figure>
+<p>上面示例中，整个 JSON 对象被导入为<code>configData</code>对象，然后就可以从该对象获取 JSON 数据。</p>
+<p><code>import</code>命令导入 JSON 模块时，命令结尾的<code>assert &#123;type: &quot;json&quot;&#125;</code>不可缺少。这叫做导入断言，用来告诉 JavaScript 引擎，现在加载的是 JSON 模块。你可能会问，为什么不通过<code>.json</code>后缀名判断呢？因为浏览器的传统是不通过后缀名判断文件类型，标准委员会希望遵循这种做法，这样也可以避免一些安全问题。</p>
+<p>导入断言是 JavaScript 导入其他格式模块的标准写法，JSON 模块将是第一个使用这种语法导入的模块。以后，还会支持导入 CSS 模块、HTML 模块等等。</p>
+<p>动态加载模块的<code>import()</code>函数也支持加载 JSON 模块。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>(<span class="string">&#x27;./config.json&#x27;</span>, &#123; <span class="attr">assert</span>: &#123; <span class="attr">type</span>: <span class="string">&#x27;json&#x27;</span> &#125; &#125;)</span><br></pre></td></tr></table></figure>
+<p>脚本加载 JSON 模块以后，还可以再用 export 命令输出。这时，可以将 export 和 import 结合成一个语句。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> &#123; config &#125; <span class="keyword">from</span> <span class="string">&#x27;./config.json&#x27;</span> assert &#123; <span class="attr">type</span>: <span class="string">&#x27;json&#x27;</span> &#125;;</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/09/30/%E6%89%93%E5%8D%A10100/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%80%E6%96%B0%E6%8F%90%E6%A1%88/" rel="tag">最新提案</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2021/09/29/%E6%89%93%E5%8D%A10099/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">打卡0099</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
+    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Ye Ma
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        <!-- 
+         -->
+        
+        
+        Powered by Hexo
+        <span class="division">|</span>
+        Theme - Ayer
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="maeBlog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/Travel/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about/2021">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/gHZjdQRcOL1WxSP.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/pZNYuI4QFnfwb7l.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>

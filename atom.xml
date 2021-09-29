@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-09-28T07:20:32.516Z</updated>
+  <updated>2021-09-29T01:25:13.532Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0100</title>
+    <link href="https://codermae.github.io/2021/09/30/%E6%89%93%E5%8D%A10100/"/>
+    <id>https://codermae.github.io/2021/09/30/%E6%89%93%E5%8D%A10100/</id>
+    <published>2021-09-30T00:14:51.000Z</published>
+    <updated>2021-09-29T01:25:13.532Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#426ab3&gt;世界上总有一半人不理解另一半人的快乐。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;30-最新提案&quot;&gt;&lt;a href=&quot;#30-最新提案&quot; class=&quot;headerlink&quot; title=&quot;30. 最新提案&quot;&gt;&lt;/a&gt;30. 最新提案&lt;/h3&gt;&lt;p&gt;本章介绍一些尚未进入标准、但很有希望的最新提案。&lt;/p&gt;
+&lt;h4 id=&quot;30-1-do-表达式&quot;&gt;&lt;a href=&quot;#30-1-do-表达式&quot; class=&quot;headerlink&quot; title=&quot;30.1 do 表达式&quot;&gt;&lt;/a&gt;30.1 do 表达式&lt;/h4&gt;&lt;p&gt;本质上，块级作用域是一个语句，将多个操作封装在一起，没有返回值。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; t = f();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  t = t * t + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，块级作用域将两个语句封装在一起。但是，在块级作用域以外，没有办法得到&lt;code&gt;t&lt;/code&gt;的值，因为块级作用域不返回值，除非&lt;code&gt;t&lt;/code&gt;是全局变量。&lt;/p&gt;
+&lt;p&gt;现在有一个提案，使得块级作用域可以变为表达式，也就是说可以返回值，办法就是在块级作用域之前加上&lt;code&gt;do&lt;/code&gt;，使它变为&lt;code&gt;do&lt;/code&gt;表达式，然后就会返回内部最后执行的表达式的值。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; x = &lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; t = f();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  t * t + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面代码中，变量&lt;code&gt;x&lt;/code&gt;会得到整个块级作用域的返回值（&lt;code&gt;t * t + 1&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;do&lt;/code&gt;表达式的逻辑非常简单：封装的是什么，就会返回什么。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
+    
+    
+    <category term="最新提案" scheme="https://codermae.github.io/tags/%E6%9C%80%E6%96%B0%E6%8F%90%E6%A1%88/"/>
+    
+  </entry>
   
   <entry>
     <title>打卡0099</title>
@@ -480,31 +507,6 @@
     
     
     <category term="JS-ES6 Set 和 Map 数据结构" scheme="https://codermae.github.io/tags/JS-ES6-Set-%E5%92%8C-Map-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0083</title>
-    <link href="https://codermae.github.io/2021/07/07/%E6%89%93%E5%8D%A10083/"/>
-    <id>https://codermae.github.io/2021/07/07/%E6%89%93%E5%8D%A10083/</id>
-    <published>2021-07-07T02:42:21.000Z</published>
-    <updated>2021-09-27T05:21:54.662Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#6f599c&gt;人间的面，见一面少一面。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;13-Symbol&quot;&gt;&lt;a href=&quot;#13-Symbol&quot; class=&quot;headerlink&quot; title=&quot;13. Symbol&quot;&gt;&lt;/a&gt;13. Symbol&lt;/h3&gt;&lt;h4 id=&quot;13-1-概述&quot;&gt;&lt;a href=&quot;#13-1-概述&quot; class=&quot;headerlink&quot; title=&quot;13.1 概述&quot;&gt;&lt;/a&gt;13.1 概述&lt;/h4&gt;&lt;p&gt;ES5 的对象属性名都是字符串，这容易造成属性名的冲突。比如，你使用了一个他人提供的对象，但又想为这个对象添加新的方法（mixin 模式），新方法的名字就有可能与现有方法产生冲突。如果有一种机制，保证每个属性的名字都是独一无二的就好了，这样就从根本上防止属性名的冲突。这就是 ES6 引入&lt;code&gt;Symbol&lt;/code&gt;的原因。&lt;/p&gt;
-&lt;p&gt;ES6 引入了一种新的原始数据类型&lt;code&gt;Symbol&lt;/code&gt;，表示独一无二的值。它是 JavaScript 语言的第七种数据类型，前六种是：&lt;code&gt;undefined&lt;/code&gt;、&lt;code&gt;null&lt;/code&gt;、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。&lt;/p&gt;
-&lt;p&gt;Symbol 值通过&lt;code&gt;Symbol&lt;/code&gt;函数生成。这就是说，对象的属性名现在可以有两种类型，一种是原来就有的字符串，另一种就是新增的 Symbol 类型。凡是属性名属于 Symbol 类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; s = &lt;span class=&quot;built_in&quot;&gt;Symbol&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; s&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;quot;symbol&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码中，变量&lt;code&gt;s&lt;/code&gt;就是一个独一无二的值。&lt;code&gt;typeof&lt;/code&gt;运算符的结果，表明变量&lt;code&gt;s&lt;/code&gt;是 Symbol 数据类型，而不是字符串之类的其他类型。&lt;/p&gt;
-&lt;p&gt;注意，&lt;code&gt;Symbol&lt;/code&gt;函数前不能使用&lt;code&gt;new&lt;/code&gt;命令，否则会报错。这是因为生成的 Symbol 是一个原始类型的值，不是对象。也就是说，由于 Symbol 值不是对象，所以不能添加属性。基本上，它是一种类似于字符串的数据类型。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 Symbol" scheme="https://codermae.github.io/tags/JS-ES6-Symbol/"/>
     
   </entry>
   

@@ -159,6 +159,71 @@
     
     
     <article
+  id="post-打卡0100"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/09/30/%E6%89%93%E5%8D%A10100/"
+    >打卡0100</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/09/30/%E6%89%93%E5%8D%A10100/" class="article-date">
+  <time datetime="2021-09-30T00:14:51.000Z" itemprop="datePublished">2021-09-30</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#426ab3>世界上总有一半人不理解另一半人的快乐。</font></p>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="30-最新提案"><a href="#30-最新提案" class="headerlink" title="30. 最新提案"></a>30. 最新提案</h3><p>本章介绍一些尚未进入标准、但很有希望的最新提案。</p>
+<h4 id="30-1-do-表达式"><a href="#30-1-do-表达式" class="headerlink" title="30.1 do 表达式"></a>30.1 do 表达式</h4><p>本质上，块级作用域是一个语句，将多个操作封装在一起，没有返回值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">let</span> t = f();</span><br><span class="line">  t = t * t + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，块级作用域将两个语句封装在一起。但是，在块级作用域以外，没有办法得到<code>t</code>的值，因为块级作用域不返回值，除非<code>t</code>是全局变量。</p>
+<p>现在有一个提案，使得块级作用域可以变为表达式，也就是说可以返回值，办法就是在块级作用域之前加上<code>do</code>，使它变为<code>do</code>表达式，然后就会返回内部最后执行的表达式的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="keyword">do</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> t = f();</span><br><span class="line">  t * t + <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>上面代码中，变量<code>x</code>会得到整个块级作用域的返回值（<code>t * t + 1</code>）。</p>
+<p><code>do</code>表达式的逻辑非常简单：封装的是什么，就会返回什么。</p> 
+      <a class="article-more-link" href="/2021/09/30/%E6%89%93%E5%8D%A10100/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%80%E6%96%B0%E6%8F%90%E6%A1%88/" rel="tag">最新提案</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0099"
   class="article article-type-post"
   itemscope
@@ -718,64 +783,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B8%A9%E5%9D%91JavaScript/" rel="tag">踩坑JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-踩坑Koa"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/09/15/%E8%B8%A9%E5%9D%91Koa/"
-    >踩坑Koa</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/09/15/%E8%B8%A9%E5%9D%91Koa/" class="article-date">
-  <time datetime="2021-09-15T13:07:46.000Z" itemprop="datePublished">2021-09-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%B8%A9%E5%9D%91/">踩坑</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#ffc20e>人生当自勉，学习需坚持。</font></p>
-<h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2> 
-      <a class="article-more-link" href="/2021/09/15/%E8%B8%A9%E5%9D%91Koa/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B8%A9%E5%9D%91Koa/" rel="tag">踩坑Koa</a></li></ul>
 
     </footer>
   </div>
