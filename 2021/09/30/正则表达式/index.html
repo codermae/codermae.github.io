@@ -102,13 +102,14 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h3 id="1-使用测试方法"><a href="#1-使用测试方法" class="headerlink" title="1. 使用测试方法"></a>1. 使用测试方法</h3><p>使用<code>.test()</code> 方法，检测字符串 myString 是否符合正则表达式 myRegex 定义的规则。</p>
+  <p><font color=122e29>不要低估别人的贪婪。</font></p>
+<h3 id="1-使用测试方法"><a href="#1-使用测试方法" class="headerlink" title="1. 使用测试方法"></a>1. 使用测试方法</h3><p>使用<code>.test()</code> 方法，检测字符串 myString 是否符合正则表达式 myRegex 定义的规则。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myString = <span class="string">&quot;Hello, World!&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> myRegex = <span class="regexp">/Hello/</span>;</span><br><span class="line"><span class="keyword">let</span> result = myRegex.test(myString); <span class="comment">// 修改这一行</span></span><br></pre></td></tr></table></figure>
-<span id="more"></span>
 <h3 id="2-匹配文字字符串"><a href="#2-匹配文字字符串" class="headerlink" title="2. 匹配文字字符串"></a>2. 匹配文字字符串</h3><p>完成正则表达式 waldoRegex，在字符串 waldoIsHiding 中匹配到文本 “Waldo”。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> waldoIsHiding = <span class="string">&quot;Somewhere Waldo is hiding in this text.&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> waldoRegex = <span class="regexp">/Waldo/</span>; <span class="comment">// 修改这一行</span></span><br><span class="line"><span class="keyword">let</span> result = waldoRegex.test(waldoIsHiding);</span><br></pre></td></tr></table></figure>
 <h3 id="3-同时用多种模式匹配文字字符串"><a href="#3-同时用多种模式匹配文字字符串" class="headerlink" title="3. 同时用多种模式匹配文字字符串"></a>3. 同时用多种模式匹配文字字符串</h3><p>完成正则表达式 petRegex 以匹配 dog、cat、bird 或者 fish。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> petString = <span class="string">&quot;James has a pet cat.&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> petRegex = <span class="regexp">/cat|dog|bird|fish/</span>; <span class="comment">// 修改这一行</span></span><br><span class="line"><span class="keyword">let</span> result = petRegex.test(petString);</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 <h3 id="4-匹配时忽略大小写"><a href="#4-匹配时忽略大小写" class="headerlink" title="4. 匹配时忽略大小写"></a>4. 匹配时忽略大小写</h3><p>编写正则表达式 fccRegex 以匹配 freeCodeCamp，忽略大小写。 正则表达式不应与任何缩写或带有空格的变体匹配。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myString = <span class="string">&quot;freeCodeCamp&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> fccRegex = <span class="regexp">/freeCodeCamp/i</span>; <span class="comment">// 修改这一行</span></span><br><span class="line"><span class="keyword">let</span> result = fccRegex.test(myString);</span><br></pre></td></tr></table></figure>
 <h3 id="5-提取匹配项"><a href="#5-提取匹配项" class="headerlink" title="5. 提取匹配项"></a>5. 提取匹配项</h3><p>利用 <code>.match()</code> 方法提取单词 coding。</p>
@@ -360,6 +361,15 @@
    
   <nav class="article-nav">
     
+      <a href="/2021/10/01/%E6%89%93%E5%8D%A10101/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            打卡0101
+          
+        </div>
+      </a>
+    
     
       <a href="/2021/09/30/%E6%89%93%E5%8D%A10100/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
@@ -508,7 +518,7 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags/Travel/">旅行</a>
+      <a class="nav-item-link" href="/travel">旅行</a>
     </li>
     
     <li class="nav-item">

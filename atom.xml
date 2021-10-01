@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-09-29T03:35:26.812Z</updated>
+  <updated>2021-10-01T05:53:05.231Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,15 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打卡0101</title>
+    <link href="https://codermae.github.io/2021/10/01/%E6%89%93%E5%8D%A10101/"/>
+    <id>https://codermae.github.io/2021/10/01/%E6%89%93%E5%8D%A10101/</id>
+    <published>2021-10-01T03:12:19.000Z</published>
+    <updated>2021-10-01T05:53:05.231Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a  style=&quot;link:text-decoration: underline; color: red;&quot; href=&quot;https://mp.weixin.qq.com/s/Z4KBqEgmBS9LQL3-hmjqbg&quot;&gt;他们做到的，我们应该知道。&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Http&quot;&gt;&lt;a href=&quot;#Http&quot; class=&quot;headerlink&quot; title=&quot;Http&quot;&gt;&lt;/a&gt;Http&lt;/h2&gt;&lt;h3 id=&quot;1-引入&quot;&gt;&lt;a href=&quot;#1-引入&quot; class=&quot;headerlink&quot; title=&quot;1. 引入&quot;&gt;&lt;/a&gt;1. 引入&lt;/h3&gt;&lt;p&gt;超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。所有的WWW文件都必须遵守这个标准。设计HTTP最初的目的是为了提供一种发布和接收HTML页面的方法。1960年美国人Ted Nelson构思了一种通过计算机处理文本信息的方法，并称之为超文本（hypertext）,这成为了HTTP超文本传输协议标准架构的发展根基。Ted Nelson组织协调万维网协会（World Wide Web Consortium）和互联网工程工作小组（Internet Engineering Task Force ）共同合作研究，最终发布了一系列的RFC，其中著名的RFC 2616定义了HTTP 1.1。&lt;/p&gt;
+&lt;h3 id=&quot;2-http协议的作用及特点&quot;&gt;&lt;a href=&quot;#2-http协议的作用及特点&quot; class=&quot;headerlink&quot; title=&quot;2. http协议的作用及特点&quot;&gt;&lt;/a&gt;2. http协议的作用及特点&lt;/h3&gt;&lt;p&gt;HTTP是一个客户端和服务器端请求和应答的标准（TCP）。客户端是终端用户，服务器端是网站。通过使用Web浏览器、网络爬虫或者其它的工具，客户端发起一个到服务器上指定端口（默认端口为80）的HTTP请求。（我们称这个客户端）叫用户代理（user agent）。应答的服务器上存储着（一些）资源，比如HTML文件和图像。（我们称）这个应答服务器为源服务器（origin server）。在用户代理和源服务器中间可能存在多个中间层，比如代理，网关，或者隧道（tunnels）。尽管TCP/IP协议是互联网上最流行的应用，HTTP协议并没有规定必须使用它和（基于）它支持的层。 事实上，HTTP可以在任何其他互联网协议上，或者在其他网络上实现。HTTP只假定（其下层协议提供）可靠的传输，任何能够提供这种保证的协议都可以被其使用。&lt;/p&gt;
+&lt;p&gt;通常，由HTTP客户端发起一个请求，建立一个到服务器指定端口（默认是80端口）的TCP连接。HTTP服务器则在那个端口监听客户端发送过来的请求。一旦收到请求，服务器（向客户端）发回一个状态行，比如”HTTP/1.1 200 OK”，和（响应的）消息，消息的消息体可能是请求的文件、错误消息、或者其它一些信息。HTTP使用TCP而不是UDP的原因在于（打开）一个网页必须传送很多数据，而TCP协议提供传输控制，按顺序组织数据，和错误纠正。&lt;/p&gt;
+&lt;p&gt;通过HTTP或者HTTPS协议请求的资源由统一资源标示符（Uniform Resource Identifiers）（或者，更准确一些，URLs）来标识。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Http" scheme="https://codermae.github.io/categories/Http/"/>
+    
+    
+    <category term="Http" scheme="https://codermae.github.io/tags/Http/"/>
+    
+  </entry>
+  
+  <entry>
     <title>正则表达式</title>
     <link href="https://codermae.github.io/2021/09/30/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     <id>https://codermae.github.io/2021/09/30/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
     <published>2021-09-30T01:36:19.000Z</published>
-    <updated>2021-09-29T03:35:26.812Z</updated>
+    <updated>2021-10-01T06:00:37.784Z</updated>
     
     
-    <summary type="html">&lt;h3 id=&quot;1-使用测试方法&quot;&gt;&lt;a href=&quot;#1-使用测试方法&quot; class=&quot;headerlink&quot; title=&quot;1. 使用测试方法&quot;&gt;&lt;/a&gt;1. 使用测试方法&lt;/h3&gt;&lt;p&gt;使用&lt;code&gt;.test()&lt;/code&gt; 方法，检测字符串 myString 是否符合正则表达式 myRegex 定义的规则。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; myString = &lt;span class=&quot;string&quot;&gt;&amp;quot;Hello, World!&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; myRegex = &lt;span class=&quot;regexp&quot;&gt;/Hello/&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; result = myRegex.test(myString); &lt;span class=&quot;comment&quot;&gt;// 修改这一行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    <summary type="html">&lt;p&gt;&lt;font color=122e29&gt;不要低估别人的贪婪。&lt;/font&gt;&lt;/p&gt;
+&lt;h3 id=&quot;1-使用测试方法&quot;&gt;&lt;a href=&quot;#1-使用测试方法&quot; class=&quot;headerlink&quot; title=&quot;1. 使用测试方法&quot;&gt;&lt;/a&gt;1. 使用测试方法&lt;/h3&gt;&lt;p&gt;使用&lt;code&gt;.test()&lt;/code&gt; 方法，检测字符串 myString 是否符合正则表达式 myRegex 定义的规则。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; myString = &lt;span class=&quot;string&quot;&gt;&amp;quot;Hello, World!&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; myRegex = &lt;span class=&quot;regexp&quot;&gt;/Hello/&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; result = myRegex.test(myString); &lt;span class=&quot;comment&quot;&gt;// 修改这一行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;2-匹配文字字符串&quot;&gt;&lt;a href=&quot;#2-匹配文字字符串&quot; class=&quot;headerlink&quot; title=&quot;2. 匹配文字字符串&quot;&gt;&lt;/a&gt;2. 匹配文字字符串&lt;/h3&gt;&lt;p&gt;完成正则表达式 waldoRegex，在字符串 waldoIsHiding 中匹配到文本 “Waldo”。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; waldoIsHiding = &lt;span class=&quot;string&quot;&gt;&amp;quot;Somewhere Waldo is hiding in this text.&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; waldoRegex = &lt;span class=&quot;regexp&quot;&gt;/Waldo/&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// 修改这一行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; result = waldoRegex.test(waldoIsHiding);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;3-同时用多种模式匹配文字字符串&quot;&gt;&lt;a href=&quot;#3-同时用多种模式匹配文字字符串&quot; class=&quot;headerlink&quot; title=&quot;3. 同时用多种模式匹配文字字符串&quot;&gt;&lt;/a&gt;3. 同时用多种模式匹配文字字符串&lt;/h3&gt;&lt;p&gt;完成正则表达式 petRegex 以匹配 dog、cat、bird 或者 fish。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; petString = &lt;span class=&quot;string&quot;&gt;&amp;quot;James has a pet cat.&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; petRegex = &lt;span class=&quot;regexp&quot;&gt;/cat|dog|bird|fish/&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// 修改这一行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; result = petRegex.test(petString);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
@@ -480,29 +508,6 @@
     
     
     <category term="JS-ES6 Reflect" scheme="https://codermae.github.io/tags/JS-ES6-Reflect/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0086</title>
-    <link href="https://codermae.github.io/2021/07/09/%E6%89%93%E5%8D%A10086/"/>
-    <id>https://codermae.github.io/2021/07/09/%E6%89%93%E5%8D%A10086/</id>
-    <published>2021-07-09T01:54:36.000Z</published>
-    <updated>2021-09-27T05:22:05.621Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#6950a1&gt;每个人都会累，没人能为你承担所有的伤悲，人总有那么一段时间要学会自己长大。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;15-Proxy&quot;&gt;&lt;a href=&quot;#15-Proxy&quot; class=&quot;headerlink&quot; title=&quot;15. Proxy&quot;&gt;&lt;/a&gt;15. Proxy&lt;/h3&gt;&lt;h4 id=&quot;15-1-概述&quot;&gt;&lt;a href=&quot;#15-1-概述&quot; class=&quot;headerlink&quot; title=&quot;15.1 概述&quot;&gt;&lt;/a&gt;15.1 概述&lt;/h4&gt;&lt;p&gt;Proxy 用于修改某些操作的默认行为，等同于在语言层面做出修改，所以属于一种“元编程”（meta programming），即对编程语言进行编程。&lt;/p&gt;
-&lt;p&gt;Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。Proxy 这个词的原意是代理，用在这里表示由它来“代理”某些操作，可以译为“代理器”。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; obj = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Proxy&lt;/span&gt;(&amp;#123;&amp;#125;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  get: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;target, propKey, receiver&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;`getting &lt;span class=&quot;subst&quot;&gt;$&amp;#123;propKey&amp;#125;&lt;/span&gt;!`&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Reflect&lt;/span&gt;.get(target, propKey, receiver);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  set: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;target, propKey, value, receiver&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;`setting &lt;span class=&quot;subst&quot;&gt;$&amp;#123;propKey&amp;#125;&lt;/span&gt;!`&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Reflect&lt;/span&gt;.set(target, propKey, value, receiver);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码对一个空对象架设了一层拦截，重定义了属性的读取（&lt;code&gt;get&lt;/code&gt;）和设置（&lt;code&gt;set&lt;/code&gt;）行为。这里暂时先不解释具体的语法，只看运行结果。对设置了拦截行为的对象&lt;code&gt;obj&lt;/code&gt;，去读写它的属性，就会得到下面的结果。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 Proxy" scheme="https://codermae.github.io/tags/JS-ES6-Proxy/"/>
     
   </entry>
   

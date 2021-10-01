@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
+       
+      <meta name="keywords" content="blog" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>打卡0101 |  maeBlog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-打卡0101"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  打卡0101
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/10/01/%E6%89%93%E5%8D%A10101/" class="article-date">
+  <time datetime="2021-10-01T03:12:19.000Z" itemprop="datePublished">2021-10-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Http/">Http</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">9k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">39 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><a  style="link:text-decoration: underline; color: red;" target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/Z4KBqEgmBS9LQL3-hmjqbg">他们做到的，我们应该知道。</a></p>
+<h2 id="Http"><a href="#Http" class="headerlink" title="Http"></a>Http</h2><h3 id="1-引入"><a href="#1-引入" class="headerlink" title="1. 引入"></a>1. 引入</h3><p>超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。所有的WWW文件都必须遵守这个标准。设计HTTP最初的目的是为了提供一种发布和接收HTML页面的方法。1960年美国人Ted Nelson构思了一种通过计算机处理文本信息的方法，并称之为超文本（hypertext）,这成为了HTTP超文本传输协议标准架构的发展根基。Ted Nelson组织协调万维网协会（World Wide Web Consortium）和互联网工程工作小组（Internet Engineering Task Force ）共同合作研究，最终发布了一系列的RFC，其中著名的RFC 2616定义了HTTP 1.1。</p>
+<h3 id="2-http协议的作用及特点"><a href="#2-http协议的作用及特点" class="headerlink" title="2. http协议的作用及特点"></a>2. http协议的作用及特点</h3><p>HTTP是一个客户端和服务器端请求和应答的标准（TCP）。客户端是终端用户，服务器端是网站。通过使用Web浏览器、网络爬虫或者其它的工具，客户端发起一个到服务器上指定端口（默认端口为80）的HTTP请求。（我们称这个客户端）叫用户代理（user agent）。应答的服务器上存储着（一些）资源，比如HTML文件和图像。（我们称）这个应答服务器为源服务器（origin server）。在用户代理和源服务器中间可能存在多个中间层，比如代理，网关，或者隧道（tunnels）。尽管TCP/IP协议是互联网上最流行的应用，HTTP协议并没有规定必须使用它和（基于）它支持的层。 事实上，HTTP可以在任何其他互联网协议上，或者在其他网络上实现。HTTP只假定（其下层协议提供）可靠的传输，任何能够提供这种保证的协议都可以被其使用。</p>
+<p>通常，由HTTP客户端发起一个请求，建立一个到服务器指定端口（默认是80端口）的TCP连接。HTTP服务器则在那个端口监听客户端发送过来的请求。一旦收到请求，服务器（向客户端）发回一个状态行，比如”HTTP/1.1 200 OK”，和（响应的）消息，消息的消息体可能是请求的文件、错误消息、或者其它一些信息。HTTP使用TCP而不是UDP的原因在于（打开）一个网页必须传送很多数据，而TCP协议提供传输控制，按顺序组织数据，和错误纠正。</p>
+<p>通过HTTP或者HTTPS协议请求的资源由统一资源标示符（Uniform Resource Identifiers）（或者，更准确一些，URLs）来标识。</p>
+<span id="more"></span>
+<p>1.基于请求/响应模型的协议。请求和响应必须成对，先有请求后有响应</p>
+<p>2.http协议默认端口:80</p>
+<p>3.简单快速：客户向服务器请求服务时，只需传送请求方法和路径。请求方法常用的有GET、HEAD、POST。每种方法规定了客户与服务器联系的类型不同。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快。</p>
+<p>4.灵活：HTTP允许传输任意类型的数据对象。正在传输的类型由Content-Type加以标记。</p>
+<p>5.无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。</p>
+<p>6.无状态：HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。</p>
+<h3 id="3-协议功能"><a href="#3-协议功能" class="headerlink" title="3. 协议功能"></a>3. 协议功能</h3><p>HTTP协议（HyperText Transfer Protocol，超文本传输协议）是用于从WWW服务器传输超文本到本地浏览器的传输协议。它可以使浏览器更加高效，使网络传输减少。它不仅保证计算机正确快速地传输超文本文档，还确定传输文档中的哪一部分，以及哪部分内容首先显示(如文本先于图形)等。</p>
+<p>HTTP是客户端浏览器或其他程序与Web服务器之间的应用层通信协议。在Internet上的Web服务器上存放的都是超文本信息，客户机需要通过HTTP协议传输所要访问的超文本信息。HTTP包含命令和传输信息，不仅可用于Web访问，也可以用于其他因特网/内联网应用系统之间的通信，从而实现各类应用资源超媒体访问的集成。</p>
+<p>我们在浏览器的地址栏里输入的网站地址叫做URL (Uniform Resource Locator，统一资源定位符)。就像每家每户都有一个门牌地址一样，每个网页也都有一个Internet地址。当你在浏览器的地址框中输入一个URL或是单击一个超级链接时，URL就确定了要浏览的地址。浏览器通过超文本传输协议(HTTP)，将Web服务器上站点的网页代码提取出来，并翻译成漂亮的网页。</p>
+<h3 id="4-http协议的版本"><a href="#4-http协议的版本" class="headerlink" title="4. http协议的版本"></a>4. http协议的版本</h3><p>HTTP/1.0,发送请求，创建一次连接，获得一个web资源，连接断开</p>
+<p>HTTP/1.1，发送请求，创建一次连接，获得多个web资源，连接断开</p>
+<h3 id="5-Http协议的组成"><a href="#5-Http协议的组成" class="headerlink" title="5. Http协议的组成"></a>5. Http协议的组成</h3><p>Http协议由Http请求和Http响应组成，当在浏览器中输入网址访问某个网站时， 你的浏览器会将你的请求封装成一个Http请求发送给服务器站点，服务器接收到请  求后会组织响应数据封装成一个Http响应返回给浏览器。即没有请求就没有响应。<br><img src="https://img.ams1.imgbed.xyz/2021/10/01/PuYQ4.png"></p>
+<ul>
+<li><p>http请求包括:请求行、请求头、请求体</p>
+</li>
+<li><p>http响应包括:响应行、响应头、响应体</p>
+</li>
+</ul>
+<h3 id="6-HTTP请求报文"><a href="#6-HTTP请求报文" class="headerlink" title="6.HTTP请求报文"></a>6.HTTP请求报文</h3><p>HTTP请求报文由3部分组成（请求行+请求头+请求体）：<br><img src="https://img.ams1.imgbed.xyz/2021/10/01/PuUAA.jpg"></p>
+<h4 id="6-1-请求行："><a href="#6-1-请求行：" class="headerlink" title="6.1 请求行："></a>6.1 请求行：</h4><p>例如：<code>POST /chapter17/user.html HTTP/1.1</code></p>
+<p>格式：请求方式  资源路径  协议/版本</p>
+<p>请求行必须在http请求格式的第一行。</p>
+<ul>
+<li><p>get请求:</p>
+<p>  将请求参数追加在url后面，不安全</p>
+<p>  url长度限制get请求方式数据的大小</p>
+<p>  没有请求体</p>
+<p>  一般的HTTP请求大多都是<code>GET</code>。</p>
+</li>
+<li><p>post请求：</p>
+<p>  请求参数在请求体处，较安全。</p>
+<p>  请求数据大小没有显示</p>
+<p>  只有表单设置为<code>method=“post”</code>才是post请求，其他都是get请求</p>
+<p>  常见get请求:地址栏直接访问、<code>&lt;a href=&quot;&quot;&gt;</code>、<code>&lt;img src=&quot;&quot;&gt;</code>等</p>
+</li>
+<li><p>HEAD请求:</p>
+<p>  HEAD跟GET相似，不过服务端接收到HEAD请求时只返回响应头，不发送响应内容。所以，如果只需要查看某个页面的状态时，用HEAD更高效，因为省去了传输页面内容的时间。</p>
+</li>
+<li><p>DELETE请求：</p>
+<p>  删除某一个资源。</p>
+</li>
+<li><p>OPTIONS请求：</p>
+<p>  用于获取当前URL所支持的方法。若请求成功，会在HTTP头中包含一个名为“Allow”的头，值是所支持的方法，如“GET, POST”。</p>
+</li>
+<li><p>PUT请求：</p>
+<p>  把一个资源存放在指定的位置上。</p>
+<p>  本质上来讲， PUT和POST极为相似，都是向服务器发送数据，但它们之间有一个重要区别，PUT通常指定了资源的存放位置，而POST则没有，POST的数据存放位置由服务器自己决定。</p>
+</li>
+<li><p>TRACE请求：</p>
+<p>  回显服务器收到的请求，主要用于测试或诊断。</p>
+</li>
+<li><p>CONNECT请求：</p>
+<p>  CONNECT方法是HTTP/1.1协议预留的，能够将连接改为管道方式的代理服务器。通常用于SSL加密服务器的链接与非加密的HTTP代理服务器的通信。</p>
+</li>
+</ul>
+<p>在 REST 架构风格中，有严格规定对于不同的请求类型要设置合适的请求方法，也是避免出现因为乱用导致混乱的问题。这里提到了 REST 架构，现在很多同学都在写 REST，有没有人 能够明白为什么要定义 REST 这个架构风格？</p>
+<ol>
+<li>随着服务化架构的普及，http 协议的使用频率越来越高</li>
+<li>很多人在错误的使用 http 协议定义接口，比如各种各样的命名，什么 getUserInfoById， deleteById 之类的、有状态和无状态请求混用。</li>
+<li>对于 http 协议本身提供的规则并没有很好的利用</li>
+</ol>
+<p>所以，为了更好的解决这些问题，干脆就定义一套规则，这套规则并没有引入新的东西，无 非就是对 http 协议本身的使用做了一些约束，比如说:</p>
+<ol>
+<li>REST 是面向资源，每一个 URI 代表一个资源</li>
+<li>强调无状态化，服务器端不能存储来自某个客户的某个请求中的信息，并在该客户的其他 请求中使用</li>
+<li>强调 URL 暴露资源时，不要在 URI 中出现动词</li>
+<li>合理的利用 http 状态码、请求方法。</li>
+</ol>
+<p>因此大家在参照这种标准去使用 REST 风格时，要明白你遵循的是什么以及要解决什么问题。</p>
+<h4 id="6-2-请求头"><a href="#6-2-请求头" class="headerlink" title="6.2 请求头:"></a>6.2 请求头:</h4><p>例如：<code>Host: 39.108.107.149:8080</code></p>
+<p>请求头从第二行开始，到第一个空格结束。请求头和请求体之间存在一个空格(如下)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">POST http:&#x2F;&#x2F;39.108.107.149:8080&#x2F;vk&#x2F;app&#x2F;rest&#x2F;ddp&#x2F;iModelServiceImpl&#x2F;findModelByType HTTP&#x2F;1.1</span><br><span class="line">User-Agent: Fiddler</span><br><span class="line">Host: 39.108.107.149:8080</span><br><span class="line">Content-Length: 11</span><br><span class="line"> </span><br><span class="line">name&#x3D;城市</span><br></pre></td></tr></table></figure>
+<p>请求头通常以键值对<code>&#123;key:value&#125;</code>方式传递数据。</p>
+<p><code>key</code>为规范的固定值</p>
+<p><code>value</code>为<code>key</code>对应的取值，通常是一个值，可能是一组。</p>
+<h5 id="6-2-1-HTTP请求报文头属性"><a href="#6-2-1-HTTP请求报文头属性" class="headerlink" title="6.2.1 HTTP请求报文头属性"></a>6.2.1 HTTP请求报文头属性</h5><h6 id="Referer"><a href="#Referer" class="headerlink" title="Referer:"></a>Referer:</h6><p>表示这个请求是从哪个url跳过来的,通过百度来搜索淘宝网,那么在进入淘宝网的请求报文中,<code>Referer</code>的值就是:<code>www.baidu.com</code>。如果是直接访问就不会有这个头。</p>
+<p>常用于:防盗链。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Referrer Policy: no-referrer-when-downgrade</span><br></pre></td></tr></table></figure>
+<h6 id="Accept"><a href="#Accept" class="headerlink" title="Accept:"></a>Accept:</h6><p>告诉服务端,该请求所能支持的响应数据类型,专业术语称为MIME 类型(文件类型的一种描述方式)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Accept: text&#x2F;html,application&#x2F;xhtml+xml,application&#x2F;xml;q&#x3D;0.9,image&#x2F;webp,image&#x2F;apng,*&#x2F;*;q&#x3D;0.8</span><br></pre></td></tr></table></figure>
+<p>MIME格式：大类型/小类型[;参数]</p>
+<p>例如:</p>
+<ol>
+<li><p>text/html,html文件</p>
+</li>
+<li><p>text/css,css文件</p>
+</li>
+<li><p>text/javascript,js文件</p>
+</li>
+<li><p>image/*，所有图片文件</p>
+</li>
+</ol>
+<h6 id="if-Modified-Sincce"><a href="#if-Modified-Sincce" class="headerlink" title="if-Modified-Sincce:"></a>if-Modified-Sincce:</h6><p>浏览器通知服务器，本地缓存的最后变更时间。与另一个响应头组合控制浏览器页面的缓存</p>
+<h6 id="Cokkie："><a href="#Cokkie：" class="headerlink" title="Cokkie："></a>Cokkie：</h6><p>客户端的Cookie就是通过这个报文头属性传给服务端的哦</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cookie: JSESSIONID&#x3D;15982C27F7507C7FDAF0F97161F634B5</span><br></pre></td></tr></table></figure>
+<p>这里就出了一个问题,网站A怎么保证自己请求体中保存的cookie就是网站A的cookie而不是网站B的cookie呢,这就和cookie里面的jsessionid有关系了，关于cookie,session,sessionid,jsessionid的区别联系，可以参考<a target="_blank" rel="noopener" href="http://www.cnblogs.com/fnng/archive/2012/08/14/2637279.html">这里</a></p>
+<h6 id="User-Agent"><a href="#User-Agent" class="headerlink" title="User-Agent:"></a>User-Agent:</h6><p>浏览器通知服务器，客户端浏览器与操作系统相关信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User-Agent: Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;69.0.3497.100 Safari&#x2F;537.36</span><br></pre></td></tr></table></figure>
+
+<h6 id="Connection"><a href="#Connection" class="headerlink" title="Connection:"></a>Connection:</h6><p>表示客户端与服务连接类型；Keep-Alive表示持久连接，close已关闭</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connection: keep-alive</span><br></pre></td></tr></table></figure>
+
+<h6 id="Host"><a href="#Host" class="headerlink" title="Host:"></a>Host:</h6><p>请求的服务器主机名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Host: sczpkj.f3322.net:3000</span><br></pre></td></tr></table></figure>
+
+<h6 id="Content-Length"><a href="#Content-Length" class="headerlink" title="Content-Length:"></a>Content-Length:</h6><p>请求体的长度</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">POST http:&#x2F;&#x2F;39.108.107.149:8080&#x2F;vk&#x2F;app&#x2F;rest&#x2F;ddp&#x2F;iModelServiceImpl&#x2F;findModelByType HTTP&#x2F;1.1</span><br><span class="line">User-Agent: Fiddler</span><br><span class="line">Host: 39.108.107.149:8080</span><br><span class="line">Content-Length: 11</span><br><span class="line"> </span><br><span class="line">name&#x3D;城市</span><br></pre></td></tr></table></figure>
+<h6 id="Content-Type"><a href="#Content-Type" class="headerlink" title="Content-Type:"></a>Content-Type:</h6><p>请求的与实体对应的MIME信息。如果是post请求,会有这个头,默认值为application/x-www-form-urlencoded，表示请求体内容使用url编码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: application&#x2F;x-www-form-urlencoded</span><br></pre></td></tr></table></figure>
+
+<h6 id="Accept-Encoding："><a href="#Accept-Encoding：" class="headerlink" title="Accept-Encoding："></a>Accept-Encoding：</h6><p>浏览器通知服务器，浏览器支持的数据压缩格式。如GZIP压缩</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Accept-Encoding: gzip, deflate</span><br></pre></td></tr></table></figure>
+
+<h6 id="Accept-Language："><a href="#Accept-Language：" class="headerlink" title="Accept-Language："></a>Accept-Language：</h6><p>浏览器通知服务器，浏览器支持的语言。各国语言(国际化i18n)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Accept-Language: zh-CN,zh;q&#x3D;0.9</span><br></pre></td></tr></table></figure>
+
+<h6 id="Cache-Control："><a href="#Cache-Control：" class="headerlink" title="Cache-Control："></a>Cache-Control：</h6><p>指定请求和响应遵循的缓存机制</p>
+<p>对缓存进行控制，如一个请求希望响应返回的内容在客户端要被缓存一年，或不希望被缓存就可以通过这个报文头达到目的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cache-Control: no-cache</span><br></pre></td></tr></table></figure>
+<p>更多请求头属性可以参考:<a target="_blank" rel="noopener" href="http://tools.jb51.net/table/http_header">HTTP响应头和请求头信息对照表</a></p>
+<h4 id="6-3-请求体"><a href="#6-3-请求体" class="headerlink" title="6.3 请求体"></a>6.3 请求体</h4><p>当请求方式是post的时，请求体会有请求的参数，格式如下：</p>
+<p><code>username=zhangsan&amp;password=123</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">POST http:&#x2F;&#x2F;39.108.107.149:8080&#x2F;vk&#x2F;app&#x2F;rest&#x2F;ddp&#x2F;iModelServiceImpl&#x2F;findModelByType HTTP&#x2F;1.1</span><br><span class="line">User-Agent: Fiddler</span><br><span class="line">Host: 39.108.107.149:8080</span><br><span class="line">Content-Length: 20</span><br><span class="line"> </span><br><span class="line">name&#x3D;城市&amp;status&#x3D;1</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-HTTP响应报文"><a href="#7-HTTP响应报文" class="headerlink" title="7. HTTP响应报文"></a>7. HTTP响应报文</h3><p>HTTP的响应报文也由三部分组成（响应行+响应头+响应体）<br><img src="https://img.ams1.imgbed.xyz/2021/10/01/PuSKv.jpg"></p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">HTTP&#x2F;1.1 200 OK</span><br><span class="line">Server: Apache-Coyote&#x2F;1.1</span><br><span class="line">Set-Cookie: JSESSIONID&#x3D;E1352C5CCEAD7EA9A6F8DA253395781C; Path&#x3D;&#x2F;vk</span><br><span class="line">Content-Type: application&#x2F;json;charset&#x3D;UTF-8</span><br><span class="line">Transfer-Encoding: chunked</span><br><span class="line">Date: Wed, 26 Sep 2018 03:24:59 GMT</span><br><span class="line">&#x2F;&#x2F;此处有空格</span><br><span class="line">1dd0</span><br><span class="line">&#123;&quot;sessionToken&quot;:null,&quot;code&quot;:&quot;1&quot;,&quot;msg&quot;:null,&quot;service&quot;:&quot;iModelServiceImpl&quot;,&quot;method&quot;:&quot;findModelByType&quot;,&quot;key&quot;:null,&quot;paras&quot;:&#123;&#125;,&quot;result&quot;:&#123;&quot;pageInfo&quot;:&#123;&quot;pageNum&quot;:1,&quot;numPerPage&quot;:20,&quot;totalCount&quot;:28,&quot;pageNumShown&quot;:2,&quot;startNum&quot;:0,&quot;endNum&quot;:20&#125;,&quot;list&quot;:[&#123;&quot;id&quot;:1268735016960,&quot;vkId&quot;:1098450468864,&quot;name&quot;:&quot;城市&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:0,&quot;remark&quot;:&quot;&quot;,&quot;dataArea&quot;:&quot;&quot;,&quot;tvName&quot;:&quot;城市1.xlsx&quot;,&quot;resultLang&quot;:&quot;&quot;,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:0,&quot;cn&quot;:&quot;&quot;,&quot;ct&quot;:1535351516000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1535351516000,&quot;fullMapping&quot;:&quot;1&quot;,&quot;vkdbName&quot;:&quot;AQI城市&quot;,&quot;itemId&quot;:16694810509312&#125;,&#123;&quot;id&quot;:3843924426752,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;AQI指数&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:0,&quot;remark&quot;:&quot;&quot;,&quot;dataArea&quot;:&quot;&quot;,&quot;tvName&quot;:&quot;aqi_table&quot;,&quot;resultLang&quot;:&quot;&quot;,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:0,&quot;cn&quot;:&quot;&quot;,&quot;ct&quot;:1534668644000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1534668644000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:10106414563328&#125;,&#123;&quot;id&quot;:4039492239360,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;市场广告占有率&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:&quot;advertising_share&quot;,&quot;resultLang&quot;:null,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1534668690000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1534668690000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:10106414563328&#125;,&#123;&quot;id&quot;:4194551463936,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;注册客户增长趋势&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:&quot;a_registered_customers_growth_trend&quot;,&quot;resultLang&quot;:null,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1534668727000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1534668727000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:10106414563328&#125;,&#123;&quot;id&quot;:4435954630656,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;新业务增长分析&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:&quot;a_new_business_growth_analysis&quot;,&quot;resultLang&quot;:null,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1534668785000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1534668785000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:10106414563328&#125;,&#123;&quot;id&quot;:4591269707776,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;电商公司交易趋势&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:&quot;a_electricity_supplier_trading_trend&quot;,&quot;resultLang&quot;:null,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1534668822000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1534668822000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:10106414563328&#125;,&#123;&quot;id&quot;:4742163988480,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;预算开销对比&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:&quot;a_budget_overhead_comparison&quot;,&quot;resultLang&quot;:null,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1534668858000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1534668858000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:10106414563328&#125;,&#123;&quot;id&quot;:4885466578944,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;销售瀑布&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:&quot;a_selling_waterfalls&quot;,&quot;resultLang&quot;:null,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1534668892000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1534668892000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:10106414563328&#125;,&#123;&quot;id&quot;:5021173284864,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;自定义&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:null,&quot;resultLang&quot;:&quot;select * from zyy_emp&quot;,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1535442352000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1535442352000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:236090615136256&#125;,&#123;&quot;id&quot;:5831709949952,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;zy_test&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:&quot;zy_test&quot;,&quot;resultLang&quot;:null,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1535874061000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1535874061000,&quot;fullMapping&quot;:&quot;1&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:16694810509312&#125;,&#123;&quot;id&quot;:6901450407936,&quot;vkId&quot;:5891063545856,&quot;name&quot;:&quot;zy-stu&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:0,&quot;remark&quot;:&quot;&quot;,&quot;dataArea&quot;:&quot;&quot;,&quot;tvName&quot;:&quot;zy-test.xlsx&quot;,&quot;resultLang&quot;:&quot;&quot;,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:0,&quot;cn&quot;:&quot;&quot;,&quot;ct&quot;:1534676773000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1534676773000,&quot;fullMapping&quot;:&quot;1&quot;,&quot;vkdbName&quot;:&quot;四川省2018年电力总分析&quot;,&quot;itemId&quot;:16694810509312&#125;,&#123;&quot;id&quot;:11079988019200,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;zy-自定义sql-903&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:0,&quot;remark&quot;:&quot;&quot;,&quot;dataArea&quot;:&quot;&quot;,&quot;tvName&quot;:&quot;&quot;,&quot;resultLang&quot;:&quot;SELECT * from zy_test t ;&quot;,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:0,&quot;cn&quot;:&quot;&quot;,&quot;ct&quot;:1535944882000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1535944882000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:16694810509312&#125;,&#123;&quot;id&quot;:12502322642944,&quot;vkId&quot;:2084980129792,&quot;name&quot;:&quot;zy-stu-excel-819&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:&quot;stu.xlsx&quot;,&quot;resultLang&quot;:null,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1534680721000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1534680721000,&quot;fullMapping&quot;:&quot;1&quot;,&quot;vkdbName&quot;:&quot;2018年计算机学员信息&quot;,&quot;itemId&quot;:16694810509312&#125;,&#123;&quot;id&quot;:24037057101824,&quot;vkId&quot;:22646536273920,&quot;name&quot;:&quot;学生信息&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:&quot;01.xlsx&quot;,&quot;resultLang&quot;:null,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1535080921000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1535080921000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;2018年软件工程学生基本信息&quot;,&quot;itemId&quot;:16694810509312&#125;,&#123;&quot;id&quot;:28477864542208,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;自定义sql_3&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:null,&quot;resultLang&quot;:&quot;select d.*,e.*\nfrom zyy_dept d ,zyy_emp e\nwhere d.deptno &#x3D; e.deptno&quot;,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1535358003000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1535358003000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:236090615136256&#125;,&#123;&quot;id&quot;:30036178501632,&quot;vkId&quot;:42125932625920,&quot;name&quot;:&quot;lllll&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:&quot;t_1&quot;,&quot;resultLang&quot;:null,&quot;setLocal&quot;:&quot;2&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1534753815000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1534753815000,&quot;fullMapping&quot;:&quot;1&quot;,&quot;vkdbName&quot;:&quot;2018年风力分析&quot;,&quot;itemId&quot;:28899207544832&#125;,&#123;&quot;id&quot;:52815678406656,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;kfeng_test_mysql&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:0,&quot;remark&quot;:&quot;&quot;,&quot;dataArea&quot;:&quot;&quot;,&quot;tvName&quot;:&quot;sys_dictonary&quot;,&quot;resultLang&quot;:&quot;&quot;,&quot;setLocal&quot;:&quot;1&quot;,&quot;c&quot;:0,&quot;cn&quot;:&quot;&quot;,&quot;ct&quot;:1535978623000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1535978623000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:16694810509312&#125;,&#123;&quot;id&quot;:236320945340416,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;单表本地化存储&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:&quot;a_budget_overhead_comparison&quot;,&quot;resultLang&quot;:null,&quot;setLocal&quot;:&quot;1&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1534903707000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1534903707000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:236090615136256&#125;,&#123;&quot;id&quot;:236841471049728,&quot;vkId&quot;:236458682089472,&quot;name&quot;:&quot;excel本地化存储&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:&quot;学院专业信息表1.xlsx&quot;,&quot;resultLang&quot;:null,&quot;setLocal&quot;:&quot;1&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1534903831000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1534903831000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;学员信息表&quot;,&quot;itemId&quot;:236090615136256&#125;,&#123;&quot;id&quot;:240781818331136,&quot;vkId&quot;:84077923270656,&quot;name&quot;:&quot;自定义sql本地化存储&quot;,&quot;status&quot;:&quot;1&quot;,&quot;delStatus&quot;:&quot;2&quot;,&quot;viewIndex&quot;:null,&quot;remark&quot;:null,&quot;dataArea&quot;:null,&quot;tvName&quot;:null,&quot;resultLang&quot;:&quot;select d.*,e.*\nfrom zyy_dept d,zyy_emp  e\nwhere d.deptno &#x3D; e.deptno&quot;,&quot;setLocal&quot;:&quot;1&quot;,&quot;c&quot;:null,&quot;cn&quot;:null,&quot;ct&quot;:1534904771000,&quot;l&quot;:null,&quot;ln&quot;:null,&quot;ltt&quot;:1534904771000,&quot;fullMapping&quot;:&quot;2&quot;,&quot;vkdbName&quot;:&quot;电商交易分析&quot;,&quot;itemId&quot;:236090615136256&#125;],&quot;businid&quot;:null&#125;,&quot;page&quot;:null,&quot;appName&quot;:null,&quot;success&quot;:true,&quot;model&quot;:&quot;DEFAULT&quot;,&quot;files&quot;:null,&quot;fail&quot;:false,&quot;request&quot;:null,&quot;response&quot;:null&#125;</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-1-响应行："><a href="#7-1-响应行：" class="headerlink" title="7.1 响应行："></a>7.1 响应行：</h4><p><strong>1.报文协议及版本</strong></p>
+<p>例如：<code>HTTP/1.1 200 OK</code></p>
+<p><strong>2.状态码及状态描述</strong></p>
+<p>状态码：由3位数字组成，第一个数字定义了响应的类别</p>
+<ul>
+<li><p>1xx：指示信息，表示请求已接收，继续处理</p>
+</li>
+<li><p>2xx：成功，表示请求已被成功接受，处理。</p>
+<p>  200 OK：客户端请求成功<br>  204 No Content：无内容。服务器成功处理，但未返回内容。一般用在只是客户端向服务器发送信息，而服务器不用向客户端返回什么信息的情况。不会刷新页面。<br>  206 Partial Content：服务器已经完成了部分GET请求（客户端进行了范围请求）。响应报文中包含Content-Range指定范围的实体内容</p>
+</li>
+<li><p>3xx：重定向<br>  301 Moved Permanently：永久重定向，表示请求的资源已经永久的搬到了其他位置。<br>  302 Found：临时重定向，表示请求的资源临时搬到了其他位置<br>  303 See Other：临时重定向，应使用GET定向获取请求资源。303功能与302一样，区别只是303明确客户端应该使用GET访问<br>  307 Temporary Redirect：临时重定向，和302有着相同含义。POST不会变成GET<br>  304 Not Modified：表示客户端发送附带条件的请求（GET方法请求报文中的IF…）时，条件不满足。返回304时，不包含任何响应主体。虽然304被划分在3XX，但和重定向一毛钱关系都没有</p>
+</li>
+<li><p>4xx：客户端错误</p>
+<p>  400 Bad Request：客户端请求有语法错误，服务器无法理解。<br>  401 Unauthorized：请求未经授权，这个状态代码必须和WWW-Authenticate报头域一起使用。<br>  403 Forbidden：服务器收到请求，但是拒绝提供服务<br>  404 Not Found：请求资源不存在。比如，输入了错误的url<br>  415 Unsupported media type：不支持的媒体类型</p>
+</li>
+<li><p>5xx：服务器端错误，服务器未能实现合法的请求。</p>
+<p>  500 Internal Server Error：服务器发生不可预期的错误。<br>  503 Server Unavailable：服务器当前不能处理客户端的请求，一段时间后可能恢复正常，</p>
+</li>
+</ul>
+<h4 id="7-2-响应头："><a href="#7-2-响应头：" class="headerlink" title="7.2 响应头："></a>7.2 响应头：</h4><p><strong>响应报文头，也是由多个属性组成</strong></p>
+<p>响应头也是用键值对<code>k：v</code></p>
+<p>服务器通过响应头来控制浏览器的行为，不同的头浏览器操作不同</p>
+<table>
+<thead>
+<tr>
+<th align="left">常见请求头</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Location</td>
+<td align="left">指定响应的路径，需要与状态码302配合使用，完成跳转。</td>
+</tr>
+<tr>
+<td align="left">Content-Type</td>
+<td align="left">响应正文的类型（MIME类型）    取值：text/html;charset=UTF-8</td>
+</tr>
+<tr>
+<td align="left">Content-Disposition</td>
+<td align="left">通过浏览器以下载方式解析正文    取值：attachment;filename=xx.zip</td>
+</tr>
+<tr>
+<td align="left">Set-Cookie</td>
+<td align="left">与会话相关技术。服务器向浏览器写入cookie</td>
+</tr>
+<tr>
+<td align="left">Content-Encoding</td>
+<td align="left">服务器使用的压缩格式    取值：gzip</td>
+</tr>
+<tr>
+<td align="left">Content-length</td>
+<td align="left">响应正文的长度</td>
+</tr>
+<tr>
+<td align="left">Refresh</td>
+<td align="left">定时刷新，格式：秒数;url=路径。url可省略，默认值为当前页。取值：3;url=<a target="_blank" rel="noopener" href="http://www.itcast.cn/">www.itcast.cn</a>        //三秒刷新页面到<a target="_blank" rel="noopener" href="http://www.itcast.cn/">www.itcast.cn</a></td>
+</tr>
+<tr>
+<td align="left">Server</td>
+<td align="left">指的是服务器名称，默认值：Apache-Coyote/1.1。可以通过conf/server.xml配置进行修改。&lt;Connector port=”8080” … server=”itcast”/&gt;</td>
+</tr>
+<tr>
+<td align="left">Last-Modified</td>
+<td align="left">服务器通知浏览器，文件的最后修改时间。与If-Modified-Since一起使用。</td>
+</tr>
+<tr>
+<td align="left">Cache-Control</td>
+<td align="left">响应输出到客户端后，服务端通过该报文头属告诉客户端如何控制响应内容的缓存。常见的取值有常见的取值有private、public、no-cache、max-age，no-store，默认为private。缓存时间为31536000秒（365天）</td>
+</tr>
+</tbody></table>
+<p>更多请求头属性可以参考:<a target="_blank" rel="noopener" href="http://tools.jb51.net/table/http_header">HTTP响应头和请求头信息对照表</a></p>
+<h4 id="7-3-响应体："><a href="#7-3-响应体：" class="headerlink" title="7.3 响应体："></a>7.3 响应体：</h4><p>**响应报文体，服务器发送给浏览器的正文，即我们真正要的“干货” **</p>
+<p> 响应体，响应体是服务器回写给客户端的页面正文，浏览器将正文加载到内存，然后解析渲染，显示页面内容</p>
+<h3 id="8-Content-Type详解"><a href="#8-Content-Type详解" class="headerlink" title="8. Content-Type详解"></a>8. Content-Type详解</h3><p>常见的Content-Type：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Content-Type</th>
+<th align="left">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">text/html</td>
+<td align="left">html格式</td>
+</tr>
+<tr>
+<td align="left">text/plain</td>
+<td align="left">纯文本格式</td>
+</tr>
+<tr>
+<td align="left">text/css</td>
+<td align="left">CSS格式</td>
+</tr>
+<tr>
+<td align="left">text/javascript</td>
+<td align="left">js格式</td>
+</tr>
+<tr>
+<td align="left">image/gif</td>
+<td align="left">gif图片格式</td>
+</tr>
+<tr>
+<td align="left">image/jpeg</td>
+<td align="left">jpg图片格式</td>
+</tr>
+<tr>
+<td align="left">image/png</td>
+<td align="left">png图片格式</td>
+</tr>
+<tr>
+<td align="left">application/x-www-form-urlencoded</td>
+<td align="left">POST专用：普通的表单提交默认是通过这种方式。form表单数据被编码为key/value格式发送到服务器。</td>
+</tr>
+<tr>
+<td align="left">application/json</td>
+<td align="left">POST专用：用来告诉服务端消息主体是序列化后的 JSON 字符串</td>
+</tr>
+<tr>
+<td align="left">text/xml</td>
+<td align="left">POST专用：发送xml数据</td>
+</tr>
+<tr>
+<td align="left">multipart/form-data</td>
+<td align="left">POST专用：下面讲解</td>
+</tr>
+</tbody></table>
+<ul>
+<li>application/x-www-form-urlencoded </li>
+</ul>
+<p>最常见的post提交数据的方式。浏览器原生的form表单，如果不设置<code>enctype</code>属性，那么最终就会以<code>application/x-www-form-urlencoded</code> 方式提交数据</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">POST http:&#x2F;&#x2F;39.108.107.149:8080&#x2F;vk&#x2F;app&#x2F;rest&#x2F;ddp&#x2F;iModelServiceImpl&#x2F;findModelByType HTTP&#x2F;1.1</span><br><span class="line">Content-Type: application&#x2F;x-www-form-urlencoded</span><br><span class="line">cache-control: no-cache</span><br><span class="line">Postman-Token: 8e602802-b4f5-4d05-96d7-e1c7a1951719</span><br><span class="line">User-Agent: PostmanRuntime&#x2F;7.1.1</span><br><span class="line">Accept: *&#x2F;*</span><br><span class="line">Host: 39.108.107.149:8080</span><br><span class="line">cookie: JSESSIONID&#x3D;6CD80B7028062D9190717CEE001C3194</span><br><span class="line">accept-encoding: gzip, deflate</span><br><span class="line">content-length: 32</span><br><span class="line">Connection: keep-alive</span><br><span class="line"> </span><br><span class="line">name&#x3D;%E5%9F%8E%E5%B8%82&amp;status&#x3D;1</span><br></pre></td></tr></table></figure>
+<p>首先，Content-Type 被指定为 application/x-www-form-urlencoded；其次，提交的数据按照<code>key1=val1&amp;key2=val2</code>的方式进行编码，key 和 val 都进行了 URL 转码。大部分服务端语言都对这种方式有很好的支持。</p>
+<p>很多时候，我们用 Ajax 提交数据时，也是使用这种方式。例如 JQuery 和 QWrap 的 Ajax，Content-Type 默认「application/x-www-form-urlencoded;charset=utf-8」。 </p>
+<ul>
+<li>multipart/form-data </li>
+</ul>
+<p>这又是一个常见的 POST 数据提交的方式。我们使用表单上传文件时，必须让 form 的 enctyped 等于这个值。</p>
+<p>示例：<br><img src="https://img.ams1.imgbed.xyz/2021/10/01/PuyuH.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">POST http:&#x2F;&#x2F;39.108.107.149:8080&#x2F;vk&#x2F;app&#x2F;rest&#x2F;ddp&#x2F;iDataSourcesBaseService&#x2F;file HTTP&#x2F;1.1</span><br><span class="line">Content-Type: multipart&#x2F;form-data; boundary&#x3D;--------------------------629236571647111133881449</span><br><span class="line">cache-control: no-cache</span><br><span class="line">Postman-Token: 2146b4b3-2d30-469c-bbcd-fbc4693934d9</span><br><span class="line">User-Agent: PostmanRuntime&#x2F;7.1.1</span><br><span class="line">Accept: *&#x2F;*</span><br><span class="line">Host: 39.108.107.149:8080</span><br><span class="line">cookie: JSESSIONID&#x3D;6CD80B7028062D9190717CEE001C3194</span><br><span class="line">accept-encoding: gzip, deflate</span><br><span class="line">content-length: 435</span><br><span class="line">Connection: keep-alive</span><br><span class="line"> </span><br><span class="line">----------------------------629236571647111133881449</span><br><span class="line">Content-Disposition: form-data; name&#x3D;&quot;file&quot;; filename&#x3D;&quot;test.txt&quot;</span><br><span class="line">Content-Type: text&#x2F;plain</span><br><span class="line"> </span><br><span class="line">test upload</span><br><span class="line">----------------------------629236571647111133881449</span><br><span class="line">Content-Disposition: form-data; name&#x3D;&quot;extCode&quot;</span><br><span class="line"> </span><br><span class="line">test</span><br><span class="line">----------------------------629236571647111133881449</span><br><span class="line">Content-Disposition: form-data; name&#x3D;&quot;extId&quot;</span><br><span class="line"> </span><br><span class="line">3306</span><br><span class="line">----------------------------629236571647111133881449--  &#x2F;&#x2F;结束标识</span><br></pre></td></tr></table></figure>
+<p>首先生成了一个 boundary 用于分割不同的字段，为了避免与正文内容重复，boundary 很长很复杂。然后 Content-Type 里指明了数据是以 mutipart/form-data 来编码，本次请求的 boundary 是什么内容。</p>
+<p>消息主体里按照字段个数又分为多个结构类似的部分，每部分都是以 –boundary 开始，紧接着内容描述信息，然后是回车，最后是最后是字段具体内容（文本或二进制），如果传输的是文件，还要包含文件名和文件类型信息。消息主体最后以 –boundary– 标示结束。</p>
+<p>上面提到的这两种 POST 数据的方式，都是浏览器原生支持的，而且现阶段原生 form 表单也只支持这两种方式。但是随着越来越多的 Web 站点，尤其是 WebApp，全部使用 Ajax 进行数据交互之后，我们完全可以定义新的数据提交方式，给开发带来更多便利。 </p>
+<ul>
+<li>application/json </li>
+</ul>
+<p>application/json 这个 Content-Type 作为响应头大家肯定不陌生。实际上，现在越来越多的人把它作为请求头，用来告诉服务端消息主体是序列化后的 JSON 字符串。由于 JSON 规范的流行，除了低版本 IE 之外的各大浏览器都原生支持 JSON.stringify，服务端语言也都有处理 JSON 的函数，使用 JSON 不会遇上什么麻烦。 JSON 格式支持比键值对复杂得多的结构化数据，这一点也很有用。</p>
+<p>示例：<br><img src="https://img.ams1.imgbed.xyz/2021/10/01/PuKpl.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">POST http:&#x2F;&#x2F;39.108.107.149:8080&#x2F;vk&#x2F;app&#x2F;rest&#x2F;ddp&#x2F;vkIndexsService&#x2F;queryVkIndxs HTTP&#x2F;1.1</span><br><span class="line">Content-Type: application&#x2F;json</span><br><span class="line">cache-control: no-cache</span><br><span class="line">Postman-Token: 5014bc39-0777-49d5-bb8a-73db9a981e49</span><br><span class="line">User-Agent: PostmanRuntime&#x2F;7.1.1</span><br><span class="line">Accept: *&#x2F;*</span><br><span class="line">Host: 39.108.107.149:8080</span><br><span class="line">cookie: JSESSIONID&#x3D;6CD80B7028062D9190717CEE001C3194</span><br><span class="line">accept-encoding: gzip, deflate</span><br><span class="line">content-length: 132</span><br><span class="line">Connection: keep-alive</span><br><span class="line"> </span><br><span class="line">&#123;</span><br><span class="line">    &quot;name&quot;:&quot;828验证继承&quot;,</span><br><span class="line">    &quot;getresultType&quot;:&quot;2&quot;,</span><br><span class="line">    &quot;createTime&quot;:&quot;Tue Sep 11 2018 00:00:00 GMT+0800 (中国标准时间)&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种方案，可以方便的提交复杂的结构化数据，特别适合 RESTful 的接口。各大抓包工具如 Chrome 自带的开发者工具、Firebug、Fiddler，都会以树形结构展示 JSON 数据，非常友好。</p>
+<h3 id="9-Http-协议中的扩展"><a href="#9-Http-协议中的扩展" class="headerlink" title="9. Http 协议中的扩展"></a>9. Http 协议中的扩展</h3><p>http 协议除了这两种基本组成以外，还有很多大家比较常见的属性或者配置，简单罗列一些</p>
+<p><strong>如果传输的文件过大怎么办</strong></p>
+<p>服务器上返回的资源文件比较大，比如有些 js 文件大小可能就有几兆。文件过大就会影响传 输的效率，同时也会带来带宽的消耗。怎么办呢？</p>
+<ol>
+<li><p>常见的手段是，对文件进行压缩，减少文件大小。那压缩和解压缩的流程怎么实现呢？ 首先服务端需要能支持文件的压缩功能，其次浏览器能够针对被压缩的文件进行解压缩。浏 览器可以指定 Accept-Encoding 来高速服务器我当前支持的编码类型 Accept-Encoding:gzip,deflate 那服务端会根据支持的编码类型，选择合适的类型进行压缩。常见的编码方式有：gzip/deflate</p>
+</li>
+<li><p>分割传输 在传输大容量数据时，通过把数据分割成多块，能够让浏览器逐步显示页面。这种把实体主 体分块的功能称为分块传输编码（Chunked Transfer Coding）。</p>
+</li>
+</ol>
+<p><strong>每次请求都要建立连接吗？</strong></p>
+<p>在最早的 http 协议中，每进行一次 http 通信，就需要做一次 tcp 的连接。而一次连接需要进 行 3 次握手，这种通信方式会增加通信量的开销。<br><img src="https://img.ams1.imgbed.xyz/2021/10/01/Pulfr.png"><br>所以在 HTTP/1.1 中改用了持久连接，就是在一次连接建立之后，只要客户端或者服务端没有 明确提出断开连接，那么这个 tcp 连接会一直保持连接状态 持久连接的一个最大的好处是：大大减少了连接的建立以及关闭时延。 HTTP1.1 中有一个 Transport 段。会携带一个 Connection:Keep-Alive，表示希望将此条连接 作为持久连接。</p>
+<p>HTTP/1.1 持久连接在默认情况下是激活的，除非特别指明，否则 HTTP/1.1 假定所有的连接都 是持久的，要在事务处理结束之后将连接关闭，HTTP/1.1 应用程序必须向报文中显示地添加 一个 Connection：close 首部。</p>
+<p>HTTP1.1 客户端加载在收到响应后，除非响应中包含了 Connection：close 首部，不然 HTTP/1.1 连接就仍然维持在打开状态。但是，客户端和服务器仍然可以随时关闭空闲的连接。不发送 Connection：close 并不意味这服务器承诺永远将连接保持在打开状态。</p>
+<p>管道化连接: http/1.1 允许在持久连接上使用请求管道。以前发送请求后需等待并收到响应， 才能发送下一个请求。管线化技术出现后，不用等待响应亦可直接发送下一个请求。这样就 能够做到同时并行发送多个请求，而不需要一个接一个地等待响应了。</p>
+<p><img src="https://img.ams1.imgbed.xyz/2021/10/01/PuINa.png"></p>
+<h3 id="10-Http-协议的特点"><a href="#10-Http-协议的特点" class="headerlink" title="10. Http 协议的特点"></a>10. Http 协议的特点</h3><ul>
+<li>Http 无状态协议</li>
+</ul>
+<p>HTTP 协议是无状态的，什么是无状态呢？就是说 HTTP 协议本身不会对请求和响应之间的 通信状态做保存。 但是现在的应用都是有状态的，如果是无状态，那这些应用基本没人用，你想想，访问一个 电商网站，先登录，然后去选购商品，当点击一个商品加入购物车以后又提示你登录。这种 用户体验根本不会有人去使用。那我们是如何实现带状态的协议呢？</p>
+<ul>
+<li>客户端支持的 cookie</li>
+</ul>
+<p>Http 协议中引入了 cookie 技术，用来解决 http 协议无状态的问题。通过在请求和响应报文 中写入 Cookie 信息来控制客户端的状态；Cookie 会根据从服务器端发送的响应报文内的一 个叫做 Set-Cookie 的首部字段信息，通知客户端保存 Cookie。当下次客户端再往该服务器 发送请求时，客户端会自动在请求报文中加入 Cookie 值后发送出去。</p>
+<ul>
+<li>服务端支持的 session</li>
+</ul>
+<p>服务端是通过什么方式来保存状态的呢？ 在基于 tomcat 这类的 jsp/servlet 容器中，会提供 session 这样的机制来保存服务端的对象状态，服务器使用一种类似于散列表的结构来保存信 息，当程序需要为某个客户端的请求创建一个 session 的时候，服务器首先检查这个客户端 的请求是否包含了一个 session 标识- session id； 如果已包含一个 session id 则说明以前已经为客户端创建过 session，服务器就按照 session id 把这个 session 检索出来使用（如果检索不到，会新建一个）； 如果客户端请求不包含 sessionid，则为此客户端创建一个 session 并且生成一个与此 session 相关联的 session id， session id 的值是一个既不会重复，又不容易被找到规律的仿造字符 串，这个 session id 将会返回给客户端保存<br><img src="https://img.ams1.imgbed.xyz/2021/10/01/PuvzL.png"></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_38087538/article/details/82838762">原文链接</a></p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/10/01/%E6%89%93%E5%8D%A10101/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Http/" rel="tag">Http</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2021/09/30/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">正则表达式</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
+    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Ye Ma
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        <!-- 
+         -->
+        
+        
+        Powered by Hexo
+        <span class="division">|</span>
+        Theme - Ayer
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="maeBlog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/travel">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about/2021">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/gHZjdQRcOL1WxSP.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/pZNYuI4QFnfwb7l.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+  </div>
+</body>
+
+</html>
