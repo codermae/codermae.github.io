@@ -6,7 +6,6 @@
 
     <head>
       <meta charset="utf-8" />
-      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
        
       <meta name="keywords" content="blog" />
        
@@ -32,8 +31,19 @@
        
  
 
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
       <!-- mermaid -->
       
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
     <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
 </head>
   </html>
@@ -157,6 +167,124 @@
     
     
     
+    
+    <article
+  id="post-打卡0068"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/04/%E6%89%93%E5%8D%A10068/"
+    >打卡0068</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/04/%E6%89%93%E5%8D%A10068/" class="article-date">
+  <time datetime="2021-06-04T01:08:16.000Z" itemprop="datePublished">2021-06-04</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%80%BB%E7%BB%93/">总结</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#faa755>要保持希望在每天清晨太阳升起。</font><br>菜鸟一个，一直没搞明白Vue和Node项目环境的搭建，处在雾里，昨晚终于卷完了，记录一下。<br>如果有人能看到，欢迎留言！</p> 
+      <a class="article-more-link" href="/2021/06/04/%E6%89%93%E5%8D%A10068/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-Node-Express-postgresql/" rel="tag">Vue+Node+Express+postgresql</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-打卡0067"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/06/03/%E6%89%93%E5%8D%A10067/"
+    >打卡0067</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/06/03/%E6%89%93%E5%8D%A10067/" class="article-date">
+  <time datetime="2021-06-03T01:50:16.000Z" itemprop="datePublished">2021-06-03</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#733a31>不要轻易向别人诉苦，因为有很多人并不关心，还有很多人听到后会很高兴。</font></p>
+<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="13-表单，FormData-对象"><a href="#13-表单，FormData-对象" class="headerlink" title="13. 表单，FormData 对象"></a>13. 表单，FormData 对象</h3><h4 id="13-1-表单概述"><a href="#13-1-表单概述" class="headerlink" title="13.1 表单概述"></a>13.1 表单概述</h4><p>表单（<code>&lt;form&gt;</code>）用来收集用户提交的数据，发送到服务器。比如，用户提交用户名和密码，让服务器验证，就要通过表单。表单提供多种控件，让开发者使用，具体的控件种类和用法请参考 HTML 语言的教程。本章主要介绍 JavaScript 与表单的交互。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=<span class="string">&quot;/handling-page&quot;</span> method=<span class="string">&quot;post&quot;</span>&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;label <span class="keyword">for</span>=<span class="string">&quot;name&quot;</span>&gt;用户名：&lt;/label&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;text&quot;</span> id=<span class="string">&quot;name&quot;</span> name=<span class="string">&quot;user_name&quot;</span> /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;label <span class="keyword">for</span>=<span class="string">&quot;passwd&quot;</span>&gt;密码：&lt;/label&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;password&quot;</span> id=<span class="string">&quot;passwd&quot;</span> name=<span class="string">&quot;user_passwd&quot;</span> /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;submit&quot;</span> id=<span class="string">&quot;submit&quot;</span> name=<span class="string">&quot;submit_button&quot;</span> value=<span class="string">&quot;提交&quot;</span> /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>上面代码就是一个简单的表单，包含三个控件：用户名输入框、密码输入框和提交按钮。</p>
+<p>用户点击“提交”按钮，每一个控件都会生成一个键值对，键名是控件的<code>name</code>属性，键值是控件的<code>value</code>属性，键名和键值之间由等号连接。比如，用户名输入框的<code>name</code>属性是<code>user_name</code>，<code>value</code>属性是用户输入的值，假定是“张三”，提交到服务器的时候，就会生成一个键值对<code>user_name=张三</code>。</p> 
+      <a class="article-more-link" href="/2021/06/03/%E6%89%93%E5%8D%A10067/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-%E8%A1%A8%E5%8D%95%EF%BC%8CFormData-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 浏览器模型-表单，FormData 对象</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
     
     <article
   id="post-打卡0066"
@@ -690,143 +818,6 @@
 </article>
 
     
-    <article
-  id="post-打卡0058"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/31/%E6%89%93%E5%8D%A10058/"
-    >打卡0058</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/31/%E6%89%93%E5%8D%A10058/" class="article-date">
-  <time datetime="2021-05-31T01:26:09.000Z" itemprop="datePublished">2021-05-31</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#6a6da9>“我拥向宇宙吹来的风 与夏夜相逢 是八月盛景 是清寂长生”</font></p>
-<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="4-Cookie"><a href="#4-Cookie" class="headerlink" title="4. Cookie"></a>4. Cookie</h3><h4 id="4-1-概述"><a href="#4-1-概述" class="headerlink" title="4.1 概述"></a>4.1 概述</h4><p>Cookie 是服务器保存在浏览器的一小段文本信息，一般大小不能超过4KB。浏览器每次向服务器发出请求，就会自动附上这段信息。</p>
-<p>Cookie 主要保存状态信息，以下是一些主要用途。</p>
-<ul>
-<li>对话（session）管理：保存登录、购物车等需要记录的信息。</li>
-<li>个性化信息：保存用户的偏好，比如网页的字体大小、背景色等等。</li>
-<li>追踪用户：记录和分析用户行为。</li>
-</ul>
-<p>Cookie 不是一种理想的客户端储存机制。它的容量很小（4KB），缺乏数据操作接口，而且会影响性能。客户端储存应该使用 Web storage API 和 IndexedDB。只有那些每次请求都需要让服务器知道的信息，才应该放在 Cookie 里面。</p>
-<p>每个 Cookie 都有以下几方面的元数据。</p>
-<ul>
-<li>Cookie 的名字</li>
-<li>Cookie 的值（真正的数据写在这里面）</li>
-<li>到期时间（超过这个时间会失效）</li>
-<li>所属域名（默认为当前域名）</li>
-<li>生效的路径（默认为当前网址）</li>
-</ul> 
-      <a class="article-more-link" href="/2021/05/31/%E6%89%93%E5%8D%A10058/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Cookie/" rel="tag">JS 浏览器模型-Cookie</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0057"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/31/%E6%89%93%E5%8D%A10057/"
-    >打卡0057</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/31/%E6%89%93%E5%8D%A10057/" class="article-date">
-  <time datetime="2021-05-31T00:59:48.000Z" itemprop="datePublished">2021-05-31</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#a3cf62>跟这个世界交手的许多年来，你是否，光彩依旧，兴趣盎然。</font></p>
-<h2 id="JS-浏览器模型"><a href="#JS-浏览器模型" class="headerlink" title="JS 浏览器模型"></a>JS 浏览器模型</h2><h3 id="3-Navigator-对象，Screen-对象"><a href="#3-Navigator-对象，Screen-对象" class="headerlink" title="3. Navigator 对象，Screen 对象"></a>3. Navigator 对象，Screen 对象</h3><p><code>window.navigator</code>属性指向一个包含浏览器和系统信息的 Navigator 对象。脚本通过这个属性了解用户的环境信息。</p>
-<h4 id="3-1-Navigator-对象的属性"><a href="#3-1-Navigator-对象的属性" class="headerlink" title="3.1 Navigator 对象的属性"></a>3.1 Navigator 对象的属性</h4><h5 id="3-1-1-Navigator-userAgent"><a href="#3-1-1-Navigator-userAgent" class="headerlink" title="3.1.1 Navigator.userAgent"></a>3.1.1 Navigator.userAgent</h5><p><code>navigator.userAgent</code>属性返回浏览器的 User Agent 字符串，表示浏览器的厂商和版本信息。</p>
-<p>下面是 Chrome 浏览器的<code>userAgent</code>。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">navigator.userAgent</span><br><span class="line"><span class="comment">// &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36&quot;</span></span><br></pre></td></tr></table></figure>
-<p>通过<code>userAgent</code>属性识别浏览器，不是一个好办法。因为必须考虑所有的情况（不同的浏览器，不同的版本），非常麻烦，而且用户可以改变这个字符串。这个字符串的格式并无统一规定，也无法保证未来的适用性，各种上网设备层出不穷，难以穷尽。所以，现在一般不再通过它识别浏览器了，而是使用“功能识别”方法，即逐一测试当前浏览器是否支持要用到的 JavaScript 功能。</p>
-<p>不过，通过<code>userAgent</code>可以大致准确地识别手机浏览器，方法就是测试是否包含<code>mobi</code>字符串。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ua = navigator.userAgent.toLowerCase();</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="regexp">/mobi/i</span>.test(ua)) &#123;</span><br><span class="line">  <span class="comment">// 手机浏览器</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// 非手机浏览器</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/05/31/%E6%89%93%E5%8D%A10057/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A8%A1%E5%9E%8B-Navigator-%E5%AF%B9%E8%B1%A1%EF%BC%8CScreen-%E5%AF%B9%E8%B1%A1/" rel="tag">JS 浏览器模型-Navigator 对象，Screen 对象</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
@@ -851,18 +842,23 @@
     <ul>
       <li>
         
-        <!-- 
-         -->
         
         
-        Powered by Hexo
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
         <span class="division">|</span>
-        Theme - Ayer
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
         
       </li>
     </ul>
     <ul>
       <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
         
       </li>
     </ul>
@@ -879,9 +875,10 @@
       </li>
     </ul>
   </div>
-</footer>
-      <div class="float_btns">
-        <div class="totop" id="totop">
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
   <i class="ri-arrow-up-line"></i>
 </div>
 
@@ -889,8 +886,7 @@
   <i class="ri-moon-line"></i>
 </div>
 
-      </div>
-    </main>
+    </div>
     <aside class="sidebar on">
       <button class="navbar-toggle"></button>
 <nav class="navbar">
@@ -980,7 +976,7 @@
   </div>
 </div>
     
-<script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery-3.6.0.min.js"></script>
  
 <script src="/js/lazyload.min.js"></script>
 
@@ -1107,7 +1103,9 @@
 <!-- Katex -->
 
 <!-- busuanzi  -->
-
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
 <!-- ClickLove -->
 
 <!-- ClickBoom1 -->
@@ -1199,6 +1197,44 @@
     }
 </style>
     
+    
+<script>
+  const password = "maey";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  // console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "Please enter password maey",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "Ok",
+    }).then((result) => {
+      // console.log(result);
+      if (result.isConfirmed) {
+        // console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Incorrect password, please try again",
+            confirmButtonText: "Ok",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
+
   </div>
 </body>
 

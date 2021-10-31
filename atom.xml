@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-10-01T05:53:05.231Z</updated>
+  <updated>2021-10-28T06:54:03.723Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打卡0103</title>
+    <link href="https://codermae.github.io/2021/10/28/%E6%89%93%E5%8D%A10103/"/>
+    <id>https://codermae.github.io/2021/10/28/%E6%89%93%E5%8D%A10103/</id>
+    <published>2021-10-28T06:51:48.000Z</published>
+    <updated>2021-10-28T06:54:03.723Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a  style=&quot;link:text-decoration: underline; color: red;&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="积累" scheme="https://codermae.github.io/categories/%E7%A7%AF%E7%B4%AF/"/>
+    
+    
+    <category term="vue-css中使用data变量" scheme="https://codermae.github.io/tags/vue-css%E4%B8%AD%E4%BD%BF%E7%94%A8data%E5%8F%98%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打卡0102</title>
+    <link href="https://codermae.github.io/2021/10/10/%E6%89%93%E5%8D%A10102/"/>
+    <id>https://codermae.github.io/2021/10/10/%E6%89%93%E5%8D%A10102/</id>
+    <published>2021-10-10T02:05:30.000Z</published>
+    <updated>2021-10-10T02:05:30.705Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>打卡0101</title>
@@ -457,57 +495,6 @@
     
     
     <category term="JS-ES6 Iterator 和 for...of 循环" scheme="https://codermae.github.io/tags/JS-ES6-Iterator-%E5%92%8C-for-of-%E5%BE%AA%E7%8E%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0088</title>
-    <link href="https://codermae.github.io/2021/08/21/%E6%89%93%E5%8D%A10088/"/>
-    <id>https://codermae.github.io/2021/08/21/%E6%89%93%E5%8D%A10088/</id>
-    <published>2021-08-21T06:50:43.000Z</published>
-    <updated>2021-09-27T05:22:14.032Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#50b7c1&gt;世界可以无聊，但你要有趣，生活可能不如意，但你要过得有诗意。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;17-Promise-对象&quot;&gt;&lt;a href=&quot;#17-Promise-对象&quot; class=&quot;headerlink&quot; title=&quot;17. Promise 对象&quot;&gt;&lt;/a&gt;17. Promise 对象&lt;/h3&gt;&lt;h4 id=&quot;17-1-Promise-的含义&quot;&gt;&lt;a href=&quot;#17-1-Promise-的含义&quot; class=&quot;headerlink&quot; title=&quot;17.1 Promise 的含义&quot;&gt;&lt;/a&gt;17.1 Promise 的含义&lt;/h4&gt;&lt;p&gt;Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了&lt;code&gt;Promise&lt;/code&gt;对象。&lt;/p&gt;
-&lt;p&gt;所谓&lt;code&gt;Promise&lt;/code&gt;，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。从语法上说，Promise 是一个对象，从它可以获取异步操作的消息。Promise 提供统一的 API，各种异步操作都可以用同样的方法进行处理。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Promise&lt;/code&gt;对象有以下两个特点。&lt;/p&gt;
-&lt;p&gt;（1）对象的状态不受外界影响。&lt;code&gt;Promise&lt;/code&gt;对象代表一个异步操作，有三种状态：&lt;code&gt;pending&lt;/code&gt;（进行中）、&lt;code&gt;fulfilled&lt;/code&gt;（已成功）和&lt;code&gt;rejected&lt;/code&gt;（已失败）。只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。这也是&lt;code&gt;Promise&lt;/code&gt;这个名字的由来，它的英语意思就是“承诺”，表示其他手段无法改变。&lt;/p&gt;
-&lt;p&gt;（2）一旦状态改变，就不会再变，任何时候都可以得到这个结果。&lt;code&gt;Promise&lt;/code&gt;对象的状态改变，只有两种可能：从&lt;code&gt;pending&lt;/code&gt;变为&lt;code&gt;fulfilled&lt;/code&gt;和从&lt;code&gt;pending&lt;/code&gt;变为&lt;code&gt;rejected&lt;/code&gt;。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果，这时就称为 resolved（已定型）。如果改变已经发生了，你再对&lt;code&gt;Promise&lt;/code&gt;对象添加回调函数，也会立即得到这个结果。这与事件（Event）完全不同，事件的特点是，如果你错过了它，再去监听，是得不到结果的。&lt;/p&gt;
-&lt;p&gt;注意，为了行文方便，本章后面的&lt;code&gt;resolved&lt;/code&gt;统一只指&lt;code&gt;fulfilled&lt;/code&gt;状态，不包含&lt;code&gt;rejected&lt;/code&gt;状态。&lt;/p&gt;
-&lt;p&gt;有了&lt;code&gt;Promise&lt;/code&gt;对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。此外，&lt;code&gt;Promise&lt;/code&gt;对象提供统一的接口，使得控制异步操作更加容易。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Promise&lt;/code&gt;也有一些缺点。首先，无法取消&lt;code&gt;Promise&lt;/code&gt;，一旦新建它就会立即执行，无法中途取消。其次，如果不设置回调函数，&lt;code&gt;Promise&lt;/code&gt;内部抛出的错误，不会反应到外部。第三，当处于&lt;code&gt;pending&lt;/code&gt;状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。&lt;/p&gt;
-&lt;p&gt;如果某些事件不断地反复发生，一般来说，使用 Stream 模式是比部署&lt;code&gt;Promise&lt;/code&gt;更好的选择。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 Promise" scheme="https://codermae.github.io/tags/JS-ES6-Promise/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0087</title>
-    <link href="https://codermae.github.io/2021/08/19/%E6%89%93%E5%8D%A10087/"/>
-    <id>https://codermae.github.io/2021/08/19/%E6%89%93%E5%8D%A10087/</id>
-    <published>2021-08-19T09:54:36.000Z</published>
-    <updated>2021-09-27T05:22:08.906Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#f05b72&gt;不开心时，做个深呼吸，不过是糟糕的一天而已，又不是糟糕一辈子。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;16-Reflect&quot;&gt;&lt;a href=&quot;#16-Reflect&quot; class=&quot;headerlink&quot; title=&quot;16. Reflect&quot;&gt;&lt;/a&gt;16. Reflect&lt;/h3&gt;&lt;h4 id=&quot;16-1-概述&quot;&gt;&lt;a href=&quot;#16-1-概述&quot; class=&quot;headerlink&quot; title=&quot;16.1 概述&quot;&gt;&lt;/a&gt;16.1 概述&lt;/h4&gt;&lt;p&gt;&lt;code&gt;Reflect&lt;/code&gt;对象与&lt;code&gt;Proxy&lt;/code&gt;对象一样，也是 ES6 为了操作对象而提供的新 API。&lt;code&gt;Reflect&lt;/code&gt;对象的设计目的有这样几个。&lt;/p&gt;
-&lt;p&gt;（1） 将&lt;code&gt;Object&lt;/code&gt;对象的一些明显属于语言内部的方法（比如&lt;code&gt;Object.defineProperty&lt;/code&gt;），放到&lt;code&gt;Reflect&lt;/code&gt;对象上。现阶段，某些方法同时在&lt;code&gt;Object&lt;/code&gt;和&lt;code&gt;Reflect&lt;/code&gt;对象上部署，未来的新方法将只部署在&lt;code&gt;Reflect&lt;/code&gt;对象上。也就是说，从&lt;code&gt;Reflect&lt;/code&gt;对象上可以拿到语言内部的方法。&lt;/p&gt;
-&lt;p&gt;（2） 修改某些&lt;code&gt;Object&lt;/code&gt;方法的返回结果，让其变得更合理。比如，&lt;code&gt;Object.defineProperty(obj, name, desc)&lt;/code&gt;在无法定义属性时，会抛出一个错误，而&lt;code&gt;Reflect.defineProperty(obj, name, desc)&lt;/code&gt;则会返回&lt;code&gt;false&lt;/code&gt;。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 老写法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.defineProperty(target, property, attributes);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// success&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; (e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// failure&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 新写法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;built_in&quot;&gt;Reflect&lt;/span&gt;.defineProperty(target, property, attributes)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// success&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// failure&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 Reflect" scheme="https://codermae.github.io/tags/JS-ES6-Reflect/"/>
     
   </entry>
   

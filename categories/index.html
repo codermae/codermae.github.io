@@ -6,7 +6,6 @@
 
     <head>
       <meta charset="utf-8" />
-      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
        
       <meta name="keywords" content="blog" />
        
@@ -32,8 +31,19 @@
        
  
 
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
       <!-- mermaid -->
       
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
     <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
 </head>
   </html>
@@ -49,7 +59,7 @@
   
     <h1 class="page-type-title">Categories</h1>
     <div class="categories-box">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Http/">Http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS/">JS</a><span class="category-list-count">69</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS-ES6/">JS-ES6</a><span class="category-list-count">29</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%80%BB%E7%BB%93/">总结</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/Githubpage-hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">Githubpage+hexo博客搭建</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%AF%E7%B4%AF/">积累</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%B8%A9%E5%9D%91/">踩坑</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Http/">Http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS/">JS</a><span class="category-list-count">69</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS-ES6/">JS-ES6</a><span class="category-list-count">29</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%80%BB%E7%BB%93/">总结</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/Githubpage-hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">Githubpage+hexo博客搭建</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%AF%E7%B4%AF/">积累</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%B8%A9%E5%9D%91/">踩坑</a><span class="category-list-count">3</span></li></ul>
     </div>
   
 </section>
@@ -65,18 +75,23 @@
     <ul>
       <li>
         
-        <!-- 
-         -->
         
         
-        Powered by Hexo
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
         <span class="division">|</span>
-        Theme - Ayer
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
         
       </li>
     </ul>
     <ul>
       <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
         
       </li>
     </ul>
@@ -93,9 +108,10 @@
       </li>
     </ul>
   </div>
-</footer>
-      <div class="float_btns">
-        <div class="totop" id="totop">
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
   <i class="ri-arrow-up-line"></i>
 </div>
 
@@ -103,8 +119,7 @@
   <i class="ri-moon-line"></i>
 </div>
 
-      </div>
-    </main>
+    </div>
     <aside class="sidebar on">
       <button class="navbar-toggle"></button>
 <nav class="navbar">
@@ -194,7 +209,7 @@
   </div>
 </div>
     
-<script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery-3.6.0.min.js"></script>
  
 <script src="/js/lazyload.min.js"></script>
 
@@ -321,7 +336,9 @@
 <!-- Katex -->
 
 <!-- busuanzi  -->
-
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
 <!-- ClickLove -->
 
 <!-- ClickBoom1 -->
@@ -413,6 +430,44 @@
     }
 </style>
     
+    
+<script>
+  const password = "maey";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  // console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "Please enter password maey",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "Ok",
+    }).then((result) => {
+      // console.log(result);
+      if (result.isConfirmed) {
+        // console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Incorrect password, please try again",
+            confirmButtonText: "Ok",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
+
   </div>
 </body>
 

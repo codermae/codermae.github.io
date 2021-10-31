@@ -6,7 +6,6 @@
 
     <head>
       <meta charset="utf-8" />
-      <meta name="baidu-site-verification" content="code-7KDdYaoVL0" />
        
       <meta name="keywords" content="blog" />
        
@@ -32,8 +31,19 @@
        
  
 
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
       <!-- mermaid -->
       
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
     <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
 </head>
   </html>
@@ -157,6 +167,134 @@
     
     
     
+    
+    <article
+  id="post-打卡0038"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/24/%E6%89%93%E5%8D%A10038/"
+    >打卡0038</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/24/%E6%89%93%E5%8D%A10038/" class="article-date">
+  <time datetime="2021-05-24T01:03:42.000Z" itemprop="datePublished">2021-05-24</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#987165>人海茫茫，能够相遇本来就是难得的缘分，愿我们都能够以体谅之心爱人，不敷衍每一份真情，互相体谅，好好珍惜。</font></p>
+<h2 id="JS-DOM"><a href="#JS-DOM" class="headerlink" title="JS DOM"></a>JS DOM</h2><h3 id="5-Document-节点"><a href="#5-Document-节点" class="headerlink" title="5. Document 节点"></a>5. Document 节点</h3><h4 id="5-1-概述"><a href="#5-1-概述" class="headerlink" title="5.1 概述"></a>5.1 概述</h4><p><code>document</code>节点对象代表整个文档，每张网页都有自己的<code>document</code>对象。<code>window.document</code>属性就指向这个对象。只要浏览器开始载入 HTML 文档，该对象就存在了，可以直接使用。</p>
+<p><code>document</code>对象有不同的办法可以获取。</p>
+<ul>
+<li>正常的网页，直接使用<code>document</code>或<code>window.document</code>。</li>
+<li><code>iframe</code>框架里面的网页，使用<code>iframe</code>节点的<code>contentDocument</code>属性 。</li>
+<li>Ajax 操作返回的文档，使用<code>XMLHttpRequest</code>对象的<code>responseXML</code>属性。</li>
+<li>内部节点的<code>ownerDocument</code>属性。</li>
+</ul>
+<p><code>document</code>对象继承了<code>EventTarget</code>接口和<code>Node</code>接口，并且混入（mixin）了<code>ParentNode</code>接口。这意味着，这些接口的方法都可以在<code>document</code>对象上调用。除此之外，<code>document</code>对象还有很多自己的属性和方法。</p> 
+      <a class="article-more-link" href="/2021/05/24/%E6%89%93%E5%8D%A10038/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-DOM-Document-%E8%8A%82%E7%82%B9/" rel="tag">JS DOM-Document 节点</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-打卡0037"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/23/%E6%89%93%E5%8D%A10037/"
+    >打卡0037</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/23/%E6%89%93%E5%8D%A10037/" class="article-date">
+  <time datetime="2021-05-23T05:09:14.000Z" itemprop="datePublished">2021-05-23</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=gray>他进入了一个梦乡，那里的稻穗比高粱还高，穗粒比花生还大。风轻轻吹过，他就坐在稻穗下乘凉。</font></p>
+<h2 id="JS-DOM"><a href="#JS-DOM" class="headerlink" title="JS DOM"></a>JS DOM</h2><h3 id="4-ParentNode-接口，ChildNode-接口"><a href="#4-ParentNode-接口，ChildNode-接口" class="headerlink" title="4. ParentNode 接口，ChildNode 接口"></a>4. ParentNode 接口，ChildNode 接口</h3><p>节点对象除了继承 Node 接口以外，还拥有其他接口。<code>ParentNode</code>接口表示当前节点是一个父节点，提供一些处理子节点的方法。<code>ChildNode</code>接口表示当前节点是一个子节点，提供一些相关方法。</p>
+<h4 id="4-1-ParentNode-接口"><a href="#4-1-ParentNode-接口" class="headerlink" title="4.1 ParentNode 接口"></a>4.1 ParentNode 接口</h4><p>如果当前节点是父节点，就会混入了（mixin）<code>ParentNode</code>接口。由于只有元素节点（element）、文档节点（document）和文档片段节点（documentFragment）拥有子节点，因此只有这三类节点会拥有<code>ParentNode</code>接口。</p>
+<h5 id="4-1-1-ParentNode-children"><a href="#4-1-1-ParentNode-children" class="headerlink" title="4.1.1 ParentNode.children"></a>4.1.1 ParentNode.children</h5><p><code>children</code>属性返回一个<code>HTMLCollection</code>实例，成员是当前节点的所有元素子节点。该属性只读。</p>
+<p>下面是遍历某个节点的所有元素子节点的示例。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; el.children.length; i++) &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
+      <a class="article-more-link" href="/2021/05/23/%E6%89%93%E5%8D%A10037/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-DOM-ParentNode-%E6%8E%A5%E5%8F%A3%EF%BC%8CChildNode-%E6%8E%A5%E5%8F%A3/" rel="tag">JS DOM-ParentNode 接口，ChildNode 接口</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
     
     <article
   id="post-打卡0036"
@@ -683,129 +821,6 @@
 </article>
 
     
-    <article
-  id="post-打卡0028"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/19/%E6%89%93%E5%8D%A10028/"
-    >打卡0028</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/19/%E6%89%93%E5%8D%A10028/" class="article-date">
-  <time datetime="2021-05-19T00:54:43.000Z" itemprop="datePublished">2021-05-19</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#2585a6>难过的时候就抱抱自己，允许自己脆弱一会儿，收拾好心情再出发。</font></p>
-<h2 id="JS面向对象编程"><a href="#JS面向对象编程" class="headerlink" title="JS面向对象编程"></a>JS面向对象编程</h2><h3 id="3-对象的继承"><a href="#3-对象的继承" class="headerlink" title="3. 对象的继承"></a>3. 对象的继承</h3><p>面向对象编程很重要的一个方面，就是对象的继承。A 对象通过继承 B 对象，就能直接拥有 B 对象的所有属性和方法。这对于代码的复用是非常有用的。</p>
-<p>大部分面向对象的编程语言，都是通过“类”（class）实现对象的继承。传统上，JavaScript 语言的继承不通过 class，而是通过“原型对象”（prototype）实现，本章介绍 JavaScript 的原型链继承。</p>
-<p>ES6 引入了 class 语法，基于 class 的继承不在这个教程介绍，请参阅《ES6 标准入门》一书的相关章节。</p>
-<h4 id="3-1-原型对象的概述"><a href="#3-1-原型对象的概述" class="headerlink" title="3.1 原型对象的概述"></a>3.1 原型对象的概述</h4><h5 id="3-1-1-构造函数的缺点"><a href="#3-1-1-构造函数的缺点" class="headerlink" title="3.1.1 构造函数的缺点"></a>3.1.1 构造函数的缺点</h5><p>JavaScript 通过构造函数生成新对象，因此构造函数可以视为对象的模板。实例对象的属性和方法，可以定义在构造函数内部。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span> (<span class="params">name, color</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name;</span><br><span class="line">  <span class="built_in">this</span>.color = color;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> cat1 = <span class="keyword">new</span> Cat(<span class="string">&#x27;大毛&#x27;</span>, <span class="string">&#x27;白色&#x27;</span>);</span><br><span class="line"></span><br><span class="line">cat1.name <span class="comment">// &#x27;大毛&#x27;</span></span><br><span class="line">cat1.color <span class="comment">// &#x27;白色&#x27;</span></span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/05/19/%E6%89%93%E5%8D%A10028/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%BB%A7%E6%89%BF/" rel="tag">JS面向对象编程-对象的继承</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0027"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/17/%E6%89%93%E5%8D%A10027/"
-    >打卡0027</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/17/%E6%89%93%E5%8D%A10027/" class="article-date">
-  <time datetime="2021-05-17T02:07:18.000Z" itemprop="datePublished">2021-05-17</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#73b9a2>走在未知的道路上，不能停也不能回头。</font></p>
-<h2 id="JS面向对象编程"><a href="#JS面向对象编程" class="headerlink" title="JS面向对象编程"></a>JS面向对象编程</h2><h3 id="2-this关键字"><a href="#2-this关键字" class="headerlink" title="2. this关键字"></a>2. this关键字</h3><h4 id="2-1-涵义"><a href="#2-1-涵义" class="headerlink" title="2.1 涵义"></a>2.1 涵义</h4><p><code>this</code>关键字是一个非常重要的语法点。毫不夸张地说，不理解它的含义，大部分开发任务都无法完成。<br>前一章已经提到，<code>this</code>可以用在构造函数之中，表示实例对象。除此之外，<code>this</code>还可以用在别的场合。但不管是什么场合，<code>this</code>都有一个共同点：它总是返回一个对象。<br>简单说，<code>this</code>就是属性或方法“当前”所在的对象。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">this</span>.property</span><br></pre></td></tr></table></figure>
-<p>上面代码中，<code>this</code>就代表<code>property</code>属性当前所在的对象。<br>下面是一个实际的例子。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name: <span class="string">&#x27;张三&#x27;</span>,</span><br><span class="line">  describe: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;姓名：&#x27;</span>+ <span class="built_in">this</span>.name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">person.describe()</span><br><span class="line"><span class="comment">// &quot;姓名：张三&quot;</span></span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/05/17/%E6%89%93%E5%8D%A10027/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-this%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">JS面向对象编程-this关键字</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
@@ -830,18 +845,23 @@
     <ul>
       <li>
         
-        <!-- 
-         -->
         
         
-        Powered by Hexo
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
         <span class="division">|</span>
-        Theme - Ayer
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
         
       </li>
     </ul>
     <ul>
       <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
         
       </li>
     </ul>
@@ -858,9 +878,10 @@
       </li>
     </ul>
   </div>
-</footer>
-      <div class="float_btns">
-        <div class="totop" id="totop">
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
   <i class="ri-arrow-up-line"></i>
 </div>
 
@@ -868,8 +889,7 @@
   <i class="ri-moon-line"></i>
 </div>
 
-      </div>
-    </main>
+    </div>
     <aside class="sidebar on">
       <button class="navbar-toggle"></button>
 <nav class="navbar">
@@ -959,7 +979,7 @@
   </div>
 </div>
     
-<script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery-3.6.0.min.js"></script>
  
 <script src="/js/lazyload.min.js"></script>
 
@@ -1086,7 +1106,9 @@
 <!-- Katex -->
 
 <!-- busuanzi  -->
-
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
 <!-- ClickLove -->
 
 <!-- ClickBoom1 -->
@@ -1178,6 +1200,44 @@
     }
 </style>
     
+    
+<script>
+  const password = "maey";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  // console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "Please enter password maey",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "Ok",
+    }).then((result) => {
+      // console.log(result);
+      if (result.isConfirmed) {
+        // console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Incorrect password, please try again",
+            confirmButtonText: "Ok",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
+
   </div>
 </body>
 
