@@ -169,6 +169,74 @@
     
     
     <article
+  id="post-打卡0049"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/29/%E6%89%93%E5%8D%A10049/"
+    >打卡0049</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/29/%E6%89%93%E5%8D%A10049/" class="article-date">
+  <time datetime="2021-05-29T04:12:46.000Z" itemprop="datePublished">2021-05-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#deab8a>相逢尽道休官好，林下何曾见一人。</font></p>
+<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="6-进度事件"><a href="#6-进度事件" class="headerlink" title="6. 进度事件"></a>6. 进度事件</h3><h4 id="6-1-进度事件的种类"><a href="#6-1-进度事件的种类" class="headerlink" title="6.1 进度事件的种类"></a>6.1 进度事件的种类</h4><p>进度事件用来描述资源加载的进度，主要由 AJAX 请求、<code>&lt;img&gt;</code>、<code>&lt;audio&gt;</code>、<code>&lt;video&gt;</code>、<code>&lt;style&gt;</code>、<code>&lt;link&gt;</code>等外部资源的加载触发，继承了<code>ProgressEvent</code>接口。它主要包含以下几种事件。</p>
+<ul>
+<li><code>abort</code>:外部资源中止加载时（比如用户取消）触发。如果发生错误导致中止，不会触发该事件。</li>
+<li><code>error</code>:由于错误导致外部资源无法加载时触发。</li>
+<li><code>load</code>:外部资源加载成功时触发。</li>
+<li><code>loadstart</code>:外部资源开始加载时触发。</li>
+<li><code>loadend</code>:外部资源停止加载时触发，发生顺序排在<code>error</code>、<code>abort</code>、<code>load</code>等事件的后面。</li>
+<li><code>progress</code>:外部资源加载过程中不断触发。</li>
+<li><code>timeout</code>:加载超时时触发。</li>
+</ul>
+<p>注意，除了资源下载，文件上传也存在这些事件。</p> 
+      <a class="article-more-link" href="/2021/05/29/%E6%89%93%E5%8D%A10049/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E8%BF%9B%E5%BA%A6%E4%BA%8B%E4%BB%B6/" rel="tag">JS 事件-进度事件</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0048"
   class="article article-type-post"
   itemscope
@@ -751,68 +819,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-DOM-%E5%B1%9E%E6%80%A7%E7%9A%84%E6%93%8D%E4%BD%9C/" rel="tag">JS DOM-属性的操作</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0039"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/25/%E6%89%93%E5%8D%A10039/"
-    >打卡0039</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/25/%E6%89%93%E5%8D%A10039/" class="article-date">
-  <time datetime="2021-05-25T01:05:50.000Z" itemprop="datePublished">2021-05-25</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#9b95c9>星光不问赶路人，时光不负有心人。</font></p>
-<h2 id="JS-DOM"><a href="#JS-DOM" class="headerlink" title="JS DOM"></a>JS DOM</h2><h3 id="6-Element-节点"><a href="#6-Element-节点" class="headerlink" title="6. Element 节点"></a>6. Element 节点</h3><h4 id="6-1-简介"><a href="#6-1-简介" class="headerlink" title="6.1 简介"></a>6.1 简介</h4><p><code>Element</code>节点对象对应网页的 HTML 元素。每一个 HTML 元素，在 DOM 树上都会转化成一个<code>Element</code>节点对象（以下简称元素节点）。</p>
-<p>元素节点的<code>nodeType</code>属性都是<code>1</code>。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> p = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;p&#x27;</span>);</span><br><span class="line">p.nodeName <span class="comment">// &quot;P&quot;</span></span><br><span class="line">p.nodeType <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
-<p><code>Element</code>对象继承了<code>Node</code>接口，因此<code>Node</code>的属性和方法在<code>Element</code>对象都存在。</p>
-<p>此外，不同的 HTML 元素对应的元素节点是不一样的，浏览器使用不同的构造函数，生成不同的元素节点，比如<code>&lt;a&gt;</code>元素的构造函数是<code>HTMLAnchorElement()</code>，<code>&lt;button&gt;</code>是<code>HTMLButtonElement()</code>。因此，元素节点不是一种对象，而是许多种对象，这些对象除了继承<code>Element</code>对象的属性和方法，还有各自独有的属性和方法。</p> 
-      <a class="article-more-link" href="/2021/05/25/%E6%89%93%E5%8D%A10039/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-DOM-Element-%E8%8A%82%E7%82%B9/" rel="tag">JS DOM-Element 节点</a></li></ul>
 
     </footer>
   </div>

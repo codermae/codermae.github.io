@@ -169,6 +169,67 @@
     
     
     <article
+  id="post-打卡0029"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/20/%E6%89%93%E5%8D%A10029/"
+    >打卡0029</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/20/%E6%89%93%E5%8D%A10029/" class="article-date">
+  <time datetime="2021-05-20T00:50:47.000Z" itemprop="datePublished">2021-05-20</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#0080FF>我是只化身孤岛的蓝鲸 有着最巨大的身影 鱼虾在身侧穿行 也有飞鸟在背上停</font></p>
+<h2 id="JS面向对象编程"><a href="#JS面向对象编程" class="headerlink" title="JS面向对象编程"></a>JS面向对象编程</h2><h3 id="4-Object对象的相关方法"><a href="#4-Object对象的相关方法" class="headerlink" title="4. Object对象的相关方法"></a>4. Object对象的相关方法</h3><h4 id="4-1-Object-getPrototypeOf"><a href="#4-1-Object-getPrototypeOf" class="headerlink" title="4.1 Object.getPrototypeOf()"></a>4.1 Object.getPrototypeOf()</h4><p><code>Object.getPrototypeOf</code>方法返回参数对象的原型。这是获取原型对象的标准方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> F();</span><br><span class="line"><span class="built_in">Object</span>.getPrototypeOf(f) === F.prototype <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，实例对象<code>f</code>的原型是<code>F.prototype</code>。<br>下面是几种特殊对象的原型。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 空对象的原型是 Object.prototype</span></span><br><span class="line"><span class="built_in">Object</span>.getPrototypeOf(&#123;&#125;) === <span class="built_in">Object</span>.prototype <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Object.prototype 的原型是 null</span></span><br><span class="line"><span class="built_in">Object</span>.getPrototypeOf(<span class="built_in">Object</span>.prototype) === <span class="literal">null</span> <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数的原型是 Function.prototype</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="built_in">Object</span>.getPrototypeOf(f) === <span class="built_in">Function</span>.prototype <span class="comment">// true</span></span><br></pre></td></tr></table></figure> 
+      <a class="article-more-link" href="/2021/05/20/%E6%89%93%E5%8D%A10029/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-Object%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/" rel="tag">JS面向对象编程-Object对象的相关方法</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0028"
   class="article article-type-post"
   itemscope
@@ -723,65 +784,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Number%E5%AF%B9%E8%B1%A1/" rel="tag">JS标准库-Number对象</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0019"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/14/%E6%89%93%E5%8D%A10019/"
-    >打卡0019</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/14/%E6%89%93%E5%8D%A10019/" class="article-date">
-  <time datetime="2021-05-14T03:12:21.000Z" itemprop="datePublished">2021-05-14</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#bed742>如果你是异性，你会不会爱上现在的自己？</font></p>
-<h2 id="JS标准库"><a href="#JS标准库" class="headerlink" title="JS标准库"></a>JS标准库</h2><h3 id="5-Boolean对象"><a href="#5-Boolean对象" class="headerlink" title="5. Boolean对象"></a>5. Boolean对象</h3><h4 id="5-1-概述"><a href="#5-1-概述" class="headerlink" title="5.1 概述"></a>5.1 概述</h4><p><code>Boolean</code>对象是 JavaScript 的三个包装对象之一。作为构造函数，它主要用于生成布尔值的包装对象实例。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> b <span class="comment">// &quot;object&quot;</span></span><br><span class="line">b.valueOf() <span class="comment">// true</span></span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/05/14/%E6%89%93%E5%8D%A10019/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS%E6%A0%87%E5%87%86%E5%BA%93-Boolean%E5%AF%B9%E8%B1%A1/" rel="tag">JS标准库-Boolean对象</a></li></ul>
 
     </footer>
   </div>

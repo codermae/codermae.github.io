@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-10-28T06:54:03.723Z</updated>
+  <updated>2021-11-01T06:47:32.417Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,20 +17,48 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>打卡0104</title>
+    <link href="https://codermae.github.io/2021/11/01/%E6%89%93%E5%8D%A10104/"/>
+    <id>https://codermae.github.io/2021/11/01/%E6%89%93%E5%8D%A10104/</id>
+    <published>2021-11-01T06:19:58.000Z</published>
+    <updated>2021-11-01T06:47:32.417Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;hexo博客部署到云服务器&quot;&gt;&lt;a href=&quot;#hexo博客部署到云服务器&quot; class=&quot;headerlink&quot; title=&quot;hexo博客部署到云服务器&quot;&gt;&lt;/a&gt;hexo博客部署到云服务器&lt;/h2&gt;&lt;h3 id=&quot;1-本地（win10）hexo博客配置&quot;&gt;&lt;a href=&quot;#1-本地（win10）hexo博客配置&quot; class=&quot;headerlink&quot; title=&quot;1. 本地（win10）hexo博客配置&quot;&gt;&lt;/a&gt;1. 本地（win10）hexo博客配置&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://codermae.github.io/2021/05/01/My-first-blog/&quot;&gt;本地博客配置&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-云服务器配置&quot;&gt;&lt;a href=&quot;#2-云服务器配置&quot; class=&quot;headerlink&quot; title=&quot;2. 云服务器配置&quot;&gt;&lt;/a&gt;2. 云服务器配置&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;centos 8.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;1-安装git&quot;&gt;&lt;a href=&quot;#1-安装git&quot; class=&quot;headerlink&quot; title=&quot;1. 安装git&quot;&gt;&lt;/a&gt;1. 安装git&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum install git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;2-添加git新用户&quot;&gt;&lt;a href=&quot;#2-添加git新用户&quot; class=&quot;headerlink&quot; title=&quot;2. 添加git新用户&quot;&gt;&lt;/a&gt;2. 添加git新用户&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;useradd git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;passwd git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;3-切换用户&quot;&gt;&lt;a href=&quot;#3-切换用户&quot; class=&quot;headerlink&quot; title=&quot;3. 切换用户&quot;&gt;&lt;/a&gt;3. 切换用户&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;su - git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;4-操作&quot;&gt;&lt;a href=&quot;#4-操作&quot; class=&quot;headerlink&quot; title=&quot;4. 操作&quot;&gt;&lt;/a&gt;4. 操作&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;进入git用户主目录:&lt;code&gt;cd&lt;/code&gt;或&lt;code&gt;cd~&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;创建.ssh目录：&lt;code&gt;mkdir .ssh &amp;amp;&amp;amp; chmod 700 .ssh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;创建authorized_keys公钥保存文件：&lt;code&gt;touch .ssh/authorized_keys &amp;amp;&amp;amp; chmod 600 .ssh/authorized_keys&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;将公钥文件导入~/.ssh/authorized_keys&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://codermae.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="云服务器部署" scheme="https://codermae.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>打卡0103</title>
     <link href="https://codermae.github.io/2021/10/28/%E6%89%93%E5%8D%A10103/"/>
     <id>https://codermae.github.io/2021/10/28/%E6%89%93%E5%8D%A10103/</id>
     <published>2021-10-28T06:51:48.000Z</published>
-    <updated>2021-10-28T06:54:03.723Z</updated>
+    <updated>2021-11-01T06:19:17.415Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a  style=&quot;link:text-decoration: underline; color: red;&quot;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;&lt;a  style=&quot;link:text-decoration: underline; color: red;&quot; href=&quot;https://mp.weixin.qq.com/s/Z4KBqEgmBS9LQL3-hmjqbg&quot;&gt;他们做到的，我们应该知道。&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;vue-css中使用data变量&quot;&gt;&lt;a href=&quot;#vue-css中使用data变量&quot; class=&quot;headerlink&quot; title=&quot;vue-css中使用data变量&quot;&gt;&lt;/a&gt;vue-css中使用data变量&lt;/h2&gt;&lt;p&gt;这样就在vue中实现了在样式里使用js变量的方法，及通过css定义变量的方式，将变量在行内注入，然后在style中使用var()获取我们在行内设置的数据即可。以后，在封装一些需要动态传入样式参数的ui组件是不是简便了不少。&lt;/p&gt;</summary>
     
     
     
@@ -466,35 +494,6 @@
     
     
     <category term="JS-ES6 Generator 函数的异步应用" scheme="https://codermae.github.io/tags/JS-ES6-Generator-%E5%87%BD%E6%95%B0%E7%9A%84%E5%BC%82%E6%AD%A5%E5%BA%94%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0089</title>
-    <link href="https://codermae.github.io/2021/08/24/%E6%89%93%E5%8D%A10089/"/>
-    <id>https://codermae.github.io/2021/08/24/%E6%89%93%E5%8D%A10089/</id>
-    <published>2021-08-24T08:59:18.000Z</published>
-    <updated>2021-09-27T05:22:18.165Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#d5c59f&gt;收拾起心情，继续走吧，错过花，你将收获雨，错过这一个，你才会遇到下一个。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;18-Iterator-和-for…of-循环&quot;&gt;&lt;a href=&quot;#18-Iterator-和-for…of-循环&quot; class=&quot;headerlink&quot; title=&quot;18. Iterator 和 for…of 循环&quot;&gt;&lt;/a&gt;18. Iterator 和 for…of 循环&lt;/h3&gt;&lt;h4 id=&quot;18-1-Iterator（遍历器）的概念&quot;&gt;&lt;a href=&quot;#18-1-Iterator（遍历器）的概念&quot; class=&quot;headerlink&quot; title=&quot;18.1 Iterator（遍历器）的概念&quot;&gt;&lt;/a&gt;18.1 Iterator（遍历器）的概念&lt;/h4&gt;&lt;p&gt;JavaScript 原有的表示“集合”的数据结构，主要是数组（&lt;code&gt;Array&lt;/code&gt;）和对象（&lt;code&gt;Object&lt;/code&gt;），ES6 又添加了&lt;code&gt;Map&lt;/code&gt;和&lt;code&gt;Set&lt;/code&gt;。这样就有了四种数据集合，用户还可以组合使用它们，定义自己的数据结构，比如数组的成员是Map，Map的成员是对象。这样就需要一种统一的接口机制，来处理所有不同的数据结构。&lt;/p&gt;
-&lt;p&gt;遍历器（Iterator）就是这样一种机制。它是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构只要部署 Iterator 接口，就可以完成遍历操作（即依次处理该数据结构的所有成员）。&lt;/p&gt;
-&lt;p&gt;Iterator 的作用有三个：一是为各种数据结构，提供一个统一的、简便的访问接口；二是使得数据结构的成员能够按某种次序排列；三是 ES6 创造了一种新的遍历命令&lt;code&gt;for...of&lt;/code&gt;循环，Iterator 接口主要供&lt;code&gt;for...of&lt;/code&gt;消费。&lt;/p&gt;
-&lt;p&gt;Iterator 的遍历过程是这样的。&lt;/p&gt;
-&lt;p&gt;（1）创建一个指针对象，指向当前数据结构的起始位置。也就是说，遍历器对象本质上，就是一个指针对象。&lt;/p&gt;
-&lt;p&gt;（2）第一次调用指针对象的&lt;code&gt;next&lt;/code&gt;方法，可以将指针指向数据结构的第一个成员。&lt;/p&gt;
-&lt;p&gt;（3）第二次调用指针对象的&lt;code&gt;next&lt;/code&gt;方法，指针就指向数据结构的第二个成员。&lt;/p&gt;
-&lt;p&gt;（4）不断调用指针对象的&lt;code&gt;next&lt;/code&gt;方法，直到它指向数据结构的结束位置。&lt;/p&gt;
-&lt;p&gt;每一次调用&lt;code&gt;next&lt;/code&gt;方法，都会返回数据结构的当前成员的信息。具体来说，就是返回一个包含&lt;code&gt;value&lt;/code&gt;和&lt;code&gt;done&lt;/code&gt;两个属性的对象。其中，&lt;code&gt;value&lt;/code&gt;属性是当前成员的值，&lt;code&gt;done&lt;/code&gt;属性是一个布尔值，表示遍历是否结束。&lt;/p&gt;
-&lt;p&gt;下面是一个模拟&lt;code&gt;next&lt;/code&gt;方法返回值的例子。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 Iterator 和 for...of 循环" scheme="https://codermae.github.io/tags/JS-ES6-Iterator-%E5%92%8C-for-of-%E5%BE%AA%E7%8E%AF/"/>
     
   </entry>
   

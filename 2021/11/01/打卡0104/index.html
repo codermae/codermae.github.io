@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>打卡0103 |  maeBlog</title>
+      <title>打卡0104 |  maeBlog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -57,7 +57,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-打卡0103"
+  id="post-打卡0104"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -68,7 +68,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  打卡0103
+  打卡0104
 </h1>
  
 
@@ -76,11 +76,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/10/28/%E6%89%93%E5%8D%A10103/" class="article-date">
-  <time datetime="2021-10-28T06:51:48.000Z" itemprop="datePublished">2021-10-28</time>
+      <a href="/2021/11/01/%E6%89%93%E5%8D%A10104/" class="article-date">
+  <time datetime="2021-11-01T06:19:58.000Z" itemprop="datePublished">2021-11-01</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A7%AF%E7%B4%AF/">积累</a>
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
   </div>
   
 <div class="word_count">
@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">207</span>
+            <span class="post-count">672</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">3 min</span>
         </span>
     </span>
 </div>
@@ -112,10 +112,55 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p><a  style="link:text-decoration: underline; color: red;" target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/Z4KBqEgmBS9LQL3-hmjqbg">他们做到的，我们应该知道。</a></p>
-<h2 id="vue-css中使用data变量"><a href="#vue-css中使用data变量" class="headerlink" title="vue-css中使用data变量"></a>vue-css中使用data变量</h2><p>这样就在vue中实现了在样式里使用js变量的方法，及通过css定义变量的方式，将变量在行内注入，然后在style中使用var()获取我们在行内设置的数据即可。以后，在封装一些需要动态传入样式参数的ui组件是不是简便了不少。</p>
+  <h2 id="hexo博客部署到云服务器"><a href="#hexo博客部署到云服务器" class="headerlink" title="hexo博客部署到云服务器"></a>hexo博客部署到云服务器</h2><h3 id="1-本地（win10）hexo博客配置"><a href="#1-本地（win10）hexo博客配置" class="headerlink" title="1. 本地（win10）hexo博客配置"></a>1. 本地（win10）hexo博客配置</h3><p><a href="https://codermae.github.io/2021/05/01/My-first-blog/">本地博客配置</a></p>
+<h3 id="2-云服务器配置"><a href="#2-云服务器配置" class="headerlink" title="2. 云服务器配置"></a>2. 云服务器配置</h3><ul>
+<li>centos 8.2</li>
+</ul>
+<h4 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1. 安装git"></a>1. 安装git</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-添加git新用户"><a href="#2-添加git新用户" class="headerlink" title="2. 添加git新用户"></a>2. 添加git新用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">useradd git</span><br><span class="line"></span><br><span class="line">passwd git</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-切换用户"><a href="#3-切换用户" class="headerlink" title="3. 切换用户"></a>3. 切换用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su - git</span><br></pre></td></tr></table></figure>
+<h4 id="4-操作"><a href="#4-操作" class="headerlink" title="4. 操作"></a>4. 操作</h4><ul>
+<li>进入git用户主目录:<code>cd</code>或<code>cd~</code></li>
+<li>创建.ssh目录：<code>mkdir .ssh &amp;&amp; chmod 700 .ssh</code></li>
+<li>创建authorized_keys公钥保存文件：<code>touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys</code></li>
+<li>将公钥文件导入~/.ssh/authorized_keys</li>
+</ul>
 <span id="more"></span>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;box&quot; :style&#x3D;&quot;styleVar&quot;&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">    props: &#123;</span><br><span class="line">        height: &#123;</span><br><span class="line">            type: Number,</span><br><span class="line">            default: 94,</span><br><span class="line">        &#125;,</span><br><span class="line">        whith: &#123;</span><br><span class="line">            type: Number,</span><br><span class="line">            default: 200,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">        styleVar() &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                &#39;--box-width&#39;: this.whith + &#39;px&#39;,</span><br><span class="line">                &#39;--box-height&#39;: this.height + &#39;px&#39;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">.box &#123;</span><br><span class="line">  height: var(--box-height);</span><br><span class="line">  width: var(--box-width);</span><br><span class="line">  background: red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure> 
+<h4 id="5-创建博客git仓库"><a href="#5-创建博客git仓库" class="headerlink" title="5. 创建博客git仓库"></a>5. 创建博客git仓库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir &#x2F;var&#x2F;repo</span><br><span class="line">cd &#x2F;var&#x2F;repo</span><br><span class="line">git init --bare blog.git</span><br></pre></td></tr></table></figure>
+<h4 id="6-配置GIT-HOOKS"><a href="#6-配置GIT-HOOKS" class="headerlink" title="6. 配置GIT HOOKS"></a>6. 配置GIT HOOKS</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;var&#x2F;repo&#x2F;blog.git&#x2F;hooks&#x2F;post-receive</span><br></pre></td></tr></table></figure>
+<p>添加下面内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;sh</span><br><span class="line">git --work-tree&#x3D;&#x2F;var&#x2F;www&#x2F;hexo --git-dir&#x3D;&#x2F;var&#x2F;repo&#x2F;blog.git checkout -f</span><br></pre></td></tr></table></figure>
+<h4 id="7-post-receive添加执行权限"><a href="#7-post-receive添加执行权限" class="headerlink" title="7. post-receive添加执行权限"></a>7. post-receive添加执行权限</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x &#x2F;var&#x2F;repo&#x2F;blog.git&#x2F;hooks&#x2F;post-receive</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-BLOG-GIT-目录的拥有者为设置为git-用户"><a href="#8-BLOG-GIT-目录的拥有者为设置为git-用户" class="headerlink" title="8. BLOG.GIT 目录的拥有者为设置为git 用户"></a>8. BLOG.GIT 目录的拥有者为设置为git 用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R git:git &#x2F;var&#x2F;repo&#x2F;blog.git</span><br></pre></td></tr></table></figure>
+
+<h4 id="9-创建静态文件目录并将创建git仓库目录步骤生成的git仓库链接到静态文件目录下。此文件就是blog的文件"><a href="#9-创建静态文件目录并将创建git仓库目录步骤生成的git仓库链接到静态文件目录下。此文件就是blog的文件" class="headerlink" title="9. 创建静态文件目录并将创建git仓库目录步骤生成的git仓库链接到静态文件目录下。此文件就是blog的文件"></a>9. 创建静态文件目录并将创建git仓库目录步骤生成的git仓库链接到静态文件目录下。此文件就是blog的文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">创建静态文件目录（文章网页）：mkdir &#x2F;var&#x2F;www&#x2F;hexo</span><br><span class="line">链接git仓库：chown -R git:git &#x2F;var&#x2F;www&#x2F;hexo</span><br><span class="line">配置权限：chmod -R 755 &#x2F;var&#x2F;www&#x2F;hexo</span><br></pre></td></tr></table></figure>
+<p>git配置结束</p>
+<h3 id="3-nginx配置"><a href="#3-nginx配置" class="headerlink" title="3. nginx配置"></a>3. nginx配置</h3><h4 id="1-安装nginx"><a href="#1-安装nginx" class="headerlink" title="1. 安装nginx"></a>1. 安装nginx</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-配置"><a href="#2-配置" class="headerlink" title="2. 配置"></a>2. 配置</h4><p>编辑nginx.conf文件，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
+<p>更改以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80 default_server;</span><br><span class="line">    listen       [::]:80 default_server;</span><br><span class="line">    server_name  101.132.47.21;	&#x2F;&#x2F;云服务器IP</span><br><span class="line">    root         &#x2F;var&#x2F;www&#x2F;hexo;	&#x2F;&#x2F;博客路径</span><br><span class="line"></span><br><span class="line">    # Load configuration files for the default server block.</span><br><span class="line">    include &#x2F;etc&#x2F;nginx&#x2F;default.d&#x2F;*.conf;</span><br><span class="line"></span><br><span class="line">    location &#x2F; &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    error_page 404 &#x2F;404.html;</span><br><span class="line">        location &#x3D; &#x2F;40x.html &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    error_page 500 502 503 504 &#x2F;50x.html;</span><br><span class="line">        location &#x3D; &#x2F;50x.html &#123;</span><br><span class="line">            root   &#x2F;var&#x2F;www&#x2F;hexo;	&#x2F;&#x2F;博客路径</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改了Nginx的配置文件nginx.conf后要重启Nginx：<code>nginx -s reload</code>,若出现错误：<code>nginx: [error] open() &quot;/run/nginx.pid&quot; failed (2: No such file or directory)</code><br>我们要先停止nginx，首先查询nginx的进程号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep nginx</span><br></pre></td></tr></table></figure>
+<p>停止nginx，<code>kill -QUIT 进程号</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -QUIT 9011</span><br></pre></td></tr></table></figure>
+<p>在重启之前，我们先检查一下刚才的修改是否正确</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -t -c &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
+<p>正确的话再执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -c &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
+<p>最后重启</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
+<h4 id="3-测试"><a href="#3-测试" class="headerlink" title="3. 测试"></a>3. 测试</h4><p>浏览器输入ip地址：101.132.47.21</p>
+<h3 id="4-hexo更新"><a href="#4-hexo更新" class="headerlink" title="4. hexo更新"></a>4. hexo更新</h3><h4 id="1-修改-config-yml文件"><a href="#1-修改-config-yml文件" class="headerlink" title="1. 修改_config.yml文件"></a>1. 修改_config.yml文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:codermae&#x2F;codermae.github.io.git</span><br><span class="line">  repo: git@101.132.47.21:&#x2F;var&#x2F;repo&#x2F;blog.git	&#x2F;&#x2F;加上这一行格式为：git@IP:&#x2F;var&#x2F;repo&#x2F;blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h4 id="2-更新"><a href="#2-更新" class="headerlink" title="2. 更新"></a>2. 更新</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-测试-1"><a href="#3-测试-1" class="headerlink" title="3. 测试"></a>3. 测试</h4><p>浏览器输入ip地址：101.132.47.21</p>
+ 
       <!-- reward -->
       
       <div id="reword-out">
@@ -173,12 +218,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/10/28/%E6%89%93%E5%8D%A10103/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/11/01/%E6%89%93%E5%8D%A10104/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue-css%E4%B8%AD%E4%BD%BF%E7%94%A8data%E5%8F%98%E9%87%8F/" rel="tag">vue-css中使用data变量</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/" rel="tag">云服务器部署</a></li></ul>
 
     </footer>
   </div>
@@ -186,19 +231,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2021/11/01/%E6%89%93%E5%8D%A10104/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            打卡0104
-          
-        </div>
-      </a>
     
-    
-      <a href="/2021/10/10/%E6%89%93%E5%8D%A10102/" class="article-nav-link">
+      <a href="/2021/10/28/%E6%89%93%E5%8D%A10103/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">打卡0102</div>
+        <div class="article-nav-title">打卡0103</div>
       </a>
     
   </nav>
