@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-11-01T06:52:21.987Z</updated>
+  <updated>2021-11-01T06:58:47.356Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -21,10 +21,11 @@
     <link href="https://codermae.github.io/2021/11/01/%E6%89%93%E5%8D%A10104/"/>
     <id>https://codermae.github.io/2021/11/01/%E6%89%93%E5%8D%A10104/</id>
     <published>2021-11-01T06:19:58.000Z</published>
-    <updated>2021-11-01T06:52:21.987Z</updated>
+    <updated>2021-11-01T06:58:47.356Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;hexo博客部署到云服务器&quot;&gt;&lt;a href=&quot;#hexo博客部署到云服务器&quot; class=&quot;headerlink&quot; title=&quot;hexo博客部署到云服务器&quot;&gt;&lt;/a&gt;hexo博客部署到云服务器&lt;/h2&gt;&lt;h3 id=&quot;1-本地（win10）hexo博客配置&quot;&gt;&lt;a href=&quot;#1-本地（win10）hexo博客配置&quot; class=&quot;headerlink&quot; title=&quot;1. 本地（win10）hexo博客配置&quot;&gt;&lt;/a&gt;1. 本地（win10）hexo博客配置&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://codermae.github.io/2021/05/01/My-first-blog/&quot;&gt;本地博客配置&lt;/a&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;font color=#0c212b&gt;万圣节已到，尽情扮鬼笑。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;hexo博客部署到云服务器&quot;&gt;&lt;a href=&quot;#hexo博客部署到云服务器&quot; class=&quot;headerlink&quot; title=&quot;hexo博客部署到云服务器&quot;&gt;&lt;/a&gt;hexo博客部署到云服务器&lt;/h2&gt;&lt;h3 id=&quot;1-本地（win10）hexo博客配置&quot;&gt;&lt;a href=&quot;#1-本地（win10）hexo博客配置&quot; class=&quot;headerlink&quot; title=&quot;1. 本地（win10）hexo博客配置&quot;&gt;&lt;/a&gt;1. 本地（win10）hexo博客配置&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://codermae.github.io/2021/05/01/My-first-blog/&quot;&gt;本地博客配置&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;2-云服务器配置&quot;&gt;&lt;a href=&quot;#2-云服务器配置&quot; class=&quot;headerlink&quot; title=&quot;2. 云服务器配置&quot;&gt;&lt;/a&gt;2. 云服务器配置&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;centos 8.2&lt;/li&gt;
 &lt;/ul&gt;
@@ -56,10 +57,10 @@
     <link href="https://codermae.github.io/2021/10/28/%E6%89%93%E5%8D%A10103/"/>
     <id>https://codermae.github.io/2021/10/28/%E6%89%93%E5%8D%A10103/</id>
     <published>2021-10-28T06:51:48.000Z</published>
-    <updated>2021-11-01T06:19:17.415Z</updated>
+    <updated>2021-11-01T06:55:40.882Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;a  style=&quot;link:text-decoration: underline; color: red;&quot; href=&quot;https://mp.weixin.qq.com/s/Z4KBqEgmBS9LQL3-hmjqbg&quot;&gt;他们做到的，我们应该知道。&lt;/a&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;font color=#faa755&gt;就算没有意义，偶尔也会有好事发生。&lt;/font&gt;&lt;/p&gt;
 &lt;h2 id=&quot;vue-css中使用data变量&quot;&gt;&lt;a href=&quot;#vue-css中使用data变量&quot; class=&quot;headerlink&quot; title=&quot;vue-css中使用data变量&quot;&gt;&lt;/a&gt;vue-css中使用data变量&lt;/h2&gt;&lt;p&gt;这样就在vue中实现了在样式里使用js变量的方法，及通过css定义变量的方式，将变量在行内注入，然后在style中使用var()获取我们在行内设置的数据即可。以后，在封装一些需要动态传入样式参数的ui组件是不是简便了不少。&lt;/p&gt;</summary>
     
     
@@ -76,11 +77,24 @@
     <link href="https://codermae.github.io/2021/10/10/%E6%89%93%E5%8D%A10102/"/>
     <id>https://codermae.github.io/2021/10/10/%E6%89%93%E5%8D%A10102/</id>
     <published>2021-10-10T02:05:30.000Z</published>
-    <updated>2021-10-10T02:05:30.705Z</updated>
+    <updated>2021-11-01T06:56:25.504Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;font color=#c76968&gt;吾志所向，一往无前，愈挫愈奋，再接再厉。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;TypeScript&quot;&gt;&lt;a href=&quot;#TypeScript&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
+    <category term="TypeScript" scheme="https://codermae.github.io/categories/TypeScript/"/>
     
+    
+    <category term="TypeScript" scheme="https://codermae.github.io/tags/TypeScript/"/>
     
   </entry>
   
@@ -112,10 +126,10 @@
     <link href="https://codermae.github.io/2021/09/30/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     <id>https://codermae.github.io/2021/09/30/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
     <published>2021-09-30T01:36:19.000Z</published>
-    <updated>2021-10-06T10:02:17.454Z</updated>
+    <updated>2021-11-01T06:55:37.637Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;font color=122e29&gt;不要低估别人的贪婪。&lt;/font&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;font color=#122e29&gt;不要低估别人的贪婪。&lt;/font&gt;&lt;/p&gt;
 &lt;h3 id=&quot;1-使用测试方法&quot;&gt;&lt;a href=&quot;#1-使用测试方法&quot; class=&quot;headerlink&quot; title=&quot;1. 使用测试方法&quot;&gt;&lt;/a&gt;1. 使用测试方法&lt;/h3&gt;&lt;p&gt;使用&lt;code&gt;.test()&lt;/code&gt; 方法，检测字符串 myString 是否符合正则表达式 myRegex 定义的规则。&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; myString = &lt;span class=&quot;string&quot;&gt;&amp;quot;Hello, World!&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; myRegex = &lt;span class=&quot;regexp&quot;&gt;/Hello/&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; result = myRegex.test(myString); &lt;span class=&quot;comment&quot;&gt;// 修改这一行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;2-匹配文字字符串&quot;&gt;&lt;a href=&quot;#2-匹配文字字符串&quot; class=&quot;headerlink&quot; title=&quot;2. 匹配文字字符串&quot;&gt;&lt;/a&gt;2. 匹配文字字符串&lt;/h3&gt;&lt;p&gt;完成正则表达式 waldoRegex，在字符串 waldoIsHiding 中匹配到文本 “Waldo”。&lt;/p&gt;
