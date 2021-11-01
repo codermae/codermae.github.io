@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-11-01T06:47:32.417Z</updated>
+  <updated>2021-11-01T06:52:21.987Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://codermae.github.io/2021/11/01/%E6%89%93%E5%8D%A10104/"/>
     <id>https://codermae.github.io/2021/11/01/%E6%89%93%E5%8D%A10104/</id>
     <published>2021-11-01T06:19:58.000Z</published>
-    <updated>2021-11-01T06:47:32.417Z</updated>
+    <updated>2021-11-01T06:52:21.987Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;hexo博客部署到云服务器&quot;&gt;&lt;a href=&quot;#hexo博客部署到云服务器&quot; class=&quot;headerlink&quot; title=&quot;hexo博客部署到云服务器&quot;&gt;&lt;/a&gt;hexo博客部署到云服务器&lt;/h2&gt;&lt;h3 id=&quot;1-本地（win10）hexo博客配置&quot;&gt;&lt;a href=&quot;#1-本地（win10）hexo博客配置&quot; class=&quot;headerlink&quot; title=&quot;1. 本地（win10）hexo博客配置&quot;&gt;&lt;/a&gt;1. 本地（win10）hexo博客配置&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://codermae.github.io/2021/05/01/My-first-blog/&quot;&gt;本地博客配置&lt;/a&gt;&lt;/p&gt;
@@ -43,6 +43,8 @@
     
     
     <category term="技术" scheme="https://codermae.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="hexo博客云服务器部署" scheme="https://codermae.github.io/categories/%E6%8A%80%E6%9C%AF/hexo%E5%8D%9A%E5%AE%A2%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/"/>
     
     
     <category term="云服务器部署" scheme="https://codermae.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/"/>
