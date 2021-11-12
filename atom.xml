@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-11-01T06:58:47.356Z</updated>
+  <updated>2021-11-12T03:27:00.448Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -17,11 +17,61 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>打卡0104</title>
+    <title>实用JS姿势</title>
+    <link href="https://codermae.github.io/2021/11/12/%E6%89%93%E5%8D%A10106/"/>
+    <id>https://codermae.github.io/2021/11/12/%E6%89%93%E5%8D%A10106/</id>
+    <published>2021-11-12T02:39:33.000Z</published>
+    <updated>2021-11-12T03:27:00.448Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#9b95c9&gt;你要相信，所有的事与愿违，都是惊喜的铺垫；所有的坚持不懈，终将得到岁月的奖赏。&lt;/font&gt;&lt;/p&gt;
+&lt;h3 id=&quot;1-解构技巧&quot;&gt;&lt;a href=&quot;#1-解构技巧&quot; class=&quot;headerlink&quot; title=&quot;1. 解构技巧&quot;&gt;&lt;/a&gt;1. 解构技巧&lt;/h3&gt;&lt;p&gt;平常我们需要用到一个嵌套多层的对象中某些属性，会将其解构出来使用&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  part1: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    name: &lt;span class=&quot;string&quot;&gt;&amp;#x27;零一&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    age: &lt;span class=&quot;number&quot;&gt;23&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 解构&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &amp;#123; &lt;span class=&quot;attr&quot;&gt;part1&lt;/span&gt;: &amp;#123; name, age &amp;#125; &amp;#125; = obj&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 使用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(name, age)  &lt;span class=&quot;comment&quot;&gt;// 零一  23&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这种情况下，我们把&lt;code&gt;name&lt;/code&gt;和&lt;code&gt;age&lt;/code&gt;从&lt;code&gt;part1&lt;/code&gt;里解构出来了以后，你就无法使用变量&lt;code&gt;obj&lt;/code&gt;中的&lt;code&gt;part1&lt;/code&gt;属性了，如：&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &amp;#123; &lt;span class=&quot;attr&quot;&gt;part1&lt;/span&gt;: &amp;#123; name, age &amp;#125; &amp;#125; = obj&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(part1)   &lt;span class=&quot;comment&quot;&gt;// Uncaught ReferenceError: part1 is not defined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;其实我们可以多次解构，如：&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &amp;#123; &lt;span class=&quot;attr&quot;&gt;part1&lt;/span&gt;: &amp;#123; name, age &amp;#125;, part1 &amp;#125; = obj&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(part1)   &lt;span class=&quot;comment&quot;&gt;// &amp;#123;name: &amp;quot;零一&amp;quot;, age: 23&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="积累" scheme="https://codermae.github.io/categories/%E7%A7%AF%E7%B4%AF/"/>
+    
+    
+    <category term="JS" scheme="https://codermae.github.io/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux+python3自动签到</title>
+    <link href="https://codermae.github.io/2021/11/05/%E6%89%93%E5%8D%A10105/"/>
+    <id>https://codermae.github.io/2021/11/05/%E6%89%93%E5%8D%A10105/</id>
+    <published>2021-11-05T06:15:57.000Z</published>
+    <updated>2021-11-12T02:37:03.839Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#1d953f&gt;有些人光是遇到就已经赚到了。&lt;/font&gt;&lt;/p&gt;
+&lt;h3 id=&quot;1-安装anaconda3搭建python环境&quot;&gt;&lt;a href=&quot;#1-安装anaconda3搭建python环境&quot; class=&quot;headerlink&quot; title=&quot;1. 安装anaconda3搭建python环境&quot;&gt;&lt;/a&gt;1. 安装anaconda3搭建python环境&lt;/h3&gt;&lt;p&gt;访问(Anaconda)[&lt;a href=&quot;https://repo.anaconda.com]官网下载页面，右键点击你想要安装的版本，复制链接地址&quot;&gt;https://repo.anaconda.com]官网下载页面，右键点击你想要安装的版本，复制链接地址&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wget https:&amp;#x2F;&amp;#x2F;repo.anaconda.com&amp;#x2F;archive&amp;#x2F;Anaconda3-2021.05-Linux-x86_64.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;bash Anaconda3-2021.05-Linux-x86_64.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;直接回车&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Welcome to Anaconda3 5.3.1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;In order to continue the installation process, please review the license&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;agreement.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Please, press ENTER to continue&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="积累" scheme="https://codermae.github.io/categories/%E7%A7%AF%E7%B4%AF/"/>
+    
+    
+    <category term="linux+python3自动签到" scheme="https://codermae.github.io/tags/linux-python3%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>云服务器部署</title>
     <link href="https://codermae.github.io/2021/11/01/%E6%89%93%E5%8D%A10104/"/>
     <id>https://codermae.github.io/2021/11/01/%E6%89%93%E5%8D%A10104/</id>
     <published>2021-11-01T06:19:58.000Z</published>
-    <updated>2021-11-01T06:58:47.356Z</updated>
+    <updated>2021-11-12T02:37:32.466Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#0c212b&gt;万圣节已到，尽情扮鬼笑。&lt;/font&gt;&lt;/p&gt;
@@ -453,63 +503,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0091</title>
-    <link href="https://codermae.github.io/2021/08/29/%E6%89%93%E5%8D%A10091/"/>
-    <id>https://codermae.github.io/2021/08/29/%E6%89%93%E5%8D%A10091/</id>
-    <published>2021-08-29T04:43:41.000Z</published>
-    <updated>2021-09-27T05:22:26.343Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#dea32c&gt;不害怕改变，才是给自己最好的安全感。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;21-async-函数&quot;&gt;&lt;a href=&quot;#21-async-函数&quot; class=&quot;headerlink&quot; title=&quot;21. async 函数&quot;&gt;&lt;/a&gt;21. async 函数&lt;/h3&gt;&lt;h4 id=&quot;21-1-含义&quot;&gt;&lt;a href=&quot;#21-1-含义&quot; class=&quot;headerlink&quot; title=&quot;21.1 含义&quot;&gt;&lt;/a&gt;21.1 含义&lt;/h4&gt;&lt;p&gt;ES2017 标准引入了 async 函数，使得异步操作变得更加方便。&lt;/p&gt;
-&lt;p&gt;async 函数是什么？一句话，它就是 Generator 函数的语法糖。&lt;/p&gt;
-&lt;p&gt;前文有一个 Generator 函数，依次读取两个文件。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; fs = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;#x27;fs&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; readFile = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;fileName&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Promise&lt;/span&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;resolve, reject&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    fs.readFile(fileName, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;error, data&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (error) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; reject(error);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      resolve(data);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; gen = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;* (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; f1 = &lt;span class=&quot;keyword&quot;&gt;yield&lt;/span&gt; readFile(&lt;span class=&quot;string&quot;&gt;&amp;#x27;/etc/fstab&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; f2 = &lt;span class=&quot;keyword&quot;&gt;yield&lt;/span&gt; readFile(&lt;span class=&quot;string&quot;&gt;&amp;#x27;/etc/shells&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(f1.toString());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(f2.toString());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面代码的函数&lt;code&gt;gen&lt;/code&gt;可以写成&lt;code&gt;async&lt;/code&gt;函数，就是下面这样。&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; asyncReadFile = &lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; f1 = &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; readFile(&lt;span class=&quot;string&quot;&gt;&amp;#x27;/etc/fstab&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; f2 = &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; readFile(&lt;span class=&quot;string&quot;&gt;&amp;#x27;/etc/shells&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(f1.toString());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(f2.toString());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;一比较就会发现，&lt;code&gt;async&lt;/code&gt;函数就是将 Generator 函数的星号（&lt;code&gt;*&lt;/code&gt;）替换成&lt;code&gt;async&lt;/code&gt;，将&lt;code&gt;yield&lt;/code&gt;替换成&lt;code&gt;await&lt;/code&gt;，仅此而已。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 async 函数" scheme="https://codermae.github.io/tags/JS-ES6-async-%E5%87%BD%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打卡0090</title>
-    <link href="https://codermae.github.io/2021/08/27/%E6%89%93%E5%8D%A10090/"/>
-    <id>https://codermae.github.io/2021/08/27/%E6%89%93%E5%8D%A10090/</id>
-    <published>2021-08-27T07:24:18.000Z</published>
-    <updated>2021-09-27T05:22:21.590Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#2468a2&gt;生命，就是一场不留余地的盛放。心安，便是活着的最美好状态。平淡是生活的主线，精彩是人生的点缀。且安静，且放低，且自在，不张扬，也不颓废，这就是生活。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES6&quot;&gt;&lt;a href=&quot;#ES6&quot; class=&quot;headerlink&quot; title=&quot;ES6&quot;&gt;&lt;/a&gt;ES6&lt;/h2&gt;&lt;h3 id=&quot;20-Generator-函数的异步应用&quot;&gt;&lt;a href=&quot;#20-Generator-函数的异步应用&quot; class=&quot;headerlink&quot; title=&quot;20. Generator 函数的异步应用&quot;&gt;&lt;/a&gt;20. Generator 函数的异步应用&lt;/h3&gt;&lt;p&gt;异步编程对 JavaScript 语言太重要。JavaScript 语言的执行环境是“单线程”的，如果没有异步编程，根本没法用，非卡死不可。本章主要介绍 Generator 函数如何完成异步操作。&lt;/p&gt;
-&lt;h4 id=&quot;20-1-传统方法&quot;&gt;&lt;a href=&quot;#20-1-传统方法&quot; class=&quot;headerlink&quot; title=&quot;20.1 传统方法&quot;&gt;&lt;/a&gt;20.1 传统方法&lt;/h4&gt;&lt;p&gt;ES6 诞生以前，异步编程的方法，大概有下面四种。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;回调函数&lt;/li&gt;
-&lt;li&gt;事件监听&lt;/li&gt;
-&lt;li&gt;发布/订阅&lt;/li&gt;
-&lt;li&gt;Promise 对象&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Generator 函数将 JavaScript 异步编程带入了一个全新的阶段。&lt;/p&gt;
-&lt;h4 id=&quot;20-2-基本概念&quot;&gt;&lt;a href=&quot;#20-2-基本概念&quot; class=&quot;headerlink&quot; title=&quot;20.2 基本概念&quot;&gt;&lt;/a&gt;20.2 基本概念&lt;/h4&gt;&lt;h5 id=&quot;20-2-1-异步&quot;&gt;&lt;a href=&quot;#20-2-1-异步&quot; class=&quot;headerlink&quot; title=&quot;20.2.1 异步&quot;&gt;&lt;/a&gt;20.2.1 异步&lt;/h5&gt;&lt;p&gt;所谓”异步”，简单说就是一个任务不是连续完成的，可以理解成该任务被人为分成两段，先执行第一段，然后转而执行其他任务，等做好了准备，再回过头执行第二段。&lt;/p&gt;
-&lt;p&gt;比如，有一个任务是读取文件进行处理，任务的第一段是向操作系统发出请求，要求读取文件。然后，程序执行其他任务，等到操作系统返回文件，再接着执行任务的第二段（处理文件）。这种不连续的执行，就叫做异步。&lt;/p&gt;
-&lt;p&gt;相应地，连续的执行就叫做同步。由于是连续执行，不能插入其他任务，所以操作系统从硬盘读取文件的这段时间，程序只能干等着。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="JS-ES6" scheme="https://codermae.github.io/categories/JS-ES6/"/>
-    
-    
-    <category term="JS-ES6 Generator 函数的异步应用" scheme="https://codermae.github.io/tags/JS-ES6-Generator-%E5%87%BD%E6%95%B0%E7%9A%84%E5%BC%82%E6%AD%A5%E5%BA%94%E7%94%A8/"/>
     
   </entry>
   
