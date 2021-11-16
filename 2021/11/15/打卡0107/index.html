@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="blog" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>尝试写脚本 |  maeBlog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="maeBlog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-打卡0107"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  尝试写脚本
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/11/15/%E6%89%93%E5%8D%A10107/" class="article-date">
+  <time datetime="2021-11-15T07:02:04.000Z" itemprop="datePublished">2021-11-15</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%A7%AF%E7%B4%AF/">积累</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.5k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">6 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#cde6c7>不负光阴就是最好的努力，而努力就是最好的自己。</font></p>
+<p>又是做loser的一天- -！，上次自动签到没有实现，心有不甘，这次尝试用curl试一下，虽然最后还是没成功，但也要记录一下。</p>
+<span id="more"></span>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><p>首先先提交一个请求，看一下需要提交有内容，发现包括phone,password,step,sing,time五个字段，但是表单中只有前三个，所以后两个应该是生成的密文和时间戳。<br><img src="https://i.loli.net/2021/11/16/wVs69KBTycNkgeF.png" alt="表单"><br>先提交表单中三项内容试一下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> curl -d <span class="string">&quot;phone=18661212***&amp;password=m*y*0*2*&amp;step=2200&quot;</span> https://www.eyeit.cn/API/xm.php</span></span><br><span class="line">&#123;&quot;code&quot;:200,&quot;msg&quot;:&quot;程序未经授权,请前往https:\/\/www.eyeit.cn&quot;,&quot;step&quot;:&quot;作者QQ ...&quot;&#125;</span><br></pre></td></tr></table></figure>
+<p>结果返回了未授权，猜测可能是缺少cookie，然后尝试使用cookie</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">保存cookie</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> curl -c cookiec.txt https://www.eyeit.cn</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">使用cookie</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> curl -b cookiec.txt -d <span class="string">&quot;phone=18661212***&amp;password=m*y*0*2*&amp;step=2200&quot;</span> https://www.eyeit.cn/API/xm.php</span></span><br><span class="line">&#123;&quot;code&quot;:200,&quot;msg&quot;:&quot;程序未经授权,请前往https:\/\/www.eyeit.cn&quot;,&quot;step&quot;:&quot;作者QQ ...&quot;&#125;</span><br></pre></td></tr></table></figure>
+<p>还是返回了未授权，再加一个模仿浏览器试试</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> curl -b cookiec.txt -A <span class="string">&quot;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.0)&quot;</span> -e <span class="string">&quot;https://www.eyeit.cn/&quot;</span> -d <span class="string">&quot;phone=18661212***&amp;password=m*y*0*2*&amp;step=2700&amp;sing=944c5824daa978e9facf0e87aef17f65&amp;time=1636958154&quot;</span> https://www.eyeit.cn/API/xm.php</span></span><br><span class="line">&#123;&quot;code&quot;:-66,&quot;msg&quot;:&quot;清楚浏览器缓存即可恢复，授权失败&quot;&#125;</span><br></pre></td></tr></table></figure>
+<p>结果还是返回了未授权，再尝试仿造referer(断链)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> curl -e <span class="string">&quot;https://www.eyeit.cn/&quot;</span> -d <span class="string">&quot;phone=18661111111&amp;password=aaaaaaaa&amp;step=2200&quot;</span> https://www.eyeit.cn/API/xm.php</span></span><br><span class="line">&#123;&quot;code&quot;:-1,&quot;msg&quot;:&quot;请输入数据信息,需要使用联系QQ:1612000422&quot;,&quot;说明&quot;:&quot;失效请联系作者QQ 1612000422,Q群:882843231&quot;&#125;</span><br></pre></td></tr></table></figure>
+<p>返回了新的状态，请输入数据信息，看来可能是由于没有添加后两个字段造成的，于是随便添加上后两个字段尝试一下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> curl -e <span class="string">&quot;https://www.eyeit.cn/&quot;</span> -d <span class="string">&quot;phone=18661212***&amp;password=m*y*0*2*&amp;step=4200&amp;sing=6e86e3e084f62364517e74882b84dd58&amp;time=1637023904&quot;</span> https://www.eyeit.cn/API/xm.php</span></span><br><span class="line">&#123;&quot;code&quot;:-66,&quot;msg&quot;:&quot;清楚浏览器缓存即可恢复，授权失败&quot;&#125;</span><br></pre></td></tr></table></figure>
+<p>又返回了新的状态，看来上一个状态的确是缺少字段造成的。这个就不知道为什么了，难道是后两个字段乱写造成的？在Form Data中只能看出time是时间戳，sing可能是一个加密的32位字符串，于是找index.js，打开一看好家伙，还是处理过的：<br><img src="https://i.loli.net/2021/11/16/1rPlmDgnzdsIhBq.png" alt="dasab real is"><br>于是瞪着眼睛找找找。。。终于发现了点东西<br><img src="https://i.loli.net/2021/11/16/NDWm1K6FqVc53Zu.png" alt="data"><br>经过一番整理后发现，<code>sing</code>的值应该是字符串转换的md5，字符串是将手机号转为10进制在加上<code>0x29a</code>(8778)转化成字符串,再与密码字符串拼接，结果为字符串1，再用字符串1与<code>step</code>字符串和<code>time</code>字符串拼接的结果进行拼接，结果为字符串2，最后使字符串2与自定义字符串<code>&#39;123&#39;</code>进行拼接得到最终字符串，转为MD5。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;data&#x27;</span>: &#123;</span><br><span class="line">	<span class="string">&#x27;phone&#x27;</span>: _0x3acd18,</span><br><span class="line">	<span class="string">&#x27;password&#x27;</span>: _0x20a766,</span><br><span class="line">	<span class="string">&#x27;step&#x27;</span>: _0x4a8b7c,</span><br><span class="line">	<span class="string">&#x27;sing&#x27;</span>: _0x17f61f[<span class="string">&#x27;JQgEm&#x27;</span>]</span><br><span class="line">	  (md5, _0x17f61f[_0x4ebf(<span class="string">&#x27;0x38&#x27;</span>)](</span><br><span class="line">		  _0x17f61f[_0x4ebf(<span class="string">&#x27;0x68&#x27;</span>)](</span><br><span class="line">			  _0x17f61f[_0x4ebf(<span class="string">&#x27;0x68&#x27;</span>)](	</span><br><span class="line">				  _0x17f61f[<span class="string">&#x27;JQgEm&#x27;</span>](<span class="built_in">String</span>, _0x17f61f[_0x4ebf(<span class="string">&#x27;0xb3&#x27;</span>)](</span><br><span class="line">					  _0x17f61f[<span class="string">&#x27;gdtSt&#x27;</span>](<span class="built_in">parseInt</span>, _0x3acd18,<span class="string">&#x27;10&#x27;</span>), <span class="number">0x29a</span>)), <span class="comment">//0x29a(十六进制)=8778(十进制)</span></span><br><span class="line">				  _0x17f61f[<span class="string">&#x27;vsWMS&#x27;</span>](<span class="built_in">String</span>, _0x20a766)),	 <span class="comment">//pwd =&gt; string</span></span><br><span class="line">			  _0x17f61f[_0x4ebf(<span class="string">&#x27;0xb0&#x27;</span>)](<span class="built_in">String</span>,_0x4a8b7c))	<span class="comment">//step =&gt; string</span></span><br><span class="line">		  + _0x17f61f[_0x4ebf(<span class="string">&#x27;0xb0&#x27;</span>)](<span class="built_in">String</span>, _0x40d3dd / <span class="number">0x3e8</span>), 	<span class="comment">//date/1000 =&gt; string</span></span><br><span class="line">		  _0x17f61f[<span class="string">&#x27;mtVcm&#x27;</span>]	<span class="comment">// 已定义变量mtVcm = &#x27;123&#x27;</span></span><br><span class="line">		  )</span><br><span class="line">	  ),</span><br><span class="line">	<span class="string">&#x27;time&#x27;</span>: _0x17f61f[_0x4ebf(<span class="string">&#x27;0xb5&#x27;</span>)](_0x40d3dd, <span class="number">0x3e8</span>) <span class="comment">//	 date/1000=时间戳	0x3e8十进制为1000</span></span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"><span class="comment">// _0x2ce313[_0x4ebf(&#x27;0x38&#x27;)] = function(_0x2592dd, _0x384af3) &#123;</span></span><br><span class="line"><span class="comment">//         return _0x2592dd + _0x384af3;</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">//================================================================</span></span><br><span class="line"><span class="comment">// _0x2ce313[_0x4ebf(&#x27;0x38&#x27;)] = function(_0x2592dd, _0x384af3) &#123;</span></span><br><span class="line"><span class="comment">//         return 外部0x68函数返回的结果 + 123;</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// _0x2ce313[_0x4ebf(&#x27;0x68&#x27;)] = function(_0x51ccad, _0x6fc9a3) &#123;</span></span><br><span class="line"><span class="comment">//        return _0x51ccad + _0x6fc9a3;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//======================= 外 部 的 0x68 函 数 =========================================</span></span><br><span class="line"><span class="comment">// _0x2ce313[_0x4ebf(&#x27;0x68&#x27;)] = function(_0x51ccad, _0x6fc9a3) &#123;</span></span><br><span class="line"><span class="comment">//        return  内部0x68返回的结果 + (步数字符串+时间戳字符串);</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//======================= 内 部 的 0x68 函 数 ======================================</span></span><br><span class="line"><span class="comment">// _0x2ce313[_0x4ebf(&#x27;0x68&#x27;)] = function(_0x51ccad, _0x6fc9a3) &#123;</span></span><br><span class="line"><span class="comment">//        return 函数0xb3返回的结果再转换为字符串 + 密码字符串;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//0xb3=，UJjkZ</span></span><br><span class="line"><span class="comment">// _0x2ce313[&#x27;UJjkZ&#x27;] = function(_0x329498, _0x53ef85) &#123;</span></span><br><span class="line"><span class="comment">//     return _0x329498 + _0x53ef85;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// _0x2ce313[_0x4ebf(&#x27;0xb5&#x27;)] = function(_0x2c1acd, _0x49102e) &#123;</span></span><br><span class="line"><span class="comment">//       return _0x2c1acd / _0x49102e;		//返回时间戳=date/1000</span></span><br><span class="line"><span class="comment">//   &#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//(_0x17f61f[&#x27;gdtSt&#x27;](parseInt, _0x3acd18,&#x27;10&#x27;), 0x29a)	 //phone</span></span><br><span class="line"><span class="comment">//_0x17f61f[&#x27;vsWMS&#x27;](String, _0x20a766)	 //password	</span></span><br><span class="line"><span class="comment">//_0x17f61f[_0x4ebf(&#x27;0xb0&#x27;)](String,_0x4a8b7c)	//step</span></span><br><span class="line"><span class="comment">//_0x17f61f[_0x4ebf(&#x27;0xb0&#x27;)](String, _0x40d3dd / 0x3e8)   //time</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//_0x2ce313[&#x27;mtVcm&#x27;] = &#x27;123&#x27;;	//最后一个参数</span></span><br></pre></td></tr></table></figure>
+<p>然后就在shell上写了如下代码，还是第一次在shell上写代码哈哈哈</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#echo `date`</span></span><br><span class="line"><span class="comment">#echo `date +%s`</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">getSing</span></span>()&#123;</span><br><span class="line">        <span class="comment">#_phone=18661212***</span></span><br><span class="line">        <span class="comment">#_password=8778</span></span><br><span class="line">        _step=<span class="string">&quot;5000&quot;</span></span><br><span class="line">        _time=<span class="string">&quot;`date +%s`&quot;</span></span><br><span class="line"></span><br><span class="line">        _canshu1=8778</span><br><span class="line">        _canshu2=<span class="string">&quot;123&quot;</span></span><br><span class="line"></span><br><span class="line">        n_0x68_1=<span class="string">&quot;18661220***&quot;</span></span><br><span class="line">        <span class="comment">#n_0x68_1=&quot;`$_phone + $_canshu1`&quot;</span></span><br><span class="line">        n_0x68_2=<span class="string">&quot;********&quot;</span></span><br><span class="line"></span><br><span class="line">        w_0x68_1=<span class="string">&quot;$n_0x68_1<span class="variable">$n_0x68_2</span>&quot;</span></span><br><span class="line">        w_0x68_2=<span class="string">&quot;$_step<span class="variable">$_time</span>&quot;</span></span><br><span class="line"></span><br><span class="line">        _0x38_1=<span class="string">&quot;$w_0x68_1<span class="variable">$w_0x68_2</span>&quot;</span></span><br><span class="line">        _0x38_2=<span class="string">&quot;123&quot;</span></span><br><span class="line"></span><br><span class="line">        _sing=<span class="string">&quot;$_0x38_1<span class="variable">$_0x38_2</span>&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">echo</span> <span class="variable">$_time</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="variable">$_sing</span></span><br><span class="line">        <span class="comment">#echo $_sing|md5sum|cut -d &#x27; &#x27; -f1</span></span><br><span class="line">        result=`<span class="built_in">echo</span> <span class="variable">$_sing</span>|md5sum|cut -d <span class="string">&#x27; &#x27;</span> -f1`</span><br><span class="line">        <span class="built_in">echo</span> <span class="variable">$&#123;result&#125;</span></span><br><span class="line"></span><br><span class="line">        curl -e <span class="string">&quot;https://www.eyeit.cn/&quot;</span> -d <span class="string">&quot;phone=18661212***&amp;password=m*y*0*2*&amp;step=4200&amp;sing=<span class="variable">$result</span>&amp;time=`date +%s`&quot;</span> https://www.eyeit.cn/API/xm.php</span><br><span class="line">&#125;</span><br><span class="line">getSing</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>写完了赶紧测试一下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ./firstShell.sh</span></span><br><span class="line">1637026366</span><br><span class="line">18661220***ma*e0*2*5*0*1637026366123</span><br><span class="line">15e12deba069a5308993143b14e55a56</span><br><span class="line">&#123;&quot;code&quot;:-66,&quot;msg&quot;:&quot;清楚浏览器缓存即可恢复，授权失败&quot;&#125;[mae@iZuf6dyodvhcv8i9idmz6vZ testShell]$ </span><br></pre></td></tr></table></figure>
+<p>结果还是不对，也可能是分析错误导致<code>sing</code>的值不对，先不管这个了，就认为他是对的吧kwkw，于是去百度linux清除浏览器缓存,只找到了清除DNS缓存，试一下吧</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> service nscd restart</span></span><br></pre></td></tr></table></figure>
+<p>结果还是不行。<br>准备关掉DevTools了，点开<code>&lt;script&gt;</code>还收到了作者的问候,嗨，真是晦气。<br><img src="https://i.loli.net/2021/11/16/MqfYcyWF9HnugKr.png" alt="问候"><br>还没有发现问题出现在哪里cwfp</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(viewer == <span class="string">&#x27;大佬&#x27;</span>)&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&quot;请指点&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/11/15/%E6%89%93%E5%8D%A10107/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/curl/" rel="tag">curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%84%9A%E6%9C%AC/" rel="tag">脚本</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2021/11/12/%E6%89%93%E5%8D%A10106/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">实用JS姿势</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
+    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> Ye Ma
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="maeBlog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/travel">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about/2021">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/gHZjdQRcOL1WxSP.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://i.loli.net/2021/05/01/pZNYuI4QFnfwb7l.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=574919767&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>

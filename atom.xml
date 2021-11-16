@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-11-12T03:27:00.448Z</updated>
+  <updated>2021-11-16T02:14:52.856Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>尝试写脚本</title>
+    <link href="https://codermae.github.io/2021/11/15/%E6%89%93%E5%8D%A10107/"/>
+    <id>https://codermae.github.io/2021/11/15/%E6%89%93%E5%8D%A10107/</id>
+    <published>2021-11-15T07:02:04.000Z</published>
+    <updated>2021-11-16T02:14:52.856Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#cde6c7&gt;不负光阴就是最好的努力，而努力就是最好的自己。&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;又是做loser的一天- -！，上次自动签到没有实现，心有不甘，这次尝试用curl试一下，虽然最后还是没成功，但也要记录一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="积累" scheme="https://codermae.github.io/categories/%E7%A7%AF%E7%B4%AF/"/>
+    
+    
+    <category term="Linux" scheme="https://codermae.github.io/tags/Linux/"/>
+    
+    <category term="curl" scheme="https://codermae.github.io/tags/curl/"/>
+    
+    <category term="脚本" scheme="https://codermae.github.io/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>实用JS姿势</title>
@@ -488,21 +512,6 @@
     
     
     <category term="踩坑MongoDB" scheme="https://codermae.github.io/tags/%E8%B8%A9%E5%9D%91MongoDB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Chart文件说明</title>
-    <link href="https://codermae.github.io/2021/09/10/Chart%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/"/>
-    <id>https://codermae.github.io/2021/09/10/Chart%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/</id>
-    <published>2021-09-10T10:41:21.000Z</published>
-    <updated>2021-09-13T07:13:43.234Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;all&lt;/p&gt;</summary>
-    
-    
-    
     
   </entry>
   
