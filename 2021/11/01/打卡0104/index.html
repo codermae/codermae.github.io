@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">682</span>
+            <span class="post-count">824</span>
         </span>
     </span>
 
@@ -161,6 +161,10 @@
 <h4 id="2-更新"><a href="#2-更新" class="headerlink" title="2. 更新"></a>2. 更新</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
 
 <h4 id="3-测试-1"><a href="#3-测试-1" class="headerlink" title="3. 测试"></a>3. 测试</h4><p>浏览器输入ip地址：101.132.47.21</p>
+<h3 id="5-更新"><a href="#5-更新" class="headerlink" title="5. 更新"></a>5. 更新</h3><ul>
+<li>2021/11/17<br>尴尬，今天打开Github的博客仓库，发现最近没有更新，原来最近一直都是只更新了服务器，时隔半个月才发现 /_\ ，不过还好问题不大，修改一下_congif.yml配置就好了<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repository: git@github.com:codermae&#x2F;codermae.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">- type: git</span><br><span class="line">  repo: git@101.132.47.21:&#x2F;var&#x2F;repo&#x2F;blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+之前的写法Github的地址可能是后面被服务器的地址覆盖了，所以导致只更新了服务器，改一下就可以了。</li>
+</ul>
  
       <!-- reward -->
       
