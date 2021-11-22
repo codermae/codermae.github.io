@@ -169,6 +169,72 @@
     
     
     <article
+  id="post-打卡0099"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/09/29/%E6%89%93%E5%8D%A10099/"
+    >打卡0099</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/09/29/%E6%89%93%E5%8D%A10099/" class="article-date">
+  <time datetime="2021-09-29T02:01:00.000Z" itemprop="datePublished">2021-09-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#d64f44>暖风十里丽人天，花压鬓云偏。</font></p>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="29-ArrayBuffer"><a href="#29-ArrayBuffer" class="headerlink" title="29. ArrayBuffer"></a>29. ArrayBuffer</h3><p><code>ArrayBuffer</code>对象、<code>TypedArray</code>视图和<code>DataView</code>视图是 JavaScript 操作二进制数据的一个接口。这些对象早就存在，属于独立的规格（2011 年 2 月发布），ES6 将它们纳入了 ECMAScript 规格，并且增加了新的方法。它们都是以数组的语法处理二进制数据，所以统称为二进制数组。</p>
+<p>这个接口的原始设计目的，与 WebGL 项目有关。所谓 WebGL，就是指浏览器与显卡之间的通信接口，为了满足 JavaScript 与显卡之间大量的、实时的数据交换，它们之间的数据通信必须是二进制的，而不能是传统的文本格式。文本格式传递一个 32 位整数，两端的 JavaScript 脚本与显卡都要进行格式转化，将非常耗时。这时要是存在一种机制，可以像 C 语言那样，直接操作字节，将 4 个字节的 32 位整数，以二进制形式原封不动地送入显卡，脚本的性能就会大幅提升。</p>
+<p>二进制数组就是在这种背景下诞生的。它很像 C 语言的数组，允许开发者以数组下标的形式，直接操作内存，大大增强了 JavaScript 处理二进制数据的能力，使得开发者有可能通过 JavaScript 与操作系统的原生接口进行二进制通信。</p>
+<p>二进制数组由三类对象组成。</p>
+<p>（1）<code>ArrayBuffer</code>对象：代表内存之中的一段二进制数据，可以通过“视图”进行操作。“视图”部署了数组接口，这意味着，可以用数组的方法操作内存。</p>
+<p>（2）<code>TypedArray</code>视图：共包括 9 种类型的视图，比如<code>Uint8Array</code>（无符号 8 位整数）数组视图, <code>Int16Array</code>（16 位整数）数组视图,<code>Float32Array</code>（32 位浮点数）数组视图等等。</p>
+<p>（3）<code>DataView</code>视图：可以自定义复合格式的视图，比如第一个字节是 Uint8（无符号 8 位整数）、第二、三个字节是 Int16（16 位整数）、第四个字节开始是 Float32（32 位浮点数）等等，此外还可以自定义字节序。</p>
+<p>简单说，<code>ArrayBuffer</code>对象代表原始的二进制数据，<code>TypedArray</code>视图用来读写简单类型的二进制数据，<code>DataView</code>视图用来读写复杂类型的二进制数据。</p>
+<p><code>TypedArray</code>视图支持的数据类型一共有 9 种（<code>DataView</code>视图支持除<code>Uint8C</code>以外的其他 8 种）。</p> 
+      <a class="article-more-link" href="/2021/09/29/%E6%89%93%E5%8D%A10099/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArrayBuffer/" rel="tag">ArrayBuffer</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0098"
   class="article article-type-post"
   itemscope
@@ -720,64 +786,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B8%A9%E5%9D%91Koa/" rel="tag">踩坑Koa</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-踩坑MongoDB"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/09/15/%E8%B8%A9%E5%9D%91MongoDB/"
-    >踩坑MongoDB</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/09/15/%E8%B8%A9%E5%9D%91MongoDB/" class="article-date">
-  <time datetime="2021-09-15T12:32:52.000Z" itemprop="datePublished">2021-09-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%B8%A9%E5%9D%91/">踩坑</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#ffc20e>人生当自勉，学习需坚持。</font></p>
-<h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2> 
-      <a class="article-more-link" href="/2021/09/15/%E8%B8%A9%E5%9D%91MongoDB/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B8%A9%E5%9D%91MongoDB/" rel="tag">踩坑MongoDB</a></li></ul>
 
     </footer>
   </div>

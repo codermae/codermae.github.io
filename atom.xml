@@ -6,7 +6,7 @@
   <link href="https://codermae.github.io/atom.xml" rel="self"/>
   
   <link href="https://codermae.github.io/"/>
-  <updated>2021-11-16T02:14:52.856Z</updated>
+  <updated>2021-11-22T05:54:27.843Z</updated>
   <id>https://codermae.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-crontab</title>
+    <link href="https://codermae.github.io/2021/11/22/%E6%89%93%E5%8D%A10108/"/>
+    <id>https://codermae.github.io/2021/11/22/%E6%89%93%E5%8D%A10108/</id>
+    <published>2021-11-22T05:31:38.000Z</published>
+    <updated>2021-11-22T05:54:27.843Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;font color=#375830&gt;如果预计中的不幸没有发生的话，我们就会收获意外的喜悦。&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;刷步终于完结了，源码在下面。&lt;/p&gt;
+&lt;p&gt;代码粘过来之后，用crontab实现定时执行脚本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;crontab -u&lt;/code&gt; //设定特定用户的定时服务&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;crontab -l&lt;/code&gt; //列出当前用户定时服务内容&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;crontab -r&lt;/code&gt; //删除当前用户的定时服务&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;crontab -e&lt;/code&gt; //编辑当前用户的定时服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;首先查看crontab &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[mae@iZuf6dyodvhcv8i9idmz6vZ testShell]$ cat &amp;#x2F;etc&amp;#x2F;crontab&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;SHELL&amp;#x3D;&amp;#x2F;bin&amp;#x2F;bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;PATH&amp;#x3D;&amp;#x2F;sbin:&amp;#x2F;bin:&amp;#x2F;usr&amp;#x2F;sbin:&amp;#x2F;usr&amp;#x2F;bin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;MAILTO&amp;#x3D;root&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# For details see man 4 crontabs&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# Example of job definition:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# .---------------- minute (0 - 59)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# |  .------------- hour (0 - 23)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# |  |  .---------- day of month (1 - 31)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# |  |  |  |  .---- day of week (0 - 6) (Sunday&amp;#x3D;0 or 7) OR sun,mon,tue,wed,thu,fri,sat&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# |  |  |  |  |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# *  *  *  *  * user-name  command to be executed&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="积累" scheme="https://codermae.github.io/categories/%E7%A7%AF%E7%B4%AF/"/>
+    
+    
+    <category term="Linux" scheme="https://codermae.github.io/tags/Linux/"/>
+    
+    <category term="python" scheme="https://codermae.github.io/tags/python/"/>
+    
+    <category term="crontab" scheme="https://codermae.github.io/tags/crontab/"/>
+    
+  </entry>
   
   <entry>
     <title>尝试写脚本</title>
@@ -95,7 +128,7 @@
     <link href="https://codermae.github.io/2021/11/01/%E6%89%93%E5%8D%A10104/"/>
     <id>https://codermae.github.io/2021/11/01/%E6%89%93%E5%8D%A10104/</id>
     <published>2021-11-01T06:19:58.000Z</published>
-    <updated>2021-11-17T11:47:57.466Z</updated>
+    <updated>2021-11-17T12:09:38.400Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;font color=#0c212b&gt;万圣节已到，尽情扮鬼笑。&lt;/font&gt;&lt;/p&gt;
@@ -492,26 +525,6 @@
     
     
     <category term="踩坑Koa" scheme="https://codermae.github.io/tags/%E8%B8%A9%E5%9D%91Koa/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>踩坑MongoDB</title>
-    <link href="https://codermae.github.io/2021/09/15/%E8%B8%A9%E5%9D%91MongoDB/"/>
-    <id>https://codermae.github.io/2021/09/15/%E8%B8%A9%E5%9D%91MongoDB/</id>
-    <published>2021-09-15T12:32:52.000Z</published>
-    <updated>2021-09-26T12:44:38.747Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;font color=#ffc20e&gt;人生当自勉，学习需坚持。&lt;/font&gt;&lt;/p&gt;
-&lt;h2 id=&quot;踩坑记录&quot;&gt;&lt;a href=&quot;#踩坑记录&quot; class=&quot;headerlink&quot; title=&quot;踩坑记录&quot;&gt;&lt;/a&gt;踩坑记录&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="踩坑" scheme="https://codermae.github.io/categories/%E8%B8%A9%E5%9D%91/"/>
-    
-    
-    <category term="踩坑MongoDB" scheme="https://codermae.github.io/tags/%E8%B8%A9%E5%9D%91MongoDB/"/>
     
   </entry>
   

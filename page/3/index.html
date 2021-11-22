@@ -169,6 +169,64 @@
     
     
     <article
+  id="post-踩坑MongoDB"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/09/15/%E8%B8%A9%E5%9D%91MongoDB/"
+    >踩坑MongoDB</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/09/15/%E8%B8%A9%E5%9D%91MongoDB/" class="article-date">
+  <time datetime="2021-09-15T12:32:52.000Z" itemprop="datePublished">2021-09-15</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B8%A9%E5%9D%91/">踩坑</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#ffc20e>人生当自勉，学习需坚持。</font></p>
+<h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2> 
+      <a class="article-more-link" href="/2021/09/15/%E8%B8%A9%E5%9D%91MongoDB/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B8%A9%E5%9D%91MongoDB/" rel="tag">踩坑MongoDB</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-Chart文件说明"
   class="article article-type-post"
   itemscope
@@ -722,70 +780,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-Symbol/" rel="tag">JS-ES6 Symbol</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0082"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/07/06/%E6%89%93%E5%8D%A10082/"
-    >打卡0082</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/07/06/%E6%89%93%E5%8D%A10082/" class="article-date">
-  <time datetime="2021-07-06T01:32:21.000Z" itemprop="datePublished">2021-07-06</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS-ES6/">JS-ES6</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#918597>没必要刻意遇见谁，也不急于遇见谁，更不勉强留住谁，一切顺其自然，最好的自己留给值得珍惜的人。</font></p>
-<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="12-运算符的扩展"><a href="#12-运算符的扩展" class="headerlink" title="12. 运算符的扩展"></a>12. 运算符的扩展</h3><h4 id="12-1-指数运算符"><a href="#12-1-指数运算符" class="headerlink" title="12.1 指数运算符"></a>12.1 指数运算符</h4><p>ES2016 新增了一个指数运算符（<code>**</code>）。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span> ** <span class="number">2</span> <span class="comment">// 4</span></span><br><span class="line"><span class="number">2</span> ** <span class="number">3</span> <span class="comment">// 8</span></span><br></pre></td></tr></table></figure>
-<p>这个运算符的一个特点是右结合，而不是常见的左结合。多个指数运算符连用时，是从最右边开始计算的。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 相当于 2 ** (3 ** 2)</span></span><br><span class="line"><span class="number">2</span> ** <span class="number">3</span> ** <span class="number">2</span></span><br><span class="line"><span class="comment">// 512</span></span><br></pre></td></tr></table></figure>
-<p>上面代码中，首先计算的是第二个指数运算符，而不是第一个。</p>
-<p>指数运算符可以与等号结合，形成一个新的赋值运算符（<code>**=</code>）。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1.5</span>;</span><br><span class="line">a **= <span class="number">2</span>;</span><br><span class="line"><span class="comment">// 等同于 a = a * a;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">4</span>;</span><br><span class="line">b **= <span class="number">3</span>;</span><br><span class="line"><span class="comment">// 等同于 b = b * b * b;</span></span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/07/06/%E6%89%93%E5%8D%A10082/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-ES6-%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E6%89%A9%E5%B1%95/" rel="tag">JS-ES6 运算符的扩展</a></li></ul>
 
     </footer>
   </div>
