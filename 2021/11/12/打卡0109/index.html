@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title> maeBlog</title>
+      <title>常用JS函数 |  maeBlog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -55,308 +55,8 @@
     
       
     <main class="content on">
-      
-<section class="cover">
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/cover1.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/">maeBlog</a></h1>
-      <div id="subtitle-box">
-        
-        <span id="subtitle"></span>
-        
-      </div>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-
-
-<!-- Subtitle -->
-
-  <script>
-    try {
-      var typed = new Typed("#subtitle", {
-        strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
-        startDelay: 0,
-        typeSpeed: 200,
-        loop: true,
-        backSpeed: 100,
-        showCursor: true
-      });
-    } catch (err) {
-      console.log(err)
-    }
-  </script>
-  
-<div id="main">
-  <section class="outer">
-  
-  <ul class="ads">
-    
-        <li>
-            <a href="">
-                <img src="" width="" alt="">
-            </a>
-        </li>
-    
-        <li>
-            <a href="">
-                <img src="" width="" alt="">
-            </a>
-        </li>
-    
-</ul>
-  
-  
-  
-
-<div class="notice" style="margin-top:50px">
-    <i class="ri-heart-fill"></i>
-    <div class="notice-content" id="broad"></div>
-</div>
-<script type="text/javascript">
-    fetch('https://v1.hitokoto.cn')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("broad").innerHTML = data.hitokoto;
-        })
-        .catch(console.error)
-</script>
-
-<style>
-    .notice {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-    }
-
-    .notice i {
-        float: left;
-        color: #999;
-        font-size: 16px;
-        padding-right: 10px;
-        vertical-align: middle;
-        margin-top: -2px;
-    }
-
-    .notice-content {
-        display: initial;
-        vertical-align: middle;
-    }
-</style>
-  
-  <article class="articles">
-    
-    
-    
-    
-    <article
-  id="post-打卡0108"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/11/22/%E6%89%93%E5%8D%A10108/"
-    >Linux-crontab</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/11/22/%E6%89%93%E5%8D%A10108/" class="article-date">
-  <time datetime="2021-11-22T05:31:38.000Z" itemprop="datePublished">2021-11-22</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A7%AF%E7%B4%AF/">积累</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#375830>如果预计中的不幸没有发生的话，我们就会收获意外的喜悦。</font></p>
-<p>刷步终于完结了，源码在下面。</p>
-<p>代码粘过来之后，用crontab实现定时执行脚本</p>
-<ul>
-<li><code>crontab -u</code> //设定特定用户的定时服务</li>
-<li><code>crontab -l</code> //列出当前用户定时服务内容</li>
-<li><code>crontab -r</code> //删除当前用户的定时服务</li>
-<li><code>crontab -e</code> //编辑当前用户的定时服务</li>
-</ul>
-<ol>
-<li>首先查看crontab <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[mae@iZuf6dyodvhcv8i9idmz6vZ testShell]$ cat &#x2F;etc&#x2F;crontab</span><br><span class="line">SHELL&#x3D;&#x2F;bin&#x2F;bash</span><br><span class="line">PATH&#x3D;&#x2F;sbin:&#x2F;bin:&#x2F;usr&#x2F;sbin:&#x2F;usr&#x2F;bin</span><br><span class="line">MAILTO&#x3D;root</span><br><span class="line"></span><br><span class="line"># For details see man 4 crontabs</span><br><span class="line"></span><br><span class="line"># Example of job definition:</span><br><span class="line"># .---------------- minute (0 - 59)</span><br><span class="line"># |  .------------- hour (0 - 23)</span><br><span class="line"># |  |  .---------- day of month (1 - 31)</span><br><span class="line"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span><br><span class="line"># |  |  |  |  .---- day of week (0 - 6) (Sunday&#x3D;0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span><br><span class="line"># |  |  |  |  |</span><br><span class="line"># *  *  *  *  * user-name  command to be executed</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/11/22/%E6%89%93%E5%8D%A10108/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/crontab/" rel="tag">crontab</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0107"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/11/15/%E6%89%93%E5%8D%A10107/"
-    >尝试写脚本</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/11/15/%E6%89%93%E5%8D%A10107/" class="article-date">
-  <time datetime="2021-11-15T07:02:04.000Z" itemprop="datePublished">2021-11-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A7%AF%E7%B4%AF/">积累</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#cde6c7>不负光阴就是最好的努力，而努力就是最好的自己。</font></p>
-<p>又是做loser的一天- -！，上次自动签到没有实现，心有不甘，这次尝试用curl试一下，虽然最后还是没成功，但也要记录一下。</p> 
-      <a class="article-more-link" href="/2021/11/15/%E6%89%93%E5%8D%A10107/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/curl/" rel="tag">curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%84%9A%E6%9C%AC/" rel="tag">脚本</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0106"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/11/12/%E6%89%93%E5%8D%A10106/"
-    >实用JS姿势</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/11/12/%E6%89%93%E5%8D%A10106/" class="article-date">
-  <time datetime="2021-11-12T02:39:33.000Z" itemprop="datePublished">2021-11-12</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A7%AF%E7%B4%AF/">积累</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#9b95c9>你要相信，所有的事与愿违，都是惊喜的铺垫；所有的坚持不懈，终将得到岁月的奖赏。</font></p>
-<h3 id="1-解构技巧"><a href="#1-解构技巧" class="headerlink" title="1. 解构技巧"></a>1. 解构技巧</h3><p>平常我们需要用到一个嵌套多层的对象中某些属性，会将其解构出来使用</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">  part1: &#123;</span><br><span class="line">    name: <span class="string">&#x27;零一&#x27;</span>,</span><br><span class="line">    age: <span class="number">23</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解构</span></span><br><span class="line"><span class="keyword">const</span> &#123; <span class="attr">part1</span>: &#123; name, age &#125; &#125; = obj</span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line"><span class="built_in">console</span>.log(name, age)  <span class="comment">// 零一  23</span></span><br></pre></td></tr></table></figure>
-<p>这种情况下，我们把<code>name</code>和<code>age</code>从<code>part1</code>里解构出来了以后，你就无法使用变量<code>obj</code>中的<code>part1</code>属性了，如：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="attr">part1</span>: &#123; name, age &#125; &#125; = obj</span><br><span class="line"><span class="built_in">console</span>.log(part1)   <span class="comment">// Uncaught ReferenceError: part1 is not defined</span></span><br></pre></td></tr></table></figure>
-<p>其实我们可以多次解构，如：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="attr">part1</span>: &#123; name, age &#125;, part1 &#125; = obj</span><br><span class="line"><span class="built_in">console</span>.log(part1)   <span class="comment">// &#123;name: &quot;零一&quot;, age: 23&#125;</span></span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/11/12/%E6%89%93%E5%8D%A10106/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
+      <section class="outer">
+  <article
   id="post-打卡0109"
   class="article article-type-post"
   itemscope
@@ -367,10 +67,9 @@
     
     <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/11/12/%E6%89%93%E5%8D%A10109/"
-    >常用JS函数</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  常用JS函数
+</h1>
  
 
       
@@ -383,9 +82,34 @@
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E7%A7%AF%E7%B4%AF/">积累</a>
   </div>
-   
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">7 min</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
       
+    <div class="tocbot"></div>
+
+
+
+
+  
     <div class="article-entry" itemprop="articleBody">
        
   <p><font color=#></font></p>
@@ -486,6 +210,12 @@
  
       <!-- reward -->
       
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
     </div>
     
 
@@ -493,400 +223,132 @@
     
     <footer class="article-footer">
        
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://codermae.github.io/2021/11/12/%E6%89%93%E5%8D%A10109/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
 
     </footer>
   </div>
 
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0105"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/11/05/%E6%89%93%E5%8D%A10105/"
-    >linux+python3自动签到</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/11/05/%E6%89%93%E5%8D%A10105/" class="article-date">
-  <time datetime="2021-11-05T06:15:57.000Z" itemprop="datePublished">2021-11-05</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A7%AF%E7%B4%AF/">积累</a>
-  </div>
    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#1d953f>有些人光是遇到就已经赚到了。</font></p>
-<h3 id="1-安装anaconda3搭建python环境"><a href="#1-安装anaconda3搭建python环境" class="headerlink" title="1. 安装anaconda3搭建python环境"></a>1. 安装anaconda3搭建python环境</h3><p>访问(Anaconda)[<a href="https://repo.anaconda.com]官网下载页面，右键点击你想要安装的版本，复制链接地址">https://repo.anaconda.com]官网下载页面，右键点击你想要安装的版本，复制链接地址</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;repo.anaconda.com&#x2F;archive&#x2F;Anaconda3-2021.05-Linux-x86_64.sh</span><br></pre></td></tr></table></figure>
-<p>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash Anaconda3-2021.05-Linux-x86_64.sh</span><br></pre></td></tr></table></figure>
-<p>直接回车</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Welcome to Anaconda3 5.3.1</span><br><span class="line"></span><br><span class="line">In order to continue the installation process, please review the license</span><br><span class="line">agreement.</span><br><span class="line">Please, press ENTER to continue</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/11/05/%E6%89%93%E5%8D%A10105/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
+  <nav class="article-nav">
     
-
-    <!-- copyright -->
+      <a href="/2021/11/12/%E6%89%93%E5%8D%A10106/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            实用JS姿势
+          
+        </div>
+      </a>
     
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux-python3%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/" rel="tag">linux+python3自动签到</a></li></ul>
-
-    </footer>
-  </div>
-
     
- 
+      <a href="/2021/11/05/%E6%89%93%E5%8D%A10105/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">linux+python3自动签到</div>
+      </a>
     
-</article>
-
-    
-    <article
-  id="post-打卡0104"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/11/01/%E6%89%93%E5%8D%A10104/"
-    >云服务器部署</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/11/01/%E6%89%93%E5%8D%A10104/" class="article-date">
-  <time datetime="2021-11-01T06:19:58.000Z" itemprop="datePublished">2021-11-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> / <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/hexo%E5%8D%9A%E5%AE%A2%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/">hexo博客云服务器部署</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#0c212b>万圣节已到，尽情扮鬼笑。</font></p>
-<h2 id="hexo博客部署到云服务器"><a href="#hexo博客部署到云服务器" class="headerlink" title="hexo博客部署到云服务器"></a>hexo博客部署到云服务器</h2><h3 id="1-本地（win10）hexo博客配置"><a href="#1-本地（win10）hexo博客配置" class="headerlink" title="1. 本地（win10）hexo博客配置"></a>1. 本地（win10）hexo博客配置</h3><p><a href="https://codermae.github.io/2021/05/01/My-first-blog/">本地博客配置</a></p>
-<h3 id="2-云服务器配置"><a href="#2-云服务器配置" class="headerlink" title="2. 云服务器配置"></a>2. 云服务器配置</h3><ul>
-<li>centos 8.2</li>
-</ul>
-<h4 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1. 安装git"></a>1. 安装git</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-添加git新用户"><a href="#2-添加git新用户" class="headerlink" title="2. 添加git新用户"></a>2. 添加git新用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">useradd git</span><br><span class="line"></span><br><span class="line">passwd git</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-切换用户"><a href="#3-切换用户" class="headerlink" title="3. 切换用户"></a>3. 切换用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su - git</span><br></pre></td></tr></table></figure>
-<h4 id="4-操作"><a href="#4-操作" class="headerlink" title="4. 操作"></a>4. 操作</h4><ul>
-<li>进入git用户主目录:<code>cd</code>或<code>cd~</code></li>
-<li>创建.ssh目录：<code>mkdir .ssh &amp;&amp; chmod 700 .ssh</code></li>
-<li>创建authorized_keys公钥保存文件：<code>touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys</code></li>
-<li>将公钥文件导入~/.ssh/authorized_keys</li>
-</ul> 
-      <a class="article-more-link" href="/2021/11/01/%E6%89%93%E5%8D%A10104/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/" rel="tag">云服务器部署</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0103"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/10/28/%E6%89%93%E5%8D%A10103/"
-    >打卡0103</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/10/28/%E6%89%93%E5%8D%A10103/" class="article-date">
-  <time datetime="2021-10-28T06:51:48.000Z" itemprop="datePublished">2021-10-28</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A7%AF%E7%B4%AF/">积累</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#faa755>就算没有意义，偶尔也会有好事发生。</font></p>
-<h2 id="vue-css中使用data变量"><a href="#vue-css中使用data变量" class="headerlink" title="vue-css中使用data变量"></a>vue-css中使用data变量</h2><p>这样就在vue中实现了在样式里使用js变量的方法，及通过css定义变量的方式，将变量在行内注入，然后在style中使用var()获取我们在行内设置的数据即可。以后，在封装一些需要动态传入样式参数的ui组件是不是简便了不少。</p> 
-      <a class="article-more-link" href="/2021/10/28/%E6%89%93%E5%8D%A10103/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue-css%E4%B8%AD%E4%BD%BF%E7%94%A8data%E5%8F%98%E9%87%8F/" rel="tag">vue-css中使用data变量</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0102"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/10/10/%E6%89%93%E5%8D%A10102/"
-    >打卡0102</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/10/10/%E6%89%93%E5%8D%A10102/" class="article-date">
-  <time datetime="2021-10-10T02:05:30.000Z" itemprop="datePublished">2021-10-10</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/TypeScript/">TypeScript</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#c76968>吾志所向，一往无前，愈挫愈奋，再接再厉。</font></p>
-<h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h3><h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TypeScript/" rel="tag">TypeScript</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0101"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/10/01/%E6%89%93%E5%8D%A10101/"
-    >打卡0101</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/10/01/%E6%89%93%E5%8D%A10101/" class="article-date">
-  <time datetime="2021-10-01T03:12:19.000Z" itemprop="datePublished">2021-10-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Http/">Http</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><a  style="link:text-decoration: underline; color: red;" target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/Z4KBqEgmBS9LQL3-hmjqbg">他们做到的，我们应该知道。</a></p>
-<h2 id="Http"><a href="#Http" class="headerlink" title="Http"></a>Http</h2><h3 id="1-引入"><a href="#1-引入" class="headerlink" title="1. 引入"></a>1. 引入</h3><p>超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。所有的WWW文件都必须遵守这个标准。设计HTTP最初的目的是为了提供一种发布和接收HTML页面的方法。1960年美国人Ted Nelson构思了一种通过计算机处理文本信息的方法，并称之为超文本（hypertext）,这成为了HTTP超文本传输协议标准架构的发展根基。Ted Nelson组织协调万维网协会（World Wide Web Consortium）和互联网工程工作小组（Internet Engineering Task Force ）共同合作研究，最终发布了一系列的RFC，其中著名的RFC 2616定义了HTTP 1.1。</p>
-<h3 id="2-http协议的作用及特点"><a href="#2-http协议的作用及特点" class="headerlink" title="2. http协议的作用及特点"></a>2. http协议的作用及特点</h3><p>HTTP是一个客户端和服务器端请求和应答的标准（TCP）。客户端是终端用户，服务器端是网站。通过使用Web浏览器、网络爬虫或者其它的工具，客户端发起一个到服务器上指定端口（默认端口为80）的HTTP请求。（我们称这个客户端）叫用户代理（user agent）。应答的服务器上存储着（一些）资源，比如HTML文件和图像。（我们称）这个应答服务器为源服务器（origin server）。在用户代理和源服务器中间可能存在多个中间层，比如代理，网关，或者隧道（tunnels）。尽管TCP/IP协议是互联网上最流行的应用，HTTP协议并没有规定必须使用它和（基于）它支持的层。 事实上，HTTP可以在任何其他互联网协议上，或者在其他网络上实现。HTTP只假定（其下层协议提供）可靠的传输，任何能够提供这种保证的协议都可以被其使用。</p>
-<p>通常，由HTTP客户端发起一个请求，建立一个到服务器指定端口（默认是80端口）的TCP连接。HTTP服务器则在那个端口监听客户端发送过来的请求。一旦收到请求，服务器（向客户端）发回一个状态行，比如”HTTP/1.1 200 OK”，和（响应的）消息，消息的消息体可能是请求的文件、错误消息、或者其它一些信息。HTTP使用TCP而不是UDP的原因在于（打开）一个网页必须传送很多数据，而TCP协议提供传输控制，按顺序组织数据，和错误纠正。</p>
-<p>通过HTTP或者HTTPS协议请求的资源由统一资源标示符（Uniform Resource Identifiers）（或者，更准确一些，URLs）来标识。</p> 
-      <a class="article-more-link" href="/2021/10/01/%E6%89%93%E5%8D%A10101/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Http/" rel="tag">Http</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-正则表达式"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/09/30/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
-    >正则表达式</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/09/30/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
-  <time datetime="2021-09-30T01:36:19.000Z" itemprop="datePublished">2021-09-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A7%AF%E7%B4%AF/">积累</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#122e29>不要低估别人的贪婪。</font></p>
-<h2 id="1-讲解"><a href="#1-讲解" class="headerlink" title="1. 讲解"></a>1. 讲解</h2><h3 id="1-1使用测试方法"><a href="#1-1使用测试方法" class="headerlink" title="1.1使用测试方法"></a>1.1使用测试方法</h3><p>使用<code>.test()</code> 方法，检测字符串 myString 是否符合正则表达式 myRegex 定义的规则。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myString = <span class="string">&quot;Hello, World!&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> myRegex = <span class="regexp">/Hello/</span>;</span><br><span class="line"><span class="keyword">let</span> result = myRegex.test(myString); <span class="comment">// 修改这一行</span></span><br></pre></td></tr></table></figure>
-<h3 id="1-2-匹配文字字符串"><a href="#1-2-匹配文字字符串" class="headerlink" title="1.2 匹配文字字符串"></a>1.2 匹配文字字符串</h3><p>完成正则表达式 waldoRegex，在字符串 waldoIsHiding 中匹配到文本 “Waldo”。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> waldoIsHiding = <span class="string">&quot;Somewhere Waldo is hiding in this text.&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> waldoRegex = <span class="regexp">/Waldo/</span>; <span class="comment">// 修改这一行</span></span><br><span class="line"><span class="keyword">let</span> result = waldoRegex.test(waldoIsHiding);</span><br></pre></td></tr></table></figure>
-<h3 id="1-3-同时用多种模式匹配文字字符串"><a href="#1-3-同时用多种模式匹配文字字符串" class="headerlink" title="1.3 同时用多种模式匹配文字字符串"></a>1.3 同时用多种模式匹配文字字符串</h3><p>完成正则表达式 petRegex 以匹配 dog、cat、bird 或者 fish。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> petString = <span class="string">&quot;James has a pet cat.&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> petRegex = <span class="regexp">/cat|dog|bird|fish/</span>; <span class="comment">// 修改这一行</span></span><br><span class="line"><span class="keyword">let</span> result = petRegex.test(petString);</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2021/09/30/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-  </article>
-  
-
-  
-  <nav class="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
   </nav>
-  
-</section>
-</div>
 
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "avTd9ACxjrzISKe7xjXxusIG-gzGzoHsz",
+    app_key: "MLTA9Ebb5SAXUVwSg065nTfD",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
       <footer class="footer">
   <div class="outer">
     <ul>
@@ -1038,6 +500,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
 <link

@@ -169,6 +169,70 @@
     
     
     <article
+  id="post-打卡0054"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/05/30/%E6%89%93%E5%8D%A10054/"
+    >打卡0054</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/05/30/%E6%89%93%E5%8D%A10054/" class="article-date">
+  <time datetime="2021-05-30T05:39:22.000Z" itemprop="datePublished">2021-05-30</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JS/">JS</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><font color=#65c294>生活就是这样，别人只看结果，自我独撑过程。</font></p>
+<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="11-GlobalEventHandlers-接口"><a href="#11-GlobalEventHandlers-接口" class="headerlink" title="11. GlobalEventHandlers 接口"></a>11. GlobalEventHandlers 接口</h3><p>指定事件的回调函数，推荐使用的方法是元素的<code>addEventListener</code>方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div.addEventListener(<span class="string">&#x27;click&#x27;</span>, clickHandler, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<p>除了之外，还有一种方法可以直接指定事件的回调函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div.onclick = clickHandler;</span><br></pre></td></tr></table></figure>
+<p>这个接口是由<code>GlobalEventHandlers</code>接口提供的。它的优点是使用比较方便，缺点是只能为每个事件指定一个回调函数，并且无法指定事件触发的阶段（捕获阶段还是冒泡阶段）。</p>
+<p><code>HTMLElement</code>、<code>Document</code>和<code>Window</code>都继承了这个接口，也就是说，各种 HTML 元素、<code>document</code>对象、<code>window</code>对象上面都可以使用<code>GlobalEventHandlers</code>接口提供的属性。下面就列出这个接口提供的主要的事件属性。</p>
+<h4 id="11-1-GlobalEventHandlers-onabort"><a href="#11-1-GlobalEventHandlers-onabort" class="headerlink" title="11.1 GlobalEventHandlers.onabort"></a>11.1 GlobalEventHandlers.onabort</h4><p> 某个对象的<code>abort</code>事件（停止加载）发生时，就会调用<code>onabort</code>属性指定的回调函数。</p> 
+      <a class="article-more-link" href="/2021/05/30/%E6%89%93%E5%8D%A10054/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-GlobalEventHandlers-%E6%8E%A5%E5%8F%A3/" rel="tag">JS 事件-GlobalEventHandlers 接口</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-打卡0053"
   class="article article-type-post"
   itemscope
@@ -750,71 +814,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/" rel="tag">JS 事件-事件模型</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-打卡0044"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2021/05/27/%E6%89%93%E5%8D%A10044/"
-    >打卡0044</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2021/05/27/%E6%89%93%E5%8D%A10044/" class="article-date">
-  <time datetime="2021-05-27T01:34:39.000Z" itemprop="datePublished">2021-05-27</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JS/">JS</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><font color=#853f04>最孤独的人最亲切，受过伤的人总是笑的最灿烂。</font></p>
-<h2 id="JS-事件"><a href="#JS-事件" class="headerlink" title="JS 事件"></a>JS 事件</h2><h3 id="1-EventTarget-接口"><a href="#1-EventTarget-接口" class="headerlink" title="1. EventTarget 接口"></a>1. EventTarget 接口</h3><p>事件的本质是程序各个组成部分之间的一种通信方式，也是异步编程的一种实现。DOM 支持大量的事件，本章开始介绍 DOM 的事件编程。</p>
-<h4 id="1-1-概述"><a href="#1-1-概述" class="headerlink" title="1.1 概述"></a>1.1 概述</h4><p>DOM 的事件操作（监听和触发），都定义在<code>EventTarget</code>接口。所有节点对象都部署了这个接口，其他一些需要事件通信的浏览器内置对象（比如，<code>XMLHttpRequest</code>、<code>AudioNode</code>、<code>AudioContext</code>）也部署了这个接口。</p>
-<p>该接口主要提供三个实例方法。</p>
-<ul>
-<li><code>addEventListener</code>：绑定事件的监听函数</li>
-<li><code>removeEventListener</code>：移除事件的监听函数</li>
-<li><code>dispatchEvent</code>：触发事件</li>
-</ul> 
-      <a class="article-more-link" href="/2021/05/27/%E6%89%93%E5%8D%A10044/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS-%E4%BA%8B%E4%BB%B6-EventTarget-%E6%8E%A5%E5%8F%A3/" rel="tag">JS 事件-EventTarget 接口</a></li></ul>
 
     </footer>
   </div>
