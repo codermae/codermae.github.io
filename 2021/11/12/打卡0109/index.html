@@ -117,7 +117,7 @@
 <h4 id="1-2-滚动到顶部"><a href="#1-2-滚动到顶部" class="headerlink" title="1.2 滚动到顶部"></a>1.2 滚动到顶部</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> scrollToTop = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> c = <span class="built_in">document</span>.documentElement.scrollTop || <span class="built_in">document</span>.body.scrollTop;</span><br><span class="line">    <span class="keyword">if</span> (c &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">window</span>.requestAnimationFrame(scrollToTop);</span><br><span class="line">        <span class="built_in">window</span>.scrollTo(<span class="number">0</span>, c - c / <span class="number">8</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="1-3-el是否在视口范围内"><a href="#1-3-el是否在视口范围内" class="headerlink" title="1.3 el是否在视口范围内"></a>1.3 el是否在视口范围内</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> elementIsVisibleInViewport = <span class="function">(<span class="params">el, partiallyVisible = <span class="literal">false</span></span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; top, left, bottom, right &#125; = el.getBoundingClientRect();</span><br><span class="line">    <span class="keyword">const</span> &#123; innerHeight, innerWidth &#125; = <span class="built_in">window</span>;</span><br><span class="line">    <span class="keyword">return</span> partiallyVisible</span><br><span class="line">        ? ((top &gt; <span class="number">0</span> &amp;&amp; top &lt; innerHeight) || (bottom &gt; <span class="number">0</span> &amp;&amp; bottom &lt; innerHeight)) &amp;&amp;</span><br><span class="line">        ((left &gt; <span class="number">0</span> &amp;&amp; left &lt; innerWidth) || (right &gt; <span class="number">0</span> &amp;&amp; right &lt; innerWidth))</span><br><span class="line">        : top &gt;= <span class="number">0</span> &amp;&amp; left &gt;= <span class="number">0</span> &amp;&amp; bottom &lt;= innerHeight &amp;&amp; right &lt;= innerWidth;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
+<span id="more"></span>
 
 
 <h3 id="2-算法"><a href="#2-算法" class="headerlink" title="2. 算法"></a>2. 算法</h3><h4 id="2-1-洗牌算法随机"><a href="#2-1-洗牌算法随机" class="headerlink" title="2.1 洗牌算法随机"></a>2.1 洗牌算法随机</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> shuffle = <span class="function">(<span class="params">arr</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> result = [],</span><br><span class="line">        random;</span><br><span class="line">    <span class="keyword">while</span> (arr.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        random = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * arr.length);</span><br><span class="line">        result.push(arr[random])</span><br><span class="line">        arr.splice(random, <span class="number">1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -354,8 +354,8 @@
     <ul>
       <li>
         Copyrights &copy;
-        2021
-        <i class="ri-heart-fill heart_icon"></i> Ye Ma
+        2021-2022
+        <i class="ri-heart-fill heart_icon"></i> Ma Ye
       </li>
     </ul>
     <ul>
@@ -383,6 +383,10 @@
     </ul>
     <ul>
       
+        <li>
+          <a href="https://beian.miit.gov.cn" target="_black" rel="nofollow">苏ICP备2021056651号</a>
+        </li>
+        
     </ul>
     <ul>
       
